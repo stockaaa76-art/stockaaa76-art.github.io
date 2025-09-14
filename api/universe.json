@@ -1,0 +1,988 @@
+{
+  "metadata": {
+    "generated_at": "2025-09-15 03:16:05",
+    "total_count": 107,
+    "core_count": 70,
+    "active_count": 37,
+    "version": "1.0",
+    "selection_criteria": {
+      "core": "Major indices + Top market cap + Strategic importance",
+      "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
+    }
+  },
+  "core_universe": [
+    {
+      "ticker": "^N225",
+      "name": "日経平均株価",
+      "category": "jp_indices",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "^TOPIX",
+      "name": "TOPIX",
+      "category": "jp_indices",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "1330.T",
+      "name": "上場インデックスファンド225",
+      "category": "jp_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "1306.T",
+      "name": "TOPIX連動型上場投資信託",
+      "category": "jp_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "1308.T",
+      "name": "上場インデックスファンドTOPIX",
+      "category": "jp_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "7203.T",
+      "name": "トヨタ自動車",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "6758.T",
+      "name": "ソニーG",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.9
+    },
+    {
+      "ticker": "9984.T",
+      "name": "ソフトバンクG",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.9
+    },
+    {
+      "ticker": "6861.T",
+      "name": "キーエンス",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "8306.T",
+      "name": "三菱UFJフィナンシャル・グループ",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "4063.T",
+      "name": "信越化学工業",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "8035.T",
+      "name": "東京エレクトロン",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "7974.T",
+      "name": "任天堂",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "6367.T",
+      "name": "ダイキン工業",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "9432.T",
+      "name": "日本電信電話",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "4519.T",
+      "name": "中外製薬",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "8058.T",
+      "name": "三菱商事",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "4578.T",
+      "name": "大塚ホールディングス",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "7267.T",
+      "name": "本田技研工業",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9437.T",
+      "name": "NTTドコモ",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4502.T",
+      "name": "武田薬品工業",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8316.T",
+      "name": "三井住友フィナンシャルG",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "6954.T",
+      "name": "ファナック",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "7182.T",
+      "name": "ゆうちょ銀行",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "8001.T",
+      "name": "伊藤忠商事",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "5108.T",
+      "name": "ブリヂストン",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "6503.T",
+      "name": "三菱電機",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "4568.T",
+      "name": "第一三共",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "6752.T",
+      "name": "パナソニック",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "9022.T",
+      "name": "東海旅客鉄道",
+      "category": "nikkei_225_core",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet A",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.9
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet C",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.9
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.9
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "IBM",
+      "name": "IBM",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "PG",
+      "name": "Procter & Gamble",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "DIS",
+      "name": "Disney",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola",
+      "category": "us_mega_caps",
+      "tier": "core",
+      "weight": 0.5
+    },
+    {
+      "ticker": "^GSPC",
+      "name": "S&P 500",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "^NDX",
+      "name": "NASDAQ 100",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.9
+    },
+    {
+      "ticker": "000001.SS",
+      "name": "上海総合",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^HSI",
+      "name": "ハンセン",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "^FTSE",
+      "name": "FTSE 100",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "SPY",
+      "name": "SPDR S&P 500",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "QQQ",
+      "name": "インベスコQQQ",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "VTI",
+      "name": "バンガード・トータル",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "EWJ",
+      "name": "iシェアーズ MSCI 日本",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "GLD",
+      "name": "SPDR ゴールド",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "SLV",
+      "name": "iシェアーズ シルバー",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "USO",
+      "name": "原油ETF",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "BTC-USD",
+      "name": "ビットコイン",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "ETH-USD",
+      "name": "イーサリアム",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "USDJPY=X",
+      "name": "ドル/円",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 0.8
+    }
+  ],
+  "active_universe": [
+    {
+      "ticker": "AVGO",
+      "name": "AVGO",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.9480072540247846,
+      "component_scores": {
+        "liquidity": 0.9685559392251251,
+        "volatility": 1.9652321354649152,
+        "market_cap": 0.5575761806570558,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "9501.T",
+      "name": "9501.T",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.9438241966188688,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.9442918764452373,
+        "market_cap": 0.5198632853192856,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "LLY",
+      "name": "LLY",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.9082499535259899,
+      "component_scores": {
+        "liquidity": 0.8961038600916399,
+        "volatility": 2.0,
+        "market_cap": 0.4576751819939918,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "4543.T",
+      "name": "4543.T",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.8353230356899003,
+      "component_scores": {
+        "liquidity": 0.9986885484751689,
+        "volatility": 1.2466478718432712,
+        "market_cap": 0.6455475871147818,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "6273.T",
+      "name": "6273.T",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.7686959882780868,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 0.9511599133066267,
+        "market_cap": 0.6138560224670461,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "6178.T",
+      "name": "6178.T",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.7613765962205011,
+      "component_scores": {
+        "liquidity": 0.9741123393207936,
+        "volatility": 0.8885924209984187,
+        "market_cap": 0.6656976408983173,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "3382.T",
+      "name": "3382.T",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.7044928963111953,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 0.5561278628676822,
+        "market_cap": 0.6730692949506353,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "ADBE",
+      "name": "ADBE",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6562507416122535,
+      "component_scores": {
+        "liquidity": 0.7971586597587789,
+        "volatility": 1.094627022496724,
+        "market_cap": 0.29271095674110026,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "ACN",
+      "name": "ACN",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.640516544855446,
+      "component_scores": {
+        "liquidity": 0.7630083682442533,
+        "volatility": 1.0668368043275522,
+        "market_cap": 0.2929866940666383,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "TXN",
+      "name": "TXN",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6404815139936588,
+      "component_scores": {
+        "liquidity": 0.7701000803968285,
+        "volatility": 1.040966786113068,
+        "market_cap": 0.3050325306079866,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "TMO",
+      "name": "TMO",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6369925939837577,
+      "component_scores": {
+        "liquidity": 0.7323271571291041,
+        "volatility": 1.0684103048792088,
+        "market_cap": 0.3144495434767388,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "IWM",
+      "name": "IWM",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6246389797850977,
+      "component_scores": {
+        "liquidity": 0.9758035379116032,
+        "volatility": 0.7763706892115971,
+        "market_cap": 0.2064951222771894,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "COST",
+      "name": "COST",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6201053529348943,
+      "component_scores": {
+        "liquidity": 0.8267173025711904,
+        "volatility": 0.7252315595552813,
+        "market_cap": 0.40817540100992405,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "DHR",
+      "name": "DHR",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6180062642353384,
+      "component_scores": {
+        "liquidity": 0.7074265259398429,
+        "volatility": 1.049575152554098,
+        "market_cap": 0.2834531037702638,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "XOM",
+      "name": "XOM",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6114630720795323,
+      "component_scores": {
+        "liquidity": 0.8050636106868825,
+        "volatility": 0.6998515682362397,
+        "market_cap": 0.41989470090487824,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "LOW",
+      "name": "LOW",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6108664517078092,
+      "component_scores": {
+        "liquidity": 0.7230093087615155,
+        "volatility": 0.9750918136326524,
+        "market_cap": 0.29578118541129605,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "QCOM",
+      "name": "QCOM",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5913357733495601,
+      "component_scores": {
+        "liquidity": 0.7627179252105696,
+        "volatility": 0.7994518237444834,
+        "market_cap": 0.31052012414997016,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PYPL",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5905661317233671,
+      "component_scores": {
+        "liquidity": 0.707719321073196,
+        "volatility": 1.014521549504268,
+        "market_cap": 0.201384102002219,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "CVX",
+      "name": "CVX",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5885501860715849,
+      "component_scores": {
+        "liquidity": 0.7740406929358896,
+        "volatility": 0.6878023600148483,
+        "market_cap": 0.37511002475139354,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "MDT",
+      "name": "MDT",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5816213009431332,
+      "component_scores": {
+        "liquidity": 0.7030763932137581,
+        "volatility": 0.8905581200304482,
+        "market_cap": 0.2703470358916645,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "T",
+      "name": "T",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.565949171728956,
+      "component_scores": {
+        "liquidity": 0.7320383868099399,
+        "volatility": 0.6925692020990786,
+        "market_cap": 0.33129526106463286,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "ABT",
+      "name": "ABT",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5643228098870985,
+      "component_scores": {
+        "liquidity": 0.711150368171571,
+        "volatility": 0.7027344719391551,
+        "market_cap": 0.34172322019118456,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "BMY",
+      "name": "BMY",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5561287846214071,
+      "component_scores": {
+        "liquidity": 0.6712855488791662,
+        "volatility": 0.8445592623239832,
+        "market_cap": 0.24332506997144215,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "XLK",
+      "name": "XLK",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5470701837561248,
+      "component_scores": {
+        "liquidity": 0.8321974528942779,
+        "volatility": 0.5909812273750746,
+        "market_cap": 0.2168588096513061,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "CMCSA",
+      "name": "CMCSA",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5456820793757958,
+      "component_scores": {
+        "liquidity": 0.7128075319862235,
+        "volatility": 0.6946399611861883,
+        "market_cap": 0.2716473101707645,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "VZ",
+      "name": "VZ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5344970838401091,
+      "component_scores": {
+        "liquidity": 0.7128806074206984,
+        "volatility": 0.5818863699147114,
+        "market_cap": 0.3170225105238289,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "XLF",
+      "name": "XLF",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5168413556038984,
+      "component_scores": {
+        "liquidity": 0.8234220598274359,
+        "volatility": 0.5125231282365715,
+        "market_cap": 0.16924044803341348,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "XLV",
+      "name": "XLV",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5108257417691023,
+      "component_scores": {
+        "liquidity": 0.8170301724727969,
+        "volatility": 0.5674567947873433,
+        "market_cap": 0.10890132427917848,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "EFA",
+      "name": "EFA",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5014725903325843,
+      "component_scores": {
+        "liquidity": 0.764379659415173,
+        "volatility": 0.44178588730039575,
+        "market_cap": 0.23520606019181278,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "XLE",
+      "name": "XLE",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.4899951289068923,
+      "component_scores": {
+        "liquidity": 0.7786250676962208,
+        "volatility": 0.5889331881038832,
+        "market_cap": 0.05448388390899783,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "EEM",
+      "name": "EEM",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.4883876114904324,
+      "component_scores": {
+        "liquidity": 0.7683258017578265,
+        "volatility": 0.47863116818485585,
+        "market_cap": 0.14865454930445315,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "XLI",
+      "name": "XLI",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.4759633054883555,
+      "component_scores": {
+        "liquidity": 0.8015717995565212,
+        "volatility": 0.45365405958775323,
+        "market_cap": 0.07904381481539396,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "TLT",
+      "name": "TLT",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.47376788404159687,
+      "component_scores": {
+        "liquidity": 0.8800180960557498,
+        "volatility": 0.42381227612435995,
+        "market_cap": 0.0,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "LQD",
+      "name": "LQD",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.4624586786474095,
+      "component_scores": {
+        "liquidity": 0.8722134769355903,
+        "volatility": 0.2174528902543726,
+        "market_cap": 0.12921623006343158,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "HYG",
+      "name": "HYG",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.42319818013787813,
+      "component_scores": {
+        "liquidity": 0.8604389724753384,
+        "volatility": 0.13794514511784992,
+        "market_cap": 0.04990983748682665,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "EURUSD=X",
+      "name": "EURUSD=X",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.17618703556811607,
+      "component_scores": {
+        "liquidity": 0.0,
+        "volatility": 0.2559351778405804,
+        "market_cap": 0.0,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "GBPUSD=X",
+      "name": "GBPUSD=X",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.17590430610157273,
+      "component_scores": {
+        "liquidity": 0.0,
+        "volatility": 0.25452153050786364,
+        "market_cap": 0.0,
+        "prediction": 0.5
+      }
+    }
+  ]
+}

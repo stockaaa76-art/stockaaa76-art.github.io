@@ -1,0 +1,137 @@
+[
+  {
+    "symbol": "^N225",
+    "name": "日経平均株価",
+    "market": "INDEX",
+    "price": 44768.12,
+    "change": 395.62,
+    "pct": 0.89,
+    "volume": 0
+  },
+  {
+    "symbol": "1330.T",
+    "name": "上場インデックスファンド225",
+    "market": "JP",
+    "price": 46220.0,
+    "change": 430.0,
+    "pct": 0.94,
+    "volume": 0
+  },
+  {
+    "symbol": "1617.T",
+    "name": "食品上場投信",
+    "market": "JP",
+    "price": 40000.0,
+    "change": 0.0,
+    "pct": 0.0,
+    "volume": 0
+  },
+  {
+    "symbol": "1621.T",
+    "name": "医薬品上場投信",
+    "market": "JP",
+    "price": 26990.0,
+    "change": 160.0,
+    "pct": 0.6,
+    "volume": 0
+  },
+  {
+    "symbol": "1622.T",
+    "name": "自動車･輸送機上場投信",
+    "market": "JP",
+    "price": 32490.0,
+    "change": 80.0,
+    "pct": 0.25,
+    "volume": 0
+  },
+  {
+    "symbol": "1626.T",
+    "name": "情報通信･サービス上場投信",
+    "market": "JP",
+    "price": 44440.0,
+    "change": 270.0,
+    "pct": 0.61,
+    "volume": 0
+  },
+  {
+    "symbol": "1627.T",
+    "name": "電力･ガス上場投信",
+    "market": "JP",
+    "price": 10495.0,
+    "change": -60.0,
+    "pct": -0.57,
+    "volume": 0
+  },
+  {
+    "symbol": "1628.T",
+    "name": "運輸･物流上場投信",
+    "market": "JP",
+    "price": 21060.0,
+    "change": -95.0,
+    "pct": -0.45,
+    "volume": 0
+  },
+  {
+    "symbol": "1630.T",
+    "name": "小売上場投信",
+    "market": "JP",
+    "price": 35080.0,
+    "change": 240.0,
+    "pct": 0.69,
+    "volume": 0
+  },
+  {
+    "symbol": "1632.T",
+    "name": "金融(除く銀行)上場投信",
+    "market": "JP",
+    "price": 32400.0,
+    "change": 10.0,
+    "pct": 0.03,
+    "volume": 0
+  },
+  {
+    "symbol": "1328.T",
+    "name": "金価格連動型上場投信",
+    "market": "JP",
+    "price": 12880.0,
+    "change": 35.0,
+    "pct": 0.27,
+    "volume": 0
+  },
+  {
+    "symbol": "1655.T",
+    "name": "iシェアーズ S&P500 米国株 ETF",
+    "market": "JP",
+    "price": 699.1,
+    "change": 4.1,
+    "pct": 0.59,
+    "volume": 0
+  },
+  {
+    "symbol": "2621.T",
+    "name": "iシェアーズ 米国債20年超",
+    "market": "JP",
+    "price": 1128.0,
+    "change": 8.0,
+    "pct": 0.71,
+    "volume": 0
+  },
+  {
+    "symbol": "^GSPC",
+    "name": "S&P 500",
+    "market": "INDEX",
+    "price": 6584.29,
+    "change": -3.18,
+    "pct": -0.05,
+    "volume": 0
+  },
+  {
+    "symbol": "000001.SS",
+    "name": "上海総合",
+    "market": "OTHER",
+    "price": 3870.6,
+    "change": -4.71,
+    "pct": -0.12,
+    "volume": 0
+  }
+]
