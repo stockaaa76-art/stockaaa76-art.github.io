@@ -28,8 +28,8 @@ class StocksList {
         try {
             await this.loadStocksData();
             this.setupEventListeners();
-            this.applyFiltersAndSort();
             this.parseURLParams();
+            this.applyFiltersAndSort();
             
             // 5分ごとに価格データ更新
             setInterval(() => {
@@ -411,23 +411,32 @@ class StocksList {
                 'crypto': 'CRYPTO'
             };
             const mappedFilter = filterMap[filter] || filter.toUpperCase();
-            document.getElementById('market-filter').value = mappedFilter;
+            
+            // DOM要素の存在確認
+            const marketFilterEl = document.getElementById('market-filter');
+            if (marketFilterEl) {
+                marketFilterEl.value = mappedFilter;
+            }
             this.filters.market = mappedFilter;
         }
         
         if (params.has('sort')) {
             const sort = params.get('sort');
-            document.getElementById('sort-by').value = sort;
+            const sortByEl = document.getElementById('sort-by');
+            if (sortByEl) {
+                sortByEl.value = sort;
+            }
             this.sortBy = sort;
         }
         
         if (params.has('q')) {
             const query = params.get('q');
-            document.getElementById('stock-search').value = query;
+            const searchEl = document.getElementById('stock-search');
+            if (searchEl) {
+                searchEl.value = query;
+            }
             this.filters.search = query.toLowerCase();
         }
-        
-        this.applyFiltersAndSort();
     }
 
     // ユーティリティメソッド
