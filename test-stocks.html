@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>株式一覧テスト</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .error { color: red; }
+        .success { color: green; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>📊 株式一覧テスト</h1>
+    
+    <div id="status">読込中...</div>
+    
+    <table id="stocks-table" style="display: none;">
+        <thead>
+            <tr>
+                <th>ティッカー</th>
+                <th>銘柄名</th>
+                <th>市場</th>
+                <th>価格</th>
+                <th>変化率</th>
+            </tr>
+        </thead>
+        <tbody id="stocks-tbody">
+        </tbody>
+    </table>
+
+    <script>
+    async function loadStocks() {
+        const statusDiv = document.getElementById('status');
+        const table = document.getElementById('stocks-table');
+        const tbody = document.getElementById('stocks-tbody');
+        
+        try {
+            statusDiv.textContent = 'APIデータ取得中...';
+            statusDiv.className = '';
+            
+            const response = await fetch('/api/stocks/index.json');
+            console.log('API Response Status:', response.status);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const data = await response.json();
+            console.log('取得データ:', data);
+            
+            if (!data.stocks || !Array.isArray(data.stocks)) {
+                throw new Error('無効なデータ形式');
+            }
+            
+            // 日本株のみフィルタ
+            const jpStocks = data.stocks.filter(stock => stock.market === 'JP');
+            console.log('日本株数:', jpStocks.length);
+            
+            if (jpStocks.length === 0) {
+                statusDiv.textContent = '日本株が見つかりません';
+                statusDiv.className = 'error';
+                return;
+            }
+            
+            // テーブル作成
+            tbody.innerHTML = jpStocks.map(stock => `
+                <tr>
+                    <td>${stock.symbol}</td>
+                    <td>${stock.name}</td>
+                    <td>${stock.market}</td>
+                    <td>${stock.price.toFixed(2)}</td>
+                    <td>${stock.change_pct.toFixed(2)}%</td>
+                </tr>
+            `).join('');
+            
+            statusDiv.textContent = `✅ 日本株 ${jpStocks.length}銘柄を表示中`;
+            statusDiv.className = 'success';
+            table.style.display = 'block';
+            
+        } catch (error) {
+            console.error('エラー:', error);
+            statusDiv.textContent = `❌ エラー: ${error.message}`;
+            statusDiv.className = 'error';
+        }
+    }
+    
+    // ページ読み込み後に実行
+    document.addEventListener('DOMContentLoaded', loadStocks);
+    </script>
+</body>
+</html>

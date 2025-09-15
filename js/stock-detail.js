@@ -73,17 +73,25 @@ class StockDetail {
 
     async loadStockData() {
         try {
-            const response = await fetch(`/api/stocks/${this.symbol}.json`);
+            // メインの株価リストから該当銘柄を検索
+            const response = await fetch('/api/stocks/index.json');
             
             if (!response.ok) {
-                if (response.status === 404) {
-                    throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
-                }
                 throw new Error(`データ取得エラー: ${response.status}`);
             }
             
-            this.stockData = await response.json();
-            console.log('株価データ読み込み完了:', this.symbol);
+            const data = await response.json();
+            console.log('株価データ取得:', data);
+            
+            // 銘柄を検索
+            const stock = data.stocks.find(s => s.symbol === this.symbol);
+            
+            if (!stock) {
+                throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
+            }
+            
+            this.stockData = stock;
+            console.log('株価データ読み込み完了:', this.symbol, this.stockData);
             
         } catch (error) {
             console.error('株価データ読み込みエラー:', error);
@@ -160,7 +168,7 @@ class StockDetail {
         const changePercent = changeEl.querySelector('.change-percent');
         
         changeValue.textContent = this.formatChange(data.change);
-        changePercent.textContent = `(${this.formatPercent(data.pct)})`;
+        changePercent.textContent = `(${this.formatPercent(data.change_pct)})`;
         
         // 変動クラス
         changeEl.className = 'price-change';

@@ -244,7 +244,7 @@ class StocksList {
             case 'market': return stock.market || '';
             case 'price': return parseFloat(stock.price) || 0;
             case 'change': return parseFloat(stock.change) || 0;
-            case 'pct': return parseFloat(stock.pct) || 0;
+            case 'pct': return parseFloat(stock.change_pct) || 0;
             case 'volume': return parseInt(stock.volume) || 0;
             case 'confidence': return parseFloat(stock.confidence) || 0;
             default: return stock[key] || '';
@@ -282,7 +282,7 @@ class StocksList {
                     ${this.formatChange(stock.change)}
                 </td>
                 <td class="number price-change ${this.getChangeClass(stock.change)}">
-                    ${this.formatPercent(stock.pct)}
+                    ${this.formatPercent(stock.change_pct)}
                 </td>
                 <td class="number">${this.formatVolume(stock.volume)}</td>
                 <td class="tier-col">
@@ -290,7 +290,7 @@ class StocksList {
                 </td>
                 <td>
                     <div class="action-buttons">
-                        <a href="/stocks/?s=${stock.symbol}" class="btn-mini">詳細</a>
+                        <a href="/stocks/detail/?s=${stock.symbol}" class="btn-mini">詳細</a>
                         <button class="btn-mini btn-watchlist" onclick="toggleWatchlist('${stock.symbol}')">
                             ⭐
                         </button>
@@ -305,7 +305,7 @@ class StocksList {
                 if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
                 
                 const symbol = row.dataset.symbol;
-                window.location.href = `/stocks/?s=${symbol}`;
+                window.location.href = `/stocks/detail/?s=${symbol}`;
             });
         });
     }
@@ -401,9 +401,18 @@ class StocksList {
         
         // フィルタパラメータ適用
         if (params.has('filter')) {
-            const filter = params.get('filter');
-            document.getElementById('market-filter').value = filter;
-            this.filters.market = filter;
+            const filter = params.get('filter').toLowerCase();
+            // URLパラメータを正しいフィルター値にマッピング
+            const filterMap = {
+                'jp': 'JP',
+                'us': 'US', 
+                'etf': 'ETF',
+                'index': 'INDEX',
+                'crypto': 'CRYPTO'
+            };
+            const mappedFilter = filterMap[filter] || filter.toUpperCase();
+            document.getElementById('market-filter').value = mappedFilter;
+            this.filters.market = mappedFilter;
         }
         
         if (params.has('sort')) {
