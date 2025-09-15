@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-09-15 03:16:05",
+    "generated_at": "2025-09-16 00:18:09",
     "total_count": 107,
     "core_count": 70,
     "active_count": 37,
@@ -504,19 +504,6 @@
   ],
   "active_universe": [
     {
-      "ticker": "AVGO",
-      "name": "AVGO",
-      "category": "active",
-      "tier": "active",
-      "composite_score": 0.9480072540247846,
-      "component_scores": {
-        "liquidity": 0.9685559392251251,
-        "volatility": 1.9652321354649152,
-        "market_cap": 0.5575761806570558,
-        "prediction": 0.5
-      }
-    },
-    {
       "ticker": "9501.T",
       "name": "9501.T",
       "category": "active",
@@ -530,15 +517,28 @@
       }
     },
     {
+      "ticker": "AVGO",
+      "name": "AVGO",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.9435135449829957,
+      "component_scores": {
+        "liquidity": 0.9665640371045856,
+        "volatility": 1.945538535779098,
+        "market_cap": 0.5577465067832017,
+        "prediction": 0.5
+      }
+    },
+    {
       "ticker": "LLY",
       "name": "LLY",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.9082499535259899,
+      "composite_score": 0.9071086725531922,
       "component_scores": {
-        "liquidity": 0.8961038600916399,
+        "liquidity": 0.8931274331672933,
         "volatility": 2.0,
-        "market_cap": 0.4576751819939918,
+        "market_cap": 0.45668177041201713,
         "prediction": 0.5
       }
     },
@@ -595,41 +595,28 @@
       }
     },
     {
-      "ticker": "ADBE",
-      "name": "ADBE",
-      "category": "active",
-      "tier": "active",
-      "composite_score": 0.6562507416122535,
-      "component_scores": {
-        "liquidity": 0.7971586597587789,
-        "volatility": 1.094627022496724,
-        "market_cap": 0.29271095674110026,
-        "prediction": 0.5
-      }
-    },
-    {
-      "ticker": "ACN",
-      "name": "ACN",
-      "category": "active",
-      "tier": "active",
-      "composite_score": 0.640516544855446,
-      "component_scores": {
-        "liquidity": 0.7630083682442533,
-        "volatility": 1.0668368043275522,
-        "market_cap": 0.2929866940666383,
-        "prediction": 0.5
-      }
-    },
-    {
       "ticker": "TXN",
       "name": "TXN",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.6404815139936588,
+      "composite_score": 0.6488437036054001,
       "component_scores": {
-        "liquidity": 0.7701000803968285,
-        "volatility": 1.040966786113068,
-        "market_cap": 0.3050325306079866,
+        "liquidity": 0.769439073851508,
+        "volatility": 1.0876978901238268,
+        "market_cap": 0.30188961370072953,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "ADBE",
+      "name": "ADBE",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.6475380221804429,
+      "component_scores": {
+        "liquidity": 0.7961767484599515,
+        "volatility": 1.0536930288889994,
+        "market_cap": 0.29178556745863016,
         "prediction": 0.5
       }
     },
@@ -638,24 +625,24 @@
       "name": "TMO",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.6369925939837577,
+      "composite_score": 0.6358567286485918,
       "component_scores": {
-        "liquidity": 0.7323271571291041,
-        "volatility": 1.0684103048792088,
-        "market_cap": 0.3144495434767388,
+        "liquidity": 0.7274246798678695,
+        "volatility": 1.0711902949703165,
+        "market_cap": 0.3135650627766704,
         "prediction": 0.5
       }
     },
     {
-      "ticker": "IWM",
-      "name": "IWM",
+      "ticker": "ACN",
+      "name": "ACN",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.6246389797850977,
+      "composite_score": 0.6358294574076755,
       "component_scores": {
-        "liquidity": 0.9758035379116032,
-        "volatility": 0.7763706892115971,
-        "market_cap": 0.2064951222771894,
+        "liquidity": 0.7589464778542889,
+        "volatility": 1.0497903746868587,
+        "market_cap": 0.29274975645606827,
         "prediction": 0.5
       }
     },
@@ -664,11 +651,11 @@
       "name": "COST",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.6201053529348943,
+      "composite_score": 0.61897202875655,
       "component_scores": {
-        "liquidity": 0.8267173025711904,
-        "volatility": 0.7252315595552813,
-        "market_cap": 0.40817540100992405,
+        "liquidity": 0.8223992603325208,
+        "volatility": 0.7265800959033052,
+        "market_cap": 0.40774492590453104,
         "prediction": 0.5
       }
     },
@@ -677,24 +664,24 @@
       "name": "DHR",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.6180062642353384,
+      "composite_score": 0.6174045345240196,
       "component_scores": {
-        "liquidity": 0.7074265259398429,
-        "volatility": 1.049575152554098,
-        "market_cap": 0.2834531037702638,
+        "liquidity": 0.7021859851360275,
+        "volatility": 1.0560075250727026,
+        "market_cap": 0.28218893587468313,
         "prediction": 0.5
       }
     },
     {
-      "ticker": "XOM",
-      "name": "XOM",
+      "ticker": "IWM",
+      "name": "IWM",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.6114630720795323,
+      "composite_score": 0.6165051210029342,
       "component_scores": {
-        "liquidity": 0.8050636106868825,
-        "volatility": 0.6998515682362397,
-        "market_cap": 0.41989470090487824,
+        "liquidity": 0.9706770411585306,
+        "volatility": 0.7426067461386874,
+        "market_cap": 0.20712263771055006,
         "prediction": 0.5
       }
     },
@@ -703,11 +690,24 @@
       "name": "LOW",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.6108664517078092,
+      "composite_score": 0.6001362192068955,
       "component_scores": {
-        "liquidity": 0.7230093087615155,
-        "volatility": 0.9750918136326524,
-        "market_cap": 0.29578118541129605,
+        "liquidity": 0.7202261722373213,
+        "volatility": 0.9260078426866276,
+        "market_cap": 0.29546719599349436,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "XOM",
+      "name": "XOM",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5997493040215024,
+      "component_scores": {
+        "liquidity": 0.8011560662872762,
+        "volatility": 0.6469022522146336,
+        "market_cap": 0.42008813476957124,
         "prediction": 0.5
       }
     },
@@ -716,24 +716,11 @@
       "name": "QCOM",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5913357733495601,
+      "composite_score": 0.5900050580499152,
       "component_scores": {
-        "liquidity": 0.7627179252105696,
-        "volatility": 0.7994518237444834,
-        "market_cap": 0.31052012414997016,
-        "prediction": 0.5
-      }
-    },
-    {
-      "ticker": "PYPL",
-      "name": "PYPL",
-      "category": "active",
-      "tier": "active",
-      "composite_score": 0.5905661317233671,
-      "component_scores": {
-        "liquidity": 0.707719321073196,
-        "volatility": 1.014521549504268,
-        "market_cap": 0.201384102002219,
+        "liquidity": 0.7575670625365398,
+        "volatility": 0.8013151541097392,
+        "market_cap": 0.30988763386802165,
         "prediction": 0.5
       }
     },
@@ -742,11 +729,24 @@
       "name": "CVX",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5885501860715849,
+      "composite_score": 0.5873531482430703,
       "component_scores": {
-        "liquidity": 0.7740406929358896,
-        "volatility": 0.6878023600148483,
-        "market_cap": 0.37511002475139354,
+        "liquidity": 0.7698528175608825,
+        "volatility": 0.687349536020682,
+        "market_cap": 0.3757095830826762,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PYPL",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5868250041973833,
+      "component_scores": {
+        "liquidity": 0.703189927665128,
+        "volatility": 1.0021744669395085,
+        "market_cap": 0.20173253003977293,
         "prediction": 0.5
       }
     },
@@ -755,11 +755,11 @@
       "name": "MDT",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5816213009431332,
+      "composite_score": 0.5809378855932347,
       "component_scores": {
-        "liquidity": 0.7030763932137581,
-        "volatility": 0.8905581200304482,
-        "market_cap": 0.2703470358916645,
+        "liquidity": 0.7001854234852126,
+        "volatility": 0.8918171075105794,
+        "market_cap": 0.27007534818221995,
         "prediction": 0.5
       }
     },
@@ -768,11 +768,11 @@
       "name": "T",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.565949171728956,
+      "composite_score": 0.5645072369583357,
       "component_scores": {
-        "liquidity": 0.7320383868099399,
-        "volatility": 0.6925692020990786,
-        "market_cap": 0.33129526106463286,
+        "liquidity": 0.7284636311026725,
+        "volatility": 0.6902406050643072,
+        "market_cap": 0.33168010645868984,
         "prediction": 0.5
       }
     },
@@ -781,37 +781,11 @@
       "name": "ABT",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5643228098870985,
+      "composite_score": 0.5570379280196311,
       "component_scores": {
-        "liquidity": 0.711150368171571,
-        "volatility": 0.7027344719391551,
-        "market_cap": 0.34172322019118456,
-        "prediction": 0.5
-      }
-    },
-    {
-      "ticker": "BMY",
-      "name": "BMY",
-      "category": "active",
-      "tier": "active",
-      "composite_score": 0.5561287846214071,
-      "component_scores": {
-        "liquidity": 0.6712855488791662,
-        "volatility": 0.8445592623239832,
-        "market_cap": 0.24332506997144215,
-        "prediction": 0.5
-      }
-    },
-    {
-      "ticker": "XLK",
-      "name": "XLK",
-      "category": "active",
-      "tier": "active",
-      "composite_score": 0.5470701837561248,
-      "component_scores": {
-        "liquidity": 0.8321974528942779,
-        "volatility": 0.5909812273750746,
-        "market_cap": 0.2168588096513061,
+        "liquidity": 0.7079889432985187,
+        "volatility": 0.6721527008720993,
+        "market_cap": 0.3408428194226223,
         "prediction": 0.5
       }
     },
@@ -820,11 +794,37 @@
       "name": "CMCSA",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5456820793757958,
+      "composite_score": 0.5480461243550577,
       "component_scores": {
-        "liquidity": 0.7128075319862235,
-        "volatility": 0.6946399611861883,
-        "market_cap": 0.2716473101707645,
+        "liquidity": 0.7099511898822748,
+        "volatility": 0.7125007146452595,
+        "market_cap": 0.2702424978452934,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "BMY",
+      "name": "BMY",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5434170847850843,
+      "component_scores": {
+        "liquidity": 0.665939484197847,
+        "volatility": 0.7894612165030499,
+        "market_cap": 0.24297198490048083,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "XLK",
+      "name": "XLK",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.5377283580757091,
+      "component_scores": {
+        "liquidity": 0.8293577792722757,
+        "volatility": 0.5478918070417012,
+        "market_cap": 0.21737065154274443,
         "prediction": 0.5
       }
     },
@@ -833,11 +833,11 @@
       "name": "VZ",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5344970838401091,
+      "composite_score": 0.5333425070461073,
       "component_scores": {
-        "liquidity": 0.7128806074206984,
-        "volatility": 0.5818863699147114,
-        "market_cap": 0.3170225105238289,
+        "liquidity": 0.708961233761784,
+        "volatility": 0.5820697378098635,
+        "market_cap": 0.3169607574223976,
         "prediction": 0.5
       }
     },
@@ -846,11 +846,11 @@
       "name": "XLF",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5168413556038984,
+      "composite_score": 0.5133094061111626,
       "component_scores": {
-        "liquidity": 0.8234220598274359,
-        "volatility": 0.5125231282365715,
-        "market_cap": 0.16924044803341348,
+        "liquidity": 0.818227975723024,
+        "volatility": 0.5024024729003242,
+        "market_cap": 0.1694420752567622,
         "prediction": 0.5
       }
     },
@@ -859,11 +859,11 @@
       "name": "XLV",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5108257417691023,
+      "composite_score": 0.5068210805995738,
       "component_scores": {
-        "liquidity": 0.8170301724727969,
-        "volatility": 0.5674567947873433,
-        "market_cap": 0.10890132427917848,
+        "liquidity": 0.8127146687729405,
+        "volatility": 0.5548237270894957,
+        "market_cap": 0.10816773819916997,
         "prediction": 0.5
       }
     },
@@ -872,11 +872,11 @@
       "name": "EFA",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.5014725903325843,
+      "composite_score": 0.49843939547947197,
       "component_scores": {
-        "liquidity": 0.764379659415173,
-        "volatility": 0.44178588730039575,
-        "market_cap": 0.23520606019181278,
+        "liquidity": 0.7627705021589648,
+        "volatility": 0.42826231955656313,
+        "market_cap": 0.23582312368187952,
         "prediction": 0.5
       }
     },
@@ -885,11 +885,11 @@
       "name": "XLE",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.4899951289068923,
+      "composite_score": 0.48856706702211294,
       "component_scores": {
-        "liquidity": 0.7786250676962208,
-        "volatility": 0.5889331881038832,
-        "market_cap": 0.05448388390899783,
+        "liquidity": 0.7746941051453426,
+        "volatility": 0.5874444542540864,
+        "market_cap": 0.05467977851077166,
         "prediction": 0.5
       }
     },
@@ -898,11 +898,11 @@
       "name": "EEM",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.4883876114904324,
+      "composite_score": 0.4862872278230591,
       "component_scores": {
-        "liquidity": 0.7683258017578265,
-        "volatility": 0.47863116818485585,
-        "market_cap": 0.14865454930445315,
+        "liquidity": 0.7652001952573897,
+        "volatility": 0.4719504498936673,
+        "market_cap": 0.14934831706843482,
         "prediction": 0.5
       }
     },
@@ -911,11 +911,11 @@
       "name": "XLI",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.4759633054883555,
+      "composite_score": 0.47307984632899047,
       "component_scores": {
-        "liquidity": 0.8015717995565212,
-        "volatility": 0.45365405958775323,
-        "market_cap": 0.07904381481539396,
+        "liquidity": 0.7961924176423654,
+        "volatility": 0.44647570700266287,
+        "market_cap": 0.07970791854299308,
         "prediction": 0.5
       }
     },
@@ -924,10 +924,10 @@
       "name": "TLT",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.47376788404159687,
+      "composite_score": 0.4725180385363528,
       "component_scores": {
-        "liquidity": 0.8800180960557498,
-        "volatility": 0.42381227612435995,
+        "liquidity": 0.8747646288794257,
+        "volatility": 0.4254432493626255,
         "market_cap": 0.0,
         "prediction": 0.5
       }
@@ -937,11 +937,11 @@
       "name": "LQD",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.4624586786474095,
+      "composite_score": 0.4612635039287056,
       "component_scores": {
-        "liquidity": 0.8722134769355903,
-        "volatility": 0.2174528902543726,
-        "market_cap": 0.12921623006343158,
+        "liquidity": 0.866821141690474,
+        "volatility": 0.21911928656547994,
+        "market_cap": 0.1295732164338695,
         "prediction": 0.5
       }
     },
@@ -950,24 +950,11 @@
       "name": "HYG",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.42319818013787813,
+      "composite_score": 0.42077117710623846,
       "component_scores": {
-        "liquidity": 0.8604389724753384,
-        "volatility": 0.13794514511784992,
-        "market_cap": 0.04990983748682665,
-        "prediction": 0.5
-      }
-    },
-    {
-      "ticker": "EURUSD=X",
-      "name": "EURUSD=X",
-      "category": "active",
-      "tier": "active",
-      "composite_score": 0.17618703556811607,
-      "component_scores": {
-        "liquidity": 0.0,
-        "volatility": 0.2559351778405804,
-        "market_cap": 0.0,
+        "liquidity": 0.8538766380371312,
+        "volatility": 0.1353438690733571,
+        "market_cap": 0.05015764752171065,
         "prediction": 0.5
       }
     },
@@ -976,10 +963,23 @@
       "name": "GBPUSD=X",
       "category": "active",
       "tier": "active",
-      "composite_score": 0.17590430610157273,
+      "composite_score": 0.17668726681955046,
       "component_scores": {
         "liquidity": 0.0,
-        "volatility": 0.25452153050786364,
+        "volatility": 0.2584363340977523,
+        "market_cap": 0.0,
+        "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "EURUSD=X",
+      "name": "EURUSD=X",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.1764601268425628,
+      "component_scores": {
+        "liquidity": 0.0,
+        "volatility": 0.2573006342128139,
         "market_cap": 0.0,
         "prediction": 0.5
       }
