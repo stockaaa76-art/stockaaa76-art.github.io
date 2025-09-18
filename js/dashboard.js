@@ -6,17 +6,29 @@
 class Dashboard {
     constructor() {
         this.summary_api = '/api/summary.json';
+        this.indices_api = '/api/major_indices.json';
         this.init();
     }
 
     async init() {
+        console.log('Dashboard初期化開始');
         try {
+            console.log('summary APIを読み込み中...');
             await this.loadSummaryData();
+            console.log('国際指標APIを読み込み中...');
+            await this.loadInternationalIndices();
             this.setupEventListeners();
+            
+            // 初期描画後に再描画（Grid Layoutの初期化問題対策）
+            setTimeout(() => {
+                console.log('Canvas再描画実行');
+                this.redrawAllCharts();
+            }, 100);
             
             // 5分ごとに更新
             setInterval(() => {
                 this.loadSummaryData();
+                this.loadInternationalIndices();
             }, 5 * 60 * 1000);
             
         } catch (error) {
@@ -27,18 +39,37 @@ class Dashboard {
 
     async loadSummaryData() {
         try {
+            console.log('summary API取得開始:', this.summary_api);
             const response = await fetch(this.summary_api);
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}`);
             }
             
             const data = await response.json();
+            console.log('summary データ取得成功:', data);
+            this.lastSummaryData = data; // データを保存（再描画用）
             this.updateIndexHeroes(data);
             this.updateLastUpdated(data.updatedAt);
             
         } catch (error) {
             console.error('サマリーデータ取得エラー:', error);
             this.showError();
+        }
+    }
+
+    async loadInternationalIndices() {
+        try {
+            const response = await fetch(this.indices_api);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            
+            const data = await response.json();
+            this.updateInternationalIndices(data);
+            
+        } catch (error) {
+            console.error('国際指標データ取得エラー:', error);
+            // 国際指標はサブ機能なので、エラーでも全体は停止しない
         }
     }
 
@@ -53,6 +84,63 @@ class Dashboard {
         const dow = data.indices.find(idx => idx.symbol === 'DJI' || idx.symbol === '^DJI');
         if (dow) {
             this.updateIndexCard('dow', dow);
+        }
+    }
+
+    updateInternationalIndices(data) {
+        // 国際指標のマッピング
+        const indexMapping = {
+            // 米国
+            '^IXIC': 'nasdaq',
+            '^GSPC': 'sp500', 
+            '^RUT': 'russell',
+            // 欧州
+            '^GDAXI': 'dax',
+            '^FTSE': 'ftse',
+            '^FCHI': 'cac',
+            // アジア
+            '000001.SS': 'shanghai',
+            '^HSI': 'hangseng',
+            '^KS11': 'kospi',
+            // 商品
+            'CL=F': 'oil',
+            'GC=F': 'gold',
+            'BTC-USD': 'bitcoin'
+        };
+
+        // すべての地域の指標を更新
+        for (const [region, indices] of Object.entries(data.indices)) {
+            for (const [symbol, indexData] of Object.entries(indices)) {
+                const elementId = indexMapping[symbol];
+                if (elementId) {
+                    this.updateInternationalIndex(elementId, indexData);
+                }
+            }
+        }
+    }
+
+    updateInternationalIndex(elementId, data) {
+        const priceEl = document.getElementById(`${elementId}-price`);
+        const changeEl = document.getElementById(`${elementId}-change`);
+
+        if (priceEl) {
+            priceEl.textContent = data.price_formatted || this.formatPrice(data.price, data.currency);
+        }
+
+        if (changeEl) {
+            const changeText = data.change_formatted || this.formatChange(data.change);
+            const percentText = data.change_percent ? `(${this.formatPercent(data.change_percent)})` : '';
+            changeEl.textContent = `${changeText} ${percentText}`;
+            
+            // 色分けクラス
+            changeEl.className = 'index-change';
+            if (data.trend === 'up' || data.change > 0) {
+                changeEl.classList.add('positive');
+            } else if (data.trend === 'down' || data.change < 0) {
+                changeEl.classList.add('negative');
+            } else {
+                changeEl.classList.add('neutral');
+            }
         }
     }
 
@@ -143,6 +231,13 @@ class Dashboard {
         const canvas = container.querySelector('canvas');
         if (!canvas) return;
 
+        // Canvas のサイズを再設定（親要素に合わせる）
+        const parentWidth = container.clientWidth;
+        if (parentWidth > 0) {
+            canvas.width = Math.min(parentWidth - 20, 280); // パディング考慮
+            canvas.height = 60;
+        }
+
         const ctx = canvas.getContext('2d');
         const width = canvas.width;
         const height = canvas.height;
@@ -223,6 +318,25 @@ class Dashboard {
                 }
             });
         });
+        
+        // ウィンドウリサイズ時に再描画
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                console.log('リサイズ検知 - Canvas再描画');
+                this.redrawAllCharts();
+            }, 250);
+        });
+    }
+    
+    // すべてのチャートを再描画
+    redrawAllCharts() {
+        // 保存しているデータがあれば再描画
+        if (this.lastSummaryData) {
+            console.log('サマリーデータで再描画');
+            this.updateIndexHeroes(this.lastSummaryData);
+        }
     }
 
     loadWatchlist() {
