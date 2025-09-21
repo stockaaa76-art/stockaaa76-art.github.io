@@ -8,6 +8,7 @@ class Dashboard {
         this.summary_api = '/api/summary.json';
         this.indices_api = '/api/major_indices.json';
         this.realtime_api = '/data/realtime_prices.json';
+        this.rankings_api = '/api/rankings.json';
         this.init();
     }
 
@@ -18,6 +19,8 @@ class Dashboard {
             await this.loadRealtimeData();
             console.log('国際指標APIを読み込み中...');
             await this.loadInternationalIndices();
+            console.log('ランキングAPIを読み込み中...');
+            await this.loadRankings();
             this.setupEventListeners();
             
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
@@ -30,6 +33,7 @@ class Dashboard {
             setInterval(() => {
                 this.loadRealtimeData();
                 this.loadInternationalIndices();
+                this.loadRankings();
             }, 5 * 60 * 1000);
             
         } catch (error) {
@@ -550,6 +554,126 @@ class Dashboard {
                 changeEl.classList.add('neutral');
             }
         }
+    }
+
+    async loadRankings() {
+        try {
+            const response = await fetch(this.rankings_api);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            
+            const data = await response.json();
+            this.updateRankings(data);
+            
+        } catch (error) {
+            console.error('ランキングデータ取得エラー:', error);
+            // ランキングはサブ機能なので、エラーでも全体は停止しない
+            this.showRankingError();
+        }
+    }
+
+    updateRankings(data) {
+        // 値上がりランキング
+        this.renderRanking('gainers-ranking', data.gainers, 'percentage');
+        
+        // 値下がりランキング
+        this.renderRanking('losers-ranking', data.losers, 'percentage');
+        
+        // 出来高ランキング
+        this.renderRanking('volume-ranking', data.volume, 'volume');
+        
+        // 時価総額ランキング
+        this.renderRanking('market-cap-ranking', data.market_cap, 'market_cap');
+    }
+
+    renderRanking(elementId, stocks, type) {
+        const container = document.getElementById(elementId);
+        if (!container || !stocks || stocks.length === 0) {
+            if (container) {
+                container.innerHTML = '<div class="loading">データなし</div>';
+            }
+            return;
+        }
+
+        const html = stocks.map((stock, index) => {
+            const rank = index + 1;
+            let valueText = '';
+            let changeText = '';
+            let changeClass = 'neutral';
+
+            // 表示値の決定
+            switch (type) {
+                case 'percentage':
+                    valueText = this.formatPrice(stock.price, '¥');
+                    changeText = this.formatPercent(stock.change_percent);
+                    break;
+                case 'volume':
+                    valueText = this.formatVolume(stock.volume);
+                    changeText = this.formatPercent(stock.change_percent);
+                    break;
+                case 'market_cap':
+                    valueText = this.formatMarketCap(stock.market_cap);
+                    changeText = this.formatPercent(stock.change_percent);
+                    break;
+            }
+
+            // 変化率の色分け
+            if (stock.change_percent > 0) {
+                changeClass = 'positive';
+            } else if (stock.change_percent < 0) {
+                changeClass = 'negative';
+            }
+
+            return `
+                <div class="ranking-item">
+                    <div class="ranking-item-left">
+                        <span class="ranking-symbol">${rank}. ${stock.symbol}</span>
+                        <span class="ranking-name">${stock.name}</span>
+                    </div>
+                    <div class="ranking-item-right">
+                        <span class="ranking-value">${valueText}</span>
+                        <span class="ranking-change ${changeClass}">${changeText}</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        container.innerHTML = html;
+    }
+
+    formatVolume(volume) {
+        if (volume >= 1000000) {
+            return (volume / 1000000).toFixed(1) + 'M株';
+        } else if (volume >= 1000) {
+            return (volume / 1000).toFixed(1) + 'K株';
+        }
+        return volume.toLocaleString() + '株';
+    }
+
+    formatMarketCap(marketCap) {
+        if (marketCap >= 1000000000000) {
+            return (marketCap / 1000000000000).toFixed(1) + '兆円';
+        } else if (marketCap >= 100000000) {
+            return (marketCap / 100000000).toFixed(1) + '億円';
+        } else if (marketCap >= 10000) {
+            return (marketCap / 10000).toFixed(1) + '万円';
+        }
+        return marketCap.toLocaleString() + '円';
+    }
+
+    showRankingError() {
+        const rankingContainers = [
+            'gainers-ranking', 'losers-ranking', 
+            'volume-ranking', 'market-cap-ranking'
+        ];
+        
+        rankingContainers.forEach(id => {
+            const container = document.getElementById(id);
+            if (container) {
+                container.innerHTML = '<div class="loading">データ取得エラー</div>';
+            }
+        });
     }
 
     showError() {
