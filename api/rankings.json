@@ -1,0 +1,191 @@
+{
+  "gainers": [
+    {
+      "symbol": "8306.T",
+      "name": "三菱UFJフィナンシャル・グループ",
+      "price": 2341.5,
+      "change": 59.5,
+      "change_percent": 2.61,
+      "volume": 78267400,
+      "market_cap": 26647015194624
+    },
+    {
+      "symbol": "8058.T",
+      "name": "三菱商事",
+      "price": 3571.0,
+      "change": 66.0,
+      "change_percent": 1.88,
+      "volume": 24597400,
+      "market_cap": 13535286394880
+    },
+    {
+      "symbol": "8031.T",
+      "name": "三井物産",
+      "price": 3724.0,
+      "change": 57.0,
+      "change_percent": 1.55,
+      "volume": 10938200,
+      "market_cap": 10703707570176
+    },
+    {
+      "symbol": "4063.T",
+      "name": "信越化学工業",
+      "price": 4632.0,
+      "change": 42.0,
+      "change_percent": 0.92,
+      "volume": 21108700,
+      "market_cap": 8675937746944
+    },
+    {
+      "symbol": "4519.T",
+      "name": "中外製薬",
+      "price": 6826.0,
+      "change": 58.0,
+      "change_percent": 0.86,
+      "volume": 4337400,
+      "market_cap": 11233570848768
+    }
+  ],
+  "losers": [
+    {
+      "symbol": "9983.T",
+      "name": "ファーストリテイリング",
+      "price": 45720.0,
+      "change": -2150.0,
+      "change_percent": -4.49,
+      "volume": 3025600,
+      "market_cap": 14027202756608
+    },
+    {
+      "symbol": "6098.T",
+      "name": "リクルートホールディングス",
+      "price": 7930.0,
+      "change": -277.0,
+      "change_percent": -3.38,
+      "volume": 7773600,
+      "market_cap": 11341569982464
+    },
+    {
+      "symbol": "6758.T",
+      "name": "ソニーグループ",
+      "price": 4321.0,
+      "change": -112.0,
+      "change_percent": -2.53,
+      "volume": 22209700,
+      "market_cap": 25851051638784
+    },
+    {
+      "symbol": "4568.T",
+      "name": "第一三共",
+      "price": 3543.0,
+      "change": -90.0,
+      "change_percent": -2.48,
+      "volume": 6768900,
+      "market_cap": 6599448461312
+    },
+    {
+      "symbol": "7974.T",
+      "name": "任天堂",
+      "price": 12800.0,
+      "change": -315.0,
+      "change_percent": -2.4,
+      "volume": 11173100,
+      "market_cap": 14902376792064
+    }
+  ],
+  "volume": [
+    {
+      "symbol": "9432.T",
+      "name": "日本電信電話",
+      "price": 158.0,
+      "change": -1.9,
+      "change_percent": -1.19,
+      "volume": 318034200,
+      "market_cap": 13072801464320
+    },
+    {
+      "symbol": "9434.T",
+      "name": "ソフトバンク",
+      "price": 228.9,
+      "change": 0.1,
+      "change_percent": 0.04,
+      "volume": 101176800,
+      "market_cap": 10914597175296
+    },
+    {
+      "symbol": "8306.T",
+      "name": "三菱UFJフィナンシャル・グループ",
+      "price": 2341.5,
+      "change": 59.5,
+      "change_percent": 2.61,
+      "volume": 78267400,
+      "market_cap": 26647015194624
+    },
+    {
+      "symbol": "7267.T",
+      "name": "ホンダ",
+      "price": 1631.0,
+      "change": -9.0,
+      "change_percent": -0.55,
+      "volume": 41036300,
+      "market_cap": 6348709822464
+    },
+    {
+      "symbol": "7203.T",
+      "name": "トヨタ自動車",
+      "price": 2923.0,
+      "change": -17.5,
+      "change_percent": -0.6,
+      "volume": 39502900,
+      "market_cap": 38098201214976
+    }
+  ],
+  "market_cap": [
+    {
+      "symbol": "7203.T",
+      "name": "トヨタ自動車",
+      "price": 2923.0,
+      "change": -17.5,
+      "change_percent": -0.6,
+      "volume": 39502900,
+      "market_cap": 38098201214976
+    },
+    {
+      "symbol": "8306.T",
+      "name": "三菱UFJフィナンシャル・グループ",
+      "price": 2341.5,
+      "change": 59.5,
+      "change_percent": 2.61,
+      "volume": 78267400,
+      "market_cap": 26647015194624
+    },
+    {
+      "symbol": "9984.T",
+      "name": "ソフトバンクグループ",
+      "price": 18375.0,
+      "change": 120.0,
+      "change_percent": 0.66,
+      "volume": 21190200,
+      "market_cap": 26176850493440
+    },
+    {
+      "symbol": "6758.T",
+      "name": "ソニーグループ",
+      "price": 4321.0,
+      "change": -112.0,
+      "change_percent": -2.53,
+      "volume": 22209700,
+      "market_cap": 25851051638784
+    },
+    {
+      "symbol": "7974.T",
+      "name": "任天堂",
+      "price": 12800.0,
+      "change": -315.0,
+      "change_percent": -2.4,
+      "volume": 11173100,
+      "market_cap": 14902376792064
+    }
+  ],
+  "timestamp": "2025-09-22 03:27:49"
+}
