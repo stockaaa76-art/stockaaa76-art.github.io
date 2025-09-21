@@ -9,6 +9,8 @@ class Dashboard {
         this.indices_api = '/api/major_indices.json';
         this.realtime_api = '/data/realtime_prices.json';
         this.rankings_api = '/api/rankings.json';
+        this.extended_rankings_api = '/api/extended_rankings.json';
+        this.currentRankingCategory = 'basic';
         this.init();
     }
 
@@ -21,6 +23,8 @@ class Dashboard {
             await this.loadInternationalIndices();
             console.log('ランキングAPIを読み込み中...');
             await this.loadRankings();
+            console.log('拡張ランキングAPIを読み込み中...');
+            await this.loadExtendedRankings();
             this.setupEventListeners();
             
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
@@ -34,6 +38,7 @@ class Dashboard {
                 this.loadRealtimeData();
                 this.loadInternationalIndices();
                 this.loadRankings();
+                this.loadExtendedRankings();
             }, 5 * 60 * 1000);
             
         } catch (error) {
@@ -442,6 +447,9 @@ class Dashboard {
         // ウォッチリスト処理
         this.loadWatchlist();
         
+        // ランキングタブのイベントリスナー
+        this.setupRankingTabs();
+        
         // IndexHeroのクリック処理
         document.querySelectorAll('.index-hero').forEach(hero => {
             hero.addEventListener('click', (e) => {
@@ -641,6 +649,212 @@ class Dashboard {
 
         container.innerHTML = html;
     }
+    
+    setupRankingTabs() {
+        """ランキングタブのイベントリスナー設定"""
+        const tabButtons = document.querySelectorAll('.tab-button');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const category = e.target.dataset.category;
+                this.switchRankingCategory(category);
+            });
+        });
+    }
+    
+    switchRankingCategory(category) {
+        """ランキングカテゴリを切り替え"""
+        // アクティブなタブを更新
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        document.querySelector(`[data-category="${category}"]`).classList.add('active');
+        
+        // ランキングカテゴリを切り替え
+        document.querySelectorAll('.ranking-category').forEach(cat => {
+            cat.classList.add('hidden');
+        });
+        document.getElementById(`${category}-rankings`).classList.remove('hidden');
+        
+        this.currentRankingCategory = category;
+    }
+    
+    async loadExtendedRankings() {
+        """拡張ランキングデータを読み込み"""
+        try {
+            const response = await fetch(this.extended_rankings_api);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            
+            const data = await response.json();
+            this.updateExtendedRankings(data);
+            
+        } catch (error) {
+            console.error('拡張ランキングデータ取得エラー:', error);
+            this.showExtendedRankingError();
+        }
+    }
+    
+    updateExtendedRankings(data) {
+        """拡張ランキングを更新"""
+        // 値動き関連
+        this.renderExtendedRanking('stop-high-ranking', data.stop_high, 'stop_status');
+        this.renderExtendedRanking('stop-low-ranking', data.stop_low, 'stop_status');
+        this.renderExtendedRanking('year-high-ranking', data.year_high_update, 'year_status');
+        this.renderExtendedRanking('year-low-ranking', data.year_low_update, 'year_status');
+        
+        // 出来高関連
+        this.renderExtendedRanking('volume-increase-ranking', data.volume_increase, 'volume_ratio');
+        this.renderExtendedRanking('volume-decrease-ranking', data.volume_decrease, 'volume_ratio');
+        this.renderExtendedRanking('trading-value-high-ranking', data.trading_value_high, 'trading_value');
+        this.renderExtendedRanking('trading-value-low-ranking', data.trading_value_low, 'trading_value');
+        
+        // 財務指標
+        this.renderExtendedRanking('dividend-high-ranking', data.dividend_yield_high, 'dividend');
+        this.renderExtendedRanking('pe-high-ranking', data.forward_pe_high, 'pe');
+        this.renderExtendedRanking('pe-low-ranking', data.forward_pe_low, 'pe');
+        this.renderExtendedRanking('pbr-high-ranking', data.pbr_high, 'pbr');
+        this.renderExtendedRanking('pbr-low-ranking', data.pbr_low, 'pbr');
+        this.renderExtendedRanking('roa-high-ranking', data.roa_high, 'roa');
+        this.renderExtendedRanking('roe-high-ranking', data.roe_high, 'roe');
+        this.renderExtendedRanking('employees-high-ranking', data.employees_high, 'employees');
+        
+        // テクニカル
+        this.renderExtendedRanking('deviation-25-high-ranking', data.deviation_25_high, 'deviation');
+        this.renderExtendedRanking('deviation-25-low-ranking', data.deviation_25_low, 'deviation');
+        this.renderExtendedRanking('deviation-75-high-ranking', data.deviation_75_high, 'deviation');
+        this.renderExtendedRanking('deviation-75-low-ranking', data.deviation_75_low, 'deviation');
+        this.renderExtendedRanking('golden-cross-ranking', data.golden_cross, 'cross_signal');
+        this.renderExtendedRanking('dead-cross-ranking', data.dead_cross, 'cross_signal');
+    }
+    
+    renderExtendedRanking(elementId, stocks, type) {
+        """拡張ランキングをレンダリング"""
+        const container = document.getElementById(elementId);
+        if (!container) return;
+        
+        if (!stocks || stocks.length === 0) {
+            container.innerHTML = '<div class="loading">データなし</div>';
+            return;
+        }
+        
+        const html = stocks.map((stock, index) => {
+            const rank = index + 1;
+            let valueText = '';
+            let subText = '';
+            let changeClass = 'neutral';
+            
+            // 表示値の決定
+            switch (type) {
+                case 'stop_status':
+                    valueText = this.formatPrice(stock.price, '￥');
+                    subText = 'ストップ適用';
+                    break;
+                case 'year_status':
+                    valueText = this.formatPrice(stock.price, '￥');
+                    subText = '更新';
+                    break;
+                case 'volume_ratio':
+                    valueText = this.formatVolume(stock.volume);
+                    subText = stock.volume_ratio ? `${stock.volume_ratio.toFixed(1)}%` : '--';
+                    break;
+                case 'trading_value':
+                    valueText = this.formatTradingValue(stock.trading_value);
+                    subText = this.formatPercent(stock.change_percent);
+                    break;
+                case 'dividend':
+                    valueText = stock.dividend_yield ? `${stock.dividend_yield.toFixed(2)}%` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'pe':
+                    valueText = stock.forward_pe ? `${stock.forward_pe.toFixed(1)}倍` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'pbr':
+                    valueText = stock.price_to_book ? `${stock.price_to_book.toFixed(2)}倍` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'roa':
+                    valueText = stock.return_on_assets ? `${stock.return_on_assets.toFixed(2)}%` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'roe':
+                    valueText = stock.return_on_equity ? `${stock.return_on_equity.toFixed(2)}%` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'employees':
+                    valueText = stock.full_time_employees ? `${stock.full_time_employees.toLocaleString()}人` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'deviation':
+                    const deviation = stock.deviation_25 || stock.deviation_75 || 0;
+                    valueText = `${deviation.toFixed(2)}%`;
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'cross_signal':
+                    valueText = this.formatPrice(stock.price, '￥');
+                    subText = 'シグナル発生';
+                    break;
+                default:
+                    valueText = this.formatPrice(stock.price, '￥');
+                    subText = this.formatPercent(stock.change_percent);
+            }
+            
+            // 変化率の色分け
+            if (stock.change_percent > 0) {
+                changeClass = 'positive';
+            } else if (stock.change_percent < 0) {
+                changeClass = 'negative';
+            }
+            
+            return `
+                <div class="ranking-item">
+                    <div class="ranking-item-left">
+                        <span class="ranking-symbol">${rank}. ${stock.symbol}</span>
+                        <span class="ranking-name">${stock.name}</span>
+                    </div>
+                    <div class="ranking-item-right">
+                        <span class="ranking-value">${valueText}</span>
+                        <span class="ranking-change ${changeClass}">${subText}</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+        
+        container.innerHTML = html;
+    }
+    
+    formatTradingValue(value) {
+        """売買代金のフォーマット"""
+        if (value >= 1000000000000) {
+            return (value / 1000000000000).toFixed(1) + '兆円';
+        } else if (value >= 100000000) {
+            return (value / 100000000).toFixed(1) + '億円';
+        } else if (value >= 10000) {
+            return (value / 10000).toFixed(1) + '万円';
+        }
+        return value.toLocaleString() + '円';
+    }
+    
+    showExtendedRankingError() {
+        """拡張ランキングエラー表示"""
+        const extendedRankingContainers = [
+            'stop-high-ranking', 'stop-low-ranking', 'year-high-ranking', 'year-low-ranking',
+            'volume-increase-ranking', 'volume-decrease-ranking', 'trading-value-high-ranking', 'trading-value-low-ranking',
+            'dividend-high-ranking', 'pe-high-ranking', 'pe-low-ranking', 'pbr-high-ranking', 'pbr-low-ranking',
+            'roa-high-ranking', 'roe-high-ranking', 'employees-high-ranking',
+            'deviation-25-high-ranking', 'deviation-25-low-ranking', 'deviation-75-high-ranking', 'deviation-75-low-ranking',
+            'golden-cross-ranking', 'dead-cross-ranking'
+        ];
+        
+        extendedRankingContainers.forEach(id => {
+            const container = document.getElementById(id);
+            if (container) {
+                container.innerHTML = '<div class="loading">データ取得エラー</div>';
+            }
+        });
+    }
 
     formatVolume(volume) {
         if (volume >= 1000000) {
@@ -674,6 +888,9 @@ class Dashboard {
                 container.innerHTML = '<div class="loading">データ取得エラー</div>';
             }
         });
+        
+        // 拡張ランキングもエラー表示
+        this.showExtendedRankingError();
     }
 
     showError() {
