@@ -83,8 +83,8 @@ class StockDetail {
             const data = await response.json();
             console.log('株価データ取得:', data);
             
-            // 銘柄を検索
-            const stock = data.stocks.find(s => s.symbol === this.symbol);
+            // 銘柄を検索 (データは配列として返される)
+            const stock = data.find(s => s.symbol === this.symbol);
             
             if (!stock) {
                 throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
@@ -168,7 +168,7 @@ class StockDetail {
         const changePercent = changeEl.querySelector('.change-percent');
         
         changeValue.textContent = this.formatChange(data.change);
-        changePercent.textContent = `(${this.formatPercent(data.change_pct)})`;
+        changePercent.textContent = `(${this.formatPercent(data.pct)})`;
         
         // 変動クラス
         changeEl.className = 'price-change';
@@ -182,13 +182,13 @@ class StockDetail {
             this.formatVolume(data.volume);
         
         // 52週高安（データがある場合）
-        if (data.week52_high) {
+        if (data.fifty_two_week_high) {
             document.getElementById('week52-high').textContent = 
-                this.formatPrice(data.week52_high, market);
+                this.formatPrice(data.fifty_two_week_high, market);
         }
-        if (data.week52_low) {
+        if (data.fifty_two_week_low) {
             document.getElementById('week52-low').textContent = 
-                this.formatPrice(data.week52_low, market);
+                this.formatPrice(data.fifty_two_week_low, market);
         }
     }
 
