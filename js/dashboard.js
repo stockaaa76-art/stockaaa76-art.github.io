@@ -105,17 +105,23 @@ class Dashboard {
     }
 
     updateIndexHeroesFromRealtime(data) {
+        // データ構造確認とフォールバック処理
+        const indices = data.indices || [];
+        const foreign = data.foreign || [];
+        
         // 日経平均更新（realtime_prices.json形式）
-        const nikkei = data.indices.find(idx => idx.ticker === '^N225');
+        const nikkei = indices.find(idx => idx.ticker === '^N225');
         if (nikkei) {
             this.updateIndexCardFromRealtime('nikkei', nikkei);
         }
 
-        // ダウ平均更新（foreign配列から取得）
-        const dow = data.foreign && data.foreign.find(idx => idx.ticker === '^GSPC'); // S&P 500をダウの代替として使用
-        if (dow) {
-            this.updateIndexCardFromRealtime('dow', dow);
+        // S&P500をダウの代替として使用（foreign配列から取得）
+        const sp500 = foreign.find(idx => idx.ticker === '^GSPC'); 
+        if (sp500) {
+            this.updateIndexCardFromRealtime('dow', sp500);
         }
+        
+        console.log('メイン指標更新完了:', { nikkei: !!nikkei, sp500: !!sp500 });
     }
 
     updateIndexHeroes(data) {
