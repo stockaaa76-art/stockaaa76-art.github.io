@@ -83,8 +83,12 @@ class StockDetail {
             const data = await response.json();
             console.log('株価データ取得:', data);
             
-            // 銘柄を検索 (データは配列として返される)
-            const stock = data.find(s => s.symbol === this.symbol);
+            // データが配列かどうかチェック
+            const stockList = Array.isArray(data) ? data : (data.stocks || []);
+            console.log('処理対象データ:', stockList);
+            
+            // 銘柄を検索
+            const stock = stockList.find(s => s.symbol === this.symbol);
             
             if (!stock) {
                 throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
