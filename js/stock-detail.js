@@ -328,35 +328,10 @@ class StockDetail {
         const canvas = document.getElementById('price-chart');
         const ctx = canvas.getContext('2d');
 
-        // 履歴データの準備
-        const history = this.stockData.history || [];
-        const labels = [];
-        const prices = [];
-
-        // データが配列の配列形式 [["2025-09-14", "3260"], ...] の場合
-        history.forEach(item => {
-            if (Array.isArray(item) && item.length >= 2) {
-                labels.push(item[0]);
-                prices.push(parseFloat(item[1]) || 0);
-            } else if (typeof item === 'object' && item.date && item.price) {
-                labels.push(item.date);
-                prices.push(parseFloat(item.price) || 0);
-            }
-        });
-
-        // サンプルデータ（履歴がない場合）
-        if (labels.length === 0) {
-            const currentPrice = parseFloat(this.stockData.price) || 100;
-            for (let i = 30; i >= 0; i--) {
-                const date = new Date();
-                date.setDate(date.getDate() - i);
-                labels.push(date.toISOString().split('T')[0]);
-                
-                // ランダムな価格変動を生成
-                const variation = (Math.random() - 0.5) * 0.1;
-                prices.push(currentPrice * (1 + variation));
-            }
-        }
+        // 期間に応じたデータを生成（初期表示は1日）
+        const chartData = this.generateChartDataForPeriod(this.chartPeriod);
+        const labels = chartData.labels;
+        const prices = chartData.prices;
 
         // チャート作成
         this.chart = new Chart(ctx, {
@@ -377,6 +352,14 @@ class StockDetail {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
+                    title: {
+                        display: true,
+                        text: this.getChartTitle(this.chartPeriod),
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        }
+                    },
                     legend: {
                         display: true,
                         position: 'top'
@@ -398,7 +381,7 @@ class StockDetail {
                         display: true,
                         title: {
                             display: true,
-                            text: '日付'
+                            text: this.getXAxisTitle(this.chartPeriod)
                         }
                     },
                     y: {
@@ -448,11 +431,124 @@ class StockDetail {
     updateChart() {
         if (!this.chart) return;
 
-        // 期間に応じてデータを更新
         console.log(`チャート期間変更: ${this.chartPeriod}`);
         
-        // TODO: 期間に応じた履歴データの再取得
-        // 現在は同じデータを表示
+        // 期間に応じたデータを生成
+        const chartData = this.generateChartDataForPeriod(this.chartPeriod);
+        
+        // チャートデータを更新
+        this.chart.data.labels = chartData.labels;
+        this.chart.data.datasets[0].data = chartData.prices;
+        
+        // チャートタイトルを更新
+        this.chart.options.plugins.title.text = this.getChartTitle(this.chartPeriod);
+        
+        // X軸タイトルを更新
+        this.chart.options.scales.x.title.text = this.getXAxisTitle(this.chartPeriod);
+        
+        // チャートを再描画
+        this.chart.update('active');
+        
+        console.log(`チャート更新完了: ${this.chartPeriod} (${chartData.labels.length}データ点)`);
+    }
+
+    /**
+     * 期間に応じたチャートデータを生成
+     */
+    generateChartDataForPeriod(period) {
+        const currentPrice = parseFloat(this.stockData.price) || 100;
+        const labels = [];
+        const prices = [];
+        
+        // 期間設定
+        const periodConfig = {
+            '1d': { days: 1, hours: 24, interval: 'hour' },
+            '1w': { days: 7, hours: 0, interval: 'day' },
+            '1m': { days: 30, hours: 0, interval: 'day' },
+            '3m': { days: 90, hours: 0, interval: 'day' },
+            '1y': { days: 365, hours: 0, interval: 'week' }
+        };
+        
+        const config = periodConfig[period] || periodConfig['1d'];
+        
+        if (config.interval === 'hour') {
+            // 1日の場合：時間単位のデータ
+            for (let i = config.hours; i >= 0; i--) {
+                const date = new Date();
+                date.setHours(date.getHours() - i);
+                
+                if (date.getHours() >= 9 && date.getHours() <= 15) {
+                    // 取引時間内のみ
+                    labels.push(date.toTimeString().slice(0, 5));
+                    const variation = (Math.random() - 0.5) * 0.02; // ±2%の変動
+                    prices.push(currentPrice * (1 + variation));
+                }
+            }
+        } else if (config.interval === 'day') {
+            // 日単位のデータ
+            for (let i = config.days; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                
+                // 平日のみ（取引日）
+                if (date.getDay() !== 0 && date.getDay() !== 6) {
+                    labels.push(date.toISOString().split('T')[0]);
+                    const variation = (Math.random() - 0.5) * 0.05; // ±5%の変動
+                    prices.push(currentPrice * (1 + variation));
+                }
+            }
+        } else if (config.interval === 'week') {
+            // 週単位のデータ（1年間）
+            for (let i = 52; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - (i * 7));
+                
+                labels.push(date.toISOString().split('T')[0]);
+                const variation = (Math.random() - 0.5) * 0.1; // ±10%の変動
+                prices.push(currentPrice * (1 + variation));
+            }
+        }
+        
+        // 最低限のデータポイントを保証
+        if (labels.length === 0) {
+            labels.push(new Date().toISOString().split('T')[0]);
+            prices.push(currentPrice);
+        }
+        
+        return { labels, prices };
+    }
+
+    /**
+     * 期間に応じたチャートタイトルを生成
+     */
+    getChartTitle(period) {
+        const periodLabels = {
+            '1d': '1日間',
+            '1w': '1週間',
+            '1m': '1ヶ月',
+            '3m': '3ヶ月',
+            '1y': '1年間'
+        };
+        
+        const label = periodLabels[period] || '1日間';
+        const stockName = this.stockData?.name || this.symbol;
+        
+        return `${stockName} - ${label}の価格推移`;
+    }
+
+    /**
+     * 期間に応じたX軸タイトルを生成
+     */
+    getXAxisTitle(period) {
+        const axisLabels = {
+            '1d': '時刻',
+            '1w': '日付',
+            '1m': '日付', 
+            '3m': '日付',
+            '1y': '日付'
+        };
+        
+        return axisLabels[period] || '日付';
     }
 
     async loadRelatedStocks() {
