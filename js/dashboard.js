@@ -7,14 +7,15 @@ class Dashboard {
     constructor() {
         this.summary_api = '/api/summary.json';
         this.indices_api = '/api/major_indices.json';
+        this.realtime_api = '/data/realtime_prices.json';
         this.init();
     }
 
     async init() {
         console.log('Dashboard初期化開始');
         try {
-            console.log('summary APIを読み込み中...');
-            await this.loadSummaryData();
+            console.log('realtime APIを読み込み中...');
+            await this.loadRealtimeData();
             console.log('国際指標APIを読み込み中...');
             await this.loadInternationalIndices();
             this.setupEventListeners();
@@ -27,7 +28,7 @@ class Dashboard {
             
             // 5分ごとに更新
             setInterval(() => {
-                this.loadSummaryData();
+                this.loadRealtimeData();
                 this.loadInternationalIndices();
             }, 5 * 60 * 1000);
             
@@ -37,9 +38,30 @@ class Dashboard {
         }
     }
 
-    async loadSummaryData() {
+    async loadRealtimeData() {
         try {
-            console.log('summary API取得開始:', this.summary_api);
+            console.log('realtime API取得開始:', this.realtime_api);
+            const response = await fetch(this.realtime_api);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            
+            const data = await response.json();
+            console.log('realtime データ取得成功:', data);
+            this.lastRealtimeData = data; // データを保存（再描画用）
+            this.updateIndexHeroesFromRealtime(data);
+            this.updateLastUpdated(data.timestamp);
+            
+        } catch (error) {
+            console.error('リアルタイムデータ取得エラー:', error);
+            // フォールバック: summary.jsonを試す
+            await this.loadSummaryDataFallback();
+        }
+    }
+
+    async loadSummaryDataFallback() {
+        try {
+            console.log('summary API取得開始 (フォールバック):', this.summary_api);
             const response = await fetch(this.summary_api);
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}`);
@@ -70,6 +92,20 @@ class Dashboard {
         } catch (error) {
             console.error('国際指標データ取得エラー:', error);
             // 国際指標はサブ機能なので、エラーでも全体は停止しない
+        }
+    }
+
+    updateIndexHeroesFromRealtime(data) {
+        // 日経平均更新（realtime_prices.json形式）
+        const nikkei = data.indices.find(idx => idx.ticker === '^N225');
+        if (nikkei) {
+            this.updateIndexCardFromRealtime('nikkei', nikkei);
+        }
+
+        // ダウ平均更新（foreign配列から取得）
+        const dow = data.foreign && data.foreign.find(idx => idx.ticker === '^GSPC'); // S&P 500をダウの代替として使用
+        if (dow) {
+            this.updateIndexCardFromRealtime('dow', dow);
         }
     }
 
@@ -141,6 +177,43 @@ class Dashboard {
             } else {
                 changeEl.classList.add('neutral');
             }
+        }
+    }
+
+    updateIndexCardFromRealtime(prefix, data) {
+        const priceEl = document.getElementById(`${prefix}-price`);
+        const changeEl = document.getElementById(`${prefix}-change`);
+        const chartEl = document.getElementById(`${prefix}-chart`);
+
+        if (priceEl) {
+            // 価格表示（3桁区切り）
+            const formattedPrice = this.formatPrice(data.current_price, prefix === 'nikkei' ? '¥' : '$');
+            priceEl.textContent = formattedPrice;
+        }
+
+        if (changeEl) {
+            const changeValue = changeEl.querySelector('.change-value');
+            const changePercent = changeEl.querySelector('.change-percent');
+            
+            if (changeValue && changePercent) {
+                changeValue.textContent = this.formatChange(data.change);
+                changePercent.textContent = `(${this.formatPercent(data.change_percent)})`;
+                
+                // 色分けクラス
+                changeEl.className = 'index-change';
+                if (data.change > 0) {
+                    changeEl.classList.add('positive');
+                } else if (data.change < 0) {
+                    changeEl.classList.add('negative');
+                } else {
+                    changeEl.classList.add('neutral');
+                }
+            }
+        }
+
+        // スパークライン描画（簡易版：前日比のみでライン描画）
+        if (chartEl) {
+            this.drawSimpleSparkline(chartEl, data.change);
         }
     }
 
@@ -303,6 +376,64 @@ class Dashboard {
         ctx.fill();
     }
 
+    drawSimpleSparkline(container, changeValue) {
+        const canvas = container.querySelector('canvas');
+        if (!canvas) return;
+
+        // Canvas のサイズを再設定
+        const parentWidth = container.clientWidth;
+        if (parentWidth > 0) {
+            canvas.width = Math.min(parentWidth - 20, 280);
+            canvas.height = 60;
+        }
+
+        const ctx = canvas.getContext('2d');
+        const width = canvas.width;
+        const height = canvas.height;
+        
+        // キャンバスクリア
+        ctx.clearRect(0, 0, width, height);
+
+        // 簡易トレンドライン（前日比から推測）
+        ctx.lineWidth = 2;
+        
+        // 色決定
+        if (changeValue > 0) {
+            ctx.strokeStyle = '#10b981'; // 上昇 - グリーン
+        } else if (changeValue < 0) {
+            ctx.strokeStyle = '#f59e0b'; // 下降 - オレンジ
+        } else {
+            ctx.strokeStyle = '#6b7280'; // 変化なし - グレー
+        }
+
+        // 前日比に基づく簡易ライン
+        ctx.beginPath();
+        if (changeValue > 0) {
+            // 上昇トレンド
+            ctx.moveTo(0, height * 0.8);
+            ctx.lineTo(width * 0.7, height * 0.3);
+            ctx.lineTo(width, height * 0.2);
+        } else if (changeValue < 0) {
+            // 下降トレンド
+            ctx.moveTo(0, height * 0.2);
+            ctx.lineTo(width * 0.7, height * 0.7);
+            ctx.lineTo(width, height * 0.8);
+        } else {
+            // フラット
+            ctx.moveTo(0, height / 2);
+            ctx.lineTo(width, height / 2);
+        }
+        
+        ctx.stroke();
+
+        // エンドポイント
+        const endY = changeValue > 0 ? height * 0.2 : (changeValue < 0 ? height * 0.8 : height / 2);
+        ctx.fillStyle = ctx.strokeStyle;
+        ctx.beginPath();
+        ctx.arc(width, endY, 2, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+
     setupEventListeners() {
         // ウォッチリスト処理
         this.loadWatchlist();
@@ -332,8 +463,11 @@ class Dashboard {
     
     // すべてのチャートを再描画
     redrawAllCharts() {
-        // 保存しているデータがあれば再描画
-        if (this.lastSummaryData) {
+        // リアルタイムデータを優先、フォールバック用にサマリーデータも確認
+        if (this.lastRealtimeData) {
+            console.log('リアルタイムデータで再描画');
+            this.updateIndexHeroesFromRealtime(this.lastRealtimeData);
+        } else if (this.lastSummaryData) {
             console.log('サマリーデータで再描画');
             this.updateIndexHeroes(this.lastSummaryData);
         }
