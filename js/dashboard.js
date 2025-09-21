@@ -657,7 +657,7 @@ class Dashboard {
     }
     
     setupRankingTabs() {
-        """ランキングタブのイベントリスナー設定"""
+        // ランキングタブのイベントリスナー設定
         const tabButtons = document.querySelectorAll('.tab-button');
         
         tabButtons.forEach(button => {
@@ -669,7 +669,7 @@ class Dashboard {
     }
     
     switchRankingCategory(category) {
-        """ランキングカテゴリを切り替え"""
+        // ランキングカテゴリを切り替え
         // アクティブなタブを更新
         document.querySelectorAll('.tab-button').forEach(btn => {
             btn.classList.remove('active');
@@ -686,7 +686,7 @@ class Dashboard {
     }
     
     async loadExtendedRankings() {
-        """拡張ランキングデータを読み込み"""
+        // 拡張ランキングデータを読み込み
         try {
             const response = await fetch(this.extended_rankings_api);
             if (!response.ok) {
@@ -703,7 +703,7 @@ class Dashboard {
     }
     
     updateExtendedRankings(data) {
-        """拡張ランキングを更新"""
+        // 拡張ランキングを更新
         // 値動き関連
         this.renderExtendedRanking('stop-high-ranking', data.stop_high, 'stop_status');
         this.renderExtendedRanking('stop-low-ranking', data.stop_low, 'stop_status');
@@ -736,7 +736,7 @@ class Dashboard {
     }
     
     renderExtendedRanking(elementId, stocks, type) {
-        """拡張ランキングをレンダリング"""
+        // 拡張ランキングをレンダリング
         const container = document.getElementById(elementId);
         if (!container) return;
         
@@ -832,7 +832,7 @@ class Dashboard {
     }
     
     formatTradingValue(value) {
-        """売買代金のフォーマット"""
+        // 売買代金のフォーマット
         if (value >= 1000000000000) {
             return (value / 1000000000000).toFixed(1) + '兆円';
         } else if (value >= 100000000) {
@@ -844,7 +844,7 @@ class Dashboard {
     }
     
     showExtendedRankingError() {
-        """拡張ランキングエラー表示"""
+        // 拡張ランキングエラー表示
         const extendedRankingContainers = [
             'stop-high-ranking', 'stop-low-ranking', 'year-high-ranking', 'year-low-ranking',
             'volume-increase-ranking', 'volume-decrease-ranking', 'trading-value-high-ranking', 'trading-value-low-ranking',
