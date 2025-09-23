@@ -96,6 +96,7 @@ class Dashboard {
             }
             
             const data = await response.json();
+            this.lastIndicesData = data; // データを保存
             this.updateInternationalIndices(data);
             
         } catch (error) {
@@ -532,17 +533,82 @@ class Dashboard {
     }
 
     async loadWatchlistPrices(symbols) {
+        // 既存のデータソースから価格情報を取得
         for (const symbol of symbols) {
             try {
-                const response = await fetch(`/api/stocks/${symbol}.json`);
-                if (response.ok) {
-                    const data = await response.json();
-                    this.updateWatchlistItem(symbol, data);
+                let stockData = null;
+                
+                // 1. rankings.jsonから検索
+                if (this.lastRankingsData) {
+                    stockData = this.findStockInRankings(symbol, this.lastRankingsData);
+                }
+                
+                // 2. major_indices.jsonから検索
+                if (!stockData && this.lastIndicesData) {
+                    stockData = this.findStockInIndices(symbol, this.lastIndicesData);
+                }
+                
+                // 3. realtime_prices.jsonから検索
+                if (!stockData && this.lastRealtimeData) {
+                    stockData = this.findStockInRealtime(symbol, this.lastRealtimeData);
+                }
+                
+                if (stockData) {
+                    this.updateWatchlistItem(symbol, stockData);
+                } else {
+                    // データが見つからない場合はエラー表示
+                    this.updateWatchlistItemError(symbol);
                 }
             } catch (error) {
                 console.error(`ウォッチリスト価格取得エラー ${symbol}:`, error);
+                this.updateWatchlistItemError(symbol);
             }
         }
+    }
+    
+    findStockInRankings(symbol, data) {
+        const allStocks = [
+            ...(data.gainers || []),
+            ...(data.losers || []),
+            ...(data.volume || []),
+            ...(data.market_cap || [])
+        ];
+        return allStocks.find(stock => stock.symbol === symbol);
+    }
+    
+    findStockInIndices(symbol, data) {
+        if (data.indices) {
+            const index = data.indices.find(idx => idx.symbol === symbol);
+            if (index) {
+                return {
+                    symbol: index.symbol,
+                    name: index.name,
+                    price: index.price,
+                    change: index.change,
+                    change_percent: index.pct,
+                    market: 'INDEX'
+                };
+            }
+        }
+        return null;
+    }
+    
+    findStockInRealtime(symbol, data) {
+        if (data.stocks) {
+            return data.stocks.find(stock => stock.symbol === symbol);
+        }
+        return null;
+    }
+    
+    updateWatchlistItemError(symbol) {
+        const item = document.querySelector(`.watchlist-item[data-symbol="${symbol}"]`);
+        if (!item) return;
+        
+        const priceEl = item.querySelector('.price');
+        const changeEl = item.querySelector('.change');
+        
+        if (priceEl) priceEl.textContent = 'データなし';
+        if (changeEl) changeEl.textContent = '---';
     }
 
     updateWatchlistItem(symbol, data) {
@@ -578,6 +644,7 @@ class Dashboard {
             }
             
             const data = await response.json();
+            this.lastRankingsData = data; // データを保存
             this.updateRankings(data);
             
         } catch (error) {
