@@ -10,6 +10,7 @@ class Dashboard {
         this.realtime_api = '/data/realtime_prices.json';
         this.rankings_api = '/api/rankings.json';
         this.extended_rankings_api = '/api/extended_rankings.json';
+        this.enhanced_rankings_api = '/api/enhanced_rankings.json';
         this.period_rankings_api = '/api/period_rankings.json';
         this.currentRankingCategory = 'basic';
         this.currentPeriod = 'daily';
@@ -29,6 +30,8 @@ class Dashboard {
             await this.loadExtendedRankings();
             console.log('期間別ランキングAPIを読み込み中...');
             await this.loadPeriodRankings();
+            console.log('拡張ランキング（強化版）を読み込み中...');
+            await this.loadEnhancedRankings();
             this.setupEventListeners();
             
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
@@ -44,6 +47,7 @@ class Dashboard {
                 this.loadRankings();
                 this.loadExtendedRankings();
                 this.loadPeriodRankings();
+                this.loadEnhancedRankings();
             }, 5 * 60 * 1000);
             
         } catch (error) {
@@ -761,6 +765,13 @@ class Dashboard {
         document.getElementById(`${category}-rankings`).classList.remove('hidden');
         
         this.currentRankingCategory = category;
+        
+        // カテゴリ別データ更新
+        if (category === 'basic') {
+            this.updatePeriodRankings();
+        } else if (category === 'price') {
+            this.updateEnhancedRankings();
+        }
     }
     
     async loadExtendedRankings() {
@@ -1151,4 +1162,84 @@ Dashboard.prototype.setupPeriodTabs = function() {
             this.switchPeriod(period);
         });
     });
+};
+
+Dashboard.prototype.loadEnhancedRankings = async function() {
+    try {
+        const response = await fetch(this.enhanced_rankings_api);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+        
+        const data = await response.json();
+        this.enhancedRankingsData = data;
+        this.updateEnhancedRankings();
+        
+    } catch (error) {
+        console.error('拡張ランキング（強化版）取得エラー:', error);
+    }
+};
+
+Dashboard.prototype.updateEnhancedRankings = function() {
+    if (!this.enhancedRankingsData) {
+        return;
+    }
+    
+    // 値動き関連ランキングを更新
+    if (this.currentRankingCategory === 'price') {
+        const priceData = this.enhancedRankingsData.price_movement;
+        this.updateEnhancedRankingList('stop-high-ranking', priceData.stop_high || []);
+        this.updateEnhancedRankingList('stop-low-ranking', priceData.stop_low || []);
+        this.updateEnhancedRankingList('year-high-ranking', priceData.year_high_update || []);
+        this.updateEnhancedRankingList('year-low-ranking', priceData.year_low_update || []);
+    }
+};
+
+Dashboard.prototype.updateEnhancedRankingList = function(elementId, data) {
+    const element = document.getElementById(elementId);
+    if (!element) {
+        return;
+    }
+    
+    if (!data || data.length === 0) {
+        element.innerHTML = '<div class="no-data">📊 現在該当する銘柄がありません</div>';
+        return;
+    }
+
+    const html = data.map((item, index) => {
+        const changeClass = item.change_percent > 0 ? 'positive' : 
+                           item.change_percent < 0 ? 'negative' : 'neutral';
+        
+        const formattedPrice = this.formatPrice(item.price);
+        const formattedChange = this.formatPercent(item.change_percent);
+        
+        let statusText = '';
+        if (elementId.includes('stop-high')) {
+            statusText = 'ストップ高';
+        } else if (elementId.includes('stop-low')) {
+            statusText = 'ストップ安';
+        } else if (elementId.includes('year-high')) {
+            statusText = '年高値更新';
+        } else if (elementId.includes('year-low')) {
+            statusText = '年安値更新';
+        }
+        
+        return `
+            <div class="ranking-item" onclick="window.open('/stocks/detail/?s=${encodeURIComponent(item.symbol)}', '_blank')">
+                <div class="ranking-item-left">
+                    <div class="ranking-symbol">${index + 1}. ${item.symbol}</div>
+                    <div class="ranking-name">${item.name}</div>
+                </div>
+                <div class="ranking-item-right">
+                    <div class="ranking-values">
+                        <div class="ranking-value">${formattedPrice}</div>
+                        <div class="ranking-change ${changeClass}">${statusText}</div>
+                    </div>
+                    <span class="watchlist-star" onclick="event.stopPropagation(); toggleWatchlist('${item.symbol}')">⭐</span>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    element.innerHTML = html;
 };
