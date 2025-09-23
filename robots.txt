@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# AdSense ads.txt
+Allow: /ads.txt
+
+# Sitemap
+Sitemap: https://stock-kabu3.com/sitemap.xml
