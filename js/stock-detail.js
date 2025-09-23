@@ -36,7 +36,7 @@ class StockDetail {
             this.renderPriceSection();
             this.renderPredictions();
             this.renderIndicators();
-            this.renderChart();
+            await this.renderChart();
             this.loadRelatedStocks();
             
             // イベントリスナー設定
@@ -324,7 +324,7 @@ class StockDetail {
         }
     }
 
-    renderChart() {
+    async renderChart() {
         if (!this.chartLoaded || !window.Chart) {
             // Chart.jsが読み込まれていない場合は簡易表示
             const chartContainer = document.querySelector('.chart-container');
@@ -340,7 +340,7 @@ class StockDetail {
         const ctx = canvas.getContext('2d');
 
         // 期間に応じたデータを生成（初期表示は1日）
-        const chartData = this.generateChartDataForPeriod(this.chartPeriod);
+        const chartData = await this.generateChartDataForPeriod(this.chartPeriod);
         const labels = chartData.labels;
         const prices = chartData.prices;
 
@@ -422,13 +422,13 @@ class StockDetail {
     setupEventListeners() {
         // チャート期間切り替え
         document.querySelectorAll('.chart-period').forEach(btn => {
-            btn.addEventListener('click', (e) => {
+            btn.addEventListener('click', async (e) => {
                 // アクティブ状態更新
                 document.querySelectorAll('.chart-period').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
                 this.chartPeriod = btn.dataset.period;
-                this.updateChart();
+                await this.updateChart();
             });
         });
 
@@ -439,13 +439,13 @@ class StockDetail {
         });
     }
 
-    updateChart() {
+    async updateChart() {
         if (!this.chart) return;
 
         console.log(`チャート期間変更: ${this.chartPeriod}`);
         
         // 期間に応じたデータを生成
-        const chartData = this.generateChartDataForPeriod(this.chartPeriod);
+        const chartData = await this.generateChartDataForPeriod(this.chartPeriod);
         
         // チャートデータを更新
         this.chart.data.labels = chartData.labels;
@@ -466,7 +466,41 @@ class StockDetail {
     /**
      * 期間に応じたチャートデータを生成
      */
-    generateChartDataForPeriod(period) {
+    async generateChartDataForPeriod(period) {
+        try {
+            // 履歴データを取得
+            const response = await fetch('/data/historical_data.json');
+            if (response.ok) {
+                const historicalData = await response.json();
+                const symbolData = historicalData[this.symbol];
+                
+                if (symbolData && symbolData.periods && symbolData.periods[period]) {
+                    const data = symbolData.periods[period];
+                    const labels = data.map(item => {
+                        if (period === '1d') {
+                            return new Date(item.timestamp * 1000).toTimeString().slice(0, 5);
+                        } else {
+                            return item.date;
+                        }
+                    });
+                    const prices = data.map(item => item.close);
+                    
+                    console.log(`実際の履歴データ使用: ${period} (${data.length}ポイント)`);
+                    return { labels, prices };
+                }
+            }
+        } catch (error) {
+            console.warn('履歴データ取得失敗、模擬データを使用:', error);
+        }
+        
+        // フォールバック: 模擬データを生成
+        return this.generateMockData(period);
+    }
+
+    /**
+     * 模擬データ生成（履歴データが取得できない場合のフォールバック）
+     */
+    generateMockData(period) {
         const currentPrice = parseFloat(this.stockData.price) || 100;
         const labels = [];
         const prices = [];
@@ -526,6 +560,7 @@ class StockDetail {
             prices.push(currentPrice);
         }
         
+        console.log(`模擬データ使用: ${period} (${labels.length}ポイント)`);
         return { labels, prices };
     }
 
