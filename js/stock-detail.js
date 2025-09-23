@@ -478,7 +478,8 @@ class StockDetail {
                     const data = symbolData.periods[period];
                     const labels = data.map(item => {
                         if (period === '1d') {
-                            return new Date(item.timestamp * 1000).toTimeString().slice(0, 5);
+                            // 1日データの場合は時刻を表示（timeフィールドがあれば使用、なければtimestampから生成）
+                            return item.time || new Date(item.timestamp * 1000).toTimeString().slice(0, 5);
                         } else {
                             return item.date;
                         }
