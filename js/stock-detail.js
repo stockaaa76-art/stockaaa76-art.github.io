@@ -74,7 +74,7 @@ class StockDetail {
     async loadStockData() {
         try {
             // major_indices.jsonから該当銘柄を検索
-            const response = await fetch('/data/major_indices.json');
+            const response = await fetch('/api/major_indices.json');
             
             if (!response.ok) {
                 throw new Error(`データ取得エラー: ${response.status}`);
@@ -566,7 +566,7 @@ class StockDetail {
         try {
             // 同市場の銘柄を関連銘柄として表示（簡易版）
             const market = this.detectMarket(this.symbol);
-            const response = await fetch('/data/major_indices.json');
+            const response = await fetch('/api/major_indices.json');
             
             if (response.ok) {
                 const data = await response.json();
