@@ -646,8 +646,11 @@ class Dashboard {
                         <span class="ranking-name">${stock.name}</span>
                     </div>
                     <div class="ranking-item-right">
-                        <span class="ranking-value">${valueText}</span>
-                        <span class="ranking-change ${changeClass}">${changeText}</span>
+                        <div class="ranking-values">
+                            <span class="ranking-value">${valueText}</span>
+                            <span class="ranking-change ${changeClass}">${changeText}</span>
+                        </div>
+                        <button class="btn-star" data-symbol="${stock.symbol}" onclick="toggleWatchlist('${stock.symbol}')" title="ウォッチリストに追加">⭐</button>
                     </div>
                 </div>
             `;
