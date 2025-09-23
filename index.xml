@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>株価アート - Stock Analysis Dashboard</title><link>https://stock-kabu3.com/</link><description>Recent content on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Tue, 23 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://stock-kabu3.com/index.xml" rel="self" type="application/rss+xml"/><item><title>AI予測モデルについて</title><link>https://stock-kabu3.com/about/</link><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/about/</guid><description>&lt;h1 id="-ai予測モデルについて">🤖 AI予測モデルについて&lt;/h1>
 &lt;p>当サイトでは、複数の技術手法を組み合わせたアンサンブル予測システムで株価分析を行っています。&lt;/p>
 &lt;h2 id="-予測精度評価指標">📊 予測精度・評価指標&lt;/h2>
-&lt;h3 id="-予測精度実績">🎯 &lt;strong>予測精度実績&lt;/strong>&lt;/h3>
+&lt;h3 id="-システム概要">🎯 &lt;strong>システム概要&lt;/strong>&lt;/h3>
 &lt;div class="performance-metrics">
  &lt;div class="metric-card">
- &lt;h4>📈 短期予測（1-3日）&lt;/h4>
- &lt;div class="metric-value">65-70%&lt;/div>
- &lt;div class="metric-desc">方向性的中率&lt;/div>
+ &lt;h4>📈 短期分析（1-3日）&lt;/h4>
+ &lt;div class="metric-value">研究中&lt;/div>
+ &lt;div class="metric-desc">方向性分析システム&lt;/div>
  &lt;/div>
  &lt;div class="metric-card">
- &lt;h4>📊 中期予測（1週間）&lt;/h4>
- &lt;div class="metric-value">60-65%&lt;/div>
- &lt;div class="metric-desc">トレンド予測精度&lt;/div>
+ &lt;h4>📊 中期分析（1週間）&lt;/h4>
+ &lt;div class="metric-value">開発中&lt;/div>
+ &lt;div class="metric-desc">トレンド分析システム&lt;/div>
  &lt;/div>
  &lt;div class="metric-card">
  &lt;h4>🔄 データ処理&lt;/h4>
@@ -19,47 +19,47 @@
  &lt;div class="metric-desc">105銘柄完全分析&lt;/div>
  &lt;/div>
 &lt;/div>
-&lt;h3 id="-累積リターン分析">📈 &lt;strong>累積リターン分析&lt;/strong>&lt;/h3>
+&lt;h3 id="-手法開発状況">📈 &lt;strong>手法開発状況&lt;/strong>&lt;/h3>
 &lt;div class="chart-placeholder">
- &lt;h4>📊 予測精度の推移（過去6ヶ月）&lt;/h4>
+ &lt;h4>📊 各分析手法の開発進捗&lt;/h4>
  &lt;div class="performance-chart">
  &lt;div class="chart-bars">
  &lt;div class="bar-group">
- &lt;div class="bar ensemble" style="height: 68%">&lt;/div>
- &lt;label>アンサンブル&lt;br>68%&lt;/label>
+ &lt;div class="bar ensemble" style="height: 80%">&lt;/div>
+ &lt;label>アンサンブル&lt;br>開発中&lt;/label>
  &lt;/div>
  &lt;div class="bar-group">
- &lt;div class="bar moving-avg" style="height: 62%">&lt;/div>
- &lt;label>移動平均&lt;br>62%&lt;/label>
+ &lt;div class="bar moving-avg" style="height: 90%">&lt;/div>
+ &lt;label>移動平均&lt;br>実装済&lt;/label>
  &lt;/div>
  &lt;div class="bar-group">
- &lt;div class="bar linear-reg" style="height: 58%">&lt;/div>
- &lt;label>線形回帰&lt;br>58%&lt;/label>
+ &lt;div class="bar linear-reg" style="height: 85%">&lt;/div>
+ &lt;label>線形回帰&lt;br>実装済&lt;/label>
  &lt;/div>
  &lt;div class="bar-group">
- &lt;div class="bar momentum" style="height: 55%">&lt;/div>
- &lt;label>モメンタム&lt;br>55%&lt;/label>
+ &lt;div class="bar momentum" style="height: 75%">&lt;/div>
+ &lt;label>モメンタム&lt;br>開発中&lt;/label>
  &lt;/div>
  &lt;div class="bar-group">
- &lt;div class="bar bollinger" style="height: 51%">&lt;/div>
- &lt;label>ボリンジャー&lt;br>51%&lt;/label>
+ &lt;div class="bar bollinger" style="height: 70%">&lt;/div>
+ &lt;label>ボリンジャー&lt;br>開発中&lt;/label>
  &lt;/div>
  &lt;/div>
  &lt;/div>
 &lt;/div>
-&lt;h3 id="-検証方法">🔬 &lt;strong>検証方法&lt;/strong>&lt;/h3>
+&lt;h3 id="-開発検証方法">🔬 &lt;strong>開発・検証方法&lt;/strong>&lt;/h3>
 &lt;ul>
-&lt;li>&lt;strong>時系列クロスバリデーション&lt;/strong>: 過去データでの段階的検証&lt;/li>
-&lt;li>&lt;strong>ウォークフォワード分析&lt;/strong>: 実際の市場環境での継続検証&lt;/li>
-&lt;li>&lt;strong>ベースライン比較&lt;/strong>: ランダム予測（50%）との優位性確認&lt;/li>
+&lt;li>&lt;strong>時系列クロスバリデーション&lt;/strong>: 過去データでの段階的検証（開発中）&lt;/li>
+&lt;li>&lt;strong>ウォークフォワード分析&lt;/strong>: 実際の市場環境での継続検証（計画中）&lt;/li>
+&lt;li>&lt;strong>バックテスト&lt;/strong>: 実際の検証結果に基づく精度測定（今後実装予定）&lt;/li>
 &lt;/ul>
 &lt;h2 id="-技術手法詳細">🛠️ 技術手法詳細&lt;/h2>
 &lt;h3 id="-4つの予測アルゴリズム">🔧 &lt;strong>4つの予測アルゴリズム&lt;/strong>&lt;/h3>
 &lt;div class="algorithm-details">
  &lt;div class="algo-card">
  &lt;h4>📈 移動平均法&lt;/h4>
- &lt;div class="algo-accuracy">信頼度: 62%&lt;/div>
- &lt;p>5日・20日移動平均のトレンド分析による価格予測。安定性重視。&lt;/p></description></item><item><title>📈 株価予測レポート - 2025-09-08</title><link>https://stock-kabu3.com/post/stock-prediction-2025-09-08/</link><pubDate>Mon, 08 Sep 2025 01:02:00 +0900</pubDate><guid>https://stock-kabu3.com/post/stock-prediction-2025-09-08/</guid><description>&lt;h2 id="-予測サマリー">📊 予測サマリー&lt;/h2>
+ &lt;div class="algo-accuracy">状況: 実装済&lt;/div>
+ &lt;p>5日・20日移動平均のトレンド分析による価格分析。安定性重視。&lt;/p></description></item><item><title>📈 株価予測レポート - 2025-09-08</title><link>https://stock-kabu3.com/post/stock-prediction-2025-09-08/</link><pubDate>Mon, 08 Sep 2025 01:02:00 +0900</pubDate><guid>https://stock-kabu3.com/post/stock-prediction-2025-09-08/</guid><description>&lt;h2 id="-予測サマリー">📊 予測サマリー&lt;/h2>
 &lt;p>&lt;strong>分析日時&lt;/strong>: 2025-09-08T00:52:54&lt;br>
 &lt;strong>予測期間&lt;/strong>: 5日間&lt;br>
 &lt;strong>分析銘柄&lt;/strong>: 36銘柄&lt;/p>
