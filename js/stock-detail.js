@@ -73,8 +73,8 @@ class StockDetail {
 
     async loadStockData() {
         try {
-            // メインの株価リストから該当銘柄を検索
-            const response = await fetch('/api/stocks/index.json');
+            // major_indices.jsonから該当銘柄を検索
+            const response = await fetch('/data/major_indices.json');
             
             if (!response.ok) {
                 throw new Error(`データ取得エラー: ${response.status}`);
@@ -83,8 +83,15 @@ class StockDetail {
             const data = await response.json();
             console.log('株価データ取得:', data);
             
-            // データが配列かどうかチェック
-            const stockList = Array.isArray(data) ? data : (data.stocks || []);
+            // indicesオブジェクトから全ての銘柄を収集
+            const stockList = [];
+            if (data.indices) {
+                Object.values(data.indices).forEach(region => {
+                    Object.values(region).forEach(stock => {
+                        stockList.push(stock);
+                    });
+                });
+            }
             console.log('処理対象データ:', stockList);
             
             // 銘柄を検索
@@ -172,7 +179,7 @@ class StockDetail {
         const changePercent = changeEl.querySelector('.change-percent');
         
         changeValue.textContent = this.formatChange(data.change);
-        changePercent.textContent = `(${this.formatPercent(data.pct)})`;
+        changePercent.textContent = `(${this.formatPercent(data.change_percent)})`;
         
         // 変動クラス
         changeEl.className = 'price-change';
@@ -559,10 +566,21 @@ class StockDetail {
         try {
             // 同市場の銘柄を関連銘柄として表示（簡易版）
             const market = this.detectMarket(this.symbol);
-            const response = await fetch('/api/stocks/index.json');
+            const response = await fetch('/data/major_indices.json');
             
             if (response.ok) {
-                const allStocks = await response.json();
+                const data = await response.json();
+                
+                // indicesオブジェクトから全ての銘柄を収集
+                const allStocks = [];
+                if (data.indices) {
+                    Object.values(data.indices).forEach(region => {
+                        Object.values(region).forEach(stock => {
+                            allStocks.push(stock);
+                        });
+                    });
+                }
+                
                 const relatedStocks = allStocks
                     .filter(stock => 
                         this.detectMarket(stock.symbol) === market && 
