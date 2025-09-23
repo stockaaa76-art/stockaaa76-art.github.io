@@ -10,7 +10,9 @@ class Dashboard {
         this.realtime_api = '/data/realtime_prices.json';
         this.rankings_api = '/api/rankings.json';
         this.extended_rankings_api = '/api/extended_rankings.json';
+        this.period_rankings_api = '/api/period_rankings.json';
         this.currentRankingCategory = 'basic';
+        this.currentPeriod = 'daily';
         this.init();
     }
 
@@ -25,6 +27,8 @@ class Dashboard {
             await this.loadRankings();
             console.log('拡張ランキングAPIを読み込み中...');
             await this.loadExtendedRankings();
+            console.log('期間別ランキングAPIを読み込み中...');
+            await this.loadPeriodRankings();
             this.setupEventListeners();
             
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
@@ -39,6 +43,7 @@ class Dashboard {
                 this.loadInternationalIndices();
                 this.loadRankings();
                 this.loadExtendedRankings();
+                this.loadPeriodRankings();
             }, 5 * 60 * 1000);
             
         } catch (error) {
@@ -456,6 +461,9 @@ class Dashboard {
         
         // ランキングタブのイベントリスナー
         this.setupRankingTabs();
+        
+        // 期間タブのイベントリスナー
+        this.setupPeriodTabs();
         
         // IndexHeroのクリック処理
         document.querySelectorAll('.index-hero').forEach(hero => {
@@ -1038,3 +1046,109 @@ const watchlistCSS = `
 `;
 
 document.head.insertAdjacentHTML('beforeend', watchlistCSS);
+
+// 期間別ランキング機能の拡張
+Dashboard.prototype.loadPeriodRankings = async function() {
+    try {
+        const response = await fetch(this.period_rankings_api);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+        
+        const data = await response.json();
+        this.periodRankingsData = data;
+        this.updatePeriodRankings();
+        
+    } catch (error) {
+        console.error('期間別ランキング取得エラー:', error);
+    }
+};
+
+Dashboard.prototype.updatePeriodRankings = function() {
+    if (!this.periodRankingsData || !this.periodRankingsData[this.currentPeriod]) {
+        return;
+    }
+    
+    const periodData = this.periodRankingsData[this.currentPeriod];
+    const rankings = periodData.rankings;
+    
+    // 基本ランキングを更新
+    if (this.currentRankingCategory === 'basic') {
+        this.updatePeriodRankingList('gainers-ranking', rankings.gainers || []);
+        this.updatePeriodRankingList('losers-ranking', rankings.losers || []);
+        this.updatePeriodRankingList('volume-ranking', rankings.volume || []);
+        this.updatePeriodRankingList('market-cap-ranking', rankings.market_cap || []);
+    }
+};
+
+Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
+    const element = document.getElementById(elementId);
+    if (!element || !data || data.length === 0) {
+        if (element) {
+            element.innerHTML = '<div class="no-data">データがありません</div>';
+        }
+        return;
+    }
+
+    const html = data.map((item, index) => {
+        const changeClass = item.period_change > 0 ? 'positive' : 
+                           item.period_change < 0 ? 'negative' : 'neutral';
+        
+        const formattedPrice = this.formatPrice(item.current_price);
+        const formattedChange = this.formatPercent(item.period_change);
+        const formattedVolume = this.formatVolume(item.volume);
+        const formattedMarketCap = this.formatMarketCap(item.market_cap);
+        
+        let valueDisplay = '';
+        if (elementId.includes('volume')) {
+            valueDisplay = formattedVolume;
+        } else if (elementId.includes('market-cap')) {
+            valueDisplay = formattedMarketCap;
+        } else {
+            valueDisplay = formattedPrice;
+        }
+        
+        return `
+            <div class="ranking-item" onclick="window.open('/stocks/detail/?s=${encodeURIComponent(item.symbol)}', '_blank')">
+                <div class="ranking-item-left">
+                    <div class="ranking-symbol">${index + 1}. ${item.symbol}</div>
+                    <div class="ranking-name">${item.name}</div>
+                </div>
+                <div class="ranking-item-right">
+                    <div class="ranking-values">
+                        <div class="ranking-value">${valueDisplay}</div>
+                        <div class="ranking-change ${changeClass}">${formattedChange}</div>
+                    </div>
+                    <span class="watchlist-star" onclick="event.stopPropagation(); toggleWatchlist('${item.symbol}')">⭐</span>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    element.innerHTML = html;
+};
+
+Dashboard.prototype.switchPeriod = function(period) {
+    this.currentPeriod = period;
+    
+    // アクティブな期間タブを更新
+    document.querySelectorAll('.period-button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`[data-period="${period}"]`).classList.add('active');
+    
+    // ランキングを更新
+    this.updatePeriodRankings();
+};
+
+Dashboard.prototype.setupPeriodTabs = function() {
+    // 期間タブのイベントリスナー設定
+    const periodButtons = document.querySelectorAll('.period-button');
+    
+    periodButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const period = e.target.dataset.period;
+            this.switchPeriod(period);
+        });
+    });
+};
