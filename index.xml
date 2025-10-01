@@ -1,188 +1,188 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>株価アート - Stock Analysis Dashboard</title><link>https://stock-kabu3.com/</link><description>Recent content on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sun, 28 Sep 2025 22:30:00 +0900</lastBuildDate><atom:link href="https://stock-kabu3.com/index.xml" rel="self" type="application/rss+xml"/><item><title>プライバシーポリシー</title><link>https://stock-kabu3.com/privacy-policy/</link><pubDate>Sun, 28 Sep 2025 22:30:00 +0900</pubDate><guid>https://stock-kabu3.com/privacy-policy/</guid><description>&lt;h1 id="プライバシーポリシー">プライバシーポリシー&lt;/h1>
-&lt;p>&lt;strong>最終更新日&lt;/strong>: 2025年9月28日&lt;/p>
-&lt;h2 id="1-基本方針">1. 基本方針&lt;/h2>
-&lt;p>当サイト「株価投資情報サイト」（https://stock-kabu3.com/）（以下「当サイト」）は、利用者の個人情報の重要性を認識し、個人情報の保護に関する法律（個人情報保護法）、GDPR（一般データ保護規則）等の関係法令を遵守するとともに、以下のプライバシーポリシーに従って個人情報を適切に取り扱います。&lt;/p></description></item><item><title>おすすめ証券会社比較</title><link>https://stock-kabu3.com/investment-guide/brokers/</link><pubDate>Sat, 27 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/investment-guide/brokers/</guid><description>&lt;h1 id="おすすめ証券会社比較">おすすめ証券会社比較&lt;/h1>
-&lt;p>投資を始める際に重要な証券会社選び。初心者にとって使いやすく、手数料も安い証券会社をご紹介します。&lt;/p>
-&lt;h2 id="楽天証券---総合力no1">楽天証券 - 総合力No.1&lt;/h2>
-&lt;h3 id="おすすめポイント">おすすめポイント&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>手数料最安水準&lt;/strong>: 国内株式手数料0円（1日100万円まで）&lt;/li>
-&lt;li>&lt;strong>楽天ポイント投資&lt;/strong>: 楽天ポイントで投資信託を購入可能&lt;/li>
-&lt;li>&lt;strong>楽天カード連携&lt;/strong>: クレカ積立で1%ポイント還元&lt;/li>
-&lt;li>&lt;strong>情報ツール豊富&lt;/strong>: MARKET SPEED無料提供&lt;/li>
-&lt;/ul>
-&lt;h3 id="特におすすめな人">特におすすめな人&lt;/h3>
-&lt;ul>
-&lt;li>楽天経済圏をよく利用する方&lt;/li>
-&lt;li>ポイント投資に興味がある方&lt;/li>
-&lt;li>投資信託から始めたい方&lt;/li>
-&lt;/ul>
-&lt;h3 id="口座開設の流れ">口座開設の流れ&lt;/h3>
-&lt;ol>
-&lt;li>楽天証券公式サイトにアクセス&lt;/li>
-&lt;li>必要事項を入力&lt;/li>
-&lt;li>本人確認書類アップロード&lt;/li>
-&lt;li>審査完了後、取引開始&lt;/li>
-&lt;/ol>
-&lt;blockquote>
-&lt;p>&lt;strong>楽天証券で投資を始める&lt;/strong>&lt;br>
-手数料最安水準で楽天ポイントも貯まる！初心者に最もおすすめの証券会社です。&lt;/p></description></item><item><title>投資初心者におすすめの本5選</title><link>https://stock-kabu3.com/investment-guide/books/</link><pubDate>Sat, 27 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/investment-guide/books/</guid><description>&lt;h1 id="投資初心者におすすめの本5選">投資初心者におすすめの本5選&lt;/h1>
-&lt;p>投資の知識を体系的に学べる、厳選した5冊をご紹介します。初心者から中級者まで、レベルに応じて選んでください。&lt;/p>
-&lt;p>&lt;strong>実際に読んで役立った書籍のみ厳選&lt;/strong>: 運営者が実際に購読し、投資実践に役立った書籍のみを紹介しています。どの本も投資家として成長するために欠かせない知識が得られます。&lt;/p></description></item><item><title>API仕様書</title><link>https://stock-kabu3.com/api/</link><pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/api/</guid><description>&lt;h1 id="-株価データapi">🔌 株価データAPI&lt;/h1>
-&lt;p>当サイトの株価データをプログラムから利用するためのAPIドキュメントです。&lt;/p>
-&lt;h2 id="-利用可能なエンドポイント">📊 利用可能なエンドポイント&lt;/h2>
-&lt;h3 id="1-株価一覧api">1. 株価一覧API&lt;/h3>
-&lt;pre tabindex="0">&lt;code>GET https://stock-kabu3.com/api/stocks/index.json
-&lt;/code>&lt;/pre>&lt;p>全銘柄の株価データ、テクニカル指標、AI分析結果を取得できます。&lt;/p></description></item><item><title>AI予測モデルについて</title><link>https://stock-kabu3.com/about/</link><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/about/</guid><description>&lt;h1 id="-ai予測モデルについて">🤖 AI予測モデルについて&lt;/h1>
-&lt;p>当サイトでは、複数の技術手法を組み合わせたアンサンブル予測システムで株価分析を行っています。&lt;/p>
-&lt;h2 id="-予測精度評価指標">📊 予測精度・評価指標&lt;/h2>
-&lt;h3 id="-システム概要">🎯 &lt;strong>システム概要&lt;/strong>&lt;/h3>
-&lt;div class="performance-metrics">
- &lt;div class="metric-card">
- &lt;h4>📈 短期分析（1-3日）&lt;/h4>
- &lt;div class="metric-value">研究中&lt;/div>
- &lt;div class="metric-desc">方向性分析システム&lt;/div>
- &lt;/div>
- &lt;div class="metric-card">
- &lt;h4>📊 中期分析（1週間）&lt;/h4>
- &lt;div class="metric-value">開発中&lt;/div>
- &lt;div class="metric-desc">トレンド分析システム&lt;/div>
- &lt;/div>
- &lt;div class="metric-card">
- &lt;h4>🔄 データ処理&lt;/h4>
- &lt;div class="metric-value">3-4分&lt;/div>
- &lt;div class="metric-desc">105銘柄完全分析&lt;/div>
- &lt;/div>
-&lt;/div>
-&lt;h3 id="-手法開発状況">📈 &lt;strong>手法開発状況&lt;/strong>&lt;/h3>
-&lt;div class="chart-placeholder">
- &lt;h4>📊 各分析手法の開発進捗&lt;/h4>
- &lt;div class="performance-chart">
- &lt;div class="chart-bars">
- &lt;div class="bar-group">
- &lt;div class="bar ensemble" style="height: 80%">&lt;/div>
- &lt;label>アンサンブル&lt;br>開発中&lt;/label>
- &lt;/div>
- &lt;div class="bar-group">
- &lt;div class="bar moving-avg" style="height: 90%">&lt;/div>
- &lt;label>移動平均&lt;br>実装済&lt;/label>
- &lt;/div>
- &lt;div class="bar-group">
- &lt;div class="bar linear-reg" style="height: 85%">&lt;/div>
- &lt;label>線形回帰&lt;br>実装済&lt;/label>
- &lt;/div>
- &lt;div class="bar-group">
- &lt;div class="bar momentum" style="height: 75%">&lt;/div>
- &lt;label>モメンタム&lt;br>開発中&lt;/label>
- &lt;/div>
- &lt;div class="bar-group">
- &lt;div class="bar bollinger" style="height: 70%">&lt;/div>
- &lt;label>ボリンジャー&lt;br>開発中&lt;/label>
- &lt;/div>
- &lt;/div>
- &lt;/div>
-&lt;/div>
-&lt;h3 id="-開発検証方法">🔬 &lt;strong>開発・検証方法&lt;/strong>&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>時系列クロスバリデーション&lt;/strong>: 過去データでの段階的検証（開発中）&lt;/li>
-&lt;li>&lt;strong>ウォークフォワード分析&lt;/strong>: 実際の市場環境での継続検証（計画中）&lt;/li>
-&lt;li>&lt;strong>バックテスト&lt;/strong>: 実際の検証結果に基づく精度測定（今後実装予定）&lt;/li>
-&lt;/ul>
-&lt;h2 id="-技術手法詳細">🛠️ 技術手法詳細&lt;/h2>
-&lt;h3 id="-4つの予測アルゴリズム">🔧 &lt;strong>4つの予測アルゴリズム&lt;/strong>&lt;/h3>
-&lt;div class="algorithm-details">
- &lt;div class="algo-card">
- &lt;h4>📈 移動平均法&lt;/h4>
- &lt;div class="algo-accuracy">状況: 実装済&lt;/div>
- &lt;p>5日・20日移動平均のトレンド分析による価格分析。安定性重視。&lt;/p></description></item><item><title>📈 株価予測レポート - 2025-09-08</title><link>https://stock-kabu3.com/post/stock-prediction-2025-09-08/</link><pubDate>Mon, 08 Sep 2025 01:02:00 +0900</pubDate><guid>https://stock-kabu3.com/post/stock-prediction-2025-09-08/</guid><description>&lt;h2 id="-予測サマリー">📊 予測サマリー&lt;/h2>
-&lt;p>&lt;strong>分析日時&lt;/strong>: 2025-09-08T00:52:54&lt;br>
-&lt;strong>予測期間&lt;/strong>: 5日間&lt;br>
-&lt;strong>分析銘柄&lt;/strong>: 36銘柄&lt;/p>
-&lt;h3 id="-予測結果概要">🎯 予測結果概要&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>上昇予想&lt;/strong>: 20銘柄&lt;/li>
-&lt;li>&lt;strong>下落予想&lt;/strong>: 16銘柄&lt;/li>
-&lt;li>&lt;strong>予測手法&lt;/strong>: 移動平均、線形回帰、モメンタム、ボリンジャーバンド&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="-上昇予想銘柄-top5">📈 上昇予想銘柄 TOP5&lt;/h2>
-&lt;h3 id="1位-パランティアテクノロジーズ-pltr">1位. パランティア・テクノロジーズ (PLTR)&lt;/h3>
-&lt;p>&lt;strong>現在価格&lt;/strong>: ¥153&lt;br>
-&lt;strong>予測価格&lt;/strong>: ¥154&lt;br>
-&lt;strong>予想変動&lt;/strong>: &lt;span style="color: green">+0.8%&lt;/span>&lt;br>
-&lt;strong>信頼度&lt;/strong>: 88%&lt;/p></description></item><item><title>株価アートサイト開設のお知らせ</title><link>https://stock-kabu3.com/post/welcome/</link><pubDate>Sun, 07 Sep 2025 22:10:00 +0900</pubDate><guid>https://stock-kabu3.com/post/welcome/</guid><description>&lt;h1 id="株価アートサイト開設">株価アートサイト開設&lt;/h1>
-&lt;p>株価分析と投資情報を提供する専門サイト「株価アート」を開設いたします。&lt;/p>
-&lt;h2 id="サイトの特徴">サイトの特徴&lt;/h2>
-&lt;h3 id="-リアルタイム株価データ">📈 リアルタイム株価データ&lt;/h3>
-&lt;ul>
-&lt;li>Yahoo! Finance APIを活用した最新の株価情報&lt;/li>
-&lt;li>主要日本株・米国株の価格推移を追跡&lt;/li>
-&lt;/ul>
-&lt;h3 id="-視覚的なチャート表示">📊 視覚的なチャート表示&lt;/h3>
-&lt;ul>
-&lt;li>Chart.jsを使った美しいインタラクティブチャート&lt;/li>
-&lt;li>複数銘柄の比較表示機能&lt;/li>
-&lt;li>レスポンシブデザインでモバイル対応&lt;/li>
-&lt;/ul>
-&lt;h3 id="-投資情報の提供">📰 投資情報の提供&lt;/h3>
-&lt;ul>
-&lt;li>市場分析レポート&lt;/li>
-&lt;li>投資戦略の解説&lt;/li>
-&lt;li>初心者向け投資ガイド&lt;/li>
-&lt;/ul>
-&lt;h2 id="今後の展開">今後の展開&lt;/h2>
-&lt;ol>
-&lt;li>
-&lt;p>&lt;strong>機能拡張&lt;/strong>&lt;/p></description></item><item><title>お問い合わせ</title><link>https://stock-kabu3.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/contact/</guid><description>&lt;h1 id="お問い合わせ">お問い合わせ&lt;/h1>
-&lt;p>当サイトに関するご質問、ご意見、ご要望などがございましたら、以下の方法でお気軽にお問い合わせください。&lt;/p>
-&lt;h2 id="メールでのお問い合わせ">メールでのお問い合わせ&lt;/h2>
-&lt;p>&lt;strong>メールアドレス&lt;/strong>: &lt;a href="mailto:contact@stock-kabu3.com">contact@stock-kabu3.com&lt;/a>&lt;/p>
-&lt;h3 id="お問い合わせの際の注意事項">お問い合わせの際の注意事項&lt;/h3>
-&lt;ol>
-&lt;li>
-&lt;p>&lt;strong>返信について&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>通常1-3営業日以内に返信いたします&lt;/li>
-&lt;li>内容によっては回答にお時間をいただく場合があります&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>お問い合わせ内容&lt;/strong>&lt;/p></description></item><item><title>運営者情報</title><link>https://stock-kabu3.com/operator-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/operator-info/</guid><description>&lt;h1 id="運営者情報">運営者情報&lt;/h1>
-&lt;h2 id="サイト情報">サイト情報&lt;/h2>
-&lt;p>&lt;strong>サイト名&lt;/strong>: 株価投資情報サイト&lt;br>
-&lt;strong>URL&lt;/strong>: &lt;a href="https://stock-kabu3.com/">https://stock-kabu3.com/&lt;/a>&lt;br>
-&lt;strong>運営開始&lt;/strong>: 2025年9月&lt;br>
-&lt;strong>最終更新&lt;/strong>: 2025年9月27日&lt;/p>
-&lt;h2 id="運営目的">運営目的&lt;/h2>
-&lt;h3 id="サイトの目的">サイトの目的&lt;/h3>
-&lt;ul>
-&lt;li>株価情報・投資関連情報の提供&lt;/li>
-&lt;li>投資初心者向けの教育コンテンツ配信&lt;/li>
-&lt;li>AI技術を活用した株価分析システムの研究・開発&lt;/li>
-&lt;li>投資判断に役立つ参考情報の整理・提供&lt;/li>
-&lt;/ul>
-&lt;h3 id="対象読者">対象読者&lt;/h3>
-&lt;ul>
-&lt;li>株式投資に関心のある個人投資家&lt;/li>
-&lt;li>投資を始めたい初心者&lt;/li>
-&lt;li>株価分析・テクニカル分析を学習したい方&lt;/li>
-&lt;li>楽天証券をはじめとする証券会社の情報を求める方&lt;/li>
-&lt;/ul>
-&lt;h2 id="コンテンツ方針">コンテンツ方針&lt;/h2>
-&lt;h3 id="提供情報">提供情報&lt;/h3>
-&lt;ul>
-&lt;li>日経平均株価をはじめとする主要指数のリアルタイム情報&lt;/li>
-&lt;li>個別銘柄の株価チャート・分析データ&lt;/li>
-&lt;li>投資関連書籍・証券会社の紹介&lt;/li>
-&lt;li>AI予測モデルの研究開発状況（実験的）&lt;/li>
-&lt;/ul>
-&lt;h3 id="情報の特徴">情報の特徴&lt;/h3>
-&lt;ul>
-&lt;li>Yahoo Finance APIを活用した信頼性の高いデータ&lt;/li>
-&lt;li>15-20分遅れでの株価情報更新&lt;/li>
-&lt;li>初心者にも分かりやすい解説とサポート&lt;/li>
-&lt;li>実際の投資体験に基づく実用的な情報提供&lt;/li>
-&lt;/ul>
-&lt;h2 id="収益化について">収益化について&lt;/h2>
-&lt;h3 id="アフィリエイトプログラム参加">アフィリエイトプログラム参加&lt;/h3>
-&lt;p>当サイトは以下のアフィリエイトプログラムに参加しています：&lt;/p></description></item><item><title>銘柄詳細</title><link>https://stock-kabu3.com/stocks/detail/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/stocks/detail/</guid><description>&lt;p>銘柄詳細ページです。URLから銘柄情報を動的に取得して表示します。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>株価アート - Stock Analysis Dashboard</title><link>https://stock-kabu3.com/</link><description>Recent content on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sun, 28 Sep 2025 22:30:00 +0900</lastBuildDate><atom:link href="https://stock-kabu3.com/index.xml" rel="self" type="application/rss+xml"/><item><title>プライバシーポリシー</title><link>https://stock-kabu3.com/privacy-policy/</link><pubDate>Sun, 28 Sep 2025 22:30:00 +0900</pubDate><guid>https://stock-kabu3.com/privacy-policy/</guid><description>&lt;h1 id="プライバシーポリシー"&gt;プライバシーポリシー&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;最終更新日&lt;/strong&gt;: 2025年9月28日&lt;/p&gt;
+&lt;h2 id="1-基本方針"&gt;1. 基本方針&lt;/h2&gt;
+&lt;p&gt;当サイト「株価投資情報サイト」（https://stock-kabu3.com/）（以下「当サイト」）は、利用者の個人情報の重要性を認識し、個人情報の保護に関する法律（個人情報保護法）、GDPR（一般データ保護規則）等の関係法令を遵守するとともに、以下のプライバシーポリシーに従って個人情報を適切に取り扱います。&lt;/p&gt;</description></item><item><title>おすすめ証券会社比較</title><link>https://stock-kabu3.com/investment-guide/brokers/</link><pubDate>Sat, 27 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/investment-guide/brokers/</guid><description>&lt;h1 id="おすすめ証券会社比較"&gt;おすすめ証券会社比較&lt;/h1&gt;
+&lt;p&gt;投資を始める際に重要な証券会社選び。初心者にとって使いやすく、手数料も安い証券会社をご紹介します。&lt;/p&gt;
+&lt;h2 id="楽天証券---総合力no1"&gt;楽天証券 - 総合力No.1&lt;/h2&gt;
+&lt;h3 id="おすすめポイント"&gt;おすすめポイント&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;手数料最安水準&lt;/strong&gt;: 国内株式手数料0円（1日100万円まで）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;楽天ポイント投資&lt;/strong&gt;: 楽天ポイントで投資信託を購入可能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;楽天カード連携&lt;/strong&gt;: クレカ積立で1%ポイント還元&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;情報ツール豊富&lt;/strong&gt;: MARKET SPEED無料提供&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="特におすすめな人"&gt;特におすすめな人&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;楽天経済圏をよく利用する方&lt;/li&gt;
+&lt;li&gt;ポイント投資に興味がある方&lt;/li&gt;
+&lt;li&gt;投資信託から始めたい方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="口座開設の流れ"&gt;口座開設の流れ&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;楽天証券公式サイトにアクセス&lt;/li&gt;
+&lt;li&gt;必要事項を入力&lt;/li&gt;
+&lt;li&gt;本人確認書類アップロード&lt;/li&gt;
+&lt;li&gt;審査完了後、取引開始&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;楽天証券で投資を始める&lt;/strong&gt;&lt;br&gt;
+手数料最安水準で楽天ポイントも貯まる！初心者に最もおすすめの証券会社です。&lt;/p&gt;</description></item><item><title>投資初心者におすすめの本5選</title><link>https://stock-kabu3.com/investment-guide/books/</link><pubDate>Sat, 27 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/investment-guide/books/</guid><description>&lt;h1 id="投資初心者におすすめの本5選"&gt;投資初心者におすすめの本5選&lt;/h1&gt;
+&lt;p&gt;投資の知識を体系的に学べる、厳選した5冊をご紹介します。初心者から中級者まで、レベルに応じて選んでください。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;実際に読んで役立った書籍のみ厳選&lt;/strong&gt;: 運営者が実際に購読し、投資実践に役立った書籍のみを紹介しています。どの本も投資家として成長するために欠かせない知識が得られます。&lt;/p&gt;</description></item><item><title>API仕様書</title><link>https://stock-kabu3.com/api/</link><pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/api/</guid><description>&lt;h1 id="-株価データapi"&gt;🔌 株価データAPI&lt;/h1&gt;
+&lt;p&gt;当サイトの株価データをプログラムから利用するためのAPIドキュメントです。&lt;/p&gt;
+&lt;h2 id="-利用可能なエンドポイント"&gt;📊 利用可能なエンドポイント&lt;/h2&gt;
+&lt;h3 id="1-株価一覧api"&gt;1. 株価一覧API&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;GET https://stock-kabu3.com/api/stocks/index.json
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;全銘柄の株価データ、テクニカル指標、AI分析結果を取得できます。&lt;/p&gt;</description></item><item><title>AI予測モデルについて</title><link>https://stock-kabu3.com/about/</link><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/about/</guid><description>&lt;h1 id="-ai予測モデルについて"&gt;🤖 AI予測モデルについて&lt;/h1&gt;
+&lt;p&gt;当サイトでは、複数の技術手法を組み合わせたアンサンブル予測システムで株価分析を行っています。&lt;/p&gt;
+&lt;h2 id="-予測精度評価指標"&gt;📊 予測精度・評価指標&lt;/h2&gt;
+&lt;h3 id="-システム概要"&gt;🎯 &lt;strong&gt;システム概要&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="performance-metrics"&gt;
+ &lt;div class="metric-card"&gt;
+ &lt;h4&gt;📈 短期分析（1-3日）&lt;/h4&gt;
+ &lt;div class="metric-value"&gt;研究中&lt;/div&gt;
+ &lt;div class="metric-desc"&gt;方向性分析システム&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="metric-card"&gt;
+ &lt;h4&gt;📊 中期分析（1週間）&lt;/h4&gt;
+ &lt;div class="metric-value"&gt;開発中&lt;/div&gt;
+ &lt;div class="metric-desc"&gt;トレンド分析システム&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="metric-card"&gt;
+ &lt;h4&gt;🔄 データ処理&lt;/h4&gt;
+ &lt;div class="metric-value"&gt;3-4分&lt;/div&gt;
+ &lt;div class="metric-desc"&gt;105銘柄完全分析&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id="-手法開発状況"&gt;📈 &lt;strong&gt;手法開発状況&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="chart-placeholder"&gt;
+ &lt;h4&gt;📊 各分析手法の開発進捗&lt;/h4&gt;
+ &lt;div class="performance-chart"&gt;
+ &lt;div class="chart-bars"&gt;
+ &lt;div class="bar-group"&gt;
+ &lt;div class="bar ensemble" style="height: 80%"&gt;&lt;/div&gt;
+ &lt;label&gt;アンサンブル&lt;br&gt;開発中&lt;/label&gt;
+ &lt;/div&gt;
+ &lt;div class="bar-group"&gt;
+ &lt;div class="bar moving-avg" style="height: 90%"&gt;&lt;/div&gt;
+ &lt;label&gt;移動平均&lt;br&gt;実装済&lt;/label&gt;
+ &lt;/div&gt;
+ &lt;div class="bar-group"&gt;
+ &lt;div class="bar linear-reg" style="height: 85%"&gt;&lt;/div&gt;
+ &lt;label&gt;線形回帰&lt;br&gt;実装済&lt;/label&gt;
+ &lt;/div&gt;
+ &lt;div class="bar-group"&gt;
+ &lt;div class="bar momentum" style="height: 75%"&gt;&lt;/div&gt;
+ &lt;label&gt;モメンタム&lt;br&gt;開発中&lt;/label&gt;
+ &lt;/div&gt;
+ &lt;div class="bar-group"&gt;
+ &lt;div class="bar bollinger" style="height: 70%"&gt;&lt;/div&gt;
+ &lt;label&gt;ボリンジャー&lt;br&gt;開発中&lt;/label&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id="-開発検証方法"&gt;🔬 &lt;strong&gt;開発・検証方法&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;時系列クロスバリデーション&lt;/strong&gt;: 過去データでの段階的検証（開発中）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ウォークフォワード分析&lt;/strong&gt;: 実際の市場環境での継続検証（計画中）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;バックテスト&lt;/strong&gt;: 実際の検証結果に基づく精度測定（今後実装予定）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-技術手法詳細"&gt;🛠️ 技術手法詳細&lt;/h2&gt;
+&lt;h3 id="-4つの予測アルゴリズム"&gt;🔧 &lt;strong&gt;4つの予測アルゴリズム&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="algorithm-details"&gt;
+ &lt;div class="algo-card"&gt;
+ &lt;h4&gt;📈 移動平均法&lt;/h4&gt;
+ &lt;div class="algo-accuracy"&gt;状況: 実装済&lt;/div&gt;
+ &lt;p&gt;5日・20日移動平均のトレンド分析による価格分析。安定性重視。&lt;/p&gt;</description></item><item><title>📈 株価予測レポート - 2025-09-08</title><link>https://stock-kabu3.com/post/stock-prediction-2025-09-08/</link><pubDate>Mon, 08 Sep 2025 01:02:00 +0900</pubDate><guid>https://stock-kabu3.com/post/stock-prediction-2025-09-08/</guid><description>&lt;h2 id="-予測サマリー"&gt;📊 予測サマリー&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;分析日時&lt;/strong&gt;: 2025-09-08T00:52:54&lt;br&gt;
+&lt;strong&gt;予測期間&lt;/strong&gt;: 5日間&lt;br&gt;
+&lt;strong&gt;分析銘柄&lt;/strong&gt;: 36銘柄&lt;/p&gt;
+&lt;h3 id="-予測結果概要"&gt;🎯 予測結果概要&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;上昇予想&lt;/strong&gt;: 20銘柄&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;下落予想&lt;/strong&gt;: 16銘柄&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;予測手法&lt;/strong&gt;: 移動平均、線形回帰、モメンタム、ボリンジャーバンド&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-上昇予想銘柄-top5"&gt;📈 上昇予想銘柄 TOP5&lt;/h2&gt;
+&lt;h3 id="1位-パランティアテクノロジーズ-pltr"&gt;1位. パランティア・テクノロジーズ (PLTR)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;現在価格&lt;/strong&gt;: ¥153&lt;br&gt;
+&lt;strong&gt;予測価格&lt;/strong&gt;: ¥154&lt;br&gt;
+&lt;strong&gt;予想変動&lt;/strong&gt;: &lt;span style="color: green"&gt;+0.8%&lt;/span&gt;&lt;br&gt;
+&lt;strong&gt;信頼度&lt;/strong&gt;: 88%&lt;/p&gt;</description></item><item><title>株価アートサイト開設のお知らせ</title><link>https://stock-kabu3.com/post/welcome/</link><pubDate>Sun, 07 Sep 2025 22:10:00 +0900</pubDate><guid>https://stock-kabu3.com/post/welcome/</guid><description>&lt;h1 id="株価アートサイト開設"&gt;株価アートサイト開設&lt;/h1&gt;
+&lt;p&gt;株価分析と投資情報を提供する専門サイト「株価アート」を開設いたします。&lt;/p&gt;
+&lt;h2 id="サイトの特徴"&gt;サイトの特徴&lt;/h2&gt;
+&lt;h3 id="-リアルタイム株価データ"&gt;📈 リアルタイム株価データ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Yahoo! Finance APIを活用した最新の株価情報&lt;/li&gt;
+&lt;li&gt;主要日本株・米国株の価格推移を追跡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-視覚的なチャート表示"&gt;📊 視覚的なチャート表示&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Chart.jsを使った美しいインタラクティブチャート&lt;/li&gt;
+&lt;li&gt;複数銘柄の比較表示機能&lt;/li&gt;
+&lt;li&gt;レスポンシブデザインでモバイル対応&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-投資情報の提供"&gt;📰 投資情報の提供&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;市場分析レポート&lt;/li&gt;
+&lt;li&gt;投資戦略の解説&lt;/li&gt;
+&lt;li&gt;初心者向け投資ガイド&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="今後の展開"&gt;今後の展開&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;機能拡張&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>お問い合わせ</title><link>https://stock-kabu3.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/contact/</guid><description>&lt;h1 id="お問い合わせ"&gt;お問い合わせ&lt;/h1&gt;
+&lt;p&gt;当サイトに関するご質問、ご意見、ご要望などがございましたら、以下の方法でお気軽にお問い合わせください。&lt;/p&gt;
+&lt;h2 id="メールでのお問い合わせ"&gt;メールでのお問い合わせ&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;メールアドレス&lt;/strong&gt;: &lt;a href="mailto:contact@stock-kabu3.com"&gt;contact@stock-kabu3.com&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="お問い合わせの際の注意事項"&gt;お問い合わせの際の注意事項&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;返信について&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通常1-3営業日以内に返信いたします&lt;/li&gt;
+&lt;li&gt;内容によっては回答にお時間をいただく場合があります&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;お問い合わせ内容&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>運営者情報</title><link>https://stock-kabu3.com/operator-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/operator-info/</guid><description>&lt;h1 id="運営者情報"&gt;運営者情報&lt;/h1&gt;
+&lt;h2 id="サイト情報"&gt;サイト情報&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;サイト名&lt;/strong&gt;: 株価投資情報サイト&lt;br&gt;
+&lt;strong&gt;URL&lt;/strong&gt;: &lt;a href="https://stock-kabu3.com/"&gt;https://stock-kabu3.com/&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;運営開始&lt;/strong&gt;: 2025年9月&lt;br&gt;
+&lt;strong&gt;最終更新&lt;/strong&gt;: 2025年9月27日&lt;/p&gt;
+&lt;h2 id="運営目的"&gt;運営目的&lt;/h2&gt;
+&lt;h3 id="サイトの目的"&gt;サイトの目的&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;株価情報・投資関連情報の提供&lt;/li&gt;
+&lt;li&gt;投資初心者向けの教育コンテンツ配信&lt;/li&gt;
+&lt;li&gt;AI技術を活用した株価分析システムの研究・開発&lt;/li&gt;
+&lt;li&gt;投資判断に役立つ参考情報の整理・提供&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="対象読者"&gt;対象読者&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;株式投資に関心のある個人投資家&lt;/li&gt;
+&lt;li&gt;投資を始めたい初心者&lt;/li&gt;
+&lt;li&gt;株価分析・テクニカル分析を学習したい方&lt;/li&gt;
+&lt;li&gt;楽天証券をはじめとする証券会社の情報を求める方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="コンテンツ方針"&gt;コンテンツ方針&lt;/h2&gt;
+&lt;h3 id="提供情報"&gt;提供情報&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;日経平均株価をはじめとする主要指数のリアルタイム情報&lt;/li&gt;
+&lt;li&gt;個別銘柄の株価チャート・分析データ&lt;/li&gt;
+&lt;li&gt;投資関連書籍・証券会社の紹介&lt;/li&gt;
+&lt;li&gt;AI予測モデルの研究開発状況（実験的）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="情報の特徴"&gt;情報の特徴&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Yahoo Finance APIを活用した信頼性の高いデータ&lt;/li&gt;
+&lt;li&gt;15-20分遅れでの株価情報更新&lt;/li&gt;
+&lt;li&gt;初心者にも分かりやすい解説とサポート&lt;/li&gt;
+&lt;li&gt;実際の投資体験に基づく実用的な情報提供&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="収益化について"&gt;収益化について&lt;/h2&gt;
+&lt;h3 id="アフィリエイトプログラム参加"&gt;アフィリエイトプログラム参加&lt;/h3&gt;
+&lt;p&gt;当サイトは以下のアフィリエイトプログラムに参加しています：&lt;/p&gt;</description></item><item><title>銘柄詳細</title><link>https://stock-kabu3.com/stocks/detail/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/stocks/detail/</guid><description>&lt;p&gt;銘柄詳細ページです。URLから銘柄情報を動的に取得して表示します。&lt;/p&gt;</description></item></channel></rss>
