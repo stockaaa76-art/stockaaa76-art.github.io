@@ -125,13 +125,10 @@ class Dashboard {
             this.updateIndexCardFromRealtime('nikkei', nikkei);
         }
 
-        // S&P500をダウの代替として使用（foreign配列から取得）
-        const sp500 = foreign.find(idx => idx.ticker === '^GSPC'); 
-        if (sp500) {
-            this.updateIndexCardFromRealtime('dow', sp500);
-        }
-        
-        console.log('メイン指標更新完了:', { nikkei: !!nikkei, sp500: !!sp500 });
+        // ダウ平均はmajor_indices.jsonから取得（realtime_pricesにはない）
+        // loadInternationalIndices()で更新される
+
+        console.log('メイン指標更新完了:', { nikkei: !!nikkei });
     }
 
     updateIndexHeroes(data) {
@@ -176,7 +173,44 @@ class Dashboard {
                 if (elementId) {
                     this.updateInternationalIndex(elementId, indexData);
                 }
+                // ダウ平均のヒーローカードも更新
+                if (symbol === '^DJI') {
+                    this.updateDowHeroFromIndices(indexData);
+                }
             }
+        }
+    }
+
+    updateDowHeroFromIndices(data) {
+        const priceEl = document.getElementById('dow-price');
+        const changeEl = document.getElementById('dow-change');
+        const chartEl = document.getElementById('dow-chart');
+
+        if (priceEl) {
+            priceEl.textContent = data.price_formatted || this.formatPrice(data.price, '$');
+        }
+
+        if (changeEl) {
+            const changeValue = changeEl.querySelector('.change-value');
+            const changePercent = changeEl.querySelector('.change-percent');
+
+            if (changeValue && changePercent) {
+                changeValue.textContent = data.change_formatted || this.formatChange(data.change);
+                changePercent.textContent = `(${this.formatPercent(data.change_percent)})`;
+
+                changeEl.className = 'index-change';
+                if (data.trend === 'up' || data.change > 0) {
+                    changeEl.classList.add('positive');
+                } else if (data.trend === 'down' || data.change < 0) {
+                    changeEl.classList.add('negative');
+                } else {
+                    changeEl.classList.add('neutral');
+                }
+            }
+        }
+
+        if (chartEl) {
+            this.drawSimpleSparkline(chartEl, data.change);
         }
     }
 

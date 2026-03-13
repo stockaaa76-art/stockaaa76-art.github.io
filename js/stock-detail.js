@@ -694,7 +694,9 @@ class StockDetail {
 
     // ユーティリティメソッド
     detectMarket(symbol) {
-        if (symbol.endsWith('.T')) return 'JP';
+        // 日本市場の銘柄・指数
+        const jpSymbols = ['^N225', '^TOPIX', '1321.T'];
+        if (symbol.endsWith('.T') || jpSymbols.includes(symbol)) return 'JP';
         if (symbol.startsWith('^') || symbol.includes('=X')) return 'INDEX';
         if (/^[A-Z]{3,4}$/.test(symbol)) return 'US';
         if (symbol.includes('ETF') || symbol.includes('SPY') || symbol.includes('QQQ')) return 'ETF';
