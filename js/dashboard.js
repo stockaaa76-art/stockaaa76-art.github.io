@@ -1154,7 +1154,7 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
         }
         
         return `
-            <div class="ranking-item" onclick="window.open('/stocks/detail/?s=${encodeURIComponent(item.symbol)}', '_blank')">
+            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'">
                 <div class="ranking-item-left">
                     <div class="ranking-symbol">${index + 1}. ${item.symbol}</div>
                     <div class="ranking-name">${item.name}</div>
@@ -1259,7 +1259,7 @@ Dashboard.prototype.updateEnhancedRankingList = function(elementId, data) {
         }
         
         return `
-            <div class="ranking-item" onclick="window.open('/stocks/detail/?s=${encodeURIComponent(item.symbol)}', '_blank')">
+            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'">
                 <div class="ranking-item-left">
                     <div class="ranking-symbol">${index + 1}. ${item.symbol}</div>
                     <div class="ranking-name">${item.name}</div>
