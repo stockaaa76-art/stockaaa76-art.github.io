@@ -753,7 +753,7 @@ class Dashboard {
             }
 
             return `
-                <div class="ranking-item">
+                <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(stock.symbol)}'" style="cursor:pointer;">
                     <div class="ranking-item-left">
                         <span class="ranking-symbol">${rank}. ${stock.symbol}</span>
                         <span class="ranking-name">${stock.name}</span>
@@ -763,7 +763,7 @@ class Dashboard {
                             <span class="ranking-value">${valueText}</span>
                             <span class="ranking-change ${changeClass}">${changeText}</span>
                         </div>
-                        <button class="btn-star" data-symbol="${stock.symbol}" onclick="toggleWatchlist('${stock.symbol}')" title="ウォッチリストに追加">⭐</button>
+                        <button class="btn-star" data-symbol="${stock.symbol}" onclick="event.stopPropagation(); toggleWatchlist('${stock.symbol}')" title="ウォッチリストに追加">⭐</button>
                     </div>
                 </div>
             `;
@@ -938,7 +938,7 @@ class Dashboard {
             }
             
             return `
-                <div class="ranking-item">
+                <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(stock.symbol)}'" style="cursor:pointer;">
                     <div class="ranking-item-left">
                         <span class="ranking-symbol">${rank}. ${stock.symbol}</span>
                         <span class="ranking-name">${stock.name}</span>

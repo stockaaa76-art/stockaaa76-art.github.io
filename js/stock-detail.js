@@ -532,6 +532,17 @@ class StockDetail {
                 const historicalData = await response.json();
                 const symbolData = historicalData[this.symbol];
                 
+                // データがない場合は次の期間にフォールバック
+                const fallbackOrder = ['1d', '1w', '1m', '3m', '1y'];
+                const targetPeriod = symbolData && symbolData.periods && symbolData.periods[period]
+                    ? period
+                    : fallbackOrder.find(p => symbolData && symbolData.periods && symbolData.periods[p]);
+
+                if (targetPeriod && symbolData.periods[targetPeriod]) {
+                    const usePeriod = targetPeriod;
+                    period = usePeriod;
+                }
+
                 if (symbolData && symbolData.periods && symbolData.periods[period]) {
                     const data = symbolData.periods[period];
                     const labels = data.map(item => {
