@@ -1188,26 +1188,43 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
 };
 
 Dashboard.prototype.switchPeriod = function(period) {
+    console.log('switchPeriod called:', period);
     this.currentPeriod = period;
-    
+
     // アクティブな期間タブを更新
     document.querySelectorAll('.period-button').forEach(btn => {
         btn.classList.remove('active');
     });
-    document.querySelector(`[data-period="${period}"]`).classList.add('active');
-    
-    // ランキングを更新
-    this.updatePeriodRankings();
+    const activeBtn = document.querySelector(`[data-period="${period}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
+
+    // デイリー: enhanced_rankings の basic データを使用
+    if (period === 'daily' && this.lastRankingsData) {
+        const basic = this.lastRankingsData.basic || this.lastRankingsData;
+        this.renderRanking('gainers-ranking', basic.gainers, 'percentage');
+        this.renderRanking('losers-ranking', basic.losers, 'percentage');
+        this.renderRanking('volume-ranking', basic.volume_high || basic.volume, 'volume');
+        this.renderRanking('market-cap-ranking', basic.market_cap_high || basic.market_cap, 'market_cap');
+        return;
+    }
+
+    // ウィークリー・マンスリー: period_rankings データを使用
+    if (this.periodRankingsData && this.periodRankingsData[period]) {
+        const rankings = this.periodRankingsData[period].rankings;
+        this.updatePeriodRankingList('gainers-ranking', rankings.gainers || []);
+        this.updatePeriodRankingList('losers-ranking', rankings.losers || []);
+        this.updatePeriodRankingList('volume-ranking', rankings.volume || []);
+        this.updatePeriodRankingList('market-cap-ranking', rankings.market_cap || []);
+    }
 };
 
 Dashboard.prototype.setupPeriodTabs = function() {
-    // 期間タブのイベントリスナー設定
-    const periodButtons = document.querySelectorAll('.period-button');
-
-    periodButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const period = e.currentTarget.dataset.period;
-            if (period) this.switchPeriod(period);
+    const self = this;
+    document.querySelectorAll('.period-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const period = this.dataset.period;
+            console.log('period button clicked:', period);
+            if (period) self.switchPeriod(period);
         });
     });
 };
