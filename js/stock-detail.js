@@ -73,37 +73,47 @@ class StockDetail {
 
     async loadStockData() {
         try {
-            // major_indices.jsonから該当銘柄を検索
-            const response = await fetch('/api/major_indices.json');
-            
-            if (!response.ok) {
-                throw new Error(`データ取得エラー: ${response.status}`);
-            }
-            
-            const data = await response.json();
-            console.log('株価データ取得:', data);
-            
-            // indicesオブジェクトから全ての銘柄を収集
-            const stockList = [];
-            if (data.indices) {
-                Object.values(data.indices).forEach(region => {
-                    Object.values(region).forEach(stock => {
-                        stockList.push(stock);
+            // 1. major_indices.json から検索（指数・主要ETF）
+            const indicesRes = await fetch('/api/major_indices.json');
+            if (indicesRes.ok) {
+                const data = await indicesRes.json();
+                const stockList = [];
+                if (data.indices) {
+                    Object.values(data.indices).forEach(region => {
+                        Object.values(region).forEach(stock => {
+                            stockList.push(stock);
+                        });
                     });
-                });
+                }
+                const stock = stockList.find(s => s.symbol === this.symbol);
+                if (stock) {
+                    this.stockData = stock;
+                    return;
+                }
             }
-            console.log('処理対象データ:', stockList);
-            
-            // 銘柄を検索
-            const stock = stockList.find(s => s.symbol === this.symbol);
-            
-            if (!stock) {
-                throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
-            }
-            
-            this.stockData = stock;
-            console.log('株価データ読み込み完了:', this.symbol, this.stockData);
-            
+
+            // 2. stocks/index.json から検索（個別株・ETF全銘柄）
+            const stocksRes = await fetch('/api/stocks/index.json');
+            if (!stocksRes.ok) throw new Error(`データ取得エラー: ${stocksRes.status}`);
+            const stocksData = await stocksRes.json();
+            const found = (stocksData.stocks || []).find(s => s.symbol === this.symbol);
+            if (!found) throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
+
+            // フィールドを詳細ページ用に正規化
+            this.stockData = {
+                symbol: found.symbol,
+                name: found.name !== found.symbol ? found.name : found.symbol,
+                price: found.price,
+                change: found.change || 0,
+                change_percent: found.change_pct || 0,
+                volume: found.volume || 0,
+                market_cap: found.market_cap || 0,
+                trailing_pe: found.pe_ratio || 0,
+                dividend_yield: found.dividend_yield || 0,
+                fifty_two_week_high: found.week52_high || 0,
+                fifty_two_week_low: found.week52_low || 0,
+            };
+
         } catch (error) {
             console.error('株価データ読み込みエラー:', error);
             throw error;
