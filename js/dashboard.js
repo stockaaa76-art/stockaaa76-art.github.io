@@ -780,8 +780,8 @@ class Dashboard {
         
         tabButtons.forEach(button => {
             button.addEventListener('click', (e) => {
-                const category = e.target.dataset.category;
-                this.switchRankingCategory(category);
+                const category = e.currentTarget.dataset.category;
+                if (category) this.switchRankingCategory(category);
             });
         });
     }
@@ -1203,11 +1203,11 @@ Dashboard.prototype.switchPeriod = function(period) {
 Dashboard.prototype.setupPeriodTabs = function() {
     // 期間タブのイベントリスナー設定
     const periodButtons = document.querySelectorAll('.period-button');
-    
+
     periodButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            const period = e.target.dataset.period;
-            this.switchPeriod(period);
+            const period = e.currentTarget.dataset.period;
+            if (period) this.switchPeriod(period);
         });
     });
 };
