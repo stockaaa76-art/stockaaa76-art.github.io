@@ -8,7 +8,7 @@ class Dashboard {
         this.summary_api = '/api/summary.json';
         this.indices_api = '/api/major_indices.json';
         this.realtime_api = '/data/realtime_prices.json';
-        this.rankings_api = '/api/rankings.json';
+        this.rankings_api = '/api/enhanced_rankings.json';
         this.extended_rankings_api = '/api/extended_rankings.json';
         this.enhanced_rankings_api = '/api/enhanced_rankings.json';
         this.period_rankings_api = '/api/period_rankings.json';
@@ -701,17 +701,19 @@ class Dashboard {
     }
 
     updateRankings(data) {
+        // enhanced_rankings.json は basic.gainers/losers/volume_high/market_cap_high
+        const basic = data.basic || data;
         // 値上がりランキング
-        this.renderRanking('gainers-ranking', data.gainers, 'percentage');
-        
+        this.renderRanking('gainers-ranking', basic.gainers, 'percentage');
+
         // 値下がりランキング
-        this.renderRanking('losers-ranking', data.losers, 'percentage');
-        
+        this.renderRanking('losers-ranking', basic.losers, 'percentage');
+
         // 出来高ランキング
-        this.renderRanking('volume-ranking', data.volume, 'volume');
-        
+        this.renderRanking('volume-ranking', basic.volume_high || basic.volume, 'volume');
+
         // 時価総額ランキング
-        this.renderRanking('market-cap-ranking', data.market_cap, 'market_cap');
+        this.renderRanking('market-cap-ranking', basic.market_cap_high || basic.market_cap, 'market_cap');
     }
 
     renderRanking(elementId, stocks, type) {
