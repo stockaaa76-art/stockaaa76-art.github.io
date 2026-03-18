@@ -1112,13 +1112,25 @@ Dashboard.prototype.loadPeriodRankings = async function() {
 };
 
 Dashboard.prototype.updatePeriodRankings = function() {
+    // デイリーは enhanced_rankings.json の basic データを使用
+    if (this.currentPeriod === 'daily') {
+        if (this.lastRankingsData && this.currentRankingCategory === 'basic') {
+            const basic = this.lastRankingsData.basic || this.lastRankingsData;
+            this.renderRanking('gainers-ranking', basic.gainers, 'percentage');
+            this.renderRanking('losers-ranking', basic.losers, 'percentage');
+            this.renderRanking('volume-ranking', basic.volume_high || basic.volume, 'volume');
+            this.renderRanking('market-cap-ranking', basic.market_cap_high || basic.market_cap, 'market_cap');
+        }
+        return;
+    }
+
     if (!this.periodRankingsData || !this.periodRankingsData[this.currentPeriod]) {
         return;
     }
-    
+
     const periodData = this.periodRankingsData[this.currentPeriod];
     const rankings = periodData.rankings;
-    
+
     // 基本ランキングを更新
     if (this.currentRankingCategory === 'basic') {
         this.updatePeriodRankingList('gainers-ranking', rankings.gainers || []);
