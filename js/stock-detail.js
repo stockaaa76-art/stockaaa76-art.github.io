@@ -92,14 +92,49 @@ class StockDetail {
                 }
             }
 
-            // 2. stocks/index.json から検索（個別株・ETF全銘柄）
+            // 2. realtime_prices.json から検索（日本株・前日比・タイムスタンプ正確）
+            const realtimeRes = await fetch('/data/realtime_prices.json');
+            if (realtimeRes.ok) {
+                const realtimeData = await realtimeRes.json();
+                const allStocks = [
+                    ...(realtimeData.indices || []),
+                    ...(realtimeData.sector_etfs || []),
+                    ...(realtimeData.commodity_etfs || []),
+                    ...(realtimeData.foreign || []),
+                    ...(realtimeData.japanese_stocks || []),
+                ];
+                const rt = allStocks.find(s => s.ticker === this.symbol);
+                if (rt) {
+                    this.stockData = {
+                        symbol: rt.ticker,
+                        name: rt.name,
+                        price: rt.current_price,
+                        change: rt.change || 0,
+                        change_percent: rt.change_percent || 0,
+                        volume: rt.volume || 0,
+                        market_cap: rt.market_cap || 0,
+                        trailing_pe: rt.trailing_pe || 0,
+                        forward_pe: rt.forward_pe || 0,
+                        dividend_yield: rt.dividend_yield || 0,
+                        price_to_book: rt.price_to_book || 0,
+                        fifty_two_week_high: rt.fifty_two_week_high || 0,
+                        fifty_two_week_low: rt.fifty_two_week_low || 0,
+                        ma5: rt.ma5 || 0,
+                        ma25: rt.ma25 || 0,
+                        ma75: rt.ma75 || 0,
+                        updatedAt: rt.timestamp,
+                    };
+                    return;
+                }
+            }
+
+            // 3. stocks/index.json から検索（上記にない銘柄）
             const stocksRes = await fetch('/api/stocks/index.json');
             if (!stocksRes.ok) throw new Error(`データ取得エラー: ${stocksRes.status}`);
             const stocksData = await stocksRes.json();
             const found = (stocksData.stocks || []).find(s => s.symbol === this.symbol);
             if (!found) throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
 
-            // フィールドを詳細ページ用に正規化
             this.stockData = {
                 symbol: found.symbol,
                 name: found.name !== found.symbol ? found.name : found.symbol,
@@ -351,6 +386,18 @@ class StockDetail {
 
         // 期間に応じたデータを生成（初期表示は1日）
         const chartData = await this.generateChartDataForPeriod(this.chartPeriod);
+
+        // チャートデータなしの場合はメッセージ表示
+        if (!chartData) {
+            const chartContainer = canvas.parentElement;
+            chartContainer.innerHTML = `
+                <div style="display:flex;align-items:center;justify-content:center;height:200px;color:var(--text-secondary);flex-direction:column;gap:8px;">
+                    <span style="font-size:2rem;">📊</span>
+                    <span>この銘柄のチャートデータはまだ利用できません</span>
+                </div>`;
+            return;
+        }
+
         const labels = chartData.labels;
         const prices = chartData.prices;
 
@@ -453,10 +500,11 @@ class StockDetail {
         if (!this.chart) return;
 
         console.log(`チャート期間変更: ${this.chartPeriod}`);
-        
+
         // 期間に応じたデータを生成
         const chartData = await this.generateChartDataForPeriod(this.chartPeriod);
-        
+        if (!chartData) return;
+
         // チャートデータを更新
         this.chart.data.labels = chartData.labels;
         this.chart.data.datasets[0].data = chartData.prices;
@@ -501,11 +549,11 @@ class StockDetail {
                 }
             }
         } catch (error) {
-            console.warn('履歴データ取得失敗、模擬データを使用:', error);
+            console.warn('履歴データ取得失敗:', error);
         }
-        
-        // フォールバック: 模擬データを生成
-        return this.generateMockData(period);
+
+        // チャートデータなし → nullを返してチャートエリアにメッセージ表示
+        return null;
     }
 
     /**
