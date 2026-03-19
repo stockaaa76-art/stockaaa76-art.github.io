@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-18 07:48:19",
+    "generated_at": "2026-03-19 07:42:09",
     "total_count": 105,
     "markets": {
       "JP": 32,
@@ -17,11 +17,17 @@
       "market": "INDEX",
       "tier": "core",
       "category": "jp_indices",
-      "price": 55239.3984375,
-      "change": 1539.0078125,
-      "change_pct": 2.8659154888596308,
+      "price": 53372.53125,
+      "change": -1866.8671875,
+      "change_pct": -3.379593623946224,
       "volume": 0,
-      "weight": 1.0
+      "weight": 1.0,
+      "prediction": {
+        "predicted_price": 52411.8256875,
+        "change_percent": -1.799999999999999,
+        "confidence": 0.56,
+        "trend_signal": "bearish"
+      }
     },
     {
       "symbol": "1330.T",
@@ -29,11 +35,17 @@
       "market": "JP",
       "tier": "core",
       "category": "jp_indices",
-      "price": 57450.0,
-      "change": 1540.0,
-      "change_pct": 2.7544267572884995,
-      "volume": 22110,
-      "weight": 0.8
+      "price": 55530.0,
+      "change": -1920.0,
+      "change_pct": -3.342036553524804,
+      "volume": 73469,
+      "weight": 0.8,
+      "prediction": {
+        "predicted_price": 54752.58,
+        "change_percent": -1.3999999999999968,
+        "confidence": 0.4666666666666667,
+        "trend_signal": "bearish"
+      }
     },
     {
       "symbol": "1306.T",
@@ -41,10 +53,10 @@
       "market": "JP",
       "tier": "core",
       "category": "jp_indices",
-      "price": 3907.0,
-      "change": 98.0,
-      "change_pct": 2.5728537673930165,
-      "volume": 2268090,
+      "price": 3791.0,
+      "change": -116.0,
+      "change_pct": -2.96902994625032,
+      "volume": 2202110,
       "weight": 0.8
     },
     {
@@ -53,10 +65,10 @@
       "market": "JP",
       "tier": "core",
       "category": "jp_indices",
-      "price": 3860.0,
-      "change": 96.0,
-      "change_pct": 2.5504782146652496,
-      "volume": 113898,
+      "price": 3747.0,
+      "change": -113.0,
+      "change_pct": -2.927461139896373,
+      "volume": 344032,
       "weight": 0.8
     },
     {
@@ -65,10 +77,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 3404.0,
-      "change": 25.0,
-      "change_pct": 0.739863865048831,
-      "volume": 15583800,
+      "price": 3325.0,
+      "change": -79.0,
+      "change_pct": -2.3207990599294948,
+      "volume": 23090100,
       "weight": 1.0
     },
     {
@@ -77,10 +89,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 3286.0,
-      "change": -41.0,
-      "change_pct": -1.23234144875263,
-      "volume": 25483400,
+      "price": 3271.0,
+      "change": -15.0,
+      "change_pct": -0.4564820450395618,
+      "volume": 23963400,
       "weight": 0.9
     },
     {
@@ -89,10 +101,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 3750.0,
-      "change": 206.0,
-      "change_pct": 5.812641083521445,
-      "volume": 35075000,
+      "price": 3558.0,
+      "change": -192.0,
+      "change_pct": -5.12,
+      "volume": 35935700,
       "weight": 0.9
     },
     {
@@ -101,10 +113,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 60650.0,
-      "change": 1415.0,
-      "change_pct": 2.3887904110745337,
-      "volume": 442800,
+      "price": 59080.0,
+      "change": -1570.0,
+      "change_pct": -2.588623248145095,
+      "volume": 698200,
       "weight": 0.8
     },
     {
@@ -113,10 +125,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 2731.0,
-      "change": 71.5,
-      "change_pct": 2.6884752773077647,
-      "volume": 37616500,
+      "price": 2686.0,
+      "change": -45.0,
+      "change_pct": -1.6477480776272428,
+      "volume": 39731200,
       "weight": 0.8
     },
     {
@@ -125,10 +137,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 6720.0,
-      "change": 287.0,
-      "change_pct": 4.461371055495103,
-      "volume": 8883400,
+      "price": 6373.0,
+      "change": -347.0,
+      "change_pct": -5.163690476190476,
+      "volume": 10998400,
       "weight": 0.8
     },
     {
@@ -137,10 +149,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 40290.0,
-      "change": 1510.0,
-      "change_pct": 3.893759669932955,
-      "volume": 2014800,
+      "price": 39330.0,
+      "change": -960.0,
+      "change_pct": -2.3827252419955323,
+      "volume": 2656600,
       "weight": 0.8
     },
     {
@@ -149,10 +161,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 9859.0,
-      "change": 39.0,
-      "change_pct": 0.3971486761710794,
-      "volume": 10920400,
+      "price": 9734.0,
+      "change": -125.0,
+      "change_pct": -1.2678770666396186,
+      "volume": 10748500,
       "weight": 0.7
     },
     {
@@ -161,10 +173,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 19780.0,
-      "change": 670.0,
-      "change_pct": 3.506017791732077,
-      "volume": 924000,
+      "price": 19370.0,
+      "change": -410.0,
+      "change_pct": -2.0728008088978767,
+      "volume": 1240000,
       "weight": 0.7
     },
     {
@@ -173,10 +185,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 158.0,
-      "change": 0.6999969482421875,
-      "change_pct": 0.4450075871974785,
-      "volume": 211152400,
+      "price": 158.60000610351562,
+      "change": 0.600006103515625,
+      "change_pct": 0.3797506984276108,
+      "volume": 333537500,
       "weight": 0.7
     },
     {
@@ -185,10 +197,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 8986.0,
-      "change": -332.0,
-      "change_pct": -3.562996351148315,
-      "volume": 2529400,
+      "price": 8650.0,
+      "change": -336.0,
+      "change_pct": -3.7391497885599825,
+      "volume": 3153700,
       "weight": 0.7
     },
     {
@@ -197,10 +209,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 5712.0,
-      "change": 415.0,
-      "change_pct": 7.834623371719841,
-      "volume": 16209400,
+      "price": 5397.0,
+      "change": -315.0,
+      "change_pct": -5.514705882352941,
+      "volume": 22540600,
       "weight": 0.7
     },
     {
@@ -209,10 +221,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 11120.0,
-      "change": 70.0,
-      "change_pct": 0.6334841628959276,
-      "volume": 1015800,
+      "price": 10720.0,
+      "change": -400.0,
+      "change_pct": -3.597122302158273,
+      "volume": 1844700,
       "weight": 0.6
     },
     {
@@ -221,10 +233,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 1345.0,
-      "change": 3.0,
-      "change_pct": 0.22354694485842028,
-      "volume": 17885200,
+      "price": 1302.0,
+      "change": -43.0,
+      "change_pct": -3.197026022304833,
+      "volume": 49387200,
       "weight": 0.6
     },
     {
@@ -233,10 +245,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 5870.0,
-      "change": 50.0,
-      "change_pct": 0.859106529209622,
-      "volume": 3873700,
+      "price": 5768.0,
+      "change": -102.0,
+      "change_pct": -1.737649063032368,
+      "volume": 7029100,
       "weight": 0.6
     },
     {
@@ -245,10 +257,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 5256.0,
-      "change": 130.0,
-      "change_pct": 2.536090518923137,
-      "volume": 11660400,
+      "price": 5156.0,
+      "change": -100.0,
+      "change_pct": -1.9025875190258752,
+      "volume": 13725700,
       "weight": 0.6
     },
     {
@@ -257,10 +269,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 6139.0,
-      "change": 107.0,
-      "change_pct": 1.7738726790450927,
-      "volume": 2960900,
+      "price": 5936.0,
+      "change": -203.0,
+      "change_pct": -3.30672748004561,
+      "volume": 5312200,
       "weight": 0.6
     },
     {
@@ -269,10 +281,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 2670.5,
-      "change": 83.0,
-      "change_pct": 3.207729468599034,
-      "volume": 5815500,
+      "price": 2600.0,
+      "change": -70.5,
+      "change_pct": -2.6399550645946452,
+      "volume": 7934200,
       "weight": 0.5
     },
     {
@@ -281,10 +293,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 2132.0,
-      "change": 68.0,
-      "change_pct": 3.2945736434108532,
-      "volume": 11034100,
+      "price": 2024.0,
+      "change": -108.0,
+      "change_pct": -5.065666041275797,
+      "volume": 26730900,
       "weight": 0.5
     },
     {
@@ -293,10 +305,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 3353.0,
-      "change": 66.0,
-      "change_pct": 2.0079099482811076,
-      "volume": 4914300,
+      "price": 3271.0,
+      "change": -82.0,
+      "change_pct": -2.445571130331047,
+      "volume": 8191300,
       "weight": 0.5
     },
     {
@@ -305,10 +317,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 5639.0,
-      "change": 180.0,
-      "change_pct": 3.2973071991207177,
-      "volume": 4594900,
+      "price": 5483.0,
+      "change": -156.0,
+      "change_pct": -2.766447951764497,
+      "volume": 7867000,
       "weight": 0.5
     },
     {
@@ -317,10 +329,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 2977.0,
-      "change": 39.0,
-      "change_pct": 1.3274336283185841,
-      "volume": 6739200,
+      "price": 2903.0,
+      "change": -74.0,
+      "change_pct": -2.4857238831037956,
+      "volume": 10668400,
       "weight": 0.5
     },
     {
@@ -329,10 +341,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 2652.0,
-      "change": 49.5,
-      "change_pct": 1.9020172910662825,
-      "volume": 8246900,
+      "price": 2600.5,
+      "change": -51.5,
+      "change_pct": -1.9419306184012066,
+      "volume": 12098400,
       "weight": 0.5
     },
     {
@@ -341,10 +353,10 @@
       "market": "JP",
       "tier": "core",
       "category": "nikkei_225_core",
-      "price": 4386.0,
-      "change": 76.0,
-      "change_pct": 1.7633410672853826,
-      "volume": 1622200,
+      "price": 4233.0,
+      "change": -153.0,
+      "change_pct": -3.488372093023256,
+      "volume": 2919900,
       "weight": 0.5
     },
     {
@@ -353,10 +365,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 254.22999572753906,
-      "change": 1.4099884033203125,
-      "change_pct": 0.5577044389181313,
-      "volume": 27556024,
+      "price": 249.94000244140625,
+      "change": -4.2899932861328125,
+      "change_pct": -1.6874457610149367,
+      "volume": 34652568,
       "weight": 1.0
     },
     {
@@ -365,10 +377,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 399.4100036621094,
-      "change": -0.540008544921875,
-      "change_pct": -0.13501900948620135,
-      "volume": 24516587,
+      "price": 391.7900085449219,
+      "change": -7.6199951171875,
+      "change_pct": -1.9078127856892189,
+      "volume": 25784138,
       "weight": 1.0
     },
     {
@@ -377,10 +389,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 310.9200134277344,
-      "change": 5.360015869140625,
-      "change_pct": 1.7541615106580815,
-      "volume": 21500980,
+      "price": 307.69000244140625,
+      "change": -3.230010986328125,
+      "change_pct": -1.0388559265513029,
+      "volume": 19852916,
       "weight": 0.9
     },
     {
@@ -389,10 +401,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 309.4100036621094,
-      "change": 4.989990234375,
-      "change_pct": 1.6391794278530782,
-      "volume": 14395157,
+      "price": 306.29998779296875,
+      "change": -3.110015869140625,
+      "change_pct": -1.005143929521074,
+      "volume": 13753387,
       "weight": 0.9
     },
     {
@@ -401,10 +413,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 215.1999969482422,
-      "change": 3.459991455078125,
-      "change_pct": 1.6340754535353168,
-      "volume": 41662109,
+      "price": 209.8699951171875,
+      "change": -5.3300018310546875,
+      "change_pct": -2.4767666852414534,
+      "volume": 37711795,
       "weight": 0.9
     },
     {
@@ -413,10 +425,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 399.2699890136719,
-      "change": 3.709991455078125,
-      "change_pct": 0.9379086555709084,
-      "volume": 46052732,
+      "price": 392.7799987792969,
+      "change": -6.489990234375,
+      "change_pct": -1.6254640751756497,
+      "volume": 49612648,
       "weight": 0.8
     },
     {
@@ -425,10 +437,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 622.6599731445312,
-      "change": -4.7900390625,
-      "change_pct": -0.763413653567592,
-      "volume": 10268468,
+      "price": 615.6799926757812,
+      "change": -6.97998046875,
+      "change_pct": -1.120993924420739,
+      "volume": 11622275,
       "weight": 0.8
     },
     {
@@ -437,10 +449,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 181.92999267578125,
-      "change": -1.290008544921875,
-      "change_pct": -0.7040762669616821,
-      "volume": 178520213,
+      "price": 180.39999389648438,
+      "change": -1.529998779296875,
+      "change_pct": -0.8409821584632814,
+      "volume": 154378417,
       "weight": 0.8
     },
     {
@@ -449,10 +461,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 94.36000061035156,
-      "change": -0.839996337890625,
-      "change_pct": -0.8823491227077556,
-      "volume": 26283342,
+      "price": 94.69999694824219,
+      "change": 0.339996337890625,
+      "change_pct": 0.3603182870828918,
+      "volume": 27264739,
       "weight": 0.7
     },
     {
@@ -461,10 +473,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 195.30999755859375,
-      "change": -3.029998779296875,
-      "change_pct": -1.527679154604294,
-      "volume": 11024507,
+      "price": 194.33999633789062,
+      "change": -0.970001220703125,
+      "change_pct": -0.4966469882895374,
+      "volume": 10512509,
       "weight": 0.6
     },
     {
@@ -473,10 +485,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 154.69000244140625,
-      "change": -1.279998779296875,
-      "change_pct": -0.8206698527145814,
-      "volume": 21225672,
+      "price": 152.89999389648438,
+      "change": -1.790008544921875,
+      "change_pct": -1.1571585213465219,
+      "volume": 17914839,
       "weight": 0.6
     },
     {
@@ -485,10 +497,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 196.30999755859375,
-      "change": -0.2700042724609375,
-      "change_pct": -0.137350834238462,
-      "volume": 22051976,
+      "price": 199.4600067138672,
+      "change": 3.1500091552734375,
+      "change_pct": 1.6046096451777687,
+      "volume": 28258166,
       "weight": 0.6
     },
     {
@@ -497,10 +509,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 44.060001373291016,
-      "change": -1.6999969482421875,
-      "change_pct": -3.7150284322502323,
-      "volume": 86384229,
+      "price": 45.029998779296875,
+      "change": 0.9699974060058594,
+      "change_pct": 2.2015373939454017,
+      "volume": 77134216,
       "weight": 0.6
     },
     {
@@ -509,10 +521,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 256.1099853515625,
-      "change": 6.8599853515625,
-      "change_pct": 2.7522508933049146,
-      "volume": 3745915,
+      "price": 251.60000610351562,
+      "change": -4.509979248046875,
+      "change_pct": -1.7609540845726968,
+      "volume": 3555651,
       "weight": 0.5
     },
     {
@@ -521,10 +533,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 308.4599914550781,
-      "change": -1.649993896484375,
-      "change_pct": -0.5320673226996628,
-      "volume": 5290938,
+      "price": 299.0199890136719,
+      "change": -9.44000244140625,
+      "change_pct": -3.060365267104996,
+      "volume": 7183003,
       "weight": 0.7
     },
     {
@@ -533,10 +545,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 506.5799865722656,
-      "change": -1.920013427734375,
-      "change_pct": -0.37758376159968043,
-      "volume": 1960966,
+      "price": 488.4700012207031,
+      "change": -18.1099853515625,
+      "change_pct": -3.574950813612342,
+      "volume": 2594986,
       "weight": 0.7
     },
     {
@@ -545,10 +557,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 286.8900146484375,
-      "change": 0.730010986328125,
-      "change_pct": 0.2551058767772815,
-      "volume": 8668279,
+      "price": 287.739990234375,
+      "change": 0.8499755859375,
+      "change_pct": 0.2962722794584127,
+      "volume": 9751235,
       "weight": 0.6
     },
     {
@@ -557,10 +569,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 238.11000061035156,
-      "change": -5.0800018310546875,
-      "change_pct": -2.088902413773631,
-      "volume": 4681347,
+      "price": 237.27999877929688,
+      "change": -0.8300018310546875,
+      "change_pct": -0.34857915624170727,
+      "volume": 6678607,
       "weight": 0.6
     },
     {
@@ -569,10 +581,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 151.47999572753906,
-      "change": -0.6399993896484375,
-      "change_pct": -0.4207200961026893,
-      "volume": 6017767,
+      "price": 146.7100067138672,
+      "change": -4.769989013671875,
+      "change_pct": -3.1489233880435683,
+      "volume": 6940113,
       "weight": 0.5
     },
     {
@@ -581,10 +593,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 341.42999267578125,
-      "change": -1.149993896484375,
-      "change_pct": -0.33568624600368746,
-      "volume": 2004941,
+      "price": 330.92999267578125,
+      "change": -10.5,
+      "change_pct": -3.075301006133548,
+      "volume": 3545027,
       "weight": 0.5
     },
     {
@@ -593,10 +605,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 287.57000732421875,
-      "change": 2.08001708984375,
-      "change_pct": 0.728577940030803,
-      "volume": 5741582,
+      "price": 284.3299865722656,
+      "change": -3.240020751953125,
+      "change_pct": -1.126689386734336,
+      "volume": 4525451,
       "weight": 0.5
     },
     {
@@ -605,10 +617,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 100.30000305175781,
-      "change": 1.6399993896484375,
-      "change_pct": 1.662273797662835,
-      "volume": 8653160,
+      "price": 99.41999816894531,
+      "change": -0.8800048828125,
+      "change_pct": -0.8773727378237377,
+      "volume": 12604462,
       "weight": 0.5
     },
     {
@@ -617,10 +629,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 27.450000762939453,
-      "change": 0.8400001525878906,
-      "change_pct": 3.156708505527512,
-      "volume": 51041780,
+      "price": 27.31999969482422,
+      "change": -0.13000106811523438,
+      "change_pct": -0.47359222040806004,
+      "volume": 37336283,
       "weight": 0.5
     },
     {
@@ -629,10 +641,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 125.08000183105469,
-      "change": -0.9099960327148438,
-      "change_pct": -0.7222764093533871,
-      "volume": 12856584,
+      "price": 121.9800033569336,
+      "change": -3.0999984741210938,
+      "change_pct": -2.4784125589542727,
+      "volume": 19679155,
       "weight": 0.5
     },
     {
@@ -641,10 +653,10 @@
       "market": "US",
       "tier": "core",
       "category": "us_mega_caps",
-      "price": 77.58000183105469,
-      "change": -0.23999786376953125,
-      "change_pct": -0.30840126536969575,
-      "volume": 14708190,
+      "price": 75.97000122070312,
+      "change": -1.6100006103515625,
+      "change_pct": -2.0752778710390434,
+      "volume": 9910326,
       "weight": 0.5
     },
     {
@@ -653,11 +665,17 @@
       "market": "INDEX",
       "tier": "core",
       "category": "global_etfs",
-      "price": 6716.08984375,
-      "change": 16.7099609375,
-      "change_pct": 0.24942548757938038,
-      "volume": 2900989000,
-      "weight": 1.0
+      "price": 6624.7001953125,
+      "change": -91.3896484375,
+      "change_pct": -1.3607567880073448,
+      "volume": 3009753000,
+      "weight": 1.0,
+      "prediction": {
+        "predicted_price": 6624.7001953125,
+        "change_percent": 0.0,
+        "confidence": 0.4,
+        "trend_signal": "neutral"
+      }
     },
     {
       "symbol": "^NDX",
@@ -665,10 +683,10 @@
       "market": "INDEX",
       "tier": "core",
       "category": "global_etfs",
-      "price": 24780.41796875,
-      "change": 125.078125,
-      "change_pct": 0.5073064325726853,
-      "volume": 1072322000,
+      "price": 24425.09375,
+      "change": -355.326171875,
+      "change_pct": -1.43389891291283,
+      "volume": 1114135000,
       "weight": 0.9
     },
     {
@@ -677,11 +695,17 @@
       "market": "OTHER",
       "tier": "core",
       "category": "global_etfs",
-      "price": 4062.984375,
-      "change": 13.077392578125,
-      "change_pct": 0.3229059984559107,
-      "volume": 2257768056,
-      "weight": 0.8
+      "price": 4006.55224609375,
+      "change": -56.431640625,
+      "change_pct": -1.3889211032676276,
+      "volume": 2301032760,
+      "weight": 0.8,
+      "prediction": {
+        "predicted_price": 3950.4605146484373,
+        "change_percent": -1.4000000000000048,
+        "confidence": 0.4666666666666667,
+        "trend_signal": "bearish"
+      }
     },
     {
       "symbol": "^HSI",
@@ -689,9 +713,9 @@
       "market": "INDEX",
       "tier": "core",
       "category": "global_etfs",
-      "price": 26009.33984375,
-      "change": 140.80078125,
-      "change_pct": 0.5442935177352557,
+      "price": 25524.83984375,
+      "change": -500.580078125,
+      "change_pct": -1.9234274783180356,
       "volume": 0,
       "weight": 0.7
     },
@@ -701,9 +725,9 @@
       "market": "INDEX",
       "tier": "core",
       "category": "global_etfs",
-      "price": 10403.599609375,
-      "change": 85.8994140625,
-      "change_pct": 0.8325441952803155,
+      "price": 10305.2900390625,
+      "change": -98.3095703125,
+      "change_pct": -0.9449572648288989,
       "volume": 0,
       "weight": 0.7
     },
@@ -713,10 +737,10 @@
       "market": "US",
       "tier": "core",
       "category": "global_etfs",
-      "price": 670.7899780273438,
-      "change": 1.75994873046875,
-      "change_pct": 0.26305975119209357,
-      "volume": 64870042,
+      "price": 661.4299926757812,
+      "change": -9.3599853515625,
+      "change_pct": -1.3953675007322417,
+      "volume": 80910028,
       "weight": 0.8
     },
     {
@@ -725,10 +749,10 @@
       "market": "US",
       "tier": "core",
       "category": "global_etfs",
-      "price": 603.3099975585938,
-      "change": 2.92999267578125,
-      "change_pct": 0.48802302740797504,
-      "volume": 46504385,
+      "price": 594.9000244140625,
+      "change": -8.40997314453125,
+      "change_pct": -1.393972116915644,
+      "volume": 55253316,
       "weight": 0.8
     },
     {
@@ -737,10 +761,10 @@
       "market": "US",
       "tier": "core",
       "category": "global_etfs",
-      "price": 330.57000732421875,
-      "change": 1.110015869140625,
-      "change_pct": 0.3369197771899948,
-      "volume": 3112751,
+      "price": 326.0199890136719,
+      "change": -4.550018310546875,
+      "change_pct": -1.3764159511556282,
+      "volume": 3845255,
       "weight": 0.7
     },
     {
@@ -749,10 +773,10 @@
       "market": "US",
       "tier": "core",
       "category": "global_etfs",
-      "price": 85.08000183105469,
-      "change": 0.01000213623046875,
-      "change_pct": 0.011757536459797699,
-      "volume": 4664760,
+      "price": 84.1500015258789,
+      "change": -0.9300003051757812,
+      "change_pct": -1.0930891927135877,
+      "volume": 8630958,
       "weight": 0.6
     },
     {
@@ -761,10 +785,10 @@
       "market": "US",
       "tier": "core",
       "category": "global_etfs",
-      "price": 459.2699890136719,
-      "change": -1.160003662109375,
-      "change_pct": -0.25193920477856646,
-      "volume": 7549207,
+      "price": 444.739990234375,
+      "change": -14.529998779296875,
+      "change_pct": -3.16371614232872,
+      "volume": 18276540,
       "weight": 0.7
     },
     {
@@ -773,10 +797,10 @@
       "market": "US",
       "tier": "core",
       "category": "global_etfs",
-      "price": 71.66000366210938,
-      "change": -1.55999755859375,
-      "change_pct": -2.1305620494208037,
-      "volume": 32748162,
+      "price": 68.69999694824219,
+      "change": -2.9600067138671875,
+      "change_pct": -4.130625959529929,
+      "volume": 44377881,
       "weight": 0.6
     },
     {
@@ -785,10 +809,10 @@
       "market": "US",
       "tier": "core",
       "category": "global_etfs",
-      "price": 118.83999633789062,
-      "change": 3.80999755859375,
-      "change_pct": 3.312177344193343,
-      "volume": 39554220,
+      "price": 121.66999816894531,
+      "change": 2.8300018310546875,
+      "change_pct": 2.381354693926709,
+      "volume": 69410825,
       "weight": 0.6
     },
     {
@@ -797,10 +821,10 @@
       "market": "CRYPTO",
       "tier": "core",
       "category": "global_etfs",
-      "price": 73739.234375,
-      "change": -183.2421875,
-      "change_pct": -0.24788426473384226,
-      "volume": 37473353728,
+      "price": 70139.2578125,
+      "change": -1106.3203125,
+      "change_pct": -1.5528266337581915,
+      "volume": 47739498496,
       "weight": 0.7
     },
     {
@@ -809,10 +833,10 @@
       "market": "CRYPTO",
       "tier": "core",
       "category": "global_etfs",
-      "price": 2314.20849609375,
-      "change": -3.844970703125,
-      "change_pct": -0.1658706651161953,
-      "volume": 19690778624,
+      "price": 2170.20361328125,
+      "change": -33.468017578125,
+      "change_pct": -1.5187388678717682,
+      "volume": 27005044736,
       "weight": 0.6
     },
     {
@@ -821,9 +845,9 @@
       "market": "INDEX",
       "tier": "core",
       "category": "global_etfs",
-      "price": 158.79299926757812,
-      "change": -0.3119964599609375,
-      "change_pct": -0.19609469742560376,
+      "price": 159.46099853515625,
+      "change": 0.571990966796875,
+      "change_pct": 0.3599940458755684,
       "volume": 0,
       "weight": 0.8
     },
@@ -833,10 +857,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 321.30999755859375,
-      "change": -3.610015869140625,
-      "change_pct": -1.1110475563068172,
-      "volume": 37931378,
+      "price": 315.92999267578125,
+      "change": -5.3800048828125,
+      "change_pct": -1.6743969760329067,
+      "volume": 22971289,
       "composite_score": 0.9563323566907136
     },
     {
@@ -845,10 +869,10 @@
       "market": "JP",
       "tier": "active",
       "category": "active",
-      "price": 713.4000244140625,
-      "change": 100.0,
-      "change_pct": 16.302575158115275,
-      "volume": 125195100,
+      "price": 653.4000244140625,
+      "change": -60.0,
+      "change_pct": -8.410428644052804,
+      "volume": 133003600,
       "composite_score": 0.95254701790694
     },
     {
@@ -857,10 +881,10 @@
       "market": "JP",
       "tier": "active",
       "category": "active",
-      "price": 2125.5,
-      "change": 34.5,
-      "change_pct": 1.6499282639885222,
-      "volume": 5859800,
+      "price": 2039.0,
+      "change": -86.5,
+      "change_pct": -4.069630675135262,
+      "volume": 9729900,
       "composite_score": 0.8498847649584577
     },
     {
@@ -869,10 +893,10 @@
       "market": "JP",
       "tier": "active",
       "category": "active",
-      "price": 68040.0,
-      "change": 2010.0,
-      "change_pct": 3.044070876874148,
-      "volume": 145800,
+      "price": 64870.0,
+      "change": -3170.0,
+      "change_pct": -4.659024103468548,
+      "volume": 328400,
       "composite_score": 0.7931423087313083
     },
     {
@@ -881,10 +905,10 @@
       "market": "JP",
       "tier": "active",
       "category": "active",
-      "price": 1844.5,
-      "change": 59.0,
-      "change_pct": 3.30439652758331,
-      "volume": 4755100,
+      "price": 1808.5,
+      "change": -36.0,
+      "change_pct": -1.9517484413120088,
+      "volume": 7699400,
       "composite_score": 0.7660464499028515
     },
     {
@@ -893,10 +917,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 930.3499755859375,
-      "change": -58.77001953125,
-      "change_pct": -5.941647102613382,
-      "volume": 5616787,
+      "price": 918.0499877929688,
+      "change": -12.29998779296875,
+      "change_pct": -1.322081809613869,
+      "volume": 3440488,
       "composite_score": 0.7206076361716491
     },
     {
@@ -905,10 +929,10 @@
       "market": "JP",
       "tier": "active",
       "category": "active",
-      "price": 2109.0,
-      "change": 57.0,
-      "change_pct": 2.7777777777777777,
-      "volume": 7422000,
+      "price": 2064.5,
+      "change": -44.5,
+      "change_pct": -2.110004741583689,
+      "volume": 10435700,
       "composite_score": 0.6899692536527079
     },
     {
@@ -917,10 +941,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 254.1999969482422,
-      "change": 2.339996337890625,
-      "change_pct": 0.9290861320654067,
-      "volume": 6191149,
+      "price": 246.0,
+      "change": -8.199996948242188,
+      "change_pct": -3.225805289805646,
+      "volume": 7237810,
       "composite_score": 0.6529416714925681
     },
     {
@@ -929,10 +953,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 194.4499969482422,
-      "change": 0.3199920654296875,
-      "change_pct": 0.16483390376611395,
-      "volume": 3384817,
+      "price": 190.77999877929688,
+      "change": -3.6699981689453125,
+      "change_pct": -1.8873737344013308,
+      "volume": 5047512,
       "composite_score": 0.6511344232107399
     },
     {
@@ -941,10 +965,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 250.0500030517578,
-      "change": 1.5720062255859375,
-      "change_pct": 0.6326540964050302,
-      "volume": 40245262,
+      "price": 246.02000427246094,
+      "change": -4.029998779296875,
+      "change_pct": -1.6116771566136339,
+      "volume": 42582237,
       "composite_score": 0.6309902602055292
     },
     {
@@ -953,10 +977,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 472.7099914550781,
-      "change": 2.709991455078125,
-      "change_pct": 0.5765939266123671,
-      "volume": 2095605,
+      "price": 464.69000244140625,
+      "change": -8.019989013671875,
+      "change_pct": -1.6965981592614632,
+      "volume": 2010408,
       "composite_score": 0.6243955034580778
     },
     {
@@ -965,10 +989,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 195.2100067138672,
-      "change": 3.82000732421875,
-      "change_pct": 1.995928385182575,
-      "volume": 3750615,
+      "price": 191.5,
+      "change": -3.7100067138671875,
+      "change_pct": -1.900520765467316,
+      "volume": 4123570,
       "composite_score": 0.615299143850963
     },
     {
@@ -977,10 +1001,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 158.80999755859375,
-      "change": 1.5800018310546875,
-      "change_pct": 1.0048984761105275,
-      "volume": 21579042,
+      "price": 157.58999633789062,
+      "change": -1.220001220703125,
+      "change_pct": -0.7682143690311433,
+      "volume": 18920678,
       "composite_score": 0.6129413722792278
     },
     {
@@ -989,10 +1013,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 996.1599731445312,
-      "change": -5.58001708984375,
-      "change_pct": -0.5570324779125774,
-      "volume": 1074132,
+      "price": 979.9199829101562,
+      "change": -16.239990234375,
+      "change_pct": -1.6302592627879826,
+      "volume": 1429390,
       "composite_score": 0.6074430563680493
     },
     {
@@ -1001,10 +1025,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 198.66000366210938,
-      "change": -0.649993896484375,
-      "change_pct": -0.32612207337631816,
-      "volume": 4435656,
+      "price": 195.14999389648438,
+      "change": -3.510009765625,
+      "change_pct": -1.7668426965273776,
+      "volume": 8065983,
       "composite_score": 0.6060727006659284
     },
     {
@@ -1013,10 +1037,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 239.7100067138672,
-      "change": -2.399993896484375,
-      "change_pct": -0.991282429653491,
-      "volume": 1963022,
+      "price": 231.08999633789062,
+      "change": -8.620010375976562,
+      "change_pct": -3.5960160754848856,
+      "volume": 2740996,
       "composite_score": 0.6049614722832662
     },
     {
@@ -1025,10 +1049,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 131.58999633789062,
-      "change": 2.1999969482421875,
-      "change_pct": 1.7002836066310343,
-      "volume": 10134184,
+      "price": 130.47000122070312,
+      "change": -1.1199951171875,
+      "change_pct": -0.851124818266298,
+      "volume": 9162825,
       "composite_score": 0.5984444345737375
     },
     {
@@ -1037,10 +1061,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 197.97000122070312,
-      "change": 1.1300048828125,
-      "change_pct": 0.5740728021924781,
-      "volume": 13918804,
+      "price": 198.61000061035156,
+      "change": 0.6399993896484375,
+      "change_pct": 0.3232809949498087,
+      "volume": 13290657,
       "composite_score": 0.5942283883763836
     },
     {
@@ -1049,10 +1073,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 46.130001068115234,
-      "change": 0.7100028991699219,
-      "change_pct": 1.5631944689407034,
-      "volume": 21796413,
+      "price": 44.59000015258789,
+      "change": -1.5400009155273438,
+      "change_pct": -3.3383934096454695,
+      "volume": 18472480,
       "composite_score": 0.5871804182463728
     },
     {
@@ -1061,10 +1085,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 88.44000244140625,
-      "change": 0.20000457763671875,
-      "change_pct": 0.22665977162136655,
-      "volume": 6282169,
+      "price": 87.20999908447266,
+      "change": -1.2300033569335938,
+      "change_pct": -1.3907771630247323,
+      "volume": 4509324,
       "composite_score": 0.5767567597841707
     },
     {
@@ -1073,10 +1097,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 110.70999908447266,
-      "change": 0.7600021362304688,
-      "change_pct": 0.6912252454069934,
-      "volume": 6254348,
+      "price": 108.48999786376953,
+      "change": -2.220001220703125,
+      "change_pct": -2.005240031669809,
+      "volume": 8240797,
       "composite_score": 0.5648660206916924
     },
     {
@@ -1085,10 +1109,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 27.850000381469727,
-      "change": 0.12000083923339844,
-      "change_pct": 0.43274735382026186,
-      "volume": 32909812,
+      "price": 27.40999984741211,
+      "change": -0.4400005340576172,
+      "change_pct": -1.5798941760531389,
+      "volume": 26467346,
       "composite_score": 0.5636256933500843
     },
     {
@@ -1097,10 +1121,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 30.079999923706055,
-      "change": -0.26000022888183594,
-      "change_pct": -0.8569552655709491,
-      "volume": 24207654,
+      "price": 28.56999969482422,
+      "change": -1.510000228881836,
+      "change_pct": -5.0199475821534305,
+      "volume": 33506117,
       "composite_score": 0.5566694404176968
     },
     {
@@ -1109,10 +1133,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 139.5399932861328,
-      "change": 0.7599945068359375,
-      "change_pct": 0.5476253880392115,
-      "volume": 11933609,
+      "price": 137.9600067138672,
+      "change": -1.579986572265625,
+      "change_pct": -1.1322822475889,
+      "volume": 12567931,
       "composite_score": 0.5451348485409213
     },
     {
@@ -1121,10 +1145,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 50.52000045776367,
-      "change": -0.4500007629394531,
-      "change_pct": -0.8828737535063481,
-      "volume": 19426502,
+      "price": 49.59000015258789,
+      "change": -0.9300003051757812,
+      "change_pct": -1.840855694277539,
+      "volume": 32939981,
       "composite_score": 0.5347580816501109
     },
     {
@@ -1133,10 +1157,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 59.709999084472656,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 9607296,
+      "price": 59.369998931884766,
+      "change": -0.3400001525878906,
+      "change_pct": -0.5694191220919081,
+      "volume": 12157171,
       "composite_score": 0.5343658839864704
     },
     {
@@ -1145,10 +1169,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 49.560001373291016,
-      "change": 0.26000213623046875,
-      "change_pct": 0.5273877084262022,
-      "volume": 46681408,
+      "price": 48.970001220703125,
+      "change": -0.5900001525878906,
+      "change_pct": -1.1904764653736566,
+      "volume": 48710052,
       "composite_score": 0.5097438444163139
     },
     {
@@ -1157,10 +1181,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 98.37000274658203,
-      "change": 0.2700042724609375,
-      "change_pct": 0.27523371728916485,
-      "volume": 15015378,
+      "price": 96.69000244140625,
+      "change": -1.6800003051757812,
+      "change_pct": -1.7078380179613797,
+      "volume": 24875720,
       "composite_score": 0.4999685608827869
     },
     {
@@ -1169,10 +1193,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 58.5099983215332,
-      "change": 0.6099967956542969,
-      "change_pct": 1.053535025178978,
-      "volume": 40063648,
+      "price": 58.43000030517578,
+      "change": -0.07999801635742188,
+      "change_pct": -0.13672537797352924,
+      "volume": 42786228,
       "composite_score": 0.4968772656857385
     },
     {
@@ -1181,10 +1205,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 149.63999938964844,
-      "change": -1.3699951171875,
-      "change_pct": -0.9072214866715216,
-      "volume": 11922670,
+      "price": 147.13999938964844,
+      "change": -2.5,
+      "change_pct": -1.6706762965764492,
+      "volume": 14564128,
       "composite_score": 0.49302007919624125
     },
     {
@@ -1193,10 +1217,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 58.75,
-      "change": 0.3699989318847656,
-      "change_pct": 0.6337768501461092,
-      "volume": 24815814,
+      "price": 57.560001373291016,
+      "change": -1.1899986267089844,
+      "change_pct": -2.025529577376995,
+      "volume": 36874631,
       "composite_score": 0.4913031775982489
     },
     {
@@ -1205,10 +1229,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 166.5,
-      "change": 0.44000244140625,
-      "change_pct": 0.2649659447640282,
-      "volume": 12762255,
+      "price": 165.17999267578125,
+      "change": -1.32000732421875,
+      "change_pct": -0.792797191722973,
+      "volume": 10972647,
       "composite_score": 0.47750553828701336
     },
     {
@@ -1217,10 +1241,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 87.44999694824219,
-      "change": 0.23999786376953125,
-      "change_pct": 0.2751953517819286,
-      "volume": 19367494,
+      "price": 86.95500183105469,
+      "change": -0.4949951171875,
+      "change_pct": -0.5660321720542378,
+      "volume": 37561977,
       "composite_score": 0.4756668829931112
     },
     {
@@ -1229,10 +1253,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 109.30000305175781,
-      "change": 0.6100006103515625,
-      "change_pct": 0.5612297328638004,
-      "volume": 53343253,
+      "price": 108.70999908447266,
+      "change": -0.5900039672851562,
+      "change_pct": -0.539802333770994,
+      "volume": 60335440,
       "composite_score": 0.46222613605711826
     },
     {
@@ -1241,10 +1265,10 @@
       "market": "US",
       "tier": "active",
       "category": "active",
-      "price": 79.80999755859375,
-      "change": 0.3600006103515625,
-      "change_pct": 0.4531159523971856,
-      "volume": 43862263,
+      "price": 79.4000015258789,
+      "change": -0.40999603271484375,
+      "change_pct": -0.5137151300046574,
+      "volume": 50141967,
       "composite_score": 0.42262825848991725
     },
     {
@@ -1253,9 +1277,9 @@
       "market": "OTHER",
       "tier": "active",
       "category": "active",
-      "price": 1.3349584341049194,
-      "change": 0.0035246610641479492,
-      "change_pct": 0.26472672809690073,
+      "price": 1.327094316482544,
+      "change": -0.008857488632202148,
+      "change_pct": -0.6630095934816579,
       "volume": 0,
       "composite_score": 0.18252147959720363
     },
@@ -1265,9 +1289,9 @@
       "market": "OTHER",
       "tier": "active",
       "category": "active",
-      "price": 1.1530035734176636,
-      "change": 0.003049612045288086,
-      "change_pct": 0.2651942727905928,
+      "price": 1.1466574668884277,
+      "change": -0.0072907209396362305,
+      "change_pct": -0.6318066111233872,
       "volume": 0,
       "composite_score": 0.18152230524512894
     }
