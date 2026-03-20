@@ -226,7 +226,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "volume_ratio": 95.72
     },
@@ -408,7 +408,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "volume_ratio": 95.72
     },
@@ -465,7 +465,7 @@
       "change": -74.0,
       "change_percent": -2.49,
       "volume": 10668400,
-      "market_cap": 5368796676096,
+      "market_cap": 5324447678464,
       "trading_value": 30970365200,
       "volume_ratio": 125.19
     },
@@ -544,7 +544,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "volume_ratio": 95.72
     },
@@ -667,7 +667,7 @@
       "change": -74.0,
       "change_percent": -2.49,
       "volume": 10668400,
-      "market_cap": 5368796676096,
+      "market_cap": 5324447678464,
       "trading_value": 30970365200,
       "volume_ratio": 125.19
     },
@@ -770,7 +770,7 @@
       "volume": 49387200,
       "market_cap": 5068101779456,
       "trading_value": 64302134400,
-      "dividend_yield": 520.0,
+      "dividend_yield": 538.0,
       "volume_ratio": 201.28
     },
     {
@@ -782,7 +782,7 @@
       "volume": 115155700,
       "market_cap": 10297803800576,
       "trading_value": 24827569622,
-      "dividend_yield": 395.0,
+      "dividend_yield": 399.0,
       "volume_ratio": 138.02
     },
     {
@@ -794,7 +794,7 @@
       "volume": 7029100,
       "market_cap": 9111112515584,
       "trading_value": 40543848800,
-      "dividend_yield": 341.0,
+      "dividend_yield": 347.0,
       "volume_ratio": 147.33
     },
     {
@@ -806,7 +806,7 @@
       "volume": 333537500,
       "market_cap": 12913787011072,
       "trading_value": 52899049535,
-      "dividend_yield": 335.0,
+      "dividend_yield": 334.0,
       "volume_ratio": 139.4
     },
     {
@@ -818,7 +818,7 @@
       "volume": 39731200,
       "market_cap": 30318486618112,
       "trading_value": 106718003200,
-      "dividend_yield": 286.0,
+      "dividend_yield": 290.0,
       "volume_ratio": 85.24
     },
     {
@@ -828,9 +828,9 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
-      "dividend_yield": 279.0,
+      "dividend_yield": 286.0,
       "volume_ratio": 95.72
     },
     {
@@ -840,9 +840,9 @@
       "change": -74.0,
       "change_percent": -2.49,
       "volume": 10668400,
-      "market_cap": 5368796676096,
+      "market_cap": 5324447678464,
       "trading_value": 30970365200,
-      "dividend_yield": 262.0,
+      "dividend_yield": 269.0,
       "volume_ratio": 125.19
     },
     {
@@ -854,20 +854,8 @@
       "volume": 22540600,
       "market_cap": 19821819330560,
       "trading_value": 121651618200,
-      "dividend_yield": 193.0,
+      "dividend_yield": 204.0,
       "volume_ratio": 186.77
-    },
-    {
-      "symbol": "7974.T",
-      "name": "任天堂",
-      "price": 9734.0,
-      "change": -125.0,
-      "change_percent": -1.27,
-      "volume": 10748500,
-      "market_cap": 11221637005312,
-      "trading_value": 104625899000,
-      "dividend_yield": 184.0,
-      "volume_ratio": 86.15
     },
     {
       "symbol": "8031.T",
@@ -878,8 +866,20 @@
       "volume": 16432200,
       "market_cap": 17748641972224,
       "trading_value": 102701250000,
-      "dividend_yield": 180.0,
+      "dividend_yield": 192.0,
       "volume_ratio": 197.07
+    },
+    {
+      "symbol": "7974.T",
+      "name": "任天堂",
+      "price": 9734.0,
+      "change": -125.0,
+      "change_percent": -1.27,
+      "volume": 10748500,
+      "market_cap": 11221637005312,
+      "trading_value": 104625899000,
+      "dividend_yield": 186.0,
+      "volume_ratio": 86.15
     }
   ],
   "forward_pe_high": [
@@ -893,7 +893,7 @@
       "market_cap": 19462212288512,
       "trading_value": 78786403000,
       "forward_pe": 46.34,
-      "trailing_pe": 45.01,
+      "trailing_pe": 45.04,
       "volume_ratio": 128.36
     },
     {
@@ -906,7 +906,7 @@
       "market_cap": 9111112515584,
       "trading_value": 40543848800,
       "forward_pe": 41.09,
-      "trailing_pe": 81.89,
+      "trailing_pe": 81.3,
       "volume_ratio": 147.33
     },
     {
@@ -919,7 +919,7 @@
       "market_cap": 14235420590080,
       "trading_value": 27279505000,
       "forward_pe": 36.67,
-      "trailing_pe": 32.85,
+      "trailing_pe": 32.79,
       "volume_ratio": 135.33
     },
     {
@@ -932,7 +932,7 @@
       "market_cap": 5539233792000,
       "trading_value": 31533219200,
       "forward_pe": 34.29,
-      "trailing_pe": 35.16,
+      "trailing_pe": 35.21,
       "volume_ratio": 103.47
     },
     {
@@ -945,7 +945,7 @@
       "market_cap": 14328388386816,
       "trading_value": 41249656000,
       "forward_pe": 31.64,
-      "trailing_pe": 35.04,
+      "trailing_pe": 35.09,
       "volume_ratio": 76.96
     },
     {
@@ -958,7 +958,7 @@
       "market_cap": 17966619951104,
       "trading_value": 104484078000,
       "forward_pe": 30.72,
-      "trailing_pe": 33.43,
+      "trailing_pe": 33.44,
       "volume_ratio": 80.81
     },
     {
@@ -971,7 +971,7 @@
       "market_cap": 11221637005312,
       "trading_value": 104625899000,
       "forward_pe": 28.6,
-      "trailing_pe": 30.66,
+      "trailing_pe": 30.67,
       "volume_ratio": 86.15
     },
     {
@@ -984,7 +984,7 @@
       "market_cap": 19821819330560,
       "trading_value": 121651618200,
       "forward_pe": 25.45,
-      "trailing_pe": 30.78,
+      "trailing_pe": 30.77,
       "volume_ratio": 186.77
     },
     {
@@ -1010,7 +1010,7 @@
       "market_cap": 8840824225792,
       "trading_value": 45902567600,
       "forward_pe": 20.92,
-      "trailing_pe": 21.33,
+      "trailing_pe": 21.32,
       "volume_ratio": 89.99
     }
   ],
@@ -1025,7 +1025,7 @@
       "market_cap": 5068101779456,
       "trading_value": 64302134400,
       "forward_pe": 5.71,
-      "trailing_pe": 10.43,
+      "trailing_pe": 10.44,
       "volume_ratio": 201.28
     },
     {
@@ -1035,7 +1035,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "forward_pe": 10.26,
       "trailing_pe": 11.7,
@@ -1077,7 +1077,7 @@
       "market_cap": 30318486618112,
       "trading_value": 106718003200,
       "forward_pe": 17.71,
-      "trailing_pe": 15.97,
+      "trailing_pe": 15.95,
       "volume_ratio": 85.24
     },
     {
@@ -1103,7 +1103,7 @@
       "market_cap": 10297803800576,
       "trading_value": 24827569622,
       "forward_pe": 18.6,
-      "trailing_pe": 19.18,
+      "trailing_pe": 19.16,
       "volume_ratio": 138.02
     },
     {
@@ -1116,7 +1116,7 @@
       "market_cap": 11942897909760,
       "trading_value": 70092803200,
       "forward_pe": 19.33,
-      "trailing_pe": 24.7,
+      "trailing_pe": 24.69,
       "volume_ratio": 105.88
     },
     {
@@ -1139,10 +1139,10 @@
       "change": -74.0,
       "change_percent": -2.49,
       "volume": 10668400,
-      "market_cap": 5368796676096,
+      "market_cap": 5324447678464,
       "trading_value": 30970365200,
       "forward_pe": 20.22,
-      "trailing_pe": 19.39,
+      "trailing_pe": 19.42,
       "volume_ratio": 125.19
     }
   ],
@@ -1238,7 +1238,7 @@
       "change": -74.0,
       "change_percent": -2.49,
       "volume": 10668400,
-      "market_cap": 5368796676096,
+      "market_cap": 5324447678464,
       "trading_value": 30970365200,
       "price_to_book": 3.14,
       "volume_ratio": 125.19
@@ -1288,7 +1288,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "price_to_book": 1.11,
       "volume_ratio": 95.72
@@ -1482,7 +1482,7 @@
       "change": -74.0,
       "change_percent": -2.49,
       "volume": 10668400,
-      "market_cap": 5368796676096,
+      "market_cap": 5324447678464,
       "trading_value": 30970365200,
       "return_on_assets": 5.46,
       "volume_ratio": 125.19
@@ -1580,7 +1580,7 @@
       "change": -74.0,
       "change_percent": -2.49,
       "volume": 10668400,
-      "market_cap": 5368796676096,
+      "market_cap": 5324447678464,
       "trading_value": 30970365200,
       "return_on_equity": 18.27,
       "volume_ratio": 125.19
@@ -1642,7 +1642,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "volume_ratio": 95.72
     },
@@ -1754,7 +1754,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "volume_ratio": 95.72
     },
@@ -1866,7 +1866,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "volume_ratio": 95.72
     },
@@ -1989,7 +1989,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "volume_ratio": 95.72
     },
@@ -2222,7 +2222,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "deviation_25": -7.43,
       "deviation_75": -4.05,
@@ -2499,7 +2499,7 @@
       "change": -74.0,
       "change_percent": -2.49,
       "volume": 10668400,
-      "market_cap": 5368796676096,
+      "market_cap": 5324447678464,
       "trading_value": 30970365200,
       "deviation_25": -0.3,
       "deviation_75": -8.75,
@@ -2538,7 +2538,7 @@
       "change": -79.0,
       "change_percent": -2.32,
       "volume": 23090100,
-      "market_cap": 43336010301440,
+      "market_cap": 43336006107136,
       "trading_value": 76774582500,
       "deviation_25": -7.43,
       "deviation_75": -4.05,
@@ -2573,6 +2573,6 @@
   ],
   "golden_cross": [],
   "dead_cross": [],
-  "timestamp": "2026-03-19 07:42:35",
+  "timestamp": "2026-03-20 07:41:58",
   "data_count": 214
 }
