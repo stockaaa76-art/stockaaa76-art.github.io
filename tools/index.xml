@@ -207,7 +207,17 @@ function calculate() {
 &lt;li&gt;「計算する」をクリック&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="税率について"&gt;税率について&lt;/h2&gt;
-&lt;p&gt;国内株の配当に対する税率は &lt;strong&gt;20.315%&lt;/strong&gt;（所得税15.315% + 住民税5%）を適用しています。NISA口座では非課税となります。&lt;/p&gt;</description></item><item><title>複利シミュレーター</title><link>https://stock-kabu3.com/tools/compound-interest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/compound-interest/</guid><description>&lt;div class="tool-container"&gt;
+&lt;p&gt;国内株の配当に対する税率は &lt;strong&gt;20.315%&lt;/strong&gt;（所得税15.315% + 住民税5%）を適用しています。NISA口座では非課税となります。&lt;/p&gt;</description></item><item><title>売上成長率・市場シェア分析</title><link>https://stock-kabu3.com/tools/revenue-growth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/revenue-growth/</guid><description>&lt;div class="rg-container"&gt;
+&lt;!-- タブナビゲーション --&gt;
+&lt;div class="rg-tabs"&gt;
+ &lt;button class="rg-tab active" onclick="showTab('growth')"&gt;売上成長率ランキング&lt;/button&gt;
+ &lt;button class="rg-tab" onclick="showTab('sector')"&gt;セクター別シェア分析&lt;/button&gt;
+ &lt;button class="rg-tab" onclick="showTab('pattern')"&gt;過去パターン類似度&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- タブ1: 売上成長率ランキング --&gt;
+&lt;div id="tab-growth" class="rg-tab-content active"&gt;
+ &lt;div class="rg-description"&gt;
+ &lt;p&gt;直近決算期のYoY（前年比）売上成長率ランキング。&lt;strong&gt;成長率が高い＝市場で選ばれている&lt;/strong&gt;証拠。&lt;/p&gt;</description></item><item><title>複利シミュレーター</title><link>https://stock-kabu3.com/tools/compound-interest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/compound-interest/</guid><description>&lt;div class="tool-container"&gt;
 &lt;div class="tool-box"&gt;
  &lt;div class="tool-row"&gt;
  &lt;label&gt;元本（円）&lt;/label&gt;
