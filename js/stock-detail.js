@@ -35,6 +35,7 @@ class StockDetail {
             this.renderStockInfo();
             this.renderPriceSection();
             this.renderPredictions();
+            this.renderSignals();
             this.renderIndicators();
             await this.renderChart();
             this.loadRelatedStocks();
@@ -286,6 +287,52 @@ class StockDetail {
                 }
             }
         });
+    }
+
+    renderSignals() {
+        const prediction = this.stockData.prediction;
+        if (!prediction || !prediction.signal_details || Object.keys(prediction.signal_details).length === 0) return;
+
+        const section = document.getElementById('signal-section');
+        const summary = document.getElementById('signal-summary');
+        const grid = document.getElementById('signal-grid');
+        if (!section || !summary || !grid) return;
+
+        const details = prediction.signal_details;
+        const count = prediction.signal_count || {};
+        const pos = count.positive || 0;
+        const neg = count.negative || 0;
+        const total = count.total || Object.keys(details).length;
+
+        // サマリーバー
+        const trendLabel = pos > neg ? '上昇優勢' : (neg > pos ? '下降優勢' : '中立');
+        const trendColor = pos > neg ? '#10b981' : (neg > pos ? '#ef4444' : '#6b7280');
+        summary.innerHTML = `
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                <span style="font-weight:700;color:${trendColor};font-size:1.1rem;">${trendLabel}</span>
+                <span style="color:#6b7280;font-size:14px;">陽性 ${pos} / 中立 ${total - pos - neg} / 陰性 ${neg}</span>
+                <div style="flex:1;min-width:120px;height:8px;background:#e5e7eb;border-radius:4px;overflow:hidden;">
+                    <div style="height:100%;width:${total > 0 ? (pos/total*100) : 0}%;background:#10b981;border-radius:4px;"></div>
+                </div>
+            </div>`;
+
+        // シグナルカード
+        const signalIcons = { 1: '✅', 0: '➡️', '-1': '❌' };
+        const signalColors = { 1: '#d1fae5', 0: '#f3f4f6', '-1': '#fee2e2' };
+        const signalBorders = { 1: '#10b981', 0: '#d1d5db', '-1': '#ef4444' };
+
+        grid.innerHTML = Object.entries(details).map(([key, s]) => {
+            const v = String(s.value);
+            return `<div style="background:${signalColors[v]||'#f3f4f6'};border:1px solid ${signalBorders[v]||'#d1d5db'};border-radius:8px;padding:12px 16px;display:flex;align-items:center;gap:10px;">
+                <span style="font-size:18px;">${signalIcons[v]||'➡️'}</span>
+                <div>
+                    <div style="font-weight:600;font-size:14px;color:#1f2937;">${s.label}</div>
+                    <div style="font-size:12px;color:#6b7280;">${s.detail}</div>
+                </div>
+            </div>`;
+        }).join('');
+
+        section.style.display = 'block';
     }
 
     renderIndicators() {
