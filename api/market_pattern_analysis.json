@@ -1,0 +1,2093 @@
+{
+  "generated_at": "2026-03-23 20:33:24",
+  "patterns": [
+    {
+      "id": "ai_boom",
+      "name": "AIブーム（2022-現在）",
+      "description": "生成AI・GPU需要急拡大。NVIDIA等が売上3-4倍超の超成長を記録",
+      "reference_tickers": [
+        "NVDA",
+        "AMD",
+        "MSFT"
+      ],
+      "market_theme": "AI・半導体",
+      "peak_growth_pct": 200.0,
+      "avg_growth_pct": 50.0,
+      "duration_years": 2,
+      "measured_avg_growth": 43.01,
+      "measured_max_growth": 125.85
+    },
+    {
+      "id": "cloud_adoption",
+      "name": "クラウド普及期（2018-2022）",
+      "description": "SaaS・クラウドインフラの急拡大。年率20-40%成長が続いた",
+      "reference_tickers": [
+        "AMZN",
+        "MSFT",
+        "CRM"
+      ],
+      "market_theme": "クラウド・SaaS",
+      "peak_growth_pct": 40.0,
+      "avg_growth_pct": 25.0,
+      "duration_years": 4,
+      "measured_avg_growth": 11.35,
+      "measured_max_growth": 15.67
+    },
+    {
+      "id": "fintech_growth",
+      "name": "フィンテック拡大期（2019-2023）",
+      "description": "デジタル決済・フィンテックの急成長。Visa/Mastercardが安定成長",
+      "reference_tickers": [
+        "V",
+        "MA"
+      ],
+      "market_theme": "フィンテック・決済",
+      "peak_growth_pct": 20.0,
+      "avg_growth_pct": 12.0,
+      "duration_years": 4,
+      "measured_avg_growth": 12.38,
+      "measured_max_growth": 16.42
+    },
+    {
+      "id": "streaming_wars",
+      "name": "ストリーミング戦争（2019-2022）",
+      "description": "動画・音楽ストリーミング急拡大。Netflix等が年率20-30%成長",
+      "reference_tickers": [
+        "NFLX",
+        "DIS"
+      ],
+      "market_theme": "コンテンツ・エンタメ",
+      "peak_growth_pct": 30.0,
+      "avg_growth_pct": 18.0,
+      "duration_years": 3,
+      "measured_avg_growth": 8.63,
+      "measured_max_growth": 15.85
+    }
+  ],
+  "stock_analysis": [
+    {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 22.13,
+      "avg_growth_pct": 19.92,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 90.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 85.1
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 78.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 90.0
+      }
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
+      "sector": "Technology",
+      "latest_growth_pct": 34.63,
+      "avg_growth_pct": 14.7,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 85.6
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 79.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 77.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 85.6
+      }
+    },
+    {
+      "ticker": "4568.T",
+      "name": "Daiichi Sankyo Company, Limited",
+      "sector": "Healthcare",
+      "latest_growth_pct": 17.77,
+      "avg_growth_pct": 21.8,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 85.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 73.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 67.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 85.0
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": 65.57,
+      "avg_growth_pct": 102.03,
+      "pattern_matches": [
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 85.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 85.0
+        },
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 85.0
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "cloud_adoption",
+        "pattern_name": "クラウド普及期（2018-2022）",
+        "market_theme": "クラウド・SaaS",
+        "similarity_score": 85.0
+      }
+    },
+    {
+      "ticker": "8306.T",
+      "name": "Mitsubishi UFJ Financial Group, Inc.",
+      "sector": "Financial Services",
+      "latest_growth_pct": 16.31,
+      "avg_growth_pct": 14.06,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 81.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 64.5
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 60.0
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 81.7
+      }
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard Incorporated",
+      "sector": "Financial Services",
+      "latest_growth_pct": 16.37,
+      "avg_growth_pct": 13.79,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 81.4
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 64.3
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 59.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 81.4
+      }
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 15.64,
+      "avg_growth_pct": 12.67,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 77.3
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 61.2
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 56.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 77.3
+      }
+    },
+    {
+      "ticker": "4578.T",
+      "name": "Otsuka Holdings Co., Ltd.",
+      "sector": "Healthcare",
+      "latest_growth_pct": 15.42,
+      "avg_growth_pct": 15.86,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 77.2
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 59.9
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.4
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 77.2
+      }
+    },
+    {
+      "ticker": "8316.T",
+      "name": "Sumitomo Mitsui Financial Group, Inc.",
+      "sector": "Financial Services",
+      "latest_growth_pct": 14.28,
+      "avg_growth_pct": 14.04,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.8
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 60.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.8
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 15.09,
+      "avg_growth_pct": 12.55,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 59.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.5
+      }
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 15.09,
+      "avg_growth_pct": 12.55,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 59.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.5
+      }
+    },
+    {
+      "ticker": "8035.T",
+      "name": "Tokyo Electron Limited",
+      "sector": "Technology",
+      "latest_growth_pct": 32.83,
+      "avg_growth_pct": 8.65,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 71.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 70.5
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.0
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": 14.93,
+      "avg_growth_pct": 12.5,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 59.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.0
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 12.38,
+      "avg_growth_pct": 11.74,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 66.3
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 52.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 49.2
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 66.3
+      }
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group Incorporated",
+      "sector": "Healthcare",
+      "latest_growth_pct": 11.82,
+      "avg_growth_pct": 11.39,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 64.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 51.1
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 47.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 64.0
+      }
+    },
+    {
+      "ticker": "V",
+      "name": "Visa Inc.",
+      "sector": "Financial Services",
+      "latest_growth_pct": 11.42,
+      "avg_growth_pct": 10.93,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 62.1
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 49.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 46.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 62.1
+      }
+    },
+    {
+      "ticker": "9022.T",
+      "name": "Central Japan Railway Company",
+      "sector": "Industrials",
+      "latest_growth_pct": 7.1,
+      "avg_growth_pct": 26.33,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 55.6
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 50.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 49.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 55.6
+      }
+    },
+    {
+      "ticker": "6367.T",
+      "name": "Daikin Industries,Ltd.",
+      "sector": "Industrials",
+      "latest_growth_pct": 8.12,
+      "avg_growth_pct": 15.52,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 55.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 43.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 40.2
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 55.5
+      }
+    },
+    {
+      "ticker": "6861.T",
+      "name": "Keyence Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": 9.5,
+      "avg_growth_pct": 12.17,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 53.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 42.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 38.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 53.7
+      }
+    },
+    {
+      "ticker": "7203.T",
+      "name": "Toyota Motor Corporation",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 6.52,
+      "avg_growth_pct": 15.43,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 50.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 39.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 36.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 50.7
+      }
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce, Inc.",
+      "sector": "Technology",
+      "latest_growth_pct": 9.79,
+      "avg_growth_pct": 9.86,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 50.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 39.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 36.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 50.5
+      }
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "sector": "Financial Services",
+      "latest_growth_pct": 7.32,
+      "avg_growth_pct": 12.66,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 48.2
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 37.9
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 35.1
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 48.2
+      }
+    },
+    {
+      "ticker": "7267.T",
+      "name": "Honda Motor Co., Ltd.",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 6.17,
+      "avg_growth_pct": 14.39,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 47.9
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 37.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 34.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 47.9
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": 8.32,
+      "avg_growth_pct": 10.67,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 47.6
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 37.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 34.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 47.6
+      }
+    },
+    {
+      "ticker": "4502.T",
+      "name": "Takeda Pharmaceutical Company Limited",
+      "sector": "Healthcare",
+      "latest_growth_pct": 7.45,
+      "avg_growth_pct": 8.72,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 41.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 32.9
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 30.6
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 41.7
+      }
+    },
+    {
+      "ticker": "9984.T",
+      "name": "SoftBank Group Corp.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 7.21,
+      "avg_growth_pct": 5.22,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 40.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 32.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 30.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 40.0
+      }
+    },
+    {
+      "ticker": "IBM",
+      "name": "International Business Machines Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": 7.66,
+      "avg_growth_pct": 3.76,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 38.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 31.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 30.0
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 38.7
+      }
+    },
+    {
+      "ticker": "4063.T",
+      "name": "Shin-Etsu Chemical Co., Ltd.",
+      "sector": "Basic Materials",
+      "latest_growth_pct": 6.06,
+      "avg_growth_pct": 9.15,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 38.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 30.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 28.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 38.5
+      }
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "sector": "Healthcare",
+      "latest_growth_pct": 5.97,
+      "avg_growth_pct": 5.61,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 37.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 30.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 28.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 37.0
+      }
+    },
+    {
+      "ticker": "5108.T",
+      "name": "Bridgestone Corporation",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 2.69,
+      "avg_growth_pct": 11.42,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 32.6
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 26.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 24.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 32.6
+      }
+    },
+    {
+      "ticker": "6503.T",
+      "name": "Mitsubishi Electric Corporation",
+      "sector": "Industrials",
+      "latest_growth_pct": 5.02,
+      "avg_growth_pct": 7.29,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 32.2
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 25.7
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 24.0
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 32.2
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Technology",
+      "latest_growth_pct": 6.42,
+      "avg_growth_pct": 1.88,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 31.9
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 26.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 25.2
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 31.9
+      }
+    },
+    {
+      "ticker": "4519.T",
+      "name": "Chugai Pharmaceutical Co., Ltd.",
+      "sector": "Healthcare",
+      "latest_growth_pct": 5.34,
+      "avg_growth_pct": 6.52,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 31.8
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 25.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 23.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 31.8
+      }
+    },
+    {
+      "ticker": "8001.T",
+      "name": "ITOCHU Corporation",
+      "sector": "Industrials",
+      "latest_growth_pct": 4.95,
+      "avg_growth_pct": 6.33,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 30.3
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 24.3
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 22.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 30.3
+      }
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart Inc.",
+      "sector": "Consumer Defensive",
+      "latest_growth_pct": 4.73,
+      "avg_growth_pct": 5.28,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 27.9
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 22.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 20.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 27.9
+      }
+    },
+    {
+      "ticker": "HD",
+      "name": "The Home Depot, Inc.",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 4.52,
+      "avg_growth_pct": 1.88,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 26.4
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 22.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 21.4
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 26.4
+      }
+    },
+    {
+      "ticker": "DIS",
+      "name": "The Walt Disney Company",
+      "sector": "Communication Services",
+      "latest_growth_pct": 3.4,
+      "avg_growth_pct": 4.53,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 22.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 22.7
+      }
+    },
+    {
+      "ticker": "6758.T",
+      "name": "Sony Group Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": -0.49,
+      "avg_growth_pct": 9.59,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 20.2
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 20.2
+      }
+    },
+    {
+      "ticker": "7974.T",
+      "name": "Nintendo Co., Ltd.",
+      "sector": "Communication Services",
+      "latest_growth_pct": -30.32,
+      "avg_growth_pct": -10.49,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "9432.T",
+      "name": "NTT, Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 2.47,
+      "avg_growth_pct": 4.11,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "8058.T",
+      "name": "Mitsubishi Corporation",
+      "sector": "Industrials",
+      "latest_growth_pct": -4.85,
+      "avg_growth_pct": 3.6,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "6954.T",
+      "name": "Fanuc Corporation",
+      "sector": "Industrials",
+      "latest_growth_pct": 0.24,
+      "avg_growth_pct": 3.27,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "7182.T",
+      "name": "JAPAN POST BANK Co., Ltd.",
+      "sector": "Financial Services",
+      "latest_growth_pct": -12.7,
+      "avg_growth_pct": 0.31,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "6752.T",
+      "name": "Panasonic Holdings Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": -0.45,
+      "avg_growth_pct": 4.78,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": -2.87,
+      "avg_growth_pct": 5.62,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": -0.56,
+      "avg_growth_pct": -5.52,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "PG",
+      "name": "The Procter & Gamble Company",
+      "sector": "Consumer Defensive",
+      "latest_growth_pct": 0.24,
+      "avg_growth_pct": 1.68,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer Inc.",
+      "sector": "Healthcare",
+      "latest_growth_pct": -1.73,
+      "avg_growth_pct": -12.0,
+      "pattern_matches": [],
+      "best_pattern": null
+    },
+    {
+      "ticker": "KO",
+      "name": "The Coca-Cola Company",
+      "sector": "Consumer Defensive",
+      "latest_growth_pct": 1.91,
+      "avg_growth_pct": 3.68,
+      "pattern_matches": [],
+      "best_pattern": null
+    }
+  ],
+  "top_growth_stocks": [
+    {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 22.13,
+      "avg_growth_pct": 19.92,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 90.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 85.1
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 78.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 90.0
+      }
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
+      "sector": "Technology",
+      "latest_growth_pct": 34.63,
+      "avg_growth_pct": 14.7,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 85.6
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 79.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 77.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 85.6
+      }
+    },
+    {
+      "ticker": "4568.T",
+      "name": "Daiichi Sankyo Company, Limited",
+      "sector": "Healthcare",
+      "latest_growth_pct": 17.77,
+      "avg_growth_pct": 21.8,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 85.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 73.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 67.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 85.0
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": 65.57,
+      "avg_growth_pct": 102.03,
+      "pattern_matches": [
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 85.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 85.0
+        },
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 85.0
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "cloud_adoption",
+        "pattern_name": "クラウド普及期（2018-2022）",
+        "market_theme": "クラウド・SaaS",
+        "similarity_score": 85.0
+      }
+    },
+    {
+      "ticker": "8306.T",
+      "name": "Mitsubishi UFJ Financial Group, Inc.",
+      "sector": "Financial Services",
+      "latest_growth_pct": 16.31,
+      "avg_growth_pct": 14.06,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 81.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 64.5
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 60.0
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 81.7
+      }
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard Incorporated",
+      "sector": "Financial Services",
+      "latest_growth_pct": 16.37,
+      "avg_growth_pct": 13.79,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 81.4
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 64.3
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 59.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 81.4
+      }
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 15.64,
+      "avg_growth_pct": 12.67,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 77.3
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 61.2
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 56.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 77.3
+      }
+    },
+    {
+      "ticker": "4578.T",
+      "name": "Otsuka Holdings Co., Ltd.",
+      "sector": "Healthcare",
+      "latest_growth_pct": 15.42,
+      "avg_growth_pct": 15.86,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 77.2
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 59.9
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.4
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 77.2
+      }
+    },
+    {
+      "ticker": "8316.T",
+      "name": "Sumitomo Mitsui Financial Group, Inc.",
+      "sector": "Financial Services",
+      "latest_growth_pct": 14.28,
+      "avg_growth_pct": 14.04,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.8
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 60.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.8
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 15.09,
+      "avg_growth_pct": 12.55,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 59.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.5
+      }
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
+      "latest_growth_pct": 15.09,
+      "avg_growth_pct": 12.55,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 59.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.5
+      }
+    },
+    {
+      "ticker": "8035.T",
+      "name": "Tokyo Electron Limited",
+      "sector": "Technology",
+      "latest_growth_pct": 32.83,
+      "avg_growth_pct": 8.65,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 71.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 70.5
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.0
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": 14.93,
+      "avg_growth_pct": 12.5,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 75.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 59.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 55.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 75.0
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 12.38,
+      "avg_growth_pct": 11.74,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 66.3
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 52.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 49.2
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 66.3
+      }
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group Incorporated",
+      "sector": "Healthcare",
+      "latest_growth_pct": 11.82,
+      "avg_growth_pct": 11.39,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 64.0
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 51.1
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 47.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 64.0
+      }
+    },
+    {
+      "ticker": "V",
+      "name": "Visa Inc.",
+      "sector": "Financial Services",
+      "latest_growth_pct": 11.42,
+      "avg_growth_pct": 10.93,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 62.1
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 49.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 46.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 62.1
+      }
+    },
+    {
+      "ticker": "9022.T",
+      "name": "Central Japan Railway Company",
+      "sector": "Industrials",
+      "latest_growth_pct": 7.1,
+      "avg_growth_pct": 26.33,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 55.6
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 50.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 49.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 55.6
+      }
+    },
+    {
+      "ticker": "6367.T",
+      "name": "Daikin Industries,Ltd.",
+      "sector": "Industrials",
+      "latest_growth_pct": 8.12,
+      "avg_growth_pct": 15.52,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 55.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 43.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 40.2
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 55.5
+      }
+    },
+    {
+      "ticker": "6861.T",
+      "name": "Keyence Corporation",
+      "sector": "Technology",
+      "latest_growth_pct": 9.5,
+      "avg_growth_pct": 12.17,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 53.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 42.0
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 38.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 53.7
+      }
+    },
+    {
+      "ticker": "7203.T",
+      "name": "Toyota Motor Corporation",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 6.52,
+      "avg_growth_pct": 15.43,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 50.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 39.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 36.9
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 50.7
+      }
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce, Inc.",
+      "sector": "Technology",
+      "latest_growth_pct": 9.79,
+      "avg_growth_pct": 9.86,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 50.5
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 39.6
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 36.7
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 50.5
+      }
+    }
+  ]
+}
