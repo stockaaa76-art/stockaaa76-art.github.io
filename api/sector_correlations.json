@@ -1,0 +1,3998 @@
+{
+  "generated_at": "2026-03-24 13:17:48",
+  "period": "1y",
+  "macro_indicators": {
+    "CL=F": {
+      "name": "原油(WTI)",
+      "category": "commodity"
+    },
+    "GC=F": {
+      "name": "金",
+      "category": "commodity"
+    },
+    "USDJPY=X": {
+      "name": "ドル円",
+      "category": "fx"
+    },
+    "^VIX": {
+      "name": "VIX(恐怖指数)",
+      "category": "sentiment"
+    },
+    "^TNX": {
+      "name": "米10年債利回り",
+      "category": "rates"
+    },
+    "^GSPC": {
+      "name": "S&P500",
+      "category": "index"
+    }
+  },
+  "stocks": [
+    {
+      "ticker": "1330.T",
+      "name": "上場インデックスファンド225",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.075,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.161,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.288,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.004,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.037,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.067,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.288,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "1306.T",
+      "name": "TOPIX連動型上場投資信託",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.052,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.144,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.299,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.015,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.022,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.07,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.299,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "1308.T",
+      "name": "上場インデックスファンドTOPIX",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.048,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.123,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.315,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.018,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.033,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.078,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.315,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "7203.T",
+      "name": "トヨタ自動車",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.057,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.076,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.346,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.105,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.015,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.055,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.346,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "6758.T",
+      "name": "ソニーG",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.028,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.092,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.281,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.045,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.054,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.019,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.281,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "9984.T",
+      "name": "ソフトバンクG",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.037,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.061,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.094,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.016,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.017,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.01,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.094,
+        "label": "ほぼ無相関"
+      }
+    },
+    {
+      "ticker": "6861.T",
+      "name": "キーエンス",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.105,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.177,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.228,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.006,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.006,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.034,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.228,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "8306.T",
+      "name": "三菱UFJフィナンシャル・グループ",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.026,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.094,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.278,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.05,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.052,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.012,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.278,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "4063.T",
+      "name": "信越化学工業",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.029,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": -0.043,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.275,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.031,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.042,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.09,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.275,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "8035.T",
+      "name": "東京エレクトロン",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.05,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.103,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.124,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.038,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.058,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.002,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.124,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "7974.T",
+      "name": "任天堂",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.069,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.028,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.113,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.038,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.068,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.07,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.113,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "6367.T",
+      "name": "ダイキン工業",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.008,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.05,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.137,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.036,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.047,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.083,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.137,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "9432.T",
+      "name": "日本電信電話",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.034,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": -0.099,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.093,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.054,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.103,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.115,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": -0.115,
+        "label": "弱い負相関"
+      }
+    },
+    {
+      "ticker": "4519.T",
+      "name": "中外製薬",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.126,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": -0.009,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.12,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.096,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.206,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.175,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^TNX",
+        "name": "米10年債利回り",
+        "correlation": -0.206,
+        "label": "弱い負相関"
+      }
+    },
+    {
+      "ticker": "8058.T",
+      "name": "三菱商事",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.078,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.08,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.17,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.053,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.054,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.077,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.17,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "4578.T",
+      "name": "大塚ホールディングス",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.099,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.058,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.132,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.03,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.239,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.129,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^TNX",
+        "name": "米10年債利回り",
+        "correlation": -0.239,
+        "label": "弱い負相関"
+      }
+    },
+    {
+      "ticker": "7267.T",
+      "name": "本田技研工業",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.01,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.063,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.325,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.061,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.051,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.001,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.325,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "4502.T",
+      "name": "武田薬品工業",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.037,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.013,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.197,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.061,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.242,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.191,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^TNX",
+        "name": "米10年債利回り",
+        "correlation": -0.242,
+        "label": "弱い負相関"
+      }
+    },
+    {
+      "ticker": "8316.T",
+      "name": "三井住友フィナンシャルG",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.009,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.105,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.235,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.047,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.022,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.002,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.235,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "6954.T",
+      "name": "ファナック",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.014,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.096,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.268,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.028,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.008,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.034,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.268,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "7182.T",
+      "name": "ゆうちょ銀行",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.022,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.134,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.221,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.009,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.029,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.046,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.221,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "8001.T",
+      "name": "伊藤忠商事",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.049,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.059,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.206,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.001,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.052,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.061,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.206,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "5108.T",
+      "name": "ブリヂストン",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.057,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.104,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.26,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.112,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.038,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.03,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.26,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "6503.T",
+      "name": "三菱電機",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.005,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.114,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.227,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.013,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.028,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.052,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.227,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "4568.T",
+      "name": "第一三共",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.106,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.041,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.212,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.059,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.204,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.139,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.212,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "6752.T",
+      "name": "パナソニック",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.018,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.125,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.252,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.002,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.045,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.084,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "USDJPY=X",
+        "name": "ドル円",
+        "correlation": 0.252,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "9022.T",
+      "name": "東海旅客鉄道",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.126,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.043,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.057,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": 0.081,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.104,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": -0.111,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "CL=F",
+        "name": "原油(WTI)",
+        "correlation": -0.126,
+        "label": "弱い負相関"
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.12,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.055,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.048,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.646,
+          "label": "強い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.204,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.765,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.765,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.087,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": -0.023,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.051,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.457,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.212,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.615,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.615,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet A",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.068,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.048,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.03,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.5,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.141,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.6,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.6,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet C",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.064,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.052,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.029,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.498,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.137,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.601,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.601,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.115,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": -0.071,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.021,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.593,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.283,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.705,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.705,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.073,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.046,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.083,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.568,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.124,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.684,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.684,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.031,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.001,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.029,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.537,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.197,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.674,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.674,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.083,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.019,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.045,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.597,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.27,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.768,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.768,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.11,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.067,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.014,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.282,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.073,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.378,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.378,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.063,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": -0.047,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.031,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.451,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.161,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.51,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.51,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.141,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.019,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.006,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.277,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.078,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.405,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.405,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.056,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.093,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.051,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.535,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.189,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.63,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.63,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.026,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.018,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.029,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.448,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.069,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.488,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.488,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "IBM",
+      "name": "IBM",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.051,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": -0.024,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": 0.121,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.409,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.06,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.45,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.45,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.026,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.084,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.021,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.539,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.081,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.605,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.605,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.017,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.025,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.022,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.531,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.073,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.594,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.594,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.088,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.09,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.002,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.649,
+          "label": "強い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.313,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.724,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.724,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.076,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.15,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.124,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.083,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.11,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.077,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "GC=F",
+        "name": "金",
+        "correlation": 0.15,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "PG",
+      "name": "Procter & Gamble",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.099,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.094,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.107,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.165,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.155,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.151,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^VIX",
+        "name": "VIX(恐怖指数)",
+        "correlation": -0.165,
+        "label": "弱い負相関"
+      }
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.172,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.029,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.069,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.422,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.16,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.473,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.473,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.109,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.12,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.052,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.109,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.004,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.107,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "GC=F",
+        "name": "金",
+        "correlation": 0.12,
+        "label": "弱い正相関"
+      }
+    },
+    {
+      "ticker": "DIS",
+      "name": "Disney",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.187,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.03,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.114,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.551,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.112,
+          "label": "弱い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.646,
+          "label": "強い正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.646,
+        "label": "強い正相関"
+      }
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.004,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.032,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.156,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.331,
+          "label": "負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.109,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.369,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.369,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "correlations": {
+        "CL=F": {
+          "correlation": 0.011,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.078,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.057,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.242,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": 0.046,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.369,
+          "label": "正相関",
+          "signal": {
+            "macro_up": "↑上昇傾向",
+            "macro_down": "↓下落傾向"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^GSPC",
+        "name": "S&P500",
+        "correlation": 0.369,
+        "label": "正相関"
+      }
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola",
+      "correlations": {
+        "CL=F": {
+          "correlation": -0.065,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "原油(WTI)"
+        },
+        "GC=F": {
+          "correlation": 0.029,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "金"
+        },
+        "USDJPY=X": {
+          "correlation": -0.07,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "ドル円"
+        },
+        "^VIX": {
+          "correlation": -0.048,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "VIX(恐怖指数)"
+        },
+        "^TNX": {
+          "correlation": -0.189,
+          "label": "弱い負相関",
+          "signal": {
+            "macro_up": "↓下落傾向",
+            "macro_down": "↑上昇傾向"
+          },
+          "macro_name": "米10年債利回り"
+        },
+        "^GSPC": {
+          "correlation": 0.075,
+          "label": "ほぼ無相関",
+          "signal": {
+            "macro_up": "中立",
+            "macro_down": "中立"
+          },
+          "macro_name": "S&P500"
+        }
+      },
+      "strongest_macro": {
+        "ticker": "^TNX",
+        "name": "米10年債利回り",
+        "correlation": -0.189,
+        "label": "弱い負相関"
+      }
+    }
+  ],
+  "macro_rankings": {
+    "CL=F": {
+      "macro_name": "原油(WTI)",
+      "category": "commodity",
+      "positive": [
+        {
+          "ticker": "DIS",
+          "correlation": 0.187,
+          "label": "弱い正相関",
+          "name": "Disney"
+        },
+        {
+          "ticker": "ORCL",
+          "correlation": 0.141,
+          "label": "弱い正相関",
+          "name": "Oracle"
+        },
+        {
+          "ticker": "AAPL",
+          "correlation": 0.12,
+          "label": "弱い正相関",
+          "name": "Apple"
+        },
+        {
+          "ticker": "AMZN",
+          "correlation": 0.115,
+          "label": "弱い正相関",
+          "name": "Amazon"
+        },
+        {
+          "ticker": "NFLX",
+          "correlation": 0.11,
+          "label": "弱い正相関",
+          "name": "Netflix"
+        }
+      ],
+      "negative": [
+        {
+          "ticker": "6861.T",
+          "correlation": -0.105,
+          "label": "弱い負相関",
+          "name": "キーエンス"
+        },
+        {
+          "ticker": "4568.T",
+          "correlation": -0.106,
+          "label": "弱い負相関",
+          "name": "第一三共"
+        },
+        {
+          "ticker": "UNH",
+          "correlation": -0.109,
+          "label": "弱い負相関",
+          "name": "UnitedHealth"
+        },
+        {
+          "ticker": "4519.T",
+          "correlation": -0.126,
+          "label": "弱い負相関",
+          "name": "中外製薬"
+        },
+        {
+          "ticker": "9022.T",
+          "correlation": -0.126,
+          "label": "弱い負相関",
+          "name": "東海旅客鉄道"
+        },
+        {
+          "ticker": "HD",
+          "correlation": -0.172,
+          "label": "弱い負相関",
+          "name": "Home Depot"
+        }
+      ]
+    },
+    "GC=F": {
+      "macro_name": "金",
+      "category": "commodity",
+      "positive": [
+        {
+          "ticker": "6861.T",
+          "correlation": 0.177,
+          "label": "弱い正相関",
+          "name": "キーエンス"
+        },
+        {
+          "ticker": "1330.T",
+          "correlation": 0.161,
+          "label": "弱い正相関",
+          "name": "上場インデックスファンド225"
+        },
+        {
+          "ticker": "JNJ",
+          "correlation": 0.15,
+          "label": "弱い正相関",
+          "name": "Johnson & Johnson"
+        },
+        {
+          "ticker": "1306.T",
+          "correlation": 0.144,
+          "label": "弱い正相関",
+          "name": "TOPIX連動型上場投資信託"
+        },
+        {
+          "ticker": "7182.T",
+          "correlation": 0.134,
+          "label": "弱い正相関",
+          "name": "ゆうちょ銀行"
+        },
+        {
+          "ticker": "6752.T",
+          "correlation": 0.125,
+          "label": "弱い正相関",
+          "name": "パナソニック"
+        },
+        {
+          "ticker": "1308.T",
+          "correlation": 0.123,
+          "label": "弱い正相関",
+          "name": "上場インデックスファンドTOPIX"
+        },
+        {
+          "ticker": "UNH",
+          "correlation": 0.12,
+          "label": "弱い正相関",
+          "name": "UnitedHealth"
+        },
+        {
+          "ticker": "6503.T",
+          "correlation": 0.114,
+          "label": "弱い正相関",
+          "name": "三菱電機"
+        },
+        {
+          "ticker": "8316.T",
+          "correlation": 0.105,
+          "label": "弱い正相関",
+          "name": "三井住友フィナンシャルG"
+        }
+      ],
+      "negative": []
+    },
+    "USDJPY=X": {
+      "macro_name": "ドル円",
+      "category": "fx",
+      "positive": [
+        {
+          "ticker": "7203.T",
+          "correlation": 0.346,
+          "label": "正相関",
+          "name": "トヨタ自動車"
+        },
+        {
+          "ticker": "7267.T",
+          "correlation": 0.325,
+          "label": "正相関",
+          "name": "本田技研工業"
+        },
+        {
+          "ticker": "1308.T",
+          "correlation": 0.315,
+          "label": "正相関",
+          "name": "上場インデックスファンドTOPIX"
+        },
+        {
+          "ticker": "1306.T",
+          "correlation": 0.299,
+          "label": "弱い正相関",
+          "name": "TOPIX連動型上場投資信託"
+        },
+        {
+          "ticker": "1330.T",
+          "correlation": 0.288,
+          "label": "弱い正相関",
+          "name": "上場インデックスファンド225"
+        },
+        {
+          "ticker": "6758.T",
+          "correlation": 0.281,
+          "label": "弱い正相関",
+          "name": "ソニーG"
+        },
+        {
+          "ticker": "8306.T",
+          "correlation": 0.278,
+          "label": "弱い正相関",
+          "name": "三菱UFJフィナンシャル・グループ"
+        },
+        {
+          "ticker": "4063.T",
+          "correlation": 0.275,
+          "label": "弱い正相関",
+          "name": "信越化学工業"
+        },
+        {
+          "ticker": "6954.T",
+          "correlation": 0.268,
+          "label": "弱い正相関",
+          "name": "ファナック"
+        },
+        {
+          "ticker": "5108.T",
+          "correlation": 0.26,
+          "label": "弱い正相関",
+          "name": "ブリヂストン"
+        }
+      ],
+      "negative": [
+        {
+          "ticker": "PG",
+          "correlation": -0.107,
+          "label": "弱い負相関",
+          "name": "Procter & Gamble"
+        },
+        {
+          "ticker": "DIS",
+          "correlation": -0.114,
+          "label": "弱い負相関",
+          "name": "Disney"
+        },
+        {
+          "ticker": "JNJ",
+          "correlation": -0.124,
+          "label": "弱い負相関",
+          "name": "Johnson & Johnson"
+        },
+        {
+          "ticker": "PFE",
+          "correlation": -0.156,
+          "label": "弱い負相関",
+          "name": "Pfizer"
+        }
+      ]
+    },
+    "^VIX": {
+      "macro_name": "VIX(恐怖指数)",
+      "category": "sentiment",
+      "positive": [],
+      "negative": [
+        {
+          "ticker": "MA",
+          "correlation": -0.531,
+          "label": "負相関",
+          "name": "Mastercard"
+        },
+        {
+          "ticker": "AMD",
+          "correlation": -0.535,
+          "label": "負相関",
+          "name": "AMD"
+        },
+        {
+          "ticker": "META",
+          "correlation": -0.537,
+          "label": "負相関",
+          "name": "Meta"
+        },
+        {
+          "ticker": "V",
+          "correlation": -0.539,
+          "label": "負相関",
+          "name": "Visa"
+        },
+        {
+          "ticker": "DIS",
+          "correlation": -0.551,
+          "label": "負相関",
+          "name": "Disney"
+        },
+        {
+          "ticker": "TSLA",
+          "correlation": -0.568,
+          "label": "負相関",
+          "name": "Tesla"
+        },
+        {
+          "ticker": "AMZN",
+          "correlation": -0.593,
+          "label": "負相関",
+          "name": "Amazon"
+        },
+        {
+          "ticker": "NVDA",
+          "correlation": -0.597,
+          "label": "負相関",
+          "name": "NVIDIA"
+        },
+        {
+          "ticker": "AAPL",
+          "correlation": -0.646,
+          "label": "強い負相関",
+          "name": "Apple"
+        },
+        {
+          "ticker": "JPM",
+          "correlation": -0.649,
+          "label": "強い負相関",
+          "name": "JPMorgan Chase"
+        }
+      ]
+    },
+    "^TNX": {
+      "macro_name": "米10年債利回り",
+      "category": "rates",
+      "positive": [
+        {
+          "ticker": "JPM",
+          "correlation": 0.313,
+          "label": "正相関",
+          "name": "JPMorgan Chase"
+        },
+        {
+          "ticker": "AMZN",
+          "correlation": 0.283,
+          "label": "弱い正相関",
+          "name": "Amazon"
+        },
+        {
+          "ticker": "NVDA",
+          "correlation": 0.27,
+          "label": "弱い正相関",
+          "name": "NVIDIA"
+        },
+        {
+          "ticker": "MSFT",
+          "correlation": 0.212,
+          "label": "弱い正相関",
+          "name": "Microsoft"
+        },
+        {
+          "ticker": "AAPL",
+          "correlation": 0.204,
+          "label": "弱い正相関",
+          "name": "Apple"
+        },
+        {
+          "ticker": "META",
+          "correlation": 0.197,
+          "label": "弱い正相関",
+          "name": "Meta"
+        },
+        {
+          "ticker": "AMD",
+          "correlation": 0.189,
+          "label": "弱い正相関",
+          "name": "AMD"
+        },
+        {
+          "ticker": "CRM",
+          "correlation": 0.161,
+          "label": "弱い正相関",
+          "name": "Salesforce"
+        },
+        {
+          "ticker": "GOOGL",
+          "correlation": 0.141,
+          "label": "弱い正相関",
+          "name": "Alphabet A"
+        },
+        {
+          "ticker": "GOOG",
+          "correlation": 0.137,
+          "label": "弱い正相関",
+          "name": "Alphabet C"
+        }
+      ],
+      "negative": [
+        {
+          "ticker": "9022.T",
+          "correlation": -0.104,
+          "label": "弱い負相関",
+          "name": "東海旅客鉄道"
+        },
+        {
+          "ticker": "PFE",
+          "correlation": -0.109,
+          "label": "弱い負相関",
+          "name": "Pfizer"
+        },
+        {
+          "ticker": "JNJ",
+          "correlation": -0.11,
+          "label": "弱い負相関",
+          "name": "Johnson & Johnson"
+        },
+        {
+          "ticker": "PG",
+          "correlation": -0.155,
+          "label": "弱い負相関",
+          "name": "Procter & Gamble"
+        },
+        {
+          "ticker": "HD",
+          "correlation": -0.16,
+          "label": "弱い負相関",
+          "name": "Home Depot"
+        },
+        {
+          "ticker": "KO",
+          "correlation": -0.189,
+          "label": "弱い負相関",
+          "name": "Coca-Cola"
+        },
+        {
+          "ticker": "4568.T",
+          "correlation": -0.204,
+          "label": "弱い負相関",
+          "name": "第一三共"
+        },
+        {
+          "ticker": "4519.T",
+          "correlation": -0.206,
+          "label": "弱い負相関",
+          "name": "中外製薬"
+        },
+        {
+          "ticker": "4578.T",
+          "correlation": -0.239,
+          "label": "弱い負相関",
+          "name": "大塚ホールディングス"
+        },
+        {
+          "ticker": "4502.T",
+          "correlation": -0.242,
+          "label": "弱い負相関",
+          "name": "武田薬品工業"
+        }
+      ]
+    },
+    "^GSPC": {
+      "macro_name": "S&P500",
+      "category": "index",
+      "positive": [
+        {
+          "ticker": "NVDA",
+          "correlation": 0.768,
+          "label": "強い正相関",
+          "name": "NVIDIA"
+        },
+        {
+          "ticker": "AAPL",
+          "correlation": 0.765,
+          "label": "強い正相関",
+          "name": "Apple"
+        },
+        {
+          "ticker": "JPM",
+          "correlation": 0.724,
+          "label": "強い正相関",
+          "name": "JPMorgan Chase"
+        },
+        {
+          "ticker": "AMZN",
+          "correlation": 0.705,
+          "label": "強い正相関",
+          "name": "Amazon"
+        },
+        {
+          "ticker": "TSLA",
+          "correlation": 0.684,
+          "label": "強い正相関",
+          "name": "Tesla"
+        },
+        {
+          "ticker": "META",
+          "correlation": 0.674,
+          "label": "強い正相関",
+          "name": "Meta"
+        },
+        {
+          "ticker": "DIS",
+          "correlation": 0.646,
+          "label": "強い正相関",
+          "name": "Disney"
+        },
+        {
+          "ticker": "AMD",
+          "correlation": 0.63,
+          "label": "強い正相関",
+          "name": "AMD"
+        },
+        {
+          "ticker": "MSFT",
+          "correlation": 0.615,
+          "label": "強い正相関",
+          "name": "Microsoft"
+        },
+        {
+          "ticker": "V",
+          "correlation": 0.605,
+          "label": "強い正相関",
+          "name": "Visa"
+        }
+      ],
+      "negative": [
+        {
+          "ticker": "9022.T",
+          "correlation": -0.111,
+          "label": "弱い負相関",
+          "name": "東海旅客鉄道"
+        },
+        {
+          "ticker": "9432.T",
+          "correlation": -0.115,
+          "label": "弱い負相関",
+          "name": "日本電信電話"
+        },
+        {
+          "ticker": "4578.T",
+          "correlation": -0.129,
+          "label": "弱い負相関",
+          "name": "大塚ホールディングス"
+        },
+        {
+          "ticker": "4568.T",
+          "correlation": -0.139,
+          "label": "弱い負相関",
+          "name": "第一三共"
+        },
+        {
+          "ticker": "4519.T",
+          "correlation": -0.175,
+          "label": "弱い負相関",
+          "name": "中外製薬"
+        },
+        {
+          "ticker": "4502.T",
+          "correlation": -0.191,
+          "label": "弱い負相関",
+          "name": "武田薬品工業"
+        }
+      ]
+    }
+  }
+}
