@@ -36,6 +36,8 @@ class StockDetail {
             this.renderPriceSection();
             this.renderPredictions();
             this.renderSignals();
+            this.renderJudgmentBadge();
+            this.renderMediumLongTerm();
             this.renderIndicators();
             await this.renderChart();
             this.loadRelatedStocks();
@@ -335,6 +337,72 @@ class StockDetail {
         section.style.display = 'block';
     }
 
+    renderJudgmentBadge() {
+        const prediction = this.stockData.prediction;
+        if (!prediction || !prediction.medium_long) return;
+        const ml = prediction.medium_long;
+        if (!ml.overall_action) return;
+
+        const area = document.getElementById('judgment-badge-area');
+        const badge = document.getElementById('judgment-badge');
+        if (!area || !badge) return;
+
+        const colors = { strong_buy:'#065f46', buy:'#1e40af', sell:'#92400e', strong_sell:'#991b1b', neutral:'#374151' };
+        const bgs    = { strong_buy:'#d1fae5', buy:'#dbeafe', sell:'#fef3c7', strong_sell:'#fee2e2', neutral:'#f3f4f6' };
+        const sig = ml.overall_signal || 'neutral';
+        badge.textContent = ml.overall_action;
+        badge.style.background = bgs[sig] || '#f3f4f6';
+        badge.style.color = colors[sig] || '#374151';
+
+        // 25日乖離バー
+        const dev25 = ml.deviation_25;
+        const valEl = document.getElementById('deviation-25-val');
+        const barEl = document.getElementById('deviation-bar');
+        if (dev25 != null && valEl && barEl) {
+            valEl.textContent = `${dev25 > 0 ? '+' : ''}${dev25}%`;
+            // -15% → 0%, 0% → 50%, +15% → 100%
+            const pct = Math.min(100, Math.max(0, (dev25 + 15) / 30 * 100));
+            barEl.style.width = `${pct}%`;
+            barEl.style.background = dev25 < -5 ? '#10b981' : dev25 > 10 ? '#ef4444' : '#6b7280';
+        }
+
+        area.style.display = 'block';
+    }
+
+    renderMediumLongTerm() {
+        const prediction = this.stockData.prediction;
+        if (!prediction || !prediction.medium_long) return;
+        const ml = prediction.medium_long;
+        if (!ml.overall_action) return;
+
+        const section = document.getElementById('medium-long-section');
+        const actionEl = document.getElementById('medium-long-action');
+        const gridEl = document.getElementById('medium-long-grid');
+        if (!section || !actionEl || !gridEl) return;
+
+        // 総合判定ラベル
+        const signalClass = { strong_buy: 'strong-buy', buy: 'buy', sell: 'sell', strong_sell: 'strong-sell' }[ml.overall_signal] || '';
+        actionEl.textContent = ml.overall_action;
+        actionEl.className = `medium-long-action ${signalClass}`;
+
+        // 各指標カード
+        const items = [
+            { label: '25日乖離率（短中期）', value: ml.deviation_25 != null ? `${ml.deviation_25 > 0 ? '+' : ''}${ml.deviation_25}%` : '---', signal: ml.short_mid_label || '', cls: (ml.short_mid_signal === 'buy' || ml.short_mid_signal === 'strong_buy') ? 'buy' : (ml.short_mid_signal === 'sell' || ml.short_mid_signal === 'strong_sell') ? 'sell' : '' },
+            { label: '75日乖離率（中長期）', value: ml.deviation_75 != null ? `${ml.deviation_75 > 0 ? '+' : ''}${ml.deviation_75}%` : '---', signal: ml.mid_long_label || '', cls: ml.mid_long_signal === 'buy' ? 'buy' : ml.mid_long_signal === 'sell' ? 'sell' : '' },
+            { label: '12日心理線',           value: ml.psychology_line != null ? `${ml.psychology_line}%` : '---', signal: ml.psych_label || '', cls: ml.psych_signal === 'buy' ? 'buy' : ml.psych_signal === 'sell' ? 'sell' : '' },
+            { label: '長期トレンド',          value: ml.long_trend === 'bullish' ? '上昇中' : ml.long_trend === 'bearish' ? '下降中' : '---', signal: ml.long_trend_label || '', cls: ml.long_trend === 'bullish' ? 'buy' : ml.long_trend === 'bearish' ? 'sell' : '' },
+        ];
+
+        gridEl.innerHTML = items.map(item => `
+            <div class="medium-long-card ${item.cls}">
+                <div class="medium-long-card-label">${item.label}</div>
+                <div class="medium-long-card-value">${item.value}</div>
+                <div class="medium-long-card-signal">${item.signal}</div>
+            </div>`).join('');
+
+        section.style.display = 'block';
+    }
+
     renderIndicators() {
         const indicators = this.stockData.indicators;
         if (!indicators) {
@@ -572,45 +640,39 @@ class StockDetail {
      * 期間に応じたチャートデータを生成
      */
     async generateChartDataForPeriod(period) {
+        // ボタン別の表示件数（history から末尾N件をスライス）
+        const SLICE = { '1w': 5, '1m': 20, '3m': 60, '1y': 245 };
+
         try {
-            // 履歴データを取得
             const response = await fetch('/data/historical_data.json');
             if (response.ok) {
                 const historicalData = await response.json();
                 const symbolData = historicalData[this.symbol];
-                
-                // データがない場合は次の期間にフォールバック
-                const fallbackOrder = ['1d', '1w', '1m', '3m', '1y'];
-                const targetPeriod = symbolData && symbolData.periods && symbolData.periods[period]
-                    ? period
-                    : fallbackOrder.find(p => symbolData && symbolData.periods && symbolData.periods[p]);
+                if (!symbolData) return null;
 
-                if (targetPeriod && symbolData.periods[targetPeriod]) {
-                    const usePeriod = targetPeriod;
-                    period = usePeriod;
-                }
-
-                if (symbolData && symbolData.periods && symbolData.periods[period]) {
-                    const data = symbolData.periods[period];
-                    const labels = data.map(item => {
-                        if (period === '1d') {
-                            // 1日データの場合は時刻を表示（timeフィールドがあれば使用、なければtimestampから生成）
-                            return item.time || new Date(item.timestamp * 1000).toTimeString().slice(0, 5);
-                        } else {
-                            return item.date;
-                        }
-                    });
-                    const prices = data.map(item => item.close);
-                    
-                    console.log(`実際の履歴データ使用: ${period} (${data.length}ポイント)`);
-                    return { labels, prices };
+                if (period === '1d') {
+                    // 今日の5分足
+                    const data = symbolData['1d'] || [];
+                    if (!data.length) return null;
+                    return {
+                        labels: data.map(item => item.time || new Date(item.timestamp * 1000).toTimeString().slice(0, 5)),
+                        prices: data.map(item => item.close)
+                    };
+                } else {
+                    // history から末尾N件をスライス
+                    const history = symbolData['history'] || symbolData.periods?.[period] || [];
+                    if (!history.length) return null;
+                    const n = SLICE[period] || history.length;
+                    const data = history.slice(-n);
+                    return {
+                        labels: data.map(item => item.date),
+                        prices: data.map(item => item.close)
+                    };
                 }
             }
         } catch (error) {
             console.warn('履歴データ取得失敗:', error);
         }
-
-        // チャートデータなし → nullを返してチャートエリアにメッセージ表示
         return null;
     }
 
