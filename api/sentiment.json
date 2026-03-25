@@ -1,0 +1,42 @@
+{
+  "composite": {
+    "score": 34.7,
+    "label": "恐怖（買い場候補）",
+    "signal": "fear"
+  },
+  "vix": {
+    "value": 26.95,
+    "change": 3.06,
+    "score": 25,
+    "label": "恐怖"
+  },
+  "jniv": {},
+  "macro": {
+    "usdjpy": {
+      "name": "ドル円",
+      "value": 158.97,
+      "change": 0.31,
+      "score": 61.5
+    },
+    "gold": {
+      "name": "金先物",
+      "value": 4544.2,
+      "change": 3.29,
+      "score": 40.1
+    },
+    "oil": {
+      "name": "原油WTI",
+      "value": 89.5,
+      "change": -3.09,
+      "score": 56.2
+    },
+    "us10y": {
+      "name": "米10年債利回り",
+      "value": 4.39,
+      "change": 1.34,
+      "score": 39.3
+    },
+    "avg_score": 49.3
+  },
+  "generated_at": "2026-03-25 15:56:16"
+}
