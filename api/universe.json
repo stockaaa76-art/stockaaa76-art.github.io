@@ -766,6 +766,83 @@
       "category": "jp_etf_sector",
       "tier": "core",
       "weight": 0.6
+    },
+    {
+      "ticker": "^DJI",
+      "name": "ダウ平均",
+      "category": "us_indices",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "^IXIC",
+      "name": "NASDAQ",
+      "category": "us_indices",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "^RUT",
+      "name": "ラッセル2000",
+      "category": "us_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^GDAXI",
+      "name": "DAX",
+      "category": "eu_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^FCHI",
+      "name": "CAC40",
+      "category": "eu_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^STOXX50E",
+      "name": "EURO STOXX50",
+      "category": "eu_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^KS11",
+      "name": "KOSPI",
+      "category": "asia_indices",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "^TWII",
+      "name": "台湾加権",
+      "category": "asia_indices",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "CL=F",
+      "name": "原油WTI",
+      "category": "commodities",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "GC=F",
+      "name": "金先物",
+      "category": "commodities",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "SI=F",
+      "name": "銀先物",
+      "category": "commodities",
+      "tier": "core",
+      "weight": 0.7
     }
   ],
   "active_universe": [
