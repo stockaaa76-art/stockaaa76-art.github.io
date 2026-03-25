@@ -749,27 +749,46 @@ class Dashboard {
 
     async loadUSRankings() {
         try {
-            const res = await fetch('/api/stocks/index.json');
+            // realtime_prices.json の foreign（米国株）から取得 → 財務・テクニカル指標含む
+            const res = await fetch('/data/realtime_prices.json');
             if (!res.ok) return;
             const data = await res.json();
-            const us = (data.stocks || []).filter(s => s.market === 'US' && s.price > 0);
-            const toItem = s => ({ symbol: s.symbol, name: s.name, price: s.price,
-                change_percent: s.change_pct, volume: s.volume,
-                market_cap: s.market_cap, pe_ratio: s.pe_ratio });
+            const us = [...(data.foreign || []), ...(data.indices || [])]
+                .filter(s => !s.ticker.endsWith('.T') && s.current_price > 0 && !s.ticker.startsWith('^'));
+            const toItem = s => ({
+                symbol: s.ticker, name: s.name, price: s.current_price,
+                change_percent: s.change_percent, volume: s.volume,
+                market_cap: s.market_cap, pe_ratio: s.trailing_pe,
+                dividend_yield: s.dividend_yield, roe: s.return_on_equity,
+                deviation_25: s.deviation_25, deviation_75: s.deviation_75,
+                volume_ratio: s.volume_ratio, trading_value: s.trading_value,
+                year_high: s.fifty_two_week_high, year_low: s.fifty_two_week_low,
+            });
+            const items = us.map(toItem);
 
-            // 基本ランキング
-            this.renderRanking('us-gainers-ranking',   [...us].filter(s=>s.change_pct>0).sort((a,b)=>b.change_pct-a.change_pct).slice(0,10).map(toItem), 'percentage', '$');
-            this.renderRanking('us-losers-ranking',    [...us].filter(s=>s.change_pct<0).sort((a,b)=>a.change_pct-b.change_pct).slice(0,10).map(toItem), 'percentage', '$');
-            this.renderRanking('us-volume-ranking',    [...us].sort((a,b)=>(b.volume||0)-(a.volume||0)).slice(0,10).map(toItem), 'volume', '$');
-            this.renderRanking('us-marketcap-ranking', [...us].filter(s=>s.market_cap>0).sort((a,b)=>b.market_cap-a.market_cap).slice(0,10).map(toItem), 'market_cap', '$');
+            // 基本
+            this.renderRanking('us-gainers-ranking',   [...items].filter(s=>s.change_percent>0).sort((a,b)=>b.change_percent-a.change_percent).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-losers-ranking',    [...items].filter(s=>s.change_percent<0).sort((a,b)=>a.change_percent-b.change_percent).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-volume-ranking',    [...items].sort((a,b)=>(b.volume||0)-(a.volume||0)).slice(0,10), 'volume', '$');
+            this.renderRanking('us-marketcap-ranking', [...items].filter(s=>s.market_cap>0).sort((a,b)=>b.market_cap-a.market_cap).slice(0,10), 'market_cap', '$');
             // 値動き関連
-            this.renderRanking('us-change-high-ranking', [...us].sort((a,b)=>b.change_pct-a.change_pct).slice(0,10).map(toItem), 'percentage', '$');
-            this.renderRanking('us-change-low-ranking',  [...us].sort((a,b)=>a.change_pct-b.change_pct).slice(0,10).map(toItem), 'percentage', '$');
+            this.renderRanking('us-year-high-ranking',   [...items].filter(s=>s.year_high>0&&s.price>=s.year_high*0.99).sort((a,b)=>b.change_percent-a.change_percent).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-year-low-ranking',    [...items].filter(s=>s.year_low>0&&s.price<=s.year_low*1.01).sort((a,b)=>a.change_percent-b.change_percent).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-change-high-ranking', [...items].sort((a,b)=>b.change_percent-a.change_percent).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-change-low-ranking',  [...items].sort((a,b)=>a.change_percent-b.change_percent).slice(0,10), 'percentage', '$');
             // 出来高関連
-            this.renderRanking('us-vol-high-ranking',    [...us].sort((a,b)=>(b.volume||0)-(a.volume||0)).slice(0,10).map(toItem), 'volume', '$');
-            // 財務指標（pe_ratioはindex.jsonにあれば）
-            this.renderRanking('us-per-high-ranking', [...us].filter(s=>s.pe_ratio>0).sort((a,b)=>b.pe_ratio-a.pe_ratio).slice(0,10).map(toItem), 'percentage', '$');
-            this.renderRanking('us-per-low-ranking',  [...us].filter(s=>s.pe_ratio>0&&s.pe_ratio<200).sort((a,b)=>a.pe_ratio-b.pe_ratio).slice(0,10).map(toItem), 'percentage', '$');
+            this.renderRanking('us-vol-increase-ranking', [...items].filter(s=>s.volume_ratio>0).sort((a,b)=>b.volume_ratio-a.volume_ratio).slice(0,10), 'volume', '$');
+            this.renderRanking('us-trading-value-ranking',[...items].filter(s=>s.trading_value>0).sort((a,b)=>b.trading_value-a.trading_value).slice(0,10), 'volume', '$');
+            // 財務指標
+            this.renderRanking('us-dividend-ranking', [...items].filter(s=>s.dividend_yield>0).sort((a,b)=>b.dividend_yield-a.dividend_yield).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-per-high-ranking', [...items].filter(s=>s.pe_ratio>0).sort((a,b)=>b.pe_ratio-a.pe_ratio).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-per-low-ranking',  [...items].filter(s=>s.pe_ratio>0&&s.pe_ratio<200).sort((a,b)=>a.pe_ratio-b.pe_ratio).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-roe-ranking',       [...items].filter(s=>s.roe>0).sort((a,b)=>b.roe-a.roe).slice(0,10), 'percentage', '$');
+            // テクニカル
+            this.renderRanking('us-dev25-high-ranking', [...items].filter(s=>s.deviation_25!=null).sort((a,b)=>b.deviation_25-a.deviation_25).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-dev25-low-ranking',  [...items].filter(s=>s.deviation_25!=null).sort((a,b)=>a.deviation_25-b.deviation_25).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-dev75-high-ranking', [...items].filter(s=>s.deviation_75!=null).sort((a,b)=>b.deviation_75-a.deviation_75).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-dev75-low-ranking',  [...items].filter(s=>s.deviation_75!=null).sort((a,b)=>a.deviation_75-b.deviation_75).slice(0,10), 'percentage', '$');
 
             // タブ切り替えイベント（初回のみ登録）
             if (!this._usTabsInit) {
@@ -779,7 +798,7 @@ class Dashboard {
                         document.querySelectorAll('[data-us-category]').forEach(b => b.classList.remove('active'));
                         btn.classList.add('active');
                         const cat = btn.dataset.usCategory;
-                        ['basic','price','volume','financial'].forEach(c => {
+                        ['basic','price','volume','financial','technical'].forEach(c => {
                             const el = document.getElementById(`us-${c}-rankings`);
                             if (el) el.classList.toggle('hidden', c !== cat);
                         });
