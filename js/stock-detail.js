@@ -76,62 +76,31 @@ class StockDetail {
 
     async loadStockData() {
         try {
-            // 1. major_indices.json から検索（指数・主要ETF）
-            const indicesRes = await fetch('/api/major_indices.json');
-            if (indicesRes.ok) {
-                const data = await indicesRes.json();
-                const stockList = [];
-                if (data.indices) {
-                    Object.values(data.indices).forEach(region => {
-                        Object.values(region).forEach(stock => {
-                            stockList.push(stock);
-                        });
-                    });
-                }
-                const stock = stockList.find(s => s.symbol === this.symbol);
-                if (stock) {
-                    this.stockData = stock;
-                    return;
-                }
-            }
-
-            // 2. realtime_prices.json から検索（日本株・前日比・タイムスタンプ正確）
-            const realtimeRes = await fetch('/data/realtime_prices.json');
-            if (realtimeRes.ok) {
-                const realtimeData = await realtimeRes.json();
-                const allStocks = [
-                    ...(realtimeData.indices || []),
-                    ...(realtimeData.sector_etfs || []),
-                    ...(realtimeData.commodity_etfs || []),
-                    ...(realtimeData.foreign || []),
-                    ...(realtimeData.japanese_stocks || []),
-                ];
-                const rt = allStocks.find(s => s.ticker === this.symbol);
-                if (rt) {
+            // 1. historical_data.json から現在価格を取得（history[-1] = 最新終値）
+            // デイリーチャート以外はすべてここで賄える
+            const histRes = await fetch('/data/historical_data.json');
+            if (histRes.ok) {
+                const histData = await histRes.json();
+                const sym = histData[this.symbol];
+                if (sym && sym.history && sym.history.length >= 2) {
+                    const latest = sym.history[sym.history.length - 1];
+                    const prev   = sym.history[sym.history.length - 2];
+                    const change = latest.close - prev.close;
+                    const changePct = prev.close ? (change / prev.close * 100) : 0;
                     this.stockData = {
-                        symbol: rt.ticker,
-                        name: rt.name,
-                        price: rt.current_price,
-                        change: rt.change || 0,
-                        change_percent: rt.change_percent || 0,
-                        volume: rt.volume || 0,
-                        market_cap: rt.market_cap || 0,
-                        trailing_pe: rt.trailing_pe || 0,
-                        forward_pe: rt.forward_pe || 0,
-                        dividend_yield: rt.dividend_yield || 0,
-                        price_to_book: rt.price_to_book || 0,
-                        fifty_two_week_high: rt.fifty_two_week_high || 0,
-                        fifty_two_week_low: rt.fifty_two_week_low || 0,
-                        ma5: rt.ma5 || 0,
-                        ma25: rt.ma25 || 0,
-                        ma75: rt.ma75 || 0,
-                        updatedAt: rt.timestamp,
+                        symbol: this.symbol,
+                        name: sym.name || this.symbol,
+                        price: latest.close,
+                        change: change,
+                        change_percent: changePct,
+                        volume: latest.volume || 0,
+                        updatedAt: latest.date,
                     };
                     return;
                 }
             }
 
-            // 3. stocks/index.json から検索（上記にない銘柄）
+            // 2. stocks/index.json から検索（historical_data.jsonにない銘柄）
             const stocksRes = await fetch('/api/stocks/index.json');
             if (!stocksRes.ok) throw new Error(`データ取得エラー: ${stocksRes.status}`);
             const stocksData = await stocksRes.json();
