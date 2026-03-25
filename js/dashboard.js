@@ -23,6 +23,7 @@ class Dashboard {
         try {
             console.log('historical_data から価格読み込み中...');
             await this.loadFromHistoricalData();
+            await this.loadUSRankings();
             console.log('ランキングAPIを読み込み中...');
             await this.loadRankings();
             console.log('拡張ランキングAPIを読み込み中...');
@@ -42,6 +43,7 @@ class Dashboard {
             // 5分ごとに更新
             setInterval(() => {
                 this.loadFromHistoricalData();
+                this.loadUSRankings();
                 this.loadRankings();
                 this.loadExtendedRankings();
                 this.loadPeriodRankings();
@@ -745,6 +747,35 @@ class Dashboard {
         }
     }
 
+    async loadUSRankings() {
+        try {
+            const res = await fetch('/api/stocks/index.json');
+            if (!res.ok) return;
+            const data = await res.json();
+            const usStocks = (data.stocks || []).filter(s => s.market === 'US' && s.price > 0);
+
+            // 値上がり（change_pct降順）
+            const gainers = [...usStocks].filter(s => s.change_pct > 0)
+                .sort((a, b) => b.change_pct - a.change_pct).slice(0, 10)
+                .map(s => ({ symbol: s.symbol, name: s.name, price: s.price, change_percent: s.change_pct, volume: s.volume }));
+
+            // 値下がり（change_pct昇順）
+            const losers = [...usStocks].filter(s => s.change_pct < 0)
+                .sort((a, b) => a.change_pct - b.change_pct).slice(0, 10)
+                .map(s => ({ symbol: s.symbol, name: s.name, price: s.price, change_percent: s.change_pct, volume: s.volume }));
+
+            // 出来高（volume降順）
+            const volume = [...usStocks].sort((a, b) => (b.volume || 0) - (a.volume || 0)).slice(0, 10)
+                .map(s => ({ symbol: s.symbol, name: s.name, price: s.price, change_percent: s.change_pct, volume: s.volume }));
+
+            this.renderRanking('us-gainers-ranking', gainers, 'percentage', '$');
+            this.renderRanking('us-losers-ranking', losers, 'percentage', '$');
+            this.renderRanking('us-volume-ranking', volume, 'volume', '$');
+        } catch (e) {
+            console.error('米国株ランキング取得エラー:', e);
+        }
+    }
+
     async loadRankings() {
         try {
             const response = await fetch(this.rankings_api);
@@ -779,7 +810,7 @@ class Dashboard {
         this.renderRanking('market-cap-ranking', basic.market_cap_high || basic.market_cap, 'market_cap');
     }
 
-    renderRanking(elementId, stocks, type) {
+    renderRanking(elementId, stocks, type, currency = '¥') {
         const container = document.getElementById(elementId);
         if (!container || !stocks || stocks.length === 0) {
             if (container) {
@@ -797,7 +828,7 @@ class Dashboard {
             // 表示値の決定
             switch (type) {
                 case 'percentage':
-                    valueText = this.formatPrice(stock.price, '¥');
+                    valueText = this.formatPrice(stock.price, currency);
                     changeText = this.formatPercent(stock.change_percent);
                     break;
                 case 'volume':
