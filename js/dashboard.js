@@ -8,6 +8,7 @@ class Dashboard {
         this.summary_api = '/api/summary.json';
         this.indices_api = '/api/major_indices.json';
         this.realtime_api = '/data/realtime_prices.json';
+        this.historical_api = '/data/historical_data.json';
         this.rankings_api = '/api/enhanced_rankings.json';
         this.extended_rankings_api = '/api/extended_rankings.json';
         this.enhanced_rankings_api = '/api/enhanced_rankings.json';
@@ -20,10 +21,8 @@ class Dashboard {
     async init() {
         console.log('Dashboard初期化開始');
         try {
-            console.log('realtime APIを読み込み中...');
-            await this.loadRealtimeData();
-            console.log('国際指標APIを読み込み中...');
-            await this.loadInternationalIndices();
+            console.log('historical_data から価格読み込み中...');
+            await this.loadFromHistoricalData();
             console.log('ランキングAPIを読み込み中...');
             await this.loadRankings();
             console.log('拡張ランキングAPIを読み込み中...');
@@ -42,8 +41,7 @@ class Dashboard {
             
             // 5分ごとに更新
             setInterval(() => {
-                this.loadRealtimeData();
-                this.loadInternationalIndices();
+                this.loadFromHistoricalData();
                 this.loadRankings();
                 this.loadExtendedRankings();
                 this.loadPeriodRankings();
@@ -53,6 +51,71 @@ class Dashboard {
         } catch (error) {
             console.error('Dashboard初期化エラー:', error);
             this.showError();
+        }
+    }
+
+    async loadFromHistoricalData() {
+        try {
+            const res = await fetch(this.historical_api);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const hist = await res.json();
+
+            // symbol → {price, change, change_percent, trend} に変換
+            const toPrice = (symbol) => {
+                const s = hist[symbol];
+                if (!s || !s.history || s.history.length < 2) return null;
+                const latest = s.history[s.history.length - 1];
+                const prev   = s.history[s.history.length - 2];
+                const change = (latest.close || 0) - (prev.close || 0);
+                const pct    = prev.close ? change / prev.close * 100 : 0;
+                return { ticker: symbol, current_price: latest.close, change, change_percent: pct,
+                         trend: change > 0 ? 'up' : change < 0 ? 'down' : 'neutral',
+                         date: latest.date };
+            };
+
+            // 日経平均ヒーローカード
+            const nikkei = toPrice('^N225');
+            if (nikkei) {
+                this.updateIndexCardFromRealtime('nikkei', nikkei);
+                this.updateLastUpdated(nikkei.date);
+            }
+
+            // 国際指標マッピング
+            const intlMap = {
+                '^DJI': 'dow', '^IXIC': 'nasdaq', '^GSPC': 'sp500', '^RUT': 'russell',
+                '^GDAXI': 'dax', '^FTSE': 'ftse', '^FCHI': 'cac', '^STOXX50E': 'stoxx',
+                '000001.SS': 'shanghai', '^HSI': 'hangseng', '^KS11': 'kospi', '^TWII': 'taiwan',
+                'CL=F': 'oil', 'GC=F': 'gold', 'SI=F': 'silver', 'BTC-USD': 'bitcoin'
+            };
+            const currencies = {
+                '^DJI':'$','^IXIC':'$','^GSPC':'$','^RUT':'$',
+                '^GDAXI':'€','^FTSE':'£','^FCHI':'€','^STOXX50E':'€',
+                '^HSI':'HK$','^KS11':'₩','^TWII':'NT$',
+                'CL=F':'$','GC=F':'$','SI=F':'$','BTC-USD':'$',
+            };
+
+            for (const [symbol, elId] of Object.entries(intlMap)) {
+                const d = toPrice(symbol);
+                if (!d) continue;
+                const cur = currencies[symbol] || '¥';
+                this.updateInternationalIndex(elId, {
+                    price: d.current_price, change: d.change, change_percent: d.change_percent,
+                    trend: d.trend, currency: cur,
+                    price_formatted: cur + d.current_price.toLocaleString('en', {maximumFractionDigits:2}),
+                    change_formatted: (d.change >= 0 ? '+' : '') + d.change.toFixed(2),
+                });
+                if (symbol === '^DJI') {
+                    this.updateDowHeroFromIndices({
+                        price: d.current_price, change: d.change, change_percent: d.change_percent, trend: d.trend,
+                        price_formatted: '$' + d.current_price.toLocaleString('en', {maximumFractionDigits:2}),
+                        change_formatted: (d.change >= 0 ? '+' : '') + d.change.toFixed(2),
+                    });
+                }
+            }
+        } catch (error) {
+            console.error('historical_data 取得エラー（フォールバック）:', error);
+            await this.loadRealtimeData();
+            await this.loadInternationalIndices();
         }
     }
 
