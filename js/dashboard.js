@@ -752,25 +752,40 @@ class Dashboard {
             const res = await fetch('/api/stocks/index.json');
             if (!res.ok) return;
             const data = await res.json();
-            const usStocks = (data.stocks || []).filter(s => s.market === 'US' && s.price > 0);
+            const us = (data.stocks || []).filter(s => s.market === 'US' && s.price > 0);
+            const toItem = s => ({ symbol: s.symbol, name: s.name, price: s.price,
+                change_percent: s.change_pct, volume: s.volume,
+                market_cap: s.market_cap, pe_ratio: s.pe_ratio });
 
-            // 値上がり（change_pct降順）
-            const gainers = [...usStocks].filter(s => s.change_pct > 0)
-                .sort((a, b) => b.change_pct - a.change_pct).slice(0, 10)
-                .map(s => ({ symbol: s.symbol, name: s.name, price: s.price, change_percent: s.change_pct, volume: s.volume }));
+            // 基本ランキング
+            this.renderRanking('us-gainers-ranking',   [...us].filter(s=>s.change_pct>0).sort((a,b)=>b.change_pct-a.change_pct).slice(0,10).map(toItem), 'percentage', '$');
+            this.renderRanking('us-losers-ranking',    [...us].filter(s=>s.change_pct<0).sort((a,b)=>a.change_pct-b.change_pct).slice(0,10).map(toItem), 'percentage', '$');
+            this.renderRanking('us-volume-ranking',    [...us].sort((a,b)=>(b.volume||0)-(a.volume||0)).slice(0,10).map(toItem), 'volume', '$');
+            this.renderRanking('us-marketcap-ranking', [...us].filter(s=>s.market_cap>0).sort((a,b)=>b.market_cap-a.market_cap).slice(0,10).map(toItem), 'market_cap', '$');
+            // 値動き関連
+            this.renderRanking('us-change-high-ranking', [...us].sort((a,b)=>b.change_pct-a.change_pct).slice(0,10).map(toItem), 'percentage', '$');
+            this.renderRanking('us-change-low-ranking',  [...us].sort((a,b)=>a.change_pct-b.change_pct).slice(0,10).map(toItem), 'percentage', '$');
+            // 出来高関連
+            this.renderRanking('us-vol-high-ranking',    [...us].sort((a,b)=>(b.volume||0)-(a.volume||0)).slice(0,10).map(toItem), 'volume', '$');
+            // 財務指標（pe_ratioはindex.jsonにあれば）
+            this.renderRanking('us-per-high-ranking', [...us].filter(s=>s.pe_ratio>0).sort((a,b)=>b.pe_ratio-a.pe_ratio).slice(0,10).map(toItem), 'percentage', '$');
+            this.renderRanking('us-per-low-ranking',  [...us].filter(s=>s.pe_ratio>0&&s.pe_ratio<200).sort((a,b)=>a.pe_ratio-b.pe_ratio).slice(0,10).map(toItem), 'percentage', '$');
 
-            // 値下がり（change_pct昇順）
-            const losers = [...usStocks].filter(s => s.change_pct < 0)
-                .sort((a, b) => a.change_pct - b.change_pct).slice(0, 10)
-                .map(s => ({ symbol: s.symbol, name: s.name, price: s.price, change_percent: s.change_pct, volume: s.volume }));
-
-            // 出来高（volume降順）
-            const volume = [...usStocks].sort((a, b) => (b.volume || 0) - (a.volume || 0)).slice(0, 10)
-                .map(s => ({ symbol: s.symbol, name: s.name, price: s.price, change_percent: s.change_pct, volume: s.volume }));
-
-            this.renderRanking('us-gainers-ranking', gainers, 'percentage', '$');
-            this.renderRanking('us-losers-ranking', losers, 'percentage', '$');
-            this.renderRanking('us-volume-ranking', volume, 'volume', '$');
+            // タブ切り替えイベント（初回のみ登録）
+            if (!this._usTabsInit) {
+                this._usTabsInit = true;
+                document.querySelectorAll('[data-us-category]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('[data-us-category]').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        const cat = btn.dataset.usCategory;
+                        ['basic','price','volume','financial'].forEach(c => {
+                            const el = document.getElementById(`us-${c}-rankings`);
+                            if (el) el.classList.toggle('hidden', c !== cat);
+                        });
+                    });
+                });
+            }
         } catch (e) {
             console.error('米国株ランキング取得エラー:', e);
         }
