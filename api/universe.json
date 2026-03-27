@@ -19,13 +19,6 @@
       "weight": 1.0
     },
     {
-      "ticker": "^TOPIX",
-      "name": "TOPIX",
-      "category": "jp_indices",
-      "tier": "core",
-      "weight": 1.0
-    },
-    {
       "ticker": "1330.T",
       "name": "上場インデックスファンド225",
       "category": "jp_indices",
@@ -140,13 +133,6 @@
     {
       "ticker": "7267.T",
       "name": "本田技研工業",
-      "category": "nikkei_225_core",
-      "tier": "core",
-      "weight": 0.6
-    },
-    {
-      "ticker": "9437.T",
-      "name": "NTTドコモ",
       "category": "nikkei_225_core",
       "tier": "core",
       "weight": 0.6
