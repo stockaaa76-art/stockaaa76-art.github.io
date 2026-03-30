@@ -1,9 +1,771 @@
-<!doctype html><html lang=ja><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>株式一覧 | 株価アート - Stock Analysis Dashboard</title><meta name=description content="200銘柄の株価・予測・指標を一覧表示"><meta name=keywords content="株価,投資,分析,ダッシュボード,日経平均,チャート"><meta name=author content="stockaaa76-art"><meta name=google-adsense-account content="ca-pub-8563231513969804"><meta property="og:title" content="株式一覧"><meta property="og:description" content="200銘柄の株価・予測・指標を一覧表示"><meta property="og:type" content="website"><meta property="og:url" content="https://stock-kabu3.com/stocks/"><meta property="og:site_name" content="株価アート - Stock Analysis Dashboard"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="株式一覧"><meta name=twitter:description content="200銘柄の株価・予測・指標を一覧表示"><link rel=icon type=image/png href=/favicon.png><link rel=apple-touch-icon href=/images/kabu-nip-icon.png><meta property="og:image" content="https://stock-kabu3.com/images/kabu-nip-icon.png"><link rel=stylesheet href=/app.css><link rel=canonical href=https://stock-kabu3.com/stocks/><link rel=alternate type=application/rss+xml title="株価アート - Stock Analysis Dashboard" href=https://stock-kabu3.com/index.xml><script>(function(e,t,n,s,o){e[s]=e[s]||[],e[s].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var a=t.getElementsByTagName(n)[0],i=t.createElement(n),r=s!="dataLayer"?"&l="+s:"";i.async=!0,i.src="https://www.googletagmanager.com/gtm.js?id="+o+r,a.parentNode.insertBefore(i,a)})(window,document,"script","dataLayer","GT-NMCCH26J")</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPRP3JDSK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KEPRP3JDSK")</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563231513969804" crossorigin=anonymous></script><style>:root{--accent-color:#3b82f6;--accent-color-light:#dbeafe;--accent-color-dark:#1d4ed8;--card-background:#ffffff;--card-text-color-main:#1f2937;--card-text-color-secondary:#6b7280;--card-text-color-tertiary:#9ca3af;--card-separator-color:#e5e7eb;--card-border-radius:8px;--success-color:#10b981;--error-color:#ef4444;--warning-color:#f59e0b;--info-color:#3b82f6}@media(prefers-color-scheme:dark){:root{--card-background:#1f2937;--card-text-color-main:#f3f4f6;--card-text-color-secondary:#d1d5db;--card-text-color-tertiary:#9ca3af;--card-separator-color:#374151}}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;line-height:1.6;color:#1f2937;background-color:#f9fafb}.container{max-width:1200px;margin:0 auto;padding:0 20px}header{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}.header-content{display:flex;justify-content:space-between;align-items:center;padding:15px 0}.logo{font-size:1.5rem;font-weight:700;color:#3b82f6;text-decoration:none}nav ul{display:flex;list-style:none;gap:2rem}nav a{color:#6b7280;text-decoration:none;font-weight:500;transition:color .2s}nav a:hover{color:#3b82f6}main{min-height:calc(100vh - 200px);padding:20px 0}footer{background:#1f2937;color:#d1d5db;text-align:center;padding:40px 0;margin-top:60px}.footer-content{max-width:1200px;margin:0 auto;padding:0 20px}.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:20px}.footer-links a{color:#9ca3af;text-decoration:none;transition:color .2s}.footer-links a:hover{color:#d1d5db}@media(max-width:768px){.header-content{flex-direction:column;gap:15px}nav ul{gap:1rem}.footer-links{flex-direction:column;gap:1rem}}@media(prefers-color-scheme:dark){body{background-color:#111827;color:#f3f4f6}header{background:#1f2937}nav a{color:#d1d5db}nav a:hover{color:#60a5fa}}</style></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-NMCCH26J" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript><header><div class=container><div class=header-content><a href=/ class=logo style=display:inline-flex;align-items:center;gap:8px><img src=/images/kabu-nip-icon.png alt=カブニップ style=height:32px;width:32px;border-radius:50%>株価アート - Stock Analysis Dashboard</a><nav><ul><li><a href=/>ダッシュボード</a></li><li><a href=/stocks/>銘柄一覧</a></li><li><a href=/post/>記事</a></li><li><a href=/tools/>ツール</a></li><li><a href=/about/>このサイトについて</a></li></ul></nav></div></div></header><main><div class=container><div class=stocks-container><header class=stocks-header><div class=stocks-title><h1>📊 株式一覧</h1><div class=stocks-count id=stocks-count>読込中...</div></div><div class=stocks-controls><div class=search-box><input type=text id=stock-search placeholder=銘柄名・ティッカーで検索>
-<button type=button class=search-clear id=search-clear>×</button></div><div class=filter-controls><select id=market-filter><option value=all>全市場</option><option value=JP>🇯🇵 日本</option><option value=US>🇺🇸 米国</option><option value=ETF>📈 ETF</option></select>
-<select id=tier-filter><option value=all>全銘柄</option><option value=core>⭐ Core銘柄</option><option value=active>🔄 Active銘柄</option></select>
-<select id=sort-by><option value=symbol>ティッカー順</option><option value=name>銘柄名順</option><option value=price>価格順</option><option value=change>変化額順</option><option value=pct>変化率順</option><option value=volume>出来高順</option><option value=confidence>予測信頼度順</option></select>
-<button type=button id=sort-direction class=sort-toggle title=ソート順序>
-↓ 降順</button></div></div></header><div class=results-summary id=results-summary><div class=summary-stats>表示中: <span id=visible-count>0</span> / <span id=total-count>0</span> 銘柄</div><div class=last-updated id=stocks-updated>更新時刻: 読込中...</div></div><div class=stocks-table-container><table class=stocks-table id=stocks-table><thead><tr><th class=sortable data-sort=symbol>ティッカー</th><th class=sortable data-sort=name>銘柄名</th><th class=sortable data-sort=market>市場</th><th class="sortable number" data-sort=price>価格</th><th class="sortable number" data-sort=change>変化額</th><th class="sortable number" data-sort=pct>変化率</th><th class="sortable number" data-sort=volume>出来高</th><th class=tier-col>区分</th><th class=judgment-col>中長期判定</th><th>操作</th></tr></thead><tbody id=stocks-tbody><tr><td colspan=9 class=loading-cell><div class=loading-spinner>読込中...</div></td></tr></tbody></table></div><div class=pagination-container id=pagination-container><div class=pagination-info id=pagination-info></div><div class=pagination-controls id=pagination-controls></div></div></div><style>.stocks-container{max-width:1400px;margin:0 auto;padding:20px}.stocks-header{margin-bottom:20px}.stocks-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.stocks-title h1{margin:0;font-size:1.8rem;color:var(--card-text-color-main)}.stocks-count{font-size:.9rem;color:var(--card-text-color-secondary);background:var(--accent-color-light);padding:4px 12px;border-radius:16px}.stocks-controls{display:grid;grid-template-columns:300px 1fr;gap:20px;align-items:end}.search-box{position:relative}.search-box input{width:100%;padding:10px 35px 10px 12px;border:1px solid var(--card-separator-color);border-radius:6px;font-size:.9rem;background:var(--card-background);color:var(--card-text-color-main)}.search-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:0 0;border:none;cursor:pointer;color:var(--card-text-color-tertiary);font-size:1.2rem;width:20px;height:20px;display:none}.search-clear.active{display:block}.filter-controls{display:flex;gap:12px;align-items:center}.filter-controls select{padding:8px 12px;border:1px solid var(--card-separator-color);border-radius:6px;background:var(--card-background);color:var(--card-text-color-main);font-size:.9rem}.sort-toggle{padding:8px 12px;border:1px solid var(--card-separator-color);border-radius:6px;background:var(--card-background);color:var(--card-text-color-main);cursor:pointer;font-size:.9rem}.sort-toggle:hover{background:var(--accent-color-light)}.results-summary{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--card-background);border:1px solid var(--card-separator-color);border-radius:6px;margin-bottom:16px;font-size:.9rem}.summary-stats{color:var(--card-text-color-main);font-weight:500}.last-updated{color:var(--card-text-color-secondary)}.stocks-table-container{background:var(--card-background);border-radius:8px;overflow:hidden;border:1px solid var(--card-separator-color);margin-bottom:20px}.stocks-table{width:100%;border-collapse:collapse;font-size:.9rem}.stocks-table thead{background:var(--accent-color-light);border-bottom:1px solid var(--card-separator-color)}.stocks-table th{padding:12px 8px;text-align:left;font-weight:600;color:var(--card-text-color-main);border-right:1px solid var(--card-separator-color)}.stocks-table th.number{text-align:right}.stocks-table th.sortable{cursor:pointer;user-select:none;position:relative}.stocks-table th.sortable:hover{background:var(--accent-color);color:#fff}.stocks-table tbody tr{border-bottom:1px solid var(--card-separator-color);cursor:pointer;transition:background-color .2s ease}.stocks-table tbody tr:hover{background:var(--accent-color-light)}.stocks-table td{padding:10px 8px;border-right:1px solid var(--card-separator-color)}.stocks-table td.number{text-align:right;font-family:monospace}.stocks-table td:last-child{border-right:none}.stock-symbol{font-family:monospace;font-weight:600;color:var(--accent-color)}.stock-name{color:var(--card-text-color-main)}.market-badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.8rem;font-weight:500}.market-badge.JP{background:#e3f2fd;color:#1976d2}.market-badge.US{background:#f3e5f5;color:#7b1fa2}.market-badge.ETF{background:#e8f5e8;color:#388e3c}.price-change{font-weight:500}.price-change.positive{color:var(--success-color)}.price-change.negative{color:var(--error-color)}.price-change.neutral{color:var(--card-text-color-tertiary)}.tier-badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.75rem;font-weight:500}.tier-badge.core{background:#ffd54f;color:#f57f17}.tier-badge.active{background:#e1f5fe;color:#0277bd}.action-buttons{display:flex;gap:4px}.btn-mini{padding:4px 8px;font-size:.75rem;border-radius:4px;text-decoration:none;background:var(--accent-color);color:#fff;transition:background-color .2s ease}.btn-mini:hover{background:var(--accent-color-dark)}.btn-watchlist{background:0 0;color:var(--card-text-color-tertiary);border:1px solid var(--card-separator-color)}.btn-watchlist.active{background:var(--warning-color);color:#fff;border-color:var(--warning-color)}.pagination-container{display:flex;justify-content:space-between;align-items:center;padding:16px 0}.pagination-controls{display:flex;gap:8px;align-items:center}.pagination-btn{padding:8px 12px;border:1px solid var(--card-separator-color);background:var(--card-background);color:var(--card-text-color-main);text-decoration:none;border-radius:4px;transition:all .2s ease}.pagination-btn:hover{background:var(--accent-color);color:#fff}.pagination-btn.active{background:var(--accent-color);color:#fff}.pagination-btn:disabled{opacity:.5;cursor:not-allowed}.loading-cell{text-align:center;padding:40px;color:var(--card-text-color-secondary)}.loading-spinner::after{content:'';display:inline-block;width:20px;height:20px;border:2px solid var(--card-separator-color);border-radius:50%;border-top-color:var(--accent-color);animation:spin 1s linear infinite;margin-left:8px}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:1024px){.stocks-controls{grid-template-columns:1fr;gap:12px}.filter-controls{flex-wrap:wrap}.tier-col{display:none}.stocks-table td:nth-child(8){display:none}}@media(max-width:768px){.stocks-container{padding:15px}.stocks-title{flex-direction:column;align-items:flex-start;gap:8px}.results-summary{flex-direction:column;align-items:flex-start;gap:8px}.stocks-table-container{overflow-x:auto}.stocks-table{min-width:800px}}</style><script src="/js/stocks-list.js?v=20250916-0204" defer></script></div></main><footer><div class=footer-content><div class=footer-links><a href=/post/>記事一覧</a>
-<a href=/categories/>カテゴリ</a>
-<a href=/tags/>タグ</a>
-<a href=https://stock-kabu3.com/index.xml>RSS</a></div><p>&copy; 2026 株価アート - Stock Analysis Dashboard. All rights reserved.</p><p style=margin-top:10px;font-size:.9rem;color:#9ca3af>株価データは参考情報です。投資判断は自己責任でお願いします。</p></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式一覧 | 株価アート - Stock Analysis Dashboard</title>
+    <meta name="description" content="200銘柄の株価・予測・指標を一覧表示">
+    <meta name="keywords" content="株価,投資,分析,ダッシュボード,日経平均,チャート">
+    <meta name="author" content="stockaaa76-art">
+    
+    <meta name="google-adsense-account" content="ca-pub-8563231513969804">
+    
+    
+    <meta property="og:title" content="株式一覧">
+    <meta property="og:description" content="200銘柄の株価・予測・指標を一覧表示">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stock-kabu3.com/stocks/">
+    <meta property="og:site_name" content="株価アート - Stock Analysis Dashboard">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="株式一覧">
+    <meta name="twitter:description" content="200銘柄の株価・予測・指標を一覧表示">
+    
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/images/kabu-nip-icon.png">
+    <meta property="og:image" content="https://stock-kabu3.com/images/kabu-nip-icon.png">
+    
+    
+    <link rel="stylesheet" href="/app.css">
+    
+    
+    <link rel="canonical" href="https://stock-kabu3.com/stocks/">
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="株価アート - Stock Analysis Dashboard" href="https://stock-kabu3.com/index.xml">
+    
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GT-NMCCH26J');</script>
+    
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPRP3JDSK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KEPRP3JDSK');
+    </script>
+    
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563231513969804"
+            crossorigin="anonymous"></script>
+    
+    <style>
+         
+        :root {
+            --accent-color: #3b82f6;
+            --accent-color-light: #dbeafe;
+            --accent-color-dark: #1d4ed8;
+            
+            --card-background: #ffffff;
+            --card-text-color-main: #1f2937;
+            --card-text-color-secondary: #6b7280;
+            --card-text-color-tertiary: #9ca3af;
+            --card-separator-color: #e5e7eb;
+            --card-border-radius: 8px;
+            
+            --success-color: #10b981;
+            --error-color: #ef4444;
+            --warning-color: #f59e0b;
+            --info-color: #3b82f6;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --card-background: #1f2937;
+                --card-text-color-main: #f3f4f6;
+                --card-text-color-secondary: #d1d5db;
+                --card-text-color-tertiary: #9ca3af;
+                --card-separator-color: #374151;
+            }
+        }
+        
+         
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: #3b82f6;
+        }
+        
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 20px 0;
+        }
+        
+        footer {
+            background: #1f2937;
+            color: #d1d5db;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: #d1d5db;
+        }
+        
+         
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+         
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #111827;
+                color: #f3f4f6;
+            }
+            
+            header {
+                background: #1f2937;
+            }
+            
+            nav a {
+                color: #d1d5db;
+            }
+            
+            nav a:hover {
+                color: #60a5fa;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-NMCCH26J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:8px;"><img src="/images/kabu-nip-icon.png" alt="カブニップ" style="height:32px;width:32px;border-radius:50%;">株価アート - Stock Analysis Dashboard</a>
+                <nav>
+                    <ul>
+                        
+                        <li><a href="/">ダッシュボード</a></li>
+                        
+                        <li><a href="/stocks/">銘柄一覧</a></li>
+                        
+                        <li><a href="/post/">記事</a></li>
+                        
+                        <li><a href="/tools/">ツール</a></li>
+                        
+                        <li><a href="/about/">このサイトについて</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+<div class="stocks-container">
+    
+    <header class="stocks-header">
+        <div class="stocks-title">
+            <h1>📊 株式一覧</h1>
+            <div class="stocks-count" id="stocks-count">
+                読込中...
+            </div>
+        </div>
+        
+        
+        <div class="stocks-controls">
+            <div class="search-box">
+                <input type="text" id="stock-search" placeholder="銘柄名・ティッカーで検索" />
+                <button type="button" class="search-clear" id="search-clear">×</button>
+            </div>
+            
+            <div class="filter-controls">
+                <select id="market-filter">
+                    <option value="all">全市場</option>
+                    <option value="JP">🇯🇵 日本</option>
+                    <option value="US">🇺🇸 米国</option>
+                    <option value="ETF">📈 ETF</option>
+                </select>
+                
+                <select id="tier-filter">
+                    <option value="all">全銘柄</option>
+                    <option value="core">⭐ Core銘柄</option>
+                    <option value="active">🔄 Active銘柄</option>
+                </select>
+                
+                <select id="sort-by">
+                    <option value="symbol">ティッカー順</option>
+                    <option value="name">銘柄名順</option>
+                    <option value="price">価格順</option>
+                    <option value="change">変化額順</option>
+                    <option value="pct">変化率順</option>
+                    <option value="volume">出来高順</option>
+                    <option value="confidence">予測信頼度順</option>
+                </select>
+                
+                <button type="button" id="sort-direction" class="sort-toggle" title="ソート順序">
+                    ↓ 降順
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="results-summary" id="results-summary">
+        <div class="summary-stats">
+            表示中: <span id="visible-count">0</span> / <span id="total-count">0</span> 銘柄
+        </div>
+        <div class="last-updated" id="stocks-updated">
+            更新時刻: 読込中...
+        </div>
+    </div>
+
+    
+    <div class="stocks-table-container">
+        <table class="stocks-table" id="stocks-table">
+            <thead>
+                <tr>
+                    <th class="sortable" data-sort="symbol">ティッカー</th>
+                    <th class="sortable" data-sort="name">銘柄名</th>
+                    <th class="sortable" data-sort="market">市場</th>
+                    <th class="sortable number" data-sort="price">価格</th>
+                    <th class="sortable number" data-sort="change">変化額</th>
+                    <th class="sortable number" data-sort="pct">変化率</th>
+                    <th class="sortable number" data-sort="volume">出来高</th>
+                    <th class="tier-col">区分</th>
+                    <th class="judgment-col">中長期判定</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="stocks-tbody">
+                <tr>
+                    <td colspan="9" class="loading-cell">
+                        <div class="loading-spinner">読込中...</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <div class="pagination-container" id="pagination-container">
+        <div class="pagination-info" id="pagination-info">
+            
+        </div>
+        <div class="pagination-controls" id="pagination-controls">
+            
+        </div>
+    </div>
+</div>
+
+<style>
+ 
+.stocks-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.stocks-header {
+    margin-bottom: 20px;
+}
+
+.stocks-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.stocks-title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--card-text-color-main);
+}
+
+.stocks-count {
+    font-size: 0.9rem;
+    color: var(--card-text-color-secondary);
+    background: var(--accent-color-light);
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+
+ 
+.stocks-controls {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    align-items: end;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 35px 10px 12px;
+    border: 1px solid var(--card-separator-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background: var(--card-background);
+    color: var(--card-text-color-main);
+}
+
+.search-clear {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--card-text-color-tertiary);
+    font-size: 1.2rem;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+.search-clear.active {
+    display: block;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.filter-controls select {
+    padding: 8px 12px;
+    border: 1px solid var(--card-separator-color);
+    border-radius: 6px;
+    background: var(--card-background);
+    color: var(--card-text-color-main);
+    font-size: 0.9rem;
+}
+
+.sort-toggle {
+    padding: 8px 12px;
+    border: 1px solid var(--card-separator-color);
+    border-radius: 6px;
+    background: var(--card-background);
+    color: var(--card-text-color-main);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.sort-toggle:hover {
+    background: var(--accent-color-light);
+}
+
+ 
+.results-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--card-background);
+    border: 1px solid var(--card-separator-color);
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.summary-stats {
+    color: var(--card-text-color-main);
+    font-weight: 500;
+}
+
+.last-updated {
+    color: var(--card-text-color-secondary);
+}
+
+ 
+.stocks-table-container {
+    background: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--card-separator-color);
+    margin-bottom: 20px;
+}
+
+.stocks-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.stocks-table thead {
+    background: var(--accent-color-light);
+    border-bottom: 1px solid var(--card-separator-color);
+}
+
+.stocks-table th {
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--card-text-color-main);
+    border-right: 1px solid var(--card-separator-color);
+}
+
+.stocks-table th.number {
+    text-align: right;
+}
+
+.stocks-table th.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.stocks-table th.sortable:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.stocks-table tbody tr {
+    border-bottom: 1px solid var(--card-separator-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.stocks-table tbody tr:hover {
+    background: var(--accent-color-light);
+}
+
+.stocks-table td {
+    padding: 10px 8px;
+    border-right: 1px solid var(--card-separator-color);
+}
+
+.stocks-table td.number {
+    text-align: right;
+    font-family: monospace;
+}
+
+.stocks-table td:last-child {
+    border-right: none;
+}
+
+ 
+.stock-symbol {
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.stock-name {
+    color: var(--card-text-color-main);
+}
+
+ 
+.market-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.market-badge.JP {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.market-badge.US {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.market-badge.ETF {
+    background: #e8f5e8;
+    color: #388e3c;
+}
+
+ 
+.price-change {
+    font-weight: 500;
+}
+
+.price-change.positive { color: var(--success-color); }
+.price-change.negative { color: var(--error-color); }
+.price-change.neutral { color: var(--card-text-color-tertiary); }
+
+ 
+.tier-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.tier-badge.core {
+    background: #ffd54f;
+    color: #f57f17;
+}
+
+.tier-badge.active {
+    background: #e1f5fe;
+    color: #0277bd;
+}
+
+ 
+.action-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.btn-mini {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    background: var(--accent-color);
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn-mini:hover {
+    background: var(--accent-color-dark);
+}
+
+.btn-watchlist {
+    background: transparent;
+    color: var(--card-text-color-tertiary);
+    border: 1px solid var(--card-separator-color);
+}
+
+.btn-watchlist.active {
+    background: var(--warning-color);
+    color: white;
+    border-color: var(--warning-color);
+}
+
+ 
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pagination-btn {
+    padding: 8px 12px;
+    border: 1px solid var(--card-separator-color);
+    background: var(--card-background);
+    color: var(--card-text-color-main);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.pagination-btn:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.pagination-btn.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+ 
+.loading-cell {
+    text-align: center;
+    padding: 40px;
+    color: var(--card-text-color-secondary);
+}
+
+.loading-spinner::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--card-separator-color);
+    border-radius: 50%;
+    border-top-color: var(--accent-color);
+    animation: spin 1s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+ 
+@media (max-width: 1024px) {
+    .stocks-controls {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .filter-controls {
+        flex-wrap: wrap;
+    }
+    
+    .tier-col {
+        display: none;
+    }
+    
+    .stocks-table td:nth-child(8) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .stocks-container {
+        padding: 15px;
+    }
+    
+    .stocks-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .results-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .stocks-table-container {
+        overflow-x: auto;
+    }
+    
+    .stocks-table {
+        min-width: 800px;
+    }
+}
+</style>
+
+<script src="/js/stocks-list.js?v=20250916-0204" defer></script>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/post/">記事一覧</a>
+                <a href="/categories/">カテゴリ</a>
+                <a href="/tags/">タグ</a>
+                <a href="https://stock-kabu3.com/index.xml">RSS</a>
+            </div>
+            <p>&copy; 2026 株価アート - Stock Analysis Dashboard. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #9ca3af;">
+                株価データは参考情報です。投資判断は自己責任でお願いします。
+            </p>
+        </div>
+    </footer>
+
+    
+    
+</body>
+</html>

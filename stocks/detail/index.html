@@ -1,22 +1,986 @@
-<!doctype html><html lang=ja><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>銘柄詳細 | 株価アート - Stock Analysis Dashboard</title><meta name=description content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析"><meta name=keywords content="株価,投資,分析,ダッシュボード,日経平均,チャート"><meta name=author content="stockaaa76-art"><meta name=google-adsense-account content="ca-pub-8563231513969804"><meta property="og:title" content="銘柄詳細"><meta property="og:description" content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析"><meta property="og:type" content="website"><meta property="og:url" content="https://stock-kabu3.com/stocks/detail/"><meta property="og:site_name" content="株価アート - Stock Analysis Dashboard"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="銘柄詳細"><meta name=twitter:description content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析"><link rel=icon type=image/png href=/favicon.png><link rel=apple-touch-icon href=/images/kabu-nip-icon.png><meta property="og:image" content="https://stock-kabu3.com/images/kabu-nip-icon.png"><link rel=stylesheet href=/app.css><link rel=canonical href=https://stock-kabu3.com/stocks/detail/><link rel=alternate type=application/rss+xml title="株価アート - Stock Analysis Dashboard" href=https://stock-kabu3.com/index.xml><script>(function(e,t,n,s,o){e[s]=e[s]||[],e[s].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var a=t.getElementsByTagName(n)[0],i=t.createElement(n),r=s!="dataLayer"?"&l="+s:"";i.async=!0,i.src="https://www.googletagmanager.com/gtm.js?id="+o+r,a.parentNode.insertBefore(i,a)})(window,document,"script","dataLayer","GT-NMCCH26J")</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPRP3JDSK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KEPRP3JDSK")</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563231513969804" crossorigin=anonymous></script><style>:root{--accent-color:#3b82f6;--accent-color-light:#dbeafe;--accent-color-dark:#1d4ed8;--card-background:#ffffff;--card-text-color-main:#1f2937;--card-text-color-secondary:#6b7280;--card-text-color-tertiary:#9ca3af;--card-separator-color:#e5e7eb;--card-border-radius:8px;--success-color:#10b981;--error-color:#ef4444;--warning-color:#f59e0b;--info-color:#3b82f6}@media(prefers-color-scheme:dark){:root{--card-background:#1f2937;--card-text-color-main:#f3f4f6;--card-text-color-secondary:#d1d5db;--card-text-color-tertiary:#9ca3af;--card-separator-color:#374151}}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;line-height:1.6;color:#1f2937;background-color:#f9fafb}.container{max-width:1200px;margin:0 auto;padding:0 20px}header{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}.header-content{display:flex;justify-content:space-between;align-items:center;padding:15px 0}.logo{font-size:1.5rem;font-weight:700;color:#3b82f6;text-decoration:none}nav ul{display:flex;list-style:none;gap:2rem}nav a{color:#6b7280;text-decoration:none;font-weight:500;transition:color .2s}nav a:hover{color:#3b82f6}main{min-height:calc(100vh - 200px);padding:20px 0}footer{background:#1f2937;color:#d1d5db;text-align:center;padding:40px 0;margin-top:60px}.footer-content{max-width:1200px;margin:0 auto;padding:0 20px}.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:20px}.footer-links a{color:#9ca3af;text-decoration:none;transition:color .2s}.footer-links a:hover{color:#d1d5db}@media(max-width:768px){.header-content{flex-direction:column;gap:15px}nav ul{gap:1rem}.footer-links{flex-direction:column;gap:1rem}}@media(prefers-color-scheme:dark){body{background-color:#111827;color:#f3f4f6}header{background:#1f2937}nav a{color:#d1d5db}nav a:hover{color:#60a5fa}}</style></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-NMCCH26J" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript><header><div class=container><div class=header-content><a href=/ class=logo style=display:inline-flex;align-items:center;gap:8px><img src=/images/kabu-nip-icon.png alt=カブニップ style=height:32px;width:32px;border-radius:50%>株価アート - Stock Analysis Dashboard</a><nav><ul><li><a href=/>ダッシュボード</a></li><li><a href=/stocks/>銘柄一覧</a></li><li><a href=/post/>記事</a></li><li><a href=/tools/>ツール</a></li><li><a href=/about/>このサイトについて</a></li></ul></nav></div></div></header><main><div class=container><div class=stock-detail-container id=stock-detail-container><div class=loading-overlay id=loading-overlay><div class=loading-content><div class=loading-spinner></div><p>銘柄データを読み込み中...</p></div></div><div class=error-overlay id=error-overlay style=display:none><div class=error-content><h2>❌ データ取得エラー</h2><p id=error-message>銘柄データの取得に失敗しました</p><div class=error-actions><button class=btn-primary onclick=location.reload()>再読み込み</button>
-<a href=/stocks/ class=btn-secondary>銘柄一覧に戻る</a></div></div></div><div class=stock-main-content id=stock-main-content style=display:none><header class=stock-header><div class=stock-title-section><div class=stock-breadcrumb><a href=/>ホーム</a> → <a href=/stocks/>銘柄一覧</a> → <span id=stock-symbol-breadcrumb>---</span></div><h1 class=stock-title><span class=stock-name id=stock-name>---</span>
-<span class=stock-symbol id=stock-symbol>---</span></h1><div class=stock-meta><span class=market-badge id=stock-market>---</span>
-<span class=tier-badge id=stock-tier>---</span>
-<span class=last-updated id=stock-updated>更新時刻: ---</span></div></div><div class=stock-actions><button class=btn-secondary id=watchlist-toggle>
-<span class=watchlist-icon>⭐</span>
-<span class=watchlist-text>ウォッチリスト</span>
-</button>
-<a href=/stocks/ class=btn-secondary>一覧に戻る</a></div></header><section class=price-section><div class=price-card><div class=current-price><span class=price-label>現在価格</span>
-<span class=price-value id=current-price>---</span></div><div class=price-change id=price-change><span class=change-value>---</span>
-<span class=change-percent>---</span></div><div id=judgment-badge-area style=margin-top:10px;display:none><span id=judgment-badge style="font-size:14px;font-weight:700;padding:5px 14px;border-radius:20px;display:inline-block"></span><div id=deviation-bar-area style=margin-top:8px><div style=font-size:11px;color:var(--card-text-color-secondary);margin-bottom:3px>25日乖離: <span id=deviation-25-val>---</span></div><div style=width:100%;height:6px;background:#e5e7eb;border-radius:3px;overflow:visible;position:relative><div style=position:absolute;left:50%;top:-2px;width:2px;height:10px;background:#9ca3af></div><div id=deviation-bar style="height:100%;border-radius:3px;transition:width .3s"></div></div><div style=display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-top:2px><span>-15%</span><span>0</span><span>+15%</span></div></div></div></div><div class=price-indicators><div class=indicator-item><span class=indicator-label>前日比</span>
-<span class=indicator-value id=prev-close>---</span></div><div class=indicator-item><span class=indicator-label>出来高</span>
-<span class=indicator-value id=volume>---</span></div><div class=indicator-item><span class=indicator-label>52週高値</span>
-<span class=indicator-value id=week52-high>---</span></div><div class=indicator-item><span class=indicator-label>52週安値</span>
-<span class=indicator-value id=week52-low>---</span></div></div></section><section class=chart-section><div class=chart-header><h3>📈 株価チャート</h3><div class=chart-controls><button class="chart-period active" data-period=1d>1日</button>
-<button class=chart-period data-period=1w>1週間</button>
-<button class=chart-period data-period=1m>1ヶ月</button>
-<button class=chart-period data-period=3m>3ヶ月</button>
-<button class=chart-period data-period=1y>1年</button></div></div><div class=chart-container><canvas id=price-chart width=800 height=400></canvas></div></section><section class=prediction-section><div class=section-header><h3>🔮 AI予測</h3><div class=prediction-disclaimer><small>※予測は参考情報です。投資判断は自己責任で行ってください</small></div></div><div class=predictions-container id=predictions-container><div class=prediction-card><h4>アンサンブル予測</h4><div class=prediction-value id=ensemble-prediction>---</div><div class=prediction-confidence id=ensemble-confidence>信頼度: ---%</div></div><div class=prediction-methods><div class=method-card><h5>移動平均</h5><div class=method-prediction id=ma-prediction>---</div><div class=method-confidence id=ma-confidence>---%</div></div><div class=method-card><h5>線形回帰</h5><div class=method-prediction id=lr-prediction>---</div><div class=method-confidence id=lr-confidence>---%</div></div><div class=method-card><h5>モメンタム</h5><div class=method-prediction id=momentum-prediction>---</div><div class=method-confidence id=momentum-confidence>---%</div></div><div class=method-card><h5>ボリンジャー</h5><div class=method-prediction id=bb-prediction>---</div><div class=method-confidence id=bb-confidence>---%</div></div></div></div></section><section class=signal-section id=signal-section style=display:none><h3>📡 テクニカルシグナル</h3><div class=signal-summary id=signal-summary></div><div class=signal-grid id=signal-grid></div></section><section class=medium-long-section id=medium-long-section style=display:none><h3>📅 中長期判断</h3><div class=medium-long-action id=medium-long-action></div><div class=medium-long-grid id=medium-long-grid></div></section><section class=indicators-section><h3>📊 テクニカル指標</h3><div class=indicators-grid><div class=indicator-card><h4>RSI</h4><div class=indicator-value id=rsi-value>---</div><div class=indicator-bar><div class=indicator-progress id=rsi-bar></div></div></div><div class=indicator-card><h4>移動平均（20日）</h4><div class=indicator-value id=ma20-value>---</div><div class=indicator-signal id=ma20-signal>---</div></div><div class=indicator-card><h4>ボリンジャーバンド</h4><div class=indicator-value id=bb-position>---</div><div class=indicator-signal id=bb-signal>---</div></div><div class=indicator-card><h4>ボラティリティ</h4><div class=indicator-value id=volatility-value>---</div><div class=indicator-signal id=volatility-signal>---</div></div></div></section><section class=related-section><h3>🔗 関連銘柄</h3><div class=related-stocks id=related-stocks></div></section></div></div><style>.stock-detail-container{max-width:1200px;margin:0 auto;padding:20px;position:relative}.loading-overlay,.error-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;z-index:1000}.loading-content,.error-content{text-align:center;padding:40px}.loading-spinner{width:50px;height:50px;border:4px solid var(--card-separator-color);border-top:4px solid var(--accent-color);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}@keyframes spin{to{transform:rotate(360deg)}}.error-actions{display:flex;gap:12px;justify-content:center;margin-top:20px}.stock-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--card-separator-color)}.stock-breadcrumb{font-size:.9rem;color:var(--card-text-color-secondary);margin-bottom:8px}.stock-breadcrumb a{color:var(--accent-color);text-decoration:none}.stock-title{display:flex;align-items:baseline;gap:12px;margin:0 0 12px;font-size:1.8rem;color:var(--card-text-color-main)}.stock-symbol{font-family:monospace;color:var(--accent-color);font-size:1.2rem;font-weight:400}.stock-meta{display:flex;align-items:center;gap:12px}.stock-actions{display:flex;gap:12px;align-items:flex-start}.watchlist-toggle{display:flex;align-items:center;gap:6px}.watchlist-toggle.active{background:var(--warning-color);color:#fff;border-color:var(--warning-color)}.price-section{display:grid;grid-template-columns:auto 1fr;gap:30px;margin-bottom:30px;padding:24px;background:var(--card-background);border-radius:var(--card-border-radius);border:1px solid var(--card-separator-color)}.price-card{display:flex;flex-direction:column;gap:12px}.current-price{display:flex;flex-direction:column;gap:4px}.price-label{font-size:.9rem;color:var(--card-text-color-secondary)}.price-value{font-size:3rem;font-weight:700;color:var(--card-text-color-main);line-height:1}.price-change{display:flex;align-items:center;gap:12px;font-size:1.2rem;font-weight:600}.price-change.positive{color:var(--success-color)}.price-change.negative{color:var(--error-color)}.price-change.neutral{color:var(--card-text-color-tertiary)}.price-indicators{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.indicator-item{display:flex;flex-direction:column;gap:4px}.indicator-label{font-size:.8rem;color:var(--card-text-color-secondary)}.indicator-value{font-weight:600;color:var(--card-text-color-main);font-family:monospace}.chart-section{margin-bottom:30px;background:var(--card-background);border-radius:var(--card-border-radius);border:1px solid var(--card-separator-color);padding:24px}.chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.chart-header h3{margin:0;color:var(--card-text-color-main)}.chart-controls{display:flex;gap:8px}.chart-period{padding:6px 12px;border:1px solid var(--card-separator-color);background:var(--card-background);color:var(--card-text-color-main);border-radius:4px;cursor:pointer;font-size:.9rem;transition:all .2s ease}.chart-period:hover,.chart-period.active{background:var(--accent-color);color:#fff;border-color:var(--accent-color)}.chart-container{position:relative;height:400px}.prediction-section{margin-bottom:30px;background:var(--card-background);border-radius:var(--card-border-radius);border:1px solid var(--card-separator-color);padding:24px}.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.section-header h3{margin:0;color:var(--card-text-color-main)}.prediction-disclaimer{color:var(--card-text-color-tertiary)}.predictions-container{display:grid;grid-template-columns:300px 1fr;gap:30px}.prediction-card{padding:20px;background:var(--accent-color-light);border-radius:8px;text-align:center}.prediction-card h4{margin:0 0 12px;color:var(--card-text-color-main)}.prediction-value{font-size:2rem;font-weight:700;color:var(--accent-color);margin-bottom:8px}.prediction-confidence{font-size:.9rem;color:var(--card-text-color-secondary)}.prediction-methods{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.method-card{padding:16px;background:var(--card-separator-color);border-radius:6px;text-align:center}.method-card h5{margin:0 0 8px;font-size:.9rem;color:var(--card-text-color-main)}.method-prediction{font-weight:700;color:var(--card-text-color-main);margin-bottom:4px}.method-confidence{font-size:.8rem;color:var(--card-text-color-secondary)}.signal-section{margin-bottom:30px;background:var(--card-background);border-radius:var(--card-border-radius);border:1px solid var(--card-separator-color);padding:24px}.signal-section h3{margin:0 0 16px;font-size:1.1rem}.signal-summary{margin-bottom:16px}.signal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.indicators-section{margin-bottom:30px;background:var(--card-background);border-radius:var(--card-border-radius);border:1px solid var(--card-separator-color);padding:24px}.indicators-section h3{margin:0 0 20px;color:var(--card-text-color-main)}.indicators-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}.indicator-card{padding:16px;background:var(--card-separator-color);border-radius:6px}.indicator-card h4{margin:0 0 8px;font-size:.9rem;color:var(--card-text-color-main)}.indicator-bar{width:100%;height:4px;background:var(--card-separator-color);border-radius:2px;overflow:hidden;margin-top:8px}.indicator-progress{height:100%;background:var(--accent-color);transition:width .3s ease}.indicator-signal{font-size:.8rem;color:var(--card-text-color-secondary);margin-top:4px}.medium-long-section{background:var(--card-background);border-radius:var(--card-border-radius);border:1px solid var(--card-separator-color);padding:24px;margin-bottom:24px}.medium-long-section h3{margin:0 0 16px;color:var(--card-text-color-main)}.medium-long-action{font-size:1.4rem;font-weight:700;padding:12px 20px;border-radius:8px;display:inline-block;margin-bottom:16px;background:var(--card-separator-color)}.medium-long-action.strong-buy{background:#d1fae5;color:#065f46}.medium-long-action.buy{background:#dbeafe;color:#1e40af}.medium-long-action.sell{background:#fef3c7;color:#92400e}.medium-long-action.strong-sell{background:#fee2e2;color:#991b1b}.medium-long-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.medium-long-card{padding:14px 16px;border-radius:8px;background:var(--card-separator-color);border-left:4px solid #d1d5db}.medium-long-card.buy{border-left-color:#10b981}.medium-long-card.sell{border-left-color:#ef4444}.medium-long-card-label{font-size:12px;color:var(--card-text-color-secondary);margin-bottom:4px}.medium-long-card-value{font-size:15px;font-weight:600;color:var(--card-text-color-main)}.medium-long-card-signal{font-size:12px;color:var(--card-text-color-secondary);margin-top:2px}.related-section{background:var(--card-background);border-radius:var(--card-border-radius);border:1px solid var(--card-separator-color);padding:24px}.related-section h3{margin:0 0 20px;color:var(--card-text-color-main)}.related-stocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.related-stock-card{padding:12px;background:var(--card-separator-color);border-radius:6px;cursor:pointer;transition:background-color .2s ease}.related-stock-card:hover{background:var(--accent-color-light)}@media(max-width:1024px){.predictions-container{grid-template-columns:1fr}.prediction-methods{grid-template-columns:1fr}.price-section{grid-template-columns:1fr;gap:20px}}@media(max-width:768px){.stock-header{flex-direction:column;gap:16px;align-items:flex-start}.stock-actions{width:100%;justify-content:space-between}.price-value{font-size:2.2rem}.chart-controls{flex-wrap:wrap}.indicators-grid{grid-template-columns:1fr}}</style><script src="/js/stock-detail.js?v=20260325b" defer></script></div></main><footer><div class=footer-content><div class=footer-links><a href=/post/>記事一覧</a>
-<a href=/categories/>カテゴリ</a>
-<a href=/tags/>タグ</a>
-<a href=https://stock-kabu3.com/index.xml>RSS</a></div><p>&copy; 2026 株価アート - Stock Analysis Dashboard. All rights reserved.</p><p style=margin-top:10px;font-size:.9rem;color:#9ca3af>株価データは参考情報です。投資判断は自己責任でお願いします。</p></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>銘柄詳細 | 株価アート - Stock Analysis Dashboard</title>
+    <meta name="description" content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析">
+    <meta name="keywords" content="株価,投資,分析,ダッシュボード,日経平均,チャート">
+    <meta name="author" content="stockaaa76-art">
+    
+    <meta name="google-adsense-account" content="ca-pub-8563231513969804">
+    
+    
+    <meta property="og:title" content="銘柄詳細">
+    <meta property="og:description" content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stock-kabu3.com/stocks/detail/">
+    <meta property="og:site_name" content="株価アート - Stock Analysis Dashboard">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="銘柄詳細">
+    <meta name="twitter:description" content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析">
+    
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/images/kabu-nip-icon.png">
+    <meta property="og:image" content="https://stock-kabu3.com/images/kabu-nip-icon.png">
+    
+    
+    <link rel="stylesheet" href="/app.css">
+    
+    
+    <link rel="canonical" href="https://stock-kabu3.com/stocks/detail/">
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="株価アート - Stock Analysis Dashboard" href="https://stock-kabu3.com/index.xml">
+    
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GT-NMCCH26J');</script>
+    
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPRP3JDSK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KEPRP3JDSK');
+    </script>
+    
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563231513969804"
+            crossorigin="anonymous"></script>
+    
+    <style>
+         
+        :root {
+            --accent-color: #3b82f6;
+            --accent-color-light: #dbeafe;
+            --accent-color-dark: #1d4ed8;
+            
+            --card-background: #ffffff;
+            --card-text-color-main: #1f2937;
+            --card-text-color-secondary: #6b7280;
+            --card-text-color-tertiary: #9ca3af;
+            --card-separator-color: #e5e7eb;
+            --card-border-radius: 8px;
+            
+            --success-color: #10b981;
+            --error-color: #ef4444;
+            --warning-color: #f59e0b;
+            --info-color: #3b82f6;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --card-background: #1f2937;
+                --card-text-color-main: #f3f4f6;
+                --card-text-color-secondary: #d1d5db;
+                --card-text-color-tertiary: #9ca3af;
+                --card-separator-color: #374151;
+            }
+        }
+        
+         
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: #3b82f6;
+        }
+        
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 20px 0;
+        }
+        
+        footer {
+            background: #1f2937;
+            color: #d1d5db;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: #d1d5db;
+        }
+        
+         
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+         
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #111827;
+                color: #f3f4f6;
+            }
+            
+            header {
+                background: #1f2937;
+            }
+            
+            nav a {
+                color: #d1d5db;
+            }
+            
+            nav a:hover {
+                color: #60a5fa;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-NMCCH26J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:8px;"><img src="/images/kabu-nip-icon.png" alt="カブニップ" style="height:32px;width:32px;border-radius:50%;">株価アート - Stock Analysis Dashboard</a>
+                <nav>
+                    <ul>
+                        
+                        <li><a href="/">ダッシュボード</a></li>
+                        
+                        <li><a href="/stocks/">銘柄一覧</a></li>
+                        
+                        <li><a href="/post/">記事</a></li>
+                        
+                        <li><a href="/tools/">ツール</a></li>
+                        
+                        <li><a href="/about/">このサイトについて</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+<div class="stock-detail-container" id="stock-detail-container">
+    
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>銘柄データを読み込み中...</p>
+        </div>
+    </div>
+
+    
+    <div class="error-overlay" id="error-overlay" style="display: none;">
+        <div class="error-content">
+            <h2>❌ データ取得エラー</h2>
+            <p id="error-message">銘柄データの取得に失敗しました</p>
+            <div class="error-actions">
+                <button class="btn-primary" onclick="location.reload()">再読み込み</button>
+                <a href="/stocks/" class="btn-secondary">銘柄一覧に戻る</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="stock-main-content" id="stock-main-content" style="display: none;">
+        
+        <header class="stock-header">
+            <div class="stock-title-section">
+                <div class="stock-breadcrumb">
+                    <a href="/">ホーム</a> → <a href="/stocks/">銘柄一覧</a> → <span id="stock-symbol-breadcrumb">---</span>
+                </div>
+                <h1 class="stock-title">
+                    <span class="stock-name" id="stock-name">---</span>
+                    <span class="stock-symbol" id="stock-symbol">---</span>
+                </h1>
+                <div class="stock-meta">
+                    <span class="market-badge" id="stock-market">---</span>
+                    <span class="tier-badge" id="stock-tier">---</span>
+                    <span class="last-updated" id="stock-updated">更新時刻: ---</span>
+                </div>
+            </div>
+            <div class="stock-actions">
+                <button class="btn-secondary" id="watchlist-toggle">
+                    <span class="watchlist-icon">⭐</span>
+                    <span class="watchlist-text">ウォッチリスト</span>
+                </button>
+                <a href="/stocks/" class="btn-secondary">一覧に戻る</a>
+            </div>
+        </header>
+
+        
+        <section class="price-section">
+            <div class="price-card">
+                <div class="current-price">
+                    <span class="price-label">現在価格</span>
+                    <span class="price-value" id="current-price">---</span>
+                </div>
+                <div class="price-change" id="price-change">
+                    <span class="change-value">---</span>
+                    <span class="change-percent">---</span>
+                </div>
+                <div id="judgment-badge-area" style="margin-top:10px;display:none;">
+                    <span id="judgment-badge" style="font-size:14px;font-weight:700;padding:5px 14px;border-radius:20px;display:inline-block;"></span>
+                    <div id="deviation-bar-area" style="margin-top:8px;">
+                        <div style="font-size:11px;color:var(--card-text-color-secondary);margin-bottom:3px;">
+                            25日乖離: <span id="deviation-25-val">---</span>
+                        </div>
+                        <div style="width:100%;height:6px;background:#e5e7eb;border-radius:3px;overflow:visible;position:relative;">
+                            <div style="position:absolute;left:50%;top:-2px;width:2px;height:10px;background:#9ca3af;"></div>
+                            <div id="deviation-bar" style="height:100%;border-radius:3px;transition:width 0.3s;"></div>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-top:2px;">
+                            <span>-15%</span><span>0</span><span>+15%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="price-indicators">
+                <div class="indicator-item">
+                    <span class="indicator-label">前日比</span>
+                    <span class="indicator-value" id="prev-close">---</span>
+                </div>
+                <div class="indicator-item">
+                    <span class="indicator-label">出来高</span>
+                    <span class="indicator-value" id="volume">---</span>
+                </div>
+                <div class="indicator-item">
+                    <span class="indicator-label">52週高値</span>
+                    <span class="indicator-value" id="week52-high">---</span>
+                </div>
+                <div class="indicator-item">
+                    <span class="indicator-label">52週安値</span>
+                    <span class="indicator-value" id="week52-low">---</span>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="chart-section">
+            <div class="chart-header">
+                <h3>📈 株価チャート</h3>
+                <div class="chart-controls">
+                    <button class="chart-period active" data-period="1d">1日</button>
+                    <button class="chart-period" data-period="1w">1週間</button>
+                    <button class="chart-period" data-period="1m">1ヶ月</button>
+                    <button class="chart-period" data-period="3m">3ヶ月</button>
+                    <button class="chart-period" data-period="1y">1年</button>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="price-chart" width="800" height="400"></canvas>
+            </div>
+        </section>
+
+        
+        <section class="prediction-section">
+            <div class="section-header">
+                <h3>🔮 AI予測</h3>
+                <div class="prediction-disclaimer">
+                    <small>※予測は参考情報です。投資判断は自己責任で行ってください</small>
+                </div>
+            </div>
+            
+            <div class="predictions-container" id="predictions-container">
+                
+                <div class="prediction-card">
+                    <h4>アンサンブル予測</h4>
+                    <div class="prediction-value" id="ensemble-prediction">---</div>
+                    <div class="prediction-confidence" id="ensemble-confidence">信頼度: ---%</div>
+                </div>
+                
+                <div class="prediction-methods">
+                    <div class="method-card">
+                        <h5>移動平均</h5>
+                        <div class="method-prediction" id="ma-prediction">---</div>
+                        <div class="method-confidence" id="ma-confidence">---%</div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <h5>線形回帰</h5>
+                        <div class="method-prediction" id="lr-prediction">---</div>
+                        <div class="method-confidence" id="lr-confidence">---%</div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <h5>モメンタム</h5>
+                        <div class="method-prediction" id="momentum-prediction">---</div>
+                        <div class="method-confidence" id="momentum-confidence">---%</div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <h5>ボリンジャー</h5>
+                        <div class="method-prediction" id="bb-prediction">---</div>
+                        <div class="method-confidence" id="bb-confidence">---%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="signal-section" id="signal-section" style="display:none;">
+            <h3>📡 テクニカルシグナル</h3>
+            <div class="signal-summary" id="signal-summary"></div>
+            <div class="signal-grid" id="signal-grid"></div>
+        </section>
+
+        
+        <section class="medium-long-section" id="medium-long-section" style="display:none;">
+            <h3>📅 中長期判断</h3>
+            <div class="medium-long-action" id="medium-long-action"></div>
+            <div class="medium-long-grid" id="medium-long-grid"></div>
+        </section>
+
+        
+        <section class="indicators-section">
+            <h3>📊 テクニカル指標</h3>
+            <div class="indicators-grid">
+                <div class="indicator-card">
+                    <h4>RSI</h4>
+                    <div class="indicator-value" id="rsi-value">---</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-progress" id="rsi-bar"></div>
+                    </div>
+                </div>
+                
+                <div class="indicator-card">
+                    <h4>移動平均（20日）</h4>
+                    <div class="indicator-value" id="ma20-value">---</div>
+                    <div class="indicator-signal" id="ma20-signal">---</div>
+                </div>
+                
+                <div class="indicator-card">
+                    <h4>ボリンジャーバンド</h4>
+                    <div class="indicator-value" id="bb-position">---</div>
+                    <div class="indicator-signal" id="bb-signal">---</div>
+                </div>
+                
+                <div class="indicator-card">
+                    <h4>ボラティリティ</h4>
+                    <div class="indicator-value" id="volatility-value">---</div>
+                    <div class="indicator-signal" id="volatility-signal">---</div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="related-section">
+            <h3>🔗 関連銘柄</h3>
+            <div class="related-stocks" id="related-stocks">
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+<style>
+ 
+.stock-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+ 
+.loading-overlay, .error-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loading-content, .error-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--card-separator-color);
+    border-top: 4px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+ 
+.stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--card-separator-color);
+}
+
+.stock-breadcrumb {
+    font-size: 0.9rem;
+    color: var(--card-text-color-secondary);
+    margin-bottom: 8px;
+}
+
+.stock-breadcrumb a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.stock-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 12px 0;
+    font-size: 1.8rem;
+    color: var(--card-text-color-main);
+}
+
+.stock-symbol {
+    font-family: monospace;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.stock-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stock-actions {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.watchlist-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.watchlist-toggle.active {
+    background: var(--warning-color);
+    color: white;
+    border-color: var(--warning-color);
+}
+
+ 
+.price-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 24px;
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--card-separator-color);
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.current-price {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.price-label {
+    font-size: 0.9rem;
+    color: var(--card-text-color-secondary);
+}
+
+.price-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--card-text-color-main);
+    line-height: 1;
+}
+
+.price-change {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.price-change.positive { color: var(--success-color); }
+.price-change.negative { color: var(--error-color); }
+.price-change.neutral { color: var(--card-text-color-tertiary); }
+
+.price-indicators {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.indicator-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.indicator-label {
+    font-size: 0.8rem;
+    color: var(--card-text-color-secondary);
+}
+
+.indicator-value {
+    font-weight: 600;
+    color: var(--card-text-color-main);
+    font-family: monospace;
+}
+
+ 
+.chart-section {
+    margin-bottom: 30px;
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--card-separator-color);
+    padding: 24px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chart-header h3 {
+    margin: 0;
+    color: var(--card-text-color-main);
+}
+
+.chart-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.chart-period {
+    padding: 6px 12px;
+    border: 1px solid var(--card-separator-color);
+    background: var(--card-background);
+    color: var(--card-text-color-main);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.chart-period:hover, .chart-period.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+}
+
+ 
+.prediction-section {
+    margin-bottom: 30px;
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--card-separator-color);
+    padding: 24px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    margin: 0;
+    color: var(--card-text-color-main);
+}
+
+.prediction-disclaimer {
+    color: var(--card-text-color-tertiary);
+}
+
+.predictions-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+}
+
+.prediction-card {
+    padding: 20px;
+    background: var(--accent-color-light);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.prediction-card h4 {
+    margin: 0 0 12px 0;
+    color: var(--card-text-color-main);
+}
+
+.prediction-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+.prediction-confidence {
+    font-size: 0.9rem;
+    color: var(--card-text-color-secondary);
+}
+
+.prediction-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.method-card {
+    padding: 16px;
+    background: var(--card-separator-color);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.method-card h5 {
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+    color: var(--card-text-color-main);
+}
+
+.method-prediction {
+    font-weight: bold;
+    color: var(--card-text-color-main);
+    margin-bottom: 4px;
+}
+
+.method-confidence {
+    font-size: 0.8rem;
+    color: var(--card-text-color-secondary);
+}
+
+ 
+.signal-section {
+    margin-bottom: 30px;
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--card-separator-color);
+    padding: 24px;
+}
+.signal-section h3 { margin: 0 0 16px 0; font-size: 1.1rem; }
+.signal-summary { margin-bottom: 16px; }
+.signal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+.indicators-section {
+    margin-bottom: 30px;
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--card-separator-color);
+    padding: 24px;
+}
+
+.indicators-section h3 {
+    margin: 0 0 20px 0;
+    color: var(--card-text-color-main);
+}
+
+.indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.indicator-card {
+    padding: 16px;
+    background: var(--card-separator-color);
+    border-radius: 6px;
+}
+
+.indicator-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+    color: var(--card-text-color-main);
+}
+
+.indicator-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--card-separator-color);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.indicator-progress {
+    height: 100%;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.indicator-signal {
+    font-size: 0.8rem;
+    color: var(--card-text-color-secondary);
+    margin-top: 4px;
+}
+
+ 
+.medium-long-section {
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--card-separator-color);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.medium-long-section h3 { margin: 0 0 16px 0; color: var(--card-text-color-main); }
+.medium-long-action {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 16px;
+    background: var(--card-separator-color);
+}
+.medium-long-action.strong-buy { background: #d1fae5; color: #065f46; }
+.medium-long-action.buy        { background: #dbeafe; color: #1e40af; }
+.medium-long-action.sell       { background: #fef3c7; color: #92400e; }
+.medium-long-action.strong-sell{ background: #fee2e2; color: #991b1b; }
+.medium-long-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+.medium-long-card {
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: var(--card-separator-color);
+    border-left: 4px solid #d1d5db;
+}
+.medium-long-card.buy  { border-left-color: #10b981; }
+.medium-long-card.sell { border-left-color: #ef4444; }
+.medium-long-card-label { font-size: 12px; color: var(--card-text-color-secondary); margin-bottom: 4px; }
+.medium-long-card-value { font-size: 15px; font-weight: 600; color: var(--card-text-color-main); }
+.medium-long-card-signal { font-size: 12px; color: var(--card-text-color-secondary); margin-top: 2px; }
+
+ 
+.related-section {
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--card-separator-color);
+    padding: 24px;
+}
+
+.related-section h3 {
+    margin: 0 0 20px 0;
+    color: var(--card-text-color-main);
+}
+
+.related-stocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.related-stock-card {
+    padding: 12px;
+    background: var(--card-separator-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.related-stock-card:hover {
+    background: var(--accent-color-light);
+}
+
+ 
+@media (max-width: 1024px) {
+    .predictions-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .prediction-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .price-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stock-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    
+    .stock-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .price-value {
+        font-size: 2.2rem;
+    }
+    
+    .chart-controls {
+        flex-wrap: wrap;
+    }
+    
+    .indicators-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script src="/js/stock-detail.js?v=20260325b" defer></script>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/post/">記事一覧</a>
+                <a href="/categories/">カテゴリ</a>
+                <a href="/tags/">タグ</a>
+                <a href="https://stock-kabu3.com/index.xml">RSS</a>
+            </div>
+            <p>&copy; 2026 株価アート - Stock Analysis Dashboard. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #9ca3af;">
+                株価データは参考情報です。投資判断は自己責任でお願いします。
+            </p>
+        </div>
+    </footer>
+
+    
+    
+</body>
+</html>

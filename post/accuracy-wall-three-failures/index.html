@@ -1,22 +1,912 @@
-<!doctype html><html lang=ja><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】 | 株価アート - Stock Analysis Dashboard</title><meta name=description content="AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。"><meta name=keywords content="株価,投資,分析,ダッシュボード,日経平均,チャート"><meta name=author content="stockaaa76-art"><meta name=robots content="index, follow"><meta name=google-adsense-account content="ca-pub-8563231513969804"><meta property="og:title" content="精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】"><meta property="og:description" content="AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。"><meta property="og:type" content="website"><meta property="og:url" content="https://stock-kabu3.com/post/accuracy-wall-three-failures/"><meta property="og:site_name" content="株価アート - Stock Analysis Dashboard"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】"><meta name=twitter:description content="AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。"><link rel=icon type=image/png href=/favicon.png><link rel=apple-touch-icon href=/images/kabu-nip-icon.png><meta property="og:image" content="https://stock-kabu3.com/images/kabu-nip-icon.png"><link rel=stylesheet href=/app.css><link rel=canonical href=https://stock-kabu3.com/post/accuracy-wall-three-failures/><link rel=alternate type=application/rss+xml title="株価アート - Stock Analysis Dashboard" href=https://stock-kabu3.com/index.xml><script>(function(e,t,n,s,o){e[s]=e[s]||[],e[s].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var a=t.getElementsByTagName(n)[0],i=t.createElement(n),r=s!="dataLayer"?"&l="+s:"";i.async=!0,i.src="https://www.googletagmanager.com/gtm.js?id="+o+r,a.parentNode.insertBefore(i,a)})(window,document,"script","dataLayer","GT-NMCCH26J")</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPRP3JDSK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KEPRP3JDSK")</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563231513969804" crossorigin=anonymous></script><style>:root{--accent-color:#3b82f6;--accent-color-light:#dbeafe;--accent-color-dark:#1d4ed8;--card-background:#ffffff;--card-text-color-main:#1f2937;--card-text-color-secondary:#6b7280;--card-text-color-tertiary:#9ca3af;--card-separator-color:#e5e7eb;--card-border-radius:8px;--success-color:#10b981;--error-color:#ef4444;--warning-color:#f59e0b;--info-color:#3b82f6}@media(prefers-color-scheme:dark){:root{--card-background:#1f2937;--card-text-color-main:#f3f4f6;--card-text-color-secondary:#d1d5db;--card-text-color-tertiary:#9ca3af;--card-separator-color:#374151}}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;line-height:1.6;color:#1f2937;background-color:#f9fafb}.container{max-width:1200px;margin:0 auto;padding:0 20px}header{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}.header-content{display:flex;justify-content:space-between;align-items:center;padding:15px 0}.logo{font-size:1.5rem;font-weight:700;color:#3b82f6;text-decoration:none}nav ul{display:flex;list-style:none;gap:2rem}nav a{color:#6b7280;text-decoration:none;font-weight:500;transition:color .2s}nav a:hover{color:#3b82f6}main{min-height:calc(100vh - 200px);padding:20px 0}footer{background:#1f2937;color:#d1d5db;text-align:center;padding:40px 0;margin-top:60px}.footer-content{max-width:1200px;margin:0 auto;padding:0 20px}.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:20px}.footer-links a{color:#9ca3af;text-decoration:none;transition:color .2s}.footer-links a:hover{color:#d1d5db}@media(max-width:768px){.header-content{flex-direction:column;gap:15px}nav ul{gap:1rem}.footer-links{flex-direction:column;gap:1rem}}@media(prefers-color-scheme:dark){body{background-color:#111827;color:#f3f4f6}header{background:#1f2937}nav a{color:#d1d5db}nav a:hover{color:#60a5fa}}</style></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-NMCCH26J" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript><header><div class=container><div class=header-content><a href=/ class=logo style=display:inline-flex;align-items:center;gap:8px><img src=/images/kabu-nip-icon.png alt=カブニップ style=height:32px;width:32px;border-radius:50%>株価アート - Stock Analysis Dashboard</a><nav><ul><li><a href=/>ダッシュボード</a></li><li><a href=/stocks/>銘柄一覧</a></li><li><a href=/post/>記事</a></li><li><a href=/tools/>ツール</a></li><li><a href=/about/>このサイトについて</a></li></ul></nav></div></div></header><main><div class=container><div class=article-container><div class=article-main><header class=article-header><div class=article-meta><time datetime=2026-03-24>2026年3月24日</time></div><h1>精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】</h1><p class=article-description>AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。</p></header><article class=article-content><p><a href=/post/why-i-built-ai-prediction/>前回の第1話</a>では、なぜAI株価予測システムを作ろうと思ったかを書いた。</p><p>今回はその続き。「64.3%という数字を超えられない」という話だ。</p><h2 id=ある日の予測結果を見て固まった>ある日の予測結果を見て、固まった</h2><p>システムが稼働を始めてしばらく経った3月中旬のことだ。</p><p>その日の予測結果ログを開いた瞬間、目を疑った。</p><pre tabindex=0><code>3/16 → 3/17  正解率: 25.0%（8銘柄中2銘柄のみ正解）
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】 | 株価アート - Stock Analysis Dashboard</title>
+    <meta name="description" content="AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。">
+    <meta name="keywords" content="株価,投資,分析,ダッシュボード,日経平均,チャート">
+    <meta name="author" content="stockaaa76-art">
+    <meta name="robots" content="index, follow">
+    <meta name="google-adsense-account" content="ca-pub-8563231513969804">
+    
+    
+    <meta property="og:title" content="精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】">
+    <meta property="og:description" content="AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stock-kabu3.com/post/accuracy-wall-three-failures/">
+    <meta property="og:site_name" content="株価アート - Stock Analysis Dashboard">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】">
+    <meta name="twitter:description" content="AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。">
+    
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/images/kabu-nip-icon.png">
+    <meta property="og:image" content="https://stock-kabu3.com/images/kabu-nip-icon.png">
+    
+    
+    <link rel="stylesheet" href="/app.css">
+    
+    
+    <link rel="canonical" href="https://stock-kabu3.com/post/accuracy-wall-three-failures/">
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="株価アート - Stock Analysis Dashboard" href="https://stock-kabu3.com/index.xml">
+    
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GT-NMCCH26J');</script>
+    
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPRP3JDSK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KEPRP3JDSK');
+    </script>
+    
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563231513969804"
+            crossorigin="anonymous"></script>
+    
+    <style>
+         
+        :root {
+            --accent-color: #3b82f6;
+            --accent-color-light: #dbeafe;
+            --accent-color-dark: #1d4ed8;
+            
+            --card-background: #ffffff;
+            --card-text-color-main: #1f2937;
+            --card-text-color-secondary: #6b7280;
+            --card-text-color-tertiary: #9ca3af;
+            --card-separator-color: #e5e7eb;
+            --card-border-radius: 8px;
+            
+            --success-color: #10b981;
+            --error-color: #ef4444;
+            --warning-color: #f59e0b;
+            --info-color: #3b82f6;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --card-background: #1f2937;
+                --card-text-color-main: #f3f4f6;
+                --card-text-color-secondary: #d1d5db;
+                --card-text-color-tertiary: #9ca3af;
+                --card-separator-color: #374151;
+            }
+        }
+        
+         
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: #3b82f6;
+        }
+        
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 20px 0;
+        }
+        
+        footer {
+            background: #1f2937;
+            color: #d1d5db;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: #d1d5db;
+        }
+        
+         
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+         
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #111827;
+                color: #f3f4f6;
+            }
+            
+            header {
+                background: #1f2937;
+            }
+            
+            nav a {
+                color: #d1d5db;
+            }
+            
+            nav a:hover {
+                color: #60a5fa;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-NMCCH26J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:8px;"><img src="/images/kabu-nip-icon.png" alt="カブニップ" style="height:32px;width:32px;border-radius:50%;">株価アート - Stock Analysis Dashboard</a>
+                <nav>
+                    <ul>
+                        
+                        <li><a href="/">ダッシュボード</a></li>
+                        
+                        <li><a href="/stocks/">銘柄一覧</a></li>
+                        
+                        <li><a href="/post/">記事</a></li>
+                        
+                        <li><a href="/tools/">ツール</a></li>
+                        
+                        <li><a href="/about/">このサイトについて</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+<div class="article-container">
+    <div class="article-main">
+        
+        <header class="article-header">
+            <div class="article-meta">
+                <time datetime="2026-03-24">2026年3月24日</time>
+            </div>
+            <h1>精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】</h1>
+            
+            <p class="article-description">AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。</p>
+            
+        </header>
+
+        
+        <article class="article-content">
+            <p><a href="/post/why-i-built-ai-prediction/">前回の第1話</a>では、なぜAI株価予測システムを作ろうと思ったかを書いた。</p>
+<p>今回はその続き。「64.3%という数字を超えられない」という話だ。</p>
+<h2 id="ある日の予測結果を見て固まった">ある日の予測結果を見て、固まった</h2>
+<p>システムが稼働を始めてしばらく経った3月中旬のことだ。</p>
+<p>その日の予測結果ログを開いた瞬間、目を疑った。</p>
+<pre tabindex="0"><code>3/16 → 3/17  正解率: 25.0%（8銘柄中2銘柄のみ正解）
 3/17 → 3/18  正解率: 25.0%（8銘柄中2銘柄のみ正解）
-</code></pre><p><strong>2日連続で25%。</strong></p><p>コインを投げた方がましだ。50%を大きく下回っている。何かがおかしい。</p><p>慌ててその日の実際の値動きを調べた。</p><p>3月17日→18日。日経平均が<strong>53,700円から55,239円へ。一日で+1,539円、率にして+2.9%の急騰</strong>だった。</p><p>私のシステムは、その日の予測で日経平均を「下落」と判定していた。他の7銘柄も、ほぼ全て「下落」と予測していた。</p><p>市場は真逆に動いた。</p><h2 id=なぜ全部下落になったのか>なぜ全部「下落」になったのか</h2><p>冷静になって考えると、理由はすぐにわかった。</p><p>私のシステムが使っていた特徴量は、<strong>過去の価格データから計算されるテクニカル指標</strong>だ。RSI、MACD、ボリンジャーバンド、移動平均線——これらは全て「過去を見ている」。</p><p>3月中旬の日本株は、米国株の下落と円安の影響でじりじりと値を下げていた。テクニカル指標はそれを忠実に反映し、「下落トレンド継続中」と判断していた。</p><p>だがその瞬間、何かが変わった。おそらく何らかのニュース、あるいは下げすぎた株への買い戻し。市場のムードが一瞬で反転した。</p><p>テクニカル指標はそれを知らなかった。昨日の値動きを見て、今日も下がると言い続けた。</p><p><strong>「過去を見ているシステムは、未来の転換点を見えない」</strong></p><p>頭ではわかっていたが、実際のデータで突きつけられると、こたえた。</p><h2 id=改善策1トレンドフィルター失敗>改善策1：トレンドフィルター（失敗）</h2><p>最初に思いついた改善策は「トレンドが不明瞭なときは予測しない」というものだった。</p><p>ロジックはシンプルだ。短期移動平均と長期移動平均の乖離率を計算し、一定の範囲内に収まっているときは「トレンドなし」と判定して予測を出力しない。トレンドが明確なときだけ予測すれば、精度が上がるはずだ。</p><p>実装してテストした。</p><p>結果：<strong>精度は変わらなかった。</strong></p><p>問題は「トレンドなし」の定義だった。乖離率の閾値を厳しくすれば予測回数が減り、精度は上がったように見える。だが予測できないときが多すぎて、システムとして機能しない。閾値を緩めると、精度は元に戻る。</p><p>そして致命的な問題がある。<strong>急騰・急落は「トレンドあり」の状態から起きない</strong>。じわじわと下がっているトレンドの最中に、突然反発する。それがまさに3月17日だった。トレンドフィルターは機能しなかった。</p><h2 id=改善策2class_weight失敗>改善策2：class_weight（失敗）</h2><p>次に試みたのは、機械学習の定番テクニックである<strong>クラスの重み付け</strong>だ。</p><p>予測データを分析すると、システムが「下落」を過剰に予測していることがわかった。56件の予測のうち、「上昇」予測は全体の約30%しかなかった。市場は50%前後で上下するはずなのに、明らかに「下落バイアス」がかかっている。</p><p>これは学習データに偏りがあるからだ。3月の日本株は全体的に下落傾向にあったため、学習データに「下落」のサンプルが多くなっていた。</p><p>そこで<code>class_weight='balanced'</code>を設定し、「上昇」サンプルの重みを増やした。これで上昇予測が増え、バランスが取れるはずだった。</p><p>結果：<strong>精度が下がった。</strong></p><p>今度はシステムが「上昇」を過剰に予測するようになった。確かに下落バイアスは消えた。だが「上昇バイアス」に変わっただけだ。</p><p>本質的な問題は「どの方向に動くかを当てる難しさ」にあり、重み付けで解決できる問題ではなかった。当然といえば当然だ。</p><h2 id=改善策3maフィルター失敗>改善策3：MAフィルター（失敗）</h2><p>3つ目は「移動平均との位置関係で予測を補正する」というものだ。</p><p>発想はこうだ。現在価格が20日移動平均を大きく下回っているなら、いずれ平均回帰するはず。だから「売られすぎ＝上昇予測」に補正する。逆に平均を大きく上回っているなら「買われすぎ＝下落予測」に補正する。</p><p>これはRSIの考え方に近い。平均回帰という市場原理に基づいた、それなりに合理的なアイデアだと思っていた。</p><p>結果：<strong>精度はほぼ変わらず、悪化した日もあった。</strong></p><p>問題は「平均回帰しないケース」の多さだった。トレンドが強い相場では、価格は移動平均から乖離し続ける。「売られすぎ」と判断した銘柄がさらに下がり続ける、いわゆる「落ちるナイフ」だ。</p><p>特に3月の日本株のように、外部要因（米国株の動向、為替）が支配する相場では、テクニカルな平均回帰は機能しにくかった。</p><h2 id=3つ全部失敗して気づいたこと>3つ全部失敗して、気づいたこと</h2><p>3つの改善策を試し、3つとも結果が出なかった。</p><p>全体の精度は64.3%。最初に計測したときとほぼ変わらない。</p><p>ただ、失敗を通じてひとつのことがクリアになった。</p><p><strong>テクニカル指標だけで予測できることの限界が、ここだ。</strong></p><p>移動平均もRSIもMACDも、全て過去の価格データから計算される。これらをどう組み合わせ、どう重み付けしても、「外部環境の変化」は読み取れない。3月17日に何が起きたのか、AIは知らない。FRBの発言も、地政学的なニュースも、機関投資家の思惑も、テクニカル指標には映らない。</p><p>ランダムよりはマシな64.3%は出せている。だが「なぜ当たったか、なぜ外れたか」がまだよく理解できていない。</p><h2 id=次に試すこと>次に試すこと</h2><p>今考えているのは2つだ。</p><p>ひとつは<strong>特徴量の追加</strong>。VIX（恐怖指数）、ドル円レート、セクター別の動向——テクニカル指標以外の「市場センチメント」を加えることで、急反転を少しでも察知できるようにする。</p><p>もうひとつは<strong>機械学習モデルの変更</strong>。今は移動平均の単純な計算式で予測している。Random ForestやGradient Boostingなら、複数の特徴量の複雑な組み合わせを学習できる。同じ入力データでも、より高度なパターンを見つけられるかもしれない。</p><p>どちらも「65%の壁」を超えられる保証はない。</p><p>でもやらないと何もわからない。</p><p>次回はその実験の記録を書く。うまくいっても失敗しても、そのまま載せる。</p><hr><div style="background:#f0fdf4;border:1px solid #22c55e;border-radius:8px;padding:16px 20px;margin:16px 0"><p style="font-weight:700;margin:0 0 8px">🔍 このAIが実際に予測している銘柄を見る</p><a href=/ style="background:#22c55e;color:#fff;padding:8px 16px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600">株価ダッシュボードを見る →</a></div><p><em><a href=/post/why-i-built-ai-prediction/>← 第1話：なぜ私はAI株価予測システムを自作したのか</a></em></p></article><div class=article-footer-tags><a href=/tags/%E4%BD%93%E9%A8%93%E8%A8%98/ class=footer-tag>#体験記</a>
-<a href=/tags/ai%E4%BA%88%E6%B8%AC/ class=footer-tag>#AI予測</a>
-<a href=/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/ class=footer-tag>#個人開発</a>
-<a href=/tags/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/ class=footer-tag>#株式投資</a>
-<a href=/tags/%E9%80%A3%E8%BC%89/ class=footer-tag>#連載</a></div><div class=article-sns><div class=sns-share><span class=sns-label>この記事をシェア</span><a href="https://x.com/intent/tweet?text=%e7%b2%be%e5%ba%a664.3%25%e3%81%ae%e5%a3%81%e3%80%823%e3%81%a4%e3%81%ae%e6%94%b9%e5%96%84%e7%ad%96%e3%81%8c%e5%85%a8%e9%83%a8%e5%a4%b1%e6%95%97%e3%81%97%e3%81%9f%e8%a9%b1%e3%80%90%e9%80%a3%e8%bc%89%e3%83%bb%e7%ac%ac2%e8%a9%b1%e3%80%91%0Ahttps%3a%2f%2fstock-kabu3.com%2fpost%2faccuracy-wall-three-failures%2f%0A&hashtags=%e4%bd%93%e9%a8%93%e8%a8%98%2cAI%e4%ba%88%e6%b8%ac%2c%e5%80%8b%e4%ba%ba%e9%96%8b%e7%99%ba%2c%e6%a0%aa%e5%bc%8f%e6%8a%95%e8%b3%87%2c%e9%80%a3%e8%bc%89" target=_blank rel=noopener class="sns-btn sns-x">X</a>
-<a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fstock-kabu3.com%2fpost%2faccuracy-wall-three-failures%2f" target=_blank rel=noopener class="sns-btn sns-fb">Facebook</a>
-<a href=https://b.hatena.ne.jp/entry/https://stock-kabu3.com/post/accuracy-wall-three-failures/ target=_blank rel=noopener class="sns-btn sns-hatena">はてブ</a></div><div class=sns-follow><span class=sns-label>フォロー</span>
-<a href=https://x.com/LabTurnip90680 target=_blank rel=noopener class="sns-btn sns-x">@LabTurnip90680</a></div></div><nav class=article-nav><a href=https://stock-kabu3.com/post/2026-03-23-daily-prediction/ class=nav-prev><span class=nav-label>前の記事</span>
-<span class=nav-title>【AI予測】3月23日の日経平均・主要銘柄 見通し</span>
-</a><a href=https://stock-kabu3.com/post/2026-03-24-daily-prediction/ class=nav-next><span class=nav-label>次の記事</span>
-<span class=nav-title>【AI予測】3月24日の日経平均・主要銘柄 見通し</span></a></nav><div class=article-actions><a href=/post/ class=btn-secondary>記事一覧に戻る</a>
-<a href=/ class=btn-primary>ダッシュボードを見る</a></div></div><aside class=article-sidebar><div class=ad-space><div style="text-align:center;padding:10px 0"><a href="https://hb.afl.rakuten.co.jp/ichiba/4cc478c8.9feab689.4cc478c9.b3b54bc8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18093929%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target=_blank rel="nofollow sponsored noopener" style=word-wrap:break-word><img src="https://hbb.afl.rakuten.co.jp/hgb/4cc478c8.9feab689.4cc478c9.b3b54bc8/?me_id=1213310&item_id=21480542&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F2916%2F9784594622916_1_3.jpg%3F_ex%3D240x240&s=240x240&t=pict" border=0 style=margin:2px;width:150px;height:auto alt=楽天証券で始める50歳からの新NISA&iDeCo title=楽天証券で始める50歳からの新NISA&iDeCo></a></div></div><div class=ad-space><div style="text-align:center;padding:10px 0"><a href="https://hb.afl.rakuten.co.jp/ichiba/4cc478c8.9feab689.4cc478c9.b3b54bc8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F16893418%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target=_blank rel="nofollow sponsored noopener" style=word-wrap:break-word><img src="https://hbb.afl.rakuten.co.jp/hgb/4cc478c8.9feab689.4cc478c9.b3b54bc8/?me_id=1213310&item_id=20473492&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F4179%2F9784478114179_1_2.jpg%3F_ex%3D240x240&s=240x240&t=pict" border=0 style=margin:2px;width:150px;height:auto alt></a></div></div><div class=sidebar-widget><h4>最新記事</h4><ul class=recent-articles><li><a href=https://stock-kabu3.com/post/2026-03-30-daily-prediction/>【AI予測】3月30日の日経平均・主要銘柄 見通し</a>
-<time>3/30</time></li><li><a href=https://stock-kabu3.com/post/weekly-review-2026-03-27/>週間マーケットレビュー（2026年3月23日〜2026年3月27日）</a>
-<time>3/27</time></li><li><a href=https://stock-kabu3.com/post/145-stocks-expansion/>145銘柄に拡張して見えてきたこと。AIは「下落好き」だった【連載・第 …</a>
-<time>3/27</time></li><li><a href=https://stock-kabu3.com/post/2026-03-27-daily-prediction/>【AI予測】3月27日の日経平均・主要銘柄 見通し</a>
-<time>3/27</time></li><li><a href=https://stock-kabu3.com/post/2026-03-26-daily-prediction/>【AI予測】3月26日の日経平均・主要銘柄 見通し</a>
-<time>3/26</time></li></ul></div><div class=sidebar-widget><h4>株価データ</h4><ul class=info-links><li><a href=/>ダッシュボード</a></li><li><a href=/stocks/>銘柄一覧（105銘柄）</a></li><li><a href="/stocks/detail/?s=^N225">日経平均チャート</a></li><li><a href="/stocks/detail/?s=^DJI">ダウ平均チャート</a></li></ul></div></aside></div><style>.article-container{display:flex;max-width:1200px;margin:0 auto;padding:30px 20px;gap:30px}.article-main{flex:1;min-width:0}.article-header{margin-bottom:30px;padding-bottom:20px;border-bottom:2px solid var(--accent-color-light)}.article-header h1{font-size:2rem;color:var(--card-text-color-main);line-height:1.4;margin-bottom:10px}.article-header .article-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;font-size:.85rem}.article-header .article-meta time{color:var(--card-text-color-tertiary)}.article-category{padding:3px 10px;border-radius:12px;font-size:.8rem;font-weight:600}.category-マーケット,.category-market{background:#dbeafe;color:#1d4ed8}.category-コラム,.category-column{background:#fef3c7;color:#92400e}.category-週間レビュー{background:#d1fae5;color:#065f46}.category-ガイド{background:#ede9fe;color:#5b21b6}.article-description{color:var(--card-text-color-secondary);font-size:1.05rem}.article-content{line-height:1.8;color:var(--card-text-color-main);font-size:1rem}.article-content h2{font-size:1.5rem;margin:40px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--accent-color-light);color:var(--card-text-color-main)}.article-content h3{font-size:1.25rem;margin:30px 0 12px;color:var(--card-text-color-main)}.article-content p{margin-bottom:16px}.article-content ul,.article-content ol{margin-bottom:16px;padding-left:24px}.article-content li{margin-bottom:6px}.article-content table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9rem}.article-content th,.article-content td{padding:10px 12px;border:1px solid var(--card-separator-color);text-align:left}.article-content th{background:var(--accent-color-light);font-weight:600}.article-content blockquote{border-left:4px solid var(--accent-color);padding:12px 20px;margin:20px 0;background:var(--accent-color-light);border-radius:0 8px 8px 0}.article-content code{background:var(--accent-color-light);padding:2px 6px;border-radius:4px;font-size:.9em}.article-content pre{background:#1f2937;color:#f3f4f6;padding:16px;border-radius:8px;overflow-x:auto;margin:20px 0}.article-content pre code{background:0 0;padding:0}.article-footer-tags{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0;padding-top:20px;border-top:1px solid var(--card-separator-color)}.footer-tag{color:var(--accent-color);text-decoration:none;font-size:.9rem}.footer-tag:hover{text-decoration:underline}.article-sns{margin:30px 0;padding:20px;background:var(--card-background);border:1px solid var(--card-separator-color);border-radius:var(--card-border-radius)}.sns-share,.sns-follow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.sns-follow{margin-top:12px;padding-top:12px;border-top:1px solid var(--card-separator-color)}.sns-label{font-size:.85rem;color:var(--card-text-color-tertiary);font-weight:600;min-width:100px}.sns-btn{display:inline-block;padding:6px 14px;border-radius:6px;font-size:.8rem;font-weight:600;text-decoration:none;transition:opacity .2s ease}.sns-btn:hover{opacity:.8}.sns-x{background:#000;color:#fff}.sns-fb{background:#1877f2;color:#fff}.sns-hatena{background:#00a4de;color:#fff}.article-nav{display:flex;gap:20px;margin:30px 0}.article-nav a{flex:1;padding:16px;background:var(--card-background);border:1px solid var(--card-separator-color);border-radius:var(--card-border-radius);text-decoration:none;transition:all .2s ease}.article-nav a:hover{border-color:var(--accent-color);transform:translateY(-1px)}.nav-label{display:block;font-size:.8rem;color:var(--card-text-color-tertiary);margin-bottom:4px}.nav-title{display:block;color:var(--card-text-color-main);font-weight:500;font-size:.95rem}.nav-next{text-align:right}.article-actions{display:flex;justify-content:center;gap:16px;margin-top:30px}.btn-primary,.btn-secondary{display:inline-block;padding:10px 20px;text-decoration:none;border-radius:6px;font-weight:500;font-size:.9rem;transition:all .2s ease}.btn-primary{background:var(--accent-color);color:#fff}.btn-primary:hover{background:var(--accent-color-dark)}.btn-secondary{background:0 0;color:var(--accent-color);border:1px solid var(--accent-color)}.btn-secondary:hover{background:var(--accent-color-light)}.article-sidebar{width:260px;flex-shrink:0}.sidebar-widget{background:var(--card-background);border:1px solid var(--card-separator-color);border-radius:var(--card-border-radius);padding:20px;margin-bottom:20px}.sidebar-widget h4{font-size:1rem;color:var(--card-text-color-main);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--accent-color-light)}.recent-articles{list-style:none;padding:0;margin:0}.recent-articles li{padding:8px 0;border-bottom:1px solid var(--card-separator-color);display:flex;justify-content:space-between;align-items:baseline;gap:8px}.recent-articles li:last-child{border-bottom:none}.recent-articles a{color:var(--card-text-color-main);text-decoration:none;font-size:.85rem;flex:1}.recent-articles a:hover{color:var(--accent-color)}.recent-articles time{color:var(--card-text-color-tertiary);font-size:.75rem;white-space:nowrap}.info-links{list-style:none;padding:0;margin:0}.info-links li{margin:8px 0}.info-links a{color:var(--card-text-color-secondary);text-decoration:none;font-size:.9rem}.info-links a:hover{color:var(--accent-color)}@media(max-width:1024px){.article-container{flex-direction:column}.article-sidebar{width:100%;display:flex;gap:20px;flex-wrap:wrap}.sidebar-widget{flex:1;min-width:200px}}@media(max-width:768px){.article-header h1{font-size:1.5rem}.article-nav{flex-direction:column}.article-actions{flex-direction:column;align-items:center}.article-sidebar{flex-direction:column}.sidebar-widget{min-width:100%}}@media(prefers-color-scheme:dark){.category-マーケット,.category-market{background:#1e3a5f;color:#93c5fd}.category-コラム,.category-column{background:#451a03;color:#fde68a}.category-週間レビュー{background:#064e3b;color:#6ee7b7}.category-ガイド{background:#2e1065;color:#c4b5fd}}</style></div></main><footer><div class=footer-content><div class=footer-links><a href=/post/>記事一覧</a>
-<a href=/categories/>カテゴリ</a>
-<a href=/tags/>タグ</a>
-<a href=https://stock-kabu3.com/index.xml>RSS</a></div><p>&copy; 2026 株価アート - Stock Analysis Dashboard. All rights reserved.</p><p style=margin-top:10px;font-size:.9rem;color:#9ca3af>株価データは参考情報です。投資判断は自己責任でお願いします。</p></div></footer></body></html>
+</code></pre><p><strong>2日連続で25%。</strong></p>
+<p>コインを投げた方がましだ。50%を大きく下回っている。何かがおかしい。</p>
+<p>慌ててその日の実際の値動きを調べた。</p>
+<p>3月17日→18日。日経平均が<strong>53,700円から55,239円へ。一日で+1,539円、率にして+2.9%の急騰</strong>だった。</p>
+<p>私のシステムは、その日の予測で日経平均を「下落」と判定していた。他の7銘柄も、ほぼ全て「下落」と予測していた。</p>
+<p>市場は真逆に動いた。</p>
+<h2 id="なぜ全部下落になったのか">なぜ全部「下落」になったのか</h2>
+<p>冷静になって考えると、理由はすぐにわかった。</p>
+<p>私のシステムが使っていた特徴量は、<strong>過去の価格データから計算されるテクニカル指標</strong>だ。RSI、MACD、ボリンジャーバンド、移動平均線——これらは全て「過去を見ている」。</p>
+<p>3月中旬の日本株は、米国株の下落と円安の影響でじりじりと値を下げていた。テクニカル指標はそれを忠実に反映し、「下落トレンド継続中」と判断していた。</p>
+<p>だがその瞬間、何かが変わった。おそらく何らかのニュース、あるいは下げすぎた株への買い戻し。市場のムードが一瞬で反転した。</p>
+<p>テクニカル指標はそれを知らなかった。昨日の値動きを見て、今日も下がると言い続けた。</p>
+<p><strong>「過去を見ているシステムは、未来の転換点を見えない」</strong></p>
+<p>頭ではわかっていたが、実際のデータで突きつけられると、こたえた。</p>
+<h2 id="改善策1トレンドフィルター失敗">改善策1：トレンドフィルター（失敗）</h2>
+<p>最初に思いついた改善策は「トレンドが不明瞭なときは予測しない」というものだった。</p>
+<p>ロジックはシンプルだ。短期移動平均と長期移動平均の乖離率を計算し、一定の範囲内に収まっているときは「トレンドなし」と判定して予測を出力しない。トレンドが明確なときだけ予測すれば、精度が上がるはずだ。</p>
+<p>実装してテストした。</p>
+<p>結果：<strong>精度は変わらなかった。</strong></p>
+<p>問題は「トレンドなし」の定義だった。乖離率の閾値を厳しくすれば予測回数が減り、精度は上がったように見える。だが予測できないときが多すぎて、システムとして機能しない。閾値を緩めると、精度は元に戻る。</p>
+<p>そして致命的な問題がある。<strong>急騰・急落は「トレンドあり」の状態から起きない</strong>。じわじわと下がっているトレンドの最中に、突然反発する。それがまさに3月17日だった。トレンドフィルターは機能しなかった。</p>
+<h2 id="改善策2class_weight失敗">改善策2：class_weight（失敗）</h2>
+<p>次に試みたのは、機械学習の定番テクニックである<strong>クラスの重み付け</strong>だ。</p>
+<p>予測データを分析すると、システムが「下落」を過剰に予測していることがわかった。56件の予測のうち、「上昇」予測は全体の約30%しかなかった。市場は50%前後で上下するはずなのに、明らかに「下落バイアス」がかかっている。</p>
+<p>これは学習データに偏りがあるからだ。3月の日本株は全体的に下落傾向にあったため、学習データに「下落」のサンプルが多くなっていた。</p>
+<p>そこで<code>class_weight='balanced'</code>を設定し、「上昇」サンプルの重みを増やした。これで上昇予測が増え、バランスが取れるはずだった。</p>
+<p>結果：<strong>精度が下がった。</strong></p>
+<p>今度はシステムが「上昇」を過剰に予測するようになった。確かに下落バイアスは消えた。だが「上昇バイアス」に変わっただけだ。</p>
+<p>本質的な問題は「どの方向に動くかを当てる難しさ」にあり、重み付けで解決できる問題ではなかった。当然といえば当然だ。</p>
+<h2 id="改善策3maフィルター失敗">改善策3：MAフィルター（失敗）</h2>
+<p>3つ目は「移動平均との位置関係で予測を補正する」というものだ。</p>
+<p>発想はこうだ。現在価格が20日移動平均を大きく下回っているなら、いずれ平均回帰するはず。だから「売られすぎ＝上昇予測」に補正する。逆に平均を大きく上回っているなら「買われすぎ＝下落予測」に補正する。</p>
+<p>これはRSIの考え方に近い。平均回帰という市場原理に基づいた、それなりに合理的なアイデアだと思っていた。</p>
+<p>結果：<strong>精度はほぼ変わらず、悪化した日もあった。</strong></p>
+<p>問題は「平均回帰しないケース」の多さだった。トレンドが強い相場では、価格は移動平均から乖離し続ける。「売られすぎ」と判断した銘柄がさらに下がり続ける、いわゆる「落ちるナイフ」だ。</p>
+<p>特に3月の日本株のように、外部要因（米国株の動向、為替）が支配する相場では、テクニカルな平均回帰は機能しにくかった。</p>
+<h2 id="3つ全部失敗して気づいたこと">3つ全部失敗して、気づいたこと</h2>
+<p>3つの改善策を試し、3つとも結果が出なかった。</p>
+<p>全体の精度は64.3%。最初に計測したときとほぼ変わらない。</p>
+<p>ただ、失敗を通じてひとつのことがクリアになった。</p>
+<p><strong>テクニカル指標だけで予測できることの限界が、ここだ。</strong></p>
+<p>移動平均もRSIもMACDも、全て過去の価格データから計算される。これらをどう組み合わせ、どう重み付けしても、「外部環境の変化」は読み取れない。3月17日に何が起きたのか、AIは知らない。FRBの発言も、地政学的なニュースも、機関投資家の思惑も、テクニカル指標には映らない。</p>
+<p>ランダムよりはマシな64.3%は出せている。だが「なぜ当たったか、なぜ外れたか」がまだよく理解できていない。</p>
+<h2 id="次に試すこと">次に試すこと</h2>
+<p>今考えているのは2つだ。</p>
+<p>ひとつは<strong>特徴量の追加</strong>。VIX（恐怖指数）、ドル円レート、セクター別の動向——テクニカル指標以外の「市場センチメント」を加えることで、急反転を少しでも察知できるようにする。</p>
+<p>もうひとつは<strong>機械学習モデルの変更</strong>。今は移動平均の単純な計算式で予測している。Random ForestやGradient Boostingなら、複数の特徴量の複雑な組み合わせを学習できる。同じ入力データでも、より高度なパターンを見つけられるかもしれない。</p>
+<p>どちらも「65%の壁」を超えられる保証はない。</p>
+<p>でもやらないと何もわからない。</p>
+<p>次回はその実験の記録を書く。うまくいっても失敗しても、そのまま載せる。</p>
+<hr>
+<div style="background:#f0fdf4;border:1px solid #22c55e;border-radius:8px;padding:16px 20px;margin:16px 0;">
+<p style="font-weight:700;margin:0 0 8px;">🔍 このAIが実際に予測している銘柄を見る</p>
+<a href="/" style="background:#22c55e;color:#fff;padding:8px 16px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;">株価ダッシュボードを見る →</a>
+</div>
+<p><em><a href="/post/why-i-built-ai-prediction/">← 第1話：なぜ私はAI株価予測システムを自作したのか</a></em></p>
+
+        </article>
+
+        
+        
+        <div class="article-footer-tags">
+            
+            <a href="/tags/%E4%BD%93%E9%A8%93%E8%A8%98/" class="footer-tag">#体験記</a>
+            
+            <a href="/tags/ai%E4%BA%88%E6%B8%AC/" class="footer-tag">#AI予測</a>
+            
+            <a href="/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/" class="footer-tag">#個人開発</a>
+            
+            <a href="/tags/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/" class="footer-tag">#株式投資</a>
+            
+            <a href="/tags/%E9%80%A3%E8%BC%89/" class="footer-tag">#連載</a>
+            
+        </div>
+        
+
+        
+        <div class="article-sns">
+            <div class="sns-share">
+                <span class="sns-label">この記事をシェア</span><a href="https://x.com/intent/tweet?text=%e7%b2%be%e5%ba%a664.3%25%e3%81%ae%e5%a3%81%e3%80%823%e3%81%a4%e3%81%ae%e6%94%b9%e5%96%84%e7%ad%96%e3%81%8c%e5%85%a8%e9%83%a8%e5%a4%b1%e6%95%97%e3%81%97%e3%81%9f%e8%a9%b1%e3%80%90%e9%80%a3%e8%bc%89%e3%83%bb%e7%ac%ac2%e8%a9%b1%e3%80%91%0Ahttps%3a%2f%2fstock-kabu3.com%2fpost%2faccuracy-wall-three-failures%2f%0A&hashtags=%e4%bd%93%e9%a8%93%e8%a8%98%2cAI%e4%ba%88%e6%b8%ac%2c%e5%80%8b%e4%ba%ba%e9%96%8b%e7%99%ba%2c%e6%a0%aa%e5%bc%8f%e6%8a%95%e8%b3%87%2c%e9%80%a3%e8%bc%89" target="_blank" rel="noopener" class="sns-btn sns-x">X</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fstock-kabu3.com%2fpost%2faccuracy-wall-three-failures%2f" target="_blank" rel="noopener" class="sns-btn sns-fb">Facebook</a>
+                <a href="https://b.hatena.ne.jp/entry/https://stock-kabu3.com/post/accuracy-wall-three-failures/" target="_blank" rel="noopener" class="sns-btn sns-hatena">はてブ</a>
+            </div>
+            <div class="sns-follow">
+                <span class="sns-label">フォロー</span>
+                <a href="https://x.com/LabTurnip90680" target="_blank" rel="noopener" class="sns-btn sns-x">@LabTurnip90680</a>
+            </div>
+        </div>
+
+        
+        <nav class="article-nav">
+            
+            <a href="https://stock-kabu3.com/post/2026-03-23-daily-prediction/" class="nav-prev">
+                <span class="nav-label">前の記事</span>
+                <span class="nav-title">【AI予測】3月23日の日経平均・主要銘柄 見通し</span>
+            </a>
+            
+            
+            <a href="https://stock-kabu3.com/post/2026-03-24-daily-prediction/" class="nav-next">
+                <span class="nav-label">次の記事</span>
+                <span class="nav-title">【AI予測】3月24日の日経平均・主要銘柄 見通し</span>
+            </a>
+            
+        </nav>
+
+        
+        <div class="article-actions">
+            <a href="/post/" class="btn-secondary">記事一覧に戻る</a>
+            <a href="/" class="btn-primary">ダッシュボードを見る</a>
+        </div>
+    </div>
+
+    
+    <aside class="article-sidebar">
+        
+
+
+
+<div class="ad-space">
+    <div style="text-align:center; padding: 10px 0;">
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/4cc478c8.9feab689.4cc478c9.b3b54bc8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18093929%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;">
+            <img src="https://hbb.afl.rakuten.co.jp/hgb/4cc478c8.9feab689.4cc478c9.b3b54bc8/?me_id=1213310&item_id=21480542&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F2916%2F9784594622916_1_3.jpg%3F_ex%3D240x240&s=240x240&t=pict" 
+                 border="0" 
+                 style="margin:2px; width:150px; height:auto;" 
+                 alt="楽天証券で始める50歳からの新NISA&iDeCo" 
+                 title="楽天証券で始める50歳からの新NISA&iDeCo">
+        </a>
+    </div>
+</div>
+
+
+
+<div class="ad-space">
+    <div style="text-align:center; padding: 10px 0;">
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/4cc478c8.9feab689.4cc478c9.b3b54bc8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F16893418%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;">
+            <img src="https://hbb.afl.rakuten.co.jp/hgb/4cc478c8.9feab689.4cc478c9.b3b54bc8/?me_id=1213310&item_id=20473492&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F4179%2F9784478114179_1_2.jpg%3F_ex%3D240x240&s=240x240&t=pict" 
+                 border="0" 
+                 style="margin:2px; width:150px; height:auto;" 
+                 alt="">
+        </a>
+    </div>
+</div>
+
+
+
+
+        <div class="sidebar-widget">
+            <h4>最新記事</h4>
+            <ul class="recent-articles">
+                
+                <li>
+                    <a href="https://stock-kabu3.com/post/2026-03-30-daily-prediction/">【AI予測】3月30日の日経平均・主要銘柄 見通し</a>
+                    <time>3/30</time>
+                </li>
+                
+                <li>
+                    <a href="https://stock-kabu3.com/post/weekly-review-2026-03-27/">週間マーケットレビュー（2026年3月23日〜2026年3月27日）</a>
+                    <time>3/27</time>
+                </li>
+                
+                <li>
+                    <a href="https://stock-kabu3.com/post/145-stocks-expansion/">145銘柄に拡張して見えてきたこと。AIは「下落好き」だった【連載・第 …</a>
+                    <time>3/27</time>
+                </li>
+                
+                <li>
+                    <a href="https://stock-kabu3.com/post/2026-03-27-daily-prediction/">【AI予測】3月27日の日経平均・主要銘柄 見通し</a>
+                    <time>3/27</time>
+                </li>
+                
+                <li>
+                    <a href="https://stock-kabu3.com/post/2026-03-26-daily-prediction/">【AI予測】3月26日の日経平均・主要銘柄 見通し</a>
+                    <time>3/26</time>
+                </li>
+                
+            </ul>
+        </div>
+
+        
+        <div class="sidebar-widget">
+            <h4>株価データ</h4>
+            <ul class="info-links">
+                <li><a href="/">ダッシュボード</a></li>
+                <li><a href="/stocks/">銘柄一覧（105銘柄）</a></li>
+                <li><a href="/stocks/detail/?s=^N225">日経平均チャート</a></li>
+                <li><a href="/stocks/detail/?s=^DJI">ダウ平均チャート</a></li>
+            </ul>
+        </div>
+    </aside>
+</div>
+
+<style>
+.article-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    gap: 30px;
+}
+
+.article-main {
+    flex: 1;
+    min-width: 0;
+}
+
+ 
+.article-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color-light);
+}
+
+.article-header h1 {
+    font-size: 2rem;
+    color: var(--card-text-color-main);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.article-header .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+}
+
+.article-header .article-meta time {
+    color: var(--card-text-color-tertiary);
+}
+
+.article-category {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.category-マーケット, .category-market { background: #dbeafe; color: #1d4ed8; }
+.category-コラム, .category-column { background: #fef3c7; color: #92400e; }
+.category-週間レビュー { background: #d1fae5; color: #065f46; }
+.category-ガイド { background: #ede9fe; color: #5b21b6; }
+
+.article-description {
+    color: var(--card-text-color-secondary);
+    font-size: 1.05rem;
+}
+
+ 
+.article-content {
+    line-height: 1.8;
+    color: var(--card-text-color-main);
+    font-size: 1rem;
+}
+
+.article-content h2 {
+    font-size: 1.5rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-color-light);
+    color: var(--card-text-color-main);
+}
+
+.article-content h3 {
+    font-size: 1.25rem;
+    margin: 30px 0 12px;
+    color: var(--card-text-color-main);
+}
+
+.article-content p {
+    margin-bottom: 16px;
+}
+
+.article-content ul, .article-content ol {
+    margin-bottom: 16px;
+    padding-left: 24px;
+}
+
+.article-content li {
+    margin-bottom: 6px;
+}
+
+.article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
+
+.article-content th, .article-content td {
+    padding: 10px 12px;
+    border: 1px solid var(--card-separator-color);
+    text-align: left;
+}
+
+.article-content th {
+    background: var(--accent-color-light);
+    font-weight: 600;
+}
+
+.article-content blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding: 12px 20px;
+    margin: 20px 0;
+    background: var(--accent-color-light);
+    border-radius: 0 8px 8px 0;
+}
+
+.article-content code {
+    background: var(--accent-color-light);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.article-content pre {
+    background: #1f2937;
+    color: #f3f4f6;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.article-content pre code {
+    background: none;
+    padding: 0;
+}
+
+ 
+.article-footer-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--card-separator-color);
+}
+
+.footer-tag {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-tag:hover {
+    text-decoration: underline;
+}
+
+ 
+.article-sns {
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--card-background);
+    border: 1px solid var(--card-separator-color);
+    border-radius: var(--card-border-radius);
+}
+
+.sns-share, .sns-follow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sns-follow {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--card-separator-color);
+}
+
+.sns-label {
+    font-size: 0.85rem;
+    color: var(--card-text-color-tertiary);
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.sns-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.sns-btn:hover {
+    opacity: 0.8;
+}
+
+.sns-x {
+    background: #000000;
+    color: #ffffff;
+}
+
+.sns-fb {
+    background: #1877f2;
+    color: #ffffff;
+}
+
+.sns-hatena {
+    background: #00a4de;
+    color: #ffffff;
+}
+
+ 
+.article-nav {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.article-nav a {
+    flex: 1;
+    padding: 16px;
+    background: var(--card-background);
+    border: 1px solid var(--card-separator-color);
+    border-radius: var(--card-border-radius);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.article-nav a:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+.nav-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--card-text-color-tertiary);
+    margin-bottom: 4px;
+}
+
+.nav-title {
+    display: block;
+    color: var(--card-text-color-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-next {
+    text-align: right;
+}
+
+ 
+.article-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--accent-color-dark);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-color-light);
+}
+
+ 
+.article-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.sidebar-widget {
+    background: var(--card-background);
+    border: 1px solid var(--card-separator-color);
+    border-radius: var(--card-border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-widget h4 {
+    font-size: 1rem;
+    color: var(--card-text-color-main);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-color-light);
+}
+
+.recent-articles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-articles li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--card-separator-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.recent-articles li:last-child {
+    border-bottom: none;
+}
+
+.recent-articles a {
+    color: var(--card-text-color-main);
+    text-decoration: none;
+    font-size: 0.85rem;
+    flex: 1;
+}
+
+.recent-articles a:hover {
+    color: var(--accent-color);
+}
+
+.recent-articles time {
+    color: var(--card-text-color-tertiary);
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.info-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-links li {
+    margin: 8px 0;
+}
+
+.info-links a {
+    color: var(--card-text-color-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.info-links a:hover {
+    color: var(--accent-color);
+}
+
+ 
+@media (max-width: 1024px) {
+    .article-container {
+        flex-direction: column;
+    }
+
+    .article-sidebar {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-widget {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .article-nav {
+        flex-direction: column;
+    }
+
+    .article-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-sidebar {
+        flex-direction: column;
+    }
+
+    .sidebar-widget {
+        min-width: 100%;
+    }
+}
+
+ 
+@media (prefers-color-scheme: dark) {
+    .category-マーケット, .category-market { background: #1e3a5f; color: #93c5fd; }
+    .category-コラム, .category-column { background: #451a03; color: #fde68a; }
+    .category-週間レビュー { background: #064e3b; color: #6ee7b7; }
+    .category-ガイド { background: #2e1065; color: #c4b5fd; }
+}
+</style>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/post/">記事一覧</a>
+                <a href="/categories/">カテゴリ</a>
+                <a href="/tags/">タグ</a>
+                <a href="https://stock-kabu3.com/index.xml">RSS</a>
+            </div>
+            <p>&copy; 2026 株価アート - Stock Analysis Dashboard. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #9ca3af;">
+                株価データは参考情報です。投資判断は自己責任でお願いします。
+            </p>
+        </div>
+    </footer>
+
+    
+    
+</body>
+</html>

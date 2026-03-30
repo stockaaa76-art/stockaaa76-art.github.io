@@ -1,314 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>投資計算ツール on 株価アート - Stock Analysis Dashboard</title><link>https://stock-kabu3.com/tools/</link><description>Recent content in 投資計算ツール on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><atom:link href="https://stock-kabu3.com/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>損益分岐点計算機</title><link>https://stock-kabu3.com/tools/breakeven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/breakeven/</guid><description>&lt;div class="tool-container"&gt;
-&lt;div class="tool-box"&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;買値（円）&lt;/label&gt;
- &lt;input type="number" id="buy-price" value="1500" min="1" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;保有株数&lt;/label&gt;
- &lt;input type="number" id="shares" value="100" min="1" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;購入時手数料（円）&lt;/label&gt;
- &lt;input type="number" id="buy-fee" value="275" min="0" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;売却時手数料（円）&lt;/label&gt;
- &lt;input type="number" id="sell-fee" value="275" min="0" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;現在株価（円）&lt;/label&gt;
- &lt;input type="number" id="current-price" value="1600" min="0" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="result" class="result-box" style="display:none;"&gt;
- &lt;div class="result-grid"&gt;
- &lt;div class="result-card highlight"&gt;
- &lt;div class="result-label"&gt;損益分岐点（1株）&lt;/div&gt;
- &lt;div class="result-value" id="breakeven"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;現在の損益&lt;/div&gt;
- &lt;div class="result-value" id="pnl"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;損益率&lt;/div&gt;
- &lt;div class="result-value" id="pnl-rate"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;投資総額（手数料込）&lt;/div&gt;
- &lt;div class="result-value" id="total-cost"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;現在の評価額&lt;/div&gt;
- &lt;div class="result-value" id="market-value"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;損益（手数料込）&lt;/div&gt;
- &lt;div class="result-value" id="net-pnl"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function fmt(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
-function fmtPct(n) { return (n &gt;= 0 ? '+' : '') + n.toFixed(2) + '%'; }
-function calculate() {
- const buyPrice = parseFloat(document.getElementById('buy-price').value) || 0;
- const shares = parseInt(document.getElementById('shares').value) || 0;
- const buyFee = parseFloat(document.getElementById('buy-fee').value) || 0;
- const sellFee = parseFloat(document.getElementById('sell-fee').value) || 0;
- const curPrice = parseFloat(document.getElementById('current-price').value) || 0;
- const totalCost = buyPrice * shares + buyFee;
- const breakeven = (totalCost + sellFee) / shares;
- const marketVal = curPrice * shares;
- const netPnL = marketVal - sellFee - totalCost;
- const pnlRate = totalCost &gt; 0 ? (netPnL / totalCost) * 100 : 0;
- const simplePnL = (curPrice - buyPrice) * shares;
-
- document.getElementById('breakeven').textContent = fmt(breakeven) + ' / 株';
- document.getElementById('pnl').textContent = fmt(simplePnL);
- document.getElementById('pnl-rate').textContent = fmtPct(pnlRate);
- document.getElementById('total-cost').textContent = fmt(totalCost);
- document.getElementById('market-value').textContent = fmt(marketVal);
- document.getElementById('net-pnl').textContent = fmt(netPnL);
-
- const pnlEl = document.getElementById('pnl');
- const rateEl = document.getElementById('pnl-rate');
- const netEl = document.getElementById('net-pnl');
- [pnlEl, rateEl, netEl].forEach(el =&gt; {
- el.style.color = netPnL &gt;= 0 ? '#10b981' : '#ef4444';
- });
- document.getElementById('result').style.display = 'block';
-}
-&lt;/script&gt;
-&lt;style&gt;
-.tool-container { max-width: 560px; margin: 0 auto; }
-.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
-.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.tool-row label { width: 180px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
-.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 100px; }
-.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
-.btn-primary:hover { background: #2563eb; }
-.result-box { margin-top: 20px; }
-.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
-.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
-.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
-.result-value { font-size: 16px; font-weight: 700; color: #1f2937; }
-.result-card.highlight .result-value { color: #3b82f6; }
-@media (max-width: 480px) {
- .result-grid { grid-template-columns: repeat(2, 1fr); }
- .tool-row label { width: 100%; }
-}
-&lt;/style&gt;
-&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;買値・保有株数・手数料・現在株価を入力&lt;/li&gt;
-&lt;li&gt;「計算する」をクリック&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="損益分岐点とは"&gt;損益分岐点とは&lt;/h2&gt;
-&lt;p&gt;手数料を含めた投資総コストを回収できる株価のことです。現在株価が損益分岐点を上回っていれば利益、下回っていれば損失となります。&lt;/p&gt;</description></item><item><title>配当利回り計算機</title><link>https://stock-kabu3.com/tools/dividend-yield/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/dividend-yield/</guid><description>&lt;div class="tool-container"&gt;
-&lt;div class="tool-box"&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;株価（円）&lt;/label&gt;
- &lt;input type="number" id="price" value="2000" min="1" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;1株あたり年間配当（円）&lt;/label&gt;
- &lt;input type="number" id="dividend" value="60" min="0" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;保有株数&lt;/label&gt;
- &lt;input type="number" id="shares" value="100" min="1" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="result" class="result-box" style="display:none;"&gt;
- &lt;div class="result-grid"&gt;
- &lt;div class="result-card highlight"&gt;
- &lt;div class="result-label"&gt;配当利回り（税引前）&lt;/div&gt;
- &lt;div class="result-value" id="yield-before"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;配当利回り（税引後）&lt;/div&gt;
- &lt;div class="result-value" id="yield-after"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;年間配当（税引前）&lt;/div&gt;
- &lt;div class="result-value" id="annual-before"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;年間配当（税引後）&lt;/div&gt;
- &lt;div class="result-value" id="annual-after"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;投資総額&lt;/div&gt;
- &lt;div class="result-value" id="total-invest"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;差し引き税額&lt;/div&gt;
- &lt;div class="result-value" id="tax"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
-const TAX_RATE = 0.20315;
-function fmt(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
-function fmtPct(n) { return n.toFixed(2) + '%'; }
-function calculate() {
- const price = parseFloat(document.getElementById('price').value) || 0;
- const dividend = parseFloat(document.getElementById('dividend').value) || 0;
- const shares = parseInt(document.getElementById('shares').value) || 0;
- const totalInvest = price * shares;
- const annualBefore = dividend * shares;
- const annualAfter = annualBefore * (1 - TAX_RATE);
- const yieldBefore = price &gt; 0 ? (dividend / price) * 100 : 0;
- const yieldAfter = yieldBefore * (1 - TAX_RATE);
- const taxAmount = annualBefore - annualAfter;
- document.getElementById('yield-before').textContent = fmtPct(yieldBefore);
- document.getElementById('yield-after').textContent = fmtPct(yieldAfter);
- document.getElementById('annual-before').textContent = fmt(annualBefore);
- document.getElementById('annual-after').textContent = fmt(annualAfter);
- document.getElementById('total-invest').textContent = fmt(totalInvest);
- document.getElementById('tax').textContent = fmt(taxAmount);
- document.getElementById('result').style.display = 'block';
-}
-&lt;/script&gt;
-&lt;style&gt;
-.tool-container { max-width: 560px; margin: 0 auto; }
-.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
-.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.tool-row label { width: 200px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
-.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 100px; }
-.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
-.btn-primary:hover { background: #2563eb; }
-.result-box { margin-top: 20px; }
-.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
-.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
-.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
-.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }
-.result-card.highlight .result-value { color: #3b82f6; }
-@media (max-width: 480px) {
- .result-grid { grid-template-columns: repeat(2, 1fr); }
- .tool-row label { width: 100%; }
-}
-&lt;/style&gt;
-&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;現在の株価・1株あたり年間配当・保有株数を入力&lt;/li&gt;
-&lt;li&gt;「計算する」をクリック&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="税率について"&gt;税率について&lt;/h2&gt;
-&lt;p&gt;国内株の配当に対する税率は &lt;strong&gt;20.315%&lt;/strong&gt;（所得税15.315% + 住民税5%）を適用しています。NISA口座では非課税となります。&lt;/p&gt;</description></item><item><title>売上成長率・市場シェア分析</title><link>https://stock-kabu3.com/tools/revenue-growth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/revenue-growth/</guid><description>&lt;div class="rg-container"&gt;
-&lt;!-- タブナビゲーション --&gt;
-&lt;div class="rg-tabs"&gt;
- &lt;button class="rg-tab active" onclick="showTab('growth')"&gt;売上成長率ランキング&lt;/button&gt;
- &lt;button class="rg-tab" onclick="showTab('sector')"&gt;セクター別シェア分析&lt;/button&gt;
- &lt;button class="rg-tab" onclick="showTab('pattern')"&gt;過去パターン類似度&lt;/button&gt;
-&lt;/div&gt;
-&lt;!-- タブ1: 売上成長率ランキング --&gt;
-&lt;div id="tab-growth" class="rg-tab-content active"&gt;
- &lt;div class="rg-description"&gt;
- &lt;p&gt;直近決算期のYoY（前年比）売上成長率ランキング。&lt;strong&gt;成長率が高い＝市場で選ばれている&lt;/strong&gt;証拠。&lt;/p&gt;</description></item><item><title>複利シミュレーター</title><link>https://stock-kabu3.com/tools/compound-interest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/compound-interest/</guid><description>&lt;div class="tool-container"&gt;
-&lt;div class="tool-box"&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;元本（円）&lt;/label&gt;
- &lt;input type="number" id="principal" value="1000000" min="0" step="10000"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;毎月積立額（円）&lt;/label&gt;
- &lt;input type="number" id="monthly" value="30000" min="0" step="1000"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;年利（%）&lt;/label&gt;
- &lt;input type="number" id="rate" value="5" min="0" max="50" step="0.1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;label&gt;運用期間（年）&lt;/label&gt;
- &lt;input type="number" id="years" value="20" min="1" max="60" step="1"&gt;
- &lt;/div&gt;
- &lt;div class="tool-row"&gt;
- &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="result" class="result-box" style="display:none;"&gt;
- &lt;div class="result-grid"&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;最終資産額&lt;/div&gt;
- &lt;div class="result-value" id="total"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card"&gt;
- &lt;div class="result-label"&gt;元本合計&lt;/div&gt;
- &lt;div class="result-value" id="invested"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-card highlight"&gt;
- &lt;div class="result-label"&gt;運用益&lt;/div&gt;
- &lt;div class="result-value" id="gain"&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="result-note" id="note"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function fmt(n) {
- return Math.round(n).toLocaleString('ja-JP') + '円';
-}
-function calculate() {
- const p = parseFloat(document.getElementById('principal').value) || 0;
- const m = parseFloat(document.getElementById('monthly').value) || 0;
- const r = parseFloat(document.getElementById('rate').value) / 100 / 12;
- const n = parseInt(document.getElementById('years').value) * 12;
- let total = p * Math.pow(1 + r, n);
- if (r &gt; 0) {
- total += m * (Math.pow(1 + r, n) - 1) / r;
- } else {
- total += m * n;
- }
- const invested = p + m * n;
- const gain = total - invested;
- document.getElementById('total').textContent = fmt(total);
- document.getElementById('invested').textContent = fmt(invested);
- document.getElementById('gain').textContent = fmt(gain);
- const ratio = ((total / invested - 1) * 100).toFixed(1);
- document.getElementById('note').textContent =
- '運用益率 ' + ratio + '%（元本の ' + (total / invested).toFixed(2) + ' 倍）';
- document.getElementById('result').style.display = 'block';
-}
-&lt;/script&gt;
-&lt;style&gt;
-.tool-container { max-width: 560px; margin: 0 auto; }
-.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
-.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.tool-row label { width: 160px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
-.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 120px; }
-.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
-.btn-primary:hover { background: #2563eb; }
-.result-box { margin-top: 20px; }
-.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
-.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
-.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
-.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }
-.result-card.highlight .result-value { color: #3b82f6; }
-.result-note { margin-top: 12px; text-align: center; font-size: 14px; color: #6b7280; }
-@media (max-width: 480px) {
- .result-grid { grid-template-columns: 1fr; }
- .tool-row label { width: 100%; }
-}
-&lt;/style&gt;
-&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;元本・毎月積立額・年利・運用期間を入力&lt;/li&gt;
-&lt;li&gt;「計算する」をクリック&lt;/li&gt;
-&lt;li&gt;最終資産額・元本合計・運用益が表示されます&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="計算式について"&gt;計算式について&lt;/h2&gt;
-&lt;p&gt;複利計算式（月次複利）を使用しています。年利を12で割った月利で毎月複利計算します。税金・手数料は含まれません。投資は元本割れのリスクがあります。&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>投資計算ツール on 株価アート - Stock Analysis Dashboard</title>
+    <link>https://stock-kabu3.com/tools/</link>
+    <description>Recent content in 投資計算ツール on 株価アート - Stock Analysis Dashboard</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <atom:link href="https://stock-kabu3.com/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>損益分岐点計算機</title>
+      <link>https://stock-kabu3.com/tools/breakeven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://stock-kabu3.com/tools/breakeven/</guid>
+      <description>&lt;div class=&#34;tool-container&#34;&gt;&#xA;&lt;div class=&#34;tool-box&#34;&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;買値（円）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;buy-price&#34; value=&#34;1500&#34; min=&#34;1&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;保有株数&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;shares&#34; value=&#34;100&#34; min=&#34;1&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;購入時手数料（円）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;buy-fee&#34; value=&#34;275&#34; min=&#34;0&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;売却時手数料（円）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;sell-fee&#34; value=&#34;275&#34; min=&#34;0&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;現在株価（円）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;current-price&#34; value=&#34;1600&#34; min=&#34;0&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;button class=&#34;btn-primary&#34; onclick=&#34;calculate()&#34;&gt;計算する&lt;/button&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;result&#34; class=&#34;result-box&#34; style=&#34;display:none;&#34;&gt;&#xA;  &lt;div class=&#34;result-grid&#34;&gt;&#xA;    &lt;div class=&#34;result-card highlight&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;損益分岐点（1株）&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;breakeven&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;現在の損益&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;pnl&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;損益率&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;pnl-rate&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;投資総額（手数料込）&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;total-cost&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;現在の評価額&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;market-value&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;損益（手数料込）&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;net-pnl&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;script&gt;&#xA;function fmt(n) { return Math.round(n).toLocaleString(&#39;ja-JP&#39;) + &#39;円&#39;; }&#xA;function fmtPct(n) { return (n &gt;= 0 ? &#39;+&#39; : &#39;&#39;) + n.toFixed(2) + &#39;%&#39;; }&#xA;function calculate() {&#xA;  const buyPrice   = parseFloat(document.getElementById(&#39;buy-price&#39;).value) || 0;&#xA;  const shares     = parseInt(document.getElementById(&#39;shares&#39;).value) || 0;&#xA;  const buyFee     = parseFloat(document.getElementById(&#39;buy-fee&#39;).value) || 0;&#xA;  const sellFee    = parseFloat(document.getElementById(&#39;sell-fee&#39;).value) || 0;&#xA;  const curPrice   = parseFloat(document.getElementById(&#39;current-price&#39;).value) || 0;&#xA;  const totalCost  = buyPrice * shares + buyFee;&#xA;  const breakeven  = (totalCost + sellFee) / shares;&#xA;  const marketVal  = curPrice * shares;&#xA;  const netPnL     = marketVal - sellFee - totalCost;&#xA;  const pnlRate    = totalCost &gt; 0 ? (netPnL / totalCost) * 100 : 0;&#xA;  const simplePnL  = (curPrice - buyPrice) * shares;&#xA;&#xA;  document.getElementById(&#39;breakeven&#39;).textContent  = fmt(breakeven) + &#39; / 株&#39;;&#xA;  document.getElementById(&#39;pnl&#39;).textContent        = fmt(simplePnL);&#xA;  document.getElementById(&#39;pnl-rate&#39;).textContent   = fmtPct(pnlRate);&#xA;  document.getElementById(&#39;total-cost&#39;).textContent = fmt(totalCost);&#xA;  document.getElementById(&#39;market-value&#39;).textContent = fmt(marketVal);&#xA;  document.getElementById(&#39;net-pnl&#39;).textContent    = fmt(netPnL);&#xA;&#xA;  const pnlEl = document.getElementById(&#39;pnl&#39;);&#xA;  const rateEl = document.getElementById(&#39;pnl-rate&#39;);&#xA;  const netEl  = document.getElementById(&#39;net-pnl&#39;);&#xA;  [pnlEl, rateEl, netEl].forEach(el =&gt; {&#xA;    el.style.color = netPnL &gt;= 0 ? &#39;#10b981&#39; : &#39;#ef4444&#39;;&#xA;  });&#xA;  document.getElementById(&#39;result&#39;).style.display = &#39;block&#39;;&#xA;}&#xA;&lt;/script&gt;&#xA;&lt;style&gt;&#xA;.tool-container { max-width: 560px; margin: 0 auto; }&#xA;.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }&#xA;.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }&#xA;.tool-row label { width: 180px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }&#xA;.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 100px; }&#xA;.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }&#xA;.btn-primary:hover { background: #2563eb; }&#xA;.result-box { margin-top: 20px; }&#xA;.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }&#xA;.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }&#xA;.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }&#xA;.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }&#xA;.result-value { font-size: 16px; font-weight: 700; color: #1f2937; }&#xA;.result-card.highlight .result-value { color: #3b82f6; }&#xA;@media (max-width: 480px) {&#xA;  .result-grid { grid-template-columns: repeat(2, 1fr); }&#xA;  .tool-row label { width: 100%; }&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;買値・保有株数・手数料・現在株価を入力&lt;/li&gt;&#xA;&lt;li&gt;「計算する」をクリック&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;損益分岐点とは&#34;&gt;損益分岐点とは&lt;/h2&gt;&#xA;&lt;p&gt;手数料を含めた投資総コストを回収できる株価のことです。現在株価が損益分岐点を上回っていれば利益、下回っていれば損失となります。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>配当利回り計算機</title>
+      <link>https://stock-kabu3.com/tools/dividend-yield/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://stock-kabu3.com/tools/dividend-yield/</guid>
+      <description>&lt;div class=&#34;tool-container&#34;&gt;&#xA;&lt;div class=&#34;tool-box&#34;&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;株価（円）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;price&#34; value=&#34;2000&#34; min=&#34;1&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;1株あたり年間配当（円）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;dividend&#34; value=&#34;60&#34; min=&#34;0&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;保有株数&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;shares&#34; value=&#34;100&#34; min=&#34;1&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;button class=&#34;btn-primary&#34; onclick=&#34;calculate()&#34;&gt;計算する&lt;/button&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;result&#34; class=&#34;result-box&#34; style=&#34;display:none;&#34;&gt;&#xA;  &lt;div class=&#34;result-grid&#34;&gt;&#xA;    &lt;div class=&#34;result-card highlight&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;配当利回り（税引前）&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;yield-before&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;配当利回り（税引後）&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;yield-after&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;年間配当（税引前）&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;annual-before&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;年間配当（税引後）&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;annual-after&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;投資総額&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;total-invest&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;差し引き税額&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;tax&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;script&gt;&#xA;const TAX_RATE = 0.20315;&#xA;function fmt(n) { return Math.round(n).toLocaleString(&#39;ja-JP&#39;) + &#39;円&#39;; }&#xA;function fmtPct(n) { return n.toFixed(2) + &#39;%&#39;; }&#xA;function calculate() {&#xA;  const price    = parseFloat(document.getElementById(&#39;price&#39;).value) || 0;&#xA;  const dividend = parseFloat(document.getElementById(&#39;dividend&#39;).value) || 0;&#xA;  const shares   = parseInt(document.getElementById(&#39;shares&#39;).value) || 0;&#xA;  const totalInvest  = price * shares;&#xA;  const annualBefore = dividend * shares;&#xA;  const annualAfter  = annualBefore * (1 - TAX_RATE);&#xA;  const yieldBefore  = price &gt; 0 ? (dividend / price) * 100 : 0;&#xA;  const yieldAfter   = yieldBefore * (1 - TAX_RATE);&#xA;  const taxAmount    = annualBefore - annualAfter;&#xA;  document.getElementById(&#39;yield-before&#39;).textContent  = fmtPct(yieldBefore);&#xA;  document.getElementById(&#39;yield-after&#39;).textContent   = fmtPct(yieldAfter);&#xA;  document.getElementById(&#39;annual-before&#39;).textContent = fmt(annualBefore);&#xA;  document.getElementById(&#39;annual-after&#39;).textContent  = fmt(annualAfter);&#xA;  document.getElementById(&#39;total-invest&#39;).textContent  = fmt(totalInvest);&#xA;  document.getElementById(&#39;tax&#39;).textContent           = fmt(taxAmount);&#xA;  document.getElementById(&#39;result&#39;).style.display = &#39;block&#39;;&#xA;}&#xA;&lt;/script&gt;&#xA;&lt;style&gt;&#xA;.tool-container { max-width: 560px; margin: 0 auto; }&#xA;.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }&#xA;.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }&#xA;.tool-row label { width: 200px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }&#xA;.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 100px; }&#xA;.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }&#xA;.btn-primary:hover { background: #2563eb; }&#xA;.result-box { margin-top: 20px; }&#xA;.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }&#xA;.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }&#xA;.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }&#xA;.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }&#xA;.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }&#xA;.result-card.highlight .result-value { color: #3b82f6; }&#xA;@media (max-width: 480px) {&#xA;  .result-grid { grid-template-columns: repeat(2, 1fr); }&#xA;  .tool-row label { width: 100%; }&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;現在の株価・1株あたり年間配当・保有株数を入力&lt;/li&gt;&#xA;&lt;li&gt;「計算する」をクリック&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;税率について&#34;&gt;税率について&lt;/h2&gt;&#xA;&lt;p&gt;国内株の配当に対する税率は &lt;strong&gt;20.315%&lt;/strong&gt;（所得税15.315% + 住民税5%）を適用しています。NISA口座では非課税となります。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>売上成長率・市場シェア分析</title>
+      <link>https://stock-kabu3.com/tools/revenue-growth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://stock-kabu3.com/tools/revenue-growth/</guid>
+      <description>&lt;div class=&#34;rg-container&#34;&gt;&#xA;&lt;!-- タブナビゲーション --&gt;&#xA;&lt;div class=&#34;rg-tabs&#34;&gt;&#xA;  &lt;button class=&#34;rg-tab active&#34; onclick=&#34;showTab(&#39;growth&#39;)&#34;&gt;売上成長率ランキング&lt;/button&gt;&#xA;  &lt;button class=&#34;rg-tab&#34; onclick=&#34;showTab(&#39;sector&#39;)&#34;&gt;セクター別シェア分析&lt;/button&gt;&#xA;  &lt;button class=&#34;rg-tab&#34; onclick=&#34;showTab(&#39;pattern&#39;)&#34;&gt;過去パターン類似度&lt;/button&gt;&#xA;&lt;/div&gt;&#xA;&lt;!-- タブ1: 売上成長率ランキング --&gt;&#xA;&lt;div id=&#34;tab-growth&#34; class=&#34;rg-tab-content active&#34;&gt;&#xA;  &lt;div class=&#34;rg-description&#34;&gt;&#xA;    &lt;p&gt;直近決算期のYoY（前年比）売上成長率ランキング。&lt;strong&gt;成長率が高い＝市場で選ばれている&lt;/strong&gt;証拠。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>複利シミュレーター</title>
+      <link>https://stock-kabu3.com/tools/compound-interest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://stock-kabu3.com/tools/compound-interest/</guid>
+      <description>&lt;div class=&#34;tool-container&#34;&gt;&#xA;&lt;div class=&#34;tool-box&#34;&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;元本（円）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;principal&#34; value=&#34;1000000&#34; min=&#34;0&#34; step=&#34;10000&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;毎月積立額（円）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;monthly&#34; value=&#34;30000&#34; min=&#34;0&#34; step=&#34;1000&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;年利（%）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;rate&#34; value=&#34;5&#34; min=&#34;0&#34; max=&#34;50&#34; step=&#34;0.1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;label&gt;運用期間（年）&lt;/label&gt;&#xA;    &lt;input type=&#34;number&#34; id=&#34;years&#34; value=&#34;20&#34; min=&#34;1&#34; max=&#34;60&#34; step=&#34;1&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;tool-row&#34;&gt;&#xA;    &lt;button class=&#34;btn-primary&#34; onclick=&#34;calculate()&#34;&gt;計算する&lt;/button&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;result&#34; class=&#34;result-box&#34; style=&#34;display:none;&#34;&gt;&#xA;  &lt;div class=&#34;result-grid&#34;&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;最終資産額&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;total&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;元本合計&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;invested&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;result-card highlight&#34;&gt;&#xA;      &lt;div class=&#34;result-label&#34;&gt;運用益&lt;/div&gt;&#xA;      &lt;div class=&#34;result-value&#34; id=&#34;gain&#34;&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;result-note&#34; id=&#34;note&#34;&gt;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;script&gt;&#xA;function fmt(n) {&#xA;  return Math.round(n).toLocaleString(&#39;ja-JP&#39;) + &#39;円&#39;;&#xA;}&#xA;function calculate() {&#xA;  const p = parseFloat(document.getElementById(&#39;principal&#39;).value) || 0;&#xA;  const m = parseFloat(document.getElementById(&#39;monthly&#39;).value) || 0;&#xA;  const r = parseFloat(document.getElementById(&#39;rate&#39;).value) / 100 / 12;&#xA;  const n = parseInt(document.getElementById(&#39;years&#39;).value) * 12;&#xA;  let total = p * Math.pow(1 + r, n);&#xA;  if (r &gt; 0) {&#xA;    total += m * (Math.pow(1 + r, n) - 1) / r;&#xA;  } else {&#xA;    total += m * n;&#xA;  }&#xA;  const invested = p + m * n;&#xA;  const gain = total - invested;&#xA;  document.getElementById(&#39;total&#39;).textContent = fmt(total);&#xA;  document.getElementById(&#39;invested&#39;).textContent = fmt(invested);&#xA;  document.getElementById(&#39;gain&#39;).textContent = fmt(gain);&#xA;  const ratio = ((total / invested - 1) * 100).toFixed(1);&#xA;  document.getElementById(&#39;note&#39;).textContent =&#xA;    &#39;運用益率 &#39; + ratio + &#39;%（元本の &#39; + (total / invested).toFixed(2) + &#39; 倍）&#39;;&#xA;  document.getElementById(&#39;result&#39;).style.display = &#39;block&#39;;&#xA;}&#xA;&lt;/script&gt;&#xA;&lt;style&gt;&#xA;.tool-container { max-width: 560px; margin: 0 auto; }&#xA;.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }&#xA;.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }&#xA;.tool-row label { width: 160px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }&#xA;.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 120px; }&#xA;.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }&#xA;.btn-primary:hover { background: #2563eb; }&#xA;.result-box { margin-top: 20px; }&#xA;.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }&#xA;.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }&#xA;.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }&#xA;.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }&#xA;.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }&#xA;.result-card.highlight .result-value { color: #3b82f6; }&#xA;.result-note { margin-top: 12px; text-align: center; font-size: 14px; color: #6b7280; }&#xA;@media (max-width: 480px) {&#xA;  .result-grid { grid-template-columns: 1fr; }&#xA;  .tool-row label { width: 100%; }&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;元本・毎月積立額・年利・運用期間を入力&lt;/li&gt;&#xA;&lt;li&gt;「計算する」をクリック&lt;/li&gt;&#xA;&lt;li&gt;最終資産額・元本合計・運用益が表示されます&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;計算式について&#34;&gt;計算式について&lt;/h2&gt;&#xA;&lt;p&gt;複利計算式（月次複利）を使用しています。年利を12で割った月利で毎月複利計算します。税金・手数料は含まれません。投資は元本割れのリスクがあります。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
