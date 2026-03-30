@@ -1,47 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>個人開発 on 株価アート - Stock Analysis Dashboard</title>
-    <link>https://stock-kabu3.com/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/</link>
-    <description>Recent content in 個人開発 on 株価アート - Stock Analysis Dashboard</description>
-    <generator>Hugo</generator>
-    <language>ja</language>
-    <lastBuildDate>Fri, 27 Mar 2026 08:00:00 +0900</lastBuildDate>
-    <atom:link href="https://stock-kabu3.com/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>145銘柄に拡張して見えてきたこと。AIは「下落好き」だった【連載・第4話】</title>
-      <link>https://stock-kabu3.com/post/145-stocks-expansion/</link>
-      <pubDate>Fri, 27 Mar 2026 08:00:00 +0900</pubDate>
-      <guid>https://stock-kabu3.com/post/145-stocks-expansion/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://stock-kabu3.com/post/sector-correlation-and-us-market/&#34;&gt;前回の第3話&lt;/a&gt;では、シグナルを増やすほど精度が下がるという話を書いた。そして「前日の米国市場の動き」という1つのシグナルだけがわずかに効いた。&lt;/p&gt;&#xA;&lt;p&gt;今回は、銘柄数を大幅に増やしたときに起きた「精度の暴落」と、その原因を掘り下げた話だ。&lt;/p&gt;&#xA;&lt;h2 id=&#34;8銘柄では少なすぎるという気持ち&#34;&gt;「8銘柄では少なすぎる」という気持ち&lt;/h2&gt;&#xA;&lt;p&gt;第3話の時点で、日次予測の対象は8銘柄だった。日経平均・ソフトバンクG・トヨタ・ソニー・S&amp;amp;P500・NASDAQ・ダウ・上海総合の8つ。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>シグナルを増やすほど精度が下がる。たった1つの発見が精度を上げた話【連載・第3話】</title>
-      <link>https://stock-kabu3.com/post/sector-correlation-and-us-market/</link>
-      <pubDate>Thu, 26 Mar 2026 08:00:00 +0900</pubDate>
-      <guid>https://stock-kabu3.com/post/sector-correlation-and-us-market/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://stock-kabu3.com/post/accuracy-wall-three-failures/&#34;&gt;前回の第2話&lt;/a&gt;では、3つの改善策を試して全部失敗した話を書いた。&lt;/p&gt;&#xA;&lt;p&gt;今回は「もっと情報を増やせば精度が上がるはず」という思い込みが完全に崩壊した話と、思いがけない発見の話だ。&lt;/p&gt;&#xA;&lt;h2 id=&#34;情報が足りないから精度が出ないという仮説&#34;&gt;「情報が足りないから精度が出ない」という仮説&lt;/h2&gt;&#xA;&lt;p&gt;第2話の時点で、予測に使っているシグナルは3つだけだった。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】</title>
-      <link>https://stock-kabu3.com/post/accuracy-wall-three-failures/</link>
-      <pubDate>Tue, 24 Mar 2026 08:00:00 +0900</pubDate>
-      <guid>https://stock-kabu3.com/post/accuracy-wall-three-failures/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://stock-kabu3.com/post/why-i-built-ai-prediction/&#34;&gt;前回の第1話&lt;/a&gt;では、なぜAI株価予測システムを作ろうと思ったかを書いた。&lt;/p&gt;&#xA;&lt;p&gt;今回はその続き。「64.3%という数字を超えられない」という話だ。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ある日の予測結果を見て固まった&#34;&gt;ある日の予測結果を見て、固まった&lt;/h2&gt;&#xA;&lt;p&gt;システムが稼働を始めてしばらく経った3月中旬のことだ。&lt;/p&gt;&#xA;&lt;p&gt;その日の予測結果ログを開いた瞬間、目を疑った。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>なぜ私はAI株価予測システムを自作したのか【連載・第1話】</title>
-      <link>https://stock-kabu3.com/post/why-i-built-ai-prediction/</link>
-      <pubDate>Mon, 23 Mar 2026 08:00:00 +0900</pubDate>
-      <guid>https://stock-kabu3.com/post/why-i-built-ai-prediction/</guid>
-      <description>&lt;h2 id=&#34;もし予測できたらという邪念から始まった&#34;&gt;「もし予測できたら」という邪念から始まった&lt;/h2&gt;&#xA;&lt;p&gt;正直に言う。&lt;/p&gt;&#xA;&lt;p&gt;最初の動機は、不純だった。&lt;/p&gt;&#xA;&lt;p&gt;「AIで株価を予測できれば儲かるんじゃないか」——そう思ったのが、このシステムを作り始めたきっかけだ。&lt;/p&gt;&#xA;&lt;p&gt;今から振り返れば、その考えは半分間違いで、半分は間違いでもなかった。でも当時の自分は、その区別がまだついていなかった。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>個人開発でAI株価予測サイトを作った話｜半年間の失敗と学びの全記録</title>
-      <link>https://stock-kabu3.com/post/building-ai-stock-prediction/</link>
-      <pubDate>Wed, 11 Mar 2026 12:00:00 +0900</pubDate>
-      <guid>https://stock-kabu3.com/post/building-ai-stock-prediction/</guid>
-      <description>&lt;h2 id=&#34;はじめに--なぜエンジニアが株価サイトを作ろうと思ったのか&#34;&gt;はじめに ── なぜエンジニアが株価サイトを作ろうと思ったのか&lt;/h2&gt;&#xA;&lt;p&gt;「この株価サイト、なんでこんなに使いにくいんだろう」&lt;/p&gt;&#xA;&lt;p&gt;きっかけは、そんな素朴な苛立ちだった。&lt;/p&gt;&#xA;&lt;p&gt;証券会社のアプリは情報が多すぎて目が滑る。無料の情報サイトは広告だらけで読み込みが遅い。会員登録しないとチャートすら見られないサービスもある。欲しいのは、自分が保有している銘柄と気になる銘柄の値動きを、ぱっと見て把握できるシンプルなダッシュボードだった。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>個人開発 on 株価アート - Stock Analysis Dashboard</title><link>https://stock-kabu3.com/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/</link><description>Recent content in 個人開発 on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Fri, 27 Mar 2026 08:00:00 +0900</lastBuildDate><atom:link href="https://stock-kabu3.com/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml"/><item><title>145銘柄に拡張して見えてきたこと。AIは「下落好き」だった【連載・第4話】</title><link>https://stock-kabu3.com/post/145-stocks-expansion/</link><pubDate>Fri, 27 Mar 2026 08:00:00 +0900</pubDate><guid>https://stock-kabu3.com/post/145-stocks-expansion/</guid><description>&lt;p&gt;&lt;a href="https://stock-kabu3.com/post/sector-correlation-and-us-market/"&gt;前回の第3話&lt;/a&gt;では、シグナルを増やすほど精度が下がるという話を書いた。そして「前日の米国市場の動き」という1つのシグナルだけがわずかに効いた。&lt;/p&gt;
+&lt;p&gt;今回は、銘柄数を大幅に増やしたときに起きた「精度の暴落」と、その原因を掘り下げた話だ。&lt;/p&gt;
+&lt;h2 id="8銘柄では少なすぎるという気持ち"&gt;「8銘柄では少なすぎる」という気持ち&lt;/h2&gt;
+&lt;p&gt;第3話の時点で、日次予測の対象は8銘柄だった。日経平均・ソフトバンクG・トヨタ・ソニー・S&amp;amp;P500・NASDAQ・ダウ・上海総合の8つ。&lt;/p&gt;</description></item><item><title>シグナルを増やすほど精度が下がる。たった1つの発見が精度を上げた話【連載・第3話】</title><link>https://stock-kabu3.com/post/sector-correlation-and-us-market/</link><pubDate>Thu, 26 Mar 2026 08:00:00 +0900</pubDate><guid>https://stock-kabu3.com/post/sector-correlation-and-us-market/</guid><description>&lt;p&gt;&lt;a href="https://stock-kabu3.com/post/accuracy-wall-three-failures/"&gt;前回の第2話&lt;/a&gt;では、3つの改善策を試して全部失敗した話を書いた。&lt;/p&gt;
+&lt;p&gt;今回は「もっと情報を増やせば精度が上がるはず」という思い込みが完全に崩壊した話と、思いがけない発見の話だ。&lt;/p&gt;
+&lt;h2 id="情報が足りないから精度が出ないという仮説"&gt;「情報が足りないから精度が出ない」という仮説&lt;/h2&gt;
+&lt;p&gt;第2話の時点で、予測に使っているシグナルは3つだけだった。&lt;/p&gt;</description></item><item><title>精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】</title><link>https://stock-kabu3.com/post/accuracy-wall-three-failures/</link><pubDate>Tue, 24 Mar 2026 08:00:00 +0900</pubDate><guid>https://stock-kabu3.com/post/accuracy-wall-three-failures/</guid><description>&lt;p&gt;&lt;a href="https://stock-kabu3.com/post/why-i-built-ai-prediction/"&gt;前回の第1話&lt;/a&gt;では、なぜAI株価予測システムを作ろうと思ったかを書いた。&lt;/p&gt;
+&lt;p&gt;今回はその続き。「64.3%という数字を超えられない」という話だ。&lt;/p&gt;
+&lt;h2 id="ある日の予測結果を見て固まった"&gt;ある日の予測結果を見て、固まった&lt;/h2&gt;
+&lt;p&gt;システムが稼働を始めてしばらく経った3月中旬のことだ。&lt;/p&gt;
+&lt;p&gt;その日の予測結果ログを開いた瞬間、目を疑った。&lt;/p&gt;</description></item><item><title>なぜ私はAI株価予測システムを自作したのか【連載・第1話】</title><link>https://stock-kabu3.com/post/why-i-built-ai-prediction/</link><pubDate>Mon, 23 Mar 2026 08:00:00 +0900</pubDate><guid>https://stock-kabu3.com/post/why-i-built-ai-prediction/</guid><description>&lt;h2 id="もし予測できたらという邪念から始まった"&gt;「もし予測できたら」という邪念から始まった&lt;/h2&gt;
+&lt;p&gt;正直に言う。&lt;/p&gt;
+&lt;p&gt;最初の動機は、不純だった。&lt;/p&gt;
+&lt;p&gt;「AIで株価を予測できれば儲かるんじゃないか」——そう思ったのが、このシステムを作り始めたきっかけだ。&lt;/p&gt;
+&lt;p&gt;今から振り返れば、その考えは半分間違いで、半分は間違いでもなかった。でも当時の自分は、その区別がまだついていなかった。&lt;/p&gt;</description></item><item><title>個人開発でAI株価予測サイトを作った話｜半年間の失敗と学びの全記録</title><link>https://stock-kabu3.com/post/building-ai-stock-prediction/</link><pubDate>Wed, 11 Mar 2026 12:00:00 +0900</pubDate><guid>https://stock-kabu3.com/post/building-ai-stock-prediction/</guid><description>&lt;h2 id="はじめに--なぜエンジニアが株価サイトを作ろうと思ったのか"&gt;はじめに ── なぜエンジニアが株価サイトを作ろうと思ったのか&lt;/h2&gt;
+&lt;p&gt;「この株価サイト、なんでこんなに使いにくいんだろう」&lt;/p&gt;
+&lt;p&gt;きっかけは、そんな素朴な苛立ちだった。&lt;/p&gt;
+&lt;p&gt;証券会社のアプリは情報が多すぎて目が滑る。無料の情報サイトは広告だらけで読み込みが遅い。会員登録しないとチャートすら見られないサービスもある。欲しいのは、自分が保有している銘柄と気になる銘柄の値動きを、ぱっと見て把握できるシンプルなダッシュボードだった。&lt;/p&gt;</description></item></channel></rss>

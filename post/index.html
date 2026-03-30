@@ -1,1253 +1,144 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts | 株価アート - Stock Analysis Dashboard</title>
-    <meta name="description" content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析">
-    <meta name="keywords" content="株価,投資,分析,ダッシュボード,日経平均,チャート">
-    <meta name="author" content="stockaaa76-art">
-    
-    <meta name="google-adsense-account" content="ca-pub-8563231513969804">
-    
-    
-    <meta property="og:title" content="Posts">
-    <meta property="og:description" content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://stock-kabu3.com/post/">
-    <meta property="og:site_name" content="株価アート - Stock Analysis Dashboard">
-    
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Posts">
-    <meta name="twitter:description" content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析">
-    
-    
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/images/kabu-nip-icon.png">
-    <meta property="og:image" content="https://stock-kabu3.com/images/kabu-nip-icon.png">
-    
-    
-    <link rel="stylesheet" href="/app.css">
-    
-    
-    <link rel="canonical" href="https://stock-kabu3.com/post/">
-    
-    
-    <link rel="alternate" type="application/rss+xml" title="株価アート - Stock Analysis Dashboard" href="https://stock-kabu3.com/index.xml">
-    
-    
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-NMCCH26J');</script>
-    
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPRP3JDSK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-KEPRP3JDSK');
-    </script>
-    
-    
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563231513969804"
-            crossorigin="anonymous"></script>
-    
-    <style>
-         
-        :root {
-            --accent-color: #3b82f6;
-            --accent-color-light: #dbeafe;
-            --accent-color-dark: #1d4ed8;
-            
-            --card-background: #ffffff;
-            --card-text-color-main: #1f2937;
-            --card-text-color-secondary: #6b7280;
-            --card-text-color-tertiary: #9ca3af;
-            --card-separator-color: #e5e7eb;
-            --card-border-radius: 8px;
-            
-            --success-color: #10b981;
-            --error-color: #ef4444;
-            --warning-color: #f59e0b;
-            --info-color: #3b82f6;
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --card-background: #1f2937;
-                --card-text-color-main: #f3f4f6;
-                --card-text-color-secondary: #d1d5db;
-                --card-text-color-tertiary: #9ca3af;
-                --card-separator-color: #374151;
-            }
-        }
-        
-         
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #1f2937;
-            background-color: #f9fafb;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: #ffffff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #3b82f6;
-            text-decoration: none;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: #6b7280;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        
-        nav a:hover {
-            color: #3b82f6;
-        }
-        
-        main {
-            min-height: calc(100vh - 200px);
-            padding: 20px 0;
-        }
-        
-        footer {
-            background: #1f2937;
-            color: #d1d5db;
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        .footer-links a {
-            color: #9ca3af;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        
-        .footer-links a:hover {
-            color: #d1d5db;
-        }
-        
-         
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            nav ul {
-                gap: 1rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-        
-         
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #111827;
-                color: #f3f4f6;
-            }
-            
-            header {
-                background: #1f2937;
-            }
-            
-            nav a {
-                color: #d1d5db;
-            }
-            
-            nav a:hover {
-                color: #60a5fa;
-            }
-        }
-    </style>
-</head>
-<body>
-    
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-NMCCH26J"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
-    
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:8px;"><img src="/images/kabu-nip-icon.png" alt="カブニップ" style="height:32px;width:32px;border-radius:50%;">株価アート - Stock Analysis Dashboard</a>
-                <nav>
-                    <ul>
-                        
-                        <li><a href="/">ダッシュボード</a></li>
-                        
-                        <li><a href="/stocks/">銘柄一覧</a></li>
-                        
-                        <li><a href="/post/">記事</a></li>
-                        
-                        <li><a href="/tools/">ツール</a></li>
-                        
-                        <li><a href="/about/">このサイトについて</a></li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            
-<div class="article-list-container">
-    <header class="article-list-header">
-        <h1>📝 記事一覧</h1>
-        <p class="article-list-desc">マーケットサマリー、投資コラム、AI予測レビューなど</p>
-    </header>
-
-    
-    <div class="category-filter">
-        <a href="/post/" class="filter-btn active">すべて</a>
-        
-        <a href="https://stock-kabu3.com/tags/ai%E4%BA%88%E6%B8%AC/" class="filter-btn">AI予測</a>
-        
-        <a href="https://stock-kabu3.com/tags/nisa/" class="filter-btn">NISA</a>
-        
-        <a href="https://stock-kabu3.com/tags/pbr/" class="filter-btn">PBR</a>
-        
-        <a href="https://stock-kabu3.com/tags/per/" class="filter-btn">PER</a>
-        
-        <a href="https://stock-kabu3.com/tags/sbi%E8%A8%BC%E5%88%B8/" class="filter-btn">SBI証券</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" class="filter-btn">お知らせ</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E3%82%A4%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%B2%E3%82%A4%E3%83%B3/" class="filter-btn">インカムゲイン</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E3%82%B3%E3%83%A9%E3%83%A0/" class="filter-btn">コラム</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E5%88%86%E6%9E%90/" class="filter-btn">テクニカル分析</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90/" class="filter-btn">データ分析</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E3%83%90%E3%83%AA%E3%83%A5%E3%83%BC%E6%8A%95%E8%B3%87/" class="filter-btn">バリュー投資</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%82%B5%E3%83%9E%E3%83%AA%E3%83%BC/" class="filter-btn">マーケットサマリー</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E4%BD%93%E9%A8%93%E8%A8%98/" class="filter-btn">体験記</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/" class="filter-btn">個人開発</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E5%88%86%E6%9E%90/" class="filter-btn">分析</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E5%89%B2%E5%AE%89%E6%A0%AA/" class="filter-btn">割安株</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E5%8F%A3%E5%BA%A7%E9%96%8B%E8%A8%AD/" class="filter-btn">口座開設</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E5%A4%B1%E6%95%97%E8%AB%87/" class="filter-btn">失敗談</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87/" class="filter-btn">投資</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87%E3%82%AC%E3%82%A4%E3%83%89/" class="filter-btn">投資ガイド</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87%E5%88%9D%E5%BF%83%E8%80%85/" class="filter-btn">投資初心者</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87%E6%9C%AC/" class="filter-btn">投資本</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%97%A5%E7%B5%8C%E5%B9%B3%E5%9D%87/" class="filter-btn">日経平均</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%A0%AA%E3%82%AF%E3%83%A9/" class="filter-btn">株クラ</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%A0%AA%E4%BE%A1/" class="filter-btn">株価</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%A0%AA%E4%BE%A1%E6%8C%87%E6%A8%99/" class="filter-btn">株価指標</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/" class="filter-btn">株式投資</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%A4%9C%E8%A8%BC/" class="filter-btn">検証</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%A5%BD%E5%A4%A9%E8%A8%BC%E5%88%B8/" class="filter-btn">楽天証券</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E6%AF%94%E8%BC%83/" class="filter-btn">比較</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E8%A8%BC%E5%88%B8%E4%BC%9A%E7%A4%BE/" class="filter-btn">証券会社</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E8%AA%AD%E6%9B%B8/" class="filter-btn">読書</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E9%80%A3%E8%BC%89/" class="filter-btn">連載</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E9%80%B1%E9%96%93%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/" class="filter-btn">週間レビュー</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E9%85%8D%E5%BD%93%E5%88%A9%E5%9B%9E%E3%82%8A/" class="filter-btn">配当利回り</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E9%95%B7%E6%9C%9F%E6%8A%95%E8%B3%87/" class="filter-btn">長期投資</a>
-        
-        <a href="https://stock-kabu3.com/tags/%E9%AB%98%E9%85%8D%E5%BD%93%E6%A0%AA/" class="filter-btn">高配当株</a>
-        
-    </div>
-
-    
-    <div class="article-grid">
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-30">2026年3月30日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-30-daily-prediction/">【AI予測】3月30日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月30日のAI株価予測。日経平均は下落シグナル（信頼度48%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#株クラ</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-27">2026年3月27日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/weekly-review-2026-03-27/">週間マーケットレビュー（2026年3月23日〜2026年3月27日）</a>
-                </h2>
-                
-                <p class="article-excerpt">2026年3月23日〜2026年3月27日の株式市場週間まとめ。日経平均は週間&#43;3.61%。主要4指数の推移と振り返りをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#週間レビュー</span>
-                    
-                    <span class="article-tag">#マーケットサマリー</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-27">2026年3月27日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/145-stocks-expansion/">145銘柄に拡張して見えてきたこと。AIは「下落好き」だった【連載・第4話】</a>
-                </h2>
-                
-                <p class="article-excerpt">8銘柄から145銘柄に拡張した。精度は75%から37%に暴落した。原因を調べると、AIが異常なほど「下落予測」を出しがちなことがわかった。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#体験記</span>
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#個人開発</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#連載</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-27">2026年3月27日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-27-daily-prediction/">【AI予測】3月27日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月27日のAI株価予測。日経平均は下落シグナル（信頼度53%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-26">2026年3月26日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-26-daily-prediction/">【AI予測】3月26日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月26日のAI株価予測。日経平均は下落シグナル（信頼度53%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-26">2026年3月26日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/sector-correlation-and-us-market/">シグナルを増やすほど精度が下がる。たった1つの発見が精度を上げた話【連載・第3話】</a>
-                </h2>
-                
-                <p class="article-excerpt">VIX・ドル円・セクター相関をAI予測に追加した。結果、精度は下がった。逆に効いたのは「前日のアメリカ市場が上がったか下がったか」だけだった。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#体験記</span>
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#個人開発</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#連載</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-25">2026年3月25日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-25-daily-prediction/">【AI予測】3月25日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月25日のAI株価予測。日経平均は下落シグナル（信頼度53%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-24">2026年3月24日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-24-daily-prediction/">【AI予測】3月24日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月24日のAI株価予測。日経平均は下落シグナル（信頼度47%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-24">2026年3月24日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/accuracy-wall-three-failures/">精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】</a>
-                </h2>
-                
-                <p class="article-excerpt">AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#体験記</span>
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#個人開発</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#連載</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-23">2026年3月23日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-23-daily-prediction/">【AI予測】3月23日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月23日のAI株価予測。日経平均は下落シグナル（信頼度47%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-23">2026年3月23日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/high-dividend-stocks/">高配当株の選び方【2026年版】利回り4%以上を安全に狙う5つの基準</a>
-                </h2>
-                
-                <p class="article-excerpt">高配当株の選び方を初心者向けに解説。配当利回り4%以上を狙いつつ、減配リスクを避けるための5つの基準と具体的な確認方法を紹介します。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#高配当株</span>
-                    
-                    <span class="article-tag">#配当利回り</span>
-                    
-                    <span class="article-tag">#インカムゲイン</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                    <span class="article-tag">#長期投資</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-23">2026年3月23日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/per-pbr-explained/">PER・PBRとは？株の割安・割高を見極める指標を初心者向けに解説</a>
-                </h2>
-                
-                <p class="article-excerpt">PER（株価収益率）とPBR（株価純資産倍率）の意味・計算式・使い方を初心者向けに解説。割安株を見つけるための基本指標をわかりやすく説明します。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#PER</span>
-                    
-                    <span class="article-tag">#PBR</span>
-                    
-                    <span class="article-tag">#株価指標</span>
-                    
-                    <span class="article-tag">#割安株</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                    <span class="article-tag">#バリュー投資</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-23">2026年3月23日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/why-i-built-ai-prediction/">なぜ私はAI株価予測システムを自作したのか【連載・第1話】</a>
-                </h2>
-                
-                <p class="article-excerpt">株で負け続けた会社員がAI株価予測システムを自作し始めた理由。精度64.3%、目標65%。この挑戦がどこに向かうのか、自分でもわからないまま記録を始めます。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#体験記</span>
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#個人開発</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#連載</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-22">2026年3月22日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-22-daily-prediction/">【AI予測】3月22日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月22日のAI株価予測。日経平均は下落シグナル（信頼度56%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-19">2026年3月19日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-19-daily-prediction/">【AI予測】3月19日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月19日のAI株価予測。日経平均は下落シグナル（信頼度56%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-18">2026年3月18日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/nisa-doko-hiraku/">NISAはどこで開くべきか？2026年版 初心者が選ぶべき証券会社</a>
-                </h2>
-                
-                <p class="article-excerpt">新NISA口座をどこで開くか迷っている人向けに、証券会社の選び方と比較をわかりやすく解説。楽天証券・SBI証券・銀行との違いも説明します。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#NISA</span>
-                    
-                    <span class="article-tag">#証券会社</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                    <span class="article-tag">#楽天証券</span>
-                    
-                    <span class="article-tag">#SBI証券</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-18">2026年3月18日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/sbi-vs-rakuten-shoken/">SBI証券 vs 楽天証券 どっちがいい？2026年版 徹底比較</a>
-                </h2>
-                
-                <p class="article-excerpt">SBI証券と楽天証券を手数料・NISA・ポイント・ツール・米国株の5軸で徹底比較。どちらを選ぶべきかを使い方別に結論を出します。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#証券会社</span>
-                    
-                    <span class="article-tag">#SBI証券</span>
-                    
-                    <span class="article-tag">#楽天証券</span>
-                    
-                    <span class="article-tag">#比較</span>
-                    
-                    <span class="article-tag">#NISA</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-18">2026年3月18日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2026-03-18-daily-prediction/">【AI予測】3月18日の日経平均・主要銘柄 見通し</a>
-                </h2>
-                
-                <p class="article-excerpt">3月18日のAI株価予測。日経平均は下落シグナル（信頼度56%）。主要銘柄の見通しをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-18">2026年3月18日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/rakuten-shoken-kaiko/">楽天証券の口座開設方法【2026年最新・初心者向け完全手順】</a>
-                </h2>
-                
-                <p class="article-excerpt">楽天証券の口座開設を画像なしでもわかる手順で解説。申込みから取引開始まで最短3営業日。つまずきやすいポイントと注意事項もまとめました。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#証券会社</span>
-                    
-                    <span class="article-tag">#楽天証券</span>
-                    
-                    <span class="article-tag">#口座開設</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                    <span class="article-tag">#NISA</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-18">2026年3月18日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/ai-prediction-accuracy-report/">自作AIは本当に株価を予測できるのか？実際の検証データを公開します</a>
-                </h2>
-                
-                <p class="article-excerpt">このサイトのAI株価予測の「答え合わせ」を公開。方向一致率62.5%、平均誤差1.01%という結果の意味と、AIを「信じる」のではなく「使う」方法を考えます。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#体験記</span>
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#検証</span>
-                    
-                    <span class="article-tag">#データ分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-18">2026年3月18日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/my-first-stock-failure/">株を始めて3ヶ月で犯した3つのミス｜今でも後悔している失敗の話</a>
-                </h2>
-                
-                <p class="article-excerpt">投資初心者が最初の3ヶ月で犯してしまった典型的な失敗の話。狼狽売り、ナンピン、銘柄分散なし。笑えない体験談を赤裸々に書きます。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#体験記</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                    <span class="article-tag">#失敗談</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-13">2026年3月13日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/weekly-review-2026-03-13/">週間マーケットレビュー（2026年3月9日〜2026年3月13日）</a>
-                </h2>
-                
-                <p class="article-excerpt">2026年3月9日〜2026年3月13日の株式市場週間まとめ。日経平均は週間&#43;4.36%。主要4指数の推移と振り返りをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#週間レビュー</span>
-                    
-                    <span class="article-tag">#マーケットサマリー</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-11">2026年3月11日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/daily-market-2026-03-11/">2026年3月11日（水）マーケットサマリー｜日経平均 54,248円</a>
-                </h2>
-                
-                <p class="article-excerpt">2026年3月11日の株式市場まとめ。日経平均は54,248円（&#43;1,520円）。主要指標と値動きランキングをお届けします。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#週間レビュー</span>
-                    
-                    <span class="article-tag">#マーケットサマリー</span>
-                    
-                    <span class="article-tag">#日経平均</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2026-03-11">2026年3月11日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/building-ai-stock-prediction/">個人開発でAI株価予測サイトを作った話｜半年間の失敗と学びの全記録</a>
-                </h2>
-                
-                <p class="article-excerpt">エンジニアが1人でAI株価予測サイトを構築するまでの体験記。技術選定の迷走、yfinance APIの壁、予測精度52%の現実、そしてそこから得た教訓を赤裸々に綴ります。</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#コラム</span>
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#個人開発</span>
-                    
-                    <span class="article-tag">#体験記</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2025-09-27">2025年9月27日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2025-09-27-investment-books/">投資初心者におすすめの本5選</a>
-                </h2>
-                
-                <p class="article-excerpt">投資を学ぶのに最適な入門書から実践書まで厳選紹介</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#投資ガイド</span>
-                    
-                    <span class="article-tag">#投資本</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                    <span class="article-tag">#読書</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2025-09-27">2025年9月27日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/2025-09-27-investment-brokers/">おすすめ証券会社比較</a>
-                </h2>
-                
-                <p class="article-excerpt">投資初心者におすすめの証券会社を比較紹介</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#投資ガイド</span>
-                    
-                    <span class="article-tag">#証券会社</span>
-                    
-                    <span class="article-tag">#投資初心者</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2025-09-08">2025年9月8日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/stock-prediction-2025-09-08/">📈 株価予測レポート - 2025-09-08</a>
-                </h2>
-                
-                <p class="article-excerpt">36銘柄の株価予測結果</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#AI予測</span>
-                    
-                    <span class="article-tag">#株式投資</span>
-                    
-                    <span class="article-tag">#テクニカル分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-        <article class="article-card">
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <time datetime="2025-09-07">2025年9月7日</time>
-                </div>
-                <h2 class="article-title">
-                    <a href="https://stock-kabu3.com/post/welcome/">株価アートサイト開設のお知らせ</a>
-                </h2>
-                
-                <p class="article-excerpt">株価分析と投資情報を提供する新しいメディアサイトが開設されました</p>
-                
-                <div class="article-tags">
-                    
-                    <span class="article-tag">#お知らせ</span>
-                    
-                    <span class="article-tag">#株価</span>
-                    
-                    <span class="article-tag">#投資</span>
-                    
-                    <span class="article-tag">#分析</span>
-                    
-                </div>
-            </div>
-        </article>
-        
-    </div>
-
-    
-</div>
-
-<style>
-.article-list-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.article-list-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.article-list-header h1 {
-    font-size: 2rem;
-    color: var(--card-text-color-main);
-    margin-bottom: 8px;
-}
-
-.article-list-desc {
-    color: var(--card-text-color-secondary);
-    font-size: 1rem;
-}
-
- 
-.category-filter {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 8px 18px;
-    border: 1px solid var(--card-separator-color);
-    border-radius: 20px;
-    color: var(--card-text-color-secondary);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    background: var(--card-background);
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--accent-color);
-    color: white;
-    border-color: var(--accent-color);
-}
-
- 
-.article-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.article-card {
-    background: var(--card-background);
-    border: 1px solid var(--card-separator-color);
-    border-radius: var(--card-border-radius);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow: hidden;
-}
-
-.article-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-
-.article-card-body {
-    padding: 24px;
-}
-
-.article-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-    font-size: 0.85rem;
-}
-
-.article-meta time {
-    color: var(--card-text-color-tertiary);
-}
-
-
-.article-title {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
-.article-title a {
-    color: var(--card-text-color-main);
-    text-decoration: none;
-}
-
-.article-title a:hover {
-    color: var(--accent-color);
-}
-
-.article-excerpt {
-    color: var(--card-text-color-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-
-.article-tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.article-tag {
-    font-size: 0.8rem;
-    color: var(--accent-color);
-}
-
-.no-articles {
-    text-align: center;
-    padding: 60px 20px;
-    color: var(--card-text-color-secondary);
-}
-
-.no-articles p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
- 
-@media (max-width: 768px) {
-    .article-list-container {
-        padding: 20px 15px;
-    }
-
-    .article-list-header h1 {
-        font-size: 1.5rem;
-    }
-
-    .article-card-body {
-        padding: 18px;
-    }
-
-    .article-title {
-        font-size: 1.1rem;
-    }
-
-    .category-filter {
-        gap: 8px;
-    }
-
-    .filter-btn {
-        padding: 6px 14px;
-        font-size: 0.8rem;
-    }
-}
-
-</style>
-
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="/post/">記事一覧</a>
-                <a href="/categories/">カテゴリ</a>
-                <a href="/tags/">タグ</a>
-                <a href="https://stock-kabu3.com/index.xml">RSS</a>
-            </div>
-            <p>&copy; 2026 株価アート - Stock Analysis Dashboard. All rights reserved.</p>
-            <p style="margin-top: 10px; font-size: 0.9rem; color: #9ca3af;">
-                株価データは参考情報です。投資判断は自己責任でお願いします。
-            </p>
-        </div>
-    </footer>
-
-    
-    
-</body>
-</html>
+<!doctype html><html lang=ja><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Posts | 株価アート - Stock Analysis Dashboard</title><meta name=description content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析"><meta name=keywords content="株価,投資,分析,ダッシュボード,日経平均,チャート"><meta name=author content="stockaaa76-art"><meta name=google-adsense-account content="ca-pub-8563231513969804"><meta property="og:title" content="Posts"><meta property="og:description" content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析"><meta property="og:type" content="website"><meta property="og:url" content="https://stock-kabu3.com/post/"><meta property="og:site_name" content="株価アート - Stock Analysis Dashboard"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Posts"><meta name=twitter:description content="株価分析ダッシュボード - 日経平均・個別株のリアルタイム分析"><link rel=icon type=image/png href=/favicon.png><link rel=apple-touch-icon href=/images/kabu-nip-icon.png><meta property="og:image" content="https://stock-kabu3.com/images/kabu-nip-icon.png"><link rel=stylesheet href=/app.css><link rel=canonical href=https://stock-kabu3.com/post/><link rel=alternate type=application/rss+xml title="株価アート - Stock Analysis Dashboard" href=https://stock-kabu3.com/index.xml><script>(function(e,t,n,s,o){e[s]=e[s]||[],e[s].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var a=t.getElementsByTagName(n)[0],i=t.createElement(n),r=s!="dataLayer"?"&l="+s:"";i.async=!0,i.src="https://www.googletagmanager.com/gtm.js?id="+o+r,a.parentNode.insertBefore(i,a)})(window,document,"script","dataLayer","GT-NMCCH26J")</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPRP3JDSK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KEPRP3JDSK")</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563231513969804" crossorigin=anonymous></script><style>:root{--accent-color:#3b82f6;--accent-color-light:#dbeafe;--accent-color-dark:#1d4ed8;--card-background:#ffffff;--card-text-color-main:#1f2937;--card-text-color-secondary:#6b7280;--card-text-color-tertiary:#9ca3af;--card-separator-color:#e5e7eb;--card-border-radius:8px;--success-color:#10b981;--error-color:#ef4444;--warning-color:#f59e0b;--info-color:#3b82f6}@media(prefers-color-scheme:dark){:root{--card-background:#1f2937;--card-text-color-main:#f3f4f6;--card-text-color-secondary:#d1d5db;--card-text-color-tertiary:#9ca3af;--card-separator-color:#374151}}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;line-height:1.6;color:#1f2937;background-color:#f9fafb}.container{max-width:1200px;margin:0 auto;padding:0 20px}header{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}.header-content{display:flex;justify-content:space-between;align-items:center;padding:15px 0}.logo{font-size:1.5rem;font-weight:700;color:#3b82f6;text-decoration:none}nav ul{display:flex;list-style:none;gap:2rem}nav a{color:#6b7280;text-decoration:none;font-weight:500;transition:color .2s}nav a:hover{color:#3b82f6}main{min-height:calc(100vh - 200px);padding:20px 0}footer{background:#1f2937;color:#d1d5db;text-align:center;padding:40px 0;margin-top:60px}.footer-content{max-width:1200px;margin:0 auto;padding:0 20px}.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:20px}.footer-links a{color:#9ca3af;text-decoration:none;transition:color .2s}.footer-links a:hover{color:#d1d5db}@media(max-width:768px){.header-content{flex-direction:column;gap:15px}nav ul{gap:1rem}.footer-links{flex-direction:column;gap:1rem}}@media(prefers-color-scheme:dark){body{background-color:#111827;color:#f3f4f6}header{background:#1f2937}nav a{color:#d1d5db}nav a:hover{color:#60a5fa}}</style></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-NMCCH26J" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript><header><div class=container><div class=header-content><a href=/ class=logo style=display:inline-flex;align-items:center;gap:8px><img src=/images/kabu-nip-icon.png alt=カブニップ style=height:32px;width:32px;border-radius:50%>株価アート - Stock Analysis Dashboard</a><nav><ul><li><a href=/>ダッシュボード</a></li><li><a href=/stocks/>銘柄一覧</a></li><li><a href=/post/>記事</a></li><li><a href=/tools/>ツール</a></li><li><a href=/about/>このサイトについて</a></li></ul></nav></div></div></header><main><div class=container><div class=article-list-container><header class=article-list-header><h1>📝 記事一覧</h1><p class=article-list-desc>マーケットサマリー、投資コラム、AI予測レビューなど</p></header><div class=category-filter><a href=/post/ class="filter-btn active">すべて</a>
+<a href=https://stock-kabu3.com/tags/ai%E4%BA%88%E6%B8%AC/ class=filter-btn>AI予測</a>
+<a href=https://stock-kabu3.com/tags/nisa/ class=filter-btn>NISA</a>
+<a href=https://stock-kabu3.com/tags/pbr/ class=filter-btn>PBR</a>
+<a href=https://stock-kabu3.com/tags/per/ class=filter-btn>PER</a>
+<a href=https://stock-kabu3.com/tags/sbi%E8%A8%BC%E5%88%B8/ class=filter-btn>SBI証券</a>
+<a href=https://stock-kabu3.com/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/ class=filter-btn>お知らせ</a>
+<a href=https://stock-kabu3.com/tags/%E3%82%A4%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%B2%E3%82%A4%E3%83%B3/ class=filter-btn>インカムゲイン</a>
+<a href=https://stock-kabu3.com/tags/%E3%82%AA%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%82%AF/ class=filter-btn>オイルショック</a>
+<a href=https://stock-kabu3.com/tags/%E3%82%B3%E3%83%A9%E3%83%A0/ class=filter-btn>コラム</a>
+<a href=https://stock-kabu3.com/tags/%E3%82%B9%E3%82%BF%E3%82%B0%E3%83%95%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/ class=filter-btn>スタグフレーション</a>
+<a href=https://stock-kabu3.com/tags/%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E5%88%86%E6%9E%90/ class=filter-btn>テクニカル分析</a>
+<a href=https://stock-kabu3.com/tags/%E3%83%87%E3%82%A3%E3%83%95%E3%82%A7%E3%83%B3%E3%82%B7%E3%83%96%E9%8A%98%E6%9F%84/ class=filter-btn>ディフェンシブ銘柄</a>
+<a href=https://stock-kabu3.com/tags/%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90/ class=filter-btn>データ分析</a>
+<a href=https://stock-kabu3.com/tags/%E3%83%90%E3%83%AA%E3%83%A5%E3%83%BC%E6%8A%95%E8%B3%87/ class=filter-btn>バリュー投資</a>
+<a href=https://stock-kabu3.com/tags/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%82%B5%E3%83%9E%E3%83%AA%E3%83%BC/ class=filter-btn>マーケットサマリー</a>
+<a href=https://stock-kabu3.com/tags/%E4%B8%AD%E6%9D%B1/ class=filter-btn>中東</a>
+<a href=https://stock-kabu3.com/tags/%E4%BD%93%E9%A8%93%E8%A8%98/ class=filter-btn>体験記</a>
+<a href=https://stock-kabu3.com/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/ class=filter-btn>個人開発</a>
+<a href=https://stock-kabu3.com/tags/%E5%88%86%E6%9E%90/ class=filter-btn>分析</a>
+<a href=https://stock-kabu3.com/tags/%E5%89%B2%E5%AE%89%E6%A0%AA/ class=filter-btn>割安株</a>
+<a href=https://stock-kabu3.com/tags/%E5%8F%A3%E5%BA%A7%E9%96%8B%E8%A8%AD/ class=filter-btn>口座開設</a>
+<a href=https://stock-kabu3.com/tags/%E5%A4%B1%E6%95%97%E8%AB%87/ class=filter-btn>失敗談</a>
+<a href=https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87/ class=filter-btn>投資</a>
+<a href=https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87%E3%82%AC%E3%82%A4%E3%83%89/ class=filter-btn>投資ガイド</a>
+<a href=https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87%E5%88%9D%E5%BF%83%E8%80%85/ class=filter-btn>投資初心者</a>
+<a href=https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87%E6%88%A6%E7%95%A5/ class=filter-btn>投資戦略</a>
+<a href=https://stock-kabu3.com/tags/%E6%8A%95%E8%B3%87%E6%9C%AC/ class=filter-btn>投資本</a>
+<a href=https://stock-kabu3.com/tags/%E6%97%A5%E7%B5%8C%E5%B9%B3%E5%9D%87/ class=filter-btn>日経平均</a>
+<a href=https://stock-kabu3.com/tags/%E6%A0%AA%E3%82%AF%E3%83%A9/ class=filter-btn>株クラ</a>
+<a href=https://stock-kabu3.com/tags/%E6%A0%AA%E4%BE%A1/ class=filter-btn>株価</a>
+<a href=https://stock-kabu3.com/tags/%E6%A0%AA%E4%BE%A1%E6%8C%87%E6%A8%99/ class=filter-btn>株価指標</a>
+<a href=https://stock-kabu3.com/tags/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/ class=filter-btn>株式投資</a>
+<a href=https://stock-kabu3.com/tags/%E6%A4%9C%E8%A8%BC/ class=filter-btn>検証</a>
+<a href=https://stock-kabu3.com/tags/%E6%A5%BD%E5%A4%A9%E8%A8%BC%E5%88%B8/ class=filter-btn>楽天証券</a>
+<a href=https://stock-kabu3.com/tags/%E6%AF%94%E8%BC%83/ class=filter-btn>比較</a>
+<a href=https://stock-kabu3.com/tags/%E8%A8%BC%E5%88%B8%E4%BC%9A%E7%A4%BE/ class=filter-btn>証券会社</a>
+<a href=https://stock-kabu3.com/tags/%E8%AA%AD%E6%9B%B8/ class=filter-btn>読書</a>
+<a href=https://stock-kabu3.com/tags/%E9%80%A3%E8%BC%89/ class=filter-btn>連載</a>
+<a href=https://stock-kabu3.com/tags/%E9%80%B1%E9%96%93%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/ class=filter-btn>週間レビュー</a>
+<a href=https://stock-kabu3.com/tags/%E9%85%8D%E5%BD%93%E5%88%A9%E5%9B%9E%E3%82%8A/ class=filter-btn>配当利回り</a>
+<a href=https://stock-kabu3.com/tags/%E9%95%B7%E6%9C%9F%E6%8A%95%E8%B3%87/ class=filter-btn>長期投資</a>
+<a href=https://stock-kabu3.com/tags/%E9%AB%98%E9%85%8D%E5%BD%93%E6%A0%AA/ class=filter-btn>高配当株</a></div><div class=article-grid><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-30>2026年3月30日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/middle-east-stagflation-defensive-stocks/>中東が泥沼化したら株はどうなる？スタグフレーションに備える「守り」の銘柄選び</a></h2><p class=article-excerpt>中東情勢の長期化でスタグフレーションが来たとき、投資家はどう動くべきか。1973年オイルショックとコロナ禍を鏡に、上がる銘柄・下がる銘柄を徹底整理した。</p><div class=article-tags><span class=article-tag>#中東</span>
+<span class=article-tag>#スタグフレーション</span>
+<span class=article-tag>#ディフェンシブ銘柄</span>
+<span class=article-tag>#オイルショック</span>
+<span class=article-tag>#投資戦略</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-30>2026年3月30日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-30-daily-prediction/>【AI予測】3月30日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月30日のAI株価予測。日経平均は下落シグナル（信頼度48%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#株クラ</span>
+<span class=article-tag>#投資初心者</span>
+<span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-27>2026年3月27日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/weekly-review-2026-03-27/>週間マーケットレビュー（2026年3月23日〜2026年3月27日）</a></h2><p class=article-excerpt>2026年3月23日〜2026年3月27日の株式市場週間まとめ。日経平均は週間+3.61%。主要4指数の推移と振り返りをお届けします。</p><div class=article-tags><span class=article-tag>#週間レビュー</span>
+<span class=article-tag>#マーケットサマリー</span>
+<span class=article-tag>#日経平均</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-27>2026年3月27日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/145-stocks-expansion/>145銘柄に拡張して見えてきたこと。AIは「下落好き」だった【連載・第4話】</a></h2><p class=article-excerpt>8銘柄から145銘柄に拡張した。精度は75%から37%に暴落した。原因を調べると、AIが異常なほど「下落予測」を出しがちなことがわかった。</p><div class=article-tags><span class=article-tag>#体験記</span>
+<span class=article-tag>#AI予測</span>
+<span class=article-tag>#個人開発</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#連載</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-27>2026年3月27日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-27-daily-prediction/>【AI予測】3月27日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月27日のAI株価予測。日経平均は下落シグナル（信頼度53%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-26>2026年3月26日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-26-daily-prediction/>【AI予測】3月26日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月26日のAI株価予測。日経平均は下落シグナル（信頼度53%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-26>2026年3月26日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/sector-correlation-and-us-market/>シグナルを増やすほど精度が下がる。たった1つの発見が精度を上げた話【連載・第3話】</a></h2><p class=article-excerpt>VIX・ドル円・セクター相関をAI予測に追加した。結果、精度は下がった。逆に効いたのは「前日のアメリカ市場が上がったか下がったか」だけだった。</p><div class=article-tags><span class=article-tag>#体験記</span>
+<span class=article-tag>#AI予測</span>
+<span class=article-tag>#個人開発</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#連載</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-25>2026年3月25日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-25-daily-prediction/>【AI予測】3月25日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月25日のAI株価予測。日経平均は下落シグナル（信頼度53%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-24>2026年3月24日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-24-daily-prediction/>【AI予測】3月24日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月24日のAI株価予測。日経平均は下落シグナル（信頼度47%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-24>2026年3月24日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/accuracy-wall-three-failures/>精度64.3%の壁。3つの改善策が全部失敗した話【連載・第2話】</a></h2><p class=article-excerpt>AI株価予測の精度64.3%を超えようと3つの改善策を試みた。トレンドフィルター、class_weight、MAフィルター。結果、全部失敗した。その記録。</p><div class=article-tags><span class=article-tag>#体験記</span>
+<span class=article-tag>#AI予測</span>
+<span class=article-tag>#個人開発</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#連載</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-23>2026年3月23日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-23-daily-prediction/>【AI予測】3月23日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月23日のAI株価予測。日経平均は下落シグナル（信頼度47%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-23>2026年3月23日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/high-dividend-stocks/>高配当株の選び方【2026年版】利回り4%以上を安全に狙う5つの基準</a></h2><p class=article-excerpt>高配当株の選び方を初心者向けに解説。配当利回り4%以上を狙いつつ、減配リスクを避けるための5つの基準と具体的な確認方法を紹介します。</p><div class=article-tags><span class=article-tag>#高配当株</span>
+<span class=article-tag>#配当利回り</span>
+<span class=article-tag>#インカムゲイン</span>
+<span class=article-tag>#投資初心者</span>
+<span class=article-tag>#長期投資</span>
+<span class=article-tag>#株式投資</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-23>2026年3月23日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/per-pbr-explained/>PER・PBRとは？株の割安・割高を見極める指標を初心者向けに解説</a></h2><p class=article-excerpt>PER（株価収益率）とPBR（株価純資産倍率）の意味・計算式・使い方を初心者向けに解説。割安株を見つけるための基本指標をわかりやすく説明します。</p><div class=article-tags><span class=article-tag>#PER</span>
+<span class=article-tag>#PBR</span>
+<span class=article-tag>#株価指標</span>
+<span class=article-tag>#割安株</span>
+<span class=article-tag>#投資初心者</span>
+<span class=article-tag>#バリュー投資</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-23>2026年3月23日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/why-i-built-ai-prediction/>なぜ私はAI株価予測システムを自作したのか【連載・第1話】</a></h2><p class=article-excerpt>株で負け続けた会社員がAI株価予測システムを自作し始めた理由。精度64.3%、目標65%。この挑戦がどこに向かうのか、自分でもわからないまま記録を始めます。</p><div class=article-tags><span class=article-tag>#体験記</span>
+<span class=article-tag>#AI予測</span>
+<span class=article-tag>#個人開発</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#連載</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-22>2026年3月22日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-22-daily-prediction/>【AI予測】3月22日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月22日のAI株価予測。日経平均は下落シグナル（信頼度56%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-19>2026年3月19日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-19-daily-prediction/>【AI予測】3月19日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月19日のAI株価予測。日経平均は下落シグナル（信頼度56%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-18>2026年3月18日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/nisa-doko-hiraku/>NISAはどこで開くべきか？2026年版 初心者が選ぶべき証券会社</a></h2><p class=article-excerpt>新NISA口座をどこで開くか迷っている人向けに、証券会社の選び方と比較をわかりやすく解説。楽天証券・SBI証券・銀行との違いも説明します。</p><div class=article-tags><span class=article-tag>#NISA</span>
+<span class=article-tag>#証券会社</span>
+<span class=article-tag>#投資初心者</span>
+<span class=article-tag>#楽天証券</span>
+<span class=article-tag>#SBI証券</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-18>2026年3月18日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/sbi-vs-rakuten-shoken/>SBI証券 vs 楽天証券 どっちがいい？2026年版 徹底比較</a></h2><p class=article-excerpt>SBI証券と楽天証券を手数料・NISA・ポイント・ツール・米国株の5軸で徹底比較。どちらを選ぶべきかを使い方別に結論を出します。</p><div class=article-tags><span class=article-tag>#証券会社</span>
+<span class=article-tag>#SBI証券</span>
+<span class=article-tag>#楽天証券</span>
+<span class=article-tag>#比較</span>
+<span class=article-tag>#NISA</span>
+<span class=article-tag>#投資初心者</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-18>2026年3月18日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2026-03-18-daily-prediction/>【AI予測】3月18日の日経平均・主要銘柄 見通し</a></h2><p class=article-excerpt>3月18日のAI株価予測。日経平均は下落シグナル（信頼度56%）。主要銘柄の見通しをお届けします。</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#日経平均</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-18>2026年3月18日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/rakuten-shoken-kaiko/>楽天証券の口座開設方法【2026年最新・初心者向け完全手順】</a></h2><p class=article-excerpt>楽天証券の口座開設を画像なしでもわかる手順で解説。申込みから取引開始まで最短3営業日。つまずきやすいポイントと注意事項もまとめました。</p><div class=article-tags><span class=article-tag>#証券会社</span>
+<span class=article-tag>#楽天証券</span>
+<span class=article-tag>#口座開設</span>
+<span class=article-tag>#投資初心者</span>
+<span class=article-tag>#NISA</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-18>2026年3月18日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/ai-prediction-accuracy-report/>自作AIは本当に株価を予測できるのか？実際の検証データを公開します</a></h2><p class=article-excerpt>このサイトのAI株価予測の「答え合わせ」を公開。方向一致率62.5%、平均誤差1.01%という結果の意味と、AIを「信じる」のではなく「使う」方法を考えます。</p><div class=article-tags><span class=article-tag>#体験記</span>
+<span class=article-tag>#AI予測</span>
+<span class=article-tag>#検証</span>
+<span class=article-tag>#データ分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-18>2026年3月18日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/my-first-stock-failure/>株を始めて3ヶ月で犯した3つのミス｜今でも後悔している失敗の話</a></h2><p class=article-excerpt>投資初心者が最初の3ヶ月で犯してしまった典型的な失敗の話。狼狽売り、ナンピン、銘柄分散なし。笑えない体験談を赤裸々に書きます。</p><div class=article-tags><span class=article-tag>#体験記</span>
+<span class=article-tag>#投資初心者</span>
+<span class=article-tag>#失敗談</span>
+<span class=article-tag>#株式投資</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-13>2026年3月13日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/weekly-review-2026-03-13/>週間マーケットレビュー（2026年3月9日〜2026年3月13日）</a></h2><p class=article-excerpt>2026年3月9日〜2026年3月13日の株式市場週間まとめ。日経平均は週間+4.36%。主要4指数の推移と振り返りをお届けします。</p><div class=article-tags><span class=article-tag>#週間レビュー</span>
+<span class=article-tag>#マーケットサマリー</span>
+<span class=article-tag>#日経平均</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-11>2026年3月11日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/daily-market-2026-03-11/>2026年3月11日（水）マーケットサマリー｜日経平均 54,248円</a></h2><p class=article-excerpt>2026年3月11日の株式市場まとめ。日経平均は54,248円（+1,520円）。主要指標と値動きランキングをお届けします。</p><div class=article-tags><span class=article-tag>#週間レビュー</span>
+<span class=article-tag>#マーケットサマリー</span>
+<span class=article-tag>#日経平均</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2026-03-11>2026年3月11日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/building-ai-stock-prediction/>個人開発でAI株価予測サイトを作った話｜半年間の失敗と学びの全記録</a></h2><p class=article-excerpt>エンジニアが1人でAI株価予測サイトを構築するまでの体験記。技術選定の迷走、yfinance APIの壁、予測精度52%の現実、そしてそこから得た教訓を赤裸々に綴ります。</p><div class=article-tags><span class=article-tag>#コラム</span>
+<span class=article-tag>#AI予測</span>
+<span class=article-tag>#個人開発</span>
+<span class=article-tag>#体験記</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2025-09-27>2025年9月27日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2025-09-27-investment-books/>投資初心者におすすめの本5選</a></h2><p class=article-excerpt>投資を学ぶのに最適な入門書から実践書まで厳選紹介</p><div class=article-tags><span class=article-tag>#投資ガイド</span>
+<span class=article-tag>#投資本</span>
+<span class=article-tag>#投資初心者</span>
+<span class=article-tag>#読書</span>
+<span class=article-tag>#株式投資</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2025-09-27>2025年9月27日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/2025-09-27-investment-brokers/>おすすめ証券会社比較</a></h2><p class=article-excerpt>投資初心者におすすめの証券会社を比較紹介</p><div class=article-tags><span class=article-tag>#投資ガイド</span>
+<span class=article-tag>#証券会社</span>
+<span class=article-tag>#投資初心者</span>
+<span class=article-tag>#株式投資</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2025-09-08>2025年9月8日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/stock-prediction-2025-09-08/>📈 株価予測レポート - 2025-09-08</a></h2><p class=article-excerpt>36銘柄の株価予測結果</p><div class=article-tags><span class=article-tag>#AI予測</span>
+<span class=article-tag>#株式投資</span>
+<span class=article-tag>#テクニカル分析</span></div></div></article><article class=article-card><div class=article-card-body><div class=article-meta><time datetime=2025-09-07>2025年9月7日</time></div><h2 class=article-title><a href=https://stock-kabu3.com/post/welcome/>株価アートサイト開設のお知らせ</a></h2><p class=article-excerpt>株価分析と投資情報を提供する新しいメディアサイトが開設されました</p><div class=article-tags><span class=article-tag>#お知らせ</span>
+<span class=article-tag>#株価</span>
+<span class=article-tag>#投資</span>
+<span class=article-tag>#分析</span></div></div></article></div></div><style>.article-list-container{max-width:1e3px;margin:0 auto;padding:30px 20px}.article-list-header{text-align:center;margin-bottom:30px}.article-list-header h1{font-size:2rem;color:var(--card-text-color-main);margin-bottom:8px}.article-list-desc{color:var(--card-text-color-secondary);font-size:1rem}.category-filter{display:flex;justify-content:center;gap:10px;margin-bottom:30px;flex-wrap:wrap}.filter-btn{padding:8px 18px;border:1px solid var(--card-separator-color);border-radius:20px;color:var(--card-text-color-secondary);text-decoration:none;font-size:.9rem;font-weight:500;transition:all .2s ease;background:var(--card-background)}.filter-btn:hover,.filter-btn.active{background:var(--accent-color);color:#fff;border-color:var(--accent-color)}.article-grid{display:flex;flex-direction:column;gap:20px}.article-card{background:var(--card-background);border:1px solid var(--card-separator-color);border-radius:var(--card-border-radius);transition:transform .2s ease,box-shadow .2s ease;overflow:hidden}.article-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.1)}.article-card-body{padding:24px}.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:12px;font-size:.85rem}.article-meta time{color:var(--card-text-color-tertiary)}.article-title{font-size:1.3rem;margin-bottom:10px;line-height:1.4}.article-title a{color:var(--card-text-color-main);text-decoration:none}.article-title a:hover{color:var(--accent-color)}.article-excerpt{color:var(--card-text-color-secondary);font-size:.95rem;line-height:1.6;margin-bottom:12px}.article-tags{display:flex;gap:8px;flex-wrap:wrap}.article-tag{font-size:.8rem;color:var(--accent-color)}.no-articles{text-align:center;padding:60px 20px;color:var(--card-text-color-secondary)}.no-articles p{margin-bottom:20px;font-size:1.1rem}@media(max-width:768px){.article-list-container{padding:20px 15px}.article-list-header h1{font-size:1.5rem}.article-card-body{padding:18px}.article-title{font-size:1.1rem}.category-filter{gap:8px}.filter-btn{padding:6px 14px;font-size:.8rem}}</style></div></main><footer><div class=footer-content><div class=footer-links><a href=/post/>記事一覧</a>
+<a href=/categories/>カテゴリ</a>
+<a href=/tags/>タグ</a>
+<a href=https://stock-kabu3.com/index.xml>RSS</a></div><p>&copy; 2026 株価アート - Stock Analysis Dashboard. All rights reserved.</p><p style=margin-top:10px;font-size:.9rem;color:#9ca3af>株価データは参考情報です。投資判断は自己責任でお願いします。</p></div></footer></body></html>
