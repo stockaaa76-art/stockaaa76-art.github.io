@@ -1,0 +1,71 @@
+/* ひなた・カブニップ キャラ吹き出しスタイル */
+
+.char-voice {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 1.8em 0;
+  padding: 16px 18px;
+  border-radius: 12px;
+  line-height: 1.7;
+  font-size: 0.95em;
+}
+
+/* ひなた🐦（Daily Nest） */
+.char-voice.hinata {
+  background: #fdf6ec;
+  border-left: 4px solid #c8956c;
+}
+
+/* カブニップ🔥（Turnip Lab） */
+.char-voice.kabunip {
+  background: #fff8f0;
+  border-left: 4px solid #e85d04;
+}
+
+.char-voice .char-icon {
+  font-size: 2em;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.char-voice .char-body {
+  flex: 1;
+}
+
+.char-voice .char-name {
+  font-weight: bold;
+  font-size: 0.85em;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.char-voice.hinata .char-name {
+  color: #a0522d;
+}
+
+.char-voice.kabunip .char-name {
+  color: #c44b00;
+}
+
+.char-voice .char-text {
+  margin: 0;
+  color: #333;
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+  .char-voice.hinata {
+    background: #2a1f15;
+    border-left-color: #c8956c;
+  }
+  .char-voice.kabunip {
+    background: #2a1800;
+    border-left-color: #e85d04;
+  }
+  .char-voice .char-text {
+    color: #ddd;
+  }
+}
