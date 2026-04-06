@@ -747,25 +747,64 @@ class Dashboard {
         }
     }
 
-    async loadUSRankings() {
-        try {
-            // realtime_prices.json の foreign（米国株）から取得 → 財務・テクニカル指標含む
-            const res = await fetch('/data/realtime_prices.json');
-            if (!res.ok) return;
-            const data = await res.json();
-            const us = [...(data.foreign || []), ...(data.indices || [])]
-                .filter(s => !s.ticker.endsWith('.T') && s.current_price > 0 && !s.ticker.startsWith('^'));
-            const toItem = s => ({
-                symbol: s.ticker, name: s.name, price: s.current_price,
-                change_percent: s.change_percent, volume: s.volume,
-                market_cap: s.market_cap, pe_ratio: s.trailing_pe,
-                dividend_yield: s.dividend_yield, roe: s.return_on_equity,
-                deviation_25: s.deviation_25, deviation_75: s.deviation_75,
-                volume_ratio: s.volume_ratio, trading_value: s.trading_value,
-                year_high: s.fifty_two_week_high, year_low: s.fifty_two_week_low,
-            });
-            const items = us.map(toItem);
+    async loadUSRankings(period = null) {
+        // 現在の期間を管理
+        if (period) this.currentUsPeriod = period;
+        const usPeriod = this.currentUsPeriod || 'daily';
 
+        try {
+            let items = [];
+
+            if (usPeriod === 'daily') {
+                // デイリー: realtime_prices.json から取得（財務・テクニカル指標含む）
+                const res = await fetch('/data/realtime_prices.json');
+                if (!res.ok) return;
+                const data = await res.json();
+                const us = [...(data.foreign || []), ...(data.indices || [])]
+                    .filter(s => !s.ticker.endsWith('.T') && s.current_price > 0 && !s.ticker.startsWith('^'));
+                items = us.map(s => ({
+                    symbol: s.ticker, name: s.name, price: s.current_price,
+                    change_percent: s.change_percent, volume: s.volume,
+                    market_cap: s.market_cap, pe_ratio: s.trailing_pe,
+                    dividend_yield: s.dividend_yield, roe: s.return_on_equity,
+                    deviation_25: s.deviation_25, deviation_75: s.deviation_75,
+                    volume_ratio: s.volume_ratio, trading_value: s.trading_value,
+                    year_high: s.fifty_two_week_high, year_low: s.fifty_two_week_low,
+                }));
+            } else {
+                // ウィークリー・マンスリー: period_rankings.json の us_{period} キーを使用
+                if (!this.periodRankingsData) {
+                    const res = await fetch(this.period_rankings_api);
+                    if (!res.ok) return;
+                    this.periodRankingsData = await res.json();
+                }
+                const usKey = `us_${usPeriod}`;
+                const periodSection = this.periodRankingsData[usKey];
+                if (!periodSection) return;
+                const rankings = periodSection.rankings || {};
+                // period_rankings 形式 → items 形式に変換
+                const allStocks = [
+                    ...(rankings.gainers || []),
+                    ...(rankings.losers || []),
+                    ...(rankings.volume || []),
+                    ...(rankings.market_cap || []),
+                ];
+                // 重複排除
+                const seen = new Set();
+                const deduped = allStocks.filter(s => {
+                    if (seen.has(s.symbol)) return false;
+                    seen.add(s.symbol);
+                    return true;
+                });
+                items = deduped.map(s => ({
+                    symbol: s.symbol, name: s.name, price: s.current_price,
+                    change_percent: s.period_change, volume: s.volume,
+                    market_cap: s.market_cap, pe_ratio: s.pe_ratio,
+                    dividend_yield: s.dividend_yield, volume_ratio: s.volume_ratio,
+                }));
+            }
+
+            // ── 各ランキング描画 ──────────────────────────────────────────
             // 基本
             this.renderRanking('us-gainers-ranking',   [...items].filter(s=>s.change_percent>0).sort((a,b)=>b.change_percent-a.change_percent).slice(0,10), 'percentage', '$');
             this.renderRanking('us-losers-ranking',    [...items].filter(s=>s.change_percent<0).sort((a,b)=>a.change_percent-b.change_percent).slice(0,10), 'percentage', '$');
@@ -784,15 +823,17 @@ class Dashboard {
             this.renderRanking('us-per-high-ranking', [...items].filter(s=>s.pe_ratio>0).sort((a,b)=>b.pe_ratio-a.pe_ratio).slice(0,10), 'percentage', '$');
             this.renderRanking('us-per-low-ranking',  [...items].filter(s=>s.pe_ratio>0&&s.pe_ratio<200).sort((a,b)=>a.pe_ratio-b.pe_ratio).slice(0,10), 'percentage', '$');
             this.renderRanking('us-roe-ranking',       [...items].filter(s=>s.roe>0).sort((a,b)=>b.roe-a.roe).slice(0,10), 'percentage', '$');
-            // テクニカル
+            // テクニカル（デイリーのみ deviation あり）
             this.renderRanking('us-dev25-high-ranking', [...items].filter(s=>s.deviation_25!=null).sort((a,b)=>b.deviation_25-a.deviation_25).slice(0,10), 'percentage', '$');
             this.renderRanking('us-dev25-low-ranking',  [...items].filter(s=>s.deviation_25!=null).sort((a,b)=>a.deviation_25-b.deviation_25).slice(0,10), 'percentage', '$');
             this.renderRanking('us-dev75-high-ranking', [...items].filter(s=>s.deviation_75!=null).sort((a,b)=>b.deviation_75-a.deviation_75).slice(0,10), 'percentage', '$');
             this.renderRanking('us-dev75-low-ranking',  [...items].filter(s=>s.deviation_75!=null).sort((a,b)=>a.deviation_75-b.deviation_75).slice(0,10), 'percentage', '$');
 
-            // タブ切り替えイベント（初回のみ登録）
+            // ── イベントリスナー（初回のみ登録）──────────────────────────
             if (!this._usTabsInit) {
                 this._usTabsInit = true;
+
+                // カテゴリタブ
                 document.querySelectorAll('[data-us-category]').forEach(btn => {
                     btn.addEventListener('click', () => {
                         document.querySelectorAll('[data-us-category]').forEach(b => b.classList.remove('active'));
@@ -802,6 +843,15 @@ class Dashboard {
                             const el = document.getElementById(`us-${c}-rankings`);
                             if (el) el.classList.toggle('hidden', c !== cat);
                         });
+                    });
+                });
+
+                // 期間タブ
+                document.querySelectorAll('[data-us-period]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('[data-us-period]').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        this.loadUSRankings(btn.dataset.usPeriod);
                     });
                 });
             }
