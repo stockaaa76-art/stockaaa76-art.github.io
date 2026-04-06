@@ -1,53 +1,53 @@
 {
-  "generated_at": "2026-03-23 20:32:31",
+  "generated_at": "2026-04-05 22:01:40",
   "total_sectors": 8,
   "sectors": {
     "Consumer Cyclical": {
       "sector": "Consumer Cyclical",
       "stock_count": 6,
-      "sector_avg_growth_pct": 4.9,
+      "sector_avg_growth_pct": 4.23,
       "stocks": [
         {
           "ticker": "AMZN",
           "name": "Amazon.com, Inc.",
           "latest_growth_pct": 12.38,
-          "vs_sector_avg": 7.48,
-          "expansion_score": 2.53
+          "vs_sector_avg": 8.15,
+          "expansion_score": 2.93
         },
         {
           "ticker": "7203.T",
           "name": "Toyota Motor Corporation",
           "latest_growth_pct": 6.52,
-          "vs_sector_avg": 1.62,
-          "expansion_score": 1.33
+          "vs_sector_avg": 2.29,
+          "expansion_score": 1.54
         },
         {
           "ticker": "7267.T",
           "name": "Honda Motor Co., Ltd.",
           "latest_growth_pct": 6.17,
-          "vs_sector_avg": 1.27,
-          "expansion_score": 1.26
+          "vs_sector_avg": 1.94,
+          "expansion_score": 1.46
         },
         {
           "ticker": "HD",
           "name": "The Home Depot, Inc.",
-          "latest_growth_pct": 4.52,
-          "vs_sector_avg": -0.38,
-          "expansion_score": 0.92
+          "latest_growth_pct": 3.2,
+          "vs_sector_avg": -1.03,
+          "expansion_score": 0.76
         },
         {
           "ticker": "5108.T",
           "name": "Bridgestone Corporation",
-          "latest_growth_pct": 2.69,
-          "vs_sector_avg": -2.21,
-          "expansion_score": 0.55
+          "latest_growth_pct": -0.01,
+          "vs_sector_avg": -4.24,
+          "expansion_score": -0.0
         },
         {
           "ticker": "TSLA",
           "name": "Tesla, Inc.",
           "latest_growth_pct": -2.87,
-          "vs_sector_avg": -7.77,
-          "expansion_score": -0.59
+          "vs_sector_avg": -7.1,
+          "expansion_score": -0.68
         }
       ]
     },
@@ -320,56 +320,56 @@
     "Healthcare": {
       "sector": "Healthcare",
       "stock_count": 7,
-      "sector_avg_growth_pct": 8.86,
+      "sector_avg_growth_pct": 7.82,
       "stocks": [
         {
           "ticker": "4568.T",
           "name": "Daiichi Sankyo Company, Limited",
           "latest_growth_pct": 17.77,
-          "vs_sector_avg": 8.91,
-          "expansion_score": 2.0
-        },
-        {
-          "ticker": "4578.T",
-          "name": "Otsuka Holdings Co., Ltd.",
-          "latest_growth_pct": 15.42,
-          "vs_sector_avg": 6.56,
-          "expansion_score": 1.74
+          "vs_sector_avg": 9.95,
+          "expansion_score": 2.27
         },
         {
           "ticker": "UNH",
           "name": "UnitedHealth Group Incorporated",
           "latest_growth_pct": 11.82,
-          "vs_sector_avg": 2.96,
-          "expansion_score": 1.33
+          "vs_sector_avg": 4.0,
+          "expansion_score": 1.51
+        },
+        {
+          "ticker": "4519.T",
+          "name": "Chugai Pharmaceutical Co., Ltd.",
+          "latest_growth_pct": 7.46,
+          "vs_sector_avg": -0.36,
+          "expansion_score": 0.95
         },
         {
           "ticker": "4502.T",
           "name": "Takeda Pharmaceutical Company Limited",
           "latest_growth_pct": 7.45,
-          "vs_sector_avg": -1.41,
-          "expansion_score": 0.84
+          "vs_sector_avg": -0.37,
+          "expansion_score": 0.95
+        },
+        {
+          "ticker": "4578.T",
+          "name": "Otsuka Holdings Co., Ltd.",
+          "latest_growth_pct": 5.97,
+          "vs_sector_avg": -1.85,
+          "expansion_score": 0.76
         },
         {
           "ticker": "JNJ",
           "name": "Johnson & Johnson",
           "latest_growth_pct": 5.97,
-          "vs_sector_avg": -2.89,
-          "expansion_score": 0.67
-        },
-        {
-          "ticker": "4519.T",
-          "name": "Chugai Pharmaceutical Co., Ltd.",
-          "latest_growth_pct": 5.34,
-          "vs_sector_avg": -3.52,
-          "expansion_score": 0.6
+          "vs_sector_avg": -1.85,
+          "expansion_score": 0.76
         },
         {
           "ticker": "PFE",
           "name": "Pfizer Inc.",
           "latest_growth_pct": -1.73,
-          "vs_sector_avg": -10.59,
-          "expansion_score": -0.2
+          "vs_sector_avg": -9.55,
+          "expansion_score": -0.22
         }
       ]
     },

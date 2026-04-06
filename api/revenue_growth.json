@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23 20:32:31",
+  "generated_at": "2026-04-05 22:01:40",
   "total_count": 49,
   "stocks": [
     {
@@ -319,10 +319,6 @@
       "industry": "Drug Manufacturers - General",
       "revenues": [
         {
-          "date": "2021-12-31",
-          "revenue_jpy": 9997
-        },
-        {
           "date": "2022-12-31",
           "revenue_jpy": 12597
         },
@@ -333,15 +329,19 @@
         {
           "date": "2024-12-31",
           "revenue_jpy": 11706
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 12579
         }
       ],
       "growth_rates": [
-        26.01,
         -11.78,
-        5.34
+        5.34,
+        7.46
       ],
-      "latest_growth_pct": 5.34,
-      "avg_growth_pct": 6.52
+      "latest_growth_pct": 7.46,
+      "avg_growth_pct": 0.34
     },
     {
       "ticker": "8058.T",
@@ -381,10 +381,6 @@
       "industry": "Drug Manufacturers - General",
       "revenues": [
         {
-          "date": "2021-12-31",
-          "revenue_jpy": 14982
-        },
-        {
           "date": "2022-12-31",
           "revenue_jpy": 17379
         },
@@ -395,15 +391,19 @@
         {
           "date": "2024-12-31",
           "revenue_jpy": 23298
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 24688
         }
       ],
       "growth_rates": [
-        16.0,
         16.15,
-        15.42
+        15.42,
+        5.97
       ],
-      "latest_growth_pct": 15.42,
-      "avg_growth_pct": 15.86
+      "latest_growth_pct": 5.97,
+      "avg_growth_pct": 12.51
     },
     {
       "ticker": "7267.T",
@@ -598,10 +598,6 @@
       "industry": "Auto Parts",
       "revenues": [
         {
-          "date": "2021-12-31",
-          "revenue_jpy": 32460
-        },
-        {
           "date": "2022-12-31",
           "revenue_jpy": 41100
         },
@@ -612,15 +608,19 @@
         {
           "date": "2024-12-31",
           "revenue_jpy": 44300
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 44294
         }
       ],
       "growth_rates": [
-        26.62,
         4.96,
-        2.69
+        2.69,
+        -0.01
       ],
-      "latest_growth_pct": 2.69,
-      "avg_growth_pct": 11.42
+      "latest_growth_pct": -0.01,
+      "avg_growth_pct": 2.55
     },
     {
       "ticker": "6503.T",
@@ -1342,10 +1342,6 @@
       "industry": "Home Improvement Retail",
       "revenues": [
         {
-          "date": "2022-01-31",
-          "revenue_jpy": 1511
-        },
-        {
           "date": "2023-01-31",
           "revenue_jpy": 1574
         },
@@ -1356,15 +1352,19 @@
         {
           "date": "2025-01-31",
           "revenue_jpy": 1595
+        },
+        {
+          "date": "2026-01-31",
+          "revenue_jpy": 1646
         }
       ],
       "growth_rates": [
-        4.17,
         -3.05,
-        4.52
+        4.52,
+        3.2
       ],
-      "latest_growth_pct": 4.52,
-      "avg_growth_pct": 1.88
+      "latest_growth_pct": 3.2,
+      "avg_growth_pct": 1.56
     },
     {
       "ticker": "UNH",
