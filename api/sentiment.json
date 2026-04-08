@@ -1,46 +1,46 @@
 {
   "composite": {
-    "score": 44.3,
-    "label": "中立",
-    "signal": "neutral"
+    "score": 35.6,
+    "label": "恐怖（買い場候補）",
+    "signal": "fear"
   },
   "vix": {
-    "value": 24.17,
-    "change": 1.26,
-    "score": 40,
-    "label": "中立",
-    "flow_level": "caution",
-    "flow_label": "⚠️ VIX 24 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。"
+    "value": 25.78,
+    "change": 6.66,
+    "score": 25,
+    "label": "恐怖",
+    "flow_level": "warning",
+    "flow_label": "⚠️ VIX 26 - フロー相場の可能性があります。テクニカル指標の精度が低下しています。"
   },
   "jniv": {},
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 159.61,
-      "change": 0.08,
-      "score": 60.4
+      "value": 159.39,
+      "change": -0.25,
+      "score": 58.8
     },
     "gold": {
       "name": "金先物",
-      "value": 4676.1,
-      "change": 0.53,
-      "score": 48.4
+      "value": 4733.3,
+      "change": 1.64,
+      "score": 45.1
     },
     "oil": {
       "name": "原油WTI",
-      "value": 112.61,
-      "change": 0.96,
-      "score": 48.1
+      "value": 110.34,
+      "change": -1.84,
+      "score": 53.7
     },
     "us10y": {
       "name": "米10年債利回り",
       "value": 4.34,
-      "change": 0.51,
-      "score": 45.9
+      "change": 0.18,
+      "score": 48.5
     },
-    "avg_score": 50.7
+    "avg_score": 51.5
   },
-  "vix_flow_level": "caution",
-  "vix_flow_label": "⚠️ VIX 24 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。",
-  "generated_at": "2026-04-06 22:00:26"
+  "vix_flow_level": "warning",
+  "vix_flow_label": "⚠️ VIX 26 - フロー相場の可能性があります。テクニカル指標の精度が低下しています。",
+  "generated_at": "2026-04-07 22:04:52"
 }
