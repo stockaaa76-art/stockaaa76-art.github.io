@@ -131,8 +131,8 @@
       "000001.SS": {
         "name": "上海総合",
         "symbol": "000001.SS",
-        "price": NaN,
-        "price_formatted": "¥nan",
+        "price": null,
+        "price_formatted": null,
         "change": 10.067871,
         "change_formatted": "+10.07",
         "change_percent": 0.25947475,
