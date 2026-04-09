@@ -12,17 +12,6 @@
       "volume_ratio": 126.86
     },
     {
-      "symbol": "^KS11",
-      "name": "^KS11",
-      "price": 5880.29,
-      "change": 429.96,
-      "change_percent": 7.89,
-      "volume": 912815,
-      "market_cap": 0,
-      "trading_value": 5367616952,
-      "volume_ratio": 82.59
-    },
-    {
       "symbol": "6954.T",
       "name": "ファナック",
       "price": 5924.0,
@@ -67,17 +56,6 @@
       "volume_ratio": 181.07
     },
     {
-      "symbol": "^TWII",
-      "name": "^TWII",
-      "price": 34761.38,
-      "change": 2188.95,
-      "change_percent": 6.72,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0.0
-    },
-    {
       "symbol": "8411.T",
       "name": "8411.T",
       "price": 6946.0,
@@ -100,15 +78,37 @@
       "volume_ratio": 139.78
     },
     {
-      "symbol": "^N225",
-      "name": "日経平均株価",
-      "price": 56308.42,
-      "change": 2894.74,
-      "change_percent": 5.42,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0.0
+      "symbol": "8804.T",
+      "name": "8804.T",
+      "price": 3880.0,
+      "change": 192.0,
+      "change_percent": 5.21,
+      "volume": 906200,
+      "market_cap": 805513461760,
+      "trading_value": 3516056000,
+      "volume_ratio": 120.6
+    },
+    {
+      "symbol": "6098.T",
+      "name": "リクルートホールディングス",
+      "price": 7333.0,
+      "change": 356.0,
+      "change_percent": 5.1,
+      "volume": 7226300,
+      "market_cap": 10238433427456,
+      "trading_value": 52990457900,
+      "volume_ratio": 124.82
+    },
+    {
+      "symbol": "7182.T",
+      "name": "7182.T",
+      "price": 2800.0,
+      "change": 134.5,
+      "change_percent": 5.05,
+      "volume": 10072800,
+      "market_cap": 9974644211712,
+      "trading_value": 28203840000,
+      "volume_ratio": 132.05
     }
   ],
   "losers": [
@@ -179,11 +179,33 @@
       "volume_ratio": 113.03
     },
     {
+      "symbol": "^GDAXI",
+      "name": "^GDAXI",
+      "price": 22921.59,
+      "change": -246.49,
+      "change_percent": -1.06,
+      "volume": 59120900,
+      "market_cap": 0,
+      "trading_value": 1355145020993,
+      "volume_ratio": 77.04
+    },
+    {
+      "symbol": "^STOXX50E",
+      "name": "^STOXX50E",
+      "price": 5633.22,
+      "change": -59.64,
+      "change_percent": -1.05,
+      "volume": 24072900,
+      "market_cap": 0,
+      "trading_value": 135607946909,
+      "volume_ratio": 80.76
+    },
+    {
       "symbol": "USDJPY=X",
       "name": "USDJPY=X",
-      "price": 158.13,
-      "change": -1.55,
-      "change_percent": -0.97,
+      "price": 158.54,
+      "change": -1.14,
+      "change_percent": -0.72,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -199,28 +221,6 @@
       "market_cap": 3258434715648,
       "trading_value": 14560181700,
       "volume_ratio": 104.48
-    },
-    {
-      "symbol": "^STOXX50E",
-      "name": "^STOXX50E",
-      "price": 5692.86,
-      "change": -39.85,
-      "change_percent": -0.7,
-      "volume": 23134400,
-      "market_cap": 0,
-      "trading_value": 131700897221,
-      "volume_ratio": 76.37
-    },
-    {
-      "symbol": "^GDAXI",
-      "name": "^GDAXI",
-      "price": 23168.08,
-      "change": -130.81,
-      "change_percent": -0.56,
-      "volume": 62871800,
-      "market_cap": 0,
-      "trading_value": 1456618897055,
-      "volume_ratio": 80.42
     }
   ],
   "stop_high": [],
@@ -276,79 +276,68 @@
     {
       "symbol": "^IXIC",
       "name": "^IXIC",
-      "price": null,
-      "change": null,
-      "change_percent": null,
-      "volume": 9842564000,
+      "price": 22634.99,
+      "change": 617.14,
+      "change_percent": 2.8,
+      "volume": 9191306000,
       "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 108.2
-    },
-    {
-      "symbol": "^RUT",
-      "name": "^RUT",
-      "price": 2540.64,
-      "change": 10.6,
-      "change_percent": 0.42,
-      "volume": 3906440000,
-      "market_cap": 0,
-      "trading_value": 9924857301962,
-      "volume_ratio": 68.11
-    },
-    {
-      "symbol": "^GSPC",
-      "name": "S&P 500",
-      "price": null,
-      "change": null,
-      "change_percent": null,
-      "volume": 2731118000,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 48.76
+      "trading_value": 208045157454691,
+      "volume_ratio": 100.85
     },
     {
       "symbol": "000001.SS",
       "name": "上海総合",
-      "price": 3985.8,
-      "change": 105.7,
-      "change_percent": 2.72,
-      "volume": 1488523752,
+      "price": null,
+      "change": null,
+      "change_percent": null,
+      "volume": 4283993056,
       "market_cap": 0,
-      "trading_value": 5932951865448,
-      "volume_ratio": 2472.91
+      "trading_value": 0,
+      "volume_ratio": 2490.78
     },
     {
-      "symbol": "^FTSE",
-      "name": "^FTSE",
-      "price": 10436.3,
-      "change": 71.5,
-      "change_percent": 0.69,
-      "volume": 1340450500,
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "price": 6782.81,
+      "change": 165.96,
+      "change_percent": 2.51,
+      "volume": 3502192000,
       "market_cap": 0,
-      "trading_value": 13989343291343,
-      "volume_ratio": 115.16
+      "trading_value": 23754703124726,
+      "volume_ratio": 63.02
+    },
+    {
+      "symbol": "^HSI",
+      "name": "^HSI",
+      "price": 25116.53,
+      "change": -177.5,
+      "change_percent": -0.7,
+      "volume": 3194600000,
+      "market_cap": 0,
+      "trading_value": 80237264491796,
+      "volume_ratio": 84.24
     },
     {
       "symbol": "^NDX",
       "name": "^NDX",
-      "price": null,
-      "change": null,
-      "change_percent": null,
-      "volume": 1038721000,
+      "price": 24903.17,
+      "change": 700.8,
+      "change_percent": 2.9,
+      "volume": 1360629000,
       "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 11.88
+      "trading_value": 33883969872673,
+      "volume_ratio": 15.46
     },
     {
       "symbol": "^DJI",
       "name": "^DJI",
-      "price": null,
-      "change": null,
-      "change_percent": null,
-      "volume": 450740630,
+      "price": 47909.92,
+      "change": 1325.46,
+      "change_percent": 2.85,
+      "volume": 523711453,
       "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 85.27
+      "trading_value": 25090974798272,
+      "volume_ratio": 99.15
     },
     {
       "symbol": "9432.T",
@@ -360,6 +349,17 @@
       "market_cap": 12645088362496,
       "trading_value": 34934176606,
       "volume_ratio": 96.86
+    },
+    {
+      "symbol": "^N225",
+      "name": "日経平均株価",
+      "price": 53429.56,
+      "change": 15.88,
+      "change_percent": 0.03,
+      "volume": 118800000,
+      "market_cap": 0,
+      "trading_value": 6347431560937,
+      "volume_ratio": 76.03
     },
     {
       "symbol": "9434.T",
@@ -375,26 +375,26 @@
     {
       "symbol": "^FCHI",
       "name": "^FCHI",
-      "price": 7962.39,
-      "change": -18.88,
-      "change_percent": -0.24,
-      "volume": 64754700,
+      "price": 7908.74,
+      "change": -53.65,
+      "change_percent": -0.67,
+      "volume": 67821300,
       "market_cap": 0,
-      "trading_value": 515602184586,
-      "volume_ratio": 79.08
+      "trading_value": 536381044057,
+      "volume_ratio": 84.53
     }
   ],
   "volume_increase": [
     {
       "symbol": "000001.SS",
       "name": "上海総合",
-      "price": 3985.8,
-      "change": 105.7,
-      "change_percent": 2.72,
-      "volume": 1488523752,
+      "price": null,
+      "change": null,
+      "change_percent": null,
+      "volume": 4283993056,
       "market_cap": 0,
-      "trading_value": 5932951865448,
-      "volume_ratio": 2472.91
+      "trading_value": 0,
+      "volume_ratio": 2490.78
     },
     {
       "symbol": "4063.T",
@@ -432,22 +432,11 @@
   ],
   "volume_decrease": [
     {
-      "symbol": "^N225",
-      "name": "日経平均株価",
-      "price": 56308.42,
-      "change": 2894.74,
-      "change_percent": 5.42,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0.0
-    },
-    {
-      "symbol": "^HSI",
-      "name": "^HSI",
-      "price": 25919.85,
-      "change": 803.32,
-      "change_percent": 3.2,
+      "symbol": "^FTSE",
+      "name": "^FTSE",
+      "price": 10608.88,
+      "change": 260.08,
+      "change_percent": 2.51,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -456,20 +445,20 @@
     {
       "symbol": "USDJPY=X",
       "name": "USDJPY=X",
-      "price": 158.13,
-      "change": -1.55,
-      "change_percent": -0.97,
+      "price": 158.54,
+      "change": -1.14,
+      "change_percent": -0.72,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
       "volume_ratio": 0
     },
     {
-      "symbol": "^TWII",
-      "name": "^TWII",
-      "price": 34761.38,
-      "change": 2188.95,
-      "change_percent": 6.72,
+      "symbol": "^RUT",
+      "name": "^RUT",
+      "price": 2620.46,
+      "change": 75.51,
+      "change_percent": 2.97,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -480,7 +469,7 @@
       "name": "GBPUSD=X",
       "price": 1.34,
       "change": 0.02,
-      "change_percent": 1.53,
+      "change_percent": 1.27,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -490,8 +479,8 @@
       "symbol": "EURUSD=X",
       "name": "EURUSD=X",
       "price": 1.17,
-      "change": 0.02,
-      "change_percent": 1.44,
+      "change": 0.01,
+      "change_percent": 1.12,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -500,81 +489,103 @@
     {
       "symbol": "^NDX",
       "name": "^NDX",
-      "price": null,
-      "change": null,
-      "change_percent": null,
-      "volume": 1038721000,
+      "price": 24903.17,
+      "change": 700.8,
+      "change_percent": 2.9,
+      "volume": 1360629000,
       "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 11.88
-    },
-    {
-      "symbol": "^GSPC",
-      "name": "S&P 500",
-      "price": null,
-      "change": null,
-      "change_percent": null,
-      "volume": 2731118000,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 48.76
+      "trading_value": 33883969872673,
+      "volume_ratio": 15.46
     }
   ],
   "trading_value_high": [
     {
-      "symbol": "^FTSE",
-      "name": "^FTSE",
-      "price": 10436.3,
-      "change": 71.5,
-      "change_percent": 0.69,
-      "volume": 1340450500,
+      "symbol": "^IXIC",
+      "name": "^IXIC",
+      "price": 22634.99,
+      "change": 617.14,
+      "change_percent": 2.8,
+      "volume": 9191306000,
       "market_cap": 0,
-      "trading_value": 13989343291343,
-      "volume_ratio": 115.16
+      "trading_value": 208045157454691,
+      "volume_ratio": 100.85
     },
     {
-      "symbol": "^RUT",
-      "name": "^RUT",
-      "price": 2540.64,
-      "change": 10.6,
-      "change_percent": 0.42,
-      "volume": 3906440000,
+      "symbol": "^HSI",
+      "name": "^HSI",
+      "price": 25116.53,
+      "change": -177.5,
+      "change_percent": -0.7,
+      "volume": 3194600000,
       "market_cap": 0,
-      "trading_value": 9924857301962,
-      "volume_ratio": 68.11
+      "trading_value": 80237264491796,
+      "volume_ratio": 84.24
     },
     {
-      "symbol": "000001.SS",
-      "name": "上海総合",
-      "price": 3985.8,
-      "change": 105.7,
-      "change_percent": 2.72,
-      "volume": 1488523752,
+      "symbol": "^NDX",
+      "name": "^NDX",
+      "price": 24903.17,
+      "change": 700.8,
+      "change_percent": 2.9,
+      "volume": 1360629000,
       "market_cap": 0,
-      "trading_value": 5932951865448,
-      "volume_ratio": 2472.91
+      "trading_value": 33883969872673,
+      "volume_ratio": 15.46
+    },
+    {
+      "symbol": "^DJI",
+      "name": "^DJI",
+      "price": 47909.92,
+      "change": 1325.46,
+      "change_percent": 2.85,
+      "volume": 523711453,
+      "market_cap": 0,
+      "trading_value": 25090974798272,
+      "volume_ratio": 99.15
+    },
+    {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "price": 6782.81,
+      "change": 165.96,
+      "change_percent": 2.51,
+      "volume": 3502192000,
+      "market_cap": 0,
+      "trading_value": 23754703124726,
+      "volume_ratio": 63.02
+    },
+    {
+      "symbol": "^N225",
+      "name": "日経平均株価",
+      "price": 53429.56,
+      "change": 15.88,
+      "change_percent": 0.03,
+      "volume": 118800000,
+      "market_cap": 0,
+      "trading_value": 6347431560937,
+      "volume_ratio": 76.03
     },
     {
       "symbol": "^GDAXI",
       "name": "^GDAXI",
-      "price": 23168.08,
-      "change": -130.81,
-      "change_percent": -0.56,
-      "volume": 62871800,
+      "price": 22921.59,
+      "change": -246.49,
+      "change_percent": -1.06,
+      "volume": 59120900,
       "market_cap": 0,
-      "trading_value": 1456618897055,
-      "volume_ratio": 80.42
+      "trading_value": 1355145020993,
+      "volume_ratio": 77.04
     },
     {
       "symbol": "^FCHI",
       "name": "^FCHI",
-      "price": 7962.39,
-      "change": -18.88,
-      "change_percent": -0.24,
-      "volume": 64754700,
+      "price": 7908.74,
+      "change": -53.65,
+      "change_percent": -0.67,
+      "volume": 67821300,
       "market_cap": 0,
-      "trading_value": 515602184586,
-      "volume_ratio": 79.08
+      "trading_value": 536381044057,
+      "volume_ratio": 84.53
     },
     {
       "symbol": "9984.T",
@@ -597,39 +608,6 @@
       "market_cap": 32564716765184,
       "trading_value": 164819184500,
       "volume_ratio": 131.83
-    },
-    {
-      "symbol": "8035.T",
-      "name": "東京エレクトロン",
-      "price": 42410.0,
-      "change": 3970.0,
-      "change_percent": 10.33,
-      "volume": 3872000,
-      "market_cap": 19373616005120,
-      "trading_value": 164211520000,
-      "volume_ratio": 126.86
-    },
-    {
-      "symbol": "^STOXX50E",
-      "name": "^STOXX50E",
-      "price": 5692.86,
-      "change": -39.85,
-      "change_percent": -0.7,
-      "volume": 23134400,
-      "market_cap": 0,
-      "trading_value": 131700897221,
-      "volume_ratio": 76.37
-    },
-    {
-      "symbol": "4063.T",
-      "name": "信越化学工業",
-      "price": 6470.0,
-      "change": -104.0,
-      "change_percent": -1.58,
-      "volume": 18412500,
-      "market_cap": 12010349658112,
-      "trading_value": 119128875000,
-      "volume_ratio": 181.9
     }
   ],
   "trading_value_low": [
@@ -647,13 +625,13 @@
     {
       "symbol": "^KS11",
       "name": "^KS11",
-      "price": 5880.29,
-      "change": 429.96,
-      "change_percent": 7.89,
-      "volume": 912815,
+      "price": 5494.78,
+      "change": 44.45,
+      "change_percent": 0.82,
+      "volume": 990400,
       "market_cap": 0,
-      "trading_value": 5367616952,
-      "volume_ratio": 82.59
+      "trading_value": 5442029899,
+      "volume_ratio": 89.36
     },
     {
       "symbol": "2413.T",
@@ -990,7 +968,7 @@
       "volume": 36952500,
       "market_cap": 3135809781760,
       "trading_value": 22171500000,
-      "dividend_yield": 410.0,
+      "dividend_yield": 400.0,
       "volume_ratio": 117.14
     },
     {
@@ -1002,7 +980,7 @@
       "volume": 97005200,
       "market_cap": 10316908855296,
       "trading_value": 20953123200,
-      "dividend_yield": 401.0,
+      "dividend_yield": 398.0,
       "volume_ratio": 115.01
     },
     {
@@ -1026,7 +1004,7 @@
       "volume": 6119100,
       "market_cap": 4422110806016,
       "trading_value": 21214919700,
-      "dividend_yield": 388.0,
+      "dividend_yield": 375.0,
       "volume_ratio": 121.35
     },
     {
@@ -1054,6 +1032,18 @@
       "volume_ratio": 96.86
     },
     {
+      "symbol": "9101.T",
+      "name": "9101.T",
+      "price": 6055.0,
+      "change": -254.0,
+      "change_percent": -4.03,
+      "volume": 8523800,
+      "market_cap": 2608573972480,
+      "trading_value": 51611609000,
+      "dividend_yield": 330.0,
+      "volume_ratio": 162.13
+    },
+    {
       "symbol": "6902.T",
       "name": "6902.T",
       "price": 1960.5,
@@ -1062,7 +1052,7 @@
       "volume": 10131700,
       "market_cap": 5272616566784,
       "trading_value": 19863197850,
-      "dividend_yield": 335.0,
+      "dividend_yield": 326.0,
       "volume_ratio": 121.76
     },
     {
@@ -1074,20 +1064,8 @@
       "volume": 906200,
       "market_cap": 805513461760,
       "trading_value": 3516056000,
-      "dividend_yield": 331.0,
+      "dividend_yield": 314.0,
       "volume_ratio": 120.6
-    },
-    {
-      "symbol": "9101.T",
-      "name": "9101.T",
-      "price": 6055.0,
-      "change": -254.0,
-      "change_percent": -4.03,
-      "volume": 8523800,
-      "market_cap": 2608573972480,
-      "trading_value": 51611609000,
-      "dividend_yield": 317.0,
-      "volume_ratio": 162.13
     }
   ],
   "forward_pe_high": [
@@ -1114,7 +1092,7 @@
       "market_cap": 9721471827968,
       "trading_value": 35268007500,
       "forward_pe": 42.09,
-      "trailing_pe": 47.32,
+      "trailing_pe": 47.39,
       "volume_ratio": 118.68
     },
     {
@@ -1127,7 +1105,7 @@
       "market_cap": 9144283168768,
       "trading_value": 30086011900,
       "forward_pe": 41.24,
-      "trailing_pe": 81.83,
+      "trailing_pe": 81.96,
       "volume_ratio": 112.38
     },
     {
@@ -1140,7 +1118,7 @@
       "market_cap": 14618872250368,
       "trading_value": 25750928700,
       "forward_pe": 37.65,
-      "trailing_pe": 33.66,
+      "trailing_pe": 33.67,
       "volume_ratio": 119.96
     },
     {
@@ -1166,7 +1144,7 @@
       "market_cap": 11498431709184,
       "trading_value": 32977349100,
       "forward_pe": 34.03,
-      "trailing_pe": 29.47,
+      "trailing_pe": 29.5,
       "volume_ratio": 97.6
     },
     {
@@ -1179,7 +1157,7 @@
       "market_cap": 19373616005120,
       "trading_value": 164211520000,
       "forward_pe": 33.13,
-      "trailing_pe": 36.05,
+      "trailing_pe": 35.97,
       "volume_ratio": 126.86
     },
     {
@@ -1192,7 +1170,7 @@
       "market_cap": 14677625012224,
       "trading_value": 52137980000,
       "forward_pe": 32.41,
-      "trailing_pe": 35.93,
+      "trailing_pe": 35.84,
       "volume_ratio": 124.75
     },
     {
@@ -1218,7 +1196,7 @@
       "market_cap": 5774507507712,
       "trading_value": 35709830400,
       "forward_pe": 31.66,
-      "trailing_pe": 30.14,
+      "trailing_pe": 30.12,
       "volume_ratio": 181.07
     }
   ],
@@ -1259,7 +1237,7 @@
       "market_cap": 14676759937024,
       "trading_value": 37033250250,
       "forward_pe": 3.24,
-      "trailing_pe": 15.78,
+      "trailing_pe": 15.77,
       "volume_ratio": 117.89
     },
     {
@@ -1272,7 +1250,7 @@
       "market_cap": 4996089774080,
       "trading_value": 27794834250,
       "forward_pe": 5.63,
-      "trailing_pe": 10.28,
+      "trailing_pe": 10.29,
       "volume_ratio": 78.12
     },
     {
@@ -1285,7 +1263,7 @@
       "market_cap": 4422110806016,
       "trading_value": 21214919700,
       "forward_pe": 6.2,
-      "trailing_pe": 29.08,
+      "trailing_pe": 29.15,
       "volume_ratio": 121.35
     },
     {
@@ -1311,7 +1289,7 @@
       "market_cap": 5272616566784,
       "trading_value": 19863197850,
       "forward_pe": 10.17,
-      "trailing_pe": 15.43,
+      "trailing_pe": 15.41,
       "volume_ratio": 121.76
     },
     {
@@ -1324,7 +1302,7 @@
       "market_cap": 44104973025280,
       "trading_value": 92121278400,
       "forward_pe": 10.44,
-      "trailing_pe": 11.91,
+      "trailing_pe": 11.9,
       "volume_ratio": 127.52
     },
     {
@@ -1350,7 +1328,7 @@
       "market_cap": 2508126158848,
       "trading_value": 17211683200,
       "forward_pe": 11.54,
-      "trailing_pe": 20.86,
+      "trailing_pe": 20.88,
       "volume_ratio": 100.12
     }
   ],
@@ -2409,17 +2387,17 @@
       "volume_ratio": 132.46
     },
     {
-      "symbol": "^KS11",
-      "name": "^KS11",
-      "price": 5880.29,
-      "change": 429.96,
-      "change_percent": 7.89,
-      "volume": 912815,
-      "market_cap": 0,
-      "trading_value": 5367616952,
-      "deviation_25": 6.81,
-      "deviation_75": 14.78,
-      "volume_ratio": 82.59
+      "symbol": "9983.T",
+      "name": "ファーストリテイリング",
+      "price": 67760.0,
+      "change": 2670.0,
+      "change_percent": 4.1,
+      "volume": 1476400,
+      "market_cap": 20790785343488,
+      "trading_value": 100040864000,
+      "deviation_25": 6.12,
+      "deviation_75": 8.5,
+      "volume_ratio": 142.22
     }
   ],
   "deviation_25_low": [
@@ -2463,6 +2441,19 @@
       "volume_ratio": 78.12
     },
     {
+      "symbol": "^GDAXI",
+      "name": "^GDAXI",
+      "price": 22921.59,
+      "change": -246.49,
+      "change_percent": -1.06,
+      "volume": 59120900,
+      "market_cap": 0,
+      "trading_value": 1355145020993,
+      "deviation_25": -1.52,
+      "deviation_75": -5.71,
+      "volume_ratio": 77.04
+    },
+    {
       "symbol": "9766.T",
       "name": "9766.T",
       "price": 19435.0,
@@ -2474,6 +2465,19 @@
       "deviation_25": -1.38,
       "deviation_75": -3.83,
       "volume_ratio": 103.94
+    },
+    {
+      "symbol": "^HSI",
+      "name": "^HSI",
+      "price": 25116.53,
+      "change": -177.5,
+      "change_percent": -0.7,
+      "volume": 3194600000,
+      "market_cap": 0,
+      "trading_value": 80237264491796,
+      "deviation_25": -1.32,
+      "deviation_75": -3.95,
+      "volume_ratio": 84.24
     },
     {
       "symbol": "4519.T",
@@ -2515,43 +2519,17 @@
       "volume_ratio": 143.13
     },
     {
-      "symbol": "8801.T",
-      "name": "8801.T",
-      "price": 1770.0,
-      "change": 98.0,
-      "change_percent": 5.86,
-      "volume": 13374900,
-      "market_cap": 4824712609792,
-      "trading_value": 23673573000,
-      "deviation_25": -0.92,
-      "deviation_75": -3.86,
-      "volume_ratio": 139.78
-    },
-    {
-      "symbol": "^GDAXI",
-      "name": "^GDAXI",
-      "price": 23168.08,
-      "change": -130.81,
-      "change_percent": -0.56,
-      "volume": 62871800,
+      "symbol": "^STOXX50E",
+      "name": "^STOXX50E",
+      "price": 5633.22,
+      "change": -59.64,
+      "change_percent": -1.05,
+      "volume": 24072900,
       "market_cap": 0,
-      "trading_value": 1456618897055,
-      "deviation_25": -0.87,
-      "deviation_75": -4.77,
-      "volume_ratio": 80.42
-    },
-    {
-      "symbol": "4568.T",
-      "name": "第一三共",
-      "price": 2832.5,
-      "change": -40.5,
-      "change_percent": -1.41,
-      "volume": 8203000,
-      "market_cap": 5195142004736,
-      "trading_value": 23234997500,
-      "deviation_25": -0.63,
-      "deviation_75": -6.44,
-      "volume_ratio": 102.89
+      "trading_value": 135607946909,
+      "deviation_25": -1.05,
+      "deviation_75": -3.96,
+      "volume_ratio": 80.76
     }
   ],
   "deviation_75_high": [
@@ -2621,19 +2599,6 @@
       "volume_ratio": 181.9
     },
     {
-      "symbol": "^KS11",
-      "name": "^KS11",
-      "price": 5880.29,
-      "change": 429.96,
-      "change_percent": 7.89,
-      "volume": 912815,
-      "market_cap": 0,
-      "trading_value": 5367616952,
-      "deviation_25": 6.81,
-      "deviation_75": 14.78,
-      "volume_ratio": 82.59
-    },
-    {
       "symbol": "9101.T",
       "name": "9101.T",
       "price": 6055.0,
@@ -2660,19 +2625,6 @@
       "volume_ratio": 113.03
     },
     {
-      "symbol": "^TWII",
-      "name": "^TWII",
-      "price": 34761.38,
-      "change": 2188.95,
-      "change_percent": 6.72,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": 4.17,
-      "deviation_75": 10.14,
-      "volume_ratio": 0.0
-    },
-    {
       "symbol": "7182.T",
       "name": "7182.T",
       "price": 2800.0,
@@ -2684,6 +2636,32 @@
       "deviation_25": 7.4,
       "deviation_75": 9.68,
       "volume_ratio": 132.05
+    },
+    {
+      "symbol": "8802.T",
+      "name": "8802.T",
+      "price": 4772.0,
+      "change": 312.0,
+      "change_percent": 7.0,
+      "volume": 7483200,
+      "market_cap": 5774507507712,
+      "trading_value": 35709830400,
+      "deviation_25": 3.36,
+      "deviation_75": 9.32,
+      "volume_ratio": 181.07
+    },
+    {
+      "symbol": "4502.T",
+      "name": "武田薬品工業",
+      "price": 5789.0,
+      "change": -9.0,
+      "change_percent": -0.16,
+      "volume": 5197100,
+      "market_cap": 9144283168768,
+      "trading_value": 30086011900,
+      "deviation_25": 2.01,
+      "deviation_75": 8.94,
+      "volume_ratio": 112.38
     }
   ],
   "deviation_75_low": [
@@ -2779,6 +2757,19 @@
       "volume_ratio": 125.13
     },
     {
+      "symbol": "^GDAXI",
+      "name": "^GDAXI",
+      "price": 22921.59,
+      "change": -246.49,
+      "change_percent": -1.06,
+      "volume": 59120900,
+      "market_cap": 0,
+      "trading_value": 1355145020993,
+      "deviation_25": -1.52,
+      "deviation_75": -5.71,
+      "volume_ratio": 77.04
+    },
+    {
       "symbol": "6902.T",
       "name": "6902.T",
       "price": 1960.5,
@@ -2803,32 +2794,19 @@
       "deviation_25": 0.88,
       "deviation_75": -4.88,
       "volume_ratio": 139.38
-    },
-    {
-      "symbol": "6758.T",
-      "name": "ソニーグループ",
-      "price": 3388.0,
-      "change": 77.0,
-      "change_percent": 2.33,
-      "volume": 18377900,
-      "market_cap": 20126569070592,
-      "trading_value": 62264325200,
-      "deviation_25": 2.13,
-      "deviation_75": -4.82,
-      "volume_ratio": 98.39
     }
   ],
   "golden_cross": [
     {
-      "symbol": "^N225",
-      "name": "日経平均株価",
-      "price": 56308.42,
-      "change": 2894.74,
-      "change_percent": 5.42,
-      "volume": 0,
+      "symbol": "^DJI",
+      "name": "^DJI",
+      "price": 47909.92,
+      "change": 1325.46,
+      "change_percent": 2.85,
+      "volume": 523711453,
       "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0.0
+      "trading_value": 25090974798272,
+      "volume_ratio": 99.15
     },
     {
       "symbol": "5108.T",
@@ -2854,6 +2832,6 @@
     }
   ],
   "dead_cross": [],
-  "timestamp": "2026-04-08 21:49:17",
-  "data_count": 239
+  "timestamp": "2026-04-08 22:11:45",
+  "data_count": 237
 }

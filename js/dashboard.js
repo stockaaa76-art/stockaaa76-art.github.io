@@ -5,9 +5,6 @@
 
 class Dashboard {
     constructor() {
-        this.summary_api = '/api/summary.json';
-        this.indices_api = '/api/major_indices.json';
-        this.realtime_api = '/data/realtime_prices.json';
         this.historical_api = '/data/historical_data.json';
         this.rankings_api = '/api/enhanced_rankings.json';
         this.extended_rankings_api = '/api/extended_rankings.json';
@@ -115,98 +112,9 @@ class Dashboard {
                 }
             }
         } catch (error) {
-            console.error('historical_data 取得エラー（フォールバック）:', error);
-            await this.loadRealtimeData();
-            await this.loadInternationalIndices();
-        }
-    }
-
-    async loadRealtimeData() {
-        try {
-            console.log('realtime API取得開始:', this.realtime_api);
-            const response = await fetch(this.realtime_api);
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-            
-            const data = await response.json();
-            console.log('realtime データ取得成功:', data);
-            this.lastRealtimeData = data; // データを保存（再描画用）
-            this.updateIndexHeroesFromRealtime(data);
-            this.updateLastUpdated(data.timestamp);
-            
-        } catch (error) {
-            console.error('リアルタイムデータ取得エラー:', error);
-            // フォールバック: summary.jsonを試す
-            await this.loadSummaryDataFallback();
-        }
-    }
-
-    async loadSummaryDataFallback() {
-        try {
-            console.log('summary API取得開始 (フォールバック):', this.summary_api);
-            const response = await fetch(this.summary_api);
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-            
-            const data = await response.json();
-            console.log('summary データ取得成功:', data);
-            this.lastSummaryData = data; // データを保存（再描画用）
-            this.updateIndexHeroes(data);
-            this.updateLastUpdated(data.updatedAt);
-            
-        } catch (error) {
-            console.error('サマリーデータ取得エラー:', error);
+            console.error('historical_data 取得エラー:', error);
+            // historical_data.json が単一ソース。取得失敗時はエラー表示のみ（staleな別ファイルを使わない）
             this.showError();
-        }
-    }
-
-    async loadInternationalIndices() {
-        try {
-            const response = await fetch(this.indices_api);
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-            
-            const data = await response.json();
-            this.lastIndicesData = data; // データを保存
-            this.updateInternationalIndices(data);
-            
-        } catch (error) {
-            console.error('国際指標データ取得エラー:', error);
-            // 国際指標はサブ機能なので、エラーでも全体は停止しない
-        }
-    }
-
-    updateIndexHeroesFromRealtime(data) {
-        // データ構造確認とフォールバック処理
-        const indices = data.indices || [];
-        const foreign = data.foreign || [];
-        
-        // 日経平均更新（realtime_prices.json形式）
-        const nikkei = indices.find(idx => idx.ticker === '^N225');
-        if (nikkei) {
-            this.updateIndexCardFromRealtime('nikkei', nikkei);
-        }
-
-        // ダウ平均はmajor_indices.jsonから取得（realtime_pricesにはない）
-        // loadInternationalIndices()で更新される
-
-        console.log('メイン指標更新完了:', { nikkei: !!nikkei });
-    }
-
-    updateIndexHeroes(data) {
-        // 日経平均更新
-        const nikkei = data.indices.find(idx => idx.symbol === 'NIKKEI225' || idx.symbol === '^N225');
-        if (nikkei) {
-            this.updateIndexCard('nikkei', nikkei);
-        }
-
-        // ダウ平均更新
-        const dow = data.indices.find(idx => idx.symbol === 'DJI' || idx.symbol === '^DJI');
-        if (dow) {
-            this.updateIndexCard('dow', dow);
         }
     }
 
@@ -591,16 +499,10 @@ class Dashboard {
         });
     }
     
-    // すべてのチャートを再描画
+    // すべてのチャートを再描画（Grid Layout初期化後のCanvas再描画用）
     redrawAllCharts() {
-        // リアルタイムデータを優先、フォールバック用にサマリーデータも確認
-        if (this.lastRealtimeData) {
-            console.log('リアルタイムデータで再描画');
-            this.updateIndexHeroesFromRealtime(this.lastRealtimeData);
-        } else if (this.lastSummaryData) {
-            console.log('サマリーデータで再描画');
-            this.updateIndexHeroes(this.lastSummaryData);
-        }
+        // historical_data.json が単一ソース。再描画は再fetch で対応
+        this.loadFromHistoricalData();
     }
 
     loadWatchlist() {
@@ -644,30 +546,24 @@ class Dashboard {
     }
 
     async loadWatchlistPrices(symbols) {
-        // 既存のデータソースから価格情報を取得
+        // rankings.json（enhanced_rankings）からウォッチリスト銘柄の価格を取得
         for (const symbol of symbols) {
             try {
                 let stockData = null;
                 
-                // 1. rankings.jsonから検索
                 if (this.lastRankingsData) {
-                    stockData = this.findStockInRankings(symbol, this.lastRankingsData);
-                }
-                
-                // 2. major_indices.jsonから検索
-                if (!stockData && this.lastIndicesData) {
-                    stockData = this.findStockInIndices(symbol, this.lastIndicesData);
-                }
-                
-                // 3. realtime_prices.jsonから検索
-                if (!stockData && this.lastRealtimeData) {
-                    stockData = this.findStockInRealtime(symbol, this.lastRealtimeData);
+                    const allStocks = [
+                        ...(this.lastRankingsData.gainers || []),
+                        ...(this.lastRankingsData.losers || []),
+                        ...(this.lastRankingsData.volume || []),
+                        ...(this.lastRankingsData.market_cap || []),
+                    ];
+                    stockData = allStocks.find(s => s.symbol === symbol);
                 }
                 
                 if (stockData) {
                     this.updateWatchlistItem(symbol, stockData);
                 } else {
-                    // データが見つからない場合はエラー表示
                     this.updateWatchlistItemError(symbol);
                 }
             } catch (error) {
@@ -675,40 +571,6 @@ class Dashboard {
                 this.updateWatchlistItemError(symbol);
             }
         }
-    }
-    
-    findStockInRankings(symbol, data) {
-        const allStocks = [
-            ...(data.gainers || []),
-            ...(data.losers || []),
-            ...(data.volume || []),
-            ...(data.market_cap || [])
-        ];
-        return allStocks.find(stock => stock.symbol === symbol);
-    }
-    
-    findStockInIndices(symbol, data) {
-        if (data.indices) {
-            const index = data.indices.find(idx => idx.symbol === symbol);
-            if (index) {
-                return {
-                    symbol: index.symbol,
-                    name: index.name,
-                    price: index.price,
-                    change: index.change,
-                    change_percent: index.pct,
-                    market: 'INDEX'
-                };
-            }
-        }
-        return null;
-    }
-    
-    findStockInRealtime(symbol, data) {
-        if (data.stocks) {
-            return data.stocks.find(stock => stock.symbol === symbol);
-        }
-        return null;
     }
     
     updateWatchlistItemError(symbol) {
@@ -755,54 +617,36 @@ class Dashboard {
         try {
             let items = [];
 
-            if (usPeriod === 'daily') {
-                // デイリー: realtime_prices.json から取得（財務・テクニカル指標含む）
-                const res = await fetch('/data/realtime_prices.json');
+            // デイリー・ウィークリー・マンスリー: すべて period_rankings.json を使用（単一ソース）
+            if (!this.periodRankingsData) {
+                const res = await fetch(this.period_rankings_api);
                 if (!res.ok) return;
-                const data = await res.json();
-                const us = [...(data.foreign || []), ...(data.indices || [])]
-                    .filter(s => !s.ticker.endsWith('.T') && s.current_price > 0 && !s.ticker.startsWith('^'));
-                items = us.map(s => ({
-                    symbol: s.ticker, name: s.name, price: s.current_price,
-                    change_percent: s.change_percent, volume: s.volume,
-                    market_cap: s.market_cap, pe_ratio: s.trailing_pe,
-                    dividend_yield: s.dividend_yield, roe: s.return_on_equity,
-                    deviation_25: s.deviation_25, deviation_75: s.deviation_75,
-                    volume_ratio: s.volume_ratio, trading_value: s.trading_value,
-                    year_high: s.fifty_two_week_high, year_low: s.fifty_two_week_low,
-                }));
-            } else {
-                // ウィークリー・マンスリー: period_rankings.json の us_{period} キーを使用
-                if (!this.periodRankingsData) {
-                    const res = await fetch(this.period_rankings_api);
-                    if (!res.ok) return;
-                    this.periodRankingsData = await res.json();
-                }
-                const usKey = `us_${usPeriod}`;
-                const periodSection = this.periodRankingsData[usKey];
-                if (!periodSection) return;
-                const rankings = periodSection.rankings || {};
-                // period_rankings 形式 → items 形式に変換
-                const allStocks = [
-                    ...(rankings.gainers || []),
-                    ...(rankings.losers || []),
-                    ...(rankings.volume || []),
-                    ...(rankings.market_cap || []),
-                ];
-                // 重複排除
-                const seen = new Set();
-                const deduped = allStocks.filter(s => {
-                    if (seen.has(s.symbol)) return false;
-                    seen.add(s.symbol);
-                    return true;
-                });
-                items = deduped.map(s => ({
-                    symbol: s.symbol, name: s.name, price: s.current_price,
-                    change_percent: s.period_change, volume: s.volume,
-                    market_cap: s.market_cap, pe_ratio: s.pe_ratio,
-                    dividend_yield: s.dividend_yield, volume_ratio: s.volume_ratio,
-                }));
+                this.periodRankingsData = await res.json();
             }
+            const usKey = `us_${usPeriod}`;
+            const periodSection = this.periodRankingsData[usKey];
+            if (!periodSection) return;
+            const rankings = periodSection.rankings || {};
+            // period_rankings 形式 → items 形式に変換
+            const allStocks = [
+                ...(rankings.gainers || []),
+                ...(rankings.losers || []),
+                ...(rankings.volume || []),
+                ...(rankings.market_cap || []),
+            ];
+            // 重複排除
+            const seen = new Set();
+            const deduped = allStocks.filter(s => {
+                if (seen.has(s.symbol)) return false;
+                seen.add(s.symbol);
+                return true;
+            });
+            items = deduped.map(s => ({
+                symbol: s.symbol, name: s.name, price: s.current_price,
+                change_percent: s.period_change, volume: s.volume,
+                market_cap: s.market_cap, pe_ratio: s.pe_ratio,
+                dividend_yield: s.dividend_yield, volume_ratio: s.volume_ratio,
+            }));
 
             // ── 各ランキング描画 ──────────────────────────────────────────
             // 基本
@@ -920,7 +764,7 @@ class Dashboard {
                     changeText = this.formatPercent(stock.change_percent);
                     break;
                 case 'market_cap':
-                    valueText = this.formatMarketCap(stock.market_cap);
+                    valueText = this.formatMarketCap(stock.market_cap, currency);
                     changeText = this.formatPercent(stock.change_percent);
                     break;
             }
@@ -1174,7 +1018,17 @@ class Dashboard {
         return volume.toLocaleString() + '株';
     }
 
-    formatMarketCap(marketCap) {
+    formatMarketCap(marketCap, currency = '¥') {
+        if (currency === '$') {
+            // USD建て: 兆ドル / 十億ドル表記
+            if (marketCap >= 1000000000000) {
+                return '$' + (marketCap / 1000000000000).toFixed(1) + '兆';
+            } else if (marketCap >= 1000000000) {
+                return '$' + (marketCap / 1000000000).toFixed(1) + 'B';
+            }
+            return '$' + marketCap.toLocaleString();
+        }
+        // JPY建て: 兆円 / 億円表記
         if (marketCap >= 1000000000000) {
             return (marketCap / 1000000000000).toFixed(1) + '兆円';
         } else if (marketCap >= 100000000) {

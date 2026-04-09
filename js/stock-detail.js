@@ -747,29 +747,27 @@ class StockDetail {
 
     async loadRelatedStocks() {
         try {
-            // 同市場の銘柄を関連銘柄として表示（簡易版）
+            // stocks/index.json から同市場の銘柄を関連銘柄として表示（単一ソース統一）
             const market = this.detectMarket(this.symbol);
-            const response = await fetch('/api/major_indices.json');
+            const response = await fetch('/api/stocks/index.json');
             
             if (response.ok) {
                 const data = await response.json();
+                const stocks = data.stocks || data;
                 
-                // indicesオブジェクトから全ての銘柄を収集
-                const allStocks = [];
-                if (data.indices) {
-                    Object.values(data.indices).forEach(region => {
-                        Object.values(region).forEach(stock => {
-                            allStocks.push(stock);
-                        });
-                    });
-                }
-                
-                const relatedStocks = allStocks
-                    .filter(stock => 
-                        this.detectMarket(stock.symbol) === market && 
-                        stock.symbol !== this.symbol
+                const relatedStocks = stocks
+                    .filter(s =>
+                        s.symbol !== this.symbol &&
+                        this.detectMarket(s.symbol) === market &&
+                        s.price > 0
                     )
-                    .slice(0, 4); // 最大4銘柄
+                    .sort(() => Math.random() - 0.5) // ランダムに選択
+                    .slice(0, 4)
+                    .map(s => ({
+                        symbol: s.symbol,
+                        name: s.name,
+                        price: s.price,
+                    }));
                 
                 this.renderRelatedStocks(relatedStocks);
             }
