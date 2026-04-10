@@ -1,46 +1,46 @@
 {
   "composite": {
-    "score": 48.0,
+    "score": 53.9,
     "label": "中立",
     "signal": "neutral"
   },
   "vix": {
-    "value": 21.04,
-    "change": -18.39,
-    "score": 40,
+    "value": 19.68,
+    "change": 0.97,
+    "score": 55,
     "label": "中立",
-    "flow_level": "caution",
-    "flow_label": "⚠️ VIX 21 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。"
+    "flow_level": "normal",
+    "flow_label": null
   },
   "jniv": {},
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 158.54,
-      "change": -0.72,
-      "score": 56.4
+      "value": 159.26,
+      "change": 0.39,
+      "score": 62.0
     },
     "gold": {
       "name": "金先物",
-      "value": 4745.0,
-      "change": 1.89,
-      "score": 44.3
+      "value": 4777.0,
+      "change": -0.32,
+      "score": 51.0
     },
     "oil": {
       "name": "原油WTI",
-      "value": 96.5,
-      "change": -14.56,
-      "score": 79.1
+      "value": 99.55,
+      "change": 1.72,
+      "score": 46.6
     },
     "us10y": {
       "name": "米10年債利回り",
       "value": 4.29,
-      "change": -1.2,
-      "score": 59.6
+      "change": 0.05,
+      "score": 49.6
     },
-    "avg_score": 59.9
+    "avg_score": 52.3
   },
-  "vix_flow_level": "caution",
-  "vix_flow_label": "⚠️ VIX 21 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。",
-  "generated_at": "2026-04-08 22:08:41"
+  "vix_flow_level": "normal",
+  "vix_flow_label": null,
+  "generated_at": "2026-04-10 07:38:28"
 }
