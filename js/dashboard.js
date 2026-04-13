@@ -644,8 +644,14 @@ class Dashboard {
             items = deduped.map(s => ({
                 symbol: s.symbol, name: s.name, price: s.current_price,
                 change_percent: s.period_change, volume: s.volume,
-                market_cap: s.market_cap, pe_ratio: s.pe_ratio,
-                dividend_yield: s.dividend_yield, volume_ratio: s.volume_ratio,
+                market_cap: s.market_cap ?? 0, pe_ratio: s.pe_ratio,
+                dividend_yield: s.dividend_yield, volume_ratio: s.volume_ratio ?? 0,
+                deviation_25: s.deviation_25 ?? null,
+                deviation_75: s.deviation_75 ?? null,
+                year_high: s.year_high ?? 0,
+                year_low: s.year_low ?? 0,
+                trading_value: s.trading_value ?? 0,
+                roe: s.roe ?? null,
             }));
 
             // ── 各ランキング描画 ──────────────────────────────────────────
@@ -666,12 +672,12 @@ class Dashboard {
             this.renderRanking('us-dividend-ranking', [...items].filter(s=>s.dividend_yield>0).sort((a,b)=>b.dividend_yield-a.dividend_yield).slice(0,10), 'percentage', '$');
             this.renderRanking('us-per-high-ranking', [...items].filter(s=>s.pe_ratio>0).sort((a,b)=>b.pe_ratio-a.pe_ratio).slice(0,10), 'percentage', '$');
             this.renderRanking('us-per-low-ranking',  [...items].filter(s=>s.pe_ratio>0&&s.pe_ratio<200).sort((a,b)=>a.pe_ratio-b.pe_ratio).slice(0,10), 'percentage', '$');
-            this.renderRanking('us-roe-ranking',       [...items].filter(s=>s.roe>0).sort((a,b)=>b.roe-a.roe).slice(0,10), 'percentage', '$');
-            // テクニカル（デイリーのみ deviation あり）
-            this.renderRanking('us-dev25-high-ranking', [...items].filter(s=>s.deviation_25!=null).sort((a,b)=>b.deviation_25-a.deviation_25).slice(0,10), 'percentage', '$');
-            this.renderRanking('us-dev25-low-ranking',  [...items].filter(s=>s.deviation_25!=null).sort((a,b)=>a.deviation_25-b.deviation_25).slice(0,10), 'percentage', '$');
-            this.renderRanking('us-dev75-high-ranking', [...items].filter(s=>s.deviation_75!=null).sort((a,b)=>b.deviation_75-a.deviation_75).slice(0,10), 'percentage', '$');
-            this.renderRanking('us-dev75-low-ranking',  [...items].filter(s=>s.deviation_75!=null).sort((a,b)=>a.deviation_75-b.deviation_75).slice(0,10), 'percentage', '$');
+            this.renderRanking('us-roe-ranking',       [...items].filter(s=>s.roe!=null&&s.roe>0).sort((a,b)=>b.roe-a.roe).slice(0,10), 'percentage', '$');
+            // テクニカル（period_rankings 生成時に 25/75 日かい離率を付与）
+            this.renderRanking('us-dev25-high-ranking', [...items].filter(s=>s.deviation_25>0).sort((a,b)=>b.deviation_25-a.deviation_25).slice(0,10), 'deviation25', '$');
+            this.renderRanking('us-dev25-low-ranking',  [...items].filter(s=>s.deviation_25<0).sort((a,b)=>a.deviation_25-b.deviation_25).slice(0,10), 'deviation25', '$');
+            this.renderRanking('us-dev75-high-ranking', [...items].filter(s=>s.deviation_75>0).sort((a,b)=>b.deviation_75-a.deviation_75).slice(0,10), 'deviation75', '$');
+            this.renderRanking('us-dev75-low-ranking',  [...items].filter(s=>s.deviation_75<0).sort((a,b)=>a.deviation_75-b.deviation_75).slice(0,10), 'deviation75', '$');
 
             // ── イベントリスナー（初回のみ登録）──────────────────────────
             if (!this._usTabsInit) {
@@ -759,6 +765,14 @@ class Dashboard {
                     valueText = this.formatPrice(stock.price, currency);
                     changeText = this.formatPercent(stock.change_percent);
                     break;
+                case 'deviation25':
+                    valueText = this.formatPrice(stock.price, currency);
+                    changeText = this.formatPercent(stock.deviation_25);
+                    break;
+                case 'deviation75':
+                    valueText = this.formatPrice(stock.price, currency);
+                    changeText = this.formatPercent(stock.deviation_75);
+                    break;
                 case 'volume':
                     valueText = this.formatVolume(stock.volume);
                     changeText = this.formatPercent(stock.change_percent);
@@ -770,9 +784,12 @@ class Dashboard {
             }
 
             // 変化率の色分け
-            if (stock.change_percent > 0) {
+            const pctForColor = type === 'deviation25' ? stock.deviation_25
+                : type === 'deviation75' ? stock.deviation_75
+                : stock.change_percent;
+            if (pctForColor > 0) {
                 changeClass = 'positive';
-            } else if (stock.change_percent < 0) {
+            } else if (pctForColor < 0) {
                 changeClass = 'negative';
             }
 
