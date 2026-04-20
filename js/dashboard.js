@@ -10,6 +10,7 @@ class Dashboard {
         this.extended_rankings_api = '/api/extended_rankings.json';
         this.enhanced_rankings_api = '/api/enhanced_rankings.json';
         this.period_rankings_api = '/api/period_rankings.json';
+        this.ai_rankings_api = '/api/ai_rankings.json';
         this.currentRankingCategory = 'basic';
         this.currentPeriod = 'daily';
         this.init();
@@ -29,6 +30,8 @@ class Dashboard {
             await this.loadPeriodRankings();
             console.log('拡張ランキング（強化版）を読み込み中...');
             await this.loadEnhancedRankings();
+            console.log('AI予測ランキングを読み込み中...');
+            await this.loadAiRankings();
             this.setupEventListeners();
             
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
@@ -45,6 +48,7 @@ class Dashboard {
                 this.loadExtendedRankings();
                 this.loadPeriodRankings();
                 this.loadEnhancedRankings();
+                this.loadAiRankings();
             }, 5 * 60 * 1000);
             
         } catch (error) {
@@ -689,7 +693,7 @@ class Dashboard {
                         document.querySelectorAll('[data-us-category]').forEach(b => b.classList.remove('active'));
                         btn.classList.add('active');
                         const cat = btn.dataset.usCategory;
-                        ['basic','price','volume','financial','technical'].forEach(c => {
+                        ['basic','price','volume','financial','technical','ai'].forEach(c => {
                             const el = document.getElementById(`us-${c}-rankings`);
                             if (el) el.classList.toggle('hidden', c !== cat);
                         });
@@ -1356,4 +1360,53 @@ Dashboard.prototype.updateEnhancedRankingList = function(elementId, data) {
     }).join('');
 
     element.innerHTML = html;
+};
+Dashboard.prototype.loadAiRankings = async function() {
+    try {
+        const res = await fetch(this.ai_rankings_api);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        this.renderAiRanking('jp-ai-confidence-ranking', data.jp?.confidence_high || [], '¥');
+        this.renderAiRanking('jp-ai-bullish-ranking',    data.jp?.bullish        || [], '¥');
+        this.renderAiRanking('jp-ai-bearish-ranking',    data.jp?.bearish        || [], '¥');
+        this.renderAiRanking('us-ai-confidence-ranking', data.us?.confidence_high || [], '$');
+        this.renderAiRanking('us-ai-bullish-ranking',    data.us?.bullish         || [], '$');
+        this.renderAiRanking('us-ai-bearish-ranking',    data.us?.bearish         || [], '$');
+    } catch (e) {
+        console.error('AI予測ランキング取得エラー:', e);
+    }
+};
+
+Dashboard.prototype.renderAiRanking = function(elementId, items, currency) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    if (!items || items.length === 0) {
+        el.innerHTML = '<div class="no-data">📊 データなし</div>';
+        return;
+    }
+    const html = items.map((item, i) => {
+        const pct = item.predicted_change;
+        const changeClass = pct > 0 ? 'positive' : pct < 0 ? 'negative' : 'neutral';
+        const sign = pct > 0 ? '+' : '';
+        const confPct = Math.round((item.confidence || 0) * 100);
+        const barWidth = Math.min(100, confPct);
+        const priceText = currency === '$'
+            ? `$${(item.price || 0).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
+            : `¥${(item.price || 0).toLocaleString('ja-JP')}`;
+        return `
+            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'" style="cursor:pointer;">
+                <div class="ranking-item-left">
+                    <span class="ranking-symbol">${i + 1}. ${item.symbol}</span>
+                    <span class="ranking-name">${item.name}</span>
+                    <span class="confidence-bar" style="width:${barWidth}%;" title="信頼度 ${confPct}%"></span>
+                </div>
+                <div class="ranking-item-right">
+                    <div class="ranking-values">
+                        <span class="ranking-value">${priceText}</span>
+                        <span class="ranking-change ${changeClass}">${sign}${pct.toFixed(2)}% (信頼${confPct}%)</span>
+                    </div>
+                </div>
+            </div>`;
+    }).join('');
+    el.innerHTML = html;
 };
