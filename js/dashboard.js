@@ -470,22 +470,31 @@ class Dashboard {
         ctx.fill();
     }
 
+    // GA4 カスタムイベント送信ユーティリティ
+    trackEvent(eventName, params = {}) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, params);
+        }
+    }
+
     setupEventListeners() {
         // ウォッチリスト処理
         this.loadWatchlist();
-        
+
         // ランキングタブのイベントリスナー
         this.setupRankingTabs();
-        
+
         // 期間タブのイベントリスナー
         this.setupPeriodTabs();
-        
+
         // IndexHeroのクリック処理
         document.querySelectorAll('.index-hero').forEach(hero => {
             hero.addEventListener('click', (e) => {
                 if (e.target.tagName !== 'A') {
                     const detailLink = hero.querySelector('.btn-primary');
                     if (detailLink) {
+                        const symbol = hero.dataset.symbol || detailLink.href.split('s=')[1];
+                        this.trackEvent('index_hero_click', { symbol: symbol || 'unknown' });
                         window.location.href = detailLink.href;
                     }
                 }
@@ -798,7 +807,7 @@ class Dashboard {
             }
 
             return `
-                <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(stock.symbol)}'" style="cursor:pointer;">
+                <div class="ranking-item" onclick="if(typeof gtag==='function')gtag('event','ranking_item_click',{symbol:'${stock.symbol}'});window.location.href='/stocks/detail/?s=${encodeURIComponent(stock.symbol)}'" style="cursor:pointer;">
                     <div class="ranking-item-left">
                         <span class="ranking-symbol">${rank}. ${stock.symbol}</span>
                         <span class="ranking-name">${stock.name}</span>
@@ -830,6 +839,7 @@ class Dashboard {
     }
     
     switchRankingCategory(category) {
+        this.trackEvent('ranking_tab_switch', { category });
         // ランキングカテゴリを切り替え
         // アクティブなタブを更新
         document.querySelectorAll('.tab-button').forEach(btn => {
@@ -983,7 +993,7 @@ class Dashboard {
             }
             
             return `
-                <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(stock.symbol)}'" style="cursor:pointer;">
+                <div class="ranking-item" onclick="if(typeof gtag==='function')gtag('event','ranking_item_click',{symbol:'${stock.symbol}'});window.location.href='/stocks/detail/?s=${encodeURIComponent(stock.symbol)}'" style="cursor:pointer;">
                     <div class="ranking-item-left">
                         <span class="ranking-symbol">${rank}. ${stock.symbol}</span>
                         <span class="ranking-name">${stock.name}</span>
@@ -1221,7 +1231,7 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
         }
         
         return `
-            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'">
+            <div class="ranking-item" onclick="if(typeof gtag==='function')gtag('event','ranking_item_click',{symbol:'${item.symbol}'});window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'">
                 <div class="ranking-item-left">
                     <div class="ranking-symbol">${index + 1}. ${item.symbol}</div>
                     <div class="ranking-name">${item.name}</div>
@@ -1242,6 +1252,7 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
 
 Dashboard.prototype.switchPeriod = function(period) {
     console.log('switchPeriod called:', period);
+    this.trackEvent('period_tab_switch', { period });
     this.currentPeriod = period;
 
     // アクティブな期間タブを更新
@@ -1343,7 +1354,7 @@ Dashboard.prototype.updateEnhancedRankingList = function(elementId, data) {
         }
         
         return `
-            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'">
+            <div class="ranking-item" onclick="if(typeof gtag==='function')gtag('event','ranking_item_click',{symbol:'${item.symbol}'});window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'">
                 <div class="ranking-item-left">
                     <div class="ranking-symbol">${index + 1}. ${item.symbol}</div>
                     <div class="ranking-name">${item.name}</div>
@@ -1394,7 +1405,7 @@ Dashboard.prototype.renderAiRanking = function(elementId, items, currency) {
             ? `$${(item.price || 0).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
             : `¥${(item.price || 0).toLocaleString('ja-JP')}`;
         return `
-            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'" style="cursor:pointer;">
+            <div class="ranking-item" onclick="if(typeof gtag==='function')gtag('event','ranking_item_click',{symbol:'${item.symbol}'});window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'" style="cursor:pointer;">
                 <div class="ranking-item-left">
                     <span class="ranking-symbol">${i + 1}. ${item.symbol}</span>
                     <span class="ranking-name">${item.name}</span>
