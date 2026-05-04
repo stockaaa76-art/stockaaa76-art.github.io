@@ -1,12 +1,12 @@
 {
   "composite": {
-    "score": 53.6,
+    "score": 52.9,
     "label": "中立",
     "signal": "neutral"
   },
   "vix": {
-    "value": 16.99,
-    "change": 0.59,
+    "value": 18.29,
+    "change": 7.65,
     "score": 55,
     "label": "中立",
     "flow_level": "normal",
@@ -16,31 +16,31 @@
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 157.03,
-      "change": -1.97,
-      "score": 50.2
+      "value": 157.2,
+      "change": 0.14,
+      "score": 60.7
     },
     "gold": {
       "name": "金先物",
-      "value": 4644.5,
-      "change": 0.65,
-      "score": 48.1
+      "value": 4529.8,
+      "change": -2.16,
+      "score": 56.5
     },
     "oil": {
       "name": "原油WTI",
-      "value": 101.94,
-      "change": -2.98,
-      "score": 56.0
+      "value": 104.95,
+      "change": 2.95,
+      "score": 44.1
     },
     "us10y": {
       "name": "米10年債利回り",
-      "value": 4.38,
-      "change": -0.27,
-      "score": 52.2
+      "value": 4.45,
+      "change": 1.55,
+      "score": 37.6
     },
-    "avg_score": 51.6
+    "avg_score": 49.7
   },
   "vix_flow_level": "normal",
   "vix_flow_label": null,
-  "generated_at": "2026-05-03 22:09:10"
+  "generated_at": "2026-05-04 22:34:16"
 }
