@@ -280,7 +280,19 @@ let stockChartManager;
 // DOM読み込み完了後に初期化
 document.addEventListener('DOMContentLoaded', function() {
     stockChartManager = new StockChartManager();
-    
+
+    // 国際指標カードにクリック遷移を追加（data-ticker を持つ stock-card）
+    document.querySelectorAll('.stock-card').forEach(card => {
+        const chartEl = card.querySelector('[data-ticker]');
+        if (!chartEl) return;
+        const ticker = chartEl.dataset.ticker;
+        if (!ticker) return;
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            window.location.href = '/stocks/detail/?s=' + encodeURIComponent(ticker);
+        });
+    });
+
     // ダークモード変更の監視
     if (window.matchMedia) {
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');

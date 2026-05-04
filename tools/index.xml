@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>投資計算ツール on 株価アート - Stock Analysis Dashboard</title><link>https://stock-kabu3.com/tools/</link><description>Recent content in 投資計算ツール on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><atom:link href="https://stock-kabu3.com/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>ローン返済シミュレーター</title><link>https://stock-kabu3.com/tools/loan-simulator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/loan-simulator/</guid><description>&lt;div class="tool-container"&gt;
+&lt;div class="tool-box"&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;借入金額（円）&lt;/label&gt;
+ &lt;input type="number" id="principal" value="30000000" min="1" step="100000"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;年利（%）&lt;/label&gt;
+ &lt;input type="number" id="rate" value="1.5" min="0" max="30" step="0.01"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;返済期間（年）&lt;/label&gt;
+ &lt;input type="number" id="years" value="35" min="1" max="50" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;返済方式&lt;/label&gt;
+ &lt;select id="method" style="flex:1; padding:8px 12px; font-size:15px; border:1px solid #d1d5db; border-radius:6px;"&gt;
+ &lt;option value="equal-payment"&gt;元利均等返済（毎月同額）&lt;/option&gt;
+ &lt;option value="equal-principal"&gt;元金均等返済（利息逓減）&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="result" class="result-box" style="display:none;"&gt;
+ &lt;div class="result-grid"&gt;
+ &lt;div class="result-card highlight"&gt;
+ &lt;div class="result-label" id="monthly-label"&gt;月々の返済額&lt;/div&gt;
+ &lt;div class="result-value" id="monthly-payment"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;総支払額&lt;/div&gt;
+ &lt;div class="result-value" id="total-payment"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;総利息&lt;/div&gt;
+ &lt;div class="result-value" id="total-interest"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;元金に対する利息率&lt;/div&gt;
+ &lt;div class="result-value" id="interest-ratio"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;返済回数&lt;/div&gt;
+ &lt;div class="result-value" id="payments"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label" id="first-label"&gt;初回返済額&lt;/div&gt;
+ &lt;div class="result-value" id="first-payment"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-note" id="note"&gt;&lt;/div&gt;
+ &lt;div id="schedule-wrap" style="margin-top:20px;"&gt;
+ &lt;details&gt;
+ &lt;summary style="cursor:pointer; font-size:14px; color:#3b82f6; font-weight:600;"&gt;年次返済スケジュールを表示&lt;/summary&gt;
+ &lt;div style="overflow-x:auto; margin-top:10px;"&gt;
+ &lt;table id="schedule-table" style="width:100%; border-collapse:collapse; font-size:13px;"&gt;
+ &lt;thead&gt;
+ &lt;tr style="background:#f3f4f6;"&gt;
+ &lt;th style="padding:8px; text-align:right; border:1px solid #e5e7eb;"&gt;経過年&lt;/th&gt;
+ &lt;th style="padding:8px; text-align:right; border:1px solid #e5e7eb;"&gt;年間返済額&lt;/th&gt;
+ &lt;th style="padding:8px; text-align:right; border:1px solid #e5e7eb;"&gt;うち元金&lt;/th&gt;
+ &lt;th style="padding:8px; text-align:right; border:1px solid #e5e7eb;"&gt;うち利息&lt;/th&gt;
+ &lt;th style="padding:8px; text-align:right; border:1px solid #e5e7eb;"&gt;残元金&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody id="schedule-body"&gt;&lt;/tbody&gt;
+ &lt;/table&gt;
+ &lt;/div&gt;
+ &lt;/details&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function fmt(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
+function fmtPct(n) { return n.toFixed(1) + '%'; }
+
+function calculate() {
+ const P = parseFloat(document.getElementById('principal').value) || 0;
+ const annualRate = parseFloat(document.getElementById('rate').value) || 0;
+ const years = parseInt(document.getElementById('years').value) || 1;
+ const method = document.getElementById('method').value;
+ const n = years * 12;
+ const r = annualRate / 100 / 12;
+
+ let monthlyPayment = 0, totalPayment = 0, totalInterest = 0, firstPayment = 0;
+ const scheduleRows = [];
+
+ if (method === 'equal-payment') {
+ if (r === 0) {
+ monthlyPayment = P / n;
+ } else {
+ monthlyPayment = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+ }
+ totalPayment = monthlyPayment * n;
+ totalInterest = totalPayment - P;
+ firstPayment = monthlyPayment;
+
+ let balance = P;
+ for (let y = 1; y &lt;= years; y++) {
+ let yearPrincipal = 0, yearInterest = 0;
+ for (let m = 0; m &lt; 12; m++) {
+ const interest = balance * r;
+ const principal = monthlyPayment - interest;
+ yearInterest += interest;
+ yearPrincipal += principal;
+ balance -= principal;
+ }
+ scheduleRows.push({ year: y, payment: monthlyPayment * 12, principal: yearPrincipal, interest: yearInterest, balance: Math.max(0, balance) });
+ }
+
+ document.getElementById('monthly-label').textContent = '月々の返済額（一定）';
+ document.getElementById('first-label').textContent = '初回返済額';
+ } else {
+ const monthlyPrincipal = P / n;
+ firstPayment = monthlyPrincipal + P * r;
+ totalPayment = 0;
+ totalInterest = 0;
+
+ let balance = P;
+ for (let y = 1; y &lt;= years; y++) {
+ let yearPayment = 0, yearPrincipal = 0, yearInterest = 0;
+ for (let m = 0; m &lt; 12; m++) {
+ const interest = balance * r;
+ const payment = monthlyPrincipal + interest;
+ yearPayment += payment;
+ yearPrincipal += monthlyPrincipal;
+ yearInterest += interest;
+ balance -= monthlyPrincipal;
+ totalPayment += payment;
+ totalInterest += interest;
+ }
+ scheduleRows.push({ year: y, payment: yearPayment, principal: yearPrincipal, interest: yearInterest, balance: Math.max(0, balance) });
+ }
+ monthlyPayment = firstPayment;
+ document.getElementById('monthly-label').textContent = '初回月返済額（以降逓減）';
+ document.getElementById('first-label').textContent = '最終月返済額';
+ const lastMonthPrincipal = monthlyPrincipal;
+ const lastMonthInterest = lastMonthPrincipal * r;
+ document.getElementById('first-payment').textContent = fmt(lastMonthPrincipal + lastMonthInterest);
+ }
+
+ document.getElementById('monthly-payment').textContent = fmt(monthlyPayment);
+ document.getElementById('total-payment').textContent = fmt(totalPayment);
+ document.getElementById('total-interest').textContent = fmt(totalInterest);
+ document.getElementById('interest-ratio').textContent = fmtPct(totalInterest / P * 100);
+ document.getElementById('payments').textContent = n.toLocaleString() + '回';
+ if (method === 'equal-payment') {
+ document.getElementById('first-payment').textContent = fmt(firstPayment);
+ }
+
+ document.getElementById('note').textContent =
+ '借入 ' + P.toLocaleString('ja-JP') + ' 円 ／ 年利 ' + annualRate + '% ／ ' + years + ' 年返済';
+
+ const tbody = document.getElementById('schedule-body');
+ tbody.innerHTML = '';
+ scheduleRows.forEach(row =&gt; {
+ const tr = document.createElement('tr');
+ tr.innerHTML = `
+ &lt;td style="padding:6px 8px; text-align:right; border:1px solid #e5e7eb;"&gt;${row.year}年目&lt;/td&gt;
+ &lt;td style="padding:6px 8px; text-align:right; border:1px solid #e5e7eb;"&gt;${Math.round(row.payment).toLocaleString()}円&lt;/td&gt;
+ &lt;td style="padding:6px 8px; text-align:right; border:1px solid #e5e7eb;"&gt;${Math.round(row.principal).toLocaleString()}円&lt;/td&gt;
+ &lt;td style="padding:6px 8px; text-align:right; border:1px solid #e5e7eb; color:#ef4444;"&gt;${Math.round(row.interest).toLocaleString()}円&lt;/td&gt;
+ &lt;td style="padding:6px 8px; text-align:right; border:1px solid #e5e7eb;"&gt;${Math.round(row.balance).toLocaleString()}円&lt;/td&gt;
+ `;
+ tbody.appendChild(tr);
+ });
+
+ document.getElementById('result').style.display = 'block';
+}
+&lt;/script&gt;
+&lt;style&gt;
+.tool-container { max-width: 580px; margin: 0 auto; }
+.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
+.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.tool-row label { width: 180px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
+.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 120px; }
+.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
+.btn-primary:hover { background: #2563eb; }
+.result-box { margin-top: 20px; }
+.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
+.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
+.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }
+.result-card.highlight .result-value { color: #3b82f6; }
+.result-note { margin-top: 12px; text-align: center; font-size: 14px; color: #6b7280; }
+details summary::-webkit-details-marker { color: #3b82f6; }
+@media (max-width: 480px) {
+ .result-grid { grid-template-columns: repeat(2, 1fr); }
+ .tool-row label { width: 100%; }
+}
+&lt;/style&gt;
+&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;借入金額・年利・返済期間・返済方式を入力&lt;/li&gt;
+&lt;li&gt;「計算する」をクリック&lt;/li&gt;
+&lt;li&gt;年次スケジュール展開で年ごとの内訳を確認できます&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="返済方式の違い"&gt;返済方式の違い&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;元利均等&lt;/th&gt;
+ &lt;th&gt;元金均等&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;月返済額&lt;/td&gt;
+ &lt;td&gt;毎月同額で安定&lt;/td&gt;
+ &lt;td&gt;初回が最大・以降逓減&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;総利息&lt;/td&gt;
+ &lt;td&gt;やや多い&lt;/td&gt;
+ &lt;td&gt;やや少ない&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;向いている人&lt;/td&gt;
+ &lt;td&gt;家計管理しやすい&lt;/td&gt;
+ &lt;td&gt;繰上返済を狙う&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;試算値です。保証料・手数料・火災保険等は含まれません。実際のローンは金融機関の条件をご確認ください。&lt;/p&gt;</description></item><item><title>為替換算ツール</title><link>https://stock-kabu3.com/tools/fx-converter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/fx-converter/</guid><description>&lt;div class="tool-container"&gt;
+&lt;div id="rate-status" class="rate-banner"&gt;
+ &lt;span id="rate-msg"&gt;レートを取得中...&lt;/span&gt;
+ &lt;button class="btn-refresh" onclick="fetchRates()"&gt;最新レートを取得&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="tool-box"&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;金額&lt;/label&gt;
+ &lt;input type="number" id="amount" value="100000" min="0" step="1000"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;変換元通貨&lt;/label&gt;
+ &lt;select id="from-currency"&gt;
+ &lt;option value="JPY" selected&gt;JPY – 日本円&lt;/option&gt;
+ &lt;option value="USD"&gt;USD – 米ドル&lt;/option&gt;
+ &lt;option value="EUR"&gt;EUR – ユーロ&lt;/option&gt;
+ &lt;option value="GBP"&gt;GBP – 英ポンド&lt;/option&gt;
+ &lt;option value="CNY"&gt;CNY – 中国人民元&lt;/option&gt;
+ &lt;option value="KRW"&gt;KRW – 韓国ウォン&lt;/option&gt;
+ &lt;option value="AUD"&gt;AUD – 豪ドル&lt;/option&gt;
+ &lt;option value="CHF"&gt;CHF – スイスフラン&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;変換先通貨&lt;/label&gt;
+ &lt;select id="to-currency"&gt;
+ &lt;option value="USD" selected&gt;USD – 米ドル&lt;/option&gt;
+ &lt;option value="JPY"&gt;JPY – 日本円&lt;/option&gt;
+ &lt;option value="EUR"&gt;EUR – ユーロ&lt;/option&gt;
+ &lt;option value="GBP"&gt;GBP – 英ポンド&lt;/option&gt;
+ &lt;option value="CNY"&gt;CNY – 中国人民元&lt;/option&gt;
+ &lt;option value="KRW"&gt;KRW – 韓国ウォン&lt;/option&gt;
+ &lt;option value="AUD"&gt;AUD – 豪ドル&lt;/option&gt;
+ &lt;option value="CHF"&gt;CHF – スイスフラン&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;details style="margin-top:4px;"&gt;
+ &lt;summary style="cursor:pointer; font-size:13px; color:#6b7280;"&gt;レートを手動で入力する（自動取得が使えない場合）&lt;/summary&gt;
+ &lt;div style="margin-top:12px; display:flex; flex-direction:column; gap:10px;" id="manual-rates"&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label style="width:120px;"&gt;USD/JPY&lt;/label&gt;
+ &lt;input type="number" id="rate-USD" placeholder="例: 150.5" step="0.01" min="0"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label style="width:120px;"&gt;EUR/JPY&lt;/label&gt;
+ &lt;input type="number" id="rate-EUR" placeholder="例: 163.0" step="0.01" min="0"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label style="width:120px;"&gt;GBP/JPY&lt;/label&gt;
+ &lt;input type="number" id="rate-GBP" placeholder="例: 193.0" step="0.01" min="0"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label style="width:120px;"&gt;CNY/JPY&lt;/label&gt;
+ &lt;input type="number" id="rate-CNY" placeholder="例: 20.7" step="0.01" min="0"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label style="width:120px;"&gt;KRW/JPY&lt;/label&gt;
+ &lt;input type="number" id="rate-KRW" placeholder="例: 0.11" step="0.0001" min="0"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label style="width:120px;"&gt;AUD/JPY&lt;/label&gt;
+ &lt;input type="number" id="rate-AUD" placeholder="例: 98.0" step="0.01" min="0"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label style="width:120px;"&gt;CHF/JPY&lt;/label&gt;
+ &lt;input type="number" id="rate-CHF" placeholder="例: 168.0" step="0.01" min="0"&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/details&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;button class="btn-primary" onclick="convert()"&gt;換算する&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="result" class="result-box" style="display:none;"&gt;
+ &lt;div class="convert-result"&gt;
+ &lt;div class="convert-from" id="from-display"&gt;&lt;/div&gt;
+ &lt;div class="convert-arrow"&gt;→&lt;/div&gt;
+ &lt;div class="convert-to" id="to-display"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-grid" style="margin-top:16px;"&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;適用レート&lt;/div&gt;
+ &lt;div class="result-value" id="applied-rate" style="font-size:15px;"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;逆レート&lt;/div&gt;
+ &lt;div class="result-value" id="reverse-rate" style="font-size:15px;"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;レート取得時刻&lt;/div&gt;
+ &lt;div class="result-value" id="rate-time" style="font-size:13px;"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="quick-table-wrap"&gt;
+ &lt;div class="quick-table-title"&gt;クイック換算表&lt;/div&gt;
+ &lt;div id="quick-table"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let rates = {};
+let rateTime = '';
+
+const LABELS = {
+ JPY: '日本円', USD: '米ドル', EUR: 'ユーロ', GBP: '英ポンド',
+ CNY: '人民元', KRW: '韓国ウォン', AUD: '豪ドル', CHF: 'スイスフラン'
+};
+const SYMBOLS = {
+ JPY: '¥', USD: '$', EUR: '€', GBP: '£',
+ CNY: '¥', KRW: '₩', AUD: 'A$', CHF: 'Fr'
+};
+
+function fmtAmount(n, currency) {
+ const decimals = ['JPY', 'KRW'].includes(currency) ? 0 : 2;
+ return SYMBOLS[currency] + n.toLocaleString('ja-JP', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+}
+
+async function fetchRates() {
+ document.getElementById('rate-msg').textContent = 'レートを取得中...';
+ try {
+ const res = await fetch('https://open.er-api.com/v6/latest/JPY');
+ if (!res.ok) throw new Error('fetch failed');
+ const data = await res.json();
+ rates = data.rates;
+ rates['JPY'] = 1;
+ const now = new Date();
+ rateTime = now.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' }) + ' JST（自動取得）';
+ document.getElementById('rate-msg').textContent = '✓ レート取得済み（' + now.toLocaleTimeString('ja-JP') + ' JST）';
+ document.getElementById('rate-msg').style.color = '#16a34a';
+ } catch (e) {
+ document.getElementById('rate-msg').textContent = '⚠ 自動取得失敗。手動でレートを入力してください。';
+ document.getElementById('rate-msg').style.color = '#dc2626';
+ }
+}
+
+function getRate(from, to) {
+ const manualKeys = ['USD', 'EUR', 'GBP', 'CNY', 'KRW', 'AUD', 'CHF'];
+
+ if (Object.keys(rates).length &gt; 0) {
+ const fromJPY = rates[from];
+ const toJPY = rates[to];
+ if (fromJPY &amp;&amp; toJPY) return toJPY / fromJPY;
+ }
+
+ const manualRates = {};
+ manualKeys.forEach(cur =&gt; {
+ const el = document.getElementById('rate-' + cur);
+ if (el &amp;&amp; parseFloat(el.value) &gt; 0) {
+ manualRates[cur] = 1 / parseFloat(el.value);
+ }
+ });
+ manualRates['JPY'] = 1;
+
+ const fromJPY = manualRates[from];
+ const toJPY = manualRates[to];
+ if (fromJPY &amp;&amp; toJPY) {
+ rateTime = '手動入力レート';
+ return toJPY / fromJPY;
+ }
+ return null;
+}
+
+function convert() {
+ const amount = parseFloat(document.getElementById('amount').value) || 0;
+ const from = document.getElementById('from-currency').value;
+ const to = document.getElementById('to-currency').value;
+
+ const rate = getRate(from, to);
+ if (!rate) {
+ alert('レートが取得できていません。「最新レートを取得」を押すか、手動でレートを入力してください。');
+ return;
+ }
+
+ const converted = amount * rate;
+ document.getElementById('from-display').textContent = fmtAmount(amount, from) + ' ' + from;
+ document.getElementById('to-display').textContent = fmtAmount(converted, to) + ' ' + to;
+ document.getElementById('applied-rate').textContent = '1 ' + from + ' = ' + rate.toFixed(4) + ' ' + to;
+ document.getElementById('reverse-rate').textContent = '1 ' + to + ' = ' + (1 / rate).toFixed(4) + ' ' + from;
+ document.getElementById('rate-time').textContent = rateTime || '—';
+
+ const multiples = [1, 5, 10, 50, 100, 500, 1000, 5000, 10000];
+ const tableHTML = '&lt;table class="quick-table"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;' + from + '&lt;/th&gt;&lt;th&gt;' + to + '&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;' +
+ multiples.map(m =&gt; '&lt;tr&gt;&lt;td&gt;' + fmtAmount(m, from) + '&lt;/td&gt;&lt;td&gt;' + fmtAmount(m * rate, to) + '&lt;/td&gt;&lt;/tr&gt;').join('') +
+ '&lt;/tbody&gt;&lt;/table&gt;';
+ document.getElementById('quick-table').innerHTML = tableHTML;
+
+ document.getElementById('result').style.display = 'block';
+}
+
+fetchRates();
+&lt;/script&gt;
+&lt;style&gt;
+.tool-container { max-width: 580px; margin: 0 auto; }
+.rate-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 13px; color: #166534; }
+.btn-refresh { background: #16a34a; color: #fff; border: none; padding: 5px 14px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; }
+.btn-refresh:hover { background: #15803d; }
+.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
+.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.tool-row label { width: 160px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
+.tool-row input[type=number], .tool-row select { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 120px; background: #fff; }
+.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
+.btn-primary:hover { background: #2563eb; }
+.result-box { margin-top: 20px; }
+.convert-result { display: flex; align-items: center; gap: 12px; justify-content: center; background: #eff6ff; border: 1px solid #3b82f6; border-radius: 10px; padding: 20px; flex-wrap: wrap; }
+.convert-from { font-size: 20px; font-weight: 700; color: #6b7280; }
+.convert-arrow { font-size: 24px; color: #3b82f6; }
+.convert-to { font-size: 28px; font-weight: 800; color: #1f2937; }
+.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px; text-align: center; }
+.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }
+.quick-table-wrap { margin-top: 16px; }
+.quick-table-title { font-size: 13px; color: #6b7280; font-weight: 600; margin-bottom: 8px; }
+.quick-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.quick-table th { background: #f3f4f6; padding: 8px; text-align: right; border: 1px solid #e5e7eb; font-weight: 600; color: #374151; }
+.quick-table td { padding: 6px 8px; text-align: right; border: 1px solid #e5e7eb; color: #1f2937; }
+.quick-table tr:nth-child(even) td { background: #f9fafb; }
+details summary::-webkit-details-marker { color: #6b7280; }
+@media (max-width: 480px) {
+ .result-grid { grid-template-columns: repeat(2, 1fr); }
+ .tool-row label { width: 100%; }
+ .convert-from, .convert-to { font-size: 18px; }
+}
+&lt;/style&gt;
+&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;ページ読み込み時に自動でレートを取得します（失敗時は手動入力）&lt;/li&gt;
+&lt;li&gt;金額・変換元・変換先の通貨を選択して「換算する」&lt;/li&gt;
+&lt;li&gt;クイック換算表で倍数を一覧確認できます&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="レートについて"&gt;レートについて&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;自動取得レートは &lt;a href="https://www.exchangerate-api.com/"&gt;ExchangeRate-API&lt;/a&gt; の公開エンドポイントを使用&lt;/li&gt;
+&lt;li&gt;インターバンクレートに近い参考値です。実際の両替・送金レートとは異なります&lt;/li&gt;
+&lt;li&gt;最新レートは各金融機関・取引所でご確認ください&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>損益分岐点計算機</title><link>https://stock-kabu3.com/tools/breakeven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/breakeven/</guid><description>&lt;div class="tool-container"&gt;
+&lt;div class="tool-box"&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;買値（円）&lt;/label&gt;
+ &lt;input type="number" id="buy-price" value="1500" min="1" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;保有株数&lt;/label&gt;
+ &lt;input type="number" id="shares" value="100" min="1" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;購入時手数料（円）&lt;/label&gt;
+ &lt;input type="number" id="buy-fee" value="275" min="0" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;売却時手数料（円）&lt;/label&gt;
+ &lt;input type="number" id="sell-fee" value="275" min="0" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;現在株価（円）&lt;/label&gt;
+ &lt;input type="number" id="current-price" value="1600" min="0" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="result" class="result-box" style="display:none;"&gt;
+ &lt;div class="result-grid"&gt;
+ &lt;div class="result-card highlight"&gt;
+ &lt;div class="result-label"&gt;損益分岐点（1株）&lt;/div&gt;
+ &lt;div class="result-value" id="breakeven"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;現在の損益&lt;/div&gt;
+ &lt;div class="result-value" id="pnl"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;損益率&lt;/div&gt;
+ &lt;div class="result-value" id="pnl-rate"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;投資総額（手数料込）&lt;/div&gt;
+ &lt;div class="result-value" id="total-cost"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;現在の評価額&lt;/div&gt;
+ &lt;div class="result-value" id="market-value"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;損益（手数料込）&lt;/div&gt;
+ &lt;div class="result-value" id="net-pnl"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function fmt(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
+function fmtPct(n) { return (n &gt;= 0 ? '+' : '') + n.toFixed(2) + '%'; }
+function calculate() {
+ const buyPrice = parseFloat(document.getElementById('buy-price').value) || 0;
+ const shares = parseInt(document.getElementById('shares').value) || 0;
+ const buyFee = parseFloat(document.getElementById('buy-fee').value) || 0;
+ const sellFee = parseFloat(document.getElementById('sell-fee').value) || 0;
+ const curPrice = parseFloat(document.getElementById('current-price').value) || 0;
+ const totalCost = buyPrice * shares + buyFee;
+ const breakeven = (totalCost + sellFee) / shares;
+ const marketVal = curPrice * shares;
+ const netPnL = marketVal - sellFee - totalCost;
+ const pnlRate = totalCost &gt; 0 ? (netPnL / totalCost) * 100 : 0;
+ const simplePnL = (curPrice - buyPrice) * shares;
+
+ document.getElementById('breakeven').textContent = fmt(breakeven) + ' / 株';
+ document.getElementById('pnl').textContent = fmt(simplePnL);
+ document.getElementById('pnl-rate').textContent = fmtPct(pnlRate);
+ document.getElementById('total-cost').textContent = fmt(totalCost);
+ document.getElementById('market-value').textContent = fmt(marketVal);
+ document.getElementById('net-pnl').textContent = fmt(netPnL);
+
+ const pnlEl = document.getElementById('pnl');
+ const rateEl = document.getElementById('pnl-rate');
+ const netEl = document.getElementById('net-pnl');
+ [pnlEl, rateEl, netEl].forEach(el =&gt; {
+ el.style.color = netPnL &gt;= 0 ? '#10b981' : '#ef4444';
+ });
+ document.getElementById('result').style.display = 'block';
+}
+&lt;/script&gt;
+&lt;style&gt;
+.tool-container { max-width: 560px; margin: 0 auto; }
+.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
+.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.tool-row label { width: 180px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
+.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 100px; }
+.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
+.btn-primary:hover { background: #2563eb; }
+.result-box { margin-top: 20px; }
+.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
+.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
+.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.result-value { font-size: 16px; font-weight: 700; color: #1f2937; }
+.result-card.highlight .result-value { color: #3b82f6; }
+@media (max-width: 480px) {
+ .result-grid { grid-template-columns: repeat(2, 1fr); }
+ .tool-row label { width: 100%; }
+}
+&lt;/style&gt;
+&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;買値・保有株数・手数料・現在株価を入力&lt;/li&gt;
+&lt;li&gt;「計算する」をクリック&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="損益分岐点とは"&gt;損益分岐点とは&lt;/h2&gt;
+&lt;p&gt;手数料を含めた投資総コストを回収できる株価のことです。現在株価が損益分岐点を上回っていれば利益、下回っていれば損失となります。&lt;/p&gt;</description></item><item><title>投資利回り計算機</title><link>https://stock-kabu3.com/tools/yield-calculator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/yield-calculator/</guid><description>&lt;div class="tool-container"&gt;
+&lt;div class="tool-box"&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;購入価格（円）&lt;/label&gt;
+ &lt;input type="number" id="buy-price" value="1000000" min="1" step="10000"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;売却 / 現在価格（円）&lt;/label&gt;
+ &lt;input type="number" id="sell-price" value="1200000" min="0" step="10000"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;年間収入（配当・利子等 円）&lt;/label&gt;
+ &lt;input type="number" id="annual-income" value="30000" min="0" step="1000"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;保有期間（年）&lt;/label&gt;
+ &lt;input type="number" id="hold-years" value="5" min="0.1" max="60" step="0.5"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;諸費用・税金（円）&lt;/label&gt;
+ &lt;input type="number" id="cost" value="20000" min="0" step="1000"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="result" class="result-box" style="display:none;"&gt;
+ &lt;div class="result-grid"&gt;
+ &lt;div class="result-card highlight"&gt;
+ &lt;div class="result-label"&gt;年率利回り（CAGR）&lt;/div&gt;
+ &lt;div class="result-value" id="cagr"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;単純利回り（年）&lt;/div&gt;
+ &lt;div class="result-value" id="simple-yield"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;総利益&lt;/div&gt;
+ &lt;div class="result-value" id="total-profit"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;キャピタルゲイン&lt;/div&gt;
+ &lt;div class="result-value" id="capital-gain"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;インカムゲイン（累計）&lt;/div&gt;
+ &lt;div class="result-value" id="income-total"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;実質利益（費用控除後）&lt;/div&gt;
+ &lt;div class="result-value" id="net-profit"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-note" id="note"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function fmt(n) {
+ const sign = n &gt;= 0 ? '' : '−';
+ return sign + Math.abs(Math.round(n)).toLocaleString('ja-JP') + '円';
+}
+function fmtPct(n) { return n.toFixed(2) + '%'; }
+
+function calculate() {
+ const buy = parseFloat(document.getElementById('buy-price').value) || 0;
+ const sell = parseFloat(document.getElementById('sell-price').value) || 0;
+ const income = parseFloat(document.getElementById('annual-income').value) || 0;
+ const years = parseFloat(document.getElementById('hold-years').value) || 1;
+ const cost = parseFloat(document.getElementById('cost').value) || 0;
+
+ const capitalGain = sell - buy;
+ const incomeTotal = income * years;
+ const grossProfit = capitalGain + incomeTotal;
+ const netProfit = grossProfit - cost;
+
+ const finalValue = sell + incomeTotal - cost;
+ const cagr = buy &gt; 0 ? (Math.pow(finalValue / buy, 1 / years) - 1) * 100 : 0;
+ const simpleYield = buy &gt; 0 ? ((income + capitalGain / years) / buy) * 100 : 0;
+
+ document.getElementById('cagr').textContent = fmtPct(cagr);
+ document.getElementById('simple-yield').textContent = fmtPct(simpleYield);
+ document.getElementById('total-profit').textContent = fmt(grossProfit);
+ document.getElementById('capital-gain').textContent = fmt(capitalGain);
+ document.getElementById('income-total').textContent = fmt(incomeTotal);
+ document.getElementById('net-profit').textContent = fmt(netProfit);
+
+ document.getElementById('note').textContent =
+ '保有 ' + years + ' 年 ／ 投資元本 ' + buy.toLocaleString('ja-JP') + ' 円 → 実質 ' + fmtPct(netProfit / buy * 100) + ' 増減';
+ document.getElementById('result').style.display = 'block';
+}
+&lt;/script&gt;
+&lt;style&gt;
+.tool-container { max-width: 560px; margin: 0 auto; }
+.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
+.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.tool-row label { width: 200px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
+.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 120px; }
+.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
+.btn-primary:hover { background: #2563eb; }
+.result-box { margin-top: 20px; }
+.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
+.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
+.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }
+.result-card.highlight .result-value { color: #3b82f6; }
+.result-note { margin-top: 12px; text-align: center; font-size: 14px; color: #6b7280; }
+@media (max-width: 480px) {
+ .result-grid { grid-template-columns: repeat(2, 1fr); }
+ .tool-row label { width: 100%; }
+}
+&lt;/style&gt;
+&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;購入価格・売却（現在）価格・年間収入・保有期間・諸費用を入力&lt;/li&gt;
+&lt;li&gt;「計算する」をクリック&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="計算方法"&gt;計算方法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;年率利回り（CAGR）&lt;/strong&gt;: 複利換算の年間成長率。&lt;code&gt;(最終価値 / 元本)^(1/年数) − 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;単純利回り&lt;/strong&gt;: &lt;code&gt;(年間収入 + 年間キャピタルゲイン) / 購入価格&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;配当利回りのみを計算したい場合は「&lt;a href="https://stock-kabu3.com/tools/dividend-yield/"&gt;配当利回り計算機&lt;/a&gt;」を使用してください&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;試算値です。実際の運用では税金・手数料が変動します。投資は元本割れのリスクがあります。&lt;/p&gt;</description></item><item><title>配当利回り計算機</title><link>https://stock-kabu3.com/tools/dividend-yield/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/dividend-yield/</guid><description>&lt;div class="tool-container"&gt;
+&lt;div class="tool-box"&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;株価（円）&lt;/label&gt;
+ &lt;input type="number" id="price" value="2000" min="1" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;1株あたり年間配当（円）&lt;/label&gt;
+ &lt;input type="number" id="dividend" value="60" min="0" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;保有株数&lt;/label&gt;
+ &lt;input type="number" id="shares" value="100" min="1" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="result" class="result-box" style="display:none;"&gt;
+ &lt;div class="result-grid"&gt;
+ &lt;div class="result-card highlight"&gt;
+ &lt;div class="result-label"&gt;配当利回り（税引前）&lt;/div&gt;
+ &lt;div class="result-value" id="yield-before"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;配当利回り（税引後）&lt;/div&gt;
+ &lt;div class="result-value" id="yield-after"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;年間配当（税引前）&lt;/div&gt;
+ &lt;div class="result-value" id="annual-before"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;年間配当（税引後）&lt;/div&gt;
+ &lt;div class="result-value" id="annual-after"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;投資総額&lt;/div&gt;
+ &lt;div class="result-value" id="total-invest"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;差し引き税額&lt;/div&gt;
+ &lt;div class="result-value" id="tax"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+const TAX_RATE = 0.20315;
+function fmt(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
+function fmtPct(n) { return n.toFixed(2) + '%'; }
+function calculate() {
+ const price = parseFloat(document.getElementById('price').value) || 0;
+ const dividend = parseFloat(document.getElementById('dividend').value) || 0;
+ const shares = parseInt(document.getElementById('shares').value) || 0;
+ const totalInvest = price * shares;
+ const annualBefore = dividend * shares;
+ const annualAfter = annualBefore * (1 - TAX_RATE);
+ const yieldBefore = price &gt; 0 ? (dividend / price) * 100 : 0;
+ const yieldAfter = yieldBefore * (1 - TAX_RATE);
+ const taxAmount = annualBefore - annualAfter;
+ document.getElementById('yield-before').textContent = fmtPct(yieldBefore);
+ document.getElementById('yield-after').textContent = fmtPct(yieldAfter);
+ document.getElementById('annual-before').textContent = fmt(annualBefore);
+ document.getElementById('annual-after').textContent = fmt(annualAfter);
+ document.getElementById('total-invest').textContent = fmt(totalInvest);
+ document.getElementById('tax').textContent = fmt(taxAmount);
+ document.getElementById('result').style.display = 'block';
+}
+&lt;/script&gt;
+&lt;style&gt;
+.tool-container { max-width: 560px; margin: 0 auto; }
+.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
+.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.tool-row label { width: 200px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
+.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 100px; }
+.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
+.btn-primary:hover { background: #2563eb; }
+.result-box { margin-top: 20px; }
+.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
+.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
+.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }
+.result-card.highlight .result-value { color: #3b82f6; }
+@media (max-width: 480px) {
+ .result-grid { grid-template-columns: repeat(2, 1fr); }
+ .tool-row label { width: 100%; }
+}
+&lt;/style&gt;
+&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;現在の株価・1株あたり年間配当・保有株数を入力&lt;/li&gt;
+&lt;li&gt;「計算する」をクリック&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="税率について"&gt;税率について&lt;/h2&gt;
+&lt;p&gt;国内株の配当に対する税率は &lt;strong&gt;20.315%&lt;/strong&gt;（所得税15.315% + 住民税5%）を適用しています。NISA口座では非課税となります。&lt;/p&gt;</description></item><item><title>売上成長率・市場シェア分析</title><link>https://stock-kabu3.com/tools/revenue-growth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/revenue-growth/</guid><description>&lt;div class="rg-container"&gt;
+&lt;!-- タブナビゲーション --&gt;
+&lt;div class="rg-tabs"&gt;
+ &lt;button class="rg-tab active" onclick="showTab('growth')"&gt;売上成長率ランキング&lt;/button&gt;
+ &lt;button class="rg-tab" onclick="showTab('sector')"&gt;セクター別シェア分析&lt;/button&gt;
+ &lt;button class="rg-tab" onclick="showTab('pattern')"&gt;過去パターン類似度&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- タブ1: 売上成長率ランキング --&gt;
+&lt;div id="tab-growth" class="rg-tab-content active"&gt;
+ &lt;div class="rg-description"&gt;
+ &lt;p&gt;直近決算期のYoY（前年比）売上成長率ランキング。&lt;strong&gt;成長率が高い＝市場で選ばれている&lt;/strong&gt;証拠。&lt;/p&gt;</description></item><item><title>複利シミュレーター</title><link>https://stock-kabu3.com/tools/compound-interest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/compound-interest/</guid><description>&lt;div class="tool-container"&gt;
+&lt;div class="tool-box"&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;元本（円）&lt;/label&gt;
+ &lt;input type="number" id="principal" value="1000000" min="0" step="10000"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;毎月積立額（円）&lt;/label&gt;
+ &lt;input type="number" id="monthly" value="30000" min="0" step="1000"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;年利（%）&lt;/label&gt;
+ &lt;input type="number" id="rate" value="5" min="0" max="50" step="0.1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;運用期間（年）&lt;/label&gt;
+ &lt;input type="number" id="years" value="20" min="1" max="60" step="1"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="result" class="result-box" style="display:none;"&gt;
+ &lt;div class="result-grid"&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;最終資産額&lt;/div&gt;
+ &lt;div class="result-value" id="total"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;元本合計&lt;/div&gt;
+ &lt;div class="result-value" id="invested"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card highlight"&gt;
+ &lt;div class="result-label"&gt;運用益&lt;/div&gt;
+ &lt;div class="result-value" id="gain"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-note" id="note"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function fmt(n) {
+ return Math.round(n).toLocaleString('ja-JP') + '円';
+}
+function calculate() {
+ const p = parseFloat(document.getElementById('principal').value) || 0;
+ const m = parseFloat(document.getElementById('monthly').value) || 0;
+ const r = parseFloat(document.getElementById('rate').value) / 100 / 12;
+ const n = parseInt(document.getElementById('years').value) * 12;
+ let total = p * Math.pow(1 + r, n);
+ if (r &gt; 0) {
+ total += m * (Math.pow(1 + r, n) - 1) / r;
+ } else {
+ total += m * n;
+ }
+ const invested = p + m * n;
+ const gain = total - invested;
+ document.getElementById('total').textContent = fmt(total);
+ document.getElementById('invested').textContent = fmt(invested);
+ document.getElementById('gain').textContent = fmt(gain);
+ const ratio = ((total / invested - 1) * 100).toFixed(1);
+ document.getElementById('note').textContent =
+ '運用益率 ' + ratio + '%（元本の ' + (total / invested).toFixed(2) + ' 倍）';
+ document.getElementById('result').style.display = 'block';
+}
+&lt;/script&gt;
+&lt;style&gt;
+.tool-container { max-width: 560px; margin: 0 auto; }
+.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
+.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.tool-row label { width: 160px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
+.tool-row input[type=number] { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 120px; }
+.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
+.btn-primary:hover { background: #2563eb; }
+.result-box { margin-top: 20px; }
+.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
+.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
+.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }
+.result-card.highlight .result-value { color: #3b82f6; }
+.result-note { margin-top: 12px; text-align: center; font-size: 14px; color: #6b7280; }
+@media (max-width: 480px) {
+ .result-grid { grid-template-columns: 1fr; }
+ .tool-row label { width: 100%; }
+}
+&lt;/style&gt;
+&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;元本・毎月積立額・年利・運用期間を入力&lt;/li&gt;
+&lt;li&gt;「計算する」をクリック&lt;/li&gt;
+&lt;li&gt;最終資産額・元本合計・運用益が表示されます&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="計算式について"&gt;計算式について&lt;/h2&gt;
+&lt;p&gt;複利計算式（月次複利）を使用しています。年利を12で割った月利で毎月複利計算します。税金・手数料は含まれません。投資は元本割れのリスクがあります。&lt;/p&gt;</description></item></channel></rss>

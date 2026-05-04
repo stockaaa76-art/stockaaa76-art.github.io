@@ -19,13 +19,6 @@
       "weight": 1.0
     },
     {
-      "ticker": "^TOPIX",
-      "name": "TOPIX",
-      "category": "jp_indices",
-      "tier": "core",
-      "weight": 1.0
-    },
-    {
       "ticker": "1330.T",
       "name": "上場インデックスファンド225",
       "category": "jp_indices",
@@ -140,13 +133,6 @@
     {
       "ticker": "7267.T",
       "name": "本田技研工業",
-      "category": "nikkei_225_core",
-      "tier": "core",
-      "weight": 0.6
-    },
-    {
-      "ticker": "9437.T",
-      "name": "NTTドコモ",
       "category": "nikkei_225_core",
       "tier": "core",
       "weight": 0.6
@@ -500,6 +486,349 @@
       "category": "global_etfs",
       "tier": "core",
       "weight": 0.8
+    },
+    {
+      "ticker": "8802.T",
+      "name": "三菱地所",
+      "category": "jp_real_estate",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "8801.T",
+      "name": "三井不動産",
+      "category": "jp_real_estate",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "8804.T",
+      "name": "東急不動産HD",
+      "category": "jp_real_estate",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8411.T",
+      "name": "みずほFG",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "2413.T",
+      "name": "エムスリー",
+      "category": "jp_healthcare",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4689.T",
+      "name": "LINEヤフー",
+      "category": "jp_it",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "3659.T",
+      "name": "ネクソン",
+      "category": "jp_entertainment",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9020.T",
+      "name": "東日本旅客鉄道",
+      "category": "jp_transport",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9766.T",
+      "name": "コナミグループ",
+      "category": "jp_entertainment",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "6902.T",
+      "name": "デンソー",
+      "category": "jp_auto",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "1617.T",
+      "name": "食品上場投信",
+      "category": "jp_stocks",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "1621.T",
+      "name": "医薬品上場投信",
+      "category": "jp_stocks",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "1622.T",
+      "name": "自動車・輸送機上場投信",
+      "category": "jp_stocks",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "1626.T",
+      "name": "情報通信・サービス上場投信",
+      "category": "jp_stocks",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "7741.T",
+      "name": "HOYA",
+      "category": "jp_tech",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "6594.T",
+      "name": "日本電産",
+      "category": "jp_tech",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "9434.T",
+      "name": "ソフトバンク",
+      "category": "jp_it",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "6098.T",
+      "name": "リクルートホールディングス",
+      "category": "jp_it",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "9983.T",
+      "name": "ファーストリテイリング",
+      "category": "jp_retail",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "8766.T",
+      "name": "東京海上ホールディングス",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "8031.T",
+      "name": "三井物産",
+      "category": "jp_trading",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "4901.T",
+      "name": "富士フイルムホールディングス",
+      "category": "jp_material",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "5401.T",
+      "name": "日本製鉄",
+      "category": "jp_material",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "9101.T",
+      "name": "日本郵船",
+      "category": "jp_transport",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "2914.T",
+      "name": "日本たばこ産業",
+      "category": "jp_consumer",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "1618.T",
+      "name": "エネルギー資源上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1619.T",
+      "name": "建設・資材上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1620.T",
+      "name": "素材・化学上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1623.T",
+      "name": "鉄鋼・非鉄上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1624.T",
+      "name": "機械上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1625.T",
+      "name": "電機・精密上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1627.T",
+      "name": "電力・ガス上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1628.T",
+      "name": "運輸・物流上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1629.T",
+      "name": "商社・卸売上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1630.T",
+      "name": "小売業上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1631.T",
+      "name": "金融（除く銀行）上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1632.T",
+      "name": "銀行業上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "1633.T",
+      "name": "不動産上場投信",
+      "category": "jp_etf_sector",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "^DJI",
+      "name": "ダウ平均",
+      "category": "us_indices",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "^IXIC",
+      "name": "NASDAQ",
+      "category": "us_indices",
+      "tier": "core",
+      "weight": 1.0
+    },
+    {
+      "ticker": "^RUT",
+      "name": "ラッセル2000",
+      "category": "us_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^GDAXI",
+      "name": "DAX",
+      "category": "eu_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^FCHI",
+      "name": "CAC40",
+      "category": "eu_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^STOXX50E",
+      "name": "EURO STOXX50",
+      "category": "eu_indices",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "^KS11",
+      "name": "KOSPI",
+      "category": "asia_indices",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "^TWII",
+      "name": "台湾加権",
+      "category": "asia_indices",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "CL=F",
+      "name": "原油WTI",
+      "category": "commodities",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "GC=F",
+      "name": "金先物",
+      "category": "commodities",
+      "tier": "core",
+      "weight": 0.8
+    },
+    {
+      "ticker": "SI=F",
+      "name": "銀先物",
+      "category": "commodities",
+      "tier": "core",
+      "weight": 0.7
     }
   ],
   "active_universe": [

@@ -262,7 +262,7 @@ class StocksList {
         if (pageStocks.length === 0) {
             tbody.innerHTML = `
                 <tr>
-                    <td colspan="9" class="loading-cell">
+                    <td colspan="10" class="loading-cell">
                         ${this.filteredStocks.length === 0 ? '該当する銘柄が見つかりません' : 'データがありません'}
                     </td>
                 </tr>
@@ -288,6 +288,7 @@ class StocksList {
                 <td class="tier-col">
                     <span class="tier-badge ${stock.tier}">${this.getTierLabel(stock.tier)}</span>
                 </td>
+                <td class="judgment-col">${this.getMediumLongJudgment(stock)}</td>
                 <td>
                     <div class="action-buttons">
                         <a href="/stocks/detail/?s=${stock.symbol}" class="btn-mini">詳細</a>
@@ -513,6 +514,21 @@ class StocksList {
         return num.toLocaleString('ja-JP');
     }
 
+    getMediumLongJudgment(stock) {
+        const ml = stock.prediction && stock.prediction.medium_long;
+        if (!ml || !ml.overall_action) return '<span style="color:#9ca3af;font-size:12px;">---</span>';
+        const colors = {
+            strong_buy: '#065f46', buy: '#1e40af',
+            sell: '#92400e', strong_sell: '#991b1b', neutral: '#6b7280'
+        };
+        const bgs = {
+            strong_buy: '#d1fae5', buy: '#dbeafe',
+            sell: '#fef3c7', strong_sell: '#fee2e2', neutral: '#f3f4f6'
+        };
+        const sig = ml.overall_signal || 'neutral';
+        return `<span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:12px;background:${bgs[sig]||'#f3f4f6'};color:${colors[sig]||'#6b7280'};white-space:nowrap;">${ml.overall_action}</span>`;
+    }
+
     escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
@@ -524,7 +540,7 @@ class StocksList {
         if (tbody) {
             tbody.innerHTML = `
                 <tr>
-                    <td colspan="9" class="loading-cell" style="color: var(--error-color);">
+                    <td colspan="10" class="loading-cell" style="color: var(--error-color);">
                         ❌ ${message}
                     </td>
                 </tr>
