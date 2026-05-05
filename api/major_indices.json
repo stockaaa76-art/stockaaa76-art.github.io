@@ -4,46 +4,46 @@
       "^DJI": {
         "name": "ダウ平均",
         "symbol": "^DJI",
-        "price": 48941.8984375,
-        "price_formatted": "$48,941.90",
-        "change": -557.3711,
-        "change_formatted": "-557.37",
-        "change_percent": -1.1260189,
+        "price": 49298.25,
+        "price_formatted": "$49,298.25",
+        "change": 356.35156,
+        "change_formatted": "+356.35",
+        "change_percent": 0.72811145,
         "currency": "$",
-        "trend": "down"
+        "trend": "up"
       },
       "^IXIC": {
         "name": "NASDAQ",
         "symbol": "^IXIC",
-        "price": 25067.80078125,
-        "price_formatted": "$25,067.80",
-        "change": -46.64258,
-        "change_formatted": "-46.64",
-        "change_percent": -0.18572013,
+        "price": 25326.125,
+        "price_formatted": "$25,326.12",
+        "change": 258.32422,
+        "change_formatted": "+258.32",
+        "change_percent": 1.0305021,
         "currency": "$",
-        "trend": "down"
+        "trend": "up"
       },
       "^GSPC": {
         "name": "S&P 500",
         "symbol": "^GSPC",
-        "price": 7200.75,
-        "price_formatted": "$7,200.75",
-        "change": -29.370117,
-        "change_formatted": "-29.37",
-        "change_percent": -0.40621895,
+        "price": 7259.22021484375,
+        "price_formatted": "$7,259.22",
+        "change": 58.470215,
+        "change_formatted": "+58.47",
+        "change_percent": 0.8120017,
         "currency": "$",
-        "trend": "down"
+        "trend": "up"
       },
       "^RUT": {
         "name": "ラッセル2000",
         "symbol": "^RUT",
-        "price": 2795.99658203125,
-        "price_formatted": "$2,796.00",
-        "change": -16.825684,
-        "change_formatted": "-16.83",
-        "change_percent": -0.59817797,
+        "price": 2845.00439453125,
+        "price_formatted": "$2,845.00",
+        "change": 49.007812,
+        "change_formatted": "+49.01",
+        "change_percent": 1.7527851,
         "currency": "$",
-        "trend": "down"
+        "trend": "up"
       }
     },
     "🇯🇵 日本": {
@@ -85,46 +85,46 @@
       "^GDAXI": {
         "name": "DAX",
         "symbol": "^GDAXI",
-        "price": 24292.380859375,
-        "price_formatted": "€24,292.38",
-        "change": -301.11133,
-        "change_formatted": "-301.11",
-        "change_percent": -1.23953,
+        "price": 23991.26953125,
+        "price_formatted": "€23,991.27",
+        "change": 410.4297,
+        "change_formatted": "+410.43",
+        "change_percent": 1.710746,
         "currency": "€",
-        "trend": "down"
+        "trend": "up"
       },
       "^FTSE": {
         "name": "FTSE100",
         "symbol": "^FTSE",
-        "price": 10363.900390625,
-        "price_formatted": "£10,363.90",
-        "change": -14.870117,
-        "change_formatted": "-14.87",
-        "change_percent": -0.14327396,
+        "price": 10219.1103515625,
+        "price_formatted": "£10,219.11",
+        "change": -144.81934,
+        "change_formatted": "-144.82",
+        "change_percent": -1.39734,
         "currency": "£",
         "trend": "down"
       },
       "^FCHI": {
         "name": "CAC40",
         "symbol": "^FCHI",
-        "price": 8114.83984375,
-        "price_formatted": "€8,114.84",
-        "change": -138.71973,
-        "change_formatted": "-138.72",
-        "change_percent": -1.7094574,
+        "price": 7976.1201171875,
+        "price_formatted": "€7,976.12",
+        "change": 86.18994,
+        "change_formatted": "+86.19",
+        "change_percent": 1.0805998,
         "currency": "€",
-        "trend": "down"
+        "trend": "up"
       },
       "^STOXX50E": {
         "name": "EURO STOXX50",
         "symbol": "^STOXX50E",
         "price": 5763.60986328125,
         "price_formatted": "€5,763.61",
-        "change": -117.8999,
-        "change_formatted": "-117.90",
-        "change_percent": -2.0045857,
+        "change": 106.02002,
+        "change_formatted": "+106.02",
+        "change_percent": 1.8394725,
         "currency": "€",
-        "trend": "down"
+        "trend": "up"
       }
     },
     "🌏 アジア": {
@@ -142,19 +142,19 @@
       "^HSI": {
         "name": "ハンセン",
         "symbol": "^HSI",
-        "price": 25776.529296875,
-        "price_formatted": "HK$25,776.53",
-        "change": 319.35156,
-        "change_formatted": "+319.35",
-        "change_percent": 1.2389238,
+        "price": 26095.880859375,
+        "price_formatted": "HK$26,095.88",
+        "change": -197.27148,
+        "change_formatted": "-197.27",
+        "change_percent": -0.7559487,
         "currency": "HK$",
-        "trend": "up"
+        "trend": "down"
       },
       "^KS11": {
         "name": "KOSPI",
         "symbol": "^KS11",
-        "price": null,
-        "price_formatted": "₩nan",
+        "price": 6936.990234375,
+        "price_formatted": "₩6,936.99",
         "change": 338.12012,
         "change_formatted": "+338.12",
         "change_percent": 5.1239095,
@@ -164,11 +164,11 @@
       "^TWII": {
         "name": "台湾加権",
         "symbol": "^TWII",
-        "price": 38926.62890625,
-        "price_formatted": "NT$38,926.63",
-        "change": 1778.5117,
-        "change_formatted": "+1,778.51",
-        "change_percent": 4.568882,
+        "price": 40705.140625,
+        "price_formatted": "NT$40,705.14",
+        "change": 64.14844,
+        "change_formatted": "+64.15",
+        "change_percent": 0.15759297,
         "currency": "NT$",
         "trend": "up"
       }
@@ -177,50 +177,50 @@
       "CL=F": {
         "name": "原油WTI",
         "symbol": "CL=F",
-        "price": 105.02999877929688,
-        "price_formatted": "$105.03",
-        "change": -1.1899948,
-        "change_formatted": "-1.19",
-        "change_percent": -1.118206,
+        "price": 102.58000183105469,
+        "price_formatted": "$102.58",
+        "change": 0.3100052,
+        "change_formatted": "+0.31",
+        "change_percent": 0.30312428,
         "currency": "$",
-        "trend": "down"
+        "trend": "up"
       },
       "GC=F": {
         "name": "金先物",
         "symbol": "GC=F",
-        "price": 4530.10009765625,
-        "price_formatted": "$4,530.10",
-        "change": -5.699707,
-        "change_formatted": "-5.70",
-        "change_percent": -0.12572975,
+        "price": 4558.60009765625,
+        "price_formatted": "$4,558.60",
+        "change": -9.899902,
+        "change_formatted": "-9.90",
+        "change_percent": -0.21669918,
         "currency": "$",
         "trend": "down"
       },
       "SI=F": {
         "name": "銀先物",
         "symbol": "SI=F",
-        "price": 73.26499938964844,
-        "price_formatted": "$73.26",
-        "change": -0.30700684,
-        "change_formatted": "-0.31",
-        "change_percent": -0.41757137,
+        "price": 73.19999694824219,
+        "price_formatted": "$73.20",
+        "change": -0.38100433,
+        "change_formatted": "-0.38",
+        "change_percent": -0.5178026,
         "currency": "$",
         "trend": "down"
       },
       "BTC-USD": {
         "name": "ビットコイン",
         "symbol": "BTC-USD",
-        "price": 80184.1328125,
-        "price_formatted": "$80,184.13",
-        "change": 1120.9766,
-        "change_formatted": "+1,120.98",
-        "change_percent": 1.4159417,
+        "price": 81298.578125,
+        "price_formatted": "$81,298.58",
+        "change": 1238.8906,
+        "change_formatted": "+1,238.89",
+        "change_percent": 1.5474588,
         "currency": "$",
         "trend": "up"
       }
     }
   },
-  "generated_at": "2026-05-04 22:33:44",
+  "generated_at": "2026-05-05 22:32:12",
   "total_count": 19,
   "disclaimer": "投資判断は自己責任で行ってください"
 }
