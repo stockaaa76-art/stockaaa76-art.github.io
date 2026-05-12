@@ -9,7 +9,7 @@
       "core": "Major indices + Top market cap + Strategic importance",
       "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
     },
-    "total_stocks": 242,
+    "total_stocks": 244,
     "updated_at": "2026-05-12"
   },
   "core_universe": [
@@ -1929,6 +1929,32 @@
         "volatility": 0.28261152622564467,
         "market_cap": 0.0,
         "prediction": 0.5
+      }
+    },
+    {
+      "ticker": "VRT",
+      "name": "バーティブ・ホールディングス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 1.0,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 1.0,
+        "prediction": 1.0
+      }
+    },
+    {
+      "ticker": "2644.T",
+      "name": "グローバルX 半導体 ETF",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 1.0,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 1.0,
+        "prediction": 1.0
       }
     }
   ]
