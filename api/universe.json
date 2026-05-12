@@ -8,7 +8,9 @@
     "selection_criteria": {
       "core": "Major indices + Top market cap + Strategic importance",
       "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
-    }
+    },
+    "total_stocks": 242,
+    "updated_at": "2026-05-12"
   },
   "core_universe": [
     {
@@ -829,6 +831,622 @@
       "category": "commodities",
       "tier": "core",
       "weight": 0.7
+    },
+    {
+      "ticker": "2802.T",
+      "name": "味の素",
+      "category": "jp_consumer",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "2503.T",
+      "name": "キリンホールディングス",
+      "category": "jp_consumer",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "2502.T",
+      "name": "アサヒグループHD",
+      "category": "jp_consumer",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "9697.T",
+      "name": "カプコン",
+      "category": "jp_entertainment",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "7832.T",
+      "name": "バンダイナムコHD",
+      "category": "jp_entertainment",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "8267.T",
+      "name": "イオン",
+      "category": "jp_retail",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "3088.T",
+      "name": "マツキヨコクミンHD",
+      "category": "jp_retail",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "7733.T",
+      "name": "オリンパス",
+      "category": "jp_healthcare",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "6869.T",
+      "name": "シスメックス",
+      "category": "jp_healthcare",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "9503.T",
+      "name": "関西電力",
+      "category": "jp_utility",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "9531.T",
+      "name": "東京ガス",
+      "category": "jp_utility",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "6326.T",
+      "name": "クボタ",
+      "category": "jp_machinery",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "6305.T",
+      "name": "日立建機",
+      "category": "jp_machinery",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "COP",
+      "name": "ConocoPhillips",
+      "category": "us_energy",
+      "tier": "core",
+      "weight": 0.7
+    },
+    {
+      "ticker": "SLB",
+      "name": "SLB",
+      "category": "us_energy",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "5713.T",
+      "name": "住友金属鉱山",
+      "category": "jp_steel",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "5406.T",
+      "name": "神戸製鋼所",
+      "category": "jp_steel",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "5802.T",
+      "name": "住友電気工業",
+      "category": "jp_steel",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "5706.T",
+      "name": "三井金属鉱業",
+      "category": "jp_steel",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "3436.T",
+      "name": "SUMCO",
+      "category": "jp_steel",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "5631.T",
+      "name": "日本製鋼所",
+      "category": "jp_steel",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8750.T",
+      "name": "第一生命保険",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8725.T",
+      "name": "MS&ADインシュアランス",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8630.T",
+      "name": "SOMPOホールディングス",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8604.T",
+      "name": "野村ホールディングス",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8601.T",
+      "name": "大和証券グループ本社",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4452.T",
+      "name": "花王",
+      "category": "jp_material",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4005.T",
+      "name": "住友化学",
+      "category": "jp_material",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "3402.T",
+      "name": "東レ",
+      "category": "jp_material",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4021.T",
+      "name": "日産化学",
+      "category": "jp_material",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "6988.T",
+      "name": "日東電工",
+      "category": "jp_material",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8830.T",
+      "name": "住友不動産",
+      "category": "jp_real_estate",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "3003.T",
+      "name": "ヒューリック",
+      "category": "jp_real_estate",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "3231.T",
+      "name": "野村不動産ホールディングス",
+      "category": "jp_real_estate",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8952.T",
+      "name": "ジャパンリアルエステイト",
+      "category": "jp_real_estate",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9684.T",
+      "name": "スクウェア・エニックス",
+      "category": "jp_entertainment",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "6460.T",
+      "name": "セガサミーHD",
+      "category": "jp_entertainment",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "2432.T",
+      "name": "ディー・エヌ・エー",
+      "category": "jp_entertainment",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "3765.T",
+      "name": "ガンホー・オンライン",
+      "category": "jp_entertainment",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9843.T",
+      "name": "ニトリホールディングス",
+      "category": "jp_retail",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "3086.T",
+      "name": "J.フロントリテイリング",
+      "category": "jp_retail",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "2670.T",
+      "name": "エービーシー・マート",
+      "category": "jp_retail",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8308.T",
+      "name": "りそなホールディングス",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8309.T",
+      "name": "三井住友トラスト・ホールディングス",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8473.T",
+      "name": "SBIホールディングス",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8354.T",
+      "name": "福岡フィナンシャルグループ",
+      "category": "jp_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "6645.T",
+      "name": "オムロン",
+      "category": "jp_healthcare",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9989.T",
+      "name": "サンドラッグ",
+      "category": "jp_healthcare",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4307.T",
+      "name": "野村総合研究所",
+      "category": "jp_healthcare",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9532.T",
+      "name": "大阪ガス",
+      "category": "jp_utility",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9506.T",
+      "name": "東北電力",
+      "category": "jp_utility",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9504.T",
+      "name": "中国電力",
+      "category": "jp_utility",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9507.T",
+      "name": "四国電力",
+      "category": "jp_utility",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "7011.T",
+      "name": "三菱重工業",
+      "category": "jp_machinery",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "6506.T",
+      "name": "安川電機",
+      "category": "jp_machinery",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "6474.T",
+      "name": "不二越",
+      "category": "jp_machinery",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "MCD",
+      "name": "McDonald's",
+      "category": "us_consumer",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "NKE",
+      "name": "Nike",
+      "category": "us_consumer",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "SBUX",
+      "name": "Starbucks",
+      "category": "us_consumer",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "TGT",
+      "name": "Target",
+      "category": "us_consumer",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "PM",
+      "name": "Philip Morris",
+      "category": "us_staples",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "CL",
+      "name": "Colgate",
+      "category": "us_staples",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "GIS",
+      "name": "General Mills",
+      "category": "us_staples",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "MO",
+      "name": "Altria",
+      "category": "us_staples",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "category": "us_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "category": "us_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "category": "us_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "BRK-B",
+      "name": "Berkshire B",
+      "category": "us_finance",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "EOG",
+      "name": "EOG Resources",
+      "category": "us_energy",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "PSX",
+      "name": "Phillips 66",
+      "category": "us_energy",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "MPC",
+      "name": "Marathon Petroleum",
+      "category": "us_energy",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "VLO",
+      "name": "Valero Energy",
+      "category": "us_energy",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "8015.T",
+      "name": "豊田通商",
+      "category": "jp_trading",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "2768.T",
+      "name": "双日",
+      "category": "jp_trading",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9025.T",
+      "name": "鴻池運輸",
+      "category": "jp_trading",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4523.T",
+      "name": "エーザイ",
+      "category": "jp_pharma",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4507.T",
+      "name": "塩野義製薬",
+      "category": "jp_pharma",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4506.T",
+      "name": "住友ファーマ",
+      "category": "jp_pharma",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9064.T",
+      "name": "ヤマトホールディングス",
+      "category": "jp_transport",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9143.T",
+      "name": "SGホールディングス",
+      "category": "jp_transport",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "9104.T",
+      "name": "商船三井",
+      "category": "jp_transport",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "2897.T",
+      "name": "日清食品ホールディングス",
+      "category": "jp_consumer",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "2801.T",
+      "name": "キッコーマン",
+      "category": "jp_consumer",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "2875.T",
+      "name": "東洋水産",
+      "category": "jp_consumer",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "7272.T",
+      "name": "ヤマハ発動機",
+      "category": "jp_auto",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "7261.T",
+      "name": "マツダ",
+      "category": "jp_auto",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "4755.T",
+      "name": "楽天グループ",
+      "category": "jp_it",
+      "tier": "core",
+      "weight": 0.6
+    },
+    {
+      "ticker": "5943.T",
+      "name": "日本特殊陶業",
+      "category": "jp_material",
+      "tier": "core",
+      "weight": 0.6
     }
   ],
   "active_universe": [

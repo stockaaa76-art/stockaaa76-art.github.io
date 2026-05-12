@@ -1,0 +1,226 @@
+{
+  "indices": {
+    "🇺🇸 米国": {
+      "^DJI": {
+        "name": "ダウ平均",
+        "symbol": "^DJI",
+        "price": 49609.16015625,
+        "price_formatted": "$49,609.16",
+        "change": 12.160156,
+        "change_formatted": "+12.16",
+        "change_percent": 0.024517927,
+        "currency": "$",
+        "trend": "up"
+      },
+      "^IXIC": {
+        "name": "NASDAQ",
+        "symbol": "^IXIC",
+        "price": 26247.080078125,
+        "price_formatted": "$26,247.08",
+        "change": 440.87695,
+        "change_formatted": "+440.88",
+        "change_percent": 1.7084149,
+        "currency": "$",
+        "trend": "up"
+      },
+      "^GSPC": {
+        "name": "S&P 500",
+        "symbol": "^GSPC",
+        "price": 7398.93017578125,
+        "price_formatted": "$7,398.93",
+        "change": 61.820312,
+        "change_formatted": "+61.82",
+        "change_percent": 0.84257036,
+        "currency": "$",
+        "trend": "up"
+      },
+      "^RUT": {
+        "name": "ラッセル2000",
+        "symbol": "^RUT",
+        "price": 2861.2099609375,
+        "price_formatted": "$2,861.21",
+        "change": 21.579346,
+        "change_formatted": "+21.58",
+        "change_percent": 0.75993514,
+        "currency": "$",
+        "trend": "up"
+      }
+    },
+    "🇯🇵 日本": {
+      "^N225": {
+        "name": "日経平均",
+        "symbol": "^N225",
+        "price": 62514.0390625,
+        "price_formatted": "¥62,514",
+        "change": -199.60938,
+        "change_formatted": "-200",
+        "change_percent": -0.3182484,
+        "currency": "¥",
+        "trend": "down"
+      },
+      "1306.T": {
+        "name": "TOPIX連動型ETF",
+        "symbol": "1306.T",
+        "price": 405.8999938964844,
+        "price_formatted": "¥406",
+        "change": 0.0,
+        "change_formatted": "+0",
+        "change_percent": 0.0,
+        "currency": "¥",
+        "trend": "up"
+      },
+      "1321.T": {
+        "name": "日経225ETF",
+        "symbol": "1321.T",
+        "price": 65430.0,
+        "price_formatted": "¥65,430",
+        "change": -170.0,
+        "change_formatted": "-170",
+        "change_percent": -0.25914633,
+        "currency": "¥",
+        "trend": "down"
+      }
+    },
+    "🇪🇺 欧州": {
+      "^GDAXI": {
+        "name": "DAX",
+        "symbol": "^GDAXI",
+        "price": 24338.630859375,
+        "price_formatted": "€24,338.63",
+        "change": -324.96875,
+        "change_formatted": "-324.97",
+        "change_percent": -1.3176047,
+        "currency": "€",
+        "trend": "down"
+      },
+      "^FTSE": {
+        "name": "FTSE100",
+        "symbol": "^FTSE",
+        "price": 10233.099609375,
+        "price_formatted": "£10,233.10",
+        "change": -43.929688,
+        "change_formatted": "-43.93",
+        "change_percent": -0.42745635,
+        "currency": "£",
+        "trend": "down"
+      },
+      "^FCHI": {
+        "name": "CAC40",
+        "symbol": "^FCHI",
+        "price": 8112.56982421875,
+        "price_formatted": "€8,112.57",
+        "change": -89.510254,
+        "change_formatted": "-89.51",
+        "change_percent": -1.0913116,
+        "currency": "€",
+        "trend": "down"
+      },
+      "^STOXX50E": {
+        "name": "EURO STOXX50",
+        "symbol": "^STOXX50E",
+        "price": 5911.52978515625,
+        "price_formatted": "€5,911.53",
+        "change": -61.120117,
+        "change_formatted": "-61.12",
+        "change_percent": -1.0233333,
+        "currency": "€",
+        "trend": "down"
+      }
+    },
+    "🌏 アジア": {
+      "000001.SS": {
+        "name": "上海総合",
+        "symbol": "000001.SS",
+        "price": 4192.875,
+        "price_formatted": "¥4,192.88",
+        "change": 12.922363,
+        "change_formatted": "+12.92",
+        "change_percent": 0.3090778,
+        "currency": "¥",
+        "trend": "up"
+      },
+      "^HSI": {
+        "name": "ハンセン",
+        "symbol": "^HSI",
+        "price": 26277.009765625,
+        "price_formatted": "HK$26,277.01",
+        "change": -116.70117,
+        "change_formatted": "-116.70",
+        "change_percent": -0.4421552,
+        "currency": "HK$",
+        "trend": "down"
+      },
+      "^KS11": {
+        "name": "KOSPI",
+        "symbol": "^KS11",
+        "price": 7852.64013671875,
+        "price_formatted": "₩7,852.64",
+        "change": 354.64014,
+        "change_formatted": "+354.64",
+        "change_percent": 4.729797,
+        "currency": "₩",
+        "trend": "up"
+      },
+      "^TWII": {
+        "name": "台湾加権",
+        "symbol": "^TWII",
+        "price": 41799.55078125,
+        "price_formatted": "NT$41,799.55",
+        "change": 195.60938,
+        "change_formatted": "+195.61",
+        "change_percent": 0.47023338,
+        "currency": "NT$",
+        "trend": "up"
+      }
+    },
+    "🛢️ 商品": {
+      "CL=F": {
+        "name": "原油WTI",
+        "symbol": "CL=F",
+        "price": 99.02999877929688,
+        "price_formatted": "$99.03",
+        "change": 3.6100006,
+        "change_formatted": "+3.61",
+        "change_percent": 3.783275,
+        "currency": "$",
+        "trend": "up"
+      },
+      "GC=F": {
+        "name": "金先物",
+        "symbol": "GC=F",
+        "price": 4692.0,
+        "price_formatted": "$4,692.00",
+        "change": -38.700195,
+        "change_formatted": "-38.70",
+        "change_percent": -0.8180648,
+        "currency": "$",
+        "trend": "down"
+      },
+      "SI=F": {
+        "name": "銀先物",
+        "symbol": "SI=F",
+        "price": 81.21499633789062,
+        "price_formatted": "$81.21",
+        "change": 0.34999847,
+        "change_formatted": "+0.35",
+        "change_percent": 0.43281823,
+        "currency": "$",
+        "trend": "up"
+      },
+      "BTC-USD": {
+        "name": "ビットコイン",
+        "symbol": "BTC-USD",
+        "price": 81455.1015625,
+        "price_formatted": "$81,455.10",
+        "change": 687.78125,
+        "change_formatted": "+687.78",
+        "change_percent": 0.8515588,
+        "currency": "$",
+        "trend": "up"
+      }
+    }
+  },
+  "generated_at": "2026-05-11 02:07:12",
+  "total_count": 19,
+  "disclaimer": "投資判断は自己責任で行ってください"
+}
