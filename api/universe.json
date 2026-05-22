@@ -9,8 +9,8 @@
       "core": "Major indices + Top market cap + Strategic importance",
       "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
     },
-    "total_stocks": 244,
-    "updated_at": "2026-05-12"
+    "total_stocks": 246,
+    "updated_at": "2026-05-22"
   },
   "core_universe": [
     {
@@ -1447,6 +1447,20 @@
       "category": "jp_material",
       "tier": "core",
       "weight": 0.6
+    },
+    {
+      "ticker": "^VIX",
+      "name": "CBOE Volatility Index",
+      "category": "macro_indicators",
+      "tier": "macro",
+      "weight": 0.0
+    },
+    {
+      "ticker": "^TNX",
+      "name": "US 10-Year Treasury Yield",
+      "category": "macro_indicators",
+      "tier": "macro",
+      "weight": 0.0
     }
   ],
   "active_universe": [
