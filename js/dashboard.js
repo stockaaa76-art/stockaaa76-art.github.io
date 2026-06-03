@@ -32,6 +32,7 @@ class Dashboard {
             await this.loadEnhancedRankings();
             console.log('AI予測ランキングを読み込み中...');
             await this.loadAiRankings();
+            await this.loadMarketVolume();
             this.setupEventListeners();
             
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
@@ -49,6 +50,7 @@ class Dashboard {
                 this.loadPeriodRankings();
                 this.loadEnhancedRankings();
                 this.loadAiRankings();
+                this.loadMarketVolume();
             }, 5 * 60 * 1000);
             
         } catch (error) {
@@ -516,6 +518,34 @@ class Dashboard {
     redrawAllCharts() {
         // historical_data.json が単一ソース。再描画は再fetch で対応
         this.loadFromHistoricalData();
+        this.loadMarketVolume();
+    }
+
+    // 市場全体出来高（sentiment.json の market_volume）。既存 drawSparkline を再利用
+    async loadMarketVolume() {
+        try {
+            const res = await fetch('/api/sentiment.json');
+            if (!res.ok) return;
+            const data = await res.json();
+            const mv = data.market_volume || {};
+            const volumes = mv.volumes || [];
+
+            const ratioEl = document.getElementById('jp-volume-ratio');
+            if (ratioEl) {
+                ratioEl.textContent = (mv.latest_vs_ma25_pct != null) ? `${mv.latest_vs_ma25_pct}%` : '---';
+            }
+            const noteEl = document.getElementById('jp-volume-note');
+            if (noteEl && mv.ticker_count) {
+                noteEl.textContent = `25日平均比（${mv.ticker_count}銘柄合算）`;
+            }
+
+            const chartEl = document.getElementById('jp-volume-chart');
+            if (chartEl && volumes.length >= 2) {
+                this.drawSparkline(chartEl, volumes);
+            }
+        } catch (error) {
+            console.error('市場全体出来高取得エラー:', error);
+        }
     }
 
     loadWatchlist() {
@@ -1168,7 +1198,14 @@ Dashboard.prototype.loadPeriodRankings = async function() {
         const data = await response.json();
         this.periodRankingsData = data;
         this.updatePeriodRankings();
-        
+
+        // RSI・心理線は期間非依存（daily セクションを単一ソースとして描画）
+        const dailyRk = (data.daily && data.daily.rankings) || {};
+        this.updatePeriodRankingList('rsi-high-ranking', dailyRk.rsi_high || []);
+        this.updatePeriodRankingList('rsi-low-ranking', dailyRk.rsi_low || []);
+        this.updatePeriodRankingList('psych-high-ranking', dailyRk.psych_high || []);
+        this.updatePeriodRankingList('psych-low-ranking', dailyRk.psych_low || []);
+
     } catch (error) {
         console.error('期間別ランキング取得エラー:', error);
     }
@@ -1222,7 +1259,11 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
         const formattedMarketCap = this.formatMarketCap(item.market_cap);
         
         let valueDisplay = '';
-        if (elementId.includes('volume')) {
+        if (elementId.includes('rsi')) {
+            valueDisplay = (item.rsi != null) ? `RSI ${item.rsi.toFixed(1)}` : '--';
+        } else if (elementId.includes('psych')) {
+            valueDisplay = (item.psychological_line != null) ? `${item.psychological_line.toFixed(0)}%` : '--';
+        } else if (elementId.includes('volume')) {
             valueDisplay = formattedVolume;
         } else if (elementId.includes('market-cap')) {
             valueDisplay = formattedMarketCap;
