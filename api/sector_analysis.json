@@ -1,53 +1,53 @@
 {
-  "generated_at": "2026-05-17 22:28:51",
+  "generated_at": "2026-06-01 02:26:39",
   "total_sectors": 8,
   "sectors": {
     "Consumer Cyclical": {
       "sector": "Consumer Cyclical",
       "stock_count": 6,
-      "sector_avg_growth_pct": 4.23,
+      "sector_avg_growth_pct": 4.06,
       "stocks": [
         {
           "ticker": "AMZN",
           "name": "Amazon.com, Inc.",
           "latest_growth_pct": 12.38,
-          "vs_sector_avg": 8.15,
-          "expansion_score": 2.93
-        },
-        {
-          "ticker": "7203.T",
-          "name": "Toyota Motor Corporation",
-          "latest_growth_pct": 6.52,
-          "vs_sector_avg": 2.29,
-          "expansion_score": 1.54
+          "vs_sector_avg": 8.32,
+          "expansion_score": 3.05
         },
         {
           "ticker": "7267.T",
           "name": "Honda Motor Co., Ltd.",
           "latest_growth_pct": 6.17,
-          "vs_sector_avg": 1.94,
-          "expansion_score": 1.46
+          "vs_sector_avg": 2.11,
+          "expansion_score": 1.52
+        },
+        {
+          "ticker": "7203.T",
+          "name": "Toyota Motor Corporation",
+          "latest_growth_pct": 5.51,
+          "vs_sector_avg": 1.45,
+          "expansion_score": 1.36
         },
         {
           "ticker": "HD",
           "name": "The Home Depot, Inc.",
           "latest_growth_pct": 3.2,
-          "vs_sector_avg": -1.03,
-          "expansion_score": 0.76
+          "vs_sector_avg": -0.86,
+          "expansion_score": 0.79
         },
         {
           "ticker": "5108.T",
           "name": "Bridgestone Corporation",
           "latest_growth_pct": -0.01,
-          "vs_sector_avg": -4.24,
+          "vs_sector_avg": -4.07,
           "expansion_score": -0.0
         },
         {
           "ticker": "TSLA",
           "name": "Tesla, Inc.",
           "latest_growth_pct": -2.87,
-          "vs_sector_avg": -7.1,
-          "expansion_score": -0.68
+          "vs_sector_avg": -6.93,
+          "expansion_score": -0.71
         }
       ]
     },
@@ -208,49 +208,49 @@
     "Financial Services": {
       "sector": "Financial Services",
       "stock_count": 6,
-      "sector_avg_growth_pct": 8.83,
+      "sector_avg_growth_pct": 7.79,
       "stocks": [
-        {
-          "ticker": "8306.T",
-          "name": "Mitsubishi UFJ Financial Group, Inc.",
-          "latest_growth_pct": 16.31,
-          "vs_sector_avg": 7.48,
-          "expansion_score": 1.85
-        },
         {
           "ticker": "MA",
           "name": "Mastercard Incorporated",
           "latest_growth_pct": 16.37,
-          "vs_sector_avg": 7.54,
-          "expansion_score": 1.85
+          "vs_sector_avg": 8.59,
+          "expansion_score": 2.1
         },
         {
           "ticker": "8316.T",
           "name": "Sumitomo Mitsui Financial Group, Inc.",
-          "latest_growth_pct": 14.28,
-          "vs_sector_avg": 5.45,
-          "expansion_score": 1.62
+          "latest_growth_pct": 14.32,
+          "vs_sector_avg": 6.54,
+          "expansion_score": 1.84
         },
         {
           "ticker": "V",
           "name": "Visa Inc.",
           "latest_growth_pct": 11.42,
-          "vs_sector_avg": 2.59,
-          "expansion_score": 1.29
+          "vs_sector_avg": 3.63,
+          "expansion_score": 1.47
+        },
+        {
+          "ticker": "8306.T",
+          "name": "Mitsubishi UFJ Financial Group, Inc.",
+          "latest_growth_pct": 9.98,
+          "vs_sector_avg": 2.2,
+          "expansion_score": 1.28
         },
         {
           "ticker": "JPM",
           "name": "JPMorgan Chase & Co.",
           "latest_growth_pct": 7.32,
-          "vs_sector_avg": -1.51,
-          "expansion_score": 0.83
+          "vs_sector_avg": -0.46,
+          "expansion_score": 0.94
         },
         {
           "ticker": "7182.T",
           "name": "JAPAN POST BANK Co., Ltd.",
           "latest_growth_pct": -12.7,
-          "vs_sector_avg": -21.53,
-          "expansion_score": -1.44
+          "vs_sector_avg": -20.48,
+          "expansion_score": -1.63
         }
       ]
     },
