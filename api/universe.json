@@ -3,14 +3,14 @@
     "generated_at": "2025-09-22 03:03:16",
     "total_count": 107,
     "core_count": 70,
-    "active_count": 37,
+    "active_count": 47,
     "version": "1.0",
     "selection_criteria": {
       "core": "Major indices + Top market cap + Strategic importance",
       "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
     },
-    "total_stocks": 246,
-    "updated_at": "2026-05-22"
+    "total_stocks": 254,
+    "updated_at": "2026-06-04"
   },
   "core_universe": [
     {
@@ -1970,6 +1970,126 @@
         "market_cap": 1.0,
         "prediction": 1.0
       }
+    },
+    {
+      "ticker": "285A.T",
+      "name": "キオクシアホールディングス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-06-04",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "6857.T",
+      "name": "アドバンテスト",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-06-04",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "6146.T",
+      "name": "ディスコ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-06-04",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "6920.T",
+      "name": "レーザーテック",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-06-04",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "6723.T",
+      "name": "ルネサスエレクトロニクス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-06-04",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "7735.T",
+      "name": "SCREENホールディングス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-06-04",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "5803.T",
+      "name": "フジクラ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-06-04",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "6963.T",
+      "name": "ローム",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-06-04",
+      "theme": "AI/半導体"
     }
   ]
 }

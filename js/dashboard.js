@@ -33,6 +33,9 @@ class Dashboard {
             console.log('AI予測ランキングを読み込み中...');
             await this.loadAiRankings();
             await this.loadMarketVolume();
+            await this.loadThemeCandidates();
+            await this.loadMLRanking();
+            await this.loadMLRanking('/api/ml_monthly_ranking_us.json', 'ml-ranking-us-list');
             this.setupEventListeners();
             
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
@@ -51,6 +54,9 @@ class Dashboard {
                 this.loadEnhancedRankings();
                 this.loadAiRankings();
                 this.loadMarketVolume();
+                this.loadThemeCandidates();
+                this.loadMLRanking();
+                this.loadMLRanking('/api/ml_monthly_ranking_us.json', 'ml-ranking-us-list');
             }, 5 * 60 * 1000);
             
         } catch (error) {
@@ -521,6 +527,79 @@ class Dashboard {
         this.loadMarketVolume();
     }
 
+    // 新テーマ候補（市場全体スキャン W0・予測ユニバース外の急騰）
+    async loadThemeCandidates() {
+        const el = document.getElementById('theme-candidates-list');
+        if (!el) return;
+        try {
+            const res = await fetch('/api/theme_candidates.json');
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            const cands = (data.candidates || []).slice(0, 15);
+            if (cands.length === 0) {
+                el.innerHTML = '<div class="no-data">本日はユニバース外の急騰なし</div>';
+                return;
+            }
+            el.innerHTML = cands.map((c, i) => {
+                const chg = c.change_1d || 0;
+                const cls = chg > 0 ? 'positive' : chg < 0 ? 'negative' : 'neutral';
+                const reasons = (c.detected_reasons || []).join(' / ');
+                return `
+                    <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(c.ticker)}'">
+                        <div class="ranking-item-left">
+                            <div class="ranking-symbol">${i + 1}. 🆕 ${c.ticker}</div>
+                            <div class="ranking-name">${c.name}　<span style="opacity:.7">[${c.sector17 || ''}]</span></div>
+                            <div class="ranking-name" style="font-size:.8em;opacity:.75">${reasons}</div>
+                        </div>
+                        <div class="ranking-item-right">
+                            <div class="ranking-values">
+                                <div class="ranking-value">¥${(c.current || 0).toLocaleString()}</div>
+                                <div class="ranking-change ${cls}">${chg >= 0 ? '+' : ''}${chg.toFixed(1)}%</div>
+                            </div>
+                        </div>
+                    </div>`;
+            }).join('');
+        } catch (e) {
+            el.innerHTML = '<div class="no-data">新テーマ候補データがありません</div>';
+        }
+    }
+
+    // 今月の強い銘柄（クロスセクショナル・ランキングML）。JP/US 共通（url+要素ID切替）
+    async loadMLRanking(url = '/api/ml_monthly_ranking.json', elId = 'ml-ranking-list') {
+        const el = document.getElementById(elId);
+        if (!el) return;
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            const top = (data.top || []).slice(0, 20);
+            if (top.length === 0) {
+                el.innerHTML = '<div class="no-data">ランキングデータがありません</div>';
+                return;
+            }
+            el.innerHTML = top.map((r) => {
+                const m = r.ret120_pct || 0;
+                const cls = m > 0 ? 'positive' : m < 0 ? 'negative' : 'neutral';
+                return `
+                    <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(r.ticker)}'">
+                        <div class="ranking-item-left">
+                            <div class="ranking-symbol">${r.rank}. 🏅 ${r.ticker}</div>
+                            <div class="ranking-name">${r.name}　<span style="opacity:.7">[${r.sector17 || ''}]</span></div>
+                            <div class="ranking-name" style="font-size:.8em;opacity:.75">120日 ${m >= 0 ? '+' : ''}${m.toFixed(0)}% / RSI${(r.rsi || 0).toFixed(0)}</div>
+                        </div>
+                        <div class="ranking-item-right">
+                            <div class="ranking-values">
+                                <div class="ranking-value">AIスコア</div>
+                                <div class="ranking-change ${cls}">${(r.score || 0).toFixed(2)}</div>
+                            </div>
+                        </div>
+                    </div>`;
+            }).join('');
+        } catch (e) {
+            el.innerHTML = '<div class="no-data">AIランキングデータがありません</div>';
+        }
+    }
+
     // 市場全体出来高（sentiment.json の market_volume）。既存 drawSparkline を再利用
     async loadMarketVolume() {
         try {
@@ -721,6 +800,10 @@ class Dashboard {
             this.renderRanking('us-dev25-low-ranking',  [...items].filter(s=>s.deviation_25<0).sort((a,b)=>a.deviation_25-b.deviation_25).slice(0,10), 'deviation25', '$');
             this.renderRanking('us-dev75-high-ranking', [...items].filter(s=>s.deviation_75>0).sort((a,b)=>b.deviation_75-a.deviation_75).slice(0,10), 'deviation75', '$');
             this.renderRanking('us-dev75-low-ranking',  [...items].filter(s=>s.deviation_75<0).sort((a,b)=>a.deviation_75-b.deviation_75).slice(0,10), 'deviation75', '$');
+            // 空売り比率（W2・period_rankings の short_high/low をそのまま描画）
+            const _mapShort = arr => (arr||[]).map(s=>({symbol:s.symbol, name:s.name, price:s.current_price, change_percent:s.period_change, short_ratio:s.short_ratio}));
+            this.renderRanking('us-short-high-ranking', _mapShort(rankings.short_high), 'short', '$');
+            this.renderRanking('us-short-low-ranking',  _mapShort(rankings.short_low), 'short', '$');
 
             // ── イベントリスナー（初回のみ登録）──────────────────────────
             if (!this._usTabsInit) {
@@ -822,6 +905,10 @@ class Dashboard {
                     break;
                 case 'market_cap':
                     valueText = this.formatMarketCap(stock.market_cap, currency);
+                    changeText = this.formatPercent(stock.change_percent);
+                    break;
+                case 'short':
+                    valueText = (stock.short_ratio != null) ? `空売り${stock.short_ratio.toFixed(1)}日` : '—';
                     changeText = this.formatPercent(stock.change_percent);
                     break;
             }
