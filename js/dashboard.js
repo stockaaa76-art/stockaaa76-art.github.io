@@ -1293,9 +1293,64 @@ Dashboard.prototype.loadPeriodRankings = async function() {
         this.updatePeriodRankingList('psych-high-ranking', dailyRk.psych_high || []);
         this.updatePeriodRankingList('psych-low-ranking', dailyRk.psych_low || []);
 
+        // 信用残高 需給ランキング（W4・週次・margin ブロックを単一ソースとして描画）
+        const marginRk = (data.margin && data.margin.rankings) || {};
+        this.updateMarginRankingList('margin-ratio-high-ranking', marginRk.margin_ratio_high || []);
+        this.updateMarginRankingList('margin-ratio-low-ranking', marginRk.margin_ratio_low || []);
+        this.updateMarginRankingList('long-increase-ranking', marginRk.long_increase || []);
+        this.updateMarginRankingList('long-decrease-ranking', marginRk.long_decrease || []);
+        this.updateMarginRankingList('short-increase-ranking', marginRk.short_increase || []);
+        this.updateMarginRankingList('short-decrease-ranking', marginRk.short_decrease || []);
+
     } catch (error) {
         console.error('期間別ランキング取得エラー:', error);
     }
+};
+
+// 信用残高 需給ランキング描画（信用倍率・買残/売残 前週比）
+Dashboard.prototype.updateMarginRankingList = function(elementId, data) {
+    const element = document.getElementById(elementId);
+    if (!element || !data || data.length === 0) {
+        if (element) {
+            element.innerHTML = '<div class="no-data">データ蓄積中（週次更新）</div>';
+        }
+        return;
+    }
+    const fmtPct = (v) => (v == null) ? '--' : `${v > 0 ? '+' : ''}${v.toFixed(1)}%`;
+    const fmtNum = (v) => (v == null) ? '--' : Number(v).toLocaleString();
+    const html = data.map((item, index) => {
+        // 表示値: 倍率系=信用倍率 / 買残系=買残前週比 / 売残系=売残前週比
+        let valueDisplay, subVal, subClass;
+        if (elementId.includes('margin-ratio')) {
+            valueDisplay = `信用倍率 ${item.margin_ratio != null ? item.margin_ratio.toFixed(2) : '--'}倍`;
+            subVal = `買残${fmtPct(item.long_wow_pct)} / 売残${fmtPct(item.short_wow_pct)}`;
+            subClass = 'neutral';
+        } else if (elementId.includes('long-')) {
+            valueDisplay = `買残 ${fmtNum(item.long_balance)}`;
+            subVal = `前週比 ${fmtPct(item.long_wow_pct)}`;
+            subClass = item.long_wow_pct > 0 ? 'positive' : item.long_wow_pct < 0 ? 'negative' : 'neutral';
+        } else {
+            valueDisplay = `売残 ${fmtNum(item.short_balance)}`;
+            subVal = `前週比 ${fmtPct(item.short_wow_pct)}`;
+            subClass = item.short_wow_pct > 0 ? 'positive' : item.short_wow_pct < 0 ? 'negative' : 'neutral';
+        }
+        const tkr = item.ticker || '';
+        return `
+            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(tkr)}'">
+                <div class="ranking-item-left">
+                    <div class="ranking-symbol">${index + 1}. ${tkr}</div>
+                    <div class="ranking-name">${item.name || tkr}</div>
+                </div>
+                <div class="ranking-item-right">
+                    <div class="ranking-values">
+                        <div class="ranking-value">${valueDisplay}</div>
+                        <div class="ranking-change ${subClass}">${subVal}</div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+    element.innerHTML = html;
 };
 
 Dashboard.prototype.updatePeriodRankings = function() {
