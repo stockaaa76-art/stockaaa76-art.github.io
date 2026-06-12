@@ -97,6 +97,8 @@ class StockDetail {
                         volume: latest.volume || 0,
                         updatedAt: latest.date,
                     };
+                    // historical 経路でも主要指標・AI予測・52週高安を index.json から付与（2026-06-12）
+                    await this.enrichFromStocksIndex();
                     return;
                 }
             }
@@ -115,16 +117,45 @@ class StockDetail {
                 change: found.change || 0,
                 change_percent: found.change_pct || 0,
                 volume: found.volume || 0,
-                market_cap: found.market_cap || 0,
-                trailing_pe: found.pe_ratio || 0,
-                dividend_yield: found.dividend_yield || 0,
-                fifty_two_week_high: found.week52_high || 0,
-                fifty_two_week_low: found.week52_low || 0,
+                market: found.market,
+                prediction: found.prediction,
+                fundamentals: found.fundamentals,
+                market_cap: (found.fundamentals && found.fundamentals.market_cap) || 0,
+                fifty_two_week_high: (found.fundamentals && found.fundamentals.fifty_two_week_high) || 0,
+                fifty_two_week_low: (found.fundamentals && found.fundamentals.fifty_two_week_low) || 0,
             };
 
         } catch (error) {
             console.error('株価データ読み込みエラー:', error);
             throw error;
+        }
+    }
+
+    async enrichFromStocksIndex() {
+        // stocks/index.json の fundamentals・prediction 等を stockData に付与する。
+        // historical_data.json 経路では価格系の最小構造しか持たないため、ここで補完する。
+        // 付与失敗は非致命（主要指標セクションが非表示になるだけ）。
+        try {
+            const res = await fetch('/api/stocks/index.json');
+            if (!res.ok) return;
+            const data = await res.json();
+            const found = (data.stocks || []).find(s => s.symbol === this.symbol);
+            if (!found) return;
+            if (found.fundamentals) this.stockData.fundamentals = found.fundamentals;
+            if (found.prediction && !this.stockData.prediction) this.stockData.prediction = found.prediction;
+            if (found.market) this.stockData.market = found.market;
+            const f = found.fundamentals || {};
+            if (!this.stockData.fifty_two_week_high && f.fifty_two_week_high) {
+                this.stockData.fifty_two_week_high = f.fifty_two_week_high;
+            }
+            if (!this.stockData.fifty_two_week_low && f.fifty_two_week_low) {
+                this.stockData.fifty_two_week_low = f.fifty_two_week_low;
+            }
+            if (!this.stockData.market_cap && f.market_cap) {
+                this.stockData.market_cap = f.market_cap;
+            }
+        } catch (e) {
+            console.warn('stocks/index.json 付与スキップ:', e);
         }
     }
 
@@ -461,7 +492,7 @@ class StockDetail {
         const wrap = document.getElementById('fund-groups');
         if (!f || !section || !wrap) return;
 
-        const isJP = this.stockData.market === 'JP';
+        const isJP = this.stockData.market === 'JP' || this.symbol.endsWith('.T');
         const cur = isJP ? '￥' : '$';
         const num = (v, suffix = '', digits = 2) =>
             (v === null || v === undefined || Number.isNaN(Number(v))) ? null : `${Number(v).toFixed(digits)}${suffix}`;
