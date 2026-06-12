@@ -1028,6 +1028,13 @@ class Dashboard {
         this.renderExtendedRanking('deviation-75-low-ranking', data.deviation_75_low, 'deviation');
         this.renderExtendedRanking('golden-cross-ranking', data.golden_cross, 'cross_signal');
         this.renderExtendedRanking('dead-cross-ranking', data.dead_cross, 'cross_signal');
+
+        // 追加指標（2026-06-12）: PSR・純利益率・52週位置
+        this.renderExtendedRanking('psr-low-ranking', data.psr_low, 'psr');
+        this.renderExtendedRanking('psr-high-ranking', data.psr_high, 'psr');
+        this.renderExtendedRanking('net-margin-high-ranking', data.net_margin_high, 'net_margin');
+        this.renderExtendedRanking('year-position-high-ranking', data.year_position_high, 'year_position');
+        this.renderExtendedRanking('year-position-low-ranking', data.year_position_low, 'year_position');
     }
     
     renderExtendedRanking(elementId, stocks, type) {
@@ -1097,6 +1104,18 @@ class Dashboard {
                     valueText = this.formatPrice(stock.price, '￥');
                     subText = 'シグナル発生';
                     break;
+                case 'psr':
+                    valueText = stock.psr ? `${stock.psr.toFixed(2)}倍` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'net_margin':
+                    valueText = (stock.net_margin || stock.net_margin === 0) ? `${stock.net_margin.toFixed(1)}%` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
+                case 'year_position':
+                    valueText = (stock.year_position || stock.year_position === 0) ? `${stock.year_position.toFixed(0)}%` : '--';
+                    subText = this.formatPrice(stock.price, '￥');
+                    break;
                 default:
                     valueText = this.formatPrice(stock.price, '￥');
                     subText = this.formatPercent(stock.change_percent);
@@ -1146,7 +1165,9 @@ class Dashboard {
             'dividend-high-ranking', 'pe-high-ranking', 'pe-low-ranking', 'pbr-high-ranking', 'pbr-low-ranking',
             'roa-high-ranking', 'roe-high-ranking', 'employees-high-ranking',
             'deviation-25-high-ranking', 'deviation-25-low-ranking', 'deviation-75-high-ranking', 'deviation-75-low-ranking',
-            'golden-cross-ranking', 'dead-cross-ranking'
+            'golden-cross-ranking', 'dead-cross-ranking',
+            'psr-low-ranking', 'psr-high-ranking', 'net-margin-high-ranking',
+            'year-position-high-ranking', 'year-position-low-ranking'
         ];
         
         extendedRankingContainers.forEach(id => {

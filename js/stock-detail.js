@@ -39,6 +39,7 @@ class StockDetail {
             this.renderJudgmentBadge();
             this.renderMediumLongTerm();
             this.renderIndicators();
+            this.renderFundamentals();
             await this.renderChart();
             this.loadRelatedStocks();
             
@@ -451,6 +452,96 @@ class StockDetail {
             
             document.getElementById('volatility-signal').textContent = volSignal;
         }
+    }
+
+    renderFundamentals() {
+        // 主要指標セクション（2026-06-12 指標拡充・約30指標を4グループで表示）
+        const f = this.stockData.fundamentals;
+        const section = document.getElementById('fundamentals-section');
+        const wrap = document.getElementById('fund-groups');
+        if (!f || !section || !wrap) return;
+
+        const isJP = this.stockData.market === 'JP';
+        const cur = isJP ? '￥' : '$';
+        const num = (v, suffix = '', digits = 2) =>
+            (v === null || v === undefined || Number.isNaN(Number(v))) ? null : `${Number(v).toFixed(digits)}${suffix}`;
+        const px = (v) => (v === null || v === undefined) ? null : cur + Number(v).toLocaleString(undefined, { maximumFractionDigits: 1 });
+        const big = (v) => {
+            if (v === null || v === undefined || v <= 0) return null;
+            if (isJP) {
+                if (v >= 1e12) return (v / 1e12).toFixed(2) + '兆円';
+                if (v >= 1e8) return (v / 1e8).toFixed(1) + '億円';
+                return Number(v).toLocaleString() + '円';
+            }
+            if (v >= 1e12) return '$' + (v / 1e12).toFixed(2) + 'T';
+            if (v >= 1e9) return '$' + (v / 1e9).toFixed(1) + 'B';
+            return '$' + Number(v).toLocaleString();
+        };
+        const shares = (v) => (v === null || v === undefined) ? null : (v / 10000).toFixed(0) + '万株';
+
+        let crossText = null;
+        if (f.golden_cross) crossText = '✨ GC発生';
+        else if (f.dead_cross) crossText = '⚠️ DC発生';
+        let yearFlag = null;
+        if (f.year_high_update) yearFlag = '🏔️ 年初来高値更新';
+        else if (f.year_low_update) yearFlag = '🏞️ 年初来安値更新';
+
+        const groups = [
+            { title: '💰 バリュエーション', rows: [
+                ['PER（実績）', num(f.trailing_pe, '倍', 1)],
+                ['PER（予想）', num(f.forward_pe, '倍', 1)],
+                ['EPS（予想）', px(f.forward_eps)],
+                ['PBR', num(f.price_to_book, '倍', 2)],
+                ['BPS', px(f.bps)],
+                ['PSR', num(f.psr, '倍', 2)],
+                ['配当利回り', num(f.dividend_yield, '%', 2)],
+                ['時価総額', big(f.market_cap)],
+            ] },
+            { title: '🏦 財務', rows: [
+                ['売上高', big(f.total_revenue)],
+                ['純利益', big(f.net_income)],
+                ['純利益率', num(f.net_margin, '%', 1)],
+                ['ROE', num(f.return_on_equity, '%', 1)],
+                ['ROA', num(f.return_on_assets, '%', 1)],
+                ['有利子負債', big(f.total_debt)],
+                ['負債/自己資本', num(f.debt_to_equity, '倍', 2)],
+                ['従業員数', f.full_time_employees ? Number(f.full_time_employees).toLocaleString() + '人' : null],
+            ] },
+            { title: '📈 テクニカル', rows: [
+                ['52週高値', px(f.fifty_two_week_high)],
+                ['52週安値', px(f.fifty_two_week_low)],
+                ['52週位置', num(f.year_position, '%', 0)],
+                ['25日乖離', num(f.deviation_25, '%', 1)],
+                ['75日乖離', num(f.deviation_75, '%', 1)],
+                ['MA25', px(f.ma25)],
+                ['MA75', px(f.ma75)],
+                ['出来高比（25日平均）', num(f.volume_ratio, '%', 0)],
+                ['売買代金', big(f.trading_value)],
+                ['クロス', crossText],
+                ['年初来', yearFlag],
+            ] },
+            { title: '⚖️ 信用需給' + (f.margin_date ? `（${f.margin_date}）` : ''), rows: [
+                ['信用倍率', num(f.margin_ratio, '倍', 1)],
+                ['信用倍率 前週差', num(f.margin_ratio_wow, '', 2)],
+                ['信用買残', shares(f.margin_long)],
+                ['買残 前週比', num(f.margin_long_wow_pct, '%', 1)],
+                ['信用売残', shares(f.margin_short)],
+                ['売残 前週比', num(f.margin_short_wow_pct, '%', 1)],
+            ] },
+        ];
+
+        let any = false;
+        wrap.innerHTML = groups.map(g => {
+            const rows = g.rows.filter(r => r[1] !== null && r[1] !== undefined);
+            if (!rows.length) return '';
+            any = true;
+            const body = rows.map(r =>
+                `<tr><td class="fund-label">${r[0]}</td><td class="fund-value">${r[1]}</td></tr>`
+            ).join('');
+            return `<div class="fund-group"><h4>${g.title}</h4><table class="fund-table">${body}</table></div>`;
+        }).join('');
+
+        if (any) section.style.display = 'block';
     }
 
     async renderChart() {
