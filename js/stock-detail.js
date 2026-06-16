@@ -42,6 +42,7 @@ class StockDetail {
             this.renderFundamentals();
             await this.renderChart();
             this.loadRelatedStocks();
+            this.loadMLScore();
             
             // イベントリスナー設定
             this.setupEventListeners();
@@ -865,6 +866,56 @@ class StockDetail {
         };
         
         return axisLabels[period] || '日付';
+    }
+
+    async loadMLScore() {
+        try {
+            const market = this.detectMarket(this.symbol);
+            const jsonFile = market === 'JP'
+                ? '/api/ml_monthly_ranking.json'
+                : '/api/ml_monthly_ranking_us.json';
+            const res = await fetch(jsonFile);
+            if (!res.ok) return;
+            const data = await res.json();
+
+            const all = data.all || [];
+            if (all.length === 0) return;
+
+            const entry = all.find(s => s.ticker === this.symbol);
+            const el = document.getElementById('ml-score-section');
+            const ct = document.getElementById('ml-score-content');
+            if (!el || !ct) return;
+
+            if (!entry) {
+                ct.innerHTML = '<p style="color:#9ca3af;font-size:13px;">このユニバースのMLスコアデータがありません</p>';
+            } else {
+                const pct = entry.score_pct;
+                const rank = entry.rank;
+                const total = all.length;
+                const bar = Math.round(pct);
+                const color = pct >= 70 ? '#059669' : pct >= 40 ? '#d97706' : '#ef4444';
+                const label = pct >= 70 ? '上位（強い）' : pct >= 40 ? '中位' : '下位（弱い）';
+                ct.innerHTML = `
+                  <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
+                    <div style="font-size:28px;font-weight:700;color:${color};">${pct.toFixed(0)}%ile</div>
+                    <div style="font-size:14px;color:#6b7280;">全${total}銘柄中 ${rank}位 ／ ${label}</div>
+                  </div>
+                  <div style="background:#e5e7eb;border-radius:4px;height:8px;width:100%;max-width:400px;">
+                    <div style="background:${color};height:8px;border-radius:4px;width:${bar}%;"></div>
+                  </div>
+                  <div style="margin-top:10px;display:flex;gap:16px;font-size:13px;color:#6b7280;">
+                    <span>20日リターン: <strong>${entry.ret20_pct > 0 ? '+' : ''}${entry.ret20_pct}%</strong></span>
+                    <span>120日リターン: <strong>${entry.ret120_pct > 0 ? '+' : ''}${entry.ret120_pct}%</strong></span>
+                    <span>RSI: <strong>${entry.rsi}</strong></span>
+                  </div>
+                  <p style="font-size:11px;color:#9ca3af;margin-top:8px;">
+                    月次クロスセクション相対強弱 ML(LambdaRank)。上位ほど翌月相対的に強い傾向。BT実証済み(+3.7%/yr)。買いシグナルではありません。更新: ${data.as_of_date}
+                  </p>`;
+            }
+            el.style.display = 'block';
+        } catch (e) {
+            // スコアなしは静かに無視
+        }
     }
 
     async loadRelatedStocks() {
