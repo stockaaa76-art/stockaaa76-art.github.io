@@ -1,211 +1,211 @@
 {
-  "generated_at": "2026-06-15 11:48:38",
+  "generated_at": "2026-06-15 23:25:09",
   "as_of_date": "2026-06-15",
   "market": "jp",
-  "universe_size": 242,
+  "universe_size": 486,
   "horizon_days": 21,
   "model": "LambdaRank (cross-sectional monthly)",
   "note": "月次クロスセクショナル相対強弱 ML(LambdaRank)。BACKTEST(JP広域493): ベンチ超過+3.7%/年・純モメンタム超え+4.8pt/年(2018-2025 OOS・10bps後)。⚠️相対強弱の参考順位であり買いシグナルでない・保証でない・年でムラ(regime依存)。",
   "top": [
     {
       "rank": 1,
-      "ticker": "3697.T",
-      "name": "ＳＨＩＦＴ",
-      "sector17": "情報通信・サービスその他",
-      "score": 1.016,
-      "ret20_pct": -1.0,
-      "ret120_pct": -31.2,
-      "rsi": 47.7
+      "ticker": "5803.T",
+      "name": "フジクラ",
+      "sector17": "鉄鋼・非鉄",
+      "score": 1.5388,
+      "ret20_pct": -23.1,
+      "ret120_pct": 41.6,
+      "rsi": 29.9
     },
     {
       "rank": 2,
-      "ticker": "9984.T",
-      "name": "ソフトバンクグループ",
-      "sector17": "情報通信・サービスその他",
-      "score": 0.8722,
-      "ret20_pct": 27.6,
-      "ret120_pct": 59.8,
-      "rsi": 43.6
+      "ticker": "6506.T",
+      "name": "安川電機",
+      "sector17": "電機・精密",
+      "score": 0.7966,
+      "ret20_pct": -0.4,
+      "ret120_pct": 32.3,
+      "rsi": 40.1
     },
     {
       "rank": 3,
       "ticker": "4980.T",
       "name": "デクセリアルズ",
       "sector17": "素材・化学",
-      "score": 0.8622,
+      "score": 0.7349,
       "ret20_pct": 2.3,
       "ret120_pct": 39.3,
       "rsi": 51.4
     },
     {
       "rank": 4,
+      "ticker": "6754.T",
+      "name": "アンリツ",
+      "sector17": "電機・精密",
+      "score": 0.7254,
+      "ret20_pct": -6.4,
+      "ret120_pct": 75.2,
+      "rsi": 30.6
+    },
+    {
+      "rank": 5,
       "ticker": "6504.T",
       "name": "富士電機",
       "sector17": "電機・精密",
-      "score": 0.8197,
+      "score": 0.6173,
       "ret20_pct": -2.8,
       "ret120_pct": 23.6,
       "rsi": 30.0
     },
     {
-      "rank": 5,
-      "ticker": "6723.T",
-      "name": "ルネサスエレクトロニクス",
-      "sector17": "電機・精密",
-      "score": 0.8015,
-      "ret20_pct": 21.3,
-      "ret120_pct": 107.3,
-      "rsi": 47.8
-    },
-    {
       "rank": 6,
-      "ticker": "4208.T",
-      "name": "ＵＢＥ",
-      "sector17": "素材・化学",
-      "score": 0.7142,
-      "ret20_pct": 33.4,
-      "ret120_pct": 29.1,
-      "rsi": 62.8
-    },
-    {
-      "rank": 7,
-      "ticker": "6925.T",
-      "name": "ウシオ電機",
-      "sector17": "電機・精密",
-      "score": 0.7017,
-      "ret20_pct": 1.3,
-      "ret120_pct": 75.7,
-      "rsi": 53.7
-    },
-    {
-      "rank": 8,
-      "ticker": "4004.T",
-      "name": "レゾナック・ホールディングス",
-      "sector17": "素材・化学",
-      "score": 0.6819,
-      "ret20_pct": 10.2,
-      "ret120_pct": 190.9,
-      "rsi": 46.7
-    },
-    {
-      "rank": 9,
-      "ticker": "6762.T",
-      "name": "ＴＤＫ",
-      "sector17": "電機・精密",
-      "score": 0.6719,
-      "ret20_pct": 31.2,
-      "ret120_pct": 68.6,
-      "rsi": 56.1
-    },
-    {
-      "rank": 10,
-      "ticker": "8136.T",
-      "name": "サンリオ",
-      "sector17": "商社・卸売",
-      "score": 0.6718,
-      "ret20_pct": 0.8,
-      "ret120_pct": -16.9,
-      "rsi": 48.5
-    },
-    {
-      "rank": 11,
-      "ticker": "5706.T",
-      "name": "三井金属",
-      "sector17": "鉄鋼・非鉄",
-      "score": 0.6401,
-      "ret20_pct": -5.6,
-      "ret120_pct": 148.1,
-      "rsi": 36.9
-    },
-    {
-      "rank": 12,
-      "ticker": "6963.T",
-      "name": "ローム",
-      "sector17": "電機・精密",
-      "score": 0.5863,
-      "ret20_pct": 26.8,
-      "ret120_pct": 147.7,
-      "rsi": 51.7
-    },
-    {
-      "rank": 13,
       "ticker": "4506.T",
       "name": "住友ファーマ",
       "sector17": "医薬品",
-      "score": 0.5403,
+      "score": 0.5904,
       "ret20_pct": -12.4,
       "ret120_pct": -36.7,
       "rsi": 40.7
     },
     {
-      "rank": 14,
-      "ticker": "9072.T",
-      "name": "ニッコンホールディングス",
-      "sector17": "運輸・物流",
-      "score": 0.5083,
-      "ret20_pct": 14.1,
-      "ret120_pct": 73.7,
-      "rsi": 45.9
-    },
-    {
-      "rank": 15,
-      "ticker": "2371.T",
-      "name": "カカクコム",
-      "sector17": "情報通信・サービスその他",
-      "score": 0.4958,
-      "ret20_pct": -3.0,
-      "ret120_pct": 51.6,
-      "rsi": 34.9
-    },
-    {
-      "rank": 16,
-      "ticker": "4061.T",
-      "name": "デンカ",
+      "rank": 7,
+      "ticker": "4043.T",
+      "name": "トクヤマ",
       "sector17": "素材・化学",
-      "score": 0.4797,
-      "ret20_pct": 12.7,
-      "ret120_pct": 58.3,
-      "rsi": 56.4
+      "score": 0.5876,
+      "ret20_pct": 15.4,
+      "ret120_pct": 23.5,
+      "rsi": 54.0
     },
     {
-      "rank": 17,
+      "rank": 8,
       "ticker": "3132.T",
       "name": "マクニカホールディングス",
       "sector17": "商社・卸売",
-      "score": 0.4605,
+      "score": 0.5681,
       "ret20_pct": -0.4,
       "ret120_pct": 32.9,
       "rsi": 57.9
     },
     {
-      "rank": 18,
+      "rank": 9,
+      "ticker": "6925.T",
+      "name": "ウシオ電機",
+      "sector17": "電機・精密",
+      "score": 0.5191,
+      "ret20_pct": 1.3,
+      "ret120_pct": 75.7,
+      "rsi": 53.7
+    },
+    {
+      "rank": 10,
       "ticker": "5344.T",
       "name": "ＭＡＲＵＷＡ",
       "sector17": "建設・資材",
-      "score": 0.4581,
+      "score": 0.4822,
       "ret20_pct": -0.3,
       "ret120_pct": 53.3,
       "rsi": 41.5
     },
     {
+      "rank": 11,
+      "ticker": "5838.T",
+      "name": "楽天銀行",
+      "sector17": "銀行",
+      "score": 0.4558,
+      "ret20_pct": -22.5,
+      "ret120_pct": -27.0,
+      "rsi": 52.7
+    },
+    {
+      "rank": 12,
+      "ticker": "6481.T",
+      "name": "ＴＨＫ",
+      "sector17": "機械",
+      "score": 0.4224,
+      "ret20_pct": 3.5,
+      "ret120_pct": 83.4,
+      "rsi": 52.0
+    },
+    {
+      "rank": 13,
+      "ticker": "9984.T",
+      "name": "ソフトバンクグループ",
+      "sector17": "情報通信・サービスその他",
+      "score": 0.3937,
+      "ret20_pct": 27.6,
+      "ret120_pct": 59.8,
+      "rsi": 43.6
+    },
+    {
+      "rank": 14,
+      "ticker": "3105.T",
+      "name": "日清紡ホールディングス",
+      "sector17": "電機・精密",
+      "score": 0.38,
+      "ret20_pct": -5.2,
+      "ret120_pct": 69.8,
+      "rsi": 37.6
+    },
+    {
+      "rank": 15,
+      "ticker": "6479.T",
+      "name": "ミネベアミツミ",
+      "sector17": "電機・精密",
+      "score": 0.3635,
+      "ret20_pct": 17.3,
+      "ret120_pct": 35.3,
+      "rsi": 53.7
+    },
+    {
+      "rank": 16,
+      "ticker": "6752.T",
+      "name": "パナソニック　ホールディングス",
+      "sector17": "電機・精密",
+      "score": 0.3502,
+      "ret20_pct": 19.8,
+      "ret120_pct": 85.8,
+      "rsi": 61.5
+    },
+    {
+      "rank": 17,
+      "ticker": "6134.T",
+      "name": "ＦＵＪＩ",
+      "sector17": "機械",
+      "score": 0.3475,
+      "ret20_pct": 7.1,
+      "ret120_pct": 133.5,
+      "rsi": 52.1
+    },
+    {
+      "rank": 18,
+      "ticker": "6857.T",
+      "name": "アドバンテスト",
+      "sector17": "電機・精密",
+      "score": 0.3362,
+      "ret20_pct": 12.5,
+      "ret120_pct": 41.7,
+      "rsi": 61.6
+    },
+    {
       "rank": 19,
-      "ticker": "5201.T",
-      "name": "ＡＧＣ",
-      "sector17": "建設・資材",
-      "score": 0.4295,
-      "ret20_pct": 23.9,
-      "ret120_pct": 44.2,
-      "rsi": 54.3
+      "ticker": "7729.T",
+      "name": "東京精密",
+      "sector17": "電機・精密",
+      "score": 0.3024,
+      "ret20_pct": 20.5,
+      "ret120_pct": 83.1,
+      "rsi": 63.4
     },
     {
       "rank": 20,
-      "ticker": "7003.T",
-      "name": "三井Ｅ＆Ｓ",
-      "sector17": "機械",
-      "score": 0.3849,
-      "ret20_pct": -3.6,
-      "ret120_pct": -24.4,
-      "rsi": 34.4
+      "ticker": "6724.T",
+      "name": "セイコーエプソン",
+      "sector17": "電機・精密",
+      "score": 0.2982,
+      "ret20_pct": 12.8,
+      "ret120_pct": 44.6,
+      "rsi": 44.3
     }
   ]
 }
