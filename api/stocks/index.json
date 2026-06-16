@@ -19001,6 +19001,78 @@
           "overall_signal": "neutral"
         }
       }
+    },
+    {
+      "symbol": "PLTR",
+      "name": "Palantir Technologies",
+      "market": "US",
+      "tier": "core",
+      "category": "us_tech",
+      "price": 134.71,
+      "change": 0.3113,
+      "change_pct": 0.2316,
+      "volume": 44075356,
+      "weight": 0.7,
+      "fundamentals": {
+        "trailing_pe": 151.36,
+        "forward_pe": 64.75,
+        "forward_eps": 2.08,
+        "price_to_book": 38.22,
+        "bps": null,
+        "psr": 61.82,
+        "dividend_yield": 0.0,
+        "market_cap": 322941911040,
+        "total_revenue": 5224174080,
+        "net_income": 2281529088,
+        "net_margin": 43.67,
+        "return_on_equity": 32.59,
+        "return_on_assets": 14.7,
+        "total_debt": 211976992,
+        "debt_to_equity": 2.477,
+        "full_time_employees": 4395,
+        "fifty_two_week_high": 207.52,
+        "fifty_two_week_low": 122.68,
+        "year_position": 14.2,
+        "deviation_25": -2.28,
+        "deviation_75": -5.85,
+        "ma25": 137.85,
+        "ma75": 143.08,
+        "volume_ratio": 100.0,
+        "trading_value": 0,
+        "golden_cross": 0,
+        "dead_cross": 1,
+        "year_high_update": 0,
+        "year_low_update": 0
+      },
+      "prediction": {
+        "predicted_price": 136.06,
+        "change_percent": 1.0,
+        "confidence": 0.5,
+        "trend_signal": "neutral",
+        "signal_details": {},
+        "signal_count": {
+          "positive": 2,
+          "negative": 2,
+          "total": 4
+        },
+        "model_used": "v9",
+        "target_method": "atr+backtest",
+        "medium_long": {
+          "deviation_25": -2.28,
+          "short_mid_signal": "neutral",
+          "short_mid_label": "様子見（25日乖離-2.3%）",
+          "deviation_75": -5.85,
+          "mid_long_signal": "neutral",
+          "mid_long_label": "中立",
+          "psychology_line": 50.0,
+          "psych_signal": "neutral",
+          "psych_label": "中立（心理線50%）",
+          "long_trend": "bearish",
+          "long_trend_label": "長期下落トレンド中",
+          "overall_action": "様子見",
+          "overall_signal": "neutral"
+        }
+      }
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "metadata": {
     "generated_at": "2025-09-22 03:03:16",
-    "total_count": 107,
-    "core_count": 70,
+    "total_count": 108,
+    "core_count": 71,
     "active_count": 47,
     "version": "1.0",
     "selection_criteria": {
       "core": "Major indices + Top market cap + Strategic importance",
       "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
     },
-    "total_stocks": 254,
+    "total_stocks": 255,
     "updated_at": "2026-06-04"
   },
   "core_universe": [
@@ -1461,6 +1461,13 @@
       "category": "macro_indicators",
       "tier": "macro",
       "weight": 0.0
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "category": "us_tech",
+      "tier": "core",
+      "weight": 0.7
     }
   ],
   "active_universe": [
