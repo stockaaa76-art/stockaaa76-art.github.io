@@ -1179,10 +1179,10 @@ class Dashboard {
     }
 
     formatVolume(volume) {
-        if (volume >= 1000000) {
-            return (volume / 1000000).toFixed(1) + 'M株';
-        } else if (volume >= 1000) {
-            return (volume / 1000).toFixed(1) + 'K株';
+        if (volume >= 1e8) {
+            return (volume / 1e8).toFixed(1) + '億株';
+        } else if (volume >= 1e4) {
+            return Math.round(volume / 1e4).toLocaleString('ja-JP') + '万株';
         }
         return volume.toLocaleString() + '株';
     }
