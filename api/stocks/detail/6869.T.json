@@ -1,0 +1,29 @@
+{
+ "sector": "日本-ヘルスケア",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 24.4,
+  "sector_per_p90": 160.1,
+  "sector_pbr_median": 2.09,
+  "sector_pbr_p90": 5.63
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 534193679150.0,
+   "next_year": 565140113980.0
+  },
+  "eps": {
+   "cur_year": 66.66836,
+   "next_year": 80.67194
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 1719.3334,
+   "high": 3300.0,
+   "low": 1380.0
+  }
+ }
+}

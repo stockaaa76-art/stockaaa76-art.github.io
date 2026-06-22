@@ -1,0 +1,29 @@
+{
+ "sector": "日本-小売業",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 16.6,
+  "sector_per_p90": 52.5,
+  "sector_pbr_median": 1.71,
+  "sector_pbr_p90": 9.5
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 3910415784930.0,
+   "next_year": 4294404818799.0
+  },
+  "eps": {
+   "cur_year": 1621.5807,
+   "next_year": 1807.4376
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 78720.0,
+   "high": 90400.0,
+   "low": 64000.0
+  }
+ }
+}

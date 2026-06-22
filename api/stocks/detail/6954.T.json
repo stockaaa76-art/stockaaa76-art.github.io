@@ -1,0 +1,29 @@
+{
+ "sector": "日本-電機・精密・半導体",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 42.5,
+  "sector_per_p90": 70.9,
+  "sector_pbr_median": 3.98,
+  "sector_pbr_p90": 29.33
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 944685565850.0,
+   "next_year": 997057361000.0
+  },
+  "eps": {
+   "cur_year": 213.05624,
+   "next_year": 228.01636
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 7379.5,
+   "high": 9000.0,
+   "low": 5600.0
+  }
+ }
+}

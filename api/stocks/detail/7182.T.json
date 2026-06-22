@@ -1,0 +1,29 @@
+{
+ "sector": "日本-銀行・金融",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 16.0,
+  "sector_per_p90": 22.2,
+  "sector_pbr_median": 1.61,
+  "sector_pbr_p90": 1.73
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 1818066666670.0,
+   "next_year": 2090300000000.0
+  },
+  "eps": {
+   "cur_year": 187.95464,
+   "next_year": 239.72577
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 3423.0,
+   "high": 4100.0,
+   "low": 2850.0
+  }
+ }
+}

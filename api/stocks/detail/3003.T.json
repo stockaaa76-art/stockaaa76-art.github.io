@@ -1,0 +1,29 @@
+{
+ "sector": "日本-不動産",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 14.6,
+  "sector_per_p90": 22.2,
+  "sector_pbr_median": 1.23,
+  "sector_pbr_p90": 1.79
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 868633333330.0,
+   "next_year": 925150000000.0
+  },
+  "eps": {
+   "cur_year": 162.1264,
+   "next_year": 171.03613
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 1981.6666,
+   "high": 2200.0,
+   "low": 1820.0
+  }
+ }
+}

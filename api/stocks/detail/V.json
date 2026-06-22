@@ -1,0 +1,29 @@
+{
+ "sector": "米-金融",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 20.0,
+  "sector_per_p90": 28.5,
+  "sector_pbr_median": 3.08,
+  "sector_pbr_p90": 17.55
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 45568081780.0,
+   "next_year": 50339358410.0
+  },
+  "eps": {
+   "cur_year": 13.14344,
+   "next_year": 14.86375
+  },
+  "growth": {
+   "next_year": 0.1309,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 398.83362,
+   "high": 450.0,
+   "low": 330.0
+  }
+ }
+}

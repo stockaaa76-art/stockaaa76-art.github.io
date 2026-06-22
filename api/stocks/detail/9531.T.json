@@ -1,0 +1,29 @@
+{
+ "sector": "日本-電力・ガス",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 6.9,
+  "sector_per_p90": 13.9,
+  "sector_pbr_median": 0.63,
+  "sector_pbr_p90": 1.2
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 3036316666670.0,
+   "next_year": 3013533333330.0
+  },
+  "eps": {
+   "cur_year": 380.68668,
+   "next_year": 434.30832
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 6648.0,
+   "high": 7460.0,
+   "low": 5680.0
+  }
+ }
+}

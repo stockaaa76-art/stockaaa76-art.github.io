@@ -1,0 +1,29 @@
+{
+ "sector": "米-ヘルスケア",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 25.5,
+  "sector_per_p90": 39.1,
+  "sector_pbr_median": 3.27,
+  "sector_pbr_p90": 31.46
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 85258219000.0,
+   "next_year": 98324424270.0
+  },
+  "eps": {
+   "cur_year": 36.20912,
+   "next_year": 44.4551
+  },
+  "growth": {
+   "next_year": 0.22770001,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 1218.7241,
+   "high": 1500.0,
+   "low": 850.0
+  }
+ }
+}

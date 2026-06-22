@@ -1,0 +1,29 @@
+{
+ "sector": "米-一般消費財",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 29.7,
+  "sector_per_p90": 370.8,
+  "sector_pbr_median": 5.95,
+  "sector_pbr_p90": 24.02
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 102487203610.0,
+   "next_year": 118445886440.0
+  },
+  "eps": {
+   "cur_year": 2.06084,
+   "next_year": 2.49995
+  },
+  "growth": {
+   "next_year": 0.2131,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 420.54633,
+   "high": 600.0,
+   "low": 123.0
+  }
+ }
+}

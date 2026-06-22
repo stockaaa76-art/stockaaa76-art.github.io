@@ -27,7 +27,8 @@ class StockDetail {
 
             // データ読み込み
             await this.loadStockData();
-            
+            await this.loadDetailData();
+
             // Chart.js読み込み（遅延ロード）
             await this.loadChart();
             
@@ -157,6 +158,16 @@ class StockDetail {
             }
         } catch (e) {
             console.warn('stocks/index.json 付与スキップ:', e);
+        }
+    }
+
+    // ③ 業種比較・理論株価・予測（per-ticker 詳細ファイル・index.json を肥大化させない）
+    async loadDetailData() {
+        try {
+            const res = await fetch(`/api/stocks/detail/${encodeURIComponent(this.symbol)}.json`);
+            if (res.ok) this.detailData = await res.json();
+        } catch (e) {
+            console.warn('detail データ取得スキップ:', e);
         }
     }
 
@@ -561,6 +572,47 @@ class StockDetail {
                 ['売残 前週比', num(f.margin_short_wow_pct, '%', 1)],
             ] },
         ];
+
+        // ③ 業種比較・理論株価・予測（per-ticker 詳細ファイル loadDetailData）
+        const d = this.detailData;
+        const v = d && d.valuation;
+        const fc = d && d.forecast;
+        if (v) {
+            const ownPer = f.trailing_pe;   // 自分のPER/PBRは index.json から（重複保持しない）
+            const ownPbr = f.price_to_book;
+            const perFlag = (ownPer != null && v.sector_per_p90 != null && ownPer > v.sector_per_p90) ? ' ⚠️過熱' : '';
+            const pbrFlag = (ownPbr != null && v.sector_pbr_p90 != null && ownPbr > v.sector_pbr_p90) ? ' ⚠️過熱' : '';
+            const curPrice = this.stockData.price;
+            const fairText = (theo) => {
+                if (theo == null) return null;
+                if (!curPrice) return px(theo);
+                const gap = (curPrice / theo - 1) * 100;
+                return `${px(theo)}（現在比 ${gap >= 0 ? '+' : ''}${gap.toFixed(0)}% ${gap >= 0 ? '割高' : '割安'}）`;
+            };
+            // 理論株価は index.json の BPS/EPS × 業種中央値で算出（PER基準・PBR基準を両面表示＝片面の誤誘導回避）
+            const theoPbr = (f.bps != null && v.sector_pbr_median != null) ? f.bps * v.sector_pbr_median : null;
+            const theoPer = (curPrice != null && ownPer && v.sector_per_median != null) ? curPrice * (v.sector_per_median / ownPer) : null;
+            groups.push({ title: `📊 業種比較・理論株価（${d.sector || '-'}）`, rows: [
+                ['PER vs 業種中央', (ownPer != null && v.sector_per_median != null) ? `${Number(ownPer).toFixed(1)}倍 / 業種中央 ${v.sector_per_median}倍（P90 ${v.sector_per_p90}）${perFlag}` : null],
+                ['PBR vs 業種中央', (ownPbr != null && v.sector_pbr_median != null) ? `${Number(ownPbr).toFixed(2)}倍 / 業種中央 ${v.sector_pbr_median}倍（P90 ${v.sector_pbr_p90}）${pbrFlag}` : null],
+                ['理論株価（PER基準）', fairText(theoPer)],
+                ['理論株価（PBR基準）', fairText(theoPbr)],
+            ] });
+        }
+        if (fc) {
+            const pct = (x) => (x == null) ? null : `${(x * 100).toFixed(1)}%`;
+            const pt = fc.price_target || {};
+            groups.push({ title: '🔮 今後の予測（アナリスト・参考）', rows: [
+                ['売上（当期予想）', big(fc.revenue && fc.revenue.cur_year)],
+                ['売上（来期予想）', big(fc.revenue && fc.revenue.next_year)],
+                ['EPS（当期予想）', px(fc.eps && fc.eps.cur_year)],
+                ['EPS（来期予想）', px(fc.eps && fc.eps.next_year)],
+                ['予想成長率（来期）', fc.growth ? pct(fc.growth.next_year) : null],
+                ['長期成長率（LTG）', fc.growth ? pct(fc.growth.long_term) : null],
+                ['目標株価（平均）', px(pt.mean)],
+                ['目標株価（高〜安）', (pt.high != null && pt.low != null) ? `${px(pt.high)} 〜 ${px(pt.low)}` : null],
+            ] });
+        }
 
         let any = false;
         wrap.innerHTML = groups.map(g => {

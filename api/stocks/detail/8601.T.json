@@ -1,0 +1,29 @@
+{
+ "sector": "日本-金融（保険・証券）",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 14.1,
+  "sector_per_p90": 25.7,
+  "sector_pbr_median": 1.27,
+  "sector_pbr_p90": 2.53
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 1577100000000.0,
+   "next_year": 1612050000000.0
+  },
+  "eps": {
+   "cur_year": 124.73364,
+   "next_year": 131.63217
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 1560.0,
+   "high": 1800.0,
+   "low": 1300.0
+  }
+ }
+}

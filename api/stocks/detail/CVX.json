@@ -1,0 +1,29 @@
+{
+ "sector": "米-エネルギー",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 18.3,
+  "sector_per_p90": 30.2,
+  "sector_pbr_median": 2.33,
+  "sector_pbr_p90": 4.25
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 232978340610.0,
+   "next_year": 210844744370.0
+  },
+  "eps": {
+   "cur_year": 14.5437,
+   "next_year": 12.56674
+  },
+  "growth": {
+   "next_year": -0.1359,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 216.04349,
+   "high": 236.0,
+   "low": 170.0
+  }
+ }
+}

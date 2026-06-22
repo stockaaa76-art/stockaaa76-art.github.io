@@ -1,0 +1,29 @@
+{
+ "sector": "日本-エンタメ・ゲーム",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 19.3,
+  "sector_per_p90": 87.0,
+  "sector_pbr_median": 2.51,
+  "sector_pbr_p90": 4.48
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 2339278123690.0,
+   "next_year": 2587112100870.0
+  },
+  "eps": {
+   "cur_year": 351.1148,
+   "next_year": 416.8003
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 10281.878,
+   "high": 21260.0,
+   "low": 5000.0
+  }
+ }
+}

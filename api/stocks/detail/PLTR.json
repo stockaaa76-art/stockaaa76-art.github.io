@@ -1,0 +1,29 @@
+{
+ "sector": "Technology",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": null,
+  "sector_per_p90": null,
+  "sector_pbr_median": null,
+  "sector_pbr_p90": null
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 7716355790.0,
+   "next_year": 11197459210.0
+  },
+  "eps": {
+   "cur_year": 1.47251,
+   "next_year": 2.08207
+  },
+  "growth": {
+   "next_year": 0.414,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 182.75407,
+   "high": 255.0,
+   "low": 70.0
+  }
+ }
+}

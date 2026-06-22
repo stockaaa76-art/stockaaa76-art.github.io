@@ -1,0 +1,29 @@
+{
+ "sector": "日本-医薬品",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 18.1,
+  "sector_per_p90": 28.5,
+  "sector_pbr_median": 1.8,
+  "sector_pbr_p90": 6.49
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 1386966557860.0,
+   "next_year": 1535094717140.0
+  },
+  "eps": {
+   "cur_year": 310.28564,
+   "next_year": 360.49158
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 9973.333,
+   "high": 13500.0,
+   "low": 8000.0
+  }
+ }
+}

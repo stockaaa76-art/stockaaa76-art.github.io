@@ -1,0 +1,29 @@
+{
+ "sector": "日本-鉄鋼・非鉄",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 31.2,
+  "sector_per_p90": 170.4,
+  "sector_pbr_median": 2.83,
+  "sector_pbr_p90": 18.2
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 440693941670.0,
+   "next_year": 475563904690.0
+  },
+  "eps": {
+   "cur_year": -53.72763,
+   "next_year": 69.77674
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 3275.625,
+   "high": 5130.0,
+   "low": 1300.0
+  }
+ }
+}

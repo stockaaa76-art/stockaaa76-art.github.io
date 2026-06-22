@@ -1,0 +1,29 @@
+{
+ "sector": "日本-素材・化学",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 22.7,
+  "sector_per_p90": 30.7,
+  "sector_pbr_median": 1.06,
+  "sector_pbr_p90": 4.39
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 2759108000000.0,
+   "next_year": 2865189272730.0
+  },
+  "eps": {
+   "cur_year": 67.27599,
+   "next_year": 78.61133
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 1293.75,
+   "high": 1600.0,
+   "low": 880.0
+  }
+ }
+}

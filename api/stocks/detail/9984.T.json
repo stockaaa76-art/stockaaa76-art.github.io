@@ -1,0 +1,29 @@
+{
+ "sector": "日本-情報通信・サービス",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 18.5,
+  "sector_per_p90": 31.8,
+  "sector_pbr_median": 2.37,
+  "sector_pbr_p90": 9.74
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 8365743164520.0,
+   "next_year": 8963734433180.0
+  },
+  "eps": {
+   "cur_year": 168.91016,
+   "next_year": 130.1049
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 7631.6313,
+   "high": 11200.0,
+   "low": 3140.0
+  }
+ }
+}

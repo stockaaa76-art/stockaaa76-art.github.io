@@ -1,0 +1,29 @@
+{
+ "sector": "日本-機械",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 28.2,
+  "sector_per_p90": 56.5,
+  "sector_pbr_median": 2.22,
+  "sector_pbr_p90": 4.25
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 1452572308400.0,
+   "next_year": 1497229404440.0
+  },
+  "eps": {
+   "cur_year": 397.3416,
+   "next_year": 474.92865
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 5836.6665,
+   "high": 8030.0,
+   "low": 4300.0
+  }
+ }
+}

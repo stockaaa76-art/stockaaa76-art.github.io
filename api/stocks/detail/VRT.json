@@ -1,0 +1,29 @@
+{
+ "sector": "Industrials",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": null,
+  "sector_per_p90": null,
+  "sector_pbr_median": null,
+  "sector_pbr_p90": null
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 13878053760.0,
+   "next_year": 17828096750.0
+  },
+  "eps": {
+   "cur_year": 6.4906,
+   "next_year": 8.85114
+  },
+  "growth": {
+   "next_year": 0.3637,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 378.30768,
+   "high": 500.0,
+   "low": 236.0
+  }
+ }
+}

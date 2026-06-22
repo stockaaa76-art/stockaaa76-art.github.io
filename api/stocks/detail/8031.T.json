@@ -1,0 +1,29 @@
+{
+ "sector": "日本-商社・卸売",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 16.3,
+  "sector_per_p90": 22.0,
+  "sector_pbr_median": 1.79,
+  "sector_pbr_p90": 2.06
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 14708044694050.0,
+   "next_year": 15182515493570.0
+  },
+  "eps": {
+   "cur_year": 343.0673,
+   "next_year": 360.68634
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 6310.769,
+   "high": 7800.0,
+   "low": 4500.0
+  }
+ }
+}

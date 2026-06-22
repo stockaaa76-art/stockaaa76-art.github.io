@@ -1,0 +1,29 @@
+{
+ "sector": "日本-自動車・輸送機",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 19.8,
+  "sector_per_p90": 28.8,
+  "sector_pbr_median": 0.9,
+  "sector_pbr_p90": 1.18
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 2748982199720.0,
+   "next_year": 2856896485830.0
+  },
+  "eps": {
+   "cur_year": 112.56741,
+   "next_year": 132.61559
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 1276.0,
+   "high": 1500.0,
+   "low": 1200.0
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "sector": "米-生活必需品",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 25.1,
+  "sector_per_p90": 47.8,
+  "sector_pbr_median": 9.37,
+  "sector_pbr_p90": 25.52
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 20527824400.0,
+   "next_year": 20671326500.0
+  },
+  "eps": {
+   "cur_year": 5.67869,
+   "next_year": 5.87357
+  },
+  "growth": {
+   "next_year": 0.0343,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 70.36364,
+   "high": 82.0,
+   "low": 59.0
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "sector": "米-テクノロジー",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 31.7,
+  "sector_per_p90": 68.4,
+  "sector_pbr_median": 8.78,
+  "sector_pbr_p90": 26.11
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 105831478620.0,
+   "next_year": 171819899640.0
+  },
+  "eps": {
+   "cur_year": 11.62307,
+   "next_year": 19.38501
+  },
+  "growth": {
+   "next_year": 0.6678,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 523.84,
+   "high": 650.0,
+   "low": 215.88
+  }
+ }
+}

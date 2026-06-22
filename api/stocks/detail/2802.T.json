@@ -1,0 +1,29 @@
+{
+ "sector": "日本-食品",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 16.8,
+  "sector_per_p90": 44.5,
+  "sector_pbr_median": 1.8,
+  "sector_pbr_p90": 7.66
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 1716200000000.0,
+   "next_year": 1837200000000.0
+  },
+  "eps": {
+   "cur_year": 144.62,
+   "next_year": 177.38
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 5632.143,
+   "high": 6700.0,
+   "low": 3650.0
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "sector": "米-通信・メディア",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 21.0,
+  "sector_per_p90": 28.1,
+  "sector_pbr_median": 6.01,
+  "sector_pbr_p90": 10.47
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 121769586000.0,
+   "next_year": 120144420790.0
+  },
+  "eps": {
+   "cur_year": 3.5139,
+   "next_year": 3.78416
+  },
+  "growth": {
+   "next_year": 0.0769,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 32.40476,
+   "high": 44.0,
+   "low": 21.0
+  }
+ }
+}

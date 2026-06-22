@@ -1,0 +1,29 @@
+{
+ "sector": "日本-運輸・物流",
+ "updated_at": "2026-06-22 17:57",
+ "valuation": {
+  "sector_per_median": 15.0,
+  "sector_per_p90": 40.8,
+  "sector_pbr_median": 0.97,
+  "sector_pbr_p90": 1.61
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 2017491426710.0,
+   "next_year": 2066200962970.0
+  },
+  "eps": {
+   "cur_year": 511.36102,
+   "next_year": 522.9845
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 4376.6665,
+   "high": 5100.0,
+   "low": 3350.0
+  }
+ }
+}
