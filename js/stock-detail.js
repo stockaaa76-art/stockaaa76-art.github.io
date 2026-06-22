@@ -43,8 +43,9 @@ class StockDetail {
             this.renderFundamentals();
             await this.renderChart();
             this.loadRelatedStocks();
-            this.loadMLScore();
-            
+            await this.loadMLScore();
+            this.renderJudgmentFunnel();
+
             // イベントリスナー設定
             this.setupEventListeners();
             
@@ -920,6 +921,68 @@ class StockDetail {
         return axisLabels[period] || '日付';
     }
 
+    // 🧭 投資判断の整理（Q1質/Q2タイミング/Q3相対強さ→BT準拠アクション型）
+    // ◎○△は BT未検証のヒューリスティック。アクションの型のみ BT-validated 結論に基づく。断定売買シグナルではない。
+    renderJudgmentFunnel() {
+        const sec = document.getElementById('judgment-funnel-section');
+        const ct = document.getElementById('judgment-funnel-content');
+        if (!sec || !ct) return;
+        const f = this.stockData.fundamentals || {};
+        const d = this.detailData;
+        const v = d && d.valuation;
+        const fc = d && d.forecast;
+        const mlPred = (this.stockData.prediction && this.stockData.prediction.medium_long) || {};
+
+        // --- Q1 質 ---
+        const roe = f.return_on_equity, de = f.debt_to_equity;
+        const ownPer = f.trailing_pe, ownPbr = f.price_to_book;
+        const gNext = (fc && fc.growth) ? fc.growth.next_year : null;
+        let qScore = 0; const qNotes = [];
+        if (roe != null) { if (roe >= 15) { qScore += 2; qNotes.push(`ROE ${roe.toFixed(0)}%`); } else if (roe >= 8) { qScore += 1; qNotes.push(`ROE ${roe.toFixed(0)}%`); } else qNotes.push(`ROE ${roe.toFixed(0)}%低`); }
+        if (de != null) { if (de <= 1.0) qScore += 1; else if (de >= 2.0) { qScore -= 1; qNotes.push('財務重い'); } }
+        if (v && ownPer != null && v.sector_per_median != null) { if (ownPer < v.sector_per_median) { qScore += 1; qNotes.push('PER業種比割安'); } else if (v.sector_per_p90 != null && ownPer > v.sector_per_p90) { qScore -= 1; qNotes.push('PER過熱'); } }
+        if (gNext != null && gNext >= 0.10) { qScore += 1; qNotes.push(`増益+${(gNext * 100).toFixed(0)}%`); }
+        const qMark = qScore >= 3 ? '◎' : qScore >= 1 ? '○' : '△';
+
+        // --- Q2 タイミング ---
+        const dev25 = (mlPred.deviation_25 != null) ? mlPred.deviation_25 : f.deviation_25;
+        const dev75 = f.deviation_75;
+        const overheatSector = !!(v && ((ownPer != null && v.sector_per_p90 != null && ownPer > v.sector_per_p90) || (ownPbr != null && v.sector_pbr_p90 != null && ownPbr > v.sector_pbr_p90)));
+        const longDown = (dev75 != null && dev75 < 0) && (f.year_position != null && f.year_position < 35);
+        const dev25s = dev25 != null ? `${dev25 > 0 ? '+' : ''}${dev25.toFixed(0)}%` : '-';
+        let tMark, tNote;
+        if ((dev25 != null && dev25 >= 15) || overheatSector) { tMark = '△'; tNote = `過熱（25日乖離${dev25s}${overheatSector ? '・業種P90超' : ''}）`; }
+        else if (dev25 != null && dev25 <= -5 && !longDown) { tMark = '◎'; tNote = `押し目（25日乖離${dev25s}）`; }
+        else if (longDown) { tMark = '△'; tNote = `長期下降トレンド（75日乖離${dev75.toFixed(0)}%）`; }
+        else { tMark = '○'; tNote = `中立（25日乖離${dev25s}）`; }
+
+        // --- Q3 相対強さ ---
+        const me = this.mlEntry;
+        let sMark = '—', sNote = 'MLデータなし';
+        if (me && me.score_pct != null) { const p = me.score_pct; sMark = p >= 70 ? '◎' : p >= 40 ? '○' : '△'; sNote = `ML ${p.toFixed(0)}%ile（${p >= 70 ? '上位' : p >= 40 ? '中位' : '下位'}・${me.rank}位）`; }
+
+        // --- アクションの型（BT-validated wiring） ---
+        let actionType;
+        if (qMark === '△') actionType = '見送り（質が低い／構造悪化）';
+        else if (longDown) actionType = '新規は押し目分割（Strategy I）向き・一括は見送り（長期下降）';
+        else if (tMark === '△') actionType = '押し目待ち or Strategy I 4分割（過熱）';
+        else actionType = '握る／通常買い候補（質◯・過熱でない）';
+
+        const row = (q, mark, note) => `<tr><td style="white-space:nowrap;font-weight:600;">${q}</td><td style="text-align:center;font-size:18px;">${mark}</td><td style="color:var(--card-text-color-secondary,#6b7280);">${note}</td></tr>`;
+        ct.innerHTML = `
+          <table class="fund-table" style="width:100%;">
+            ${row('Q1 質（持つ価値）', qMark, qNotes.join('・') || '-')}
+            ${row('Q2 タイミング', tMark, tNote)}
+            ${row('Q3 相対強さ', sMark, sNote)}
+          </table>
+          <div style="margin-top:10px;padding:10px 12px;background:var(--card-separator-color,#f3f4f6);border-radius:8px;">
+            <strong>→ アクションの型：</strong>${actionType}
+          </div>
+          <p style="margin-top:8px;font-size:12px;color:var(--card-text-color-secondary,#9ca3af);">⚠️ 判断材料の整理です。◎○△は BT未検証のヒューリスティック。アクションの型は当プロジェクトBT結論（握る／Strategy I分割／見送り）に基づきます。<strong>断定的な売買シグナルではありません</strong>。最終判断はご自身の責任で。</p>
+        `;
+        sec.style.display = 'block';
+    }
+
     async loadMLScore() {
         try {
             const market = this.detectMarket(this.symbol);
@@ -934,6 +997,7 @@ class StockDetail {
             if (all.length === 0) return;
 
             const entry = all.find(s => s.ticker === this.symbol);
+            this.mlEntry = entry || null;  // 🧭 投資判断ファネルで再利用
             const el = document.getElementById('ml-score-section');
             const ct = document.getElementById('ml-score-content');
             if (!el || !ct) return;
