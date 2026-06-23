@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+# フロント用データAPI（JSON）は検索インデックス不要のためクロール抑止（JSのfetchには影響しない）
+Disallow: /api/
 
 # AdSense ads.txt
 Allow: /ads.txt
