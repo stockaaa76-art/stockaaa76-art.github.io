@@ -251,7 +251,7 @@ class StockDetail {
         // 指標
         document.getElementById('prev-close').textContent = 
             this.formatPrice(data.price - (data.change || 0), market);
-        document.getElementById('volume').textContent = 
+        document.getElementById('volume').innerHTML =
             this.formatVolume(data.volume);
         
         // 52週高安（データがある場合）
@@ -1199,13 +1199,13 @@ class StockDetail {
     formatVolume(volume) {
         const num = parseInt(volume);
         if (isNaN(num) || num === 0) return '---';
-        
+        const raw = num.toLocaleString('en-US');
         if (num >= 1e8) {
-            return (num / 1e8).toFixed(1) + '億';
+            return `${(num / 1e8).toFixed(1)}億 <span style="font-size:0.82em;color:#9ca3af;">(${raw})</span>`;
         } else if (num >= 1e4) {
-            return Math.round(num / 1e4).toLocaleString('ja-JP') + '万';
+            return `${Math.round(num / 1e4).toLocaleString('ja-JP')}万 <span style="font-size:0.82em;color:#9ca3af;">(${raw})</span>`;
         }
-        return num.toLocaleString('ja-JP');
+        return raw;
     }
 }
 

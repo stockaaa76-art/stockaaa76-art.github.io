@@ -503,13 +503,13 @@ class StocksList {
     formatVolume(volume) {
         const num = parseInt(volume);
         if (isNaN(num) || num === 0) return '---';
-        
+        const raw = num.toLocaleString('en-US');
         if (num >= 1e8) {
-            return (num / 1e8).toFixed(1) + '億';
+            return `${(num / 1e8).toFixed(1)}億 <span style="font-size:0.82em;color:#9ca3af;">(${raw})</span>`;
         } else if (num >= 1e4) {
-            return Math.round(num / 1e4).toLocaleString('ja-JP') + '万';
+            return `${Math.round(num / 1e4).toLocaleString('ja-JP')}万 <span style="font-size:0.82em;color:#9ca3af;">(${raw})</span>`;
         }
-        return num.toLocaleString('ja-JP');
+        return raw;
     }
 
     getMediumLongJudgment(stock) {

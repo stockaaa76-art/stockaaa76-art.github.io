@@ -731,6 +731,14 @@ class Dashboard {
         }
     }
 
+    // 米国ランキングの全カードに状態メッセージを表示（無限スピナー防止・再読込導線）
+    renderUSEmpty(msg) {
+        const retry = `<button onclick="window.dashboard && window.dashboard.loadUSRankings()" style="margin-top:8px;padding:4px 12px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer;font-size:0.85em;">再読込</button>`;
+        document.querySelectorAll('[id^="us-"][id$="-ranking"]').forEach(el => {
+            el.innerHTML = `<div style="padding:16px;color:#9ca3af;font-size:0.9em;">${msg}<br>${retry}</div>`;
+        });
+    }
+
     async loadUSRankings(period = null) {
         // 現在の期間を管理
         if (period) this.currentUsPeriod = period;
@@ -742,12 +750,12 @@ class Dashboard {
             // デイリー・ウィークリー・マンスリー: すべて period_rankings.json を使用（単一ソース）
             if (!this.periodRankingsData) {
                 const res = await fetch(this.period_rankings_api);
-                if (!res.ok) return;
+                if (!res.ok) { this.renderUSEmpty('米国データの取得に失敗しました'); return; }
                 this.periodRankingsData = await res.json();
             }
             const usKey = `us_${usPeriod}`;
             const periodSection = this.periodRankingsData[usKey];
-            if (!periodSection) return;
+            if (!periodSection) { this.renderUSEmpty('米国ランキングは現在データ未生成です'); return; }
             const rankings = periodSection.rankings || {};
             // period_rankings 形式 → items 形式に変換
             const allStocks = [
@@ -833,6 +841,7 @@ class Dashboard {
             }
         } catch (e) {
             console.error('米国株ランキング取得エラー:', e);
+            this.renderUSEmpty('米国株ランキングの取得でエラーが発生しました');
         }
     }
 
@@ -1179,33 +1188,37 @@ class Dashboard {
     }
 
     formatVolume(volume) {
+        const raw = (volume || 0).toLocaleString('en-US');
         if (volume >= 1e8) {
-            return (volume / 1e8).toFixed(1) + '億株';
+            return `${(volume / 1e8).toFixed(1)}億株 <span style="font-size:0.82em;color:#9ca3af;">(${raw})</span>`;
         } else if (volume >= 1e4) {
-            return Math.round(volume / 1e4).toLocaleString('ja-JP') + '万株';
+            return `${Math.round(volume / 1e4).toLocaleString('ja-JP')}万株 <span style="font-size:0.82em;color:#9ca3af;">(${raw})</span>`;
         }
-        return volume.toLocaleString() + '株';
+        return raw + '株';
     }
 
     formatMarketCap(marketCap, currency = '¥') {
+        const gray = (s) => ` <span style="font-size:0.82em;color:#9ca3af;">(${s})</span>`;
         if (currency === '$') {
-            // USD建て: 兆ドル / 十億ドル表記
+            // USD建て: 兆ドル / 十億ドル表記 + 生数値
+            const raw = '$' + (marketCap || 0).toLocaleString('en-US');
             if (marketCap >= 1000000000000) {
-                return '$' + (marketCap / 1000000000000).toFixed(1) + '兆';
+                return `$${(marketCap / 1000000000000).toFixed(1)}兆${gray(raw)}`;
             } else if (marketCap >= 1000000000) {
-                return '$' + (marketCap / 1000000000).toFixed(1) + 'B';
+                return `$${(marketCap / 1000000000).toFixed(1)}B${gray(raw)}`;
             }
-            return '$' + marketCap.toLocaleString();
+            return raw;
         }
-        // JPY建て: 兆円 / 億円表記
+        // JPY建て: 兆円 / 億円表記 + 生数値
+        const rawJ = (marketCap || 0).toLocaleString('en-US') + '円';
         if (marketCap >= 1000000000000) {
-            return (marketCap / 1000000000000).toFixed(1) + '兆円';
+            return `${(marketCap / 1000000000000).toFixed(1)}兆円${gray(rawJ)}`;
         } else if (marketCap >= 100000000) {
-            return (marketCap / 100000000).toFixed(1) + '億円';
+            return `${(marketCap / 100000000).toFixed(1)}億円${gray(rawJ)}`;
         } else if (marketCap >= 10000) {
-            return (marketCap / 10000).toFixed(1) + '万円';
+            return `${(marketCap / 10000).toFixed(1)}万円${gray(rawJ)}`;
         }
-        return marketCap.toLocaleString() + '円';
+        return rawJ;
     }
 
     showRankingError() {
@@ -1240,7 +1253,7 @@ class Dashboard {
 
 // DOMContentLoaded後に初期化
 document.addEventListener('DOMContentLoaded', () => {
-    new Dashboard();
+    window.dashboard = new Dashboard();
 });
 
 // 追加CSS（ウォッチリスト用）
