@@ -25,5 +25,31 @@
    "high": 2800.0,
    "low": 2060.0
   }
+ },
+ "theoretical_price": {
+  "now": {
+   "low": 2295.17,
+   "mid": 2295.17,
+   "high": 3097.77
+  },
+  "y1": {
+   "low": 2414.53,
+   "mid": 2414.53,
+   "high": 3258.88
+  },
+  "y5": {
+   "low": 3029.86,
+   "mid": 3619.0,
+   "high": 4208.14
+  },
+  "assumptions": {
+   "eps_cur": 140.808,
+   "eps_next": 148.131,
+   "eps_5y": 168.326,
+   "growth_used": 0.052,
+   "per_median": 16.3,
+   "per_p90": 22.0,
+   "per_terminal": "18-25"
+  }
  }
 }

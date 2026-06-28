@@ -600,6 +600,23 @@ class StockDetail {
                 ['理論株価（PBR基準）', fairText(theoPbr)],
             ] });
         }
+        const tp = d && d.theoretical_price;
+        if (tp) {
+            const curP = this.stockData.price;
+            const bandText = (b) => {
+                if (!b) return null;
+                const rng = `${px(b.low)} 〜 ${px(b.high)}`;
+                if (b.mid == null) return rng;
+                if (!curP) return `${rng}（中央 ${px(b.mid)}）`;
+                const gap = (curP / b.mid - 1) * 100;
+                return `${rng}（中央 ${px(b.mid)}・現在比 ${gap >= 0 ? '+' : ''}${gap.toFixed(0)}% ${gap >= 0 ? '割高' : '割安'}）`;
+            };
+            groups.push({ title: '📐 理論株価レンジ（EPS×適正PER・BT未検証の参考）', rows: [
+                ['今（当期EPS基準）', bandText(tp.now)],
+                ['1年後（来期EPS予想）', bandText(tp.y1)],
+                ['5年後（成長逓減5年複利）', bandText(tp.y5)],
+            ] });
+        }
         if (fc) {
             const pct = (x) => (x == null) ? null : `${(x * 100).toFixed(1)}%`;
             const pt = fc.price_target || {};
@@ -786,8 +803,30 @@ class StockDetail {
      */
     async generateChartDataForPeriod(period) {
         // ボタン別の表示件数（history から末尾N件をスライス）
-        const SLICE = { '1w': 5, '1m': 20, '3m': 60, '1y': 245 };
+        // 5y=1260/all=0(全件) は個別ファイル（history/{ticker}.json）があれば表示可能
+        const SLICE = { '1w': 5, '1m': 20, '3m': 60, '1y': 245, '5y': 1260, 'all': 0 };
 
+        // 1. 個別ファイル（長期キャッシュ）を優先取得
+        if (period !== '1d') {
+            try {
+                const res = await fetch(`/data/history/${this.symbol}.json`);
+                if (res.ok) {
+                    const history = await res.json();
+                    if (history && history.length > 0) {
+                        const n = SLICE[period];
+                        const data = n > 0 ? history.slice(-n) : history;
+                        if (data.length > 0) {
+                            return {
+                                labels: data.map(item => item.date),
+                                prices: data.map(item => item.close)
+                            };
+                        }
+                    }
+                }
+            } catch (e) { /* フォールバックへ */ }
+        }
+
+        // 2. 既存の historical_data.json（2年・フォールバック）
         try {
             const response = await fetch('/data/historical_data.json');
             if (response.ok) {
@@ -796,7 +835,6 @@ class StockDetail {
                 if (!symbolData) return null;
 
                 if (period === '1d') {
-                    // 今日の5分足
                     const data = symbolData['1d'] || [];
                     if (!data.length) return null;
                     return {
@@ -804,11 +842,10 @@ class StockDetail {
                         prices: data.map(item => item.close)
                     };
                 } else {
-                    // history から末尾N件をスライス
                     const history = symbolData['history'] || symbolData.periods?.[period] || [];
                     if (!history.length) return null;
                     const n = SLICE[period] || history.length;
-                    const data = history.slice(-n);
+                    const data = n > 0 ? history.slice(-n) : history;
                     return {
                         labels: data.map(item => item.date),
                         prices: data.map(item => item.close)

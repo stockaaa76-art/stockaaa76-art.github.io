@@ -1,11 +1,11 @@
 {
- "sector": "Technology",
+ "sector": "米-テクノロジー",
  "updated_at": "2026-06-22 17:57",
  "valuation": {
-  "sector_per_median": null,
-  "sector_per_p90": null,
-  "sector_pbr_median": null,
-  "sector_pbr_p90": null
+  "sector_per_median": 31.7,
+  "sector_per_p90": 68.4,
+  "sector_pbr_median": 8.78,
+  "sector_pbr_p90": 26.11
  },
  "forecast": {
   "revenue": {
@@ -24,6 +24,32 @@
    "mean": 182.75407,
    "high": 255.0,
    "low": 70.0
+  }
+ },
+ "theoretical_price": {
+  "now": {
+   "low": 29.45,
+   "mid": 46.68,
+   "high": 100.72
+  },
+  "y1": {
+   "low": 41.64,
+   "mid": 66.0,
+   "high": 142.41
+  },
+  "y5": {
+   "low": 93.52,
+   "mid": 111.7,
+   "high": 129.88
+  },
+  "assumptions": {
+   "eps_cur": 1.473,
+   "eps_next": 2.082,
+   "eps_5y": 5.195,
+   "growth_used": 0.414,
+   "per_median": 31.7,
+   "per_p90": 68.4,
+   "per_terminal": "18-25"
   }
  }
 }
