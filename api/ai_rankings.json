@@ -1,23 +1,13 @@
 {
-  "generated_at": "2026-06-25T23:00:22.254935",
+  "generated_at": "2026-06-28T22:39:41.364440",
   "jp": {
     "bullish_high": [
       {
-        "symbol": "8725.T",
-        "name": "MS&ADインシュアランス",
-        "price": 4252.0,
-        "predicted_price": 4376.311099142857,
-        "predicted_change": 2.923591231017324,
-        "confidence": 0.6667,
-        "trend_signal": "bullish",
-        "model_used": "v10"
-      },
-      {
         "symbol": "4578.T",
         "name": "大塚ホールディングス",
-        "price": 10840.0,
-        "predicted_price": 11054.4538,
-        "predicted_change": 1.9783560885608793,
+        "price": 10825.0,
+        "predicted_price": 11036.531166582823,
+        "predicted_change": 1.9540985365618757,
         "confidence": 0.6133,
         "trend_signal": "bullish",
         "model_used": "v9"
@@ -25,29 +15,9 @@
       {
         "symbol": "8031.T",
         "name": "三井物産",
-        "price": 4446.0,
-        "predicted_price": 4576.2356230000005,
-        "predicted_change": 2.929276270805229,
-        "confidence": 0.6,
-        "trend_signal": "bullish",
-        "model_used": "v4"
-      },
-      {
-        "symbol": "5401.T",
-        "name": "日本製鉄",
-        "price": 547.0,
-        "predicted_price": 557.9613250659529,
-        "predicted_change": 2.003898549534352,
-        "confidence": 0.6,
-        "trend_signal": "bullish",
-        "model_used": "v3"
-      },
-      {
-        "symbol": "1618.T",
-        "name": "エネルギー資源上場投信",
-        "price": 31060.0,
-        "predicted_price": 31890.453271428567,
-        "predicted_change": 2.6737066047281615,
+        "price": 4508.0,
+        "predicted_price": 4636.815096857143,
+        "predicted_change": 2.857477747496509,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v4"
@@ -55,9 +25,9 @@
       {
         "symbol": "5631.T",
         "name": "日本製鋼所",
-        "price": 7945.0,
-        "predicted_price": 8313.805739642856,
-        "predicted_change": 4.641985395127197,
+        "price": 7724.0,
+        "predicted_price": 8080.146559714285,
+        "predicted_change": 4.6109083339498325,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v3"
@@ -65,9 +35,29 @@
       {
         "symbol": "7011.T",
         "name": "三菱重工業",
-        "price": 3618.0,
-        "predicted_price": 3750.3384672857137,
-        "predicted_change": 3.657779637526636,
+        "price": 3567.0,
+        "predicted_price": 3696.895640928571,
+        "predicted_change": 3.6415935219672297,
+        "confidence": 0.6,
+        "trend_signal": "bullish",
+        "model_used": "v3"
+      },
+      {
+        "symbol": "9501.T",
+        "name": "9501.T",
+        "price": 456.6000061035156,
+        "predicted_price": 478.45529487489534,
+        "predicted_change": 4.786528357256508,
+        "confidence": 0.6,
+        "trend_signal": "bullish",
+        "model_used": "v4"
+      },
+      {
+        "symbol": "6857.T",
+        "name": "アドバンテスト",
+        "price": 32440.0,
+        "predicted_price": 35003.392857142855,
+        "predicted_change": 7.90195085432446,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v3"
@@ -75,9 +65,9 @@
       {
         "symbol": "6146.T",
         "name": "ディスコ",
-        "price": 85970.0,
-        "predicted_price": 92966.42857142857,
-        "predicted_change": 8.138220974093946,
+        "price": 78510.0,
+        "predicted_price": 85653.75,
+        "predicted_change": 9.099159342758885,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v3"
@@ -85,61 +75,81 @@
       {
         "symbol": "6920.T",
         "name": "レーザーテック",
-        "price": 53180.0,
-        "predicted_price": 58147.857142857145,
-        "predicted_change": 9.34158921184119,
+        "price": 49803.0,
+        "predicted_price": 54795.75093204324,
+        "predicted_change": 10.025000365526648,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v3"
       },
       {
-        "symbol": "3659.T",
-        "name": "ネクソン",
-        "price": 2134.0,
-        "predicted_price": 2185.6603367959183,
-        "predicted_change": 2.4208217805022625,
-        "confidence": 0.5714,
+        "symbol": "1330.T",
+        "name": "上場インデックスファンド225",
+        "price": 72640.0,
+        "predicted_price": 74388.20272,
+        "predicted_change": 2.406666740088107,
+        "confidence": 0.5333,
         "trend_signal": "bullish",
-        "model_used": "v2"
+        "model_used": "v5"
+      },
+      {
+        "symbol": "1306.T",
+        "name": "TOPIX連動型上場投資信託",
+        "price": 420.3999938964844,
+        "predicted_price": 429.5903958398176,
+        "predicted_change": 2.1861089621224314,
+        "confidence": 0.5333,
+        "trend_signal": "bullish",
+        "model_used": "v5"
       }
     ],
     "bearish_high": [
       {
-        "symbol": "9984.T",
-        "name": "ソフトバンクG",
-        "price": 7118.0,
-        "predicted_price": 6686.268521,
-        "predicted_change": -6.065348117448722,
-        "confidence": 0.5333,
+        "symbol": "9064.T",
+        "name": "ヤマトホールディングス",
+        "price": 1819.5,
+        "predicted_price": 1783.17815775,
+        "predicted_change": -1.9962540395713064,
+        "confidence": 0.6667,
         "trend_signal": "bearish",
         "model_used": "v5"
       },
       {
-        "symbol": "4063.T",
-        "name": "信越化学工業",
-        "price": 7150.0,
-        "predicted_price": 6926.819789285714,
-        "predicted_change": -3.1214015484515487,
-        "confidence": 0.5333,
-        "trend_signal": "bearish",
-        "model_used": "v5"
-      },
-      {
-        "symbol": "4519.T",
-        "name": "中外製薬",
-        "price": 7534.0,
-        "predicted_price": 7371.809645285714,
-        "predicted_change": -2.1527787989684843,
+        "symbol": "7203.T",
+        "name": "トヨタ自動車",
+        "price": 2768.0,
+        "predicted_price": 2713.4508354285713,
+        "predicted_change": -1.9707068125516154,
         "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v4"
       },
       {
+        "symbol": "4519.T",
+        "name": "中外製薬",
+        "price": 7368.0,
+        "predicted_price": 7210.426474839187,
+        "predicted_change": -2.138620048328081,
+        "confidence": 0.5333,
+        "trend_signal": "bearish",
+        "model_used": "v4"
+      },
+      {
+        "symbol": "8001.T",
+        "name": "伊藤忠商事",
+        "price": 1833.5,
+        "predicted_price": 1798.2553664285715,
+        "predicted_change": -1.9222598075499586,
+        "confidence": 0.5333,
+        "trend_signal": "bearish",
+        "model_used": "v8"
+      },
+      {
         "symbol": "5108.T",
         "name": "ブリヂストン",
-        "price": 3425.0,
-        "predicted_price": 3368.862389285714,
-        "predicted_change": -1.6390543274244083,
+        "price": 3402.0,
+        "predicted_price": 3347.4554664977395,
+        "predicted_change": -1.6033078630881978,
         "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v5"
@@ -147,9 +157,9 @@
       {
         "symbol": "4568.T",
         "name": "第一三共",
-        "price": 2566.5,
-        "predicted_price": 2507.302209964286,
-        "predicted_change": -2.306557180429153,
+        "price": 2535.5,
+        "predicted_price": 2476.3971061785714,
+        "predicted_change": -2.3310153350987397,
         "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v5"
@@ -157,9 +167,9 @@
       {
         "symbol": "6752.T",
         "name": "パナソニック",
-        "price": 4610.0,
-        "predicted_price": 4437.687261428571,
-        "predicted_change": -3.737803439727305,
+        "price": 4540.0,
+        "predicted_price": 4371.453088571428,
+        "predicted_change": -3.7124870358716198,
         "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v5"
@@ -167,9 +177,9 @@
       {
         "symbol": "9022.T",
         "name": "東海旅客鉄道",
-        "price": 3341.0,
-        "predicted_price": 3280.961714428571,
-        "predicted_change": -1.7970154316500686,
+        "price": 3420.0,
+        "predicted_price": 3358.513231428571,
+        "predicted_change": -1.79785873015874,
         "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v1"
@@ -177,9 +187,9 @@
       {
         "symbol": "8802.T",
         "name": "三菱地所",
-        "price": 3984.0,
-        "predicted_price": 3880.81324,
-        "predicted_change": -2.590029116465865,
+        "price": 4101.0,
+        "predicted_price": 3996.0906189285715,
+        "predicted_change": -2.558141455045805,
         "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v5"
@@ -187,31 +197,21 @@
       {
         "symbol": "8801.T",
         "name": "三井不動産",
-        "price": 1475.0,
-        "predicted_price": 1443.5786892857143,
-        "predicted_change": -2.1302583535108957,
+        "price": 1480.0,
+        "predicted_price": 1448.5959657142857,
+        "predicted_change": -2.121894208494207,
         "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v10"
-      },
-      {
-        "symbol": "2413.T",
-        "name": "エムスリー",
-        "price": 1744.0,
-        "predicted_price": 1705.726201142857,
-        "predicted_change": -2.1945985583224195,
-        "confidence": 0.5333,
-        "trend_signal": "bearish",
-        "model_used": "v7"
       }
     ],
     "notable": [
       {
         "symbol": "6920.T",
         "name": "レーザーテック",
-        "price": 53180.0,
-        "predicted_price": 58147.857142857145,
-        "predicted_change": 9.34158921184119,
+        "price": 49803.0,
+        "predicted_price": 54795.75093204324,
+        "predicted_change": 10.025000365526648,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v3"
@@ -219,9 +219,19 @@
       {
         "symbol": "6146.T",
         "name": "ディスコ",
-        "price": 85970.0,
-        "predicted_price": 92966.42857142857,
-        "predicted_change": 8.138220974093946,
+        "price": 78510.0,
+        "predicted_price": 85653.75,
+        "predicted_change": 9.099159342758885,
+        "confidence": 0.6,
+        "trend_signal": "bullish",
+        "model_used": "v3"
+      },
+      {
+        "symbol": "6857.T",
+        "name": "アドバンテスト",
+        "price": 32440.0,
+        "predicted_price": 35003.392857142855,
+        "predicted_change": 7.90195085432446,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v3"
@@ -229,113 +239,103 @@
       {
         "symbol": "285A.T",
         "name": "キオクシアホールディングス",
-        "price": 103850.0,
-        "predicted_price": 112974.28571428571,
-        "predicted_change": 8.786023798060386,
+        "price": 92180.0,
+        "predicted_price": 99297.5,
+        "predicted_change": 7.721306140160555,
+        "confidence": 0.4667,
+        "trend_signal": "bullish",
+        "model_used": "v3"
+      },
+      {
+        "symbol": "3436.T",
+        "name": "SUMCO",
+        "price": 3808.0,
+        "predicted_price": 3555.911590675225,
+        "predicted_change": -6.619968732268252,
+        "confidence": 0.5333,
+        "trend_signal": "bearish",
+        "model_used": "v5"
+      },
+      {
+        "symbol": "7735.T",
+        "name": "SCREENホールディングス",
+        "price": 16535.0,
+        "predicted_price": 17611.785714285714,
+        "predicted_change": 6.512160352499024,
         "confidence": 0.5333,
         "trend_signal": "bullish",
         "model_used": "v3"
       },
       {
-        "symbol": "5706.T",
-        "name": "三井金属鉱業",
-        "price": 46390.0,
-        "predicted_price": 49661.20925377551,
-        "predicted_change": 7.051539671859255,
-        "confidence": 0.5714,
-        "trend_signal": "bullish",
-        "model_used": "v2"
-      },
-      {
-        "symbol": "3436.T",
-        "name": "SUMCO",
-        "price": 3794.0,
-        "predicted_price": 3532.356056142857,
-        "predicted_change": -6.8962557685066646,
-        "confidence": 0.5333,
-        "trend_signal": "bearish",
-        "model_used": "v5"
-      },
-      {
         "symbol": "5802.T",
         "name": "住友電気工業",
-        "price": 12240.0,
-        "predicted_price": 12992.085159999999,
-        "predicted_change": 6.14448660130718,
+        "price": 2983.75,
+        "predicted_price": 3165.671217589286,
+        "predicted_change": 6.097066362439406,
         "confidence": 0.5333,
         "trend_signal": "bullish",
         "model_used": "v5"
       },
       {
-        "symbol": "9984.T",
-        "name": "ソフトバンクG",
-        "price": 7118.0,
-        "predicted_price": 6686.268521,
-        "predicted_change": -6.065348117448722,
-        "confidence": 0.5333,
-        "trend_signal": "bearish",
-        "model_used": "v5"
+        "symbol": "6723.T",
+        "name": "ルネサスエレクトロニクス",
+        "price": 4800.0,
+        "predicted_price": 5083.015306122449,
+        "predicted_change": 5.896152210884358,
+        "confidence": 0.5143,
+        "trend_signal": "bullish",
+        "model_used": "v3"
       },
       {
         "symbol": "1623.T",
         "name": "鉄鋼・非鉄上場投信",
-        "price": 74990.0,
-        "predicted_price": 79015.88941071427,
-        "predicted_change": 5.368568356733258,
+        "price": 71940.0,
+        "predicted_price": 75835.06146428571,
+        "predicted_change": 5.414319522220894,
         "confidence": 0.5333,
         "trend_signal": "bullish",
         "model_used": "v8"
       },
       {
-        "symbol": "5631.T",
-        "name": "日本製鋼所",
-        "price": 7945.0,
-        "predicted_price": 8313.805739642856,
-        "predicted_change": 4.641985395127197,
+        "symbol": "9501.T",
+        "name": "9501.T",
+        "price": 456.6000061035156,
+        "predicted_price": 478.45529487489534,
+        "predicted_change": 4.786528357256508,
         "confidence": 0.6,
         "trend_signal": "bullish",
-        "model_used": "v3"
-      },
-      {
-        "symbol": "5803.T",
-        "name": "フジクラ",
-        "price": 6436.0,
-        "predicted_price": 6779.178571428572,
-        "predicted_change": 5.332171712687563,
-        "confidence": 0.4667,
-        "trend_signal": "bullish",
-        "model_used": "v3"
+        "model_used": "v4"
       }
     ]
   },
   "us": {
     "bullish_high": [
       {
-        "symbol": "DIS",
-        "name": "Disney",
-        "price": 98.05000305175781,
-        "predicted_price": 100.50374970135825,
-        "predicted_change": 2.5025462246086514,
+        "symbol": "GS",
+        "name": "Goldman Sachs",
+        "price": 1019.6099853515625,
+        "predicted_price": 1053.4300306622315,
+        "predicted_change": 3.316959013402347,
         "confidence": 0.6667,
         "trend_signal": "bullish",
-        "model_used": "v4"
+        "model_used": "v6"
       },
       {
-        "symbol": "NFLX",
-        "name": "Netflix",
-        "price": 70.9000015258789,
-        "predicted_price": 72.82794916567939,
-        "predicted_change": 2.71924908082938,
+        "symbol": "ORCL",
+        "name": "Oracle",
+        "price": 148.52999877929688,
+        "predicted_price": 157.62757640071106,
+        "predicted_change": 6.125077557519155,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v4"
       },
       {
-        "symbol": "ORCL",
-        "name": "Oracle",
-        "price": 152.4600067138672,
-        "predicted_price": 162.5621139841036,
-        "predicted_change": 6.62607033016585,
+        "symbol": "DIS",
+        "name": "Disney",
+        "price": 98.79000091552734,
+        "predicted_price": 100.97859049806704,
+        "predicted_change": 2.2153958520671493,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v4"
@@ -343,111 +343,131 @@
       {
         "symbol": "CL=F",
         "name": "原油WTI",
-        "price": 71.44999694824219,
-        "predicted_price": 75.15445760925293,
-        "predicted_change": 5.18468974000688,
+        "price": 70.33000183105469,
+        "predicted_price": 73.94926890816825,
+        "predicted_change": 5.146121118847249,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v4"
       },
       {
-        "symbol": "BRK-B",
-        "name": "Berkshire B",
-        "price": 487.80999755859375,
-        "predicted_price": 493.35263323379957,
-        "predicted_change": 1.1362283887058007,
-        "confidence": 0.56,
-        "trend_signal": "bullish",
-        "model_used": "v2"
-      },
-      {
-        "symbol": "PG",
-        "name": "Procter & Gamble",
-        "price": 148.5,
-        "predicted_price": 150.75480014296176,
-        "predicted_change": 1.5183839346543808,
-        "confidence": 0.5333,
-        "trend_signal": "bullish",
-        "model_used": "v9"
-      },
-      {
-        "symbol": "PFE",
-        "name": "Pfizer",
-        "price": 23.670000076293945,
-        "predicted_price": 24.085557371913637,
-        "predicted_change": 1.7556286196884399,
+        "symbol": "JPM",
+        "name": "JPMorgan Chase",
+        "price": 329.04998779296875,
+        "predicted_price": 335.0550849268668,
+        "predicted_change": 1.8249802026056725,
         "confidence": 0.5333,
         "trend_signal": "bullish",
         "model_used": "v10"
       },
       {
+        "symbol": "PG",
+        "name": "Procter & Gamble",
+        "price": 149.02000427246094,
+        "predicted_price": 151.09894843785423,
+        "predicted_change": 1.3950772418394612,
+        "confidence": 0.5333,
+        "trend_signal": "bullish",
+        "model_used": "v9"
+      },
+      {
+        "symbol": "KO",
+        "name": "Coca-Cola",
+        "price": 82.62999725341797,
+        "predicted_price": 83.75413763122538,
+        "predicted_change": 1.360450702133973,
+        "confidence": 0.5333,
+        "trend_signal": "bullish",
+        "model_used": "v3"
+      },
+      {
+        "symbol": "000001.SS",
+        "name": "上海総合",
+        "price": 4027.264892578125,
+        "predicted_price": 4069.845801280273,
+        "predicted_change": 1.0573158170107129,
+        "confidence": 0.5333,
+        "trend_signal": "bullish",
+        "model_used": "v6"
+      },
+      {
         "symbol": "EWJ",
         "name": "iシェアーズ MSCI 日本",
-        "price": 93.38999938964844,
-        "predicted_price": 94.92644381588407,
-        "predicted_change": 1.6451916011104888,
+        "price": 92.80000305175781,
+        "predicted_price": 94.24410658890253,
+        "predicted_change": 1.5561460017833035,
         "confidence": 0.5333,
         "trend_signal": "bullish",
         "model_used": "v1"
       },
       {
-        "symbol": "SLV",
-        "name": "iシェアーズ シルバー",
-        "price": 52.36000061035156,
-        "predicted_price": 55.01945821745736,
-        "predicted_change": 5.079177952836054,
+        "symbol": "BTC-USD",
+        "name": "ビットコイン",
+        "price": 59183.46875,
+        "predicted_price": 60825.25892392188,
+        "predicted_change": 2.7740688550329007,
         "confidence": 0.5333,
         "trend_signal": "bullish",
-        "model_used": "v8"
-      },
-      {
-        "symbol": "SI=F",
-        "name": "銀先物",
-        "price": 57.71500015258789,
-        "predicted_price": 60.53382269213377,
-        "predicted_change": 4.884038000681672,
-        "confidence": 0.5333,
-        "trend_signal": "bullish",
-        "model_used": "v8"
+        "model_used": "v10"
       }
     ],
     "bearish_high": [
       {
+        "symbol": "BMY",
+        "name": "BMY",
+        "price": 57.52000045776367,
+        "predicted_price": 56.14725831842776,
+        "predicted_change": -2.3865475111459746,
+        "confidence": 0.6667,
+        "trend_signal": "bearish",
+        "model_used": "v7"
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft",
+        "price": 372.9700012207031,
+        "predicted_price": 362.94837324190416,
+        "predicted_change": -2.6869796353591218,
+        "confidence": 0.6,
+        "trend_signal": "bearish",
+        "model_used": "v3"
+      },
+      {
         "symbol": "HD",
         "name": "Home Depot",
-        "price": 345.0,
-        "predicted_price": 337.40601097603934,
-        "predicted_change": -2.201156238829177,
+        "price": 348.8599853515625,
+        "predicted_price": 341.2418677841012,
+        "predicted_change": -2.183717791475616,
         "confidence": 0.6,
         "trend_signal": "bearish",
         "model_used": "v4"
       },
       {
-        "symbol": "QCOM",
-        "name": "QCOM",
-        "price": 204.89999389648438,
-        "predicted_price": 191.77161257091848,
-        "predicted_change": -6.407214112557937,
+        "symbol": "GC=F",
+        "name": "金先物",
+        "price": 4072.10009765625,
+        "predicted_price": 3983.2565633050012,
+        "predicted_change": -2.181762044660538,
         "confidence": 0.6,
         "trend_signal": "bearish",
-        "model_used": "v2"
+        "model_used": "v3"
       },
       {
-        "symbol": "SPY",
-        "name": "SPDR S&P 500",
-        "price": 734.2999877929688,
-        "predicted_price": 724.886104830341,
-        "predicted_change": -1.2820213971298562,
-        "confidence": 0.56,
+        "symbol": "MPC",
+        "name": "Marathon Petroleum",
+        "price": 254.05999755859375,
+        "predicted_price": 246.1381524451948,
+        "predicted_change": -3.1181001297033917,
+        "confidence": 0.6,
         "trend_signal": "bearish",
         "model_used": "v3"
       },
       {
         "symbol": "QQQ",
         "name": "インベスコQQQ",
-        "price": 716.3800048828125,
-        "predicted_price": 701.5437886755433,
-        "predicted_change": -2.0709980884650974,
+        "price": 706.52001953125,
+        "predicted_price": 692.6194357818634,
+        "predicted_change": -1.9674720269935282,
         "confidence": 0.56,
         "trend_signal": "bearish",
         "model_used": "v3"
@@ -455,71 +475,61 @@
       {
         "symbol": "EOG",
         "name": "EOG Resources",
-        "price": 133.58999633789062,
-        "predicted_price": 130.36523968214198,
-        "predicted_change": -2.4139207606475543,
+        "price": 132.60000610351562,
+        "predicted_price": 129.4387215947222,
+        "predicted_change": -2.3840756887488554,
         "confidence": 0.56,
         "trend_signal": "bearish",
         "model_used": "v3"
       },
       {
-        "symbol": "MPC",
-        "name": "Marathon Petroleum",
-        "price": 253.55999755859375,
-        "predicted_price": 246.18037372077725,
-        "predicted_change": -2.910405390783765,
+        "symbol": "VZ",
+        "name": "VZ",
+        "price": 46.540000915527344,
+        "predicted_price": 45.70957922249058,
+        "predicted_change": -1.7843181708226061,
         "confidence": 0.56,
+        "trend_signal": "bearish",
+        "model_used": "v2"
+      },
+      {
+        "symbol": "AAPL",
+        "name": "Apple",
+        "price": 283.7799987792969,
+        "predicted_price": 277.0603799215415,
+        "predicted_change": -2.3678972748820875,
+        "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v3"
       },
       {
-        "symbol": "MA",
-        "name": "Mastercard",
-        "price": 488.9200134277344,
-        "predicted_price": 481.1477879626269,
-        "predicted_change": -1.5896721859712213,
+        "symbol": "AMZN",
+        "name": "Amazon",
+        "price": 232.69000244140625,
+        "predicted_price": 226.87038157198663,
+        "predicted_change": -2.501018869895394,
         "confidence": 0.5333,
         "trend_signal": "bearish",
-        "model_used": "v10"
-      },
-      {
-        "symbol": "JPM",
-        "name": "JPMorgan Chase",
-        "price": 335.1199951171875,
-        "predicted_price": 329.2027402990635,
-        "predicted_change": -1.7657122536227015,
-        "confidence": 0.5333,
-        "trend_signal": "bearish",
-        "model_used": "v10"
-      },
-      {
-        "symbol": "WMT",
-        "name": "Walmart",
-        "price": 115.77999877929688,
-        "predicted_price": 113.65243958983285,
-        "predicted_change": -1.8375878492792497,
-        "confidence": 0.5333,
-        "trend_signal": "bearish",
-        "model_used": "v10"
-      },
-      {
-        "symbol": "VTI",
-        "name": "バンガード・トータル",
-        "price": 363.9800109863281,
-        "predicted_price": 359.7824407858734,
-        "predicted_change": -1.153241956633819,
-        "confidence": 0.5333,
-        "trend_signal": "bearish",
-        "model_used": "v4"
+        "model_used": "v9"
       }
     ],
     "notable": [
       {
         "symbol": "ORCL",
         "name": "Oracle",
-        "price": 152.4600067138672,
-        "predicted_price": 162.5621139841036,
-        "predicted_change": 6.62607033016585,
+        "price": 148.52999877929688,
+        "predicted_price": 157.62757640071106,
+        "predicted_change": 6.125077557519155,
+        "confidence": 0.6,
+        "trend_signal": "bullish",
+        "model_used": "v4"
+      },
+      {
+        "symbol": "CL=F",
+        "name": "原油WTI",
+        "price": 70.33000183105469,
+        "predicted_price": 73.94926890816825,
+        "predicted_change": 5.146121118847249,
         "confidence": 0.6,
         "trend_signal": "bullish",
         "model_used": "v4"
@@ -527,92 +537,82 @@
       {
         "symbol": "QCOM",
         "name": "QCOM",
-        "price": 204.89999389648438,
-        "predicted_price": 191.77161257091848,
-        "predicted_change": -6.407214112557937,
-        "confidence": 0.6,
+        "price": 189.38999938964844,
+        "predicted_price": 178.7380621215101,
+        "predicted_change": -5.624339881971903,
+        "confidence": 0.5333,
         "trend_signal": "bearish",
         "model_used": "v2"
       },
       {
-        "symbol": "CL=F",
-        "name": "原油WTI",
-        "price": 71.44999694824219,
-        "predicted_price": 75.15445760925293,
-        "predicted_change": 5.18468974000688,
-        "confidence": 0.6,
-        "trend_signal": "bullish",
-        "model_used": "v4"
-      },
-      {
-        "symbol": "SLV",
-        "name": "iシェアーズ シルバー",
-        "price": 52.36000061035156,
-        "predicted_price": 55.01945821745736,
-        "predicted_change": 5.079177952836054,
-        "confidence": 0.5333,
-        "trend_signal": "bullish",
-        "model_used": "v8"
-      },
-      {
-        "symbol": "SI=F",
-        "name": "銀先物",
-        "price": 57.71500015258789,
-        "predicted_price": 60.53382269213377,
-        "predicted_change": 4.884038000681672,
-        "confidence": 0.5333,
-        "trend_signal": "bullish",
-        "model_used": "v8"
-      },
-      {
         "symbol": "VRT",
         "name": "バーティブ・ホールディングス",
-        "price": 325.57000732421875,
-        "predicted_price": 340.4543178374417,
-        "predicted_change": 4.571769566721915,
+        "price": 303.95001220703125,
+        "predicted_price": 318.42875860777576,
+        "predicted_change": 4.763528810415878,
         "confidence": 0.5333,
         "trend_signal": "bullish",
         "model_used": "v10"
       },
       {
-        "symbol": "ACN",
-        "name": "ACN",
-        "price": 125.81999969482422,
-        "predicted_price": 130.74259510766274,
-        "predicted_change": 3.912410924160109,
-        "confidence": 0.5333,
-        "trend_signal": "bullish",
-        "model_used": "v7"
-      },
-      {
-        "symbol": "DIS",
-        "name": "Disney",
-        "price": 98.05000305175781,
-        "predicted_price": 100.50374970135825,
-        "predicted_change": 2.5025462246086514,
+        "symbol": "GS",
+        "name": "Goldman Sachs",
+        "price": 1019.6099853515625,
+        "predicted_price": 1053.4300306622315,
+        "predicted_change": 3.316959013402347,
         "confidence": 0.6667,
         "trend_signal": "bullish",
-        "model_used": "v4"
+        "model_used": "v6"
       },
       {
-        "symbol": "NFLX",
-        "name": "Netflix",
-        "price": 70.9000015258789,
-        "predicted_price": 72.82794916567939,
-        "predicted_change": 2.71924908082938,
-        "confidence": 0.6,
+        "symbol": "TXN",
+        "name": "TXN",
+        "price": 285.42999267578125,
+        "predicted_price": 296.81575622704645,
+        "predicted_change": 3.988986386654272,
+        "confidence": 0.5333,
         "trend_signal": "bullish",
-        "model_used": "v4"
+        "model_used": "v2"
       },
       {
         "symbol": "MPC",
         "name": "Marathon Petroleum",
-        "price": 253.55999755859375,
-        "predicted_price": 246.18037372077725,
-        "predicted_change": -2.910405390783765,
-        "confidence": 0.56,
+        "price": 254.05999755859375,
+        "predicted_price": 246.1381524451948,
+        "predicted_change": -3.1181001297033917,
+        "confidence": 0.6,
         "trend_signal": "bearish",
         "model_used": "v3"
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft",
+        "price": 372.9700012207031,
+        "predicted_price": 362.94837324190416,
+        "predicted_change": -2.6869796353591218,
+        "confidence": 0.6,
+        "trend_signal": "bearish",
+        "model_used": "v3"
+      },
+      {
+        "symbol": "BMY",
+        "name": "BMY",
+        "price": 57.52000045776367,
+        "predicted_price": 56.14725831842776,
+        "predicted_change": -2.3865475111459746,
+        "confidence": 0.6667,
+        "trend_signal": "bearish",
+        "model_used": "v7"
+      },
+      {
+        "symbol": "VLO",
+        "name": "Valero Energy",
+        "price": 259.3699951171875,
+        "predicted_price": 252.06903231882148,
+        "predicted_change": -2.8148833464978567,
+        "confidence": 0.5333,
+        "trend_signal": "bearish",
+        "model_used": "v1"
       }
     ]
   }

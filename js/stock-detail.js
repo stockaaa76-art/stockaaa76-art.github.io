@@ -981,16 +981,15 @@ class StockDetail {
         if (gNext != null && gNext >= 0.10) { qScore += 1; qNotes.push(`増益+${(gNext * 100).toFixed(0)}%`); }
         const qMark = qScore >= 3 ? '◎' : qScore >= 1 ? '○' : '△';
 
-        // --- Q2 タイミング ---
+        // --- Q2 タイミング（価格の位置のみ。バリュエーション過熱はQ4に一本化＝二重計上回避） ---
         const dev25 = (mlPred.deviation_25 != null) ? mlPred.deviation_25 : f.deviation_25;
         const dev75 = f.deviation_75;
-        const overheatSector = !!(v && ((ownPer != null && v.sector_per_p90 != null && ownPer > v.sector_per_p90) || (ownPbr != null && v.sector_pbr_p90 != null && ownPbr > v.sector_pbr_p90)));
         const longDown = (dev75 != null && dev75 < 0) && (f.year_position != null && f.year_position < 35);
         const dev25s = dev25 != null ? `${dev25 > 0 ? '+' : ''}${dev25.toFixed(0)}%` : '-';
         let tMark, tNote;
-        if ((dev25 != null && dev25 >= 15) || overheatSector) { tMark = '△'; tNote = `過熱（25日乖離${dev25s}${overheatSector ? '・業種P90超' : ''}）`; }
-        else if (dev25 != null && dev25 <= -5 && !longDown) { tMark = '◎'; tNote = `押し目（25日乖離${dev25s}）`; }
-        else if (longDown) { tMark = '△'; tNote = `長期下降トレンド（75日乖離${dev75.toFixed(0)}%）`; }
+        if (dev25 != null && dev25 >= 15) { tMark = '△'; tNote = `短期過熱（25日乖離${dev25s}）`; }
+        else if (longDown) { tMark = '△'; tNote = `長期下降トレンド（75日乖離${dev75 != null ? dev75.toFixed(0) : '-'}%）`; }
+        else if (dev25 != null && dev25 <= -5) { tMark = '◎'; tNote = `押し目（25日乖離${dev25s}）`; }
         else { tMark = '○'; tNote = `中立（25日乖離${dev25s}）`; }
 
         // --- Q3 相対強さ ---
@@ -998,24 +997,48 @@ class StockDetail {
         let sMark = '—', sNote = 'MLデータなし';
         if (me && me.score_pct != null) { const p = me.score_pct; sMark = p >= 70 ? '◎' : p >= 40 ? '○' : '△'; sNote = `ML ${p.toFixed(0)}%ile（${p >= 70 ? '上位' : p >= 40 ? '中位' : '下位'}・${me.rank}位）`; }
 
-        // --- アクションの型（BT-validated wiring） ---
-        let actionType;
-        if (qMark === '△') actionType = '見送り（質が低い／構造悪化）';
-        else if (longDown) actionType = '新規は押し目分割（Strategy I）向き・一括は見送り（長期下降）';
-        else if (tMark === '△') actionType = '押し目待ち or Strategy I 4分割（過熱）';
-        else actionType = '握る／通常買い候補（質◯・過熱でない）';
+        // --- Q4 バリュエーション（理論株価乖離・§1.4-B discretionary 割高アラート） ---
+        const curP = parseFloat(this.stockData.price);
+        const tpNow = (d && d.theoretical_price) ? d.theoretical_price.now : null;
+        let vMark = '—', vNote = '理論株価データなし', overvalued = false;
+        if (tpNow && tpNow.mid != null && curP) {
+            const gap = (curP / tpNow.mid - 1) * 100;
+            const gapS = `${gap >= 0 ? '+' : ''}${gap.toFixed(0)}%`;
+            if (curP > tpNow.mid * 2) { vMark = '⚠️'; vNote = `超割高（理論株価×2超・現在比${gapS}）`; overvalued = true; }
+            else if (tpNow.high != null && curP > tpNow.high) { vMark = '△'; vNote = `割高（理論株価上限超・${gapS}）`; }
+            else if (tpNow.low != null && curP < tpNow.low) { vMark = '◎'; vNote = `割安（理論株価下限割れ・${gapS}）`; }
+            else { vMark = '○'; vNote = `適正圏（現在比${gapS}）`; }
+        }
+
+        // --- 最終結論（4軸を統合・新規/保有で言い切る・BT-validated wiring） ---
+        // 新規エントリー判定
+        let buyVerdict;
+        if (qMark === '△') buyVerdict = '🚫 新規見送り — 質が低い（ROE低・財務重い・構造悪化）';
+        else if (overvalued) buyVerdict = '🔻 新規は見送り — 割高すぎ（理論株価×2超）。5年視点でも入るなら押し目分割で少量のみ';
+        else if (vMark === '△' || tMark === '△' || longDown) buyVerdict = '🟡 押し目分割のみ（Strategy I 4分割）— 割高/過熱/長期下降。一括は避ける';
+        else if (tMark === '◎' || vMark === '◎') buyVerdict = '🟢 買い候補 — 質◯＋（押し目 or 割安）。一括 or 分割で';
+        else buyVerdict = '🟢 通常買い候補 — 質◯・過熱でない';
+        // 保有判定
+        let holdVerdict;
+        if (overvalued) holdVerdict = '🔻 一部利確/トリムを検討 — 割高ゾーン（§1.4-B）。ただし事業テーゼ健在なら全売りはしない';
+        else if (qMark === '△') holdVerdict = '🟡 撤退も検討 — 質低下。事業テーゼ（減配・赤字常態化・競合侵食）を確認';
+        else holdVerdict = '🟢 握る（売らない）— 質◯。タイミング売りはB&H劣後';
 
         const row = (q, mark, note) => `<tr><td style="white-space:nowrap;font-weight:600;">${q}</td><td style="text-align:center;font-size:18px;">${mark}</td><td style="color:var(--card-text-color-secondary,#6b7280);">${note}</td></tr>`;
         ct.innerHTML = `
+          <p style="margin:0 0 8px;font-size:12px;color:var(--card-text-color-secondary,#6b7280);">下の各データ（🔮翌日予測・🤖ML月次・📅中長期判断・📊指標）を4軸に整理し、総合した結論です。<strong>これが"親"の判断</strong>。各セクション単独では一面しか見ていません。</p>
           <table class="fund-table" style="width:100%;">
             ${row('Q1 質（持つ価値）', qMark, qNotes.join('・') || '-')}
-            ${row('Q2 タイミング', tMark, tNote)}
-            ${row('Q3 相対強さ', sMark, sNote)}
+            ${row('Q2 タイミング（下げ幅）', tMark, tNote)}
+            ${row('Q3 相対強さ（ML月次）', sMark, sNote)}
+            ${row('Q4 バリュエーション（割安/割高）', vMark, vNote)}
           </table>
-          <div style="margin-top:10px;padding:10px 12px;background:var(--card-separator-color,#f3f4f6);border-radius:8px;">
-            <strong>→ アクションの型：</strong>${actionType}
+          <div style="margin-top:10px;padding:12px;background:var(--card-separator-color,#f3f4f6);border-radius:8px;">
+            <div style="font-weight:700;margin-bottom:6px;">→ 最終結論</div>
+            <div style="margin-bottom:6px;"><strong>新規で買うなら：</strong>${buyVerdict}</div>
+            <div><strong>すでに保有なら：</strong>${holdVerdict}</div>
           </div>
-          <p style="margin-top:8px;font-size:12px;color:var(--card-text-color-secondary,#9ca3af);">⚠️ 判断材料の整理です。◎○△は BT未検証のヒューリスティック。アクションの型は当プロジェクトBT結論（握る／Strategy I分割／見送り）に基づきます。<strong>断定的な売買シグナルではありません</strong>。最終判断はご自身の責任で。</p>
+          <p style="margin-top:8px;font-size:12px;color:var(--card-text-color-secondary,#9ca3af);">⚠️ 判断材料の整理です。◎○△⚠️は BT未検証のヒューリスティック。最終結論は当プロジェクトBT結論（握る／Strategy I分割／見送り／割高トリムは§1.4-B discretionary）に基づきます。<strong>断定的な売買シグナルではありません</strong>。最終判断はご自身の責任で。</p>
         `;
         sec.style.display = 'block';
     }
