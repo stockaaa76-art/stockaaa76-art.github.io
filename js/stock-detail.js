@@ -617,6 +617,14 @@ class StockDetail {
                 ['5年後（成長逓減5年複利）', bandText(tp.y5)],
             ] });
         }
+        if (fc && fc.ex_dividend_date) {
+            const sched = fc.ex_dividend_schedule || [fc.ex_dividend_date];
+            const freq = fc.dividend_frequency ? `（${fc.dividend_frequency}）` : '';
+            groups.push({ title: '📅 配当・権利落ち日（予定・過去実績から推定）', rows: [
+                ['次回 権利落ち日' + freq, fc.ex_dividend_date],
+                ['今後の予定', sched.length > 1 ? sched.join(' / ') : null],
+            ] });
+        }
         if (fc) {
             const pct = (x) => (x == null) ? null : `${(x * 100).toFixed(1)}%`;
             const pt = fc.price_target || {};

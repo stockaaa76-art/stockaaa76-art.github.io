@@ -1,16 +1,16 @@
 {
  "sector": "日本-機械",
- "updated_at": "2026-06-22 17:57",
+ "updated_at": "2026-06-30 21:27",
  "valuation": {
-  "sector_per_median": 28.2,
-  "sector_per_p90": 56.5,
-  "sector_pbr_median": 2.22,
-  "sector_pbr_p90": 4.25
+  "sector_per_median": 27.0,
+  "sector_per_p90": 51.7,
+  "sector_pbr_median": 2.13,
+  "sector_pbr_p90": 3.99
  },
  "forecast": {
   "revenue": {
-   "cur_year": 985128876000.0,
-   "next_year": 1062285592430.0
+   "cur_year": 985163979500.0,
+   "next_year": 1062324206139.0
   },
   "eps": {
    "cur_year": 2873.3237,
@@ -24,18 +24,24 @@
    "mean": 80492.86,
    "high": 100000.0,
    "low": 60000.0
-  }
+  },
+  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_schedule": [
+   "2026-09-29",
+   "2027-03-31"
+  ],
+  "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
    "low": 57466.47,
-   "mid": 81027.73,
-   "high": 162342.79
+   "mid": 77579.74,
+   "high": 148550.84
   },
   "y1": {
    "low": 62704.68,
-   "mid": 88413.6,
-   "high": 177140.72
+   "mid": 84651.32,
+   "high": 162091.6
   },
   "y5": {
    "low": 70406.34,
@@ -47,8 +53,8 @@
    "eps_next": 3135.234,
    "eps_5y": 3911.463,
    "growth_used": 0.0912,
-   "per_median": 28.2,
-   "per_p90": 56.5,
+   "per_median": 27.0,
+   "per_p90": 51.7,
    "per_terminal": "18-25"
   }
  }

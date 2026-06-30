@@ -1,54 +1,62 @@
 {
  "sector": "米-一般消費財",
- "updated_at": "2026-06-22 17:57",
+ "updated_at": "2026-06-30 21:27",
  "valuation": {
-  "sector_per_median": 29.7,
-  "sector_per_p90": 370.8,
-  "sector_pbr_median": 5.95,
-  "sector_pbr_p90": 24.02
+  "sector_per_median": 27.3,
+  "sector_per_p90": 384.9,
+  "sector_pbr_median": 5.84,
+  "sector_pbr_p90": 25.21
  },
  "forecast": {
   "revenue": {
-   "cur_year": 28490664090.0,
-   "next_year": 30171708920.0
+   "cur_year": 28486190220.0,
+   "next_year": 30166329860.0
   },
   "eps": {
-   "cur_year": 12.98436,
-   "next_year": 14.21885
+   "cur_year": 12.98145,
+   "next_year": 14.21679
   },
   "growth": {
-   "next_year": 0.0951,
+   "next_year": 0.0952,
    "long_term": null
   },
   "price_target": {
-   "mean": 331.2903,
+   "mean": 330.46875,
    "high": 407.0,
    "low": 250.0
-  }
+  },
+  "ex_dividend_date": "2026-09-02",
+  "ex_dividend_schedule": [
+   "2026-09-02",
+   "2026-12-03",
+   "2027-03-05",
+   "2027-06-05"
+  ],
+  "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 259.69,
-   "mid": 385.64,
-   "high": 4814.6
+   "low": 259.63,
+   "mid": 354.39,
+   "high": 4996.56
   },
   "y1": {
-   "low": 284.38,
-   "mid": 422.3,
-   "high": 5272.35
+   "low": 284.34,
+   "mid": 388.12,
+   "high": 5472.04
   },
   "y5": {
-   "low": 322.29,
-   "mid": 384.96,
-   "high": 447.63
+   "low": 322.33,
+   "mid": 385.0,
+   "high": 447.68
   },
   "assumptions": {
-   "eps_cur": 12.984,
-   "eps_next": 14.219,
-   "eps_5y": 17.905,
-   "growth_used": 0.0951,
-   "per_median": 29.7,
-   "per_p90": 370.8,
+   "eps_cur": 12.981,
+   "eps_next": 14.217,
+   "eps_5y": 17.907,
+   "growth_used": 0.0952,
+   "per_median": 27.3,
+   "per_p90": 384.9,
    "per_terminal": "18-25"
   }
  }

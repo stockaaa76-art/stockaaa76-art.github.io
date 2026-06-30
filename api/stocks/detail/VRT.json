@@ -1,6 +1,6 @@
 {
- "sector": "Industrials",
- "updated_at": "2026-06-22 17:57",
+ "sector": "米-資本財・産業",
+ "updated_at": "2026-06-30 21:27",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -13,18 +13,26 @@
    "next_year": 17828096750.0
   },
   "eps": {
-   "cur_year": 6.4906,
-   "next_year": 8.85114
+   "cur_year": 6.49146,
+   "next_year": 8.84963
   },
   "growth": {
-   "next_year": 0.3637,
+   "next_year": 0.36330003,
    "long_term": null
   },
   "price_target": {
-   "mean": 378.30768,
+   "mean": 376.96,
    "high": 500.0,
    "low": 236.0
-  }
+  },
+  "ex_dividend_date": "2026-09-14",
+  "ex_dividend_schedule": [
+   "2026-09-14",
+   "2026-12-14",
+   "2027-03-15",
+   "2027-06-14"
+  ],
+  "dividend_frequency": "四半期"
  },
  "theoretical_price": null
 }

@@ -1,11 +1,11 @@
 {
  "sector": "日本-小売業",
- "updated_at": "2026-06-22 17:57",
+ "updated_at": "2026-06-30 21:27",
  "valuation": {
-  "sector_per_median": 16.6,
-  "sector_per_p90": 52.5,
-  "sector_pbr_median": 1.71,
-  "sector_pbr_p90": 9.5
+  "sector_per_median": 17.2,
+  "sector_per_p90": 53.0,
+  "sector_pbr_median": 1.76,
+  "sector_pbr_p90": 9.65
  },
  "forecast": {
   "revenue": {
@@ -24,18 +24,24 @@
    "mean": 2316.0,
    "high": 2650.0,
    "low": 2000.0
-  }
+  },
+  "ex_dividend_date": "2026-08-27",
+  "ex_dividend_schedule": [
+   "2026-08-27",
+   "2027-02-25"
+  ],
+  "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 2086.26,
-   "mid": 2086.26,
-   "high": 6598.13
+   "low": 2161.67,
+   "mid": 2161.67,
+   "high": 6660.96
   },
   "y1": {
-   "low": 2230.68,
-   "mid": 2230.68,
-   "high": 7054.87
+   "low": 2311.31,
+   "mid": 2311.31,
+   "high": 7122.06
   },
   "y5": {
    "low": 2864.65,
@@ -47,8 +53,8 @@
    "eps_next": 134.378,
    "eps_5y": 159.147,
    "growth_used": 0.0692,
-   "per_median": 16.6,
-   "per_p90": 52.5,
+   "per_median": 17.2,
+   "per_p90": 53.0,
    "per_terminal": "18-25"
   }
  }

@@ -1,54 +1,62 @@
 {
  "sector": "米-通信・メディア",
- "updated_at": "2026-06-22 17:57",
+ "updated_at": "2026-06-30 21:27",
  "valuation": {
-  "sector_per_median": 21.0,
-  "sector_per_p90": 28.1,
-  "sector_pbr_median": 6.01,
-  "sector_pbr_p90": 10.47
+  "sector_per_median": 20.5,
+  "sector_per_p90": 27.0,
+  "sector_pbr_median": 5.86,
+  "sector_pbr_p90": 9.99
  },
  "forecast": {
   "revenue": {
-   "cur_year": 121769586000.0,
-   "next_year": 120144420790.0
+   "cur_year": 121716399460.0,
+   "next_year": 120068812750.0
   },
   "eps": {
-   "cur_year": 3.5139,
-   "next_year": 3.78416
+   "cur_year": 3.50677,
+   "next_year": 3.77446
   },
   "growth": {
-   "next_year": 0.0769,
+   "next_year": 0.0763,
    "long_term": null
   },
   "price_target": {
-   "mean": 32.40476,
+   "mean": 32.19048,
    "high": 44.0,
    "low": 21.0
-  }
+  },
+  "ex_dividend_date": "2026-07-01",
+  "ex_dividend_schedule": [
+   "2026-07-01",
+   "2026-09-30",
+   "2026-12-30",
+   "2027-03-31"
+  ],
+  "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 70.28,
-   "mid": 73.79,
-   "high": 98.74
+   "low": 70.14,
+   "mid": 71.89,
+   "high": 94.68
   },
   "y1": {
-   "low": 75.68,
-   "mid": 79.47,
-   "high": 106.33
+   "low": 75.49,
+   "mid": 77.38,
+   "high": 101.91
   },
   "y5": {
-   "low": 82.16,
-   "mid": 98.13,
-   "high": 114.11
+   "low": 81.83,
+   "mid": 97.74,
+   "high": 113.65
   },
   "assumptions": {
-   "eps_cur": 3.514,
-   "eps_next": 3.784,
-   "eps_5y": 4.564,
-   "growth_used": 0.0769,
-   "per_median": 21.0,
-   "per_p90": 28.1,
+   "eps_cur": 3.507,
+   "eps_next": 3.774,
+   "eps_5y": 4.546,
+   "growth_used": 0.0763,
+   "per_median": 20.5,
+   "per_p90": 27.0,
    "per_terminal": "18-25"
   }
  }

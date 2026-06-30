@@ -1,11 +1,11 @@
 {
  "sector": "日本-医薬品",
- "updated_at": "2026-06-22 17:57",
+ "updated_at": "2026-06-30 21:27",
  "valuation": {
-  "sector_per_median": 18.1,
-  "sector_per_p90": 28.5,
-  "sector_pbr_median": 1.8,
-  "sector_pbr_p90": 6.49
+  "sector_per_median": 18.6,
+  "sector_per_p90": 30.1,
+  "sector_pbr_median": 1.83,
+  "sector_pbr_p90": 6.5
  },
  "forecast": {
   "revenue": {
@@ -24,18 +24,24 @@
    "mean": 6086.8667,
    "high": 7900.0,
    "low": 4900.0
-  }
+  },
+  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_schedule": [
+   "2026-09-29",
+   "2027-03-31"
+  ],
+  "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 2223.31,
-   "mid": 2223.31,
-   "high": 3500.8
+   "low": 2284.73,
+   "mid": 2284.73,
+   "high": 3697.34
   },
   "y1": {
-   "low": 3457.66,
-   "mid": 3457.66,
-   "high": 5444.39
+   "low": 3553.18,
+   "mid": 3553.18,
+   "high": 5750.04
   },
   "y5": {
    "low": 9761.72,
@@ -47,8 +53,8 @@
    "eps_next": 191.031,
    "eps_5y": 542.318,
    "growth_used": 0.5,
-   "per_median": 18.1,
-   "per_p90": 28.5,
+   "per_median": 18.6,
+   "per_p90": 30.1,
    "per_terminal": "18-25"
   }
  }
