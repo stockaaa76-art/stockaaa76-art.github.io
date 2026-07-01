@@ -13,6 +13,11 @@ class Dashboard {
         this.ai_rankings_api = '/api/ai_rankings.json';
         this.currentRankingCategory = 'basic';
         this.currentPeriod = 'daily';
+        this.jpViewMode = 'cards';           // P3: 'cards' | 'table'
+        this.jpTableSort = { key: 'period_change', dir: 'desc' };  // P3 テーブルのソート状態
+        this.usViewMode = 'cards';           // P3: 米国株 'cards' | 'table'
+        this.usTableSort = { key: 'period_change', dir: 'desc' };
+        this.usRawRows = [];                 // P3: 米国株テーブル用の生行（loadUSRankings で保持）
         this.init();
     }
 
@@ -758,6 +763,197 @@ class Dashboard {
         });
     }
 
+    // P3: JP 表示モード切替（カード ⇄ ソート可能テーブル）。非破壊＝カード側DOMは残す。
+    switchJpView(mode) {
+        this.jpViewMode = mode;
+        document.querySelectorAll('[data-jp-view]').forEach(b => b.classList.toggle('active', b.dataset.jpView === mode));
+        const wrap = document.getElementById('jp-ranking-table-wrap');
+        const catTabs = document.querySelector('.ranking-tabs');   // JP カテゴリタブ（先頭＝JP）
+        const jpCats = ['basic', 'price', 'volume', 'financial', 'technical', 'margin', 'ai']
+            .map(c => document.getElementById(`${c}-rankings`)).filter(Boolean);
+        if (mode === 'table') {
+            jpCats.forEach(c => c.classList.add('hidden'));
+            if (catTabs) catTabs.style.display = 'none';
+            if (wrap) wrap.classList.remove('hidden');
+            this.buildJpTable();
+        } else {
+            if (wrap) wrap.classList.add('hidden');
+            if (catTabs) catTabs.style.display = '';
+            this.switchRankingCategory(this.currentRankingCategory);  // カード表示を復元
+        }
+    }
+
+    // P3: 現在の期間の全ランキングリストを symbol で統合し、ソート可能テーブルを描画する。
+    buildJpTable() {
+        const table = document.getElementById('jp-ranking-table');
+        if (!table) return;
+        const pdata = this.periodRankingsData && this.periodRankingsData[this.currentPeriod];
+        const rankings = pdata && pdata.rankings;
+        if (!rankings) {
+            table.innerHTML = '<tbody><tr><td style="padding:16px;color:#9ca3af;">データがありません（期間データ未取得）</td></tr></tbody>';
+            return;
+        }
+        const seen = {};
+        const rows = [];
+        Object.values(rankings).forEach(list => {
+            if (Array.isArray(list)) list.forEach(r => {
+                if (r && r.symbol && !seen[r.symbol]) { seen[r.symbol] = 1; rows.push(r); }
+            });
+        });
+        const { key, dir } = this.jpTableSort;
+        rows.sort((a, b) => {
+            let av = a[key], bv = b[key];
+            av = (av == null || isNaN(Number(av))) ? -Infinity : Number(av);
+            bv = (bv == null || isNaN(Number(bv))) ? -Infinity : Number(bv);
+            return dir === 'asc' ? av - bv : bv - av;
+        });
+        const cols = [
+            { key: 'sym', label: '銘柄', cls: 'col-sym' },
+            { key: 'current_price', label: '現在値' },
+            { key: 'period_change', label: '騰落%' },
+            { key: 'period_volume', label: '出来高' },
+            { key: 'market_cap', label: '時価総額' },
+            { key: 'pe_ratio', label: 'PER' },
+            { key: 'pb_ratio', label: 'PBR' },
+            { key: 'dividend_yield', label: '配当%' },
+            { key: 'rsi', label: 'RSI' },
+            { key: 'deviation_25', label: '25日乖離' },
+        ];
+        const thead = '<thead><tr>' + cols.map(c => {
+            const sortCls = (c.key === key) ? (dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
+            return `<th class="${[c.cls, sortCls].filter(Boolean).join(' ')}" data-sort="${c.key}">${c.label}</th>`;
+        }).join('') + '</tr></thead>';
+        const fmtVol = v => { v = Number(v) || 0; if (v >= 1e8) return (v / 1e8).toFixed(1) + '億'; if (v >= 1e4) return Math.round(v / 1e4).toLocaleString('ja-JP') + '万'; return v ? String(v) : '—'; };
+        const fmtCap = v => { v = Number(v) || 0; if (v >= 1e12) return (v / 1e12).toFixed(1) + '兆'; if (v >= 1e8) return (v / 1e8).toFixed(0) + '億'; return v ? String(v) : '—'; };
+        const num = (v, d, suf = '') => (v != null && !isNaN(Number(v))) ? Number(v).toFixed(d) + suf : '—';
+        const body = '<tbody>' + rows.map(r => {
+            const chg = Number(r.period_change);
+            const chgCls = (chg > 0) ? 'pos' : (chg < 0 ? 'neg' : '');
+            const chgTxt = (r.period_change != null && !isNaN(chg)) ? (chg > 0 ? '+' : '') + chg.toFixed(2) + '%' : '—';
+            const dev = r.deviation_25;
+            const devTxt = (dev != null && !isNaN(Number(dev))) ? (Number(dev) > 0 ? '+' : '') + Number(dev).toFixed(1) + '%' : '—';
+            const vol = (r.period_volume != null) ? r.period_volume : r.volume;
+            return `<tr onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(r.symbol)}'" style="cursor:pointer;">`
+                + `<td class="col-sym"><span class="sym-code">${r.symbol}</span><br><span class="sym-name">${(r.name || '').slice(0, 18)}</span></td>`
+                + `<td>${r.current_price != null ? Number(r.current_price).toLocaleString('en', { maximumFractionDigits: 2 }) : '—'}</td>`
+                + `<td class="${chgCls}">${chgTxt}</td>`
+                + `<td>${fmtVol(vol)}</td>`
+                + `<td>${fmtCap(r.market_cap)}</td>`
+                + `<td>${(r.pe_ratio != null && r.pe_ratio > 0) ? num(r.pe_ratio, 1) : '—'}</td>`
+                + `<td>${(r.pb_ratio != null && r.pb_ratio > 0) ? num(r.pb_ratio, 2) : '—'}</td>`
+                + `<td>${r.dividend_yield ? num(r.dividend_yield, 2) : '—'}</td>`
+                + `<td>${num(r.rsi, 0)}</td>`
+                + `<td class="${dev > 0 ? 'pos' : (dev < 0 ? 'neg' : '')}">${devTxt}</td>`
+                + `</tr>`;
+        }).join('') + '</tbody>';
+        table.innerHTML = thead + body;
+        table.querySelectorAll('thead th[data-sort]').forEach(th => {
+            th.addEventListener('click', () => {
+                const k = th.dataset.sort;
+                if (k === 'sym') return;   // 銘柄列はソート対象外
+                if (this.jpTableSort.key === k) {
+                    this.jpTableSort.dir = (this.jpTableSort.dir === 'asc') ? 'desc' : 'asc';
+                } else {
+                    this.jpTableSort.key = k;
+                    this.jpTableSort.dir = 'desc';
+                }
+                this.buildJpTable();
+            });
+        });
+    }
+
+    // P3: 米国株 表示モード切替（カード ⇄ ソート可能テーブル）。非破壊。
+    switchUsView(mode) {
+        this.usViewMode = mode;
+        document.querySelectorAll('[data-us-view]').forEach(b => b.classList.toggle('active', b.dataset.usView === mode));
+        const wrap = document.getElementById('us-ranking-table-wrap');
+        const catTabs = document.getElementById('us-ranking-tabs');
+        const usCats = ['basic', 'price', 'volume', 'financial', 'technical', 'ai']
+            .map(c => document.getElementById(`us-${c}-rankings`)).filter(Boolean);
+        if (mode === 'table') {
+            usCats.forEach(c => c.classList.add('hidden'));
+            if (catTabs) catTabs.style.display = 'none';
+            if (wrap) wrap.classList.remove('hidden');
+            this.buildUsTable();
+        } else {
+            if (wrap) wrap.classList.add('hidden');
+            if (catTabs) catTabs.style.display = '';
+            // カード表示を復元（アクティブなUSカテゴリのみ表示）
+            const activeCat = (document.querySelector('[data-us-category].active') || {}).dataset;
+            const cat = (activeCat && activeCat.usCategory) || 'basic';
+            usCats.forEach(c => c.classList.toggle('hidden', c.id !== `us-${cat}-rankings`));
+        }
+    }
+
+    // P3: 保持済みの米国株生行をソート可能テーブルに描画する。
+    buildUsTable() {
+        const table = document.getElementById('us-ranking-table');
+        if (!table) return;
+        const rows = (this.usRawRows || []).slice();
+        if (!rows.length) {
+            table.innerHTML = '<tbody><tr><td style="padding:16px;color:#9ca3af;">データがありません（米国データ未取得）</td></tr></tbody>';
+            return;
+        }
+        const { key, dir } = this.usTableSort;
+        rows.sort((a, b) => {
+            let av = a[key], bv = b[key];
+            av = (av == null || isNaN(Number(av))) ? -Infinity : Number(av);
+            bv = (bv == null || isNaN(Number(bv))) ? -Infinity : Number(bv);
+            return dir === 'asc' ? av - bv : bv - av;
+        });
+        const cols = [
+            { key: 'sym', label: '銘柄', cls: 'col-sym' },
+            { key: 'current_price', label: '現在値' },
+            { key: 'period_change', label: '騰落%' },
+            { key: 'period_volume', label: '出来高' },
+            { key: 'market_cap', label: '時価総額' },
+            { key: 'pe_ratio', label: 'PER' },
+            { key: 'pb_ratio', label: 'PBR' },
+            { key: 'dividend_yield', label: '配当%' },
+            { key: 'rsi', label: 'RSI' },
+            { key: 'short_ratio', label: '空売り日' },
+        ];
+        const thead = '<thead><tr>' + cols.map(c => {
+            const sortCls = (c.key === key) ? (dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
+            return `<th class="${[c.cls, sortCls].filter(Boolean).join(' ')}" data-sort="${c.key}">${c.label}</th>`;
+        }).join('') + '</tr></thead>';
+        const fmtVol = v => { v = Number(v) || 0; if (v >= 1e8) return (v / 1e8).toFixed(1) + '億'; if (v >= 1e4) return Math.round(v / 1e4).toLocaleString('ja-JP') + '万'; return v ? String(v) : '—'; };
+        const fmtCap = v => { v = Number(v) || 0; if (v >= 1e12) return '$' + (v / 1e12).toFixed(1) + 'T'; if (v >= 1e9) return '$' + (v / 1e9).toFixed(0) + 'B'; if (v >= 1e6) return '$' + (v / 1e6).toFixed(0) + 'M'; return v ? String(v) : '—'; };
+        const num = (v, d) => (v != null && !isNaN(Number(v))) ? Number(v).toFixed(d) : '—';
+        const body = '<tbody>' + rows.map(r => {
+            const chg = Number(r.period_change);
+            const chgCls = (chg > 0) ? 'pos' : (chg < 0 ? 'neg' : '');
+            const chgTxt = (r.period_change != null && !isNaN(chg)) ? (chg > 0 ? '+' : '') + chg.toFixed(2) + '%' : '—';
+            const vol = (r.period_volume != null) ? r.period_volume : r.volume;
+            return `<tr onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(r.symbol)}'" style="cursor:pointer;">`
+                + `<td class="col-sym"><span class="sym-code">${r.symbol}</span><br><span class="sym-name">${(r.name || '').slice(0, 20)}</span></td>`
+                + `<td>${r.current_price != null ? '$' + Number(r.current_price).toLocaleString('en', { maximumFractionDigits: 2 }) : '—'}</td>`
+                + `<td class="${chgCls}">${chgTxt}</td>`
+                + `<td>${fmtVol(vol)}</td>`
+                + `<td>${fmtCap(r.market_cap)}</td>`
+                + `<td>${(r.pe_ratio != null && r.pe_ratio > 0) ? num(r.pe_ratio, 1) : '—'}</td>`
+                + `<td>${(r.pb_ratio != null && r.pb_ratio > 0) ? num(r.pb_ratio, 2) : '—'}</td>`
+                + `<td>${r.dividend_yield ? num(r.dividend_yield, 2) : '—'}</td>`
+                + `<td>${num(r.rsi, 0)}</td>`
+                + `<td>${r.short_ratio != null ? num(r.short_ratio, 1) : '—'}</td>`
+                + `</tr>`;
+        }).join('') + '</tbody>';
+        table.innerHTML = thead + body;
+        table.querySelectorAll('thead th[data-sort]').forEach(th => {
+            th.addEventListener('click', () => {
+                const k = th.dataset.sort;
+                if (k === 'sym') return;
+                if (this.usTableSort.key === k) {
+                    this.usTableSort.dir = (this.usTableSort.dir === 'asc') ? 'desc' : 'asc';
+                } else {
+                    this.usTableSort.key = k;
+                    this.usTableSort.dir = 'desc';
+                }
+                this.buildUsTable();
+            });
+        });
+    }
+
     async loadUSRankings(period = null) {
         // 現在の期間を管理
         if (period) this.currentUsPeriod = period;
@@ -790,6 +986,7 @@ class Dashboard {
                 seen.add(s.symbol);
                 return true;
             });
+            this.usRawRows = deduped;   // P3: テーブル描画用に生行を保持
             items = deduped.map(s => ({
                 symbol: s.symbol, name: s.name, price: s.current_price,
                 change_percent: s.period_change, volume: s.volume,
@@ -832,9 +1029,17 @@ class Dashboard {
             this.renderRanking('us-short-high-ranking', _mapShort(rankings.short_high), 'short', '$');
             this.renderRanking('us-short-low-ranking',  _mapShort(rankings.short_low), 'short', '$');
 
+            // P3: テーブル表示中は生行更新後にテーブルを再描画（期間切替に追従）
+            if (this.usViewMode === 'table') this.buildUsTable();
+
             // ── イベントリスナー（初回のみ登録）──────────────────────────
             if (!this._usTabsInit) {
                 this._usTabsInit = true;
+
+                // P3: US 表示モード切替（カード / テーブル）
+                document.querySelectorAll('[data-us-view]').forEach(btn => {
+                    btn.addEventListener('click', () => this.switchUsView(btn.dataset.usView));
+                });
 
                 // カテゴリタブ
                 document.querySelectorAll('[data-us-category]').forEach(btn => {
@@ -980,6 +1185,11 @@ class Dashboard {
                 const category = e.currentTarget.dataset.category;
                 if (category) this.switchRankingCategory(category);
             });
+        });
+
+        // P3: JP 表示モード切替（カード / テーブル）
+        document.querySelectorAll('[data-jp-view]').forEach(btn => {
+            btn.addEventListener('click', () => this.switchJpView(btn.dataset.jpView));
         });
     }
     
@@ -1499,6 +1709,12 @@ Dashboard.prototype.switchPeriod = function(period) {
     });
     const activeBtn = document.querySelector(`[data-period="${period}"]`);
     if (activeBtn) activeBtn.classList.add('active');
+
+    // P3: テーブル表示中は期間切替でテーブルを再描画（カードは非表示なので更新不要）
+    if (this.jpViewMode === 'table') {
+        this.buildJpTable();
+        return;
+    }
 
     // デイリー: enhanced_rankings の basic データを使用
     if (period === 'daily' && this.lastRankingsData) {
