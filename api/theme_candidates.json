@@ -1,4 +1,348 @@
 {
-  "count": 0,
-  "candidates": []
+  "count": 24,
+  "candidates": [
+    {
+      "ticker": "6976.T",
+      "name": "太陽誘電",
+      "sector17": "電機・精密",
+      "current": 22960.0,
+      "change_1d": 13.945409429280398,
+      "deviation_25": 31.054716485724377,
+      "volume_ratio": 0.9572181060587577,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "前日比+13.9%",
+        "25日乖離+31.1%",
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6925.T",
+      "name": "ウシオ電機",
+      "sector17": "電機・精密",
+      "current": 4940.0,
+      "change_1d": 10.071301247771846,
+      "deviation_25": 14.567195747562556,
+      "volume_ratio": 1.7749317793892216,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "前日比+10.1%",
+        "52週高値更新",
+        "出来高1.8倍"
+      ]
+    },
+    {
+      "ticker": "7012.T",
+      "name": "川崎重工業",
+      "sector17": "自動車・輸送機",
+      "current": 2676.5,
+      "change_1d": -8.417450812660398,
+      "deviation_25": -9.325283898419933,
+      "volume_ratio": 3.1393764039447145,
+      "year_high": false,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "出来高3.1倍"
+      ]
+    },
+    {
+      "ticker": "4062.T",
+      "name": "イビデン",
+      "sector17": "電機・精密",
+      "current": 25760.0,
+      "change_1d": 8.167121562040736,
+      "deviation_25": 15.90968403812061,
+      "volume_ratio": 1.0975329701023362,
+      "year_high": false,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "前日比+8.2%"
+      ]
+    },
+    {
+      "ticker": "9072.T",
+      "name": "ニッコンホールディングス",
+      "sector17": "運輸・物流",
+      "current": 5444.0,
+      "change_1d": -7.697524584604953,
+      "deviation_25": -9.939717180272767,
+      "volume_ratio": 1.7778186499908037,
+      "year_high": false,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "出来高1.8倍"
+      ]
+    },
+    {
+      "ticker": "6728.T",
+      "name": "アルバック",
+      "sector17": "電機・精密",
+      "current": 11085.0,
+      "change_1d": 7.153214113098105,
+      "deviation_25": 18.736912991394703,
+      "volume_ratio": 0.6452571328701883,
+      "year_high": false,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "前日比+7.2%"
+      ]
+    },
+    {
+      "ticker": "6134.T",
+      "name": "ＦＵＪＩ",
+      "sector17": "機械",
+      "current": 8891.0,
+      "change_1d": 5.870445344129549,
+      "deviation_25": 10.92950717404866,
+      "volume_ratio": 1.1061409849032418,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6525.T",
+      "name": "ＫＯＫＵＳＡＩ　ＥＬＥＣＴＲＩＣ",
+      "sector17": "電機・精密",
+      "current": 11485.0,
+      "change_1d": 5.803777061262094,
+      "deviation_25": 27.08469805074092,
+      "volume_ratio": 1.1910310579869188,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "25日乖離+27.1%",
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6323.T",
+      "name": "ローツェ",
+      "sector17": "機械",
+      "current": 5102.0,
+      "change_1d": 5.41322314049586,
+      "deviation_25": 16.859676769157474,
+      "volume_ratio": 1.0335285238671277,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "7729.T",
+      "name": "東京精密",
+      "sector17": "電機・精密",
+      "current": 21040.0,
+      "change_1d": 4.520615996025823,
+      "deviation_25": 12.90097554169931,
+      "volume_ratio": 0.8271709142216456,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6951.T",
+      "name": "日本電子",
+      "sector17": "電機・精密",
+      "current": 7786.0,
+      "change_1d": 4.510067114093963,
+      "deviation_25": 11.20569482849243,
+      "volume_ratio": 0.6980066445182724,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6136.T",
+      "name": "オーエスジー",
+      "sector17": "機械",
+      "current": 3777.0,
+      "change_1d": 3.992290748898686,
+      "deviation_25": 7.814480309656213,
+      "volume_ratio": 0.5997440117023222,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6532.T",
+      "name": "ベイカレント",
+      "sector17": "情報通信・サービスその他",
+      "current": 6268.0,
+      "change_1d": 3.8436050364479835,
+      "deviation_25": 9.264088582704598,
+      "volume_ratio": 1.038606782210943,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "9401.T",
+      "name": "ＴＢＳホールディングス",
+      "sector17": "情報通信・サービスその他",
+      "current": 6436.0,
+      "change_1d": 3.389558232931722,
+      "deviation_25": 7.610302231793531,
+      "volume_ratio": 0.6643414217924345,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "9502.T",
+      "name": "中部電力",
+      "sector17": "電力・ガス",
+      "current": 3125.0,
+      "change_1d": 2.12418300653594,
+      "deviation_25": 8.76223357603263,
+      "volume_ratio": 1.9000815092140577,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新",
+        "出来高1.9倍"
+      ]
+    },
+    {
+      "ticker": "4202.T",
+      "name": "ダイセル",
+      "sector17": "素材・化学",
+      "current": 1400.0,
+      "change_1d": 2.115244347191836,
+      "deviation_25": 6.31996233235621,
+      "volume_ratio": 0.466660172246456,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6707.T",
+      "name": "サンケン電気",
+      "sector17": "電機・精密",
+      "current": 11615.0,
+      "change_1d": 2.1098901098901113,
+      "deviation_25": 21.96735496228095,
+      "volume_ratio": 0.7857323453332555,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "25日乖離+22.0%",
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "7988.T",
+      "name": "ニフコ",
+      "sector17": "素材・化学",
+      "current": 4935.0,
+      "change_1d": 2.0893669838643047,
+      "deviation_25": 9.434179831291733,
+      "volume_ratio": 0.32476982704474777,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "7337.T",
+      "name": "ひろぎんホールディングス",
+      "sector17": "銀行",
+      "current": 2137.0,
+      "change_1d": 1.8589132507149664,
+      "deviation_25": 3.6593647529055584,
+      "volume_ratio": 0.5950490707556443,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "7269.T",
+      "name": "スズキ",
+      "sector17": "自動車・輸送機",
+      "current": 1979.0,
+      "change_1d": 1.2017386857581247,
+      "deviation_25": 3.7777404874774545,
+      "volume_ratio": 0.5243386415163763,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "1969.T",
+      "name": "高砂熱学工業",
+      "sector17": "建設・資材",
+      "current": 5124.0,
+      "change_1d": 0.8264462809917328,
+      "deviation_25": 7.081058940557905,
+      "volume_ratio": 0.5413327226929242,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "9301.T",
+      "name": "三菱倉庫",
+      "sector17": "運輸・物流",
+      "current": 1549.0,
+      "change_1d": 0.3563330093942385,
+      "deviation_25": 4.614096226058284,
+      "volume_ratio": 0.385112826023249,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "7846.T",
+      "name": "パイロットコーポレーション",
+      "sector17": "情報通信・サービスその他",
+      "current": 1694.5,
+      "change_1d": 0.29594554601952705,
+      "deviation_25": 6.122356091735726,
+      "volume_ratio": 0.5174387215203542,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "9962.T",
+      "name": "ミスミグループ本社",
+      "sector17": "商社・卸売",
+      "current": 3995.0,
+      "change_1d": 0.025037556334495115,
+      "deviation_25": 5.851368251478473,
+      "volume_ratio": 0.44835999925496844,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    }
+  ]
 }

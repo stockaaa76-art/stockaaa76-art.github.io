@@ -1431,7 +1431,8 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
         
         const formattedPrice = this.formatPrice(item.current_price);
         const formattedChange = this.formatPercent(item.period_change);
-        const formattedVolume = this.formatVolume(item.volume);
+        // 出来高は期間内合計（period_volume）を優先表示。期間タブで数字が変わる（P1）。未生成JSONは当日volumeにfallback
+        const formattedVolume = this.formatVolume(item.period_volume ?? item.volume);
         const formattedMarketCap = this.formatMarketCap(item.market_cap);
         
         let valueDisplay = '';
