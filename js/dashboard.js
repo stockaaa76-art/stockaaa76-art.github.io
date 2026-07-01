@@ -739,6 +739,25 @@ class Dashboard {
         });
     }
 
+    // JP 期間別ランキングの取得失敗時に、まだ描画されていない枠（スケルトン残存）だけをエラー＋再読込に差し替える。
+    // 成功済みセクション（enhanced 由来のデイリー等）は .loading が消えているので潰さない（P2）。
+    renderPeriodError(msg) {
+        const retry = `<button onclick="window.dashboard && window.dashboard.loadPeriodRankings()" style="margin-top:8px;padding:4px 12px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer;font-size:0.85em;">再読込</button>`;
+        const ids = [
+            'gainers-ranking', 'losers-ranking', 'volume-ranking', 'market-cap-ranking',
+            'rsi-high-ranking', 'rsi-low-ranking', 'psych-high-ranking', 'psych-low-ranking',
+            'margin-ratio-high-ranking', 'margin-ratio-low-ranking',
+            'long-increase-ranking', 'long-decrease-ranking',
+            'short-increase-ranking', 'short-decrease-ranking',
+        ];
+        ids.forEach(id => {
+            const el = document.getElementById(id);
+            if (el && el.querySelector('.loading')) {
+                el.innerHTML = `<div style="padding:16px;color:#9ca3af;font-size:0.9em;">${msg}<br>${retry}</div>`;
+            }
+        });
+    }
+
     async loadUSRankings(period = null) {
         // 現在の期間を管理
         if (period) this.currentUsPeriod = period;
@@ -1338,6 +1357,7 @@ Dashboard.prototype.loadPeriodRankings = async function() {
 
     } catch (error) {
         console.error('期間別ランキング取得エラー:', error);
+        this.renderPeriodError('ランキングデータの取得に失敗しました');
     }
 };
 
