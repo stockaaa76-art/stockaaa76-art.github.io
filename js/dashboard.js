@@ -425,6 +425,43 @@ class Dashboard {
         ctx.fill();
     }
 
+    // ランキングカード内インライン用の小型スパークライン（P4 視覚化）。
+    // canvas を直接受け取り、直近終値系列（data-spark）をトレンド線として描く。
+    drawMiniSpark(canvas, values) {
+        if (!canvas || !Array.isArray(values) || values.length < 2) return;
+        const dpr = window.devicePixelRatio || 1;
+        const w = 56, h = 22;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        const ctx = canvas.getContext('2d');
+        ctx.scale(dpr, dpr);
+        ctx.clearRect(0, 0, w, h);
+        const min = Math.min(...values);
+        const max = Math.max(...values);
+        const range = max - min || 1;
+        const pad = 2;
+        const up = values[values.length - 1] >= values[0];
+        ctx.strokeStyle = up ? '#10b981' : '#ef4444';
+        ctx.lineWidth = 1.5;
+        ctx.lineJoin = 'round';
+        ctx.beginPath();
+        values.forEach((v, i) => {
+            const x = (i / (values.length - 1)) * (w - pad * 2) + pad;
+            const y = h - pad - ((v - min) / range) * (h - pad * 2);
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        // エンドポイント
+        const lx = w - pad;
+        const ly = h - pad - ((values[values.length - 1] - min) / range) * (h - pad * 2);
+        ctx.fillStyle = ctx.strokeStyle;
+        ctx.beginPath();
+        ctx.arc(lx, ly, 1.6, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+
     drawSimpleSparkline(container, changeValue) {
         const canvas = container.querySelector('canvas');
         if (!canvas) return;
@@ -1166,13 +1203,20 @@ class Dashboard {
                 changeClass = 'negative';
             }
 
+            const rankCls = rank <= 3 ? 'ranking-rank top' : 'ranking-rank';
+            const sparkHtml = (Array.isArray(stock.spark) && stock.spark.length >= 2)
+                ? `<canvas class="ranking-spark" data-spark='${JSON.stringify(stock.spark)}' aria-hidden="true"></canvas>` : '';
             return `
                 <div class="ranking-item" onclick="if(typeof gtag==='function')gtag('event','ranking_item_click',{symbol:'${stock.symbol}'});window.location.href='/stocks/detail/?s=${encodeURIComponent(stock.symbol)}'" style="cursor:pointer;">
                     <div class="ranking-item-left">
-                        <span class="ranking-symbol">${rank}. ${stock.symbol}</span>
-                        <span class="ranking-name">${stock.name}</span>
+                        <span class="${rankCls}">${rank}</span>
+                        <div class="ranking-labels">
+                            <span class="ranking-symbol">${stock.symbol}</span>
+                            <span class="ranking-name">${stock.name}</span>
+                        </div>
                     </div>
                     <div class="ranking-item-right">
+                        ${sparkHtml}
                         <div class="ranking-values">
                             <span class="ranking-value">${valueText}</span>
                             <span class="ranking-change ${changeClass}">${changeText}</span>
@@ -1184,6 +1228,10 @@ class Dashboard {
         }).join('');
 
         container.innerHTML = html;
+        // スパークライン描画（spark を持つ行のみ・DOM 反映後）
+        container.querySelectorAll('canvas.ranking-spark').forEach(cv => {
+            try { this.drawMiniSpark(cv, JSON.parse(cv.dataset.spark)); } catch (e) {}
+        });
     }
     
     setupRankingTabs() {
@@ -1688,13 +1736,23 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
             valueDisplay = formattedPrice;
         }
         
+        // P4 視覚的階層: 順位バッジ・スパークライン。spark があればカードに埋め込む
+        const rankCls = index < 3 ? 'ranking-rank top' : 'ranking-rank';
+        const sparkAttr = (Array.isArray(item.spark) && item.spark.length >= 2)
+            ? ` data-spark='${JSON.stringify(item.spark)}'` : '';
+        const sparkHtml = sparkAttr
+            ? `<canvas class="ranking-spark"${sparkAttr} aria-hidden="true"></canvas>` : '';
         return `
             <div class="ranking-item" onclick="if(typeof gtag==='function')gtag('event','ranking_item_click',{symbol:'${item.symbol}'});window.location.href='/stocks/detail/?s=${encodeURIComponent(item.symbol)}'">
                 <div class="ranking-item-left">
-                    <div class="ranking-symbol">${index + 1}. ${item.symbol}</div>
-                    <div class="ranking-name">${item.name}</div>
+                    <span class="${rankCls}">${index + 1}</span>
+                    <div class="ranking-labels">
+                        <div class="ranking-symbol">${item.symbol}</div>
+                        <div class="ranking-name">${item.name}</div>
+                    </div>
                 </div>
                 <div class="ranking-item-right">
+                    ${sparkHtml}
                     <div class="ranking-values">
                         <div class="ranking-value">${valueDisplay}</div>
                         <div class="ranking-change ${changeClass}">${formattedChange}</div>
@@ -1706,6 +1764,10 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
     }).join('');
 
     element.innerHTML = html;
+    // スパークライン描画（DOM 反映後）
+    element.querySelectorAll('canvas.ranking-spark').forEach(cv => {
+        try { this.drawMiniSpark(cv, JSON.parse(cv.dataset.spark)); } catch (e) {}
+    });
 };
 
 Dashboard.prototype.switchPeriod = function(period) {
