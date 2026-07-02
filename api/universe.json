@@ -9,8 +9,8 @@
       "core": "Major indices + Top market cap + Strategic importance",
       "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
     },
-    "total_stocks": 255,
-    "updated_at": "2026-06-04"
+    "total_stocks": 256,
+    "updated_at": "2026-07-01"
   },
   "core_universe": [
     {
@@ -488,6 +488,13 @@
       "category": "global_etfs",
       "tier": "core",
       "weight": 0.8
+    },
+    {
+      "ticker": "SCHD",
+      "name": "SCHD（米国増配ETF）",
+      "category": "global_etfs",
+      "tier": "core",
+      "weight": 1.0
     },
     {
       "ticker": "8802.T",

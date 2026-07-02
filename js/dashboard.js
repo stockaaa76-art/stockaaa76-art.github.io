@@ -545,21 +545,31 @@ class Dashboard {
                 el.innerHTML = '<div class="no-data">本日はユニバース外の急騰なし</div>';
                 return;
             }
+            const fmtPct = (v) => (v == null ? '—' : `${v >= 0 ? '+' : ''}${v.toFixed(1)}%`);
+            const pctCls = (v) => (v > 0 ? 'positive' : v < 0 ? 'negative' : 'neutral');
             el.innerHTML = cands.map((c, i) => {
                 const chg = c.change_1d || 0;
-                const cls = chg > 0 ? 'positive' : chg < 0 ? 'negative' : 'neutral';
+                const cls = pctCls(chg);
                 const reasons = (c.detected_reasons || []).join(' / ');
+                // 前日比だけでなく 5日(≒ウィークリー)・月次(≒20日)の騰落も併記（データがある場合）
+                const periodParts = [];
+                if (c.change_5d != null) periodParts.push(`5日 <span class="${pctCls(c.change_5d)}">${fmtPct(c.change_5d)}</span>`);
+                if (c.change_20d != null) periodParts.push(`月次 <span class="${pctCls(c.change_20d)}">${fmtPct(c.change_20d)}</span>`);
+                const periodLine = periodParts.length
+                    ? `<div class="ranking-name theme-periods" style="font-size:.8em;opacity:.85">${periodParts.join('　')}</div>`
+                    : '';
                 return `
                     <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(c.ticker)}'">
                         <div class="ranking-item-left">
                             <div class="ranking-symbol">${i + 1}. 🆕 ${c.ticker}</div>
                             <div class="ranking-name">${c.name}　<span style="opacity:.7">[${c.sector17 || ''}]</span></div>
+                            ${periodLine}
                             <div class="ranking-name" style="font-size:.8em;opacity:.75">${reasons}</div>
                         </div>
                         <div class="ranking-item-right">
                             <div class="ranking-values">
                                 <div class="ranking-value">¥${(c.current || 0).toLocaleString()}</div>
-                                <div class="ranking-change ${cls}">${chg >= 0 ? '+' : ''}${chg.toFixed(1)}%</div>
+                                <div class="ranking-change ${cls}">前日 ${fmtPct(chg)}</div>
                             </div>
                         </div>
                     </div>`;
