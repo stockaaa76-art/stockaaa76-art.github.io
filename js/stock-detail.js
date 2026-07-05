@@ -3,6 +3,39 @@
  * Chart.js + 予測表示 + テクニカル指標
  */
 
+// ⑥(c)/⑤(b) 相対強度: セクターラベル→代表ETF（出典: stock/data/sector_master.json sector_definitions。
+// セクター追加・変更時は sector_master.json から再生成すること）
+const SECTOR_ETF_BY_LABEL = {
+    '日本-エネルギー資源': '1618.T',
+    '日本-不動産': '1633.T',
+    '日本-医薬品': '1621.T',
+    '日本-商社・卸売': '1629.T',
+    '日本-小売業': '1630.T',
+    '日本-建設・資材': '1619.T',
+    '日本-情報通信・サービス': '1626.T',
+    '日本-機械': '1624.T',
+    '日本-素材・化学': '1620.T',
+    '日本-自動車・輸送機': '1622.T',
+    '日本-運輸・物流': '1628.T',
+    '日本-金融（保険・証券）': '1631.T',
+    '日本-鉄鋼・非鉄': '1623.T',
+    '日本-銀行・金融': '1632.T',
+    '日本-電力・ガス': '1627.T',
+    '日本-電機・精密・半導体': '1625.T',
+    '日本-食品': '1617.T',
+    '米-エネルギー': 'XLE',
+    '米-テクノロジー': 'XLK',
+    '米-ヘルスケア': 'XLV',
+    '米-一般消費財': 'XLY',
+    '米-不動産': 'XLRE',
+    '米-公益事業': 'XLU',
+    '米-生活必需品': 'XLP',
+    '米-素材': 'XLB',
+    '米-資本財・産業': 'XLI',
+    '米-通信・メディア': 'XLC',
+    '米-金融': 'XLF',
+};
+
 class StockDetail {
     constructor() {
         this.symbol = null;
@@ -87,6 +120,13 @@ class StockDetail {
                 const histData = await histRes.json();
                 const sym = histData[this.symbol];
                 if (sym && sym.history && sym.history.length >= 2) {
+                    // ⑥(c)/⑤(b) 相対強度用: 自銘柄・ベンチマーク・業種ETF の終値系列を保持
+                    this.ownHistory = sym.history;
+                    this.histDataRef = histData;
+                    const isJP = this.symbol.endsWith('.T') || this.symbol.startsWith('^N');
+                    const benchSym = isJP ? '^N225' : '^GSPC';
+                    this.benchHistory = (histData[benchSym] && histData[benchSym].history) || null;
+                    this.benchLabel = isJP ? '日経平均' : 'S&P500';
                     const latest = sym.history[sym.history.length - 1];
                     const prev   = sym.history[sym.history.length - 2];
                     const change = latest.close - prev.close;
@@ -966,6 +1006,20 @@ class StockDetail {
         return axisLabels[period] || '日付';
     }
 
+    // ⑥(c)/⑤(b): 自銘柄と参照系列（指数/業種ETF）の直近N営業日リターン差（pt）を返す
+    relStrength(refHistory, n) {
+        const own = this.ownHistory;
+        if (!Array.isArray(own) || !Array.isArray(refHistory)) return null;
+        if (own.length < n + 1 || refHistory.length < n + 1) return null;
+        const chg = (h) => {
+            const start = h[h.length - 1 - n].close;
+            const end = h[h.length - 1].close;
+            return (start > 0) ? (end / start - 1) * 100 : null;
+        };
+        const o = chg(own), r = chg(refHistory);
+        return (o == null || r == null) ? null : o - r;
+    }
+
     // 🧭 投資判断の整理（Q1質/Q2タイミング/Q3相対強さ→BT準拠アクション型）
     // ◎○△は BT未検証のヒューリスティック。アクションの型のみ BT-validated 結論に基づく。断定売買シグナルではない。
     renderJudgmentFunnel() {
@@ -1004,6 +1058,21 @@ class StockDetail {
         const me = this.mlEntry;
         let sMark = '—', sNote = 'MLデータなし';
         if (me && me.score_pct != null) { const p = me.score_pct; sMark = p >= 70 ? '◎' : p >= 40 ? '○' : '△'; sNote = `ML ${p.toFixed(0)}%ile（${p >= 70 ? '上位' : p >= 40 ? '中位' : '下位'}・${me.rank}位）`; }
+        // ⑥(c)/⑤(b): vs指数・vs業種ETF の相対リターン（期間騰落率の差・pt。市場が下げる中で上げる銘柄の特定用）
+        const fmtPt = (x) => (x == null) ? '-' : `${x >= 0 ? '+' : ''}${x.toFixed(1)}pt`;
+        const relParts = [];
+        const relB5 = this.relStrength(this.benchHistory, 5);
+        const relB20 = this.relStrength(this.benchHistory, 20);
+        if (relB5 != null || relB20 != null) {
+            relParts.push(`vs${this.benchLabel}: 5日${fmtPt(relB5)}・月次${fmtPt(relB20)}`);
+        }
+        const etfSym = (d && d.sector) ? SECTOR_ETF_BY_LABEL[d.sector] : null;
+        const etfHist = etfSym && this.histDataRef && this.histDataRef[etfSym] && this.histDataRef[etfSym].history;
+        if (etfHist) {
+            const relS5 = this.relStrength(etfHist, 5);
+            if (relS5 != null) relParts.push(`vs業種ETF: 5日${fmtPt(relS5)}`);
+        }
+        if (relParts.length) sNote += `｜${relParts.join('｜')}`;
 
         // --- Q4 バリュエーション（理論株価乖離・§1.4-B discretionary 割高アラート） ---
         const curP = parseFloat(this.stockData.price);

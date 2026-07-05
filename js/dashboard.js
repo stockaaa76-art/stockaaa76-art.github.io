@@ -813,7 +813,11 @@ class Dashboard {
     // P3: JP 表示モード切替（カード ⇄ ソート可能テーブル）。非破壊＝カード側DOMは残す。
     switchJpView(mode) {
         this.jpViewMode = mode;
-        document.querySelectorAll('[data-jp-view]').forEach(b => b.classList.toggle('active', b.dataset.jpView === mode));
+        document.querySelectorAll('[data-jp-view]').forEach(b => {
+            const on = b.dataset.jpView === mode;
+            b.classList.toggle('active', on);
+            b.setAttribute('aria-pressed', on);   // P5: トグル状態をスクリーンリーダーに通知
+        });
         const wrap = document.getElementById('jp-ranking-table-wrap');
         const catTabs = document.querySelector('.ranking-tabs');   // JP カテゴリタブ（先頭＝JP）
         const jpCats = ['basic', 'price', 'volume', 'financial', 'technical', 'margin', 'ai']
@@ -868,7 +872,11 @@ class Dashboard {
         ];
         const thead = '<thead><tr>' + cols.map(c => {
             const sortCls = (c.key === key) ? (dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
-            return `<th class="${[c.cls, sortCls].filter(Boolean).join(' ')}" data-sort="${c.key}">${c.label}</th>`;
+            // P5: 指標ツールチップ＋キーボード/スクリーンリーダー対応
+            const help = METRIC_HELP[c.key] ? ` title="${METRIC_HELP[c.key]}"` : '';
+            const ariaSort = (c.key === key) ? (dir === 'asc' ? 'ascending' : 'descending') : 'none';
+            const a11y = (c.key === 'sym') ? '' : ` tabindex="0" role="button" aria-sort="${ariaSort}" aria-label="${c.label}で並べ替え"`;
+            return `<th class="${[c.cls, sortCls].filter(Boolean).join(' ')}" data-sort="${c.key}"${help}${a11y}>${c.label}</th>`;
         }).join('') + '</tr></thead>';
         const fmtVol = v => { v = Number(v) || 0; if (v >= 1e8) return (v / 1e8).toFixed(1) + '億'; if (v >= 1e4) return Math.round(v / 1e4).toLocaleString('ja-JP') + '万'; return v ? String(v) : '—'; };
         const fmtCap = v => { v = Number(v) || 0; if (v >= 1e12) return (v / 1e12).toFixed(1) + '兆'; if (v >= 1e8) return (v / 1e8).toFixed(0) + '億'; return v ? String(v) : '—'; };
@@ -876,7 +884,7 @@ class Dashboard {
         const body = '<tbody>' + rows.map(r => {
             const chg = Number(r.period_change);
             const chgCls = (chg > 0) ? 'pos' : (chg < 0 ? 'neg' : '');
-            const chgTxt = (r.period_change != null && !isNaN(chg)) ? (chg > 0 ? '+' : '') + chg.toFixed(2) + '%' : '—';
+            const chgTxt = (r.period_change != null && !isNaN(chg)) ? (chg > 0 ? '▲+' : (chg < 0 ? '▼' : '')) + chg.toFixed(2) + '%' : '—';
             const dev = r.deviation_25;
             const devTxt = (dev != null && !isNaN(Number(dev))) ? (Number(dev) > 0 ? '+' : '') + Number(dev).toFixed(1) + '%' : '—';
             const vol = (r.period_volume != null) ? r.period_volume : r.volume;
@@ -895,6 +903,10 @@ class Dashboard {
         }).join('') + '</tbody>';
         table.innerHTML = thead + body;
         table.querySelectorAll('thead th[data-sort]').forEach(th => {
+            // P5: Enter/Space でもソート（キーボード操作対応）
+            th.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); th.click(); }
+            });
             th.addEventListener('click', () => {
                 const k = th.dataset.sort;
                 if (k === 'sym') return;   // 銘柄列はソート対象外
@@ -912,7 +924,11 @@ class Dashboard {
     // P3: 米国株 表示モード切替（カード ⇄ ソート可能テーブル）。非破壊。
     switchUsView(mode) {
         this.usViewMode = mode;
-        document.querySelectorAll('[data-us-view]').forEach(b => b.classList.toggle('active', b.dataset.usView === mode));
+        document.querySelectorAll('[data-us-view]').forEach(b => {
+            const on = b.dataset.usView === mode;
+            b.classList.toggle('active', on);
+            b.setAttribute('aria-pressed', on);   // P5: トグル状態をスクリーンリーダーに通知
+        });
         const wrap = document.getElementById('us-ranking-table-wrap');
         const catTabs = document.getElementById('us-ranking-tabs');
         const usCats = ['basic', 'price', 'volume', 'financial', 'technical', 'ai']
@@ -962,7 +978,11 @@ class Dashboard {
         ];
         const thead = '<thead><tr>' + cols.map(c => {
             const sortCls = (c.key === key) ? (dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
-            return `<th class="${[c.cls, sortCls].filter(Boolean).join(' ')}" data-sort="${c.key}">${c.label}</th>`;
+            // P5: 指標ツールチップ＋キーボード/スクリーンリーダー対応
+            const help = METRIC_HELP[c.key] ? ` title="${METRIC_HELP[c.key]}"` : '';
+            const ariaSort = (c.key === key) ? (dir === 'asc' ? 'ascending' : 'descending') : 'none';
+            const a11y = (c.key === 'sym') ? '' : ` tabindex="0" role="button" aria-sort="${ariaSort}" aria-label="${c.label}で並べ替え"`;
+            return `<th class="${[c.cls, sortCls].filter(Boolean).join(' ')}" data-sort="${c.key}"${help}${a11y}>${c.label}</th>`;
         }).join('') + '</tr></thead>';
         const fmtVol = v => { v = Number(v) || 0; if (v >= 1e8) return (v / 1e8).toFixed(1) + '億'; if (v >= 1e4) return Math.round(v / 1e4).toLocaleString('ja-JP') + '万'; return v ? String(v) : '—'; };
         const fmtCap = v => { v = Number(v) || 0; if (v >= 1e12) return '$' + (v / 1e12).toFixed(1) + 'T'; if (v >= 1e9) return '$' + (v / 1e9).toFixed(0) + 'B'; if (v >= 1e6) return '$' + (v / 1e6).toFixed(0) + 'M'; return v ? String(v) : '—'; };
@@ -970,7 +990,7 @@ class Dashboard {
         const body = '<tbody>' + rows.map(r => {
             const chg = Number(r.period_change);
             const chgCls = (chg > 0) ? 'pos' : (chg < 0 ? 'neg' : '');
-            const chgTxt = (r.period_change != null && !isNaN(chg)) ? (chg > 0 ? '+' : '') + chg.toFixed(2) + '%' : '—';
+            const chgTxt = (r.period_change != null && !isNaN(chg)) ? (chg > 0 ? '▲+' : (chg < 0 ? '▼' : '')) + chg.toFixed(2) + '%' : '—';
             const vol = (r.period_volume != null) ? r.period_volume : r.volume;
             return `<tr onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(r.symbol)}'" style="cursor:pointer;">`
                 + `<td class="col-sym"><span class="sym-code">${r.symbol}</span><br><span class="sym-name">${(r.name || '').slice(0, 20)}</span></td>`
@@ -987,6 +1007,10 @@ class Dashboard {
         }).join('') + '</tbody>';
         table.innerHTML = thead + body;
         table.querySelectorAll('thead th[data-sort]').forEach(th => {
+            // P5: Enter/Space でもソート（キーボード操作対応）
+            th.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); th.click(); }
+            });
             th.addEventListener('click', () => {
                 const k = th.dataset.sort;
                 if (k === 'sym') return;
@@ -1219,7 +1243,7 @@ class Dashboard {
                         ${sparkHtml}
                         <div class="ranking-values">
                             <span class="ranking-value">${valueText}</span>
-                            <span class="ranking-change ${changeClass}">${changeText}</span>
+                            <span class="ranking-change ${changeClass}">${changeClass === 'positive' ? '▲' : changeClass === 'negative' ? '▼' : ''}${changeText}</span>
                         </div>
                         <button class="btn-star" data-symbol="${stock.symbol}" onclick="event.stopPropagation(); toggleWatchlist('${stock.symbol}')" title="ウォッチリストに追加">⭐</button>
                     </div>
@@ -1675,6 +1699,50 @@ Dashboard.prototype.updateMarginRankingList = function(elementId, data) {
     element.innerHTML = html;
 };
 
+// ⑥相対強度: 指数超過（α）ランキングカードを period_rankings の alpha_high で更新する。
+// デイリー含む全期間で period_rankings.json 由来（enhanced には α が無いため）。
+// ⑤業種フロー（updateSectorFlow）も同じタイミングでまとめて更新する。
+Dashboard.prototype.updateAlphaRanking = function(period) {
+    const pd = this.periodRankingsData && this.periodRankingsData[period];
+    const list = pd && pd.rankings && pd.rankings.alpha_high;
+    this.updatePeriodRankingList('alpha-ranking', list || []);
+    this.updateSectorFlow(period);
+};
+
+// ⑤業種フロー: 17業種別の平均騰落率カード（強い業種→弱い業種・首位銘柄クリックで詳細へ）
+Dashboard.prototype.updateSectorFlow = function(period) {
+    const el = document.getElementById('sector-flow-ranking');
+    if (!el) return;
+    const pd = this.periodRankingsData && this.periodRankingsData[period];
+    const list = (pd && pd.rankings && pd.rankings.sector_flow) || [];
+    if (!list.length) {
+        el.innerHTML = '<div class="no-data">データがありません（次回データ更新で反映）</div>';
+        return;
+    }
+    el.innerHTML = list.map((s, i) => {
+        const cls = s.avg_change > 0 ? 'positive' : (s.avg_change < 0 ? 'negative' : 'neutral');
+        const arrow = s.avg_change > 0 ? '▲+' : (s.avg_change < 0 ? '▼' : '');
+        const rankCls = i < 3 ? 'ranking-rank top' : 'ranking-rank';
+        const topLabel = s.top_name || s.top_symbol || '';
+        return `
+            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(s.top_symbol || '')}'" style="cursor:pointer;" title="首位 ${topLabel} の詳細を開く">
+                <div class="ranking-item-left">
+                    <span class="${rankCls}">${i + 1}</span>
+                    <div class="ranking-labels">
+                        <span class="ranking-symbol">${s.sector17}</span>
+                        <span class="ranking-name">${s.count}銘柄・首位 ${topLabel}</span>
+                    </div>
+                </div>
+                <div class="ranking-item-right">
+                    <div class="ranking-values">
+                        <div class="ranking-value">平均</div>
+                        <div class="ranking-change ${cls}">${arrow}${Number(s.avg_change).toFixed(2)}%</div>
+                    </div>
+                </div>
+            </div>`;
+    }).join('');
+};
+
 Dashboard.prototype.updatePeriodRankings = function() {
     // デイリーは enhanced_rankings.json の basic データを使用
     if (this.currentPeriod === 'daily') {
@@ -1684,6 +1752,7 @@ Dashboard.prototype.updatePeriodRankings = function() {
             this.renderRanking('losers-ranking', basic.losers, 'percentage');
             this.renderRanking('volume-ranking', basic.volume_high || basic.volume, 'volume');
             this.renderRanking('market-cap-ranking', basic.market_cap_high || basic.market_cap, 'market_cap');
+            this.updateAlphaRanking('daily');
         }
         return;
     }
@@ -1701,7 +1770,22 @@ Dashboard.prototype.updatePeriodRankings = function() {
         this.updatePeriodRankingList('losers-ranking', rankings.losers || []);
         this.updatePeriodRankingList('volume-ranking', rankings.volume || []);
         this.updatePeriodRankingList('market-cap-ranking', rankings.market_cap || []);
+        this.updateAlphaRanking(this.currentPeriod);
     }
+};
+
+// P5: 指標ツールチップ（テーブル見出し title / aria-label 用）
+const METRIC_HELP = {
+    current_price: '直近の株価',
+    period_change: '選択期間の騰落率',
+    period_volume: '選択期間の出来高合計（デイリー=当日）',
+    market_cap: '時価総額（株価×発行済株式数）',
+    pe_ratio: 'PER=株価収益率。株価が1株利益の何倍か（低いほど割安の目安）',
+    pb_ratio: 'PBR=株価純資産倍率。1倍近辺が解散価値の目安',
+    dividend_yield: '配当利回り（年間配当÷株価・%）',
+    rsi: 'RSI=相対力指数。70以上は買われすぎ・30以下は売られすぎの目安',
+    deviation_25: '25日移動平均線からの乖離率。±20%超は過熱/急落の目安',
+    short_ratio: '空売り比率（日数換算）。高いほど踏み上げ余地',
 };
 
 Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
@@ -1724,7 +1808,11 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
         const formattedMarketCap = this.formatMarketCap(item.market_cap);
         
         let valueDisplay = '';
-        if (elementId.includes('rsi')) {
+        if (elementId.includes('alpha')) {
+            // ⑥相対強度: 値欄に指数超過リターン（α）を表示（騰落欄は生の期間騰落率）
+            valueDisplay = (item.alpha != null)
+                ? `α ${Number(item.alpha) > 0 ? '+' : ''}${Number(item.alpha).toFixed(2)}%` : '--';
+        } else if (elementId.includes('rsi')) {
             valueDisplay = (item.rsi != null) ? `RSI ${item.rsi.toFixed(1)}` : '--';
         } else if (elementId.includes('psych')) {
             valueDisplay = (item.psychological_line != null) ? `${item.psychological_line.toFixed(0)}%` : '--';
@@ -1755,7 +1843,7 @@ Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
                     ${sparkHtml}
                     <div class="ranking-values">
                         <div class="ranking-value">${valueDisplay}</div>
-                        <div class="ranking-change ${changeClass}">${formattedChange}</div>
+                        <div class="ranking-change ${changeClass}">${changeClass === 'positive' ? '▲' : changeClass === 'negative' ? '▼' : ''}${formattedChange}</div>
                     </div>
                     <span class="watchlist-star" onclick="event.stopPropagation(); toggleWatchlist('${item.symbol}')">⭐</span>
                 </div>
@@ -1795,6 +1883,7 @@ Dashboard.prototype.switchPeriod = function(period) {
         this.renderRanking('losers-ranking', basic.losers, 'percentage');
         this.renderRanking('volume-ranking', basic.volume_high || basic.volume, 'volume');
         this.renderRanking('market-cap-ranking', basic.market_cap_high || basic.market_cap, 'market_cap');
+        this.updateAlphaRanking('daily');
         return;
     }
 
@@ -1805,6 +1894,7 @@ Dashboard.prototype.switchPeriod = function(period) {
         this.updatePeriodRankingList('losers-ranking', rankings.losers || []);
         this.updatePeriodRankingList('volume-ranking', rankings.volume || []);
         this.updatePeriodRankingList('market-cap-ranking', rankings.market_cap || []);
+        this.updateAlphaRanking(period);
     }
 };
 
