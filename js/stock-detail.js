@@ -306,43 +306,9 @@ class StockDetail {
     }
 
     renderPredictions() {
-        const predictions = this.stockData.predictions;
-        if (!predictions) {
-            document.querySelector('.prediction-section').style.display = 'none';
-            return;
-        }
-
-        const market = this.detectMarket(this.symbol);
-
-        // アンサンブル予測
-        if (predictions.ensemble) {
-            document.getElementById('ensemble-prediction').textContent = 
-                this.formatPrice(predictions.ensemble.value, market);
-            document.getElementById('ensemble-confidence').textContent = 
-                `信頼度: ${(predictions.ensemble.confidence * 100).toFixed(1)}%`;
-        }
-
-        // 各手法の予測
-        const methods = [
-            { key: 'moving_avg', id: 'ma' },
-            { key: 'linear_reg', id: 'lr' },
-            { key: 'momentum', id: 'momentum' },
-            { key: 'bbands', id: 'bb' }
-        ];
-
-        methods.forEach(({ key, id }) => {
-            if (predictions[key]) {
-                const predEl = document.getElementById(`${id}-prediction`);
-                const confEl = document.getElementById(`${id}-confidence`);
-                
-                if (predEl) {
-                    predEl.textContent = this.formatPrice(predictions[key].value, market);
-                }
-                if (confEl) {
-                    confEl.textContent = `${(predictions[key].confidence * 100).toFixed(1)}%`;
-                }
-            }
-        });
+        // 2026-07-08 翌日AI予測シグナルは廃止（BTでナイーブ基準に劣後確定・生成停止済み）。
+        // 対応する予測セクションも single.html から撤去済み。
+        return;
     }
 
     renderSignals() {

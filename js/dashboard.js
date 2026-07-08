@@ -1989,19 +1989,9 @@ Dashboard.prototype.updateEnhancedRankingList = function(elementId, data) {
     element.innerHTML = html;
 };
 Dashboard.prototype.loadAiRankings = async function() {
-    try {
-        const res = await fetch(this.ai_rankings_api);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        this.renderAiRanking('jp-ai-bullish-high-ranking', data.jp?.bullish_high || [], '¥');
-        this.renderAiRanking('jp-ai-bearish-high-ranking', data.jp?.bearish_high || [], '¥');
-        this.renderAiRanking('jp-ai-notable-ranking',      data.jp?.notable      || [], '¥');
-        this.renderAiRanking('us-ai-bullish-high-ranking', data.us?.bullish_high || [], '$');
-        this.renderAiRanking('us-ai-bearish-high-ranking', data.us?.bearish_high || [], '$');
-        this.renderAiRanking('us-ai-notable-ranking',      data.us?.notable      || [], '$');
-    } catch (e) {
-        console.error('AI予測ランキング取得エラー:', e);
-    }
+    // 2026-07-08 日次AI予測ランキングは廃止（BTでナイーブ基準に劣後確定・生成停止済み）。
+    // 月次のAI銘柄ランキング（ml-ranking-section）は loadMLRanking 側で継続。
+    return;
 };
 
 Dashboard.prototype.renderAiRanking = function(elementId, items, currency) {

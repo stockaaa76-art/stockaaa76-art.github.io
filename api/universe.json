@@ -3,14 +3,14 @@
     "generated_at": "2025-09-22 03:03:16",
     "total_count": 108,
     "core_count": 71,
-    "active_count": 47,
+    "active_count": 149,
     "version": "1.0",
     "selection_criteria": {
       "core": "Major indices + Top market cap + Strategic importance",
       "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
     },
-    "total_stocks": 256,
-    "updated_at": "2026-07-01"
+    "total_stocks": 358,
+    "updated_at": "2026-07-08"
   },
   "core_universe": [
     {
@@ -2104,6 +2104,1536 @@
       },
       "added": "2026-06-04",
       "theme": "AI/半導体"
+    },
+    {
+      "ticker": "7729.T",
+      "name": "東京精密",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "200A.T",
+      "name": "NEXT FUNDS 日経半導体株指数連動型上場投信",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体ETF"
+    },
+    {
+      "ticker": "SPCX",
+      "name": "SpaceX",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/宇宙"
+    },
+    {
+      "ticker": "CBRS",
+      "name": "Cerebras Systems",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI推論チップ"
+    },
+    {
+      "ticker": "PAYP",
+      "name": "PayPay ADR",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "フィンテック"
+    },
+    {
+      "ticker": "1326.T",
+      "name": "SPDRゴールドシェア",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "コモディティ/ゴールド"
+    },
+    {
+      "ticker": "4973.T",
+      "name": "日本高純度化学",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体材料"
+    },
+    {
+      "ticker": "8081.T",
+      "name": "カナデン",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体商社"
+    },
+    {
+      "ticker": "7537.T",
+      "name": "丸文",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体商社"
+    },
+    {
+      "ticker": "6525.T",
+      "name": "KOKUSAI ELECTRIC",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "6323.T",
+      "name": "ローツェ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "6925.T",
+      "name": "ウシオ電機",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体"
+    },
+    {
+      "ticker": "6976.T",
+      "name": "太陽誘電",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/電機精密"
+    },
+    {
+      "ticker": "6971.T",
+      "name": "京セラ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/電機精密"
+    },
+    {
+      "ticker": "6479.T",
+      "name": "ミネベアミツミ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/電機精密"
+    },
+    {
+      "ticker": "4203.T",
+      "name": "住友ベークライト",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体封止材"
+    },
+    {
+      "ticker": "6728.T",
+      "name": "アルバック",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体製造装置"
+    },
+    {
+      "ticker": "4062.T",
+      "name": "イビデン",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/半導体基板"
+    },
+    {
+      "ticker": "6981.T",
+      "name": "村田製作所",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.5,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-08",
+      "theme": "AI/電子部品"
+    },
+    {
+      "ticker": "6526.T",
+      "name": "ソシオネクスト",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.99,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.99
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "6762.T",
+      "name": "ＴＤＫ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.988,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.988
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "6965.T",
+      "name": "浜松ホトニクス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.986,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.986
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "4980.T",
+      "name": "デクセリアルズ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.984,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9840000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（素材・化学）"
+    },
+    {
+      "ticker": "6754.T",
+      "name": "アンリツ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.982,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.982
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "6481.T",
+      "name": "ＴＨＫ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.977,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.977
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（機械）"
+    },
+    {
+      "ticker": "5991.T",
+      "name": "日本発條",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.975,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.975
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "5344.T",
+      "name": "ＭＡＲＵＷＡ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.973,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.973
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "3132.T",
+      "name": "マクニカホールディングス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.969,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9690000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（商社・卸売）"
+    },
+    {
+      "ticker": "4043.T",
+      "name": "トクヤマ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.967,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9670000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（素材・化学）"
+    },
+    {
+      "ticker": "4186.T",
+      "name": "東京応化工業",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.961,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.961
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（素材・化学）"
+    },
+    {
+      "ticker": "4004.T",
+      "name": "レゾナック・ホールディングス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.959,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9590000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（素材・化学）"
+    },
+    {
+      "ticker": "5333.T",
+      "name": "ＮＧＫ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.957,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9570000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "6361.T",
+      "name": "荏原製作所",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.955,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.955
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（機械）"
+    },
+    {
+      "ticker": "6113.T",
+      "name": "アマダ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.951,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.951
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（機械）"
+    },
+    {
+      "ticker": "6806.T",
+      "name": "ヒロセ電機",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.949,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9490000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "5332.T",
+      "name": "ＴＯＴＯ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.938,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.938
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "5232.T",
+      "name": "住友大阪セメント",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.936,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9359999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "5301.T",
+      "name": "東海カーボン",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.934,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.934
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "6724.T",
+      "name": "セイコーエプソン",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.932,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.932
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "6268.T",
+      "name": "ナブテスコ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.928,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9279999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（機械）"
+    },
+    {
+      "ticker": "6368.T",
+      "name": "オルガノ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.926,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9259999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（機械）"
+    },
+    {
+      "ticker": "6134.T",
+      "name": "ＦＵＪＩ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.924,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.924
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（機械）"
+    },
+    {
+      "ticker": "5471.T",
+      "name": "大同特殊鋼",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.92,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.92
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（鉄鋼・非鉄）"
+    },
+    {
+      "ticker": "5201.T",
+      "name": "ＡＧＣ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.912,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.912
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "5016.T",
+      "name": "ＪＸ金属",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.91,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.91
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（鉄鋼・非鉄）"
+    },
+    {
+      "ticker": "4182.T",
+      "name": "三菱瓦斯化学",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.908,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9079999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（素材・化学）"
+    },
+    {
+      "ticker": "5801.T",
+      "name": "古河電気工業",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.901,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9009999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（鉄鋼・非鉄）"
+    },
+    {
+      "ticker": "2531.T",
+      "name": "宝ホールディングス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.899,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.899
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（食品）"
+    },
+    {
+      "ticker": "6856.T",
+      "name": "堀場製作所",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.891,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.8909999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "5334.T",
+      "name": "日本特殊陶業",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.889,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.889
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "3105.T",
+      "name": "日清紡ホールディングス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.887,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.887
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "6141.T",
+      "name": "ＤＭＧ森精機",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.883,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.883
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（機械）"
+    },
+    {
+      "ticker": "6504.T",
+      "name": "富士電機",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.881,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.8809999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "9962.T",
+      "name": "ミスミグループ本社",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.879,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.879
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（商社・卸売）"
+    },
+    {
+      "ticker": "6674.T",
+      "name": "ジーエス・ユアサ　コーポレーション",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.877,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.877
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（電機・精密）"
+    },
+    {
+      "ticker": "6269.T",
+      "name": "三井海洋開発",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.875,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.875
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（機械）"
+    },
+    {
+      "ticker": "7911.T",
+      "name": "ＴＯＰＰＡＮホールディングス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.873,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.873
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（情報通信・サービスその他）"
+    },
+    {
+      "ticker": "8136.T",
+      "name": "サンリオ",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.871,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.871
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（商社・卸売）"
+    },
+    {
+      "ticker": "7012.T",
+      "name": "川崎重工業",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.867,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.867
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（自動車・輸送機）"
+    },
+    {
+      "ticker": "5393.T",
+      "name": "ニチアス",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.864,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.8640000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（建設・資材）"
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 1.0,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 1.0
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.998,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.998
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.996,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.996
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.994,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9940000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.992,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.992
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.988,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.988
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.986,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.986
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "CHTR",
+      "name": "Charter Communications",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.984,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9840000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Communication Services）"
+    },
+    {
+      "ticker": "HPE",
+      "name": "Hewlett Packard Enterprise",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.982,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.982
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "CIEN",
+      "name": "Ciena",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.98,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.98
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.978,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.978
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "HUM",
+      "name": "Humana",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.976,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.976
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Health Care）"
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent Corp.",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.974,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9740000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "NUE",
+      "name": "Nucor",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.97,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.97
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Materials）"
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.968,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.968
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "TSCO",
+      "name": "Tractor Supply",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.966,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.966
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Consumer Discretionary）"
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.964,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9640000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "PWR",
+      "name": "Quanta Services",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.962,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9620000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Industrials）"
+    },
+    {
+      "ticker": "FIX",
+      "name": "Comfort Systems USA",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.96,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.96
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Industrials）"
+    },
+    {
+      "ticker": "STLD",
+      "name": "Steel Dynamics",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.958,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.958
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Materials）"
+    },
+    {
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.956,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.956
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Health Care）"
+    },
+    {
+      "ticker": "ON",
+      "name": "ON Semiconductor",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.954,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9540000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "GLW",
+      "name": "Corning Inc.",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.952,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9520000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "IRM",
+      "name": "Iron Mountain",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.95,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.95
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Real Estate）"
+    },
+    {
+      "ticker": "BR",
+      "name": "Broadridge Financial Solutions",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.948,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.948
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Industrials）"
+    },
+    {
+      "ticker": "ZTS",
+      "name": "Zoetis",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.946,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.946
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Health Care）"
+    },
+    {
+      "ticker": "KEYS",
+      "name": "Keysight Technologies",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.944,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9440000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "CASY",
+      "name": "Casey's",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.942,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9420000000000001
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Consumer Staples）"
+    },
+    {
+      "ticker": "NTAP",
+      "name": "NetApp",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.94,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.94
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "GNRC",
+      "name": "Generac",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.938,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.938
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Industrials）"
+    },
+    {
+      "ticker": "LDOS",
+      "name": "Leidos",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.936,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9359999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Industrials）"
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.934,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.934
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Financials）"
+    },
+    {
+      "ticker": "MPWR",
+      "name": "Monolithic Power Systems",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.932,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.932
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.93,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.93
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "INTU",
+      "name": "Intuit",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.926,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9259999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.924,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.924
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "ADI",
+      "name": "Analog Devices",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.922,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.922
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "LULU",
+      "name": "Lululemon Athletica",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.92,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.92
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Consumer Discretionary）"
+    },
+    {
+      "ticker": "CNC",
+      "name": "Centene Corporation",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.918,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9179999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Health Care）"
+    },
+    {
+      "ticker": "TER",
+      "name": "Teradyne",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.916,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.9159999999999999
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "TRMB",
+      "name": "Trimble Inc.",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.914,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.914
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Information Technology）"
+    },
+    {
+      "ticker": "PODD",
+      "name": "Insulet Corporation",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.912,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.912
+      },
+      "added": "2026-07-08",
+      "theme": "ML月次ランキング上位（Health Care）"
     }
   ]
 }

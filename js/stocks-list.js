@@ -288,7 +288,6 @@ class StocksList {
                 <td class="tier-col">
                     <span class="tier-badge ${stock.tier}">${this.getTierLabel(stock.tier)}</span>
                 </td>
-                <td class="judgment-col">${this.getMediumLongJudgment(stock)}</td>
                 <td>
                     <div class="action-buttons">
                         <a href="/stocks/detail/?s=${stock.symbol}" class="btn-mini">詳細</a>
