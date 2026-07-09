@@ -87,7 +87,12 @@ class StockDetail {
             
         } catch (error) {
             console.error('StockDetail初期化エラー:', error);
-            this.showError(error.message);
+            if (error && error.themeCandidate) {
+                // 新テーマ候補は「エラー」でなく案内として表示（再読み込みは無意味なので隠す）
+                this.showError(error.message, { heading: '🆕 新テーマ候補（予測ユニバース外）', hideReload: true });
+            } else {
+                this.showError(error.message);
+            }
         }
     }
 
@@ -151,7 +156,16 @@ class StockDetail {
             if (!stocksRes.ok) throw new Error(`データ取得エラー: ${stocksRes.status}`);
             const stocksData = await stocksRes.json();
             const found = (stocksData.stocks || []).find(s => s.symbol === this.symbol);
-            if (!found) throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
+            if (!found) {
+                // 予測ユニバース外＝新テーマ候補として検知された銘柄なら、404エラーでなく案内を出す
+                const tc = await this.findThemeCandidate(this.symbol);
+                if (tc) {
+                    const err = new Error(`🆕「${tc.name || this.symbol}」は新テーマ候補（予測ユニバース外）のため、詳細ページはまだ生成されていません。予測ユニバースに昇格すると自動で生成されます。`);
+                    err.themeCandidate = true;
+                    throw err;
+                }
+                throw new Error(`銘柄 "${this.symbol}" が見つかりません`);
+            }
 
             this.stockData = {
                 symbol: found.symbol,
@@ -199,6 +213,20 @@ class StockDetail {
             }
         } catch (e) {
             console.warn('stocks/index.json 付与スキップ:', e);
+        }
+    }
+
+    // 新テーマ候補（予測ユニバース外の急騰・theme_candidates.json）に該当するか照合する。
+    // 該当時は詳細ページ未生成＝404 の代わりに案内を出すためのヘルパー。
+    async findThemeCandidate(symbol) {
+        try {
+            const res = await fetch('/api/theme_candidates.json');
+            if (!res.ok) return null;
+            const data = await res.json();
+            const list = data.candidates || [];
+            return list.find(c => c.ticker === symbol) || null;
+        } catch (e) {
+            return null;
         }
     }
 
@@ -988,6 +1016,17 @@ class StockDetail {
 
     // 🧭 投資判断の整理（Q1質/Q2タイミング/Q3相対強さ→BT準拠アクション型）
     // ◎○△は BT未検証のヒューリスティック。アクションの型のみ BT-validated 結論に基づく。断定売買シグナルではない。
+    // 指数・ETF・FX は「企業の質」「EPSベース理論株価」判定の対象外。
+    // ^DJI 等に ROE 0%低・撤退検討が誤表示されるのを防ぐための資産種別判定。
+    detectAssetType() {
+        const sym = this.symbol || '';
+        const name = (this.stockData && this.stockData.name) || '';
+        if (sym.startsWith('^')) return 'index';        // ^DJI/^GSPC/^N225/^VIX/^TNX 等
+        if (sym.includes('=X')) return 'fx';            // USDJPY=X 等
+        if (/ETF|上場投信|上場投資信託|連動|投資信託|ファンド|シェア|SPDR/i.test(name)) return 'etf';
+        return 'stock';
+    }
+
     renderJudgmentFunnel() {
         const sec = document.getElementById('judgment-funnel-section');
         const ct = document.getElementById('judgment-funnel-content');
@@ -997,17 +1036,27 @@ class StockDetail {
         const v = d && d.valuation;
         const fc = d && d.forecast;
         const mlPred = (this.stockData.prediction && this.stockData.prediction.medium_long) || {};
+        const assetType = this.detectAssetType();
+        const isNonStock = assetType !== 'stock';
+        const assetLabel = { index: '指数', fx: '為替（FX）', etf: 'ETF' }[assetType] || '';
 
         // --- Q1 質 ---
         const roe = f.return_on_equity, de = f.debt_to_equity;
         const ownPer = f.trailing_pe, ownPbr = f.price_to_book;
         const gNext = (fc && fc.growth) ? fc.growth.next_year : null;
         let qScore = 0; const qNotes = [];
-        if (roe != null) { if (roe >= 15) { qScore += 2; qNotes.push(`ROE ${roe.toFixed(0)}%`); } else if (roe >= 8) { qScore += 1; qNotes.push(`ROE ${roe.toFixed(0)}%`); } else qNotes.push(`ROE ${roe.toFixed(0)}%低`); }
-        if (de != null) { if (de <= 1.0) qScore += 1; else if (de >= 2.0) { qScore -= 1; qNotes.push('財務重い'); } }
-        if (v && ownPer != null && v.sector_per_median != null) { if (ownPer < v.sector_per_median) { qScore += 1; qNotes.push('PER業種比割安'); } else if (v.sector_per_p90 != null && ownPer > v.sector_per_p90) { qScore -= 1; qNotes.push('PER過熱'); } }
-        if (gNext != null && gNext >= 0.10) { qScore += 1; qNotes.push(`増益+${(gNext * 100).toFixed(0)}%`); }
-        const qMark = qScore >= 3 ? '◎' : qScore >= 1 ? '○' : '△';
+        let qMark;
+        if (isNonStock) {
+            // 指数/ETF/FX は企業の質（ROE・財務・PER）判定の対象外
+            qMark = '—';
+            qNotes.push(`${assetLabel}は企業の質判定の対象外`);
+        } else {
+            if (roe != null) { if (roe >= 15) { qScore += 2; qNotes.push(`ROE ${roe.toFixed(0)}%`); } else if (roe >= 8) { qScore += 1; qNotes.push(`ROE ${roe.toFixed(0)}%`); } else qNotes.push(`ROE ${roe.toFixed(0)}%低`); }
+            if (de != null) { if (de <= 1.0) qScore += 1; else if (de >= 2.0) { qScore -= 1; qNotes.push('財務重い'); } }
+            if (v && ownPer != null && v.sector_per_median != null) { if (ownPer < v.sector_per_median) { qScore += 1; qNotes.push('PER業種比割安'); } else if (v.sector_per_p90 != null && ownPer > v.sector_per_p90) { qScore -= 1; qNotes.push('PER過熱'); } }
+            if (gNext != null && gNext >= 0.10) { qScore += 1; qNotes.push(`増益+${(gNext * 100).toFixed(0)}%`); }
+            qMark = qScore >= 3 ? '◎' : qScore >= 1 ? '○' : '△';
+        }
 
         // --- Q2 タイミング（価格の位置のみ。バリュエーション過熱はQ4に一本化＝二重計上回避） ---
         const dev25 = (mlPred.deviation_25 != null) ? mlPred.deviation_25 : f.deviation_25;
@@ -1044,7 +1093,11 @@ class StockDetail {
         const curP = parseFloat(this.stockData.price);
         const tpNow = (d && d.theoretical_price) ? d.theoretical_price.now : null;
         let vMark = '—', vNote = '理論株価データなし', overvalued = false;
-        if (tpNow && tpNow.mid != null && curP) {
+        if (isNonStock) {
+            // 指数/ETF/FX は個別株EPSベースの理論株価判定の対象外
+            vMark = '—';
+            vNote = `${assetLabel}は理論株価（EPSベース）の対象外`;
+        } else if (tpNow && tpNow.mid != null && curP) {
             const gap = (curP / tpNow.mid - 1) * 100;
             const gapS = `${gap >= 0 ? '+' : ''}${gap.toFixed(0)}%`;
             if (curP > tpNow.mid * 2) { vMark = '⚠️'; vNote = `超割高（理論株価×2超・現在比${gapS}）`; overvalued = true; }
@@ -1054,18 +1107,23 @@ class StockDetail {
         }
 
         // --- 最終結論（4軸を統合・新規/保有で言い切る・BT-validated wiring） ---
-        // 新規エントリー判定
-        let buyVerdict;
-        if (qMark === '△') buyVerdict = '🚫 新規見送り — 質が低い（ROE低・財務重い・構造悪化）';
-        else if (overvalued) buyVerdict = '🔻 新規は見送り — 割高すぎ（理論株価×2超）。5年視点でも入るなら押し目分割で少量のみ';
-        else if (vMark === '△' || tMark === '△' || longDown) buyVerdict = '🟡 押し目分割のみ（Strategy I 4分割）— 割高/過熱/長期下降。一括は避ける';
-        else if (tMark === '◎' || vMark === '◎') buyVerdict = '🟢 買い候補 — 質◯＋（押し目 or 割安）。一括 or 分割で';
-        else buyVerdict = '🟢 通常買い候補 — 質◯・過熱でない';
-        // 保有判定
-        let holdVerdict;
-        if (overvalued) holdVerdict = '🔻 一部利確/トリムを検討 — 割高ゾーン（§1.4-B）。ただし事業テーゼ健在なら全売りはしない';
-        else if (qMark === '△') holdVerdict = '🟡 撤退も検討 — 質低下。事業テーゼ（減配・赤字常態化・競合侵食）を確認';
-        else holdVerdict = '🟢 握る（売らない）— 質◯。タイミング売りはB&H劣後';
+        let buyVerdict, holdVerdict;
+        if (isNonStock) {
+            // 指数/ETF/FX は企業の質・理論株価の判定対象外。価格の位置（Q2）とトレンドのみ参照。
+            buyVerdict = `📊 ${assetLabel}は企業の質・理論株価の判定対象外 — Q2（価格の位置）とトレンドの目安のみ参照。個別株の質/バリュエーション基準（ROE・理論株価乖離）は適用しません`;
+            holdVerdict = `📊 ${assetLabel}は個別株の売買ルール（Strategy I分割・質低下で撤退等）の対象外 — 指数/ETF/FXはトレンドフォロー or 積立方針で扱ってください`;
+        } else {
+            // 新規エントリー判定
+            if (qMark === '△') buyVerdict = '🚫 新規見送り — 質が低い（ROE低・財務重い・構造悪化）';
+            else if (overvalued) buyVerdict = '🔻 新規は見送り — 割高すぎ（理論株価×2超）。5年視点でも入るなら押し目分割で少量のみ';
+            else if (vMark === '△' || tMark === '△' || longDown) buyVerdict = '🟡 押し目分割のみ（Strategy I 4分割）— 割高/過熱/長期下降。一括は避ける';
+            else if (tMark === '◎' || vMark === '◎') buyVerdict = '🟢 買い候補 — 質◯＋（押し目 or 割安）。一括 or 分割で';
+            else buyVerdict = '🟢 通常買い候補 — 質◯・過熱でない';
+            // 保有判定
+            if (overvalued) holdVerdict = '🔻 一部利確/トリムを検討 — 割高ゾーン（§1.4-B）。ただし事業テーゼ健在なら全売りはしない';
+            else if (qMark === '△') holdVerdict = '🟡 撤退も検討 — 質低下。事業テーゼ（減配・赤字常態化・競合侵食）を確認';
+            else holdVerdict = '🟢 握る（売らない）— 質◯。タイミング売りはB&H劣後';
+        }
 
         const row = (q, mark, note) => `<tr><td style="white-space:nowrap;font-weight:600;">${q}</td><td style="text-align:center;font-size:18px;">${mark}</td><td style="color:var(--card-text-color-secondary,#6b7280);">${note}</td></tr>`;
         ct.innerHTML = `
@@ -1223,10 +1281,16 @@ class StockDetail {
         document.getElementById('stock-main-content').style.display = 'block';
     }
 
-    showError(message) {
+    showError(message, opts = {}) {
         document.getElementById('loading-overlay').style.display = 'none';
+        const overlay = document.getElementById('error-overlay');
+        const heading = overlay.querySelector('.error-content h2');
+        if (heading) heading.textContent = opts.heading || '❌ データ取得エラー';
         document.getElementById('error-message').textContent = message;
-        document.getElementById('error-overlay').style.display = 'flex';
+        // 新テーマ候補案内など、再読み込みが無意味なケースでは「再読み込み」ボタンを隠す
+        const reloadBtn = overlay.querySelector('.error-actions .btn-primary');
+        if (reloadBtn) reloadBtn.style.display = opts.hideReload ? 'none' : '';
+        overlay.style.display = 'flex';
     }
 
     // ユーティリティメソッド
