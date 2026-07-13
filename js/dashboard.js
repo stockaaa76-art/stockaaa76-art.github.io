@@ -1668,7 +1668,10 @@ Dashboard.prototype.updateMarginRankingList = function(elementId, data) {
         // 表示値: 倍率系=信用倍率 / 買残系=買残前週比 / 売残系=売残前週比
         let valueDisplay, subVal, subClass;
         if (elementId.includes('margin-ratio')) {
-            valueDisplay = `信用倍率 ${item.margin_ratio != null ? item.margin_ratio.toFixed(2) : '--'}倍`;
+            // 売残が極小だと倍率が発散する（151倍等）ため 100倍超は ">100" にクリップ表示
+            const mr = item.margin_ratio;
+            const mrTxt = mr == null ? '--' : (mr >= 100 ? '>100（売残僅少）' : mr.toFixed(2));
+            valueDisplay = `信用倍率 ${mrTxt}倍`;
             subVal = `買残${fmtPct(item.long_wow_pct)} / 売残${fmtPct(item.short_wow_pct)}`;
             subClass = 'neutral';
         } else if (elementId.includes('long-')) {
@@ -1707,6 +1710,77 @@ Dashboard.prototype.updateAlphaRanking = function(period) {
     const list = pd && pd.rankings && pd.rankings.alpha_high;
     this.updatePeriodRankingList('alpha-ranking', list || []);
     this.updateSectorFlow(period);
+    this.updateDivergenceWatch(period);
+    this.updateDividendTrap(period);
+};
+
+// ⚠️ 要注意（業種逆行）: 業種と反対に動く銘柄（独歩高/独歩安）。period_rankings の divergence_watch 由来。
+// info マーカー（買い/売りシグナルではない）。乖離の大きい順。
+Dashboard.prototype.updateDivergenceWatch = function(period) {
+    const el = document.getElementById('divergence-watch-ranking');
+    if (!el) return;
+    const pd = this.periodRankingsData && this.periodRankingsData[period];
+    const list = (pd && pd.rankings && pd.rankings.divergence_watch) || [];
+    if (!list.length) {
+        el.innerHTML = '<div class="no-data">該当なし（業種と逆行する銘柄は現在なし）</div>';
+        return;
+    }
+    el.innerHTML = list.map((s, i) => {
+        const up = s.divergence_flag === '独歩高';
+        const badge = up ? '独歩高' : '独歩安';
+        const badgeCls = up ? 'positive' : 'negative';
+        const pc = Number(s.period_change);
+        const sec = Number(s.sector_change);
+        const gap = Number(s.sector_divergence);
+        return `
+            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(s.symbol || '')}'" style="cursor:pointer;" title="業種平均 ${sec.toFixed(1)}% に対し ${pc.toFixed(1)}%（乖離 ${gap.toFixed(1)}pt）">
+                <div class="ranking-item-left">
+                    <span class="ranking-rank">${i + 1}</span>
+                    <div class="ranking-labels">
+                        <span class="ranking-symbol">${s.symbol || ''} <span class="ranking-change ${badgeCls}">${badge}</span></span>
+                        <span class="ranking-name">${s.name || s.symbol || ''}</span>
+                    </div>
+                </div>
+                <div class="ranking-item-right">
+                    <div class="ranking-values">
+                        <div class="ranking-value">銘柄${pc > 0 ? '+' : ''}${pc.toFixed(1)}%</div>
+                        <div class="ranking-change ${badgeCls}">業種${sec > 0 ? '+' : ''}${sec.toFixed(1)}%</div>
+                    </div>
+                </div>
+            </div>`;
+    }).join('');
+};
+
+// 🚫 配当トラップ注意: 高配当だが下落トレンド（MA75割れ）×小型＝減配/バリュートラップ。買い候補から外す参考。
+// info マーカー（買い/売りシグナルではない）。period_rankings の dividend_trap 由来。
+Dashboard.prototype.updateDividendTrap = function(period) {
+    const el = document.getElementById('dividend-trap-ranking');
+    if (!el) return;
+    const pd = this.periodRankingsData && this.periodRankingsData[period];
+    const list = (pd && pd.rankings && pd.rankings.dividend_trap) || [];
+    if (!list.length) {
+        el.innerHTML = '<div class="no-data">該当なし（高配当×下落トレンドの銘柄なし）</div>';
+        return;
+    }
+    el.innerHTML = list.map((s, i) => {
+        const y = Number(s.dividend_yield);
+        return `
+            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(s.symbol || '')}'" style="cursor:pointer;" title="${s.trap_reason || ''}">
+                <div class="ranking-item-left">
+                    <span class="ranking-rank">${i + 1}</span>
+                    <div class="ranking-labels">
+                        <span class="ranking-symbol">${s.symbol || ''}${s.small_cap ? ' <span class="ranking-change negative">小型</span>' : ''}</span>
+                        <span class="ranking-name">${s.name || s.symbol || ''}</span>
+                    </div>
+                </div>
+                <div class="ranking-item-right">
+                    <div class="ranking-values">
+                        <div class="ranking-value">配当${y.toFixed(1)}%</div>
+                        <div class="ranking-change negative">下落トレンド</div>
+                    </div>
+                </div>
+            </div>`;
+    }).join('');
 };
 
 // ⑤業種フロー: 17業種別の平均騰落率カード（強い業種→弱い業種・首位銘柄クリックで詳細へ）
