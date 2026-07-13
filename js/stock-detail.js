@@ -845,13 +845,16 @@ class StockDetail {
      */
     async generateChartDataForPeriod(period) {
         // ボタン別の表示件数（history から末尾N件をスライス）
-        // 5y=1260/all=0(全件) は個別ファイル（history/{ticker}.json）があれば表示可能
+        // 5y=1260/all=0(全件) は軽量5年ファイル（history5y/{ticker}.json・終値のみ）があれば表示可能
+        // ※full 長期キャッシュ(523MB)は static 外へ移したため、公開サイトは history5y が供給元
         const SLICE = { '1w': 5, '1m': 20, '3m': 60, '1y': 245, '5y': 1260, 'all': 0 };
 
-        // 1. 個別ファイル（長期キャッシュ）を優先取得
-        if (period !== '1d') {
+        // 1. 長期（5y/all）のみ軽量5年ファイルを優先取得
+        //    短期（1w/1m/3m/1y）は historical_data.json（2年・日次GHAで新鮮）に任せる
+        //    ※history5y は随時再生成のため末尾が古くなりうる → 短期の鮮度は 2 に委ねる
+        if (period === '5y' || period === 'all') {
             try {
-                const res = await fetch(`/data/history/${this.symbol}.json`);
+                const res = await fetch(`/data/history5y/${this.symbol}.json`);
                 if (res.ok) {
                     const history = await res.json();
                     if (history && history.length > 0) {
