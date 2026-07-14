@@ -3634,6 +3634,21 @@
       },
       "added": "2026-07-08",
       "theme": "ML月次ランキング上位（Health Care）"
+    },
+    {
+      "ticker": "2564.T",
+      "name": "グローバルX MSCIスーパーディビィデンド-日本株式ETF",
+      "category": "active",
+      "tier": "active",
+      "composite_score": 0.85,
+      "component_scores": {
+        "liquidity": 1.0,
+        "volatility": 1.0,
+        "market_cap": 0.7,
+        "prediction": 0.5
+      },
+      "added": "2026-07-14",
+      "theme": "配当基盤ETF（NISA・高配当セレクト25）"
     }
   ]
 }
