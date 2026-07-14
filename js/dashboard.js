@@ -1647,6 +1647,10 @@ Dashboard.prototype.loadPeriodRankings = async function() {
         this.updateMarginRankingList('short-increase-ranking', marginRk.short_increase || []);
         this.updateMarginRankingList('short-decrease-ranking', marginRk.short_decrease || []);
 
+        // 🔥 継続上昇＆業種集中度（当日急騰×5日継続・period 非依存の単発描画）
+        this.updateMomentumHighlight('jp', 'jp-continuation-ranking', 'jp-concentration');
+        this.updateMomentumHighlight('us', 'us-continuation-ranking', 'us-concentration');
+
     } catch (error) {
         console.error('期間別ランキング取得エラー:', error);
         this.renderPeriodError('ランキングデータの取得に失敗しました');
@@ -1815,6 +1819,59 @@ Dashboard.prototype.updateSectorFlow = function(period) {
                 </div>
             </div>`;
     }).join('');
+};
+
+// 🔥 継続上昇＆業種集中度: 当日急騰(daily>=+3%)×5日継続プラスの銘柄と、当日急騰上位の業種偏り。
+// period_rankings の momentum(jp/us) 由来。当日+5日固定のため period タブ非依存の単発描画。
+// info マーカー（買い/売りシグナルではない）。
+Dashboard.prototype.updateMomentumHighlight = function(market, listElId, concElId) {
+    const mom = this.periodRankingsData && this.periodRankingsData.momentum;
+    const data = (mom && mom[market]) || {};
+    const cont = data.continuation || [];
+    const listEl = document.getElementById(listElId);
+    if (listEl) {
+        if (!cont.length) {
+            listEl.innerHTML = '<div class="no-data">該当なし（当日急騰かつ5日継続の銘柄なし）</div>';
+        } else {
+            listEl.innerHTML = cont.map((s, i) => {
+                const d = Number(s.period_change);
+                const f5 = Number(s.change_5d);
+                const rankCls = i < 3 ? 'ranking-rank top' : 'ranking-rank';
+                return `
+                    <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(s.symbol || '')}'" style="cursor:pointer;" title="当日 ${d.toFixed(1)}% / 5日 ${f5.toFixed(1)}%（勢い継続）">
+                        <div class="ranking-item-left">
+                            <span class="${rankCls}">${i + 1}</span>
+                            <div class="ranking-labels">
+                                <span class="ranking-symbol">${s.symbol || ''}</span>
+                                <span class="ranking-name">${s.name || s.symbol || ''}</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item-right">
+                            <div class="ranking-values">
+                                <div class="ranking-value">当日 ${d > 0 ? '+' : ''}${d.toFixed(1)}%</div>
+                                <div class="ranking-change positive">5日 ${f5 > 0 ? '+' : ''}${f5.toFixed(1)}%</div>
+                            </div>
+                        </div>
+                    </div>`;
+            }).join('');
+        }
+    }
+    const concEl = document.getElementById(concElId);
+    if (concEl) {
+        const conc = data.concentration || [];
+        if (!conc.length) {
+            concEl.innerHTML = '';
+        } else {
+            const total = data.top_gainer_count || 0;
+            const top = conc[0];
+            const badge = (top && top.share >= 40)
+                ? ` <span class="ranking-change positive">${top.sector}に集中</span>` : '';
+            const chips = conc.slice(0, 6).map(c =>
+                `<span style="display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;border-radius:10px;background:#f3f4f6;color:#374151;font-size:0.8em;">${c.sector}：${c.count}件(${c.share}%)</span>`
+            ).join('');
+            concEl.innerHTML = `<div style="font-size:0.82em;color:#6b7280;margin:8px 0 4px;">業種集中度（当日急騰上位${total}銘柄）${badge}</div><div>${chips}</div>`;
+        }
+    }
 };
 
 Dashboard.prototype.updatePeriodRankings = function() {
