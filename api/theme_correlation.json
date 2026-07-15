@@ -1,0 +1,65 @@
+{
+  "updated": "2026-07-15",
+  "map": {
+    "ORCL": {
+      "trap": true,
+      "factor": "米テック",
+      "beta": 1.12,
+      "pe": 11.7
+    },
+    "COP": {
+      "trap": true,
+      "factor": "米エネルギー",
+      "beta": 1.21,
+      "pe": 12.6
+    },
+    "SLB": {
+      "trap": true,
+      "factor": "米エネルギー",
+      "beta": 1.1,
+      "pe": 14.3
+    },
+    "EOG": {
+      "trap": true,
+      "factor": "米エネルギー",
+      "beta": 1.05,
+      "pe": 9.4
+    },
+    "PSX": {
+      "trap": true,
+      "factor": "米エネルギー",
+      "beta": 1.16,
+      "pe": 11.2
+    },
+    "MPC": {
+      "trap": true,
+      "factor": "米エネルギー",
+      "beta": 1.12,
+      "pe": 12.0
+    },
+    "VLO": {
+      "trap": true,
+      "factor": "米エネルギー",
+      "beta": 1.16,
+      "pe": 13.6
+    },
+    "XOM": {
+      "trap": true,
+      "factor": "米エネルギー",
+      "beta": 0.95,
+      "pe": 13.6
+    },
+    "CVX": {
+      "trap": true,
+      "factor": "米エネルギー",
+      "beta": 0.93,
+      "pe": 14.5
+    },
+    "HPE": {
+      "trap": true,
+      "factor": "米テック",
+      "beta": 1.08,
+      "pe": 12.4
+    }
+  }
+}
