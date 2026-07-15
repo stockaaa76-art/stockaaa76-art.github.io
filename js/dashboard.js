@@ -1041,7 +1041,7 @@ class Dashboard {
             }
             const usKey = `us_${usPeriod}`;
             const periodSection = this.periodRankingsData[usKey];
-            if (!periodSection) { this.renderUSEmpty('米国ランキングは現在データ未生成です'); return; }
+            if (!periodSection) { this.renderUSEmpty('この期間の米国ランキングはデータ未生成です（次回のデータ更新で対応予定）'); return; }
             const rankings = periodSection.rankings || {};
             // period_rankings 形式 → items 形式に変換
             const allStocks = [
@@ -2018,7 +2018,7 @@ Dashboard.prototype.switchPeriod = function(period) {
         return;
     }
 
-    // ウィークリー・マンスリー: period_rankings データを使用
+    // ウィークリー・マンスリー・3ヶ月・6ヶ月・YTD: period_rankings データを使用
     if (this.periodRankingsData && this.periodRankingsData[period]) {
         const rankings = this.periodRankingsData[period].rankings;
         this.updatePeriodRankingList('gainers-ranking', rankings.gainers || []);
@@ -2026,7 +2026,22 @@ Dashboard.prototype.switchPeriod = function(period) {
         this.updatePeriodRankingList('volume-ranking', rankings.volume || []);
         this.updatePeriodRankingList('market-cap-ranking', rankings.market_cap || []);
         this.updateAlphaRanking(period);
+    } else {
+        // タスク3: 追加プリセット等でその期間のデータが JSON に未生成の場合の「データなし」表示。
+        // （次回のデータ更新で period_rankings.json に該当キーが生成され自動反映される）
+        this.renderPeriodNoData();
     }
+};
+
+// タスク3: 選択期間のデータが未生成のとき、JP 基本ランキング枠に「データなし」を表示する。
+Dashboard.prototype.renderPeriodNoData = function() {
+    const msg = '<div class="no-data">この期間のデータは未生成です（次回のデータ更新で対応予定）</div>';
+    ['gainers-ranking', 'losers-ranking', 'volume-ranking', 'market-cap-ranking',
+     'alpha-ranking', 'sector-flow-ranking', 'divergence-watch-ranking',
+     'dividend-trap-ranking'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = msg;
+    });
 };
 
 Dashboard.prototype.setupPeriodTabs = function() {

@@ -77,6 +77,7 @@ class StockDetail {
             await this.renderChart();
             this.loadRelatedStocks();
             await this.loadMLScore();
+            await this.loadThemeCorrelation();
             this.renderJudgmentFunnel();
 
             // イベントリスナー設定
@@ -237,6 +238,21 @@ class StockDetail {
             if (res.ok) this.detailData = await res.json();
         } catch (e) {
             console.warn('detail データ取得スキップ:', e);
+        }
+    }
+
+    // 🧭 theme-correlation（analyze_phases.py --mode theme-correlation の JSON handoff）を読み込む。
+    // 狭義テーマβ突出 × 低PER = バリュートラップ候補フラグ。ファネル Q4「割安」評価を割り引くために使う。
+    // ファイル未生成でも安全に no-op（info marker・BT検証不要）。
+    async loadThemeCorrelation() {
+        try {
+            const res = await fetch('/api/theme_correlation.json');
+            if (!res.ok) return;
+            const data = await res.json();
+            const map = (data && data.map) || {};
+            this.themeCorr = map[this.symbol] || null;
+        } catch (e) {
+            this.themeCorr = null;
         }
     }
 
@@ -1107,6 +1123,22 @@ class StockDetail {
             else if (tpNow.high != null && curP > tpNow.high) { vMark = '△'; vNote = `割高（理論株価上限超・${gapS}）`; }
             else if (tpNow.low != null && curP < tpNow.low) { vMark = '◎'; vNote = `割安（理論株価下限割れ・${gapS}）`; }
             else { vMark = '○'; vNote = `適正圏（現在比${gapS}）`; }
+        }
+
+        // 🧭 theme-correlation トラップ割引: 狭義テーマβ突出×低PER は「一過性の割安」の可能性。
+        // 「割安◎」判定を『△（テーマ反転で剥落しうる割安）』に割り引く（EOG教訓の仕組み化・info marker）。
+        const tc = this.themeCorr;
+        let trapDiscounted = false;
+        if (!isNonStock && tc && tc.trap) {
+            const betaS = (tc.beta != null) ? `β${tc.beta >= 0 ? '+' : ''}${tc.beta.toFixed(2)}` : '';
+            const factorS = tc.factor || 'テーマ';
+            if (vMark === '◎') {
+                vMark = '△';
+                vNote = `テーマ反転リスクで割安を割引（${factorS}集中 ${betaS}）— 一過性の割安の可能性`;
+                trapDiscounted = true;
+            } else {
+                vNote += `｜🚩${factorS}集中 ${betaS}（テーマ反転で剥落しうる）`;
+            }
         }
 
         // --- 最終結論（4軸を統合・新規/保有で言い切る・BT-validated wiring） ---
