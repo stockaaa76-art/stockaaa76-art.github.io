@@ -39,9 +39,11 @@ class Dashboard {
             await this.loadAiRankings();
             await this.loadMarketVolume();
             await this.loadThemeCandidates();
+            await this.loadWorldWatch();
             await this.loadMLRanking();
             await this.loadMLRanking('/api/ml_monthly_ranking_us.json', 'ml-ranking-us-list');
             this.setupEventListeners();
+            this.setupCardCollapse();
             
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
             setTimeout(() => {
@@ -60,6 +62,7 @@ class Dashboard {
                 this.loadAiRankings();
                 this.loadMarketVolume();
                 this.loadThemeCandidates();
+                this.loadWorldWatch();
                 this.loadMLRanking();
                 this.loadMLRanking('/api/ml_monthly_ranking_us.json', 'ml-ranking-us-list');
             }, 5 * 60 * 1000);
@@ -614,6 +617,89 @@ class Dashboard {
         } catch (e) {
             el.innerHTML = '<div class="no-data">新テーマ候補データがありません</div>';
         }
+    }
+
+    // 世界の注目銘柄ウォッチ（#187 MVP・日米以外の手選び銘柄・価格/騰落のみ・詳細ページなし）
+    // 地域タブで切替表示（2026-07-16 ユーザー指示: タブUI化）
+    async loadWorldWatch() {
+        const el = document.getElementById('world-watch-list');
+        if (!el) return;
+        try {
+            const res = await fetch('/api/world_watch.json');
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            const regions = data.regions || [];
+            if (regions.length === 0) {
+                el.innerHTML = '<div class="no-data">世界ウォッチデータがありません</div>';
+                return;
+            }
+            const fmtPct = (v) => (v == null ? '—' : `${v >= 0 ? '+' : ''}${v.toFixed(1)}%`);
+            const pctCls = (v) => (v == null ? 'neutral' : v > 0 ? 'positive' : v < 0 ? 'negative' : 'neutral');
+            const arrow = (v) => (v == null ? '' : v > 0 ? '▲' : v < 0 ? '▼' : '');
+            const renderRegion = (rg) => (rg.items || []).map((s) => `
+                    <div class="ranking-item">
+                        <div class="ranking-item-left">
+                            <div class="ranking-symbol">${s.ticker}</div>
+                            <div class="ranking-name">${s.name}</div>
+                            <div class="ranking-name" style="font-size:.8em;opacity:.85">
+                                5日 <span class="${pctCls(s.chg_5d)}">${fmtPct(s.chg_5d)}</span>
+                                1ヶ月 <span class="${pctCls(s.chg_1mo)}">${fmtPct(s.chg_1mo)}</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item-right">
+                            <div class="ranking-values">
+                                <div class="ranking-value">${(s.price || 0).toLocaleString()} <span style="font-size:.75em;opacity:.7">${s.currency || ''}</span></div>
+                                <div class="ranking-change ${pctCls(s.chg_1d)}">${arrow(s.chg_1d)} 前日 ${fmtPct(s.chg_1d)}</div>
+                            </div>
+                        </div>
+                    </div>`).join('');
+            const tabs = regions.map((rg, i) =>
+                `<button class="tab-button ww-tab${i === 0 ? ' active' : ''}" data-ww-region="${i}" aria-pressed="${i === 0}">${rg.region}</button>`
+            ).join('');
+            const panes = regions.map((rg, i) =>
+                `<div class="ww-region${i === 0 ? '' : ' hidden'}" data-ww-pane="${i}">${renderRegion(rg)}</div>`
+            ).join('');
+            el.innerHTML = `<div class="ranking-tabs ww-tabs">${tabs}</div>${panes}`;
+            el.querySelectorAll('.ww-tab').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    el.querySelectorAll('.ww-tab').forEach((b) => {
+                        b.classList.toggle('active', b === btn);
+                        b.setAttribute('aria-pressed', String(b === btn));
+                    });
+                    const idx = btn.getAttribute('data-ww-region');
+                    el.querySelectorAll('[data-ww-pane]').forEach((p) => {
+                        p.classList.toggle('hidden', p.getAttribute('data-ww-pane') !== idx);
+                    });
+                });
+            });
+        } catch (e) {
+            el.innerHTML = '<div class="no-data">世界ウォッチデータがありません</div>';
+        }
+    }
+
+    // P2 情報過多の整理（#192・2026-07-16）: カテゴリ内のランキングカードが多い場合、
+    // 初期表示を6枚に絞り「もっと見る」で展開する（fintech BP: 初期ビュー5-6カード以内）
+    setupCardCollapse(maxVisible = 6) {
+        document.querySelectorAll('.ranking-category .rankings-grid').forEach((grid) => {
+            if (grid.dataset.rkCollapse) return; // 二重適用防止
+            const cards = Array.from(grid.querySelectorAll(':scope > .ranking-card'));
+            if (cards.length <= maxVisible) return;
+            grid.dataset.rkCollapse = '1';
+            const hidden = cards.slice(maxVisible);
+            hidden.forEach((c) => c.classList.add('rk-collapsed'));
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'rk-more-btn';
+            btn.textContent = `もっと見る（あと${hidden.length}件）`;
+            btn.setAttribute('aria-expanded', 'false');
+            btn.addEventListener('click', () => {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                hidden.forEach((c) => c.classList.toggle('rk-collapsed', expanded));
+                btn.setAttribute('aria-expanded', String(!expanded));
+                btn.textContent = expanded ? `もっと見る（あと${hidden.length}件）` : '閉じる';
+            });
+            grid.after(btn);
+        });
     }
 
     // 今月の強い銘柄（クロスセクショナル・ランキングML）。JP/US 共通（url+要素ID切替）
