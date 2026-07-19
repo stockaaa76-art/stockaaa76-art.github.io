@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-07-06 21:26:24",
-  "total_count": 49,
+  "generated_at": "2026-07-19 22:57:18",
+  "total_count": 183,
   "stocks": [
     {
       "ticker": "7203.T",
       "name": "Toyota Motor Corporation",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -38,6 +40,8 @@
       "name": "Sony Group Corporation",
       "sector": "Technology",
       "industry": "Consumer Electronics",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -69,6 +73,8 @@
       "name": "SoftBank Group Corp.",
       "sector": "Communication Services",
       "industry": "Telecom Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2022-03-31",
@@ -100,6 +106,8 @@
       "name": "Keyence Corporation",
       "sector": "Technology",
       "industry": "Scientific & Technical Instruments",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -131,6 +139,8 @@
       "name": "Mitsubishi UFJ Financial Group, Inc.",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -162,6 +172,8 @@
       "name": "Shin-Etsu Chemical Co., Ltd.",
       "sector": "Basic Materials",
       "industry": "Chemicals",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -193,6 +205,8 @@
       "name": "Tokyo Electron Limited",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -224,6 +238,8 @@
       "name": "Nintendo Co., Ltd.",
       "sector": "Communication Services",
       "industry": "Electronic Gaming & Multimedia",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -255,6 +271,8 @@
       "name": "Daikin Industries,Ltd.",
       "sector": "Industrials",
       "industry": "Building Products & Equipment",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -286,6 +304,8 @@
       "name": "NTT, Inc.",
       "sector": "Communication Services",
       "industry": "Telecom Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -317,6 +337,8 @@
       "name": "Chugai Pharmaceutical Co., Ltd.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2022-12-31",
@@ -348,6 +370,8 @@
       "name": "Mitsubishi Corporation",
       "sector": "Industrials",
       "industry": "Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -379,6 +403,8 @@
       "name": "Otsuka Holdings Co., Ltd.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2022-12-31",
@@ -410,6 +436,8 @@
       "name": "Honda Motor Co., Ltd.",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -441,6 +469,8 @@
       "name": "Takeda Pharmaceutical Company Limited",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - Specialty & Generic",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -472,6 +502,8 @@
       "name": "Sumitomo Mitsui Financial Group, Inc.",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -503,6 +535,8 @@
       "name": "Fanuc Corporation",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -534,6 +568,8 @@
       "name": "JAPAN POST BANK Co., Ltd.",
       "sector": "Financial Services",
       "industry": "Banks - Regional",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2022-03-31",
@@ -565,6 +601,8 @@
       "name": "ITOCHU Corporation",
       "sector": "Industrials",
       "industry": "Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -596,6 +634,8 @@
       "name": "Bridgestone Corporation",
       "sector": "Consumer Cyclical",
       "industry": "Auto Parts",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2022-12-31",
@@ -627,6 +667,8 @@
       "name": "Mitsubishi Electric Corporation",
       "sector": "Industrials",
       "industry": "Electrical Equipment & Parts",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -658,6 +700,8 @@
       "name": "Daiichi Sankyo Company, Limited",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -689,6 +733,8 @@
       "name": "Panasonic Holdings Corporation",
       "sector": "Technology",
       "industry": "Consumer Electronics",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -720,6 +766,8 @@
       "name": "Central Japan Railway Company",
       "sector": "Industrials",
       "industry": "Railroads",
+      "currency": "JPY",
+      "revenue_unit": "億円",
       "revenues": [
         {
           "date": "2023-03-31",
@@ -751,22 +799,24 @@
       "name": "Apple Inc.",
       "sector": "Technology",
       "industry": "Consumer Electronics",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-09-30",
-          "revenue_jpy": 3943
+          "revenue_native": 3943
         },
         {
           "date": "2023-09-30",
-          "revenue_jpy": 3832
+          "revenue_native": 3832
         },
         {
           "date": "2024-09-30",
-          "revenue_jpy": 3910
+          "revenue_native": 3910
         },
         {
           "date": "2025-09-30",
-          "revenue_jpy": 4161
+          "revenue_native": 4161
         }
       ],
       "growth_rates": [
@@ -782,22 +832,24 @@
       "name": "Microsoft Corporation",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-06-30",
-          "revenue_jpy": 1982
+          "revenue_native": 1982
         },
         {
           "date": "2023-06-30",
-          "revenue_jpy": 2119
+          "revenue_native": 2119
         },
         {
           "date": "2024-06-30",
-          "revenue_jpy": 2451
+          "revenue_native": 2451
         },
         {
           "date": "2025-06-30",
-          "revenue_jpy": 2817
+          "revenue_native": 2817
         }
       ],
       "growth_rates": [
@@ -813,22 +865,24 @@
       "name": "Alphabet Inc.",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 2828
+          "revenue_native": 2828
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 3073
+          "revenue_native": 3073
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 3500
+          "revenue_native": 3500
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 4028
+          "revenue_native": 4028
         }
       ],
       "growth_rates": [
@@ -844,22 +898,24 @@
       "name": "Alphabet Inc.",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 2828
+          "revenue_native": 2828
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 3073
+          "revenue_native": 3073
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 3500
+          "revenue_native": 3500
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 4028
+          "revenue_native": 4028
         }
       ],
       "growth_rates": [
@@ -875,22 +931,24 @@
       "name": "Amazon.com, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 5139
+          "revenue_native": 5139
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 5747
+          "revenue_native": 5747
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 6379
+          "revenue_native": 6379
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 7169
+          "revenue_native": 7169
         }
       ],
       "growth_rates": [
@@ -906,22 +964,24 @@
       "name": "Tesla, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 814
+          "revenue_native": 814
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 967
+          "revenue_native": 967
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 976
+          "revenue_native": 976
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 948
+          "revenue_native": 948
         }
       ],
       "growth_rates": [
@@ -937,22 +997,24 @@
       "name": "Meta Platforms, Inc.",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 1166
+          "revenue_native": 1166
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 1349
+          "revenue_native": 1349
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 1645
+          "revenue_native": 1645
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 2009
+          "revenue_native": 2009
         }
       ],
       "growth_rates": [
@@ -968,22 +1030,24 @@
       "name": "NVIDIA Corporation",
       "sector": "Technology",
       "industry": "Semiconductors",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2023-01-31",
-          "revenue_jpy": 269
+          "revenue_native": 269
         },
         {
           "date": "2024-01-31",
-          "revenue_jpy": 609
+          "revenue_native": 609
         },
         {
           "date": "2025-01-31",
-          "revenue_jpy": 1304
+          "revenue_native": 1304
         },
         {
           "date": "2026-01-31",
-          "revenue_jpy": 2159
+          "revenue_native": 2159
         }
       ],
       "growth_rates": [
@@ -999,22 +1063,24 @@
       "name": "Netflix, Inc.",
       "sector": "Communication Services",
       "industry": "Entertainment",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 316
+          "revenue_native": 316
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 337
+          "revenue_native": 337
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 390
+          "revenue_native": 390
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 451
+          "revenue_native": 451
         }
       ],
       "growth_rates": [
@@ -1030,22 +1096,24 @@
       "name": "Salesforce, Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2023-01-31",
-          "revenue_jpy": 313
+          "revenue_native": 313
         },
         {
           "date": "2024-01-31",
-          "revenue_jpy": 348
+          "revenue_native": 348
         },
         {
           "date": "2025-01-31",
-          "revenue_jpy": 378
+          "revenue_native": 378
         },
         {
           "date": "2026-01-31",
-          "revenue_jpy": 415
+          "revenue_native": 415
         }
       ],
       "growth_rates": [
@@ -1061,22 +1129,24 @@
       "name": "Oracle Corporation",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2023-05-31",
-          "revenue_jpy": 499
+          "revenue_native": 499
         },
         {
           "date": "2024-05-31",
-          "revenue_jpy": 529
+          "revenue_native": 529
         },
         {
           "date": "2025-05-31",
-          "revenue_jpy": 573
+          "revenue_native": 573
         },
         {
           "date": "2026-05-31",
-          "revenue_jpy": 673
+          "revenue_native": 673
         }
       ],
       "growth_rates": [
@@ -1092,22 +1162,24 @@
       "name": "Advanced Micro Devices, Inc.",
       "sector": "Technology",
       "industry": "Semiconductors",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 236
+          "revenue_native": 236
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 226
+          "revenue_native": 226
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 257
+          "revenue_native": 257
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 346
+          "revenue_native": 346
         }
       ],
       "growth_rates": [
@@ -1123,22 +1195,24 @@
       "name": "Intel Corporation",
       "sector": "Technology",
       "industry": "Semiconductors",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 630
+          "revenue_native": 630
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 542
+          "revenue_native": 542
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 531
+          "revenue_native": 531
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 528
+          "revenue_native": 528
         }
       ],
       "growth_rates": [
@@ -1154,22 +1228,24 @@
       "name": "International Business Machines Corporation",
       "sector": "Technology",
       "industry": "Information Technology Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 605
+          "revenue_native": 605
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 618
+          "revenue_native": 618
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 627
+          "revenue_native": 627
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 675
+          "revenue_native": 675
         }
       ],
       "growth_rates": [
@@ -1185,22 +1261,24 @@
       "name": "Visa Inc.",
       "sector": "Financial Services",
       "industry": "Credit Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-09-30",
-          "revenue_jpy": 293
+          "revenue_native": 293
         },
         {
           "date": "2023-09-30",
-          "revenue_jpy": 326
+          "revenue_native": 326
         },
         {
           "date": "2024-09-30",
-          "revenue_jpy": 359
+          "revenue_native": 359
         },
         {
           "date": "2025-09-30",
-          "revenue_jpy": 400
+          "revenue_native": 400
         }
       ],
       "growth_rates": [
@@ -1216,22 +1294,24 @@
       "name": "Mastercard Incorporated",
       "sector": "Financial Services",
       "industry": "Credit Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 222
+          "revenue_native": 222
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 250
+          "revenue_native": 250
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 281
+          "revenue_native": 281
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 327
+          "revenue_native": 327
         }
       ],
       "growth_rates": [
@@ -1247,22 +1327,24 @@
       "name": "JPMorgan Chase & Co.",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 1277
+          "revenue_native": 1277
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 1549
+          "revenue_native": 1549
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 1694
+          "revenue_native": 1694
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 1818
+          "revenue_native": 1818
         }
       ],
       "growth_rates": [
@@ -1278,22 +1360,24 @@
       "name": "Johnson & Johnson",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 799
+          "revenue_native": 799
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 851
+          "revenue_native": 851
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 888
+          "revenue_native": 888
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 941
+          "revenue_native": 941
         }
       ],
       "growth_rates": [
@@ -1309,22 +1393,24 @@
       "name": "The Procter & Gamble Company",
       "sector": "Consumer Defensive",
       "industry": "Household & Personal Products",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-06-30",
-          "revenue_jpy": 801
+          "revenue_native": 801
         },
         {
           "date": "2023-06-30",
-          "revenue_jpy": 820
+          "revenue_native": 820
         },
         {
           "date": "2024-06-30",
-          "revenue_jpy": 840
+          "revenue_native": 840
         },
         {
           "date": "2025-06-30",
-          "revenue_jpy": 842
+          "revenue_native": 842
         }
       ],
       "growth_rates": [
@@ -1340,22 +1426,24 @@
       "name": "The Home Depot, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2023-01-31",
-          "revenue_jpy": 1574
+          "revenue_native": 1574
         },
         {
           "date": "2024-01-31",
-          "revenue_jpy": 1526
+          "revenue_native": 1526
         },
         {
           "date": "2025-01-31",
-          "revenue_jpy": 1595
+          "revenue_native": 1595
         },
         {
           "date": "2026-01-31",
-          "revenue_jpy": 1646
+          "revenue_native": 1646
         }
       ],
       "growth_rates": [
@@ -1371,22 +1459,24 @@
       "name": "UnitedHealth Group Incorporated",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 3241
+          "revenue_native": 3241
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 3716
+          "revenue_native": 3716
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 4002
+          "revenue_native": 4002
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 4475
+          "revenue_native": 4475
         }
       ],
       "growth_rates": [
@@ -1402,22 +1492,24 @@
       "name": "The Walt Disney Company",
       "sector": "Communication Services",
       "industry": "Entertainment",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-09-30",
-          "revenue_jpy": 827
+          "revenue_native": 827
         },
         {
           "date": "2023-09-30",
-          "revenue_jpy": 888
+          "revenue_native": 888
         },
         {
           "date": "2024-09-30",
-          "revenue_jpy": 913
+          "revenue_native": 913
         },
         {
           "date": "2025-09-30",
-          "revenue_jpy": 944
+          "revenue_native": 944
         }
       ],
       "growth_rates": [
@@ -1433,22 +1525,24 @@
       "name": "Pfizer Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 1011
+          "revenue_native": 1011
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 595
+          "revenue_native": 595
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 636
+          "revenue_native": 636
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 625
+          "revenue_native": 625
         }
       ],
       "growth_rates": [
@@ -1464,22 +1558,24 @@
       "name": "Walmart Inc.",
       "sector": "Consumer Defensive",
       "industry": "Discount Stores",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2023-01-31",
-          "revenue_jpy": 6112
+          "revenue_native": 6112
         },
         {
           "date": "2024-01-31",
-          "revenue_jpy": 6481
+          "revenue_native": 6481
         },
         {
           "date": "2025-01-31",
-          "revenue_jpy": 6809
+          "revenue_native": 6809
         },
         {
           "date": "2026-01-31",
-          "revenue_jpy": 7131
+          "revenue_native": 7131
         }
       ],
       "growth_rates": [
@@ -1495,22 +1591,24 @@
       "name": "The Coca-Cola Company",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
+      "currency": "USD",
+      "revenue_unit": "億USD",
       "revenues": [
         {
           "date": "2022-12-31",
-          "revenue_jpy": 430
+          "revenue_native": 430
         },
         {
           "date": "2023-12-31",
-          "revenue_jpy": 457
+          "revenue_native": 457
         },
         {
           "date": "2024-12-31",
-          "revenue_jpy": 470
+          "revenue_native": 470
         },
         {
           "date": "2025-12-31",
-          "revenue_jpy": 479
+          "revenue_native": 479
         }
       ],
       "growth_rates": [
@@ -1520,6 +1618,4428 @@
       ],
       "latest_growth_pct": 1.91,
       "avg_growth_pct": 3.68
+    },
+    {
+      "ticker": "8802.T",
+      "name": "Mitsubishi Estate Co., Ltd.",
+      "sector": "Real Estate",
+      "industry": "Real Estate - Diversified",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 13778
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 15046
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 15798
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 17461
+        }
+      ],
+      "growth_rates": [
+        9.2,
+        5.0,
+        10.53
+      ],
+      "latest_growth_pct": 10.53,
+      "avg_growth_pct": 8.24
+    },
+    {
+      "ticker": "8801.T",
+      "name": "Mitsui Fudosan Co., Ltd.",
+      "sector": "Real Estate",
+      "industry": "Real Estate - Diversified",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-03-31",
+          "revenue_jpy": 21008
+        },
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 22691
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 23832
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 26253
+        }
+      ],
+      "growth_rates": [
+        8.01,
+        5.03,
+        10.16
+      ],
+      "latest_growth_pct": 10.16,
+      "avg_growth_pct": 7.73
+    },
+    {
+      "ticker": "8804.T",
+      "name": "Tokyo Tatemono Co., Ltd.",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 3499
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 3759
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 4637
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 4745
+        }
+      ],
+      "growth_rates": [
+        7.43,
+        23.36,
+        2.33
+      ],
+      "latest_growth_pct": 2.33,
+      "avg_growth_pct": 11.04
+    },
+    {
+      "ticker": "8411.T",
+      "name": "Mizuho Financial Group, Inc.",
+      "sector": "Financial Services",
+      "industry": "Banks - Regional",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 26700
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 29710
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 38093
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 43169
+        }
+      ],
+      "growth_rates": [
+        11.27,
+        28.22,
+        13.33
+      ],
+      "latest_growth_pct": 13.33,
+      "avg_growth_pct": 17.61
+    },
+    {
+      "ticker": "2413.T",
+      "name": "M3, Inc.",
+      "sector": "Healthcare",
+      "industry": "Health Information Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 2308
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 2388
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 2849
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 3513
+        }
+      ],
+      "growth_rates": [
+        3.47,
+        19.3,
+        23.31
+      ],
+      "latest_growth_pct": 23.31,
+      "avg_growth_pct": 15.36
+    },
+    {
+      "ticker": "4689.T",
+      "name": "LY Corporation",
+      "sector": "Consumer Cyclical",
+      "industry": "Internet Retail",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 16723
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 18146
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 19174
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 20363
+        }
+      ],
+      "growth_rates": [
+        8.51,
+        5.67,
+        6.2
+      ],
+      "latest_growth_pct": 6.2,
+      "avg_growth_pct": 6.79
+    },
+    {
+      "ticker": "3659.T",
+      "name": "NEXON Co., Ltd.",
+      "sector": "Communication Services",
+      "industry": "Electronic Gaming & Multimedia",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 3537
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 4233
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 4462
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 4751
+        }
+      ],
+      "growth_rates": [
+        19.68,
+        5.41,
+        6.48
+      ],
+      "latest_growth_pct": 6.48,
+      "avg_growth_pct": 10.52
+    },
+    {
+      "ticker": "9020.T",
+      "name": "East Japan Railway Company",
+      "sector": "Industrials",
+      "industry": "Railroads",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 24055
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 27301
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 28875
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 30846
+        }
+      ],
+      "growth_rates": [
+        13.49,
+        5.77,
+        6.83
+      ],
+      "latest_growth_pct": 6.83,
+      "avg_growth_pct": 8.7
+    },
+    {
+      "ticker": "9766.T",
+      "name": "Konami Group Corporation",
+      "sector": "Communication Services",
+      "industry": "Electronic Gaming & Multimedia",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 3143
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 3603
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 4216
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 4936
+        }
+      ],
+      "growth_rates": [
+        14.64,
+        17.01,
+        17.08
+      ],
+      "latest_growth_pct": 17.08,
+      "avg_growth_pct": 16.24
+    },
+    {
+      "ticker": "6902.T",
+      "name": "DENSO Corporation",
+      "sector": "Consumer Cyclical",
+      "industry": "Auto Parts",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 64013
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 71447
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 37329
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 38788
+        }
+      ],
+      "growth_rates": [
+        11.61,
+        -47.75,
+        3.91
+      ],
+      "latest_growth_pct": 3.91,
+      "avg_growth_pct": -10.74
+    },
+    {
+      "ticker": "7741.T",
+      "name": "HOYA Corporation",
+      "sector": "Healthcare",
+      "industry": "Medical Instruments & Supplies",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 7340
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7926
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 8858
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 9958
+        }
+      ],
+      "growth_rates": [
+        7.98,
+        11.76,
+        12.42
+      ],
+      "latest_growth_pct": 12.42,
+      "avg_growth_pct": 10.72
+    },
+    {
+      "ticker": "6594.T",
+      "name": "Nidec Corporation",
+      "sector": "Industrials",
+      "industry": "Specialty Industrial Machinery",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-03-31",
+          "revenue_jpy": 19181
+        },
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 22428
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 23471
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 26078
+        }
+      ],
+      "growth_rates": [
+        16.93,
+        4.65,
+        11.11
+      ],
+      "latest_growth_pct": 11.11,
+      "avg_growth_pct": 10.9
+    },
+    {
+      "ticker": "9434.T",
+      "name": "SoftBank Corp.",
+      "sector": "Communication Services",
+      "industry": "Telecom Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 59119
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 60840
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 65443
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 70386
+        }
+      ],
+      "growth_rates": [
+        2.91,
+        7.57,
+        7.55
+      ],
+      "latest_growth_pct": 7.55,
+      "avg_growth_pct": 6.01
+    },
+    {
+      "ticker": "6098.T",
+      "name": "Recruit Holdings Co., Ltd.",
+      "sector": "Communication Services",
+      "industry": "Internet Content & Information",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 34295
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 34164
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 35574
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 36973
+        }
+      ],
+      "growth_rates": [
+        -0.38,
+        4.13,
+        3.93
+      ],
+      "latest_growth_pct": 3.93,
+      "avg_growth_pct": 2.56
+    },
+    {
+      "ticker": "9983.T",
+      "name": "Fast Retailing Co., Ltd.",
+      "sector": "Consumer Cyclical",
+      "industry": "Apparel Retail",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-08-31",
+          "revenue_jpy": 23011
+        },
+        {
+          "date": "2023-08-31",
+          "revenue_jpy": 27665
+        },
+        {
+          "date": "2024-08-31",
+          "revenue_jpy": 31038
+        },
+        {
+          "date": "2025-08-31",
+          "revenue_jpy": 34005
+        }
+      ],
+      "growth_rates": [
+        20.23,
+        12.19,
+        9.56
+      ],
+      "latest_growth_pct": 9.56,
+      "avg_growth_pct": 13.99
+    },
+    {
+      "ticker": "8766.T",
+      "name": "Tokio Marine Holdings, Inc.",
+      "sector": "Financial Services",
+      "industry": "Insurance - Property & Casualty",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 63141
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 70803
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 78025
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 83101
+        }
+      ],
+      "growth_rates": [
+        12.13,
+        10.2,
+        6.51
+      ],
+      "latest_growth_pct": 6.51,
+      "avg_growth_pct": 9.61
+    },
+    {
+      "ticker": "8031.T",
+      "name": "Mitsui & Co., Ltd.",
+      "sector": "Industrials",
+      "industry": "Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 143064
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 133249
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 146626
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 139952
+        }
+      ],
+      "growth_rates": [
+        -6.86,
+        10.04,
+        -4.55
+      ],
+      "latest_growth_pct": -4.55,
+      "avg_growth_pct": -0.46
+    },
+    {
+      "ticker": "4901.T",
+      "name": "FUJIFILM Holdings Corporation",
+      "sector": "Industrials",
+      "industry": "Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 28590
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 29609
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 31958
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 33569
+        }
+      ],
+      "growth_rates": [
+        3.56,
+        7.93,
+        5.04
+      ],
+      "latest_growth_pct": 5.04,
+      "avg_growth_pct": 5.51
+    },
+    {
+      "ticker": "5401.T",
+      "name": "Nippon Steel Corporation",
+      "sector": "Basic Materials",
+      "industry": "Steel",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 79755
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 88680
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 86955
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 100632
+        }
+      ],
+      "growth_rates": [
+        11.19,
+        -1.95,
+        15.73
+      ],
+      "latest_growth_pct": 15.73,
+      "avg_growth_pct": 8.32
+    },
+    {
+      "ticker": "9101.T",
+      "name": "Nippon Yusen Kabushiki Kaisha",
+      "sector": "Industrials",
+      "industry": "Marine Shipping",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 26160
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 23872
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 25887
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 24236
+        }
+      ],
+      "growth_rates": [
+        -8.75,
+        8.44,
+        -6.38
+      ],
+      "latest_growth_pct": -6.38,
+      "avg_growth_pct": -2.23
+    },
+    {
+      "ticker": "2914.T",
+      "name": "Japan Tobacco Inc.",
+      "sector": "Consumer Defensive",
+      "industry": "Tobacco",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 26578
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 28410
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 30567
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 34676
+        }
+      ],
+      "growth_rates": [
+        6.89,
+        7.59,
+        13.44
+      ],
+      "latest_growth_pct": 13.44,
+      "avg_growth_pct": 9.31
+    },
+    {
+      "ticker": "2802.T",
+      "name": "Ajinomoto Co., Inc.",
+      "sector": "Consumer Defensive",
+      "industry": "Packaged Foods",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 13591
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 14392
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 15305
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 15837
+        }
+      ],
+      "growth_rates": [
+        5.89,
+        6.34,
+        3.48
+      ],
+      "latest_growth_pct": 3.48,
+      "avg_growth_pct": 5.24
+    },
+    {
+      "ticker": "2503.T",
+      "name": "Kirin Holdings Company, Limited",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Brewers",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 19894
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 21343
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 23383
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 24333
+        }
+      ],
+      "growth_rates": [
+        7.28,
+        9.56,
+        4.06
+      ],
+      "latest_growth_pct": 4.06,
+      "avg_growth_pct": 6.97
+    },
+    {
+      "ticker": "2502.T",
+      "name": "Asahi Group Holdings, Ltd.",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Brewers",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2021-12-31",
+          "revenue_jpy": 22360
+        },
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 25111
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 27690
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 29394
+        }
+      ],
+      "growth_rates": [
+        12.3,
+        10.27,
+        6.15
+      ],
+      "latest_growth_pct": 6.15,
+      "avg_growth_pct": 9.57
+    },
+    {
+      "ticker": "9697.T",
+      "name": "Capcom Co., Ltd.",
+      "sector": "Communication Services",
+      "industry": "Electronic Gaming & Multimedia",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 1259
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 1524
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 1696
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 1953
+        }
+      ],
+      "growth_rates": [
+        21.05,
+        11.29,
+        15.15
+      ],
+      "latest_growth_pct": 15.15,
+      "avg_growth_pct": 15.83
+    },
+    {
+      "ticker": "7832.T",
+      "name": "BANDAI NAMCO Holdings Inc.",
+      "sector": "Consumer Cyclical",
+      "industry": "Leisure",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 9900
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 10502
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 12415
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 13482
+        }
+      ],
+      "growth_rates": [
+        6.08,
+        18.22,
+        8.59
+      ],
+      "latest_growth_pct": 8.59,
+      "avg_growth_pct": 10.96
+    },
+    {
+      "ticker": "8267.T",
+      "name": "Aeon Co., Ltd.",
+      "sector": "Consumer Cyclical",
+      "industry": "Department Stores",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-02-28",
+          "revenue_jpy": 91168
+        },
+        {
+          "date": "2024-02-29",
+          "revenue_jpy": 95535
+        },
+        {
+          "date": "2025-02-28",
+          "revenue_jpy": 101348
+        },
+        {
+          "date": "2026-02-28",
+          "revenue_jpy": 107153
+        }
+      ],
+      "growth_rates": [
+        4.79,
+        6.08,
+        5.73
+      ],
+      "latest_growth_pct": 5.73,
+      "avg_growth_pct": 5.53
+    },
+    {
+      "ticker": "3088.T",
+      "name": "MatsukiyoCocokara & Co.",
+      "sector": "Healthcare",
+      "industry": "Pharmaceutical Retailers",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 9512
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 10225
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 10616
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 11174
+        }
+      ],
+      "growth_rates": [
+        7.5,
+        3.82,
+        5.26
+      ],
+      "latest_growth_pct": 5.26,
+      "avg_growth_pct": 5.53
+    },
+    {
+      "ticker": "7733.T",
+      "name": "Olympus Corporation",
+      "sector": "Healthcare",
+      "industry": "Medical Devices",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 8819
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 9257
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 9973
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 10106
+        }
+      ],
+      "growth_rates": [
+        4.97,
+        7.73,
+        1.33
+      ],
+      "latest_growth_pct": 1.33,
+      "avg_growth_pct": 4.68
+    },
+    {
+      "ticker": "6869.T",
+      "name": "Sysmex Corporation",
+      "sector": "Healthcare",
+      "industry": "Medical Devices",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 4105
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 4615
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 5086
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 5000
+        }
+      ],
+      "growth_rates": [
+        12.42,
+        10.21,
+        -1.69
+      ],
+      "latest_growth_pct": -1.69,
+      "avg_growth_pct": 6.98
+    },
+    {
+      "ticker": "9503.T",
+      "name": "The Kansai Electric Power Company, Incorporated",
+      "sector": "Utilities",
+      "industry": "Utilities - Renewable",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 39518
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 40593
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 43371
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 40566
+        }
+      ],
+      "growth_rates": [
+        2.72,
+        6.84,
+        -6.47
+      ],
+      "latest_growth_pct": -6.47,
+      "avg_growth_pct": 1.03
+    },
+    {
+      "ticker": "9531.T",
+      "name": "Tokyo Gas Co.,Ltd.",
+      "sector": "Utilities",
+      "industry": "Utilities - Regulated Gas",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 32896
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 26624
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 26368
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 28347
+        }
+      ],
+      "growth_rates": [
+        -19.07,
+        -0.96,
+        7.51
+      ],
+      "latest_growth_pct": 7.51,
+      "avg_growth_pct": -4.17
+    },
+    {
+      "ticker": "6326.T",
+      "name": "Kubota Corporation",
+      "sector": "Industrials",
+      "industry": "Farm & Heavy Construction Machinery",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 26769
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 30207
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 30162
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 30188
+        }
+      ],
+      "growth_rates": [
+        12.84,
+        -0.15,
+        0.09
+      ],
+      "latest_growth_pct": 0.09,
+      "avg_growth_pct": 4.26
+    },
+    {
+      "ticker": "6305.T",
+      "name": "Hitachi Construction Machinery Co., Ltd.",
+      "sector": "Industrials",
+      "industry": "Farm & Heavy Construction Machinery",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 12649
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 14059
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 13712
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 14054
+        }
+      ],
+      "growth_rates": [
+        11.15,
+        -2.47,
+        2.49
+      ],
+      "latest_growth_pct": 2.49,
+      "avg_growth_pct": 3.72
+    },
+    {
+      "ticker": "COP",
+      "name": "ConocoPhillips",
+      "sector": "Energy",
+      "industry": "Oil & Gas E&P",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 784
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 561
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 547
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 589
+        }
+      ],
+      "growth_rates": [
+        -28.44,
+        -2.5,
+        7.68
+      ],
+      "latest_growth_pct": 7.68,
+      "avg_growth_pct": -7.75
+    },
+    {
+      "ticker": "SLB",
+      "name": "SLB N.V.",
+      "sector": "Energy",
+      "industry": "Oil & Gas Equipment & Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 280
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 331
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 362
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 357
+        }
+      ],
+      "growth_rates": [
+        18.21,
+        9.37,
+        -1.38
+      ],
+      "latest_growth_pct": -1.38,
+      "avg_growth_pct": 8.73
+    },
+    {
+      "ticker": "5713.T",
+      "name": "Sumitomo Metal Mining Co., Ltd.",
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 14229
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 14453
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 15933
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 17415
+        }
+      ],
+      "growth_rates": [
+        1.57,
+        10.24,
+        9.3
+      ],
+      "latest_growth_pct": 9.3,
+      "avg_growth_pct": 7.04
+    },
+    {
+      "ticker": "5406.T",
+      "name": "Kobe Steel, Ltd.",
+      "sector": "Basic Materials",
+      "industry": "Steel",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 24725
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 25431
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 25550
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 24365
+        }
+      ],
+      "growth_rates": [
+        2.86,
+        0.47,
+        -4.64
+      ],
+      "latest_growth_pct": -4.64,
+      "avg_growth_pct": -0.44
+    },
+    {
+      "ticker": "5802.T",
+      "name": "Sumitomo Electric Industries, Ltd.",
+      "sector": "Consumer Cyclical",
+      "industry": "Auto Parts",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 40055
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 44028
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 46797
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 51101
+        }
+      ],
+      "growth_rates": [
+        9.92,
+        6.29,
+        9.2
+      ],
+      "latest_growth_pct": 9.2,
+      "avg_growth_pct": 8.47
+    },
+    {
+      "ticker": "5706.T",
+      "name": "Mitsui Kinzoku Company, Limited",
+      "sector": "Industrials",
+      "industry": "Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 6519
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 6466
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7123
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 7585
+        }
+      ],
+      "growth_rates": [
+        -0.81,
+        10.16,
+        6.49
+      ],
+      "latest_growth_pct": 6.49,
+      "avg_growth_pct": 5.28
+    },
+    {
+      "ticker": "3436.T",
+      "name": "Sumco Corporation",
+      "sector": "Technology",
+      "industry": "Semiconductor Equipment & Materials",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 4410
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 4259
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 3966
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 4096
+        }
+      ],
+      "growth_rates": [
+        -3.42,
+        -6.88,
+        3.28
+      ],
+      "latest_growth_pct": 3.28,
+      "avg_growth_pct": -2.34
+    },
+    {
+      "ticker": "5631.T",
+      "name": "The Japan Steel Works, Ltd.",
+      "sector": "Industrials",
+      "industry": "Specialty Industrial Machinery",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 2387
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 2525
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 2485
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 2748
+        }
+      ],
+      "growth_rates": [
+        5.78,
+        -1.58,
+        10.58
+      ],
+      "latest_growth_pct": 10.58,
+      "avg_growth_pct": 4.93
+    },
+    {
+      "ticker": "8750.T",
+      "name": "Daiichi Life Group, Inc.",
+      "sector": "Financial Services",
+      "industry": "Insurance - Life",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 84114
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 104875
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 91001
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 105177
+        }
+      ],
+      "growth_rates": [
+        24.68,
+        -13.23,
+        15.58
+      ],
+      "latest_growth_pct": 15.58,
+      "avg_growth_pct": 9.01
+    },
+    {
+      "ticker": "8725.T",
+      "name": "MS&AD Insurance Group Holdings, Inc.",
+      "sector": "Financial Services",
+      "industry": "Insurance - Property & Casualty",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 50551
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 63386
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 63758
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 78120
+        }
+      ],
+      "growth_rates": [
+        25.39,
+        0.59,
+        22.53
+      ],
+      "latest_growth_pct": 22.53,
+      "avg_growth_pct": 16.17
+    },
+    {
+      "ticker": "8630.T",
+      "name": "Sompo Holdings, Inc.",
+      "sector": "Financial Services",
+      "industry": "Insurance - Property & Casualty",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 43385
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 53527
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 58595
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 52531
+        }
+      ],
+      "growth_rates": [
+        23.38,
+        9.47,
+        -10.35
+      ],
+      "latest_growth_pct": -10.35,
+      "avg_growth_pct": 7.5
+    },
+    {
+      "ticker": "8604.T",
+      "name": "Nomura Holdings, Inc.",
+      "sector": "Financial Services",
+      "industry": "Capital Markets",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 11449
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 13780
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 16623
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 18419
+        }
+      ],
+      "growth_rates": [
+        20.36,
+        20.63,
+        10.8
+      ],
+      "latest_growth_pct": 10.8,
+      "avg_growth_pct": 17.26
+    },
+    {
+      "ticker": "8601.T",
+      "name": "Daiwa Securities Group Inc.",
+      "sector": "Financial Services",
+      "industry": "Capital Markets",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 6064
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7730
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7800
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 8868
+        }
+      ],
+      "growth_rates": [
+        27.47,
+        0.91,
+        13.69
+      ],
+      "latest_growth_pct": 13.69,
+      "avg_growth_pct": 14.02
+    },
+    {
+      "ticker": "4452.T",
+      "name": "Kao Corporation",
+      "sector": "Consumer Defensive",
+      "industry": "Household & Personal Products",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 15510
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 15325
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 16284
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 16886
+        }
+      ],
+      "growth_rates": [
+        -1.19,
+        6.26,
+        3.7
+      ],
+      "latest_growth_pct": 3.7,
+      "avg_growth_pct": 2.92
+    },
+    {
+      "ticker": "4005.T",
+      "name": "Sumitomo Chemical Company, Limited",
+      "sector": "Basic Materials",
+      "industry": "Chemicals",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 28952
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 24468
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 26062
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 23285
+        }
+      ],
+      "growth_rates": [
+        -15.49,
+        6.51,
+        -10.66
+      ],
+      "latest_growth_pct": -10.66,
+      "avg_growth_pct": -6.55
+    },
+    {
+      "ticker": "3402.T",
+      "name": "Toray Industries, Inc.",
+      "sector": "Consumer Cyclical",
+      "industry": "Textile Manufacturing",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 24893
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 24645
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 25632
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 25850
+        }
+      ],
+      "growth_rates": [
+        -1.0,
+        4.0,
+        0.85
+      ],
+      "latest_growth_pct": 0.85,
+      "avg_growth_pct": 1.28
+    },
+    {
+      "ticker": "4021.T",
+      "name": "Nissan Chemical Corporation",
+      "sector": "Basic Materials",
+      "industry": "Chemicals",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 2280
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 2267
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 2513
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 2795
+        }
+      ],
+      "growth_rates": [
+        -0.57,
+        10.85,
+        11.22
+      ],
+      "latest_growth_pct": 11.22,
+      "avg_growth_pct": 7.17
+    },
+    {
+      "ticker": "6988.T",
+      "name": "Nitto Denko Corporation",
+      "sector": "Basic Materials",
+      "industry": "Specialty Chemicals",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 9290
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 9151
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 10138
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 10281
+        }
+      ],
+      "growth_rates": [
+        -1.5,
+        10.79,
+        1.41
+      ],
+      "latest_growth_pct": 1.41,
+      "avg_growth_pct": 3.57
+    },
+    {
+      "ticker": "8830.T",
+      "name": "Sumitomo Realty & Development Co., Ltd.",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 9399
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 9676
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 10142
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 10577
+        }
+      ],
+      "growth_rates": [
+        2.95,
+        4.82,
+        4.29
+      ],
+      "latest_growth_pct": 4.29,
+      "avg_growth_pct": 4.02
+    },
+    {
+      "ticker": "3003.T",
+      "name": "Hulic Co., Ltd.",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 5234
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 4463
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 5916
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 7274
+        }
+      ],
+      "growth_rates": [
+        -14.73,
+        32.56,
+        22.95
+      ],
+      "latest_growth_pct": 22.95,
+      "avg_growth_pct": 13.59
+    },
+    {
+      "ticker": "3231.T",
+      "name": "Nomura Real Estate Holdings, Inc.",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 6547
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7347
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7576
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 9425
+        }
+      ],
+      "growth_rates": [
+        12.22,
+        3.12,
+        24.41
+      ],
+      "latest_growth_pct": 24.41,
+      "avg_growth_pct": 13.25
+    },
+    {
+      "ticker": "8952.T",
+      "name": "Japan Real Estate Investment Corporation",
+      "sector": "Real Estate",
+      "industry": "REIT - Office",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-09-30",
+          "revenue_jpy": 741
+        },
+        {
+          "date": "2023-09-30",
+          "revenue_jpy": 759
+        },
+        {
+          "date": "2024-09-30",
+          "revenue_jpy": 839
+        },
+        {
+          "date": "2025-09-30",
+          "revenue_jpy": 840
+        }
+      ],
+      "growth_rates": [
+        2.43,
+        10.54,
+        0.12
+      ],
+      "latest_growth_pct": 0.12,
+      "avg_growth_pct": 4.36
+    },
+    {
+      "ticker": "9684.T",
+      "name": "Square Enix Holdings Co., Ltd.",
+      "sector": "Communication Services",
+      "industry": "Electronic Gaming & Multimedia",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 3432
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 3563
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 3245
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 2976
+        }
+      ],
+      "growth_rates": [
+        3.82,
+        -8.93,
+        -8.29
+      ],
+      "latest_growth_pct": -8.29,
+      "avg_growth_pct": -4.47
+    },
+    {
+      "ticker": "6460.T",
+      "name": "Sega Sammy Holdings Inc.",
+      "sector": "Communication Services",
+      "industry": "Electronic Gaming & Multimedia",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 3896
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 4689
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 4289
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 4875
+        }
+      ],
+      "growth_rates": [
+        20.35,
+        -8.53,
+        13.66
+      ],
+      "latest_growth_pct": 13.66,
+      "avg_growth_pct": 8.49
+    },
+    {
+      "ticker": "2432.T",
+      "name": "DeNA Co., Ltd.",
+      "sector": "Industrials",
+      "industry": "Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 1349
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 1367
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 1639
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 1477
+        }
+      ],
+      "growth_rates": [
+        1.33,
+        19.9,
+        -9.88
+      ],
+      "latest_growth_pct": -9.88,
+      "avg_growth_pct": 3.78
+    },
+    {
+      "ticker": "3765.T",
+      "name": "GungHo Online Entertainment, Inc.",
+      "sector": "Communication Services",
+      "industry": "Electronic Gaming & Multimedia",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 1055
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 1253
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 1036
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 932
+        }
+      ],
+      "growth_rates": [
+        18.77,
+        -17.32,
+        -10.04
+      ],
+      "latest_growth_pct": -10.04,
+      "avg_growth_pct": -2.86
+    },
+    {
+      "ticker": "9843.T",
+      "name": "Nitori Holdings Co., Ltd.",
+      "sector": "Consumer Cyclical",
+      "industry": "Furnishings, Fixtures & Appliances",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-02-28",
+          "revenue_jpy": 8115
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 8966
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 9288
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 9122
+        }
+      ],
+      "growth_rates": [
+        10.49,
+        3.59,
+        -1.79
+      ],
+      "latest_growth_pct": -1.79,
+      "avg_growth_pct": 4.1
+    },
+    {
+      "ticker": "3086.T",
+      "name": "J. Front Retailing Co., Ltd.",
+      "sector": "Consumer Cyclical",
+      "industry": "Department Stores",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-02-28",
+          "revenue_jpy": 3596
+        },
+        {
+          "date": "2024-02-29",
+          "revenue_jpy": 4070
+        },
+        {
+          "date": "2025-02-28",
+          "revenue_jpy": 4418
+        },
+        {
+          "date": "2026-02-28",
+          "revenue_jpy": 4450
+        }
+      ],
+      "growth_rates": [
+        13.18,
+        8.55,
+        0.72
+      ],
+      "latest_growth_pct": 0.72,
+      "avg_growth_pct": 7.48
+    },
+    {
+      "ticker": "2670.T",
+      "name": "ABC-Mart,Inc.",
+      "sector": "Consumer Cyclical",
+      "industry": "Apparel Retail",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-02-28",
+          "revenue_jpy": 2900
+        },
+        {
+          "date": "2024-02-29",
+          "revenue_jpy": 3441
+        },
+        {
+          "date": "2025-02-28",
+          "revenue_jpy": 3722
+        },
+        {
+          "date": "2026-02-28",
+          "revenue_jpy": 3786
+        }
+      ],
+      "growth_rates": [
+        18.66,
+        8.17,
+        1.72
+      ],
+      "latest_growth_pct": 1.72,
+      "avg_growth_pct": 9.52
+    },
+    {
+      "ticker": "8308.T",
+      "name": "Resona Holdings, Inc.",
+      "sector": "Financial Services",
+      "industry": "Banks - Regional",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 7484
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7694
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 8797
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 10269
+        }
+      ],
+      "growth_rates": [
+        2.81,
+        14.34,
+        16.73
+      ],
+      "latest_growth_pct": 16.73,
+      "avg_growth_pct": 11.29
+    },
+    {
+      "ticker": "8309.T",
+      "name": "Sumitomo Mitsui Trust Group, Inc.",
+      "sector": "Financial Services",
+      "industry": "Banks - Regional",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 11384
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 12136
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 15141
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 15520
+        }
+      ],
+      "growth_rates": [
+        6.61,
+        24.76,
+        2.5
+      ],
+      "latest_growth_pct": 2.5,
+      "avg_growth_pct": 11.29
+    },
+    {
+      "ticker": "8473.T",
+      "name": "SBI Holdings, Inc.",
+      "sector": "Financial Services",
+      "industry": "Financial Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 9569
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 12105
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 14437
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 18966
+        }
+      ],
+      "growth_rates": [
+        26.5,
+        19.26,
+        31.37
+      ],
+      "latest_growth_pct": 31.37,
+      "avg_growth_pct": 25.71
+    },
+    {
+      "ticker": "8354.T",
+      "name": "Fukuoka Financial Group, Inc.",
+      "sector": "Financial Services",
+      "industry": "Banks - Regional",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 2613
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 2707
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 2961
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 4088
+        }
+      ],
+      "growth_rates": [
+        3.6,
+        9.38,
+        38.06
+      ],
+      "latest_growth_pct": 38.06,
+      "avg_growth_pct": 17.01
+    },
+    {
+      "ticker": "6645.T",
+      "name": "OMRON Corporation",
+      "sector": "Technology",
+      "industry": "Electronic Components",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 8760
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 8187
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7153
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 7673
+        }
+      ],
+      "growth_rates": [
+        -6.54,
+        -12.63,
+        7.27
+      ],
+      "latest_growth_pct": 7.27,
+      "avg_growth_pct": -3.97
+    },
+    {
+      "ticker": "9989.T",
+      "name": "Sundrug Co.,Ltd.",
+      "sector": "Healthcare",
+      "industry": "Pharmaceutical Retailers",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 6904
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7517
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 8018
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 8425
+        }
+      ],
+      "growth_rates": [
+        8.88,
+        6.66,
+        5.08
+      ],
+      "latest_growth_pct": 5.08,
+      "avg_growth_pct": 6.87
+    },
+    {
+      "ticker": "4307.T",
+      "name": "Nomura Research Institute, Ltd.",
+      "sector": "Technology",
+      "industry": "Information Technology Services",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 6921
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7365
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7648
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 8147
+        }
+      ],
+      "growth_rates": [
+        6.42,
+        3.84,
+        6.52
+      ],
+      "latest_growth_pct": 6.52,
+      "avg_growth_pct": 5.59
+    },
+    {
+      "ticker": "9532.T",
+      "name": "Osaka Gas Co., Ltd.",
+      "sector": "Utilities",
+      "industry": "Utilities - Regulated Gas",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 22751
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 20830
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 20690
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 20303
+        }
+      ],
+      "growth_rates": [
+        -8.44,
+        -0.67,
+        -1.87
+      ],
+      "latest_growth_pct": -1.87,
+      "avg_growth_pct": -3.66
+    },
+    {
+      "ticker": "9506.T",
+      "name": "Tohoku Electric Power Company, Incorporated",
+      "sector": "Utilities",
+      "industry": "Utilities - Renewable",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 30072
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 28178
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 26449
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 23724
+        }
+      ],
+      "growth_rates": [
+        -6.3,
+        -6.14,
+        -10.3
+      ],
+      "latest_growth_pct": -10.3,
+      "avg_growth_pct": -7.58
+    },
+    {
+      "ticker": "9504.T",
+      "name": "The Chugoku Electric Power Co., Inc.",
+      "sector": "Utilities",
+      "industry": "Utilities - Renewable",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 16946
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 16287
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 15292
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 14423
+        }
+      ],
+      "growth_rates": [
+        -3.89,
+        -6.11,
+        -5.68
+      ],
+      "latest_growth_pct": -5.68,
+      "avg_growth_pct": -5.23
+    },
+    {
+      "ticker": "9507.T",
+      "name": "Shikoku Electric Power Company, Incorporated",
+      "sector": "Utilities",
+      "industry": "Utilities - Regulated Electric",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 8332
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7874
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 8513
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 7618
+        }
+      ],
+      "growth_rates": [
+        -5.5,
+        8.12,
+        -10.51
+      ],
+      "latest_growth_pct": -10.51,
+      "avg_growth_pct": -2.63
+    },
+    {
+      "ticker": "7011.T",
+      "name": "Mitsubishi Heavy Industries, Ltd.",
+      "sector": "Industrials",
+      "industry": "Specialty Industrial Machinery",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-03-31",
+          "revenue_jpy": 38602
+        },
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 42027
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 46571
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 50271
+        }
+      ],
+      "growth_rates": [
+        8.87,
+        10.81,
+        7.94
+      ],
+      "latest_growth_pct": 7.94,
+      "avg_growth_pct": 9.21
+    },
+    {
+      "ticker": "6506.T",
+      "name": "YASKAWA Electric Corporation",
+      "sector": "Industrials",
+      "industry": "Electrical Equipment & Parts",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-02-28",
+          "revenue_jpy": 5559
+        },
+        {
+          "date": "2024-02-29",
+          "revenue_jpy": 5756
+        },
+        {
+          "date": "2025-02-28",
+          "revenue_jpy": 5376
+        },
+        {
+          "date": "2026-02-28",
+          "revenue_jpy": 5421
+        }
+      ],
+      "growth_rates": [
+        3.54,
+        -6.6,
+        0.84
+      ],
+      "latest_growth_pct": 0.84,
+      "avg_growth_pct": -0.74
+    },
+    {
+      "ticker": "6474.T",
+      "name": "Nachi-Fujikoshi Corp.",
+      "sector": "Industrials",
+      "industry": "Tools & Accessories",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-11-30",
+          "revenue_jpy": 2580
+        },
+        {
+          "date": "2023-11-30",
+          "revenue_jpy": 2654
+        },
+        {
+          "date": "2024-11-30",
+          "revenue_jpy": 2398
+        },
+        {
+          "date": "2025-11-30",
+          "revenue_jpy": 2359
+        }
+      ],
+      "growth_rates": [
+        2.87,
+        -9.65,
+        -1.63
+      ],
+      "latest_growth_pct": -1.63,
+      "avg_growth_pct": -2.8
+    },
+    {
+      "ticker": "MCD",
+      "name": "McDonald's Corporation",
+      "sector": "Consumer Cyclical",
+      "industry": "Restaurants",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 231
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 254
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 259
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 268
+        }
+      ],
+      "growth_rates": [
+        9.96,
+        1.97,
+        3.47
+      ],
+      "latest_growth_pct": 3.47,
+      "avg_growth_pct": 5.13
+    },
+    {
+      "ticker": "NKE",
+      "name": "NIKE, Inc.",
+      "sector": "Consumer Cyclical",
+      "industry": "Footwear & Accessories",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2023-05-31",
+          "revenue_native": 512
+        },
+        {
+          "date": "2024-05-31",
+          "revenue_native": 513
+        },
+        {
+          "date": "2025-05-31",
+          "revenue_native": 463
+        },
+        {
+          "date": "2026-05-31",
+          "revenue_native": 463
+        }
+      ],
+      "growth_rates": [
+        0.2,
+        -9.75,
+        0.0
+      ],
+      "latest_growth_pct": 0.0,
+      "avg_growth_pct": -3.18
+    },
+    {
+      "ticker": "SBUX",
+      "name": "Starbucks Corporation",
+      "sector": "Consumer Cyclical",
+      "industry": "Restaurants",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-09-30",
+          "revenue_native": 322
+        },
+        {
+          "date": "2023-09-30",
+          "revenue_native": 359
+        },
+        {
+          "date": "2024-09-30",
+          "revenue_native": 361
+        },
+        {
+          "date": "2025-09-30",
+          "revenue_native": 371
+        }
+      ],
+      "growth_rates": [
+        11.49,
+        0.56,
+        2.77
+      ],
+      "latest_growth_pct": 2.77,
+      "avg_growth_pct": 4.94
+    },
+    {
+      "ticker": "TGT",
+      "name": "Target Corporation",
+      "sector": "Consumer Defensive",
+      "industry": "Discount Stores",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2023-01-31",
+          "revenue_native": 1091
+        },
+        {
+          "date": "2024-01-31",
+          "revenue_native": 1074
+        },
+        {
+          "date": "2025-01-31",
+          "revenue_native": 1065
+        },
+        {
+          "date": "2026-01-31",
+          "revenue_native": 1047
+        }
+      ],
+      "growth_rates": [
+        -1.56,
+        -0.84,
+        -1.69
+      ],
+      "latest_growth_pct": -1.69,
+      "avg_growth_pct": -1.36
+    },
+    {
+      "ticker": "PM",
+      "name": "Philip Morris International Inc.",
+      "sector": "Consumer Defensive",
+      "industry": "Tobacco",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 317
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 351
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 378
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 406
+        }
+      ],
+      "growth_rates": [
+        10.73,
+        7.69,
+        7.41
+      ],
+      "latest_growth_pct": 7.41,
+      "avg_growth_pct": 8.61
+    },
+    {
+      "ticker": "CL",
+      "name": "Colgate-Palmolive Company",
+      "sector": "Consumer Defensive",
+      "industry": "Household & Personal Products",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 179
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 194
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 201
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 203
+        }
+      ],
+      "growth_rates": [
+        8.38,
+        3.61,
+        1.0
+      ],
+      "latest_growth_pct": 1.0,
+      "avg_growth_pct": 4.33
+    },
+    {
+      "ticker": "GIS",
+      "name": "General Mills, Inc.",
+      "sector": "Consumer Defensive",
+      "industry": "Packaged Foods",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2023-05-31",
+          "revenue_native": 200
+        },
+        {
+          "date": "2024-05-31",
+          "revenue_native": 198
+        },
+        {
+          "date": "2025-05-31",
+          "revenue_native": 194
+        },
+        {
+          "date": "2026-05-31",
+          "revenue_native": 184
+        }
+      ],
+      "growth_rates": [
+        -1.0,
+        -2.02,
+        -5.15
+      ],
+      "latest_growth_pct": -5.15,
+      "avg_growth_pct": -2.72
+    },
+    {
+      "ticker": "MO",
+      "name": "Altria Group, Inc.",
+      "sector": "Consumer Defensive",
+      "industry": "Tobacco",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 206
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 205
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 204
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 201
+        }
+      ],
+      "growth_rates": [
+        -0.49,
+        -0.49,
+        -1.47
+      ],
+      "latest_growth_pct": -1.47,
+      "avg_growth_pct": -0.82
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America Corporation",
+      "sector": "Financial Services",
+      "industry": "Banks - Diversified",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 949
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 1027
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 1058
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 1130
+        }
+      ],
+      "growth_rates": [
+        8.22,
+        3.02,
+        6.81
+      ],
+      "latest_growth_pct": 6.81,
+      "avg_growth_pct": 6.02
+    },
+    {
+      "ticker": "GS",
+      "name": "The Goldman Sachs Group, Inc.",
+      "sector": "Financial Services",
+      "industry": "Capital Markets",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 473
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 462
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 535
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 582
+        }
+      ],
+      "growth_rates": [
+        -2.33,
+        15.8,
+        8.79
+      ],
+      "latest_growth_pct": 8.79,
+      "avg_growth_pct": 7.42
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "sector": "Financial Services",
+      "industry": "Capital Markets",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 502
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 506
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 576
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 659
+        }
+      ],
+      "growth_rates": [
+        0.8,
+        13.83,
+        14.41
+      ],
+      "latest_growth_pct": 14.41,
+      "avg_growth_pct": 9.68
+    },
+    {
+      "ticker": "BRK-B",
+      "name": "Berkshire Hathaway Inc.",
+      "sector": "Financial Services",
+      "industry": "Insurance - Diversified",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 2341
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 4393
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 4242
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 4105
+        }
+      ],
+      "growth_rates": [
+        87.65,
+        -3.44,
+        -3.23
+      ],
+      "latest_growth_pct": -3.23,
+      "avg_growth_pct": 26.99
+    },
+    {
+      "ticker": "EOG",
+      "name": "EOG Resources, Inc.",
+      "sector": "Energy",
+      "industry": "Oil & Gas E&P",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 294
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 231
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 233
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 225
+        }
+      ],
+      "growth_rates": [
+        -21.43,
+        0.87,
+        -3.43
+      ],
+      "latest_growth_pct": -3.43,
+      "avg_growth_pct": -8.0
+    },
+    {
+      "ticker": "PSX",
+      "name": "Phillips 66",
+      "sector": "Energy",
+      "industry": "Oil & Gas Refining & Marketing",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 1699
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 1473
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 1431
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 1323
+        }
+      ],
+      "growth_rates": [
+        -13.3,
+        -2.85,
+        -7.55
+      ],
+      "latest_growth_pct": -7.55,
+      "avg_growth_pct": -7.9
+    },
+    {
+      "ticker": "MPC",
+      "name": "Marathon Petroleum Corporation",
+      "sector": "Energy",
+      "industry": "Oil & Gas Refining & Marketing",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 1774
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 1483
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 1388
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 1326
+        }
+      ],
+      "growth_rates": [
+        -16.4,
+        -6.41,
+        -4.47
+      ],
+      "latest_growth_pct": -4.47,
+      "avg_growth_pct": -9.09
+    },
+    {
+      "ticker": "VLO",
+      "name": "Valero Energy Corporation",
+      "sector": "Energy",
+      "industry": "Oil & Gas Refining & Marketing",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 1763
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 1447
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 1298
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 1226
+        }
+      ],
+      "growth_rates": [
+        -17.92,
+        -10.3,
+        -5.55
+      ],
+      "latest_growth_pct": -5.55,
+      "avg_growth_pct": -11.26
+    },
+    {
+      "ticker": "8015.T",
+      "name": "Toyota Tsusho Corporation",
+      "sector": "Industrials",
+      "industry": "Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-03-31",
+          "revenue_jpy": 80280
+        },
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 98485
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 101889
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 103095
+        }
+      ],
+      "growth_rates": [
+        22.68,
+        3.46,
+        1.18
+      ],
+      "latest_growth_pct": 1.18,
+      "avg_growth_pct": 9.11
+    },
+    {
+      "ticker": "2768.T",
+      "name": "Sojitz Corporation",
+      "sector": "Industrials",
+      "industry": "Conglomerates",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-03-31",
+          "revenue_jpy": 21007
+        },
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 24798
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 24146
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 25097
+        }
+      ],
+      "growth_rates": [
+        18.05,
+        -2.63,
+        3.94
+      ],
+      "latest_growth_pct": 3.94,
+      "avg_growth_pct": 6.45
+    },
+    {
+      "ticker": "9025.T",
+      "name": "Konoike Transport Co.,Ltd.",
+      "sector": "Industrials",
+      "industry": "Integrated Freight & Logistics",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 3118
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 3150
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 3449
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 3555
+        }
+      ],
+      "growth_rates": [
+        1.03,
+        9.49,
+        3.07
+      ],
+      "latest_growth_pct": 3.07,
+      "avg_growth_pct": 4.53
+    },
+    {
+      "ticker": "4523.T",
+      "name": "Eisai Co., Ltd.",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 7444
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7417
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7894
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 8253
+        }
+      ],
+      "growth_rates": [
+        -0.36,
+        6.43,
+        4.55
+      ],
+      "latest_growth_pct": 4.55,
+      "avg_growth_pct": 3.54
+    },
+    {
+      "ticker": "4507.T",
+      "name": "Shionogi & Co., Ltd.",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 4266
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 4350
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 4382
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 4996
+        }
+      ],
+      "growth_rates": [
+        1.97,
+        0.74,
+        14.01
+      ],
+      "latest_growth_pct": 14.01,
+      "avg_growth_pct": 5.57
+    },
+    {
+      "ticker": "4506.T",
+      "name": "Sumitomo Pharma Co., Ltd.",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 5555
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 3145
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 3988
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 4532
+        }
+      ],
+      "growth_rates": [
+        -43.38,
+        26.8,
+        13.64
+      ],
+      "latest_growth_pct": 13.64,
+      "avg_growth_pct": -0.98
+    },
+    {
+      "ticker": "9064.T",
+      "name": "Yamato Holdings Co., Ltd.",
+      "sector": "Industrials",
+      "industry": "Trucking",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 18006
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 17586
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 17626
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 18656
+        }
+      ],
+      "growth_rates": [
+        -2.33,
+        0.23,
+        5.84
+      ],
+      "latest_growth_pct": 5.84,
+      "avg_growth_pct": 1.25
+    },
+    {
+      "ticker": "9143.T",
+      "name": "SG Holdings Co.,Ltd.",
+      "sector": "Industrials",
+      "industry": "Integrated Freight & Logistics",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 14346
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 13169
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 14792
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 16447
+        }
+      ],
+      "growth_rates": [
+        -8.2,
+        12.32,
+        11.19
+      ],
+      "latest_growth_pct": 11.19,
+      "avg_growth_pct": 5.1
+    },
+    {
+      "ticker": "9104.T",
+      "name": "Mitsui O.S.K. Lines, Ltd.",
+      "sector": "Industrials",
+      "industry": "Marine Shipping",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 16119
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 16279
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 17754
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 18250
+        }
+      ],
+      "growth_rates": [
+        0.99,
+        9.06,
+        2.79
+      ],
+      "latest_growth_pct": 2.79,
+      "avg_growth_pct": 4.28
+    },
+    {
+      "ticker": "2897.T",
+      "name": "Nissin Foods Holdings Co.,Ltd.",
+      "sector": "Consumer Defensive",
+      "industry": "Packaged Foods",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-03-31",
+          "revenue_jpy": 5697
+        },
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 6692
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7329
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7765
+        }
+      ],
+      "growth_rates": [
+        17.47,
+        9.52,
+        5.95
+      ],
+      "latest_growth_pct": 5.95,
+      "avg_growth_pct": 10.98
+    },
+    {
+      "ticker": "2801.T",
+      "name": "Kikkoman Corporation",
+      "sector": "Consumer Defensive",
+      "industry": "Packaged Foods",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 6188
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 6608
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7089
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 7455
+        }
+      ],
+      "growth_rates": [
+        6.79,
+        7.28,
+        5.16
+      ],
+      "latest_growth_pct": 5.16,
+      "avg_growth_pct": 6.41
+    },
+    {
+      "ticker": "2875.T",
+      "name": "Toyo Suisan Kaisha, Ltd.",
+      "sector": "Consumer Defensive",
+      "industry": "Packaged Foods",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 4357
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 4890
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 5122
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 5366
+        }
+      ],
+      "growth_rates": [
+        12.23,
+        4.74,
+        4.76
+      ],
+      "latest_growth_pct": 4.76,
+      "avg_growth_pct": 7.24
+    },
+    {
+      "ticker": "7272.T",
+      "name": "Yamaha Motor Co., Ltd.",
+      "sector": "Consumer Cyclical",
+      "industry": "Auto Manufacturers",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 22484
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 24147
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 25761
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 25342
+        }
+      ],
+      "growth_rates": [
+        7.4,
+        6.68,
+        -1.63
+      ],
+      "latest_growth_pct": -1.63,
+      "avg_growth_pct": 4.15
+    },
+    {
+      "ticker": "7261.T",
+      "name": "Mazda Motor Corporation",
+      "sector": "Consumer Cyclical",
+      "industry": "Auto Manufacturers",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 38267
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 48276
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 50188
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 49181
+        }
+      ],
+      "growth_rates": [
+        26.16,
+        3.96,
+        -2.01
+      ],
+      "latest_growth_pct": -2.01,
+      "avg_growth_pct": 9.37
+    },
+    {
+      "ticker": "4755.T",
+      "name": "Rakuten Group, Inc.",
+      "sector": "Consumer Cyclical",
+      "industry": "Internet Retail",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 19208
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 20713
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 22792
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 24965
+        }
+      ],
+      "growth_rates": [
+        7.84,
+        10.04,
+        9.53
+      ],
+      "latest_growth_pct": 9.53,
+      "avg_growth_pct": 9.14
+    },
+    {
+      "ticker": "5943.T",
+      "name": "Noritz Corporation",
+      "sector": "Industrials",
+      "industry": "Building Products & Equipment",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_jpy": 2109
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_jpy": 2018
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_jpy": 2022
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_jpy": 2020
+        }
+      ],
+      "growth_rates": [
+        -4.31,
+        0.2,
+        -0.1
+      ],
+      "latest_growth_pct": -0.1,
+      "avg_growth_pct": -1.4
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies Inc.",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 19
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 22
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 28
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 44
+        }
+      ],
+      "growth_rates": [
+        15.79,
+        27.27,
+        57.14
+      ],
+      "latest_growth_pct": 57.14,
+      "avg_growth_pct": 33.4
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom Inc.",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-10-31",
+          "revenue_native": 332
+        },
+        {
+          "date": "2023-10-31",
+          "revenue_native": 358
+        },
+        {
+          "date": "2024-10-31",
+          "revenue_native": 515
+        },
+        {
+          "date": "2025-10-31",
+          "revenue_native": 638
+        }
+      ],
+      "growth_rates": [
+        7.83,
+        43.85,
+        23.88
+      ],
+      "latest_growth_pct": 23.88,
+      "avg_growth_pct": 25.19
+    },
+    {
+      "ticker": "9501.T",
+      "name": "Tokyo Electric Power Company Holdings, Incorporated",
+      "sector": "Utilities",
+      "industry": "Utilities - Renewable",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 81122
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 69183
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 68103
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 63285
+        }
+      ],
+      "growth_rates": [
+        -14.72,
+        -1.56,
+        -7.07
+      ],
+      "latest_growth_pct": -7.07,
+      "avg_growth_pct": -7.78
+    },
+    {
+      "ticker": "4543.T",
+      "name": "Terumo Corporation",
+      "sector": "Healthcare",
+      "industry": "Medical Instruments & Supplies",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 8202
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 9218
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 10361
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 11318
+        }
+      ],
+      "growth_rates": [
+        12.39,
+        12.4,
+        9.24
+      ],
+      "latest_growth_pct": 9.24,
+      "avg_growth_pct": 11.34
+    },
+    {
+      "ticker": "6273.T",
+      "name": "SMC Corporation",
+      "sector": "Industrials",
+      "industry": "Specialty Industrial Machinery",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 8247
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 7768
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 7921
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 8425
+        }
+      ],
+      "growth_rates": [
+        -5.81,
+        1.97,
+        6.36
+      ],
+      "latest_growth_pct": 6.36,
+      "avg_growth_pct": 0.84
+    },
+    {
+      "ticker": "6178.T",
+      "name": "Japan Post Holdings Co., Ltd.",
+      "sector": "Financial Services",
+      "industry": "Banks - Regional",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2022-03-31",
+          "revenue_jpy": 112647
+        },
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 111385
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 119821
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 114683
+        }
+      ],
+      "growth_rates": [
+        -1.12,
+        7.57,
+        -4.29
+      ],
+      "latest_growth_pct": -4.29,
+      "avg_growth_pct": 0.72
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly and Company",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 285
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 341
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 450
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 651
+        }
+      ],
+      "growth_rates": [
+        19.65,
+        31.96,
+        44.67
+      ],
+      "latest_growth_pct": 44.67,
+      "avg_growth_pct": 32.09
+    },
+    {
+      "ticker": "3382.T",
+      "name": "Seven & i Holdings Co., Ltd.",
+      "sector": "Consumer Defensive",
+      "industry": "Grocery Stores",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-02-28",
+          "revenue_jpy": 118113
+        },
+        {
+          "date": "2024-02-29",
+          "revenue_jpy": 114717
+        },
+        {
+          "date": "2025-02-28",
+          "revenue_jpy": 119727
+        },
+        {
+          "date": "2026-02-28",
+          "revenue_jpy": 104302
+        }
+      ],
+      "growth_rates": [
+        -2.88,
+        4.37,
+        -12.88
+      ],
+      "latest_growth_pct": -12.88,
+      "avg_growth_pct": -3.8
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "Technology",
+      "industry": "Software - Application",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-11-30",
+          "revenue_native": 176
+        },
+        {
+          "date": "2023-11-30",
+          "revenue_native": 194
+        },
+        {
+          "date": "2024-11-30",
+          "revenue_native": 215
+        },
+        {
+          "date": "2025-11-30",
+          "revenue_native": 237
+        }
+      ],
+      "growth_rates": [
+        10.23,
+        10.82,
+        10.23
+      ],
+      "latest_growth_pct": 10.23,
+      "avg_growth_pct": 10.43
+    },
+    {
+      "ticker": "TXN",
+      "name": "Texas Instruments Incorporated",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 200
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 175
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 156
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 176
+        }
+      ],
+      "growth_rates": [
+        -12.5,
+        -10.86,
+        12.82
+      ],
+      "latest_growth_pct": 12.82,
+      "avg_growth_pct": -3.51
+    },
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific Inc.",
+      "sector": "Healthcare",
+      "industry": "Diagnostics & Research",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 449
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 428
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 428
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 445
+        }
+      ],
+      "growth_rates": [
+        -4.68,
+        0.0,
+        3.97
+      ],
+      "latest_growth_pct": 3.97,
+      "avg_growth_pct": -0.24
+    },
+    {
+      "ticker": "DHR",
+      "name": "Danaher Corporation",
+      "sector": "Healthcare",
+      "industry": "Diagnostics & Research",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 266
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 238
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 238
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 245
+        }
+      ],
+      "growth_rates": [
+        -10.53,
+        0.0,
+        2.94
+      ],
+      "latest_growth_pct": 2.94,
+      "avg_growth_pct": -2.53
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil Holdings Corporation",
+      "sector": "Energy",
+      "industry": "Oil & Gas Integrated",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 3986
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 3346
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 3392
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 3239
+        }
+      ],
+      "growth_rates": [
+        -16.06,
+        1.37,
+        -4.51
+      ],
+      "latest_growth_pct": -4.51,
+      "avg_growth_pct": -6.4
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco Wholesale Corporation",
+      "sector": "Consumer Defensive",
+      "industry": "Discount Stores",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-08-31",
+          "revenue_native": 2269
+        },
+        {
+          "date": "2023-08-31",
+          "revenue_native": 2422
+        },
+        {
+          "date": "2024-08-31",
+          "revenue_native": 2544
+        },
+        {
+          "date": "2025-08-31",
+          "revenue_native": 2752
+        }
+      ],
+      "growth_rates": [
+        6.74,
+        5.04,
+        8.18
+      ],
+      "latest_growth_pct": 8.18,
+      "avg_growth_pct": 6.65
+    },
+    {
+      "ticker": "ACN",
+      "name": "Accenture plc",
+      "sector": "Technology",
+      "industry": "Information Technology Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-08-31",
+          "revenue_native": 615
+        },
+        {
+          "date": "2023-08-31",
+          "revenue_native": 641
+        },
+        {
+          "date": "2024-08-31",
+          "revenue_native": 648
+        },
+        {
+          "date": "2025-08-31",
+          "revenue_native": 696
+        }
+      ],
+      "growth_rates": [
+        4.23,
+        1.09,
+        7.41
+      ],
+      "latest_growth_pct": 7.41,
+      "avg_growth_pct": 4.24
+    },
+    {
+      "ticker": "LOW",
+      "name": "Lowe's Companies, Inc.",
+      "sector": "Consumer Cyclical",
+      "industry": "Home Improvement Retail",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2023-01-31",
+          "revenue_native": 970
+        },
+        {
+          "date": "2024-01-31",
+          "revenue_native": 863
+        },
+        {
+          "date": "2025-01-31",
+          "revenue_native": 836
+        },
+        {
+          "date": "2026-01-31",
+          "revenue_native": 862
+        }
+      ],
+      "growth_rates": [
+        -11.03,
+        -3.13,
+        3.11
+      ],
+      "latest_growth_pct": 3.11,
+      "avg_growth_pct": -3.68
+    },
+    {
+      "ticker": "QCOM",
+      "name": "QUALCOMM Incorporated",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-09-30",
+          "revenue_native": 442
+        },
+        {
+          "date": "2023-09-30",
+          "revenue_native": 358
+        },
+        {
+          "date": "2024-09-30",
+          "revenue_native": 389
+        },
+        {
+          "date": "2025-09-30",
+          "revenue_native": 442
+        }
+      ],
+      "growth_rates": [
+        -19.0,
+        8.66,
+        13.62
+      ],
+      "latest_growth_pct": 13.62,
+      "avg_growth_pct": 1.09
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron Corporation",
+      "sector": "Energy",
+      "industry": "Oil & Gas Integrated",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 2357
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 1969
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 1934
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 1844
+        }
+      ],
+      "growth_rates": [
+        -16.46,
+        -1.78,
+        -4.65
+      ],
+      "latest_growth_pct": -4.65,
+      "avg_growth_pct": -7.63
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal Holdings, Inc.",
+      "sector": "Financial Services",
+      "industry": "Credit Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 275
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 297
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 317
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 331
+        }
+      ],
+      "growth_rates": [
+        8.0,
+        6.73,
+        4.42
+      ],
+      "latest_growth_pct": 4.42,
+      "avg_growth_pct": 6.38
+    },
+    {
+      "ticker": "MDT",
+      "name": "Medtronic plc",
+      "sector": "Healthcare",
+      "industry": "Medical Devices",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2023-04-30",
+          "revenue_native": 312
+        },
+        {
+          "date": "2024-04-30",
+          "revenue_native": 323
+        },
+        {
+          "date": "2025-04-30",
+          "revenue_native": 335
+        },
+        {
+          "date": "2026-04-30",
+          "revenue_native": 363
+        }
+      ],
+      "growth_rates": [
+        3.53,
+        3.72,
+        8.36
+      ],
+      "latest_growth_pct": 8.36,
+      "avg_growth_pct": 5.2
+    },
+    {
+      "ticker": "ABT",
+      "name": "Abbott Laboratories",
+      "sector": "Healthcare",
+      "industry": "Medical Devices",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 436
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 401
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 419
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 443
+        }
+      ],
+      "growth_rates": [
+        -8.03,
+        4.49,
+        5.73
+      ],
+      "latest_growth_pct": 5.73,
+      "avg_growth_pct": 0.73
+    },
+    {
+      "ticker": "T",
+      "name": "AT&T Inc.",
+      "sector": "Communication Services",
+      "industry": "Telecom Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 1207
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 1224
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 1223
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 1256
+        }
+      ],
+      "growth_rates": [
+        1.41,
+        -0.08,
+        2.7
+      ],
+      "latest_growth_pct": 2.7,
+      "avg_growth_pct": 1.34
+    },
+    {
+      "ticker": "CMCSA",
+      "name": "Comcast Corporation",
+      "sector": "Communication Services",
+      "industry": "Telecom Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 1214
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 1215
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 1237
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 1237
+        }
+      ],
+      "growth_rates": [
+        0.08,
+        1.81,
+        0.0
+      ],
+      "latest_growth_pct": 0.0,
+      "avg_growth_pct": 0.63
+    },
+    {
+      "ticker": "VZ",
+      "name": "Verizon Communications Inc.",
+      "sector": "Communication Services",
+      "industry": "Telecom Services",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 1368
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 1339
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 1347
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 1381
+        }
+      ],
+      "growth_rates": [
+        -2.12,
+        0.6,
+        2.52
+      ],
+      "latest_growth_pct": 2.52,
+      "avg_growth_pct": 0.33
+    },
+    {
+      "ticker": "BMY",
+      "name": "Bristol-Myers Squibb Company",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
+      "currency": "USD",
+      "revenue_unit": "億USD",
+      "revenues": [
+        {
+          "date": "2022-12-31",
+          "revenue_native": 461
+        },
+        {
+          "date": "2023-12-31",
+          "revenue_native": 450
+        },
+        {
+          "date": "2024-12-31",
+          "revenue_native": 483
+        },
+        {
+          "date": "2025-12-31",
+          "revenue_native": 481
+        }
+      ],
+      "growth_rates": [
+        -2.39,
+        7.33,
+        -0.41
+      ],
+      "latest_growth_pct": -0.41,
+      "avg_growth_pct": 1.51
     }
   ]
 }
