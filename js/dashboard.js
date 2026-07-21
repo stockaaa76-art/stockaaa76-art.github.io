@@ -23,6 +23,12 @@ class Dashboard {
 
     async init() {
         console.log('Dashboard初期化開始');
+        // #215 ランキング＝スクリーナー型ページ（1画面1ランキング）。専用DOMがあれば旧ダッシュボード初期化は行わない。
+        if (document.getElementById('rk-screener')) {
+            try { await this.initScreener(); }
+            catch (e) { console.error('スクリーナー初期化エラー:', e); }
+            return;
+        }
         try {
             console.log('historical_data から価格読み込み中...');
             await this.loadFromHistoricalData();
@@ -42,9 +48,13 @@ class Dashboard {
             await this.loadWorldWatch();
             await this.loadMLRanking();
             await this.loadMLRanking('/api/ml_monthly_ranking_us.json', 'ml-ranking-us-list');
+            await this.loadCoverageBadge();
             this.setupEventListeners();
             this.setupCardCollapse();
-            
+            this.setupRankingDrilldown(); // #194 ①ショートカード概観の「全て見る」ドリルダウン
+            this.setupSectionCollapse();  // #193 二次セクションのアコーディオン化
+            this.setupSectionNav();       // #193 横スティッキー目次ピル
+
             // 初期描画後に再描画（Grid Layoutの初期化問題対策）
             setTimeout(() => {
                 console.log('Canvas再描画実行');
@@ -70,6 +80,23 @@ class Dashboard {
         } catch (error) {
             console.error('Dashboard初期化エラー:', error);
             this.showError();
+        }
+    }
+
+    // 分析対象銘柄数バッジを universe.json から動的取得（ハードコード陳腐化の防止）
+    async loadCoverageBadge() {
+        try {
+            const res = await fetch('/api/universe.json');
+            if (!res.ok) return;
+            const data = await res.json();
+            const count = data?.metadata?.total_stocks;
+            if (!count) return;
+            const badge = document.getElementById('coverage-badge');
+            if (badge) badge.textContent = `${count}銘柄対応`;
+            const countEl = document.getElementById('coverage-count');
+            if (countEl) countEl.textContent = `${count}銘柄`;
+        } catch (e) {
+            // 取得失敗時はHTMLのフォールバック値を維持
         }
     }
 
@@ -573,14 +600,14 @@ class Dashboard {
     }
 
     // 新テーマ候補（市場全体スキャン W0・予測ユニバース外の急騰）
-    async loadThemeCandidates() {
+    async loadThemeCandidates(limit = 15) {
         const el = document.getElementById('theme-candidates-list');
         if (!el) return;
         try {
             const res = await fetch('/api/theme_candidates.json');
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data = await res.json();
-            const cands = (data.candidates || []).slice(0, 15);
+            const cands = (data.candidates || []).slice(0, limit);
             if (cands.length === 0) {
                 el.innerHTML = '<div class="no-data">本日はユニバース外の急騰なし</div>';
                 return;
@@ -690,16 +717,115 @@ class Dashboard {
             const btn = document.createElement('button');
             btn.type = 'button';
             btn.className = 'rk-more-btn';
-            btn.textContent = `もっと見る（あと${hidden.length}件）`;
+            btn.textContent = `他のランキングを表示（あと${hidden.length}種）`;
             btn.setAttribute('aria-expanded', 'false');
             btn.addEventListener('click', () => {
                 const expanded = btn.getAttribute('aria-expanded') === 'true';
                 hidden.forEach((c) => c.classList.toggle('rk-collapsed', expanded));
                 btn.setAttribute('aria-expanded', String(!expanded));
-                btn.textContent = expanded ? `もっと見る（あと${hidden.length}件）` : '閉じる';
+                btn.textContent = expanded ? `他のランキングを表示（あと${hidden.length}種）` : '閉じる';
             });
             grid.after(btn);
         });
+    }
+
+    // #194 ①ショートカード概観の詳細ドリルダウン。各ランキングカードは既定で上位5件
+    // だけを表示（CSS の nth-child キャップ）し、末尾の「全て見る」トグルで当該カードの
+    // みを全件展開する（rk-card-expanded）。データ再取得は不要で、既に描画済みの
+    // .ranking-item を CSS で出し分けるだけ。6件未満のカードでは CSS(:has) がトグルを隠す。
+    setupRankingDrilldown() {
+        document.querySelectorAll('.rankings-section .ranking-card').forEach((card) => {
+            if (card.dataset.rkDrill) return; // 二重適用防止
+            const list = card.querySelector('.ranking-list');
+            if (!list) return;
+            card.dataset.rkDrill = '1';
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'rk-toggle-all';
+            btn.textContent = '全て見る →';
+            btn.setAttribute('aria-expanded', 'false');
+            btn.addEventListener('click', () => {
+                const expanded = card.classList.toggle('rk-card-expanded');
+                btn.setAttribute('aria-expanded', String(expanded));
+                btn.textContent = expanded ? '閉じる ▲' : '全て見る →';
+                if (!expanded) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+            card.appendChild(btn);
+        });
+    }
+
+    // #193 セクション折りたたみ（setupCardCollapse を一般化）: data-collapsible を持つ
+    // トップレベルセクションの本文を折りたたみ、見出しをトグルボタン化する。
+    // data-collapsed="true" で初期折りたたみ。.rk-collapsed / aria-expanded の既存規約を流用。
+    setupSectionCollapse() {
+        document.querySelectorAll('.rankings-section[data-collapsible]').forEach((sec) => {
+            if (sec.dataset.rkSectionInit) return; // 二重適用防止
+            const h2 = sec.querySelector(':scope > h2');
+            if (!h2) return;
+            sec.dataset.rkSectionInit = '1';
+
+            // 見出し以降の兄弟要素を本文ラッパへ移動
+            const body = document.createElement('div');
+            body.className = 'rk-section-body';
+            let node = h2.nextSibling;
+            while (node) {
+                const next = node.nextSibling;
+                body.appendChild(node);
+                node = next;
+            }
+            sec.appendChild(body);
+
+            // 見出しをトグルボタン化（元の見出し内容をボタンへ移す）
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'rk-section-toggle';
+            while (h2.firstChild) btn.appendChild(h2.firstChild);
+            const caret = document.createElement('span');
+            caret.className = 'rk-section-caret';
+            caret.setAttribute('aria-hidden', 'true');
+            btn.appendChild(caret);
+            h2.appendChild(btn);
+
+            const setState = (collapsed) => {
+                body.classList.toggle('rk-collapsed', collapsed);
+                btn.setAttribute('aria-expanded', String(!collapsed));
+            };
+            setState(sec.dataset.collapsed === 'true');
+
+            btn.addEventListener('click', () => {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                setState(expanded); // 展開中なら折りたたむ
+            });
+        });
+    }
+
+    // #193 折りたたみ状態のセクションを展開してからスムーズスクロール（目次ピル・直リンク共用）
+    expandAndScrollTo(id) {
+        const target = document.getElementById(id);
+        if (!target) return;
+        const btn = target.querySelector(':scope > h2 .rk-section-toggle');
+        if (btn && btn.getAttribute('aria-expanded') === 'false') {
+            btn.click();
+        }
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // #193 横スティッキー・セクション目次のピル。折りたたみ自動展開に対応。
+    setupSectionNav() {
+        document.querySelectorAll('.rk-section-nav a').forEach((a) => {
+            a.addEventListener('click', (e) => {
+                const href = a.getAttribute('href') || '';
+                if (!href.startsWith('#')) return;
+                e.preventDefault();
+                this.expandAndScrollTo(href.slice(1));
+                if (history.replaceState) history.replaceState(null, '', href);
+            });
+        });
+        // 直リンク（#アンカー付きでページを開いた場合）も自動展開
+        if (location.hash && location.hash.length > 1) {
+            const id = location.hash.slice(1);
+            setTimeout(() => this.expandAndScrollTo(id), 300);
+        }
     }
 
     // 今月の強い銘柄（クロスセクショナル・ランキングML）。JP/US 共通（url+要素ID切替）
@@ -955,6 +1081,7 @@ class Dashboard {
             { key: 'dividend_yield', label: '配当%' },
             { key: 'rsi', label: 'RSI' },
             { key: 'deviation_25', label: '25日乖離' },
+            { key: 'up_streak', label: '連騰' },
         ];
         const thead = '<thead><tr>' + cols.map(c => {
             const sortCls = (c.key === key) ? (dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
@@ -967,6 +1094,8 @@ class Dashboard {
         const fmtVol = v => { v = Number(v) || 0; if (v >= 1e8) return (v / 1e8).toFixed(1) + '億'; if (v >= 1e4) return Math.round(v / 1e4).toLocaleString('ja-JP') + '万'; return v ? String(v) : '—'; };
         const fmtCap = v => { v = Number(v) || 0; if (v >= 1e12) return (v / 1e12).toFixed(1) + '兆'; if (v >= 1e8) return (v / 1e8).toFixed(0) + '億'; return v ? String(v) : '—'; };
         const num = (v, d, suf = '') => (v != null && !isNaN(Number(v))) ? Number(v).toFixed(d) + suf : '—';
+        // 連騰日数: 前日比プラスの連続日数。+3%以上の急騰が3日以上続く場合は 🔥 を付す（§31 ランナーの目安）
+        const fmtStreak = r => { const u = Number(r.up_streak) || 0; if (!u) return '—'; const s = Number(r.surge_streak) || 0; return (s >= 3 ? '🔥' : '') + u + '日'; };
         const body = '<tbody>' + rows.map(r => {
             const chg = Number(r.period_change);
             const chgCls = (chg > 0) ? 'pos' : (chg < 0 ? 'neg' : '');
@@ -985,6 +1114,7 @@ class Dashboard {
                 + `<td>${r.dividend_yield ? num(r.dividend_yield, 2) : '—'}</td>`
                 + `<td>${num(r.rsi, 0)}</td>`
                 + `<td class="${dev > 0 ? 'pos' : (dev < 0 ? 'neg' : '')}">${devTxt}</td>`
+                + `<td>${fmtStreak(r)}</td>`
                 + `</tr>`;
         }).join('') + '</tbody>';
         table.innerHTML = thead + body;
@@ -1061,6 +1191,7 @@ class Dashboard {
             { key: 'dividend_yield', label: '配当%' },
             { key: 'rsi', label: 'RSI' },
             { key: 'short_ratio', label: '空売り日' },
+            { key: 'up_streak', label: '連騰' },
         ];
         const thead = '<thead><tr>' + cols.map(c => {
             const sortCls = (c.key === key) ? (dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
@@ -1073,6 +1204,8 @@ class Dashboard {
         const fmtVol = v => { v = Number(v) || 0; if (v >= 1e8) return (v / 1e8).toFixed(1) + '億'; if (v >= 1e4) return Math.round(v / 1e4).toLocaleString('ja-JP') + '万'; return v ? String(v) : '—'; };
         const fmtCap = v => { v = Number(v) || 0; if (v >= 1e12) return '$' + (v / 1e12).toFixed(1) + 'T'; if (v >= 1e9) return '$' + (v / 1e9).toFixed(0) + 'B'; if (v >= 1e6) return '$' + (v / 1e6).toFixed(0) + 'M'; return v ? String(v) : '—'; };
         const num = (v, d) => (v != null && !isNaN(Number(v))) ? Number(v).toFixed(d) : '—';
+        // 連騰日数: 前日比プラスの連続日数。+3%以上の急騰が3日以上続く場合は 🔥（§31 ランナーの目安）
+        const fmtStreak = r => { const u = Number(r.up_streak) || 0; if (!u) return '—'; const s = Number(r.surge_streak) || 0; return (s >= 3 ? '🔥' : '') + u + '日'; };
         const body = '<tbody>' + rows.map(r => {
             const chg = Number(r.period_change);
             const chgCls = (chg > 0) ? 'pos' : (chg < 0 ? 'neg' : '');
@@ -1089,6 +1222,7 @@ class Dashboard {
                 + `<td>${r.dividend_yield ? num(r.dividend_yield, 2) : '—'}</td>`
                 + `<td>${num(r.rsi, 0)}</td>`
                 + `<td>${r.short_ratio != null ? num(r.short_ratio, 1) : '—'}</td>`
+                + `<td>${fmtStreak(r)}</td>`
                 + `</tr>`;
         }).join('') + '</tbody>';
         table.innerHTML = thead + body;
@@ -2003,6 +2137,7 @@ const METRIC_HELP = {
     rsi: 'RSI=相対力指数。70以上は買われすぎ・30以下は売られすぎの目安',
     deviation_25: '25日移動平均線からの乖離率。±20%超は過熱/急落の目安',
     short_ratio: '空売り比率（日数換算）。高いほど踏み上げ余地',
+    up_streak: '連騰日数=前日比プラスが続いた連続営業日数。🔥は+3%以上の急騰が3日以上連続（§31 ランナーの目安）',
 };
 
 Dashboard.prototype.updatePeriodRankingList = function(elementId, data) {
@@ -2258,4 +2393,463 @@ Dashboard.prototype.renderAiRanking = function(elementId, items, currency) {
             </div>`;
     }).join('');
     el.innerHTML = html;
+};
+
+/* ============================================================================
+ * #215 ランキング スクリーナー（Yahoo!ファイナンス／みんかぶ型・1画面1ランキング）
+ * 上部 市場スイッチ(日本/米国/全部)＋期間タブ / 左サイドバー グループ化ナビ /
+ * メイン 単一テーブル＋全件ページ送り（50件/ページ・件数非依存）。
+ * データ源: extended_rankings.json（JP・種別多）/ period_rankings.json（daily.. と us_*・期間連動）/
+ *           ml_monthly_ranking(.json/_us)（AI月次・all に全件）。
+ * JSONスキーマは現状維持（配列要素数だけ増える前提）＝件数非依存で描画。
+ * ==========================================================================*/
+const RK_PAGE_SIZE = 50;
+
+// 列ごとのフォーマッタ（市場で通貨/単位を出し分け）
+const RK_FMT = {
+    esc: (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+    price(n) {
+        const v = n.price;
+        if (v == null || isNaN(Number(v))) return '—';
+        return (n.market === 'us' ? '$' : '¥') + Number(v).toLocaleString('en', { maximumFractionDigits: 2 });
+    },
+    change(n) {
+        const c = Number(n.change);
+        if (n.change == null || isNaN(c)) return '<span class="rk-cell">—</span>';
+        const cls = c > 0 ? 'rk-pos' : (c < 0 ? 'rk-neg' : '');
+        const arrow = c > 0 ? '▲+' : (c < 0 ? '▼' : '');
+        return `<span class="rk-cell ${cls}">${arrow}${c.toFixed(2)}%</span>`;
+    },
+    signPct(v, d) {
+        if (v == null || isNaN(Number(v))) return '<span class="rk-cell">—</span>';
+        const x = Number(v); const cls = x > 0 ? 'rk-pos' : (x < 0 ? 'rk-neg' : '');
+        return `<span class="rk-cell ${cls}">${x > 0 ? '+' : ''}${x.toFixed(d)}%</span>`;
+    },
+    pct(v, d) { return (v == null || isNaN(Number(v))) ? '—' : Number(v).toFixed(d) + '%'; },
+    num(v, d, suf) { return (v == null || isNaN(Number(v))) ? '—' : Number(v).toFixed(d) + (suf || ''); },
+    vol(v) {
+        v = Number(v) || 0;
+        if (v >= 1e8) return (v / 1e8).toFixed(1) + '億';
+        if (v >= 1e4) return Math.round(v / 1e4).toLocaleString('ja-JP') + '万';
+        return v ? String(v) : '—';
+    },
+    cap(n) {
+        const v = Number(n.market_cap) || 0;
+        if (!v) return '—';
+        if (n.market === 'us') {
+            if (v >= 1e12) return '$' + (v / 1e12).toFixed(1) + 'T';
+            if (v >= 1e9) return '$' + (v / 1e9).toFixed(0) + 'B';
+            if (v >= 1e6) return '$' + (v / 1e6).toFixed(0) + 'M';
+            return '$' + v;
+        }
+        if (v >= 1e12) return (v / 1e12).toFixed(1) + '兆';
+        if (v >= 1e8) return (v / 1e8).toFixed(0) + '億';
+        return String(v);
+    },
+    tradingValue(n) {
+        const v = Number(n.trading_value) || 0;
+        if (!v) return '—';
+        if (n.market === 'us') { if (v >= 1e9) return '$' + (v / 1e9).toFixed(1) + 'B'; if (v >= 1e6) return '$' + (v / 1e6).toFixed(0) + 'M'; return '$' + v; }
+        if (v >= 1e12) return (v / 1e12).toFixed(2) + '兆'; if (v >= 1e8) return (v / 1e8).toFixed(0) + '億'; return String(v);
+    },
+    capJp(v) { // 売上高・純利益（円・JPのみ）
+        v = Number(v) || 0; if (!v) return '—';
+        if (Math.abs(v) >= 1e12) return (v / 1e12).toFixed(2) + '兆'; if (Math.abs(v) >= 1e8) return (v / 1e8).toFixed(0) + '億'; return String(v);
+    },
+    streak(n) {
+        const u = Number(n.up_streak) || 0; if (!u) return '—';
+        const s = Number(n.surge_streak) || 0; return (s >= 3 ? '🔥' : '') + u + '日';
+    },
+};
+
+// 列レジストリ: id → { label, cls, r(n)描画 }（rank/name は特殊描画）
+const RK_COLS = {
+    rank:        { label: '#',        cls: 'rk-c-rank' },
+    name:        { label: '銘柄',      cls: 'rk-c-name' },
+    price:       { label: '取引値',    cls: 'rk-c-num', r: n => RK_FMT.price(n) },
+    change:      { label: '前日比',    cls: 'rk-c-num', r: n => RK_FMT.change(n) },
+    volume:      { label: '出来高',    cls: 'rk-c-num', r: n => RK_FMT.vol(n.volume) },
+    mktcap:      { label: '時価総額',  cls: 'rk-c-num', r: n => RK_FMT.cap(n) },
+    per:         { label: 'PER',       cls: 'rk-c-num', r: n => RK_FMT.num((n.per > 0 ? n.per : null), 1, '倍') },
+    pbr:         { label: 'PBR',       cls: 'rk-c-num', r: n => RK_FMT.num((n.pbr > 0 ? n.pbr : null), 2, '倍') },
+    psr:         { label: 'PSR',       cls: 'rk-c-num', r: n => RK_FMT.num((n.psr > 0 ? n.psr : null), 1, '倍') },
+    divyield:    { label: '配当利回り', cls: 'rk-c-num', r: n => RK_FMT.pct(n.divyield, 2) },
+    roe:         { label: 'ROE',       cls: 'rk-c-num', r: n => RK_FMT.pct(n.roe, 1) },
+    roa:         { label: 'ROA',       cls: 'rk-c-num', r: n => RK_FMT.pct(n.roa, 1) },
+    netmargin:   { label: '純利益率',  cls: 'rk-c-num', r: n => RK_FMT.pct(n.net_margin, 1) },
+    dev25:       { label: '25日乖離',  cls: 'rk-c-num', r: n => RK_FMT.signPct(n.dev25, 1) },
+    yearpos:     { label: '年初来位置', cls: 'rk-c-num', r: n => RK_FMT.pct(n.year_position, 0) },
+    tradingvalue:{ label: '売買代金',  cls: 'rk-c-num', r: n => RK_FMT.tradingValue(n) },
+    volratio:    { label: '出来高変化率', cls: 'rk-c-num', r: n => RK_FMT.pct(n.volume_ratio, 0) },
+    streak:      { label: '連騰',      cls: 'rk-c-num', r: n => RK_FMT.streak(n) },
+    revenue:     { label: '売上高',    cls: 'rk-c-num', r: n => RK_FMT.capJp(n.revenue) },
+    netincome:   { label: '純利益',    cls: 'rk-c-num', r: n => RK_FMT.capJp(n.net_income) },
+    score:       { label: 'AIスコア',  cls: 'rk-c-num', r: n => RK_FMT.num(n.score, 3) },
+    ret20:       { label: '20日騰落',  cls: 'rk-c-num', r: n => RK_FMT.signPct(n.ret20, 1) },
+    ret120:      { label: '120日騰落', cls: 'rk-c-num', r: n => RK_FMT.signPct(n.ret120, 1) },
+    rsi:         { label: 'RSI',       cls: 'rk-c-num', r: n => RK_FMT.num(n.rsi, 0) },
+    sector:      { label: '業種',      cls: 'rk-c-sec', r: n => RK_FMT.esc(n.sector17 || '—') },
+};
+
+// 列セット（種別に応じて可変）。連騰列は日本株/米国株で維持（値は未再生成なら「—」）。
+const RK_CS = {
+    price:   ['rank', 'name', 'price', 'change', 'volume', 'streak'],
+    volume:  ['rank', 'name', 'volume', 'volratio', 'tradingvalue', 'price', 'change'],
+    tval:    ['rank', 'name', 'tradingvalue', 'volume', 'price', 'change'],
+    mktcap:  ['rank', 'name', 'mktcap', 'price', 'change', 'volume'],
+    per:     ['rank', 'name', 'per', 'price', 'change', 'mktcap'],
+    pbr:     ['rank', 'name', 'pbr', 'price', 'change', 'mktcap'],
+    psr:     ['rank', 'name', 'psr', 'price', 'change', 'mktcap'],
+    div:     ['rank', 'name', 'divyield', 'price', 'change', 'mktcap'],
+    dev25:   ['rank', 'name', 'dev25', 'price', 'change', 'volume'],
+    yearpos: ['rank', 'name', 'yearpos', 'price', 'change', 'volume'],
+    roe:     ['rank', 'name', 'roe', 'price', 'change', 'mktcap'],
+    roa:     ['rank', 'name', 'roa', 'price', 'change', 'mktcap'],
+    netmargin:['rank', 'name', 'netmargin', 'price', 'change', 'mktcap'],
+    revenue: ['rank', 'name', 'revenue', 'price', 'change', 'mktcap'],
+    netincome:['rank', 'name', 'netincome', 'price', 'change', 'mktcap'],
+    cross:   ['rank', 'name', 'price', 'change', 'volume', 'dev25'],
+    ml:      ['rank', 'name', 'score', 'ret20', 'ret120', 'rsi', 'sector'],
+};
+
+// カタログ: グループ→種別。source=period(期間連動・JP+US) / extended(JP・スナップショット) / ml(AI月次・JP+US)
+// sortKey は正規化フィールド名。dir=desc/asc。markets=想定対応市場（実データが空なら graceful に非表示）。
+const RK_CATALOG = [
+    // ── 株価変動 ──
+    { id: 'gainers',  g: '株価変動', label: '値上がり率',       source: 'period',   key: 'gainers',            cs: 'price',   sortKey: 'change',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'losers',   g: '株価変動', label: '値下がり率',       source: 'period',   key: 'losers',             cs: 'price',   sortKey: 'change',        dir: 'asc',  markets: ['jp', 'us'] },
+    { id: 'stophigh', g: '株価変動', label: 'ストップ高',       source: 'extended', key: 'stop_high',          cs: 'price',   sortKey: 'change',        dir: 'desc', markets: ['jp'] },
+    { id: 'stoplow',  g: '株価変動', label: 'ストップ安',       source: 'extended', key: 'stop_low',           cs: 'price',   sortKey: 'change',        dir: 'asc',  markets: ['jp'] },
+    { id: 'yhi',      g: '株価変動', label: '年初来高値更新',   source: 'extended', key: 'year_high_update',   cs: 'price',   sortKey: 'change',        dir: 'desc', markets: ['jp'] },
+    { id: 'ylo',      g: '株価変動', label: '年初来安値更新',   source: 'extended', key: 'year_low_update',    cs: 'price',   sortKey: 'change',        dir: 'asc',  markets: ['jp'] },
+    { id: 'dev25hi',  g: '株価変動', label: '25日乖離（高）',   source: 'extended', key: 'deviation_25_high',  cs: 'dev25',   sortKey: 'dev25',         dir: 'desc', markets: ['jp'] },
+    { id: 'dev25lo',  g: '株価変動', label: '25日乖離（低）',   source: 'extended', key: 'deviation_25_low',   cs: 'dev25',   sortKey: 'dev25',         dir: 'asc',  markets: ['jp'] },
+    { id: 'ypos_hi',  g: '株価変動', label: '年初来位置（高）', source: 'extended', key: 'year_position_high', cs: 'yearpos', sortKey: 'year_position', dir: 'desc', markets: ['jp'] },
+    { id: 'ypos_lo',  g: '株価変動', label: '年初来位置（低）', source: 'extended', key: 'year_position_low',  cs: 'yearpos', sortKey: 'year_position', dir: 'asc',  markets: ['jp'] },
+    // ── 出来高・売買代金 ──
+    { id: 'volume',   g: '出来高・売買代金', label: '出来高',            source: 'period',   key: 'volume',            cs: 'volume', sortKey: 'volume',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'volinc',   g: '出来高・売買代金', label: '出来高変化率（増）', source: 'period',   key: 'volume_increase',   cs: 'volume', sortKey: 'volume_ratio',  dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'voldec',   g: '出来高・売買代金', label: '出来高変化率（減）', source: 'extended', key: 'volume_decrease',   cs: 'volume', sortKey: 'volume_ratio',  dir: 'asc',  markets: ['jp'] },
+    { id: 'tvhi',     g: '出来高・売買代金', label: '売買代金（上位）',   source: 'extended', key: 'trading_value_high', cs: 'tval',  sortKey: 'trading_value', dir: 'desc', markets: ['jp'] },
+    { id: 'tvlo',     g: '出来高・売買代金', label: '売買代金（下位）',   source: 'extended', key: 'trading_value_low',  cs: 'tval',  sortKey: 'trading_value', dir: 'asc',  markets: ['jp'] },
+    // ── 規模・投資指標 ──
+    { id: 'mcaphi',   g: '規模・投資指標', label: '時価総額（上位）', source: 'period',   key: 'market_cap',      cs: 'mktcap', sortKey: 'market_cap', dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'mcaplo',   g: '規模・投資指標', label: '時価総額（下位）', source: 'extended', key: 'market_cap_low',  cs: 'mktcap', sortKey: 'market_cap', dir: 'asc',  markets: ['jp'] },
+    { id: 'pehi',     g: '規模・投資指標', label: 'PER（高）',       source: 'period',   key: 'pe_high',         cs: 'per',    sortKey: 'per',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'pelo',     g: '規模・投資指標', label: 'PER（低）',       source: 'period',   key: 'pe_low',          cs: 'per',    sortKey: 'per',        dir: 'asc',  markets: ['jp', 'us'] },
+    { id: 'pbrhi',    g: '規模・投資指標', label: 'PBR（高）',       source: 'extended', key: 'pbr_high',        cs: 'pbr',    sortKey: 'pbr',        dir: 'desc', markets: ['jp'] },
+    { id: 'pbrlo',    g: '規模・投資指標', label: 'PBR（低）',       source: 'extended', key: 'pbr_low',         cs: 'pbr',    sortKey: 'pbr',        dir: 'asc',  markets: ['jp'] },
+    { id: 'psrhi',    g: '規模・投資指標', label: 'PSR（高）',       source: 'extended', key: 'psr_high',        cs: 'psr',    sortKey: 'psr',        dir: 'desc', markets: ['jp'] },
+    { id: 'psrlo',    g: '規模・投資指標', label: 'PSR（低）',       source: 'extended', key: 'psr_low',         cs: 'psr',    sortKey: 'psr',        dir: 'asc',  markets: ['jp'] },
+    { id: 'div',      g: '規模・投資指標', label: '配当利回り',      source: 'period',   key: 'dividend_high',   cs: 'div',    sortKey: 'divyield',   dir: 'desc', markets: ['jp', 'us'] },
+    // ── 財務(企業) ──
+    { id: 'roe',      g: '財務(企業)', label: 'ROE',      source: 'extended', key: 'roe_high',        cs: 'roe',       sortKey: 'roe',        dir: 'desc', markets: ['jp'] },
+    { id: 'roa',      g: '財務(企業)', label: 'ROA',      source: 'extended', key: 'roa_high',        cs: 'roa',       sortKey: 'roa',        dir: 'desc', markets: ['jp'] },
+    { id: 'netmargin',g: '財務(企業)', label: '純利益率', source: 'extended', key: 'net_margin_high', cs: 'netmargin', sortKey: 'net_margin', dir: 'desc', markets: ['jp'] },
+    { id: 'revenue',  g: '財務(企業)', label: '売上高',   source: 'extended', key: 'revenue_high',    cs: 'revenue',   sortKey: 'revenue',    dir: 'desc', markets: ['jp'] },
+    { id: 'netincome',g: '財務(企業)', label: '純利益',   source: 'extended', key: 'net_income_high', cs: 'netincome', sortKey: 'net_income', dir: 'desc', markets: ['jp'] },
+    // ── テクニカル/AI ──
+    { id: 'gc',       g: 'テクニカル/AI', label: 'ゴールデンクロス', source: 'extended', key: 'golden_cross', cs: 'cross', sortKey: 'change', dir: 'desc', markets: ['jp'] },
+    { id: 'dc',       g: 'テクニカル/AI', label: 'デッドクロス',     source: 'extended', key: 'dead_cross',   cs: 'cross', sortKey: 'change', dir: 'asc',  markets: ['jp'] },
+    { id: 'ml',       g: 'テクニカル/AI', label: 'AI月次ランキング', source: 'ml',       key: null,           cs: 'ml',    sortKey: 'score',  dir: 'desc', markets: ['jp', 'us'],
+      note: 'クロスセクショナルML(LambdaRank)で今月相対的に強いと予測される順。BT: ベンチ超過 +3.7%/年(2018-2025)。⚠️相対強弱の参考であり買いシグナル・保証ではありません。' },
+    { id: 'alpha',    g: 'テクニカル/AI', label: 'α（指数超過）',    source: 'period',   key: 'alpha_high',   cs: 'price', sortKey: 'change', dir: 'desc', markets: ['jp', 'us'],
+      note: '期間騰落率から指数騰落率を引いた超過リターン。市場全体より強い銘柄の特定用。' },
+];
+
+const RK_PERIOD_LABELS = { daily: '日次', '5d': '5日', weekly: '週次', monthly: '月次', '3mo': '3ヶ月', '6mo': '6ヶ月', ytd: '年初来' };
+const RK_MARKET_LABELS = { jp: '日本株', us: '米国株', all: '全部（日本株＋米国株）' };
+
+Dashboard.prototype.initScreener = async function () {
+    this.rk = { market: 'jp', period: 'daily', typeId: 'gainers', page: 0 };
+    // データ取得（失敗しても部分描画できるよう個別 try）
+    const getJson = async (url) => { try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch (e) { return null; } };
+    const [ext, per, mlJp, mlUs] = await Promise.all([
+        getJson('/api/extended_rankings.json'),
+        getJson('/api/period_rankings.json'),
+        getJson('/api/ml_monthly_ranking.json'),
+        getJson('/api/ml_monthly_ranking_us.json'),
+    ]);
+    this.rkExt = ext || {};
+    this.rkPer = per || {};
+    this.rkMlJp = mlJp || {};
+    this.rkMlUs = mlUs || {};
+
+    // 各種別の実データ有無を市場別に判定（graceful なナビ生成用）
+    this.rkAvail = {};
+    RK_CATALOG.forEach(e => {
+        const set = new Set();
+        (e.markets || []).forEach(m => { if (this._rkRawArr(e, m, 'daily').length) set.add(m); });
+        // 期間依存で daily に無くても他期間にあり得る period 種別は、markets を尊重して残す
+        if (e.source === 'period') (e.markets || []).forEach(m => set.add(m));
+        this.rkAvail[e.id] = set;
+    });
+
+    this._rkWireControls();
+    this._rkWireViewSwitch();   // #215-followup: スクリーナー⇄マーケット概観 のビュー切替
+    this._rkRenderSidebar();
+    this._rkRender();
+};
+
+// ビュー切替（スクリーナー既定／マーケット概観）。概観は初回選択時のみ遅延描画（初期ロードを重くしない）。
+Dashboard.prototype._rkWireViewSwitch = function () {
+    const btns = document.querySelectorAll('[data-rk-view]');
+    if (!btns.length) return;
+    const screenerEl = document.getElementById('rk-view-screener');
+    const overviewEl = document.getElementById('rk-overview');
+    this._rkOverviewRendered = false;
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const view = btn.dataset.rkView;
+            btns.forEach(b => { const on = b === btn; b.classList.toggle('active', on); b.setAttribute('aria-selected', String(on)); });
+            const showOverview = view === 'overview';
+            if (screenerEl) screenerEl.hidden = showOverview;
+            if (overviewEl) overviewEl.hidden = !showOverview;
+            if (showOverview && !this._rkOverviewRendered) {
+                this._rkOverviewRendered = true;
+                this._rkRenderOverview();
+            }
+        });
+    });
+};
+
+// マーケット概観の4セクション描画（既存の描画ロジックを流用）。
+// データは initScreener で取得済みの this.rkPer（period_rankings.json）＋ theme/world は個別 fetch。
+Dashboard.prototype._rkRenderOverview = function () {
+    // updateSectorFlow / updateMomentum 系は this.periodRankingsData を参照するため、取得済み period データを橋渡し。
+    this.periodRankingsData = this.rkPer || {};
+    // ①業種フロー（日本株 日次・17業種）
+    try { this.updateSectorFlow('daily'); } catch (e) { /* graceful */ }
+    // ⑤継続上昇＆業種集中度（当日急騰×5日継続・period 非依存の単発描画。データ無は関数内で「該当なし」）
+    try {
+        this.updateMomentumHighlight('jp', 'jp-continuation-ranking', 'jp-concentration');
+        this.updateMomentumHighlight('us', 'us-continuation-ranking', 'us-concentration');
+    } catch (e) { /* graceful */ }
+    // ④信用残（週次・各上位5件のみ＝概観として簡潔に）
+    const marginRk = (this.rkPer && this.rkPer.margin && this.rkPer.margin.rankings) || {};
+    this.updateMarginRankingList('margin-ratio-high-ranking', (marginRk.margin_ratio_high || []).slice(0, 5));
+    this.updateMarginRankingList('long-increase-ranking', (marginRk.long_increase || []).slice(0, 5));
+    this.updateMarginRankingList('short-increase-ranking', (marginRk.short_increase || []).slice(0, 5));
+    // ③新テーマ候補（上位8件のみ）／②世界ウォッチ（地域タブ）＝それぞれ個別 fetch・データ無/古は関数内で graceful
+    this.loadThemeCandidates(8);
+    this.loadWorldWatch();
+};
+
+// 指定 種別×市場×期間 の生配列を返す（正規化前）
+Dashboard.prototype._rkRawArr = function (entry, market, period) {
+    if (entry.source === 'period') {
+        const pk = market === 'us' ? 'us_' + period : period;
+        const sec = this.rkPer && this.rkPer[pk];
+        return (sec && sec.rankings && Array.isArray(sec.rankings[entry.key])) ? sec.rankings[entry.key] : [];
+    }
+    if (entry.source === 'extended') {
+        if (market === 'us') return [];
+        return Array.isArray(this.rkExt[entry.key]) ? this.rkExt[entry.key] : [];
+    }
+    if (entry.source === 'ml') {
+        const src = market === 'us' ? this.rkMlUs : this.rkMlJp;
+        return (src && Array.isArray(src.all)) ? src.all : [];
+    }
+    return [];
+};
+
+Dashboard.prototype._rkNormalize = function (raw, market, isMl) {
+    if (isMl) {
+        return {
+            symbol: raw.ticker, name: raw.name || raw.ticker, market,
+            score: raw.score, ret20: raw.ret20_pct, ret120: raw.ret120_pct, rsi: raw.rsi, sector17: raw.sector17,
+        };
+    }
+    const mkt = market || (String(raw.symbol).endsWith('.T') ? 'jp' : 'us');
+    return {
+        symbol: raw.symbol, name: raw.name || raw.symbol, market: mkt,
+        price: raw.current_price != null ? raw.current_price : raw.price,
+        change: raw.period_change != null ? raw.period_change : raw.change_percent,
+        volume: raw.period_volume != null ? raw.period_volume : raw.volume,
+        market_cap: raw.market_cap,
+        per: raw.pe_ratio != null ? raw.pe_ratio : raw.forward_pe,
+        pbr: raw.pb_ratio != null ? raw.pb_ratio : raw.pbr,
+        psr: raw.psr,
+        divyield: raw.dividend_yield,
+        roe: raw.return_on_equity != null ? raw.return_on_equity : raw.roe,
+        roa: raw.return_on_assets != null ? raw.return_on_assets : raw.roa,
+        net_margin: raw.net_margin,
+        dev25: raw.deviation_25,
+        year_position: raw.year_position,
+        trading_value: raw.trading_value,
+        volume_ratio: raw.volume_ratio,
+        up_streak: raw.up_streak, surge_streak: raw.surge_streak,
+        revenue: raw.revenue, net_income: raw.net_income, rsi: raw.rsi,
+    };
+};
+
+// 選択中の種別×市場×期間 の正規化済み・ソート済み全件を返す（件数非依存）
+Dashboard.prototype._rkResolveRows = function (entry, market, period) {
+    const isMl = entry.source === 'ml';
+    let rows = [];
+    const collect = (m) => this._rkRawArr(entry, m, period).map(r => this._rkNormalize(r, m, isMl));
+    if (market === 'all') {
+        rows = collect('jp');
+        if ((entry.markets || []).includes('us')) rows = rows.concat(collect('us'));
+    } else {
+        rows = collect(market);
+    }
+    const key = entry.sortKey, dir = entry.dir;
+    rows.sort((a, b) => {
+        let av = a[key], bv = b[key];
+        av = (av == null || isNaN(Number(av))) ? (dir === 'asc' ? Infinity : -Infinity) : Number(av);
+        bv = (bv == null || isNaN(Number(bv))) ? (dir === 'asc' ? Infinity : -Infinity) : Number(bv);
+        return dir === 'asc' ? av - bv : bv - av;
+    });
+    return rows;
+};
+
+Dashboard.prototype._rkEntry = function (id) { return RK_CATALOG.find(e => e.id === id); };
+
+// 現在の市場で表示可能な種別一覧（graceful）
+Dashboard.prototype._rkVisibleEntries = function () {
+    const m = this.rk.market;
+    return RK_CATALOG.filter(e => {
+        const av = this.rkAvail[e.id];
+        if (m === 'all') return av && av.size > 0;
+        return av && av.has(m);
+    });
+};
+
+Dashboard.prototype._rkRenderSidebar = function () {
+    const side = document.getElementById('rk-sidebar');
+    const sel = document.getElementById('rk-nav-select');
+    if (!side) return;
+    const entries = this._rkVisibleEntries();
+    // 選択中種別が現市場で不可なら先頭にフォールバック
+    if (!entries.some(e => e.id === this.rk.typeId)) this.rk.typeId = entries.length ? entries[0].id : null;
+
+    const groups = [];
+    entries.forEach(e => { let g = groups.find(x => x.name === e.g); if (!g) { g = { name: e.g, items: [] }; groups.push(g); } g.items.push(e); });
+
+    side.innerHTML = groups.map(g => `
+        <div class="rk-navgroup">
+            <div class="rk-navgroup-title">${RK_FMT.esc(g.name)}</div>
+            ${g.items.map(e => `<button class="rk-navbtn${e.id === this.rk.typeId ? ' active' : ''}" data-rk-type="${e.id}"${e.id === this.rk.typeId ? ' aria-current="true"' : ''}>${RK_FMT.esc(e.label)}</button>`).join('')}
+        </div>`).join('');
+
+    side.querySelectorAll('[data-rk-type]').forEach(btn => {
+        btn.addEventListener('click', () => { this.rk.typeId = btn.dataset.rkType; this.rk.page = 0; this._rkRenderSidebar(); this._rkRender(); });
+    });
+
+    if (sel) {
+        sel.innerHTML = groups.map(g => `<optgroup label="${RK_FMT.esc(g.name)}">${g.items.map(e => `<option value="${e.id}"${e.id === this.rk.typeId ? ' selected' : ''}>${RK_FMT.esc(e.label)}</option>`).join('')}</optgroup>`).join('');
+    }
+};
+
+Dashboard.prototype._rkWireControls = function () {
+    document.querySelectorAll('[data-rk-market]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            this.rk.market = btn.dataset.rkMarket; this.rk.page = 0;
+            document.querySelectorAll('[data-rk-market]').forEach(b => { const on = b === btn; b.classList.toggle('active', on); b.setAttribute('aria-selected', on); });
+            this._rkRenderSidebar(); this._rkRender();
+        });
+    });
+    document.querySelectorAll('[data-rk-period]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            this.rk.period = btn.dataset.rkPeriod; this.rk.page = 0;
+            document.querySelectorAll('[data-rk-period]').forEach(b => { const on = b === btn; b.classList.toggle('active', on); b.setAttribute('aria-selected', on); });
+            this._rkRender();
+        });
+    });
+    const sel = document.getElementById('rk-nav-select');
+    if (sel) sel.addEventListener('change', () => { this.rk.typeId = sel.value; this.rk.page = 0; this._rkRenderSidebar(); this._rkRender(); });
+};
+
+Dashboard.prototype._rkFmtUpdated = function (entry) {
+    let iso = null;
+    if (entry.source === 'period') { const pk = this.rk.market === 'us' ? 'us_' + this.rk.period : this.rk.period; iso = ((this.rkPer[pk] || {}).metadata || {}).generated_at; }
+    else if (entry.source === 'extended') { iso = this.rkExt.timestamp; }
+    else if (entry.source === 'ml') { const s = this.rk.market === 'us' ? this.rkMlUs : this.rkMlJp; iso = (s || {}).as_of_date || (s || {}).generated_at; }
+    if (!iso) return '';
+    const s = String(iso).replace('T', ' ').slice(0, 16);
+    return '更新: ' + s;
+};
+
+Dashboard.prototype._rkRender = function () {
+    const entry = this._rkEntry(this.rk.typeId);
+    const table = document.getElementById('rk-table');
+    const pager = document.getElementById('rk-pager');
+    const titleEl = document.getElementById('rk-title');
+    const noteEl = document.getElementById('rk-note');
+    const updatedEl = document.getElementById('rk-updated');
+    const mLabel = document.getElementById('rk-market-label');
+    const pLabel = document.getElementById('rk-period-label');
+    const periodSwitch = document.getElementById('rk-period-switch');
+    if (!entry || !table) {
+        if (table) table.innerHTML = '<tbody><tr><td class="rk-empty">この市場に表示できるランキングがありません。</td></tr></tbody>';
+        if (pager) pager.innerHTML = '';
+        return;
+    }
+
+    // ヘッダ
+    if (titleEl) titleEl.textContent = entry.label + 'ランキング';
+    if (mLabel) mLabel.textContent = RK_MARKET_LABELS[this.rk.market];
+    // 期間タブは period 種別のみ有効。それ以外は淡色化＋注記。
+    const periodBased = entry.source === 'period';
+    if (periodSwitch) periodSwitch.classList.toggle('rk-dim', !periodBased);
+    if (pLabel) pLabel.textContent = periodBased ? RK_PERIOD_LABELS[this.rk.period] : '期間指定なし（スナップショット）';
+    if (updatedEl) updatedEl.textContent = this._rkFmtUpdated(entry);
+    if (noteEl) { if (entry.note) { noteEl.textContent = entry.note; noteEl.hidden = false; } else { noteEl.hidden = true; noteEl.textContent = ''; } }
+
+    const rows = this._rkResolveRows(entry, this.rk.market, this.rk.period);
+    const total = rows.length;
+    const cols = RK_CS[entry.cs].map(id => RK_COLS[id]);
+
+    if (!total) {
+        table.innerHTML = '<tbody><tr><td class="rk-empty">現在このランキングに該当する銘柄データがありません（データ未生成の可能性）。</td></tr></tbody>';
+        if (pager) pager.innerHTML = '';
+        return;
+    }
+
+    // ページング（件数非依存）
+    const pageCount = Math.ceil(total / RK_PAGE_SIZE);
+    if (this.rk.page >= pageCount) this.rk.page = pageCount - 1;
+    if (this.rk.page < 0) this.rk.page = 0;
+    const start = this.rk.page * RK_PAGE_SIZE;
+    const pageRows = rows.slice(start, start + RK_PAGE_SIZE);
+
+    const thead = '<thead><tr>' + RK_CS[entry.cs].map(id => `<th class="${RK_COLS[id].cls}">${RK_COLS[id].label}</th>`).join('') + '</tr></thead>';
+    const body = '<tbody>' + pageRows.map((n, i) => {
+        const rank = start + i + 1;
+        const cells = RK_CS[entry.cs].map(id => {
+            if (id === 'rank') return `<td class="rk-c-rank"><span class="rk-rank${rank <= 3 ? ' top' : ''}">${rank}</span></td>`;
+            if (id === 'name') {
+                const badge = `<span class="rk-badge rk-badge-${n.market}">${n.market === 'jp' ? '東証' : '米'}</span>`;
+                return `<td class="rk-c-name"><span class="rk-code">${RK_FMT.esc(n.symbol)}</span> ${badge}<span class="rk-name-txt">${RK_FMT.esc(String(n.name).slice(0, 24))}</span></td>`;
+            }
+            return `<td class="${RK_COLS[id].cls}">${RK_COLS[id].r(n)}</td>`;
+        }).join('');
+        return `<tr class="rk-row" tabindex="0" data-sym="${RK_FMT.esc(n.symbol)}">${cells}</tr>`;
+    }).join('') + '</tbody>';
+    table.innerHTML = thead + body;
+
+    // 行クリック/Enter → 銘柄詳細
+    table.querySelectorAll('tr.rk-row').forEach(tr => {
+        const go = () => { const s = tr.dataset.sym; if (s) window.location.href = '/stocks/detail/?s=' + encodeURIComponent(s); };
+        tr.addEventListener('click', go);
+        tr.addEventListener('keydown', (e) => { if (e.key === 'Enter') go(); });
+    });
+
+    // ページ送り: 「N件中 X〜Y件」＋前/次
+    if (pager) {
+        const from = start + 1, to = Math.min(start + RK_PAGE_SIZE, total);
+        pager.innerHTML =
+            `<button class="rk-pgbtn" id="rk-prev"${this.rk.page === 0 ? ' disabled' : ''}>‹ 前のページ</button>`
+            + `<span class="rk-pgstat">${total.toLocaleString('ja-JP')}件中 <strong>${from}〜${to}</strong>件（${this.rk.page + 1}/${pageCount}）</span>`
+            + `<button class="rk-pgbtn" id="rk-next"${this.rk.page >= pageCount - 1 ? ' disabled' : ''}>次のページ ›</button>`;
+        const prev = document.getElementById('rk-prev'), next = document.getElementById('rk-next');
+        if (prev) prev.addEventListener('click', () => { if (this.rk.page > 0) { this.rk.page--; this._rkRender(); this._rkScrollTop(); } });
+        if (next) next.addEventListener('click', () => { if (this.rk.page < pageCount - 1) { this.rk.page++; this._rkRender(); this._rkScrollTop(); } });
+    }
+};
+
+Dashboard.prototype._rkScrollTop = function () {
+    const head = document.querySelector('.rk-main-head');
+    if (head && head.scrollIntoView) head.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
