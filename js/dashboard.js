@@ -2664,6 +2664,34 @@ Dashboard.prototype._rkRenderOverview = function () {
     // ③新テーマ候補（上位8件のみ）／②世界ウォッチ（地域タブ）＝それぞれ個別 fetch・データ無/古は関数内で graceful
     this.loadThemeCandidates(8);
     this.loadWorldWatch();
+    // ⑥業種バリュエーション（#192・period_rankings.json の sector_valuation・データ無は graceful）
+    const sv = (this.rkPer && this.rkPer.sector_valuation) || {};
+    this.updateSectorValuation('jp-sector-valuation', sv.jp || []);
+    this.updateSectorValuation('us-sector-valuation', sv.us || []);
+};
+
+// 業種バリュエーション表（#192）: 中央値主・平均は括弧・PBR<1 で割安分布を離散表示
+Dashboard.prototype.updateSectorValuation = function (elementId, rows) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    if (!Array.isArray(rows) || !rows.length) {
+        el.innerHTML = '<div class="no-data">データなし（次回の日次データ更新で表示されます）</div>';
+        return;
+    }
+    const esc = RK_FMT.esc;
+    const fm = (med, mean, suf) => (med == null) ? '—' : `${med}${suf} <span class="rk-sv-mean">(${mean})</span>`;
+    const html = ['<table class="rk-sv-table"><thead><tr><th>業種</th><th>n</th><th>PBR</th><th>PER</th><th>ROE</th><th>配当</th><th>PBR&lt;1</th></tr></thead><tbody>'];
+    rows.forEach(r => {
+        const lt1 = (r.pbr_buckets && r.pbr_buckets.lt1) || 0;
+        html.push(`<tr><td class="rk-sv-sec">${esc(r.sector)}</td><td>${r.n}</td>`
+            + `<td>${fm(r.pbr_median, r.pbr_mean, '倍')}</td>`
+            + `<td>${fm(r.per_median, r.per_mean, '倍')}</td>`
+            + `<td>${fm(r.roe_median, r.roe_mean, '%')}</td>`
+            + `<td>${fm(r.div_median, r.div_mean, '%')}</td>`
+            + `<td>${lt1 ? lt1 + '社' : '—'}</td></tr>`);
+    });
+    html.push('</tbody></table>');
+    el.innerHTML = html.join('');
 };
 
 // 指定 種別×市場×期間 の生配列を返す（正規化前）
