@@ -334,11 +334,12 @@ class Dashboard {
     }
 
     updateLastUpdated(timestamp) {
-        const el = document.getElementById('last-updated');
+        // HTML側は「最終更新: <span id="last-updated-time">」構造のため日時のみ入れる
+        const el = document.getElementById('last-updated-time');
         if (el) {
             const date = new Date(timestamp);
             const jstDate = new Date(date.getTime() + (9 * 60 * 60 * 1000)); // JST変換
-            el.textContent = `最終更新: ${this.formatDateTime(jstDate)} JST`;
+            el.textContent = `${this.formatDateTime(jstDate)} JST`;
         }
     }
 
@@ -1775,7 +1776,7 @@ class Dashboard {
             el.textContent = 'エラー';
         });
         
-        const lastUpdated = document.getElementById('last-updated');
+        const lastUpdated = document.getElementById('last-updated-time');
         if (lastUpdated) {
             lastUpdated.textContent = 'データ取得エラー';
         }
