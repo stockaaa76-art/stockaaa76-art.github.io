@@ -1,16 +1,17 @@
 {
   "metadata": {
     "generated_at": "2025-09-22 03:03:16",
-    "total_count": 108,
-    "core_count": 71,
-    "active_count": 149,
+    "total_count": 359,
+    "core_count": 209,
+    "active_count": 150,
     "version": "1.0",
     "selection_criteria": {
       "core": "Major indices + Top market cap + Strategic importance",
       "active": "Composite score: 30% liquidity + 20% volatility + 25% market_cap + 25% prediction_fitness"
     },
-    "total_stocks": 358,
-    "updated_at": "2026-07-08"
+    "total_stocks": 359,
+    "updated_at": "2026-07-23",
+    "note": "手動運用。銘柄数の正本 = core_universe+active_universe の unique ティッカー数（total_stocks）。他docはこの値を参照する"
   },
   "core_universe": [
     {
