@@ -2457,6 +2457,16 @@ const RK_FMT = {
         v = Number(v) || 0; if (!v) return '—';
         if (Math.abs(v) >= 1e12) return (v / 1e12).toFixed(2) + '兆'; if (Math.abs(v) >= 1e8) return (v / 1e8).toFixed(0) + '億'; return String(v);
     },
+    finCap(n, v) { // 売上高・純利益（市場で通貨を出し分け・#188 US対応）
+        v = Number(v) || 0; if (!v) return '—';
+        if (n.market === 'us') {
+            if (Math.abs(v) >= 1e12) return '$' + (v / 1e12).toFixed(2) + 'T';
+            if (Math.abs(v) >= 1e9) return '$' + (v / 1e9).toFixed(1) + 'B';
+            if (Math.abs(v) >= 1e6) return '$' + (v / 1e6).toFixed(0) + 'M';
+            return '$' + v;
+        }
+        return RK_FMT.capJp(v);
+    },
     streak(n) {
         const u = Number(n.up_streak) || 0; if (!u) return '—';
         const s = Number(n.surge_streak) || 0; return (s >= 3 ? '🔥' : '') + u + '日';
@@ -2483,8 +2493,9 @@ const RK_COLS = {
     tradingvalue:{ label: '売買代金',  cls: 'rk-c-num', r: n => RK_FMT.tradingValue(n) },
     volratio:    { label: '出来高変化率', cls: 'rk-c-num', r: n => RK_FMT.pct(n.volume_ratio, 0) },
     streak:      { label: '連騰',      cls: 'rk-c-num', r: n => RK_FMT.streak(n) },
-    revenue:     { label: '売上高',    cls: 'rk-c-num', r: n => RK_FMT.capJp(n.revenue) },
-    netincome:   { label: '純利益',    cls: 'rk-c-num', r: n => RK_FMT.capJp(n.net_income) },
+    revenue:     { label: '売上高',    cls: 'rk-c-num', r: n => RK_FMT.finCap(n, n.revenue) },
+    netincome:   { label: '純利益',    cls: 'rk-c-num', r: n => RK_FMT.finCap(n, n.net_income) },
+    alphaval:    { label: 'α超過',     cls: 'rk-c-num', r: n => RK_FMT.signPct(n.alpha, 1) },
     score:       { label: 'AIスコア',  cls: 'rk-c-num', r: n => RK_FMT.num(n.score, 3) },
     ret20:       { label: '20日騰落',  cls: 'rk-c-num', r: n => RK_FMT.signPct(n.ret20, 1) },
     ret120:      { label: '120日騰落', cls: 'rk-c-num', r: n => RK_FMT.signPct(n.ret120, 1) },
@@ -2511,6 +2522,21 @@ const RK_CS = {
     netincome:['rank', 'name', 'netincome', 'price', 'change', 'mktcap'],
     cross:   ['rank', 'name', 'price', 'change', 'volume', 'dev25'],
     ml:      ['rank', 'name', 'score', 'ret20', 'ret120', 'rsi', 'sector'],
+    alpha:   ['rank', 'name', 'alphaval', 'change', 'price', 'volume'],
+};
+
+// #188: us_rankings_full.json（US全銘柄×期間・spark除外）から period 系種別の対象行を絞る。
+// ソートは _rkResolveRows（sortKey/dir）が行うためここではフィルタのみ。
+const RK_US_FULL_FILTERS = {
+    gainers: r => Number(r.period_change) > 0,
+    losers: r => Number(r.period_change) < 0,
+    volume: r => Number(r.period_volume != null ? r.period_volume : r.volume) > 0,
+    volume_increase: r => Number(r.volume_ratio) > 100,
+    market_cap: r => Number(r.market_cap) > 0,
+    pe_high: r => Number(r.pe_ratio) > 0,
+    pe_low: r => Number(r.pe_ratio) > 0,
+    dividend_high: r => Number(r.dividend_yield) > 0,
+    alpha_high: r => r.alpha != null && !isNaN(Number(r.alpha)),
 };
 
 // カタログ: グループ→種別。source=period(期間連動・JP+US) / extended(JP・スナップショット) / ml(AI月次・JP+US)
@@ -2519,42 +2545,42 @@ const RK_CATALOG = [
     // ── 株価変動 ──
     { id: 'gainers',  g: '株価変動', label: '値上がり率',       source: 'period',   key: 'gainers',            cs: 'price',   sortKey: 'change',        dir: 'desc', markets: ['jp', 'us'] },
     { id: 'losers',   g: '株価変動', label: '値下がり率',       source: 'period',   key: 'losers',             cs: 'price',   sortKey: 'change',        dir: 'asc',  markets: ['jp', 'us'] },
-    { id: 'stophigh', g: '株価変動', label: 'ストップ高',       source: 'extended', key: 'stop_high',          cs: 'price',   sortKey: 'change',        dir: 'desc', markets: ['jp'] },
-    { id: 'stoplow',  g: '株価変動', label: 'ストップ安',       source: 'extended', key: 'stop_low',           cs: 'price',   sortKey: 'change',        dir: 'asc',  markets: ['jp'] },
-    { id: 'yhi',      g: '株価変動', label: '年初来高値更新',   source: 'extended', key: 'year_high_update',   cs: 'price',   sortKey: 'change',        dir: 'desc', markets: ['jp'] },
-    { id: 'ylo',      g: '株価変動', label: '年初来安値更新',   source: 'extended', key: 'year_low_update',    cs: 'price',   sortKey: 'change',        dir: 'asc',  markets: ['jp'] },
-    { id: 'dev25hi',  g: '株価変動', label: '25日乖離（高）',   source: 'extended', key: 'deviation_25_high',  cs: 'dev25',   sortKey: 'dev25',         dir: 'desc', markets: ['jp'] },
-    { id: 'dev25lo',  g: '株価変動', label: '25日乖離（低）',   source: 'extended', key: 'deviation_25_low',   cs: 'dev25',   sortKey: 'dev25',         dir: 'asc',  markets: ['jp'] },
-    { id: 'ypos_hi',  g: '株価変動', label: '年初来位置（高）', source: 'extended', key: 'year_position_high', cs: 'yearpos', sortKey: 'year_position', dir: 'desc', markets: ['jp'] },
-    { id: 'ypos_lo',  g: '株価変動', label: '年初来位置（低）', source: 'extended', key: 'year_position_low',  cs: 'yearpos', sortKey: 'year_position', dir: 'asc',  markets: ['jp'] },
+    { id: 'stophigh', g: '株価変動', label: 'ストップ高',       source: 'extended', key: 'stop_high',          cs: 'price',   sortKey: 'change',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'stoplow',  g: '株価変動', label: 'ストップ安',       source: 'extended', key: 'stop_low',           cs: 'price',   sortKey: 'change',        dir: 'asc',  markets: ['jp', 'us'] },
+    { id: 'yhi',      g: '株価変動', label: '年初来高値更新',   source: 'extended', key: 'year_high_update',   cs: 'price',   sortKey: 'change',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'ylo',      g: '株価変動', label: '年初来安値更新',   source: 'extended', key: 'year_low_update',    cs: 'price',   sortKey: 'change',        dir: 'asc',  markets: ['jp', 'us'] },
+    { id: 'dev25hi',  g: '株価変動', label: '25日乖離（高）',   source: 'extended', key: 'deviation_25_high',  cs: 'dev25',   sortKey: 'dev25',         dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'dev25lo',  g: '株価変動', label: '25日乖離（低）',   source: 'extended', key: 'deviation_25_low',   cs: 'dev25',   sortKey: 'dev25',         dir: 'asc',  markets: ['jp', 'us'] },
+    { id: 'ypos_hi',  g: '株価変動', label: '年初来位置（高）', source: 'extended', key: 'year_position_high', cs: 'yearpos', sortKey: 'year_position', dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'ypos_lo',  g: '株価変動', label: '年初来位置（低）', source: 'extended', key: 'year_position_low',  cs: 'yearpos', sortKey: 'year_position', dir: 'asc',  markets: ['jp', 'us'] },
     // ── 出来高・売買代金 ──
     { id: 'volume',   g: '出来高・売買代金', label: '出来高',            source: 'period',   key: 'volume',            cs: 'volume', sortKey: 'volume',        dir: 'desc', markets: ['jp', 'us'] },
     { id: 'volinc',   g: '出来高・売買代金', label: '出来高変化率（増）', source: 'period',   key: 'volume_increase',   cs: 'volume', sortKey: 'volume_ratio',  dir: 'desc', markets: ['jp', 'us'] },
-    { id: 'voldec',   g: '出来高・売買代金', label: '出来高変化率（減）', source: 'extended', key: 'volume_decrease',   cs: 'volume', sortKey: 'volume_ratio',  dir: 'asc',  markets: ['jp'] },
-    { id: 'tvhi',     g: '出来高・売買代金', label: '売買代金（上位）',   source: 'extended', key: 'trading_value_high', cs: 'tval',  sortKey: 'trading_value', dir: 'desc', markets: ['jp'] },
-    { id: 'tvlo',     g: '出来高・売買代金', label: '売買代金（下位）',   source: 'extended', key: 'trading_value_low',  cs: 'tval',  sortKey: 'trading_value', dir: 'asc',  markets: ['jp'] },
+    { id: 'voldec',   g: '出来高・売買代金', label: '出来高変化率（減）', source: 'extended', key: 'volume_decrease',   cs: 'volume', sortKey: 'volume_ratio',  dir: 'asc',  markets: ['jp', 'us'] },
+    { id: 'tvhi',     g: '出来高・売買代金', label: '売買代金（上位）',   source: 'extended', key: 'trading_value_high', cs: 'tval',  sortKey: 'trading_value', dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'tvlo',     g: '出来高・売買代金', label: '売買代金（下位）',   source: 'extended', key: 'trading_value_low',  cs: 'tval',  sortKey: 'trading_value', dir: 'asc',  markets: ['jp', 'us'] },
     // ── 規模・投資指標 ──
     { id: 'mcaphi',   g: '規模・投資指標', label: '時価総額（上位）', source: 'period',   key: 'market_cap',      cs: 'mktcap', sortKey: 'market_cap', dir: 'desc', markets: ['jp', 'us'] },
-    { id: 'mcaplo',   g: '規模・投資指標', label: '時価総額（下位）', source: 'extended', key: 'market_cap_low',  cs: 'mktcap', sortKey: 'market_cap', dir: 'asc',  markets: ['jp'] },
+    { id: 'mcaplo',   g: '規模・投資指標', label: '時価総額（下位）', source: 'extended', key: 'market_cap_low',  cs: 'mktcap', sortKey: 'market_cap', dir: 'asc',  markets: ['jp', 'us'] },
     { id: 'pehi',     g: '規模・投資指標', label: 'PER（高）',       source: 'period',   key: 'pe_high',         cs: 'per',    sortKey: 'per',        dir: 'desc', markets: ['jp', 'us'] },
     { id: 'pelo',     g: '規模・投資指標', label: 'PER（低）',       source: 'period',   key: 'pe_low',          cs: 'per',    sortKey: 'per',        dir: 'asc',  markets: ['jp', 'us'] },
-    { id: 'pbrhi',    g: '規模・投資指標', label: 'PBR（高）',       source: 'extended', key: 'pbr_high',        cs: 'pbr',    sortKey: 'pbr',        dir: 'desc', markets: ['jp'] },
-    { id: 'pbrlo',    g: '規模・投資指標', label: 'PBR（低）',       source: 'extended', key: 'pbr_low',         cs: 'pbr',    sortKey: 'pbr',        dir: 'asc',  markets: ['jp'] },
-    { id: 'psrhi',    g: '規模・投資指標', label: 'PSR（高）',       source: 'extended', key: 'psr_high',        cs: 'psr',    sortKey: 'psr',        dir: 'desc', markets: ['jp'] },
-    { id: 'psrlo',    g: '規模・投資指標', label: 'PSR（低）',       source: 'extended', key: 'psr_low',         cs: 'psr',    sortKey: 'psr',        dir: 'asc',  markets: ['jp'] },
+    { id: 'pbrhi',    g: '規模・投資指標', label: 'PBR（高）',       source: 'extended', key: 'pbr_high',        cs: 'pbr',    sortKey: 'pbr',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'pbrlo',    g: '規模・投資指標', label: 'PBR（低）',       source: 'extended', key: 'pbr_low',         cs: 'pbr',    sortKey: 'pbr',        dir: 'asc',  markets: ['jp', 'us'] },
+    { id: 'psrhi',    g: '規模・投資指標', label: 'PSR（高）',       source: 'extended', key: 'psr_high',        cs: 'psr',    sortKey: 'psr',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'psrlo',    g: '規模・投資指標', label: 'PSR（低）',       source: 'extended', key: 'psr_low',         cs: 'psr',    sortKey: 'psr',        dir: 'asc',  markets: ['jp', 'us'] },
     { id: 'div',      g: '規模・投資指標', label: '配当利回り',      source: 'period',   key: 'dividend_high',   cs: 'div',    sortKey: 'divyield',   dir: 'desc', markets: ['jp', 'us'] },
     // ── 財務(企業) ──
-    { id: 'roe',      g: '財務(企業)', label: 'ROE',      source: 'extended', key: 'roe_high',        cs: 'roe',       sortKey: 'roe',        dir: 'desc', markets: ['jp'] },
-    { id: 'roa',      g: '財務(企業)', label: 'ROA',      source: 'extended', key: 'roa_high',        cs: 'roa',       sortKey: 'roa',        dir: 'desc', markets: ['jp'] },
-    { id: 'netmargin',g: '財務(企業)', label: '純利益率', source: 'extended', key: 'net_margin_high', cs: 'netmargin', sortKey: 'net_margin', dir: 'desc', markets: ['jp'] },
-    { id: 'revenue',  g: '財務(企業)', label: '売上高',   source: 'extended', key: 'revenue_high',    cs: 'revenue',   sortKey: 'revenue',    dir: 'desc', markets: ['jp'] },
-    { id: 'netincome',g: '財務(企業)', label: '純利益',   source: 'extended', key: 'net_income_high', cs: 'netincome', sortKey: 'net_income', dir: 'desc', markets: ['jp'] },
+    { id: 'roe',      g: '財務(企業)', label: 'ROE',      source: 'extended', key: 'roe_high',        cs: 'roe',       sortKey: 'roe',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'roa',      g: '財務(企業)', label: 'ROA',      source: 'extended', key: 'roa_high',        cs: 'roa',       sortKey: 'roa',        dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'netmargin',g: '財務(企業)', label: '純利益率', source: 'extended', key: 'net_margin_high', cs: 'netmargin', sortKey: 'net_margin', dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'revenue',  g: '財務(企業)', label: '売上高',   source: 'extended', key: 'revenue_high',    cs: 'revenue',   sortKey: 'revenue',    dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'netincome',g: '財務(企業)', label: '純利益',   source: 'extended', key: 'net_income_high', cs: 'netincome', sortKey: 'net_income', dir: 'desc', markets: ['jp', 'us'] },
     // ── テクニカル/AI ──
-    { id: 'gc',       g: 'テクニカル/AI', label: 'ゴールデンクロス', source: 'extended', key: 'golden_cross', cs: 'cross', sortKey: 'change', dir: 'desc', markets: ['jp'] },
-    { id: 'dc',       g: 'テクニカル/AI', label: 'デッドクロス',     source: 'extended', key: 'dead_cross',   cs: 'cross', sortKey: 'change', dir: 'asc',  markets: ['jp'] },
+    { id: 'gc',       g: 'テクニカル/AI', label: 'ゴールデンクロス', source: 'extended', key: 'golden_cross', cs: 'cross', sortKey: 'change', dir: 'desc', markets: ['jp', 'us'] },
+    { id: 'dc',       g: 'テクニカル/AI', label: 'デッドクロス',     source: 'extended', key: 'dead_cross',   cs: 'cross', sortKey: 'change', dir: 'asc',  markets: ['jp', 'us'] },
     { id: 'ml',       g: 'テクニカル/AI', label: 'AI月次ランキング', source: 'ml',       key: null,           cs: 'ml',    sortKey: 'score',  dir: 'desc', markets: ['jp', 'us'],
       note: 'クロスセクショナルML(LambdaRank)で今月相対的に強いと予測される順。BT: ベンチ超過 +3.7%/年(2018-2025)。⚠️相対強弱の参考であり買いシグナル・保証ではありません。' },
-    { id: 'alpha',    g: 'テクニカル/AI', label: 'α（指数超過）',    source: 'period',   key: 'alpha_high',   cs: 'price', sortKey: 'change', dir: 'desc', markets: ['jp', 'us'],
+    { id: 'alpha',    g: 'テクニカル/AI', label: 'α（指数超過）',    source: 'period',   key: 'alpha_high',   cs: 'alpha', sortKey: 'alpha', dir: 'desc', markets: ['jp', 'us'],
       note: '期間騰落率から指数騰落率を引いた超過リターン。市場全体より強い銘柄の特定用。' },
 ];
 
@@ -2565,14 +2591,18 @@ Dashboard.prototype.initScreener = async function () {
     this.rk = { market: 'jp', period: 'daily', typeId: 'gainers', page: 0 };
     // データ取得（失敗しても部分描画できるよう個別 try）
     const getJson = async (url) => { try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch (e) { return null; } };
-    const [ext, per, mlJp, mlUs] = await Promise.all([
+    const [ext, extUs, per, usFull, mlJp, mlUs] = await Promise.all([
         getJson('/api/extended_rankings.json'),
+        getJson('/api/extended_rankings_us.json'),   // #188: US 拡張ランキング（全件）
         getJson('/api/period_rankings.json'),
+        getJson('/api/us_rankings_full.json'),       // #188: US 全銘柄×期間フル配列
         getJson('/api/ml_monthly_ranking.json'),
         getJson('/api/ml_monthly_ranking_us.json'),
     ]);
     this.rkExt = ext || {};
+    this.rkExtUs = extUs || {};
     this.rkPer = per || {};
+    this.rkUsFull = usFull || {};
     this.rkMlJp = mlJp || {};
     this.rkMlUs = mlUs || {};
 
@@ -2639,13 +2669,19 @@ Dashboard.prototype._rkRenderOverview = function () {
 // 指定 種別×市場×期間 の生配列を返す（正規化前）
 Dashboard.prototype._rkRawArr = function (entry, market, period) {
     if (entry.source === 'period') {
+        if (market === 'us') {
+            // #188: US 全銘柄フル配列があれば全件ページ送り（無ければ従来の us_* 上位10件にフォールバック）
+            const full = this.rkUsFull && this.rkUsFull.periods && this.rkUsFull.periods[period];
+            const flt = RK_US_FULL_FILTERS[entry.key];
+            if (Array.isArray(full) && full.length && flt) return full.filter(flt);
+        }
         const pk = market === 'us' ? 'us_' + period : period;
         const sec = this.rkPer && this.rkPer[pk];
         return (sec && sec.rankings && Array.isArray(sec.rankings[entry.key])) ? sec.rankings[entry.key] : [];
     }
     if (entry.source === 'extended') {
-        if (market === 'us') return [];
-        return Array.isArray(this.rkExt[entry.key]) ? this.rkExt[entry.key] : [];
+        const src = market === 'us' ? this.rkExtUs : this.rkExt;   // #188: US 拡張ランキング対応
+        return (src && Array.isArray(src[entry.key])) ? src[entry.key] : [];
     }
     if (entry.source === 'ml') {
         const src = market === 'us' ? this.rkMlUs : this.rkMlJp;
@@ -2680,7 +2716,9 @@ Dashboard.prototype._rkNormalize = function (raw, market, isMl) {
         trading_value: raw.trading_value,
         volume_ratio: raw.volume_ratio,
         up_streak: raw.up_streak, surge_streak: raw.surge_streak,
-        revenue: raw.revenue, net_income: raw.net_income, rsi: raw.rsi,
+        revenue: raw.revenue != null ? raw.revenue : raw.total_revenue,
+        net_income: raw.net_income, rsi: raw.rsi,
+        alpha: raw.alpha,
     };
 };
 
@@ -2764,8 +2802,11 @@ Dashboard.prototype._rkWireControls = function () {
 
 Dashboard.prototype._rkFmtUpdated = function (entry) {
     let iso = null;
-    if (entry.source === 'period') { const pk = this.rk.market === 'us' ? 'us_' + this.rk.period : this.rk.period; iso = ((this.rkPer[pk] || {}).metadata || {}).generated_at; }
-    else if (entry.source === 'extended') { iso = this.rkExt.timestamp; }
+    if (entry.source === 'period') {
+        if (this.rk.market === 'us' && this.rkUsFull && this.rkUsFull.metadata) iso = this.rkUsFull.metadata.generated_at;
+        if (!iso) { const pk = this.rk.market === 'us' ? 'us_' + this.rk.period : this.rk.period; iso = ((this.rkPer[pk] || {}).metadata || {}).generated_at; }
+    }
+    else if (entry.source === 'extended') { iso = (this.rk.market === 'us' ? (this.rkExtUs || {}).timestamp : null) || this.rkExt.timestamp; }
     else if (entry.source === 'ml') { const s = this.rk.market === 'us' ? this.rkMlUs : this.rkMlJp; iso = (s || {}).as_of_date || (s || {}).generated_at; }
     if (!iso) return '';
     const s = String(iso).replace('T', ' ').slice(0, 16);
