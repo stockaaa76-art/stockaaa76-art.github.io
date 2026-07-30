@@ -1937,6 +1937,8 @@ Dashboard.prototype.updateAlphaRanking = function(period) {
     this.updateSectorFlow(period);
     this.updateDivergenceWatch(period);
     this.updateDividendTrap(period);
+    this.updateIndexDivergence(period);   // #195 指数逆行スクリーン
+    this.updateSectorDrilldown(period);   // #194 業種内ドリルダウン
 };
 
 // ⚠️ 要注意（業種逆行）: 業種と反対に動く銘柄（独歩高/独歩安）。period_rankings の divergence_watch 由来。
@@ -1974,6 +1976,128 @@ Dashboard.prototype.updateDivergenceWatch = function(period) {
                 </div>
             </div>`;
     }).join('');
+};
+
+// 🔀 指数逆行スクリーン（#195）: 指数が下げた期間に上げている銘柄＝地合い悪化日でも強い主導株。
+// period_rankings の index_divergence 由来（指数がマイナス圏 かつ 銘柄プラス圏 かつ α≥期間別しきい値）。
+// 業種逆行（divergence_watch）は「業種 vs 銘柄」だが、こちらは「指数 vs 銘柄」で軸が違う。
+// info マーカー（買いシグナルではない・BT未検証hypothesis）。α 降順。
+Dashboard.prototype.updateIndexDivergence = function(period) {
+    const el = document.getElementById('index-divergence-ranking');
+    if (!el) return;
+    const pd = this.periodRankingsData && this.periodRankingsData[period];
+    const list = (pd && pd.rankings && pd.rankings.index_divergence) || [];
+    if (!list.length) {
+        el.innerHTML = '<div class="no-data">該当なし（指数が上昇した期間、または逆行して上げている銘柄がない期間です）</div>';
+        return;
+    }
+    el.innerHTML = list.map((s, i) => {
+        const pc = Number(s.period_change);
+        const bench = Number(s.benchmark_change);
+        const alpha = Number(s.alpha);
+        const streak = Number(s.up_streak || 0);
+        const rankCls = i < 3 ? 'ranking-rank top' : 'ranking-rank';
+        const streakBadge = streak >= 2
+            ? ` <span class="ranking-change positive">🔥${streak}連騰</span>`
+            : '';
+        return `
+            <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(s.symbol || '')}'" style="cursor:pointer;" title="指数 ${bench.toFixed(1)}% に対し銘柄 ${pc.toFixed(1)}%（超過 ${alpha.toFixed(1)}pt）">
+                <div class="ranking-item-left">
+                    <span class="${rankCls}">${i + 1}</span>
+                    <div class="ranking-labels">
+                        <span class="ranking-symbol">${s.symbol || ''}${streakBadge}</span>
+                        <span class="ranking-name">${s.name || s.symbol || ''}</span>
+                    </div>
+                </div>
+                <div class="ranking-item-right">
+                    <div class="ranking-values">
+                        <div class="ranking-value">α+${alpha.toFixed(1)}pt</div>
+                        <div class="ranking-change positive">銘柄${pc > 0 ? '+' : ''}${pc.toFixed(1)}% / 指数${bench.toFixed(1)}%</div>
+                    </div>
+                </div>
+            </div>`;
+    }).join('');
+};
+
+// 🏭 業種内ドリルダウン（#194）: 業種を選ぶ→その業種の銘柄を強い順に表示する2段階ビュー。
+// period_rankings の sector_drilldown 由来（業種ごとに平均・銘柄数・上位10銘柄）。
+// セレクトの選択保持はしない（期間切替で先頭＝最強業種に戻す）。
+Dashboard.prototype.updateSectorDrilldown = function(period) {
+    const sel = document.getElementById('sector-drilldown-select');
+    const listEl = document.getElementById('sector-drilldown-list');
+    const sumEl = document.getElementById('sector-drilldown-summary');
+    if (!sel || !listEl) return;
+    const pd = this.periodRankingsData && this.periodRankingsData[period];
+    const groups = (pd && pd.rankings && pd.rankings.sector_drilldown) || [];
+    if (!groups.length) {
+        sel.innerHTML = '';
+        sel.hidden = true;
+        if (sumEl) sumEl.textContent = '';
+        listEl.innerHTML = '<div class="no-data">データなし（次回の日次データ更新で表示されます）</div>';
+        return;
+    }
+    sel.hidden = false;
+    // 強い業種→弱い業種の順（バックエンドが平均騰落の降順で emit 済み）
+    sel.innerHTML = groups.map((g, i) => {
+        const av = Number(g.avg_change);
+        return `<option value="${i}">${g.sector}（平均${av > 0 ? '+' : ''}${av.toFixed(1)}%・${g.count}銘柄）</option>`;
+    }).join('');
+
+    const render = (idx) => {
+        const g = groups[Number(idx)] || groups[0];
+        if (!g) return;
+        const av = Number(g.avg_change);
+        const avCls = av > 0 ? 'positive' : (av < 0 ? 'negative' : 'neutral');
+        if (sumEl) {
+            sumEl.innerHTML = `業種平均 <span class="${avCls}">${av > 0 ? '+' : ''}${av.toFixed(1)}%</span> ／ ${g.count}銘柄中 上位${(g.stocks || []).length}件`;
+        }
+        const rows = g.stocks || [];
+        if (!rows.length) {
+            listEl.innerHTML = '<div class="no-data">該当銘柄なし</div>';
+            return;
+        }
+        listEl.innerHTML = rows.map((s, i) => {
+            const pc = Number(s.period_change);
+            const cls = pc > 0 ? 'positive' : (pc < 0 ? 'negative' : 'neutral');
+            const rankCls = i < 3 ? 'ranking-rank top' : 'ranking-rank';
+            const alpha = (s.alpha == null) ? null : Number(s.alpha);
+            const streak = Number(s.up_streak || 0);
+            const badges = [];
+            if (streak >= 2) badges.push(`<span class="ranking-change positive">🔥${streak}連騰</span>`);
+            if (s.divergence_flag) {
+                const dCls = s.divergence_flag === '独歩高' ? 'positive' : 'negative';
+                badges.push(`<span class="ranking-change ${dCls}">${s.divergence_flag}</span>`);
+            }
+            return `
+                <div class="ranking-item" onclick="window.location.href='/stocks/detail/?s=${encodeURIComponent(s.symbol || '')}'" style="cursor:pointer;">
+                    <div class="ranking-item-left">
+                        <span class="${rankCls}">${i + 1}</span>
+                        <div class="ranking-labels">
+                            <span class="ranking-symbol">${s.symbol || ''} ${badges.join(' ')}</span>
+                            <span class="ranking-name">${s.name || s.symbol || ''}</span>
+                        </div>
+                    </div>
+                    <div class="ranking-item-right">
+                        <div class="ranking-values">
+                            <div class="ranking-value ${cls}">${pc > 0 ? '+' : ''}${pc.toFixed(1)}%</div>
+                            ${alpha == null ? '' : `<div class="ranking-change ${alpha > 0 ? 'positive' : 'negative'}">α${alpha > 0 ? '+' : ''}${alpha.toFixed(1)}pt</div>`}
+                        </div>
+                    </div>
+                </div>`;
+        }).join('');
+    };
+
+    // 期間切替のたびに onchange を張り替えないよう、ハンドラは1度だけ登録する
+    if (!sel._rkDrillBound) {
+        sel.addEventListener('change', (ev) => {
+            const fn = sel._rkDrillRender;
+            if (typeof fn === 'function') fn(ev.target.value);
+        });
+        sel._rkDrillBound = true;
+    }
+    sel._rkDrillRender = render;
+    sel.value = '0';
+    render(0);
 };
 
 // 🚫 配当トラップ注意: 高配当だが下落トレンド（MA75割れ）×小型＝減配/バリュートラップ。買い候補から外す参考。
@@ -2651,6 +2775,9 @@ Dashboard.prototype._rkRenderOverview = function () {
     this.periodRankingsData = this.rkPer || {};
     // ①業種フロー（日本株 日次・17業種）
     try { this.updateSectorFlow('daily'); } catch (e) { /* graceful */ }
+    // ⑦指数逆行スクリーン（#195）／⑧業種内ドリルダウン（#194）＝いずれも日本株 日次・データ無は関数内で graceful
+    try { this.updateIndexDivergence('daily'); } catch (e) { /* graceful */ }
+    try { this.updateSectorDrilldown('daily'); } catch (e) { /* graceful */ }
     // ⑤継続上昇＆業種集中度（当日急騰×5日継続・period 非依存の単発描画。データ無は関数内で「該当なし」）
     try {
         this.updateMomentumHighlight('jp', 'jp-continuation-ranking', 'jp-concentration');
