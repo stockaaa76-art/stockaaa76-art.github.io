@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T22:41:32.006108",
+  "updated_at": "2026-08-03T22:57:58.784455",
   "note": "手選びの世界主要銘柄（日米以外）。価格と騰落のみの情報表示で、予測・ランキング評価の対象外です。売買シグナルではありません。",
   "regions": [
     {
@@ -89,29 +89,29 @@
         {
           "ticker": "AZN.L",
           "name": "アストラゼネカ",
-          "price": 12632.0,
+          "price": 11500.0,
           "currency": "GBp",
-          "chg_1d": -0.69,
-          "chg_5d": -0.3,
-          "chg_1mo": -13.11
+          "chg_1d": -8.96,
+          "chg_5d": -10.77,
+          "chg_1mo": -20.45
         },
         {
           "ticker": "SHEL.L",
           "name": "シェル",
-          "price": 3383.5,
+          "price": 3405.5,
           "currency": "GBp",
-          "chg_1d": 1.94,
-          "chg_5d": 2.36,
-          "chg_1mo": 16.71
+          "chg_1d": 0.65,
+          "chg_5d": 3.92,
+          "chg_1mo": 17.78
         },
         {
           "ticker": "ULVR.L",
           "name": "ユニリーバ",
-          "price": 4743.0,
+          "price": 4770.0,
           "currency": "GBp",
-          "chg_1d": -2.21,
-          "chg_5d": 3.66,
-          "chg_1mo": 2.31
+          "chg_1d": 0.57,
+          "chg_5d": 3.09,
+          "chg_1mo": 3.25
         },
         {
           "ticker": "ALV.DE",
