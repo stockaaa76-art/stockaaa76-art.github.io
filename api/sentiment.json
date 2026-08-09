@@ -1,14 +1,14 @@
 {
   "composite": {
-    "score": 52.3,
-    "label": "中立",
-    "signal": "neutral"
+    "score": 61.6,
+    "label": "強気",
+    "signal": "greed"
   },
   "vix": {
-    "value": 15.15,
-    "change": -4.17,
-    "score": 55,
-    "label": "中立",
+    "value": 14.9,
+    "change": -1.65,
+    "score": 70,
+    "label": "強気",
     "flow_level": "normal",
     "flow_label": null
   },
@@ -16,34 +16,32 @@
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 158.47,
-      "change": 0.55,
-      "score": 62.8
+      "value": 157.73,
+      "change": -0.43,
+      "score": 57.8
     },
     "gold": {
       "name": "金先物",
-      "value": 4289.2,
-      "change": 1.02,
-      "score": 46.9
+      "value": 4399.7,
+      "change": 3.72,
+      "score": 38.8
     },
     "oil": {
       "name": "原油WTI",
-      "value": 77.97,
-      "change": 3.66,
-      "score": 42.7
+      "value": 78.18,
+      "change": 1.15,
+      "score": 47.7
     },
     "us10y": {
       "name": "米10年債利回り",
-      "value": 4.67,
-      "change": 1.15,
-      "score": 40.8
+      "value": 4.66,
+      "change": -0.21,
+      "score": 51.7
     },
-    "avg_score": 48.3
+    "avg_score": 49.0
   },
   "market_volume": {
     "dates": [
-      "2026-05-13",
-      "2026-05-14",
       "2026-05-15",
       "2026-05-18",
       "2026-05-19",
@@ -101,11 +99,11 @@
       "2026-07-31",
       "2026-08-03",
       "2026-08-04",
-      "2026-08-05"
+      "2026-08-05",
+      "2026-08-06",
+      "2026-08-07"
     ],
     "volumes": [
-      1657273169,
-      1812007082,
       1884238043,
       1562317200,
       1617984180,
@@ -163,15 +161,17 @@
       1972075431,
       1756019550,
       1677032561,
-      1307776460
+      1712888665,
+      1703071916,
+      1437332670
     ],
-    "latest": 1307776460,
-    "ma25": 1482127848,
-    "latest_vs_ma25_pct": 88.2,
+    "latest": 1437332670,
+    "ma25": 1505796666,
+    "latest_vs_ma25_pct": 95.5,
     "ticker_count": 207,
     "note": "JP個別株(.T)の日次出来高合算。市場全体の活況度・出来高急増日は転換点になりやすい。"
   },
   "vix_flow_level": "normal",
   "vix_flow_label": null,
-  "generated_at": "2026-08-07 01:07:23"
+  "generated_at": "2026-08-09 22:01:06"
 }
