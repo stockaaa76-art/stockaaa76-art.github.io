@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09 22:38:58",
+  "generated_at": "2026-08-16 22:11:04",
   "patterns": [
     {
       "id": "ai_boom",
@@ -1849,7 +1849,7 @@
     },
     {
       "ticker": "GS",
-      "name": "Goldman Sachs Group, Inc. (The)",
+      "name": "The Goldman Sachs Group, Inc.",
       "sector": "Financial Services",
       "latest_growth_pct": 8.79,
       "avg_growth_pct": 7.42,
@@ -1882,7 +1882,7 @@
     },
     {
       "ticker": "JPM",
-      "name": "JP Morgan Chase & Co.",
+      "name": "JPMorgan Chase & Co.",
       "sector": "Financial Services",
       "latest_growth_pct": 7.32,
       "avg_growth_pct": 12.66,
@@ -2047,7 +2047,7 @@
     },
     {
       "ticker": "MDT",
-      "name": "Medtronic plc.",
+      "name": "Medtronic plc",
       "sector": "Healthcare",
       "latest_growth_pct": 8.36,
       "avg_growth_pct": 5.2,
@@ -2179,7 +2179,7 @@
     },
     {
       "ticker": "PM",
-      "name": "Philip Morris International Inc",
+      "name": "Philip Morris International Inc.",
       "sector": "Consumer Defensive",
       "latest_growth_pct": 7.41,
       "avg_growth_pct": 8.61,
@@ -2640,6 +2640,39 @@
       }
     },
     {
+      "ticker": "4689.T",
+      "name": "LY Corporation",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 6.2,
+      "avg_growth_pct": 6.79,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 34.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 25.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 25.4
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 34.8
+      }
+    },
+    {
       "ticker": "6954.T",
       "name": "Fanuc Corporation",
       "sector": "Industrials",
@@ -2934,6 +2967,39 @@
         "pattern_name": "ストリーミング戦争（2019-2022）",
         "market_theme": "コンテンツ・エンタメ",
         "similarity_score": 30.3
+      }
+    },
+    {
+      "ticker": "6902.T",
+      "name": "DENSO Corporation",
+      "sector": "Consumer Cyclical",
+      "latest_growth_pct": 5.28,
+      "avg_growth_pct": 5.71,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 30.2
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 22.6
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 22.3
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 30.2
       }
     },
     {
@@ -3574,7 +3640,7 @@
     },
     {
       "ticker": "PG",
-      "name": "Procter & Gamble Company (The)",
+      "name": "The Procter & Gamble Company",
       "sector": "Consumer Defensive",
       "latest_growth_pct": 3.33,
       "avg_growth_pct": 2.0,
@@ -3595,7 +3661,7 @@
     },
     {
       "ticker": "DIS",
-      "name": "Walt Disney Company (The)",
+      "name": "The Walt Disney Company",
       "sector": "Communication Services",
       "latest_growth_pct": 3.4,
       "avg_growth_pct": 4.53,
@@ -3637,7 +3703,7 @@
     },
     {
       "ticker": "HD",
-      "name": "Home Depot, Inc. (The)",
+      "name": "The Home Depot, Inc.",
       "sector": "Consumer Cyclical",
       "latest_growth_pct": 3.2,
       "avg_growth_pct": 1.56,
@@ -3700,7 +3766,7 @@
     },
     {
       "ticker": "TMO",
-      "name": "Thermo Fisher Scientific Inc",
+      "name": "Thermo Fisher Scientific Inc.",
       "sector": "Healthcare",
       "latest_growth_pct": 3.97,
       "avg_growth_pct": -0.24,
@@ -3865,7 +3931,7 @@
     },
     {
       "ticker": "PFE",
-      "name": "Pfizer, Inc.",
+      "name": "Pfizer Inc.",
       "sector": "Healthcare",
       "latest_growth_pct": -1.73,
       "avg_growth_pct": -12.0,
@@ -3874,19 +3940,10 @@
     },
     {
       "ticker": "KO",
-      "name": "Coca-Cola Company (The)",
+      "name": "The Coca-Cola Company",
       "sector": "Consumer Defensive",
       "latest_growth_pct": 1.91,
       "avg_growth_pct": 3.68,
-      "pattern_matches": [],
-      "best_pattern": null
-    },
-    {
-      "ticker": "6902.T",
-      "name": "DENSO Corporation",
-      "sector": "Consumer Cyclical",
-      "latest_growth_pct": 3.91,
-      "avg_growth_pct": -10.74,
       "pattern_matches": [],
       "best_pattern": null
     },

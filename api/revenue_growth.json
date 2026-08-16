@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-09 22:38:52",
-  "total_count": 182,
+  "generated_at": "2026-08-16 22:10:59",
+  "total_count": 183,
   "stocks": [
     {
       "ticker": "7203.T",
@@ -1324,7 +1324,7 @@
     },
     {
       "ticker": "JPM",
-      "name": "JP Morgan Chase & Co.",
+      "name": "JPMorgan Chase & Co.",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
       "currency": "USD",
@@ -1390,7 +1390,7 @@
     },
     {
       "ticker": "PG",
-      "name": "Procter & Gamble Company (The)",
+      "name": "The Procter & Gamble Company",
       "sector": "Consumer Defensive",
       "industry": "Household & Personal Products",
       "currency": "USD",
@@ -1423,7 +1423,7 @@
     },
     {
       "ticker": "HD",
-      "name": "Home Depot, Inc. (The)",
+      "name": "The Home Depot, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
       "currency": "USD",
@@ -1489,7 +1489,7 @@
     },
     {
       "ticker": "DIS",
-      "name": "Walt Disney Company (The)",
+      "name": "The Walt Disney Company",
       "sector": "Communication Services",
       "industry": "Entertainment",
       "currency": "USD",
@@ -1522,7 +1522,7 @@
     },
     {
       "ticker": "PFE",
-      "name": "Pfizer, Inc.",
+      "name": "Pfizer Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "currency": "USD",
@@ -1588,7 +1588,7 @@
     },
     {
       "ticker": "KO",
-      "name": "Coca-Cola Company (The)",
+      "name": "The Coca-Cola Company",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "currency": "USD",
@@ -1785,6 +1785,39 @@
       "avg_growth_pct": 15.36
     },
     {
+      "ticker": "4689.T",
+      "name": "LY Corporation",
+      "sector": "Consumer Cyclical",
+      "industry": "Internet Retail",
+      "currency": "JPY",
+      "revenue_unit": "億円",
+      "revenues": [
+        {
+          "date": "2023-03-31",
+          "revenue_jpy": 16723
+        },
+        {
+          "date": "2024-03-31",
+          "revenue_jpy": 18146
+        },
+        {
+          "date": "2025-03-31",
+          "revenue_jpy": 19174
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 20363
+        }
+      ],
+      "growth_rates": [
+        8.51,
+        5.67,
+        6.2
+      ],
+      "latest_growth_pct": 6.2,
+      "avg_growth_pct": 6.79
+    },
+    {
       "ticker": "3659.T",
       "name": "NEXON Co., Ltd.",
       "sector": "Communication Services",
@@ -1901,20 +1934,20 @@
         },
         {
           "date": "2025-03-31",
-          "revenue_jpy": 37329
+          "revenue_jpy": 71617
         },
         {
           "date": "2026-03-31",
-          "revenue_jpy": 38788
+          "revenue_jpy": 75399
         }
       ],
       "growth_rates": [
         11.61,
-        -47.75,
-        3.91
+        0.24,
+        5.28
       ],
-      "latest_growth_pct": 3.91,
-      "avg_growth_pct": -10.74
+      "latest_growth_pct": 5.28,
+      "avg_growth_pct": 5.71
     },
     {
       "ticker": "7741.T",
@@ -4261,7 +4294,7 @@
     },
     {
       "ticker": "PM",
-      "name": "Philip Morris International Inc",
+      "name": "Philip Morris International Inc.",
       "sector": "Consumer Defensive",
       "industry": "Tobacco",
       "currency": "USD",
@@ -4426,7 +4459,7 @@
     },
     {
       "ticker": "GS",
-      "name": "Goldman Sachs Group, Inc. (The)",
+      "name": "The Goldman Sachs Group, Inc.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
       "currency": "USD",
@@ -5515,7 +5548,7 @@
     },
     {
       "ticker": "TMO",
-      "name": "Thermo Fisher Scientific Inc",
+      "name": "Thermo Fisher Scientific Inc.",
       "sector": "Healthcare",
       "industry": "Diagnostics & Research",
       "currency": "USD",
@@ -5812,7 +5845,7 @@
     },
     {
       "ticker": "MDT",
-      "name": "Medtronic plc.",
+      "name": "Medtronic plc",
       "sector": "Healthcare",
       "industry": "Medical Devices",
       "currency": "USD",
