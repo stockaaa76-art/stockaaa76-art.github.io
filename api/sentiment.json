@@ -1,14 +1,14 @@
 {
   "composite": {
-    "score": 54.6,
-    "label": "中立",
-    "signal": "neutral"
+    "score": 62.2,
+    "label": "強気",
+    "signal": "greed"
   },
   "vix": {
-    "value": 15.84,
-    "change": 4.28,
-    "score": 55,
-    "label": "中立",
+    "value": 14.89,
+    "change": -6.0,
+    "score": 70,
+    "label": "強気",
     "flow_level": "normal",
     "flow_label": null
   },
@@ -16,33 +16,32 @@
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 159.57,
-      "change": 0.22,
-      "score": 61.1
+      "value": 158.05,
+      "change": -0.81,
+      "score": 55.9
     },
     "gold": {
       "name": "金先物",
-      "value": 4389.5,
-      "change": -0.64,
-      "score": 51.9
+      "value": 4577.5,
+      "change": 4.84,
+      "score": 35.5
     },
     "oil": {
       "name": "原油WTI",
-      "value": 84.42,
-      "change": -0.09,
-      "score": 50.2
+      "value": 84.38,
+      "change": -0.66,
+      "score": 51.3
     },
     "us10y": {
       "name": "米10年債利回り",
-      "value": 4.71,
-      "change": -0.38,
-      "score": 53.0
+      "value": 4.65,
+      "change": -1.13,
+      "score": 59.0
     },
-    "avg_score": 54.1
+    "avg_score": 50.4
   },
   "market_volume": {
     "dates": [
-      "2026-05-25",
       "2026-05-26",
       "2026-05-27",
       "2026-05-28",
@@ -101,10 +100,10 @@
       "2026-08-13",
       "2026-08-14",
       "2026-08-17",
-      "2026-08-18"
+      "2026-08-18",
+      "2026-08-19"
     ],
     "volumes": [
-      1441305669,
       1394457287,
       1452756274,
       1572388643,
@@ -163,15 +162,16 @@
       1473926620,
       1500805110,
       1224687958,
-      1342837479
+      1340290721,
+      1289554904
     ],
-    "latest": 1342837479,
-    "ma25": 1532936237,
-    "latest_vs_ma25_pct": 87.6,
+    "latest": 1289554904,
+    "ma25": 1536376404,
+    "latest_vs_ma25_pct": 83.9,
     "ticker_count": 207,
     "note": "JP個別株(.T)の日次出来高合算。市場全体の活況度・出来高急増日は転換点になりやすい。"
   },
   "vix_flow_level": "normal",
   "vix_flow_label": null,
-  "generated_at": "2026-08-18 21:50:52"
+  "generated_at": "2026-08-19 22:22:15"
 }
