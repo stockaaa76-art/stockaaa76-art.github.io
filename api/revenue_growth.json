@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-16 22:10:59",
-  "total_count": 183,
+  "generated_at": "2026-08-23 22:11:08",
+  "total_count": 182,
   "stocks": [
     {
       "ticker": "7203.T",
@@ -1324,7 +1324,7 @@
     },
     {
       "ticker": "JPM",
-      "name": "JPMorgan Chase & Co.",
+      "name": "JP Morgan Chase & Co.",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
       "currency": "USD",
@@ -1390,7 +1390,7 @@
     },
     {
       "ticker": "PG",
-      "name": "The Procter & Gamble Company",
+      "name": "Procter & Gamble Company (The)",
       "sector": "Consumer Defensive",
       "industry": "Household & Personal Products",
       "currency": "USD",
@@ -1423,7 +1423,7 @@
     },
     {
       "ticker": "HD",
-      "name": "The Home Depot, Inc.",
+      "name": "Home Depot, Inc. (The)",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
       "currency": "USD",
@@ -1489,7 +1489,7 @@
     },
     {
       "ticker": "DIS",
-      "name": "The Walt Disney Company",
+      "name": "Walt Disney Company (The)",
       "sector": "Communication Services",
       "industry": "Entertainment",
       "currency": "USD",
@@ -1522,7 +1522,7 @@
     },
     {
       "ticker": "PFE",
-      "name": "Pfizer Inc.",
+      "name": "Pfizer, Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "currency": "USD",
@@ -1588,7 +1588,7 @@
     },
     {
       "ticker": "KO",
-      "name": "The Coca-Cola Company",
+      "name": "Coca-Cola Company (The)",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "currency": "USD",
@@ -1736,20 +1736,20 @@
         },
         {
           "date": "2025-03-31",
-          "revenue_jpy": 38093
+          "revenue_jpy": 36452
         },
         {
           "date": "2026-03-31",
-          "revenue_jpy": 43169
+          "revenue_jpy": 42218
         }
       ],
       "growth_rates": [
         11.27,
-        28.22,
-        13.33
+        22.69,
+        15.82
       ],
-      "latest_growth_pct": 13.33,
-      "avg_growth_pct": 17.61
+      "latest_growth_pct": 15.82,
+      "avg_growth_pct": 16.59
     },
     {
       "ticker": "2413.T",
@@ -1783,39 +1783,6 @@
       ],
       "latest_growth_pct": 23.31,
       "avg_growth_pct": 15.36
-    },
-    {
-      "ticker": "4689.T",
-      "name": "LY Corporation",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
-      "currency": "JPY",
-      "revenue_unit": "億円",
-      "revenues": [
-        {
-          "date": "2023-03-31",
-          "revenue_jpy": 16723
-        },
-        {
-          "date": "2024-03-31",
-          "revenue_jpy": 18146
-        },
-        {
-          "date": "2025-03-31",
-          "revenue_jpy": 19174
-        },
-        {
-          "date": "2026-03-31",
-          "revenue_jpy": 20363
-        }
-      ],
-      "growth_rates": [
-        8.51,
-        5.67,
-        6.2
-      ],
-      "latest_growth_pct": 6.2,
-      "avg_growth_pct": 6.79
     },
     {
       "ticker": "3659.T",
@@ -3056,20 +3023,20 @@
         },
         {
           "date": "2025-03-31",
-          "revenue_jpy": 63758
+          "revenue_jpy": 130644
         },
         {
           "date": "2026-03-31",
-          "revenue_jpy": 78120
+          "revenue_jpy": 149353
         }
       ],
       "growth_rates": [
         25.39,
-        0.59,
-        22.53
+        106.11,
+        14.32
       ],
-      "latest_growth_pct": 22.53,
-      "avg_growth_pct": 16.17
+      "latest_growth_pct": 14.32,
+      "avg_growth_pct": 48.61
     },
     {
       "ticker": "8630.T",
@@ -4294,7 +4261,7 @@
     },
     {
       "ticker": "PM",
-      "name": "Philip Morris International Inc.",
+      "name": "Philip Morris International Inc",
       "sector": "Consumer Defensive",
       "industry": "Tobacco",
       "currency": "USD",
@@ -4459,7 +4426,7 @@
     },
     {
       "ticker": "GS",
-      "name": "The Goldman Sachs Group, Inc.",
+      "name": "Goldman Sachs Group, Inc. (The)",
       "sector": "Financial Services",
       "industry": "Capital Markets",
       "currency": "USD",
@@ -5548,7 +5515,7 @@
     },
     {
       "ticker": "TMO",
-      "name": "Thermo Fisher Scientific Inc.",
+      "name": "Thermo Fisher Scientific Inc",
       "sector": "Healthcare",
       "industry": "Diagnostics & Research",
       "currency": "USD",
@@ -5845,7 +5812,7 @@
     },
     {
       "ticker": "MDT",
-      "name": "Medtronic plc",
+      "name": "Medtronic plc.",
       "sector": "Healthcare",
       "industry": "Medical Devices",
       "currency": "USD",
