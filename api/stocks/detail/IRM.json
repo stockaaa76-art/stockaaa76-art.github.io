@@ -1,0 +1,38 @@
+{
+ "sector": "Real Estate",
+ "updated_at": "2026-09-06 23:36",
+ "valuation": {
+  "sector_per_median": null,
+  "sector_per_p90": null,
+  "sector_pbr_median": null,
+  "sector_pbr_p90": null
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 8014164770.0,
+   "next_year": 8711015960.0
+  },
+  "eps": {
+   "cur_year": 2.48114,
+   "next_year": 2.72817
+  },
+  "growth": {
+   "next_year": 0.0996,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 146.2,
+   "high": 155.0,
+   "low": 140.0
+  },
+  "ex_dividend_date": "2026-09-14",
+  "ex_dividend_schedule": [
+   "2026-09-14",
+   "2026-12-14",
+   "2027-03-15",
+   "2027-06-14"
+  ],
+  "dividend_frequency": "四半期"
+ },
+ "theoretical_price": null
+}

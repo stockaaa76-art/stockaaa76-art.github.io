@@ -1,0 +1,35 @@
+{
+ "sector": "Consumer Defensive",
+ "updated_at": "2026-09-06 23:36",
+ "valuation": {
+  "sector_per_median": null,
+  "sector_per_p90": null,
+  "sector_pbr_median": null,
+  "sector_pbr_p90": null
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 0.0,
+   "next_year": 0.0
+  },
+  "eps": {
+   "cur_year": null,
+   "next_year": null
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": null,
+   "high": null,
+   "low": null
+  },
+  "ex_dividend_date": "2027-03-30",
+  "ex_dividend_schedule": [
+   "2027-03-30"
+  ],
+  "dividend_frequency": "年次"
+ },
+ "theoretical_price": null
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23 22:11:08",
+  "generated_at": "2026-09-06 23:32:36",
   "total_sectors": 11,
   "sectors": {
     "Consumer Cyclical": {
@@ -72,7 +72,7 @@
         },
         {
           "ticker": "HD",
-          "name": "Home Depot, Inc. (The)",
+          "name": "The Home Depot, Inc.",
           "latest_growth_pct": 3.2,
           "vs_sector_avg": -0.15,
           "expansion_score": 0.95
@@ -415,7 +415,7 @@
         },
         {
           "ticker": "DIS",
-          "name": "Walt Disney Company (The)",
+          "name": "The Walt Disney Company",
           "latest_growth_pct": 3.4,
           "vs_sector_avg": -8.89,
           "expansion_score": 0.28
@@ -460,168 +460,168 @@
     "Financial Services": {
       "sector": "Financial Services",
       "stock_count": 23,
-      "sector_avg_growth_pct": 10.89,
+      "sector_avg_growth_pct": 11.07,
       "stocks": [
         {
           "ticker": "8354.T",
           "name": "Fukuoka Financial Group, Inc.",
           "latest_growth_pct": 38.06,
-          "vs_sector_avg": 27.17,
-          "expansion_score": 3.49
+          "vs_sector_avg": 26.99,
+          "expansion_score": 3.44
         },
         {
           "ticker": "8473.T",
           "name": "SBI Holdings, Inc.",
           "latest_growth_pct": 31.37,
-          "vs_sector_avg": 20.48,
-          "expansion_score": 2.88
+          "vs_sector_avg": 20.3,
+          "expansion_score": 2.83
         },
         {
           "ticker": "8308.T",
           "name": "Resona Holdings, Inc.",
           "latest_growth_pct": 16.73,
-          "vs_sector_avg": 5.84,
-          "expansion_score": 1.54
+          "vs_sector_avg": 5.66,
+          "expansion_score": 1.51
         },
         {
           "ticker": "MA",
           "name": "Mastercard Incorporated",
           "latest_growth_pct": 16.37,
-          "vs_sector_avg": 5.48,
-          "expansion_score": 1.5
+          "vs_sector_avg": 5.3,
+          "expansion_score": 1.48
         },
         {
           "ticker": "8411.T",
           "name": "Mizuho Financial Group, Inc.",
           "latest_growth_pct": 15.82,
-          "vs_sector_avg": 4.93,
-          "expansion_score": 1.45
+          "vs_sector_avg": 4.75,
+          "expansion_score": 1.43
         },
         {
           "ticker": "8750.T",
           "name": "Daiichi Life Group, Inc.",
           "latest_growth_pct": 15.58,
-          "vs_sector_avg": 4.69,
-          "expansion_score": 1.43
+          "vs_sector_avg": 4.51,
+          "expansion_score": 1.41
         },
         {
           "ticker": "MS",
           "name": "Morgan Stanley",
           "latest_growth_pct": 14.41,
-          "vs_sector_avg": 3.52,
-          "expansion_score": 1.32
+          "vs_sector_avg": 3.34,
+          "expansion_score": 1.3
         },
         {
           "ticker": "8316.T",
           "name": "Sumitomo Mitsui Financial Group, Inc.",
           "latest_growth_pct": 14.32,
-          "vs_sector_avg": 3.43,
-          "expansion_score": 1.31
+          "vs_sector_avg": 3.25,
+          "expansion_score": 1.29
         },
         {
           "ticker": "8725.T",
           "name": "MS&AD Insurance Group Holdings, Inc.",
           "latest_growth_pct": 14.32,
-          "vs_sector_avg": 3.43,
-          "expansion_score": 1.31
+          "vs_sector_avg": 3.25,
+          "expansion_score": 1.29
         },
         {
           "ticker": "8601.T",
           "name": "Daiwa Securities Group Inc.",
           "latest_growth_pct": 13.69,
-          "vs_sector_avg": 2.8,
-          "expansion_score": 1.26
+          "vs_sector_avg": 2.62,
+          "expansion_score": 1.24
         },
         {
           "ticker": "V",
           "name": "Visa Inc.",
           "latest_growth_pct": 11.42,
-          "vs_sector_avg": 0.53,
-          "expansion_score": 1.05
+          "vs_sector_avg": 0.35,
+          "expansion_score": 1.03
         },
         {
           "ticker": "8604.T",
           "name": "Nomura Holdings, Inc.",
           "latest_growth_pct": 10.8,
-          "vs_sector_avg": -0.09,
-          "expansion_score": 0.99
+          "vs_sector_avg": -0.27,
+          "expansion_score": 0.98
         },
         {
           "ticker": "8306.T",
           "name": "Mitsubishi UFJ Financial Group, Inc.",
           "latest_growth_pct": 9.98,
-          "vs_sector_avg": -0.91,
-          "expansion_score": 0.92
+          "vs_sector_avg": -1.09,
+          "expansion_score": 0.9
         },
         {
           "ticker": "7182.T",
           "name": "JAPAN POST BANK Co., Ltd.",
           "latest_growth_pct": 9.18,
-          "vs_sector_avg": -1.71,
-          "expansion_score": 0.84
+          "vs_sector_avg": -1.89,
+          "expansion_score": 0.83
         },
         {
           "ticker": "GS",
-          "name": "Goldman Sachs Group, Inc. (The)",
+          "name": "The Goldman Sachs Group, Inc.",
           "latest_growth_pct": 8.79,
-          "vs_sector_avg": -2.1,
-          "expansion_score": 0.81
+          "vs_sector_avg": -2.28,
+          "expansion_score": 0.79
         },
         {
           "ticker": "JPM",
-          "name": "JP Morgan Chase & Co.",
+          "name": "JPMorgan Chase & Co.",
           "latest_growth_pct": 7.32,
-          "vs_sector_avg": -3.57,
-          "expansion_score": 0.67
+          "vs_sector_avg": -3.75,
+          "expansion_score": 0.66
         },
         {
           "ticker": "BAC",
           "name": "Bank of America Corporation",
           "latest_growth_pct": 6.81,
-          "vs_sector_avg": -4.08,
-          "expansion_score": 0.63
+          "vs_sector_avg": -4.26,
+          "expansion_score": 0.62
         },
         {
           "ticker": "8766.T",
           "name": "Tokio Marine Holdings, Inc.",
           "latest_growth_pct": 6.51,
-          "vs_sector_avg": -4.38,
-          "expansion_score": 0.6
+          "vs_sector_avg": -4.56,
+          "expansion_score": 0.59
         },
         {
           "ticker": "PYPL",
           "name": "PayPal Holdings, Inc.",
           "latest_growth_pct": 4.42,
-          "vs_sector_avg": -6.47,
-          "expansion_score": 0.41
+          "vs_sector_avg": -6.65,
+          "expansion_score": 0.4
         },
         {
           "ticker": "8309.T",
           "name": "Sumitomo Mitsui Trust Group, Inc.",
           "latest_growth_pct": 2.5,
-          "vs_sector_avg": -8.39,
+          "vs_sector_avg": -8.57,
           "expansion_score": 0.23
+        },
+        {
+          "ticker": "6178.T",
+          "name": "Japan Post Holdings Co., Ltd.",
+          "latest_growth_pct": -0.24,
+          "vs_sector_avg": -11.31,
+          "expansion_score": -0.02
         },
         {
           "ticker": "BRK-B",
           "name": "Berkshire Hathaway Inc.",
           "latest_growth_pct": -3.23,
-          "vs_sector_avg": -14.12,
-          "expansion_score": -0.3
-        },
-        {
-          "ticker": "6178.T",
-          "name": "Japan Post Holdings Co., Ltd.",
-          "latest_growth_pct": -4.29,
-          "vs_sector_avg": -15.18,
-          "expansion_score": -0.39
+          "vs_sector_avg": -14.3,
+          "expansion_score": -0.29
         },
         {
           "ticker": "8630.T",
           "name": "Sompo Holdings, Inc.",
           "latest_growth_pct": -10.35,
-          "vs_sector_avg": -21.24,
-          "expansion_score": -0.95
+          "vs_sector_avg": -21.42,
+          "expansion_score": -0.94
         }
       ]
     },
@@ -684,196 +684,196 @@
     "Industrials": {
       "sector": "Industrials",
       "stock_count": 27,
-      "sector_avg_growth_pct": 2.77,
+      "sector_avg_growth_pct": 3.39,
       "stocks": [
+        {
+          "ticker": "8015.T",
+          "name": "Toyota Tsusho Corporation",
+          "latest_growth_pct": 12.15,
+          "vs_sector_avg": 8.76,
+          "expansion_score": 3.58
+        },
         {
           "ticker": "9143.T",
           "name": "SG Holdings Co.,Ltd.",
           "latest_growth_pct": 11.19,
-          "vs_sector_avg": 8.42,
-          "expansion_score": 4.05
+          "vs_sector_avg": 7.8,
+          "expansion_score": 3.3
         },
         {
           "ticker": "6594.T",
           "name": "Nidec Corporation",
           "latest_growth_pct": 11.11,
-          "vs_sector_avg": 8.34,
-          "expansion_score": 4.02
+          "vs_sector_avg": 7.72,
+          "expansion_score": 3.28
         },
         {
           "ticker": "5631.T",
           "name": "The Japan Steel Works, Ltd.",
           "latest_growth_pct": 10.58,
-          "vs_sector_avg": 7.81,
-          "expansion_score": 3.83
+          "vs_sector_avg": 7.19,
+          "expansion_score": 3.12
+        },
+        {
+          "ticker": "2768.T",
+          "name": "Sojitz Corporation",
+          "latest_growth_pct": 9.87,
+          "vs_sector_avg": 6.48,
+          "expansion_score": 2.91
         },
         {
           "ticker": "9022.T",
           "name": "Central Japan Railway Company",
           "latest_growth_pct": 9.52,
-          "vs_sector_avg": 6.75,
-          "expansion_score": 3.44
+          "vs_sector_avg": 6.13,
+          "expansion_score": 2.81
         },
         {
           "ticker": "6954.T",
           "name": "Fanuc Corporation",
           "latest_growth_pct": 7.62,
-          "vs_sector_avg": 4.85,
-          "expansion_score": 2.75
+          "vs_sector_avg": 4.23,
+          "expansion_score": 2.25
         },
         {
           "ticker": "9020.T",
           "name": "East Japan Railway Company",
           "latest_growth_pct": 6.83,
-          "vs_sector_avg": 4.06,
-          "expansion_score": 2.47
+          "vs_sector_avg": 3.44,
+          "expansion_score": 2.01
         },
         {
           "ticker": "6503.T",
           "name": "Mitsubishi Electric Corporation",
           "latest_growth_pct": 6.76,
-          "vs_sector_avg": 3.99,
-          "expansion_score": 2.44
+          "vs_sector_avg": 3.37,
+          "expansion_score": 1.99
         },
         {
           "ticker": "5706.T",
           "name": "Mitsui Kinzoku Company, Limited",
           "latest_growth_pct": 6.49,
-          "vs_sector_avg": 3.72,
-          "expansion_score": 2.35
+          "vs_sector_avg": 3.1,
+          "expansion_score": 1.91
         },
         {
           "ticker": "6273.T",
           "name": "SMC Corporation",
           "latest_growth_pct": 6.36,
-          "vs_sector_avg": 3.59,
-          "expansion_score": 2.3
+          "vs_sector_avg": 2.97,
+          "expansion_score": 1.88
         },
         {
           "ticker": "9064.T",
           "name": "Yamato Holdings Co., Ltd.",
           "latest_growth_pct": 5.84,
-          "vs_sector_avg": 3.07,
-          "expansion_score": 2.11
+          "vs_sector_avg": 2.45,
+          "expansion_score": 1.72
         },
         {
           "ticker": "6367.T",
           "name": "Daikin Industries,Ltd.",
           "latest_growth_pct": 5.53,
-          "vs_sector_avg": 2.76,
-          "expansion_score": 2.0
+          "vs_sector_avg": 2.14,
+          "expansion_score": 1.63
         },
         {
           "ticker": "4901.T",
           "name": "FUJIFILM Holdings Corporation",
           "latest_growth_pct": 5.04,
-          "vs_sector_avg": 2.27,
-          "expansion_score": 1.82
-        },
-        {
-          "ticker": "2768.T",
-          "name": "Sojitz Corporation",
-          "latest_growth_pct": 3.94,
-          "vs_sector_avg": 1.17,
-          "expansion_score": 1.42
+          "vs_sector_avg": 1.65,
+          "expansion_score": 1.49
         },
         {
           "ticker": "9025.T",
           "name": "Konoike Transport Co.,Ltd.",
           "latest_growth_pct": 3.07,
-          "vs_sector_avg": 0.3,
-          "expansion_score": 1.11
+          "vs_sector_avg": -0.32,
+          "expansion_score": 0.91
         },
         {
           "ticker": "9104.T",
           "name": "Mitsui O.S.K. Lines, Ltd.",
           "latest_growth_pct": 2.79,
-          "vs_sector_avg": 0.02,
-          "expansion_score": 1.01
+          "vs_sector_avg": -0.6,
+          "expansion_score": 0.82
         },
         {
           "ticker": "6305.T",
           "name": "Hitachi Construction Machinery Co., Ltd.",
           "latest_growth_pct": 2.49,
-          "vs_sector_avg": -0.28,
-          "expansion_score": 0.9
+          "vs_sector_avg": -0.9,
+          "expansion_score": 0.73
         },
         {
           "ticker": "8058.T",
           "name": "Mitsubishi Corporation",
           "latest_growth_pct": 1.6,
-          "vs_sector_avg": -1.17,
-          "expansion_score": 0.58
-        },
-        {
-          "ticker": "8015.T",
-          "name": "Toyota Tsusho Corporation",
-          "latest_growth_pct": 1.18,
-          "vs_sector_avg": -1.59,
-          "expansion_score": 0.43
+          "vs_sector_avg": -1.79,
+          "expansion_score": 0.47
         },
         {
           "ticker": "6506.T",
           "name": "YASKAWA Electric Corporation",
           "latest_growth_pct": 0.84,
-          "vs_sector_avg": -1.93,
-          "expansion_score": 0.3
+          "vs_sector_avg": -2.55,
+          "expansion_score": 0.25
         },
         {
           "ticker": "8001.T",
           "name": "ITOCHU Corporation",
           "latest_growth_pct": 0.67,
-          "vs_sector_avg": -2.1,
-          "expansion_score": 0.24
+          "vs_sector_avg": -2.72,
+          "expansion_score": 0.2
         },
         {
           "ticker": "6326.T",
           "name": "Kubota Corporation",
           "latest_growth_pct": 0.09,
-          "vs_sector_avg": -2.68,
+          "vs_sector_avg": -3.3,
           "expansion_score": 0.03
         },
         {
           "ticker": "5943.T",
           "name": "Noritz Corporation",
           "latest_growth_pct": -0.1,
-          "vs_sector_avg": -2.87,
-          "expansion_score": -0.04
+          "vs_sector_avg": -3.49,
+          "expansion_score": -0.03
         },
         {
           "ticker": "6474.T",
           "name": "Nachi-Fujikoshi Corp.",
           "latest_growth_pct": -1.63,
-          "vs_sector_avg": -4.4,
-          "expansion_score": -0.59
+          "vs_sector_avg": -5.02,
+          "expansion_score": -0.48
         },
         {
           "ticker": "8031.T",
           "name": "Mitsui & Co., Ltd.",
           "latest_growth_pct": -4.55,
-          "vs_sector_avg": -7.32,
-          "expansion_score": -1.65
+          "vs_sector_avg": -7.94,
+          "expansion_score": -1.34
         },
         {
           "ticker": "9101.T",
           "name": "Nippon Yusen Kabushiki Kaisha",
           "latest_growth_pct": -6.38,
-          "vs_sector_avg": -9.15,
-          "expansion_score": -2.31
+          "vs_sector_avg": -9.77,
+          "expansion_score": -1.88
         },
         {
           "ticker": "2432.T",
           "name": "DeNA Co., Ltd.",
           "latest_growth_pct": -9.88,
-          "vs_sector_avg": -12.65,
-          "expansion_score": -3.57
+          "vs_sector_avg": -13.27,
+          "expansion_score": -2.91
         },
         {
           "ticker": "7011.T",
           "name": "Mitsubishi Heavy Industries, Ltd.",
           "latest_growth_pct": -12.32,
-          "vs_sector_avg": -15.09,
-          "expansion_score": -4.45
+          "vs_sector_avg": -15.71,
+          "expansion_score": -3.63
         }
       ]
     },
@@ -940,7 +940,7 @@
         },
         {
           "ticker": "MDT",
-          "name": "Medtronic plc.",
+          "name": "Medtronic plc",
           "latest_growth_pct": 8.36,
           "vs_sector_avg": -0.02,
           "expansion_score": 1.0
@@ -996,7 +996,7 @@
         },
         {
           "ticker": "TMO",
-          "name": "Thermo Fisher Scientific Inc",
+          "name": "Thermo Fisher Scientific Inc.",
           "latest_growth_pct": 3.97,
           "vs_sector_avg": -4.41,
           "expansion_score": 0.47
@@ -1038,7 +1038,7 @@
         },
         {
           "ticker": "PFE",
-          "name": "Pfizer, Inc.",
+          "name": "Pfizer Inc.",
           "latest_growth_pct": -1.73,
           "vs_sector_avg": -10.11,
           "expansion_score": -0.21
@@ -1066,7 +1066,7 @@
         },
         {
           "ticker": "PM",
-          "name": "Philip Morris International Inc",
+          "name": "Philip Morris International Inc.",
           "latest_growth_pct": 7.41,
           "vs_sector_avg": 5.19,
           "expansion_score": 3.34
@@ -1115,14 +1115,14 @@
         },
         {
           "ticker": "PG",
-          "name": "Procter & Gamble Company (The)",
+          "name": "The Procter & Gamble Company",
           "latest_growth_pct": 3.33,
           "vs_sector_avg": 1.11,
           "expansion_score": 1.5
         },
         {
           "ticker": "KO",
-          "name": "Coca-Cola Company (The)",
+          "name": "The Coca-Cola Company",
           "latest_growth_pct": 1.91,
           "vs_sector_avg": -0.31,
           "expansion_score": 0.86

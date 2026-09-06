@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23 22:11:08",
+  "generated_at": "2026-09-06 23:32:36",
   "total_count": 182,
   "stocks": [
     {
@@ -1324,7 +1324,7 @@
     },
     {
       "ticker": "JPM",
-      "name": "JP Morgan Chase & Co.",
+      "name": "JPMorgan Chase & Co.",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
       "currency": "USD",
@@ -1390,7 +1390,7 @@
     },
     {
       "ticker": "PG",
-      "name": "Procter & Gamble Company (The)",
+      "name": "The Procter & Gamble Company",
       "sector": "Consumer Defensive",
       "industry": "Household & Personal Products",
       "currency": "USD",
@@ -1423,7 +1423,7 @@
     },
     {
       "ticker": "HD",
-      "name": "Home Depot, Inc. (The)",
+      "name": "The Home Depot, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
       "currency": "USD",
@@ -1489,7 +1489,7 @@
     },
     {
       "ticker": "DIS",
-      "name": "Walt Disney Company (The)",
+      "name": "The Walt Disney Company",
       "sector": "Communication Services",
       "industry": "Entertainment",
       "currency": "USD",
@@ -1522,7 +1522,7 @@
     },
     {
       "ticker": "PFE",
-      "name": "Pfizer, Inc.",
+      "name": "Pfizer Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "currency": "USD",
@@ -1588,7 +1588,7 @@
     },
     {
       "ticker": "KO",
-      "name": "Coca-Cola Company (The)",
+      "name": "The Coca-Cola Company",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "currency": "USD",
@@ -2580,7 +2580,7 @@
       "ticker": "9503.T",
       "name": "The Kansai Electric Power Company, Incorporated",
       "sector": "Utilities",
-      "industry": "Utilities - Renewable",
+      "industry": "Utilities - Regulated Electric",
       "currency": "JPY",
       "revenue_unit": "億円",
       "revenues": [
@@ -3339,7 +3339,7 @@
       "ticker": "3003.T",
       "name": "Hulic Co., Ltd.",
       "sector": "Real Estate",
-      "industry": "Real Estate Services",
+      "industry": "Real Estate - Diversified",
       "currency": "JPY",
       "revenue_unit": "億円",
       "revenues": [
@@ -3372,7 +3372,7 @@
       "ticker": "3231.T",
       "name": "Nomura Real Estate Holdings, Inc.",
       "sector": "Real Estate",
-      "industry": "Real Estate Services",
+      "industry": "Real Estate - Development",
       "currency": "JPY",
       "revenue_unit": "億円",
       "revenues": [
@@ -4261,7 +4261,7 @@
     },
     {
       "ticker": "PM",
-      "name": "Philip Morris International Inc",
+      "name": "Philip Morris International Inc.",
       "sector": "Consumer Defensive",
       "industry": "Tobacco",
       "currency": "USD",
@@ -4426,7 +4426,7 @@
     },
     {
       "ticker": "GS",
-      "name": "Goldman Sachs Group, Inc. (The)",
+      "name": "The Goldman Sachs Group, Inc.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
       "currency": "USD",
@@ -4664,10 +4664,6 @@
       "revenue_unit": "億円",
       "revenues": [
         {
-          "date": "2022-03-31",
-          "revenue_jpy": 80280
-        },
-        {
           "date": "2023-03-31",
           "revenue_jpy": 98485
         },
@@ -4678,15 +4674,19 @@
         {
           "date": "2025-03-31",
           "revenue_jpy": 103095
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 115619
         }
       ],
       "growth_rates": [
-        22.68,
         3.46,
-        1.18
+        1.18,
+        12.15
       ],
-      "latest_growth_pct": 1.18,
-      "avg_growth_pct": 9.11
+      "latest_growth_pct": 12.15,
+      "avg_growth_pct": 5.6
     },
     {
       "ticker": "2768.T",
@@ -4696,10 +4696,6 @@
       "currency": "JPY",
       "revenue_unit": "億円",
       "revenues": [
-        {
-          "date": "2022-03-31",
-          "revenue_jpy": 21007
-        },
         {
           "date": "2023-03-31",
           "revenue_jpy": 24798
@@ -4711,15 +4707,19 @@
         {
           "date": "2025-03-31",
           "revenue_jpy": 25097
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 27573
         }
       ],
       "growth_rates": [
-        18.05,
         -2.63,
-        3.94
+        3.94,
+        9.87
       ],
-      "latest_growth_pct": 3.94,
-      "avg_growth_pct": 6.45
+      "latest_growth_pct": 9.87,
+      "avg_growth_pct": 3.73
     },
     {
       "ticker": "9025.T",
@@ -5286,7 +5286,7 @@
       "ticker": "4543.T",
       "name": "Terumo Corporation",
       "sector": "Healthcare",
-      "industry": "Medical Instruments & Supplies",
+      "industry": "Medical Devices",
       "currency": "JPY",
       "revenue_unit": "億円",
       "revenues": [
@@ -5357,10 +5357,6 @@
       "revenue_unit": "億円",
       "revenues": [
         {
-          "date": "2022-03-31",
-          "revenue_jpy": 112647
-        },
-        {
           "date": "2023-03-31",
           "revenue_jpy": 111385
         },
@@ -5371,15 +5367,19 @@
         {
           "date": "2025-03-31",
           "revenue_jpy": 114683
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 114405
         }
       ],
       "growth_rates": [
-        -1.12,
         7.57,
-        -4.29
+        -4.29,
+        -0.24
       ],
-      "latest_growth_pct": -4.29,
-      "avg_growth_pct": 0.72
+      "latest_growth_pct": -0.24,
+      "avg_growth_pct": 1.01
     },
     {
       "ticker": "LLY",
@@ -5515,7 +5515,7 @@
     },
     {
       "ticker": "TMO",
-      "name": "Thermo Fisher Scientific Inc",
+      "name": "Thermo Fisher Scientific Inc.",
       "sector": "Healthcare",
       "industry": "Diagnostics & Research",
       "currency": "USD",
@@ -5812,7 +5812,7 @@
     },
     {
       "ticker": "MDT",
-      "name": "Medtronic plc.",
+      "name": "Medtronic plc",
       "sector": "Healthcare",
       "industry": "Medical Devices",
       "currency": "USD",

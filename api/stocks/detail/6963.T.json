@@ -1,29 +1,29 @@
 {
  "sector": "日本-電機・精密・半導体",
- "updated_at": "2026-06-30 21:27",
+ "updated_at": "2026-09-06 23:36",
  "valuation": {
-  "sector_per_median": 41.2,
-  "sector_per_p90": 65.1,
-  "sector_pbr_median": 3.68,
-  "sector_pbr_p90": 29.49
+  "sector_per_median": 33.2,
+  "sector_per_p90": 54.1,
+  "sector_pbr_median": 2.92,
+  "sector_pbr_p90": 12.41
  },
  "forecast": {
   "revenue": {
-   "cur_year": 509357164930.0,
-   "next_year": 532875597920.0
+   "cur_year": 535689425620.0,
+   "next_year": 571012625910.0
   },
   "eps": {
-   "cur_year": 89.63585,
-   "next_year": 133.52176
+   "cur_year": 112.57706,
+   "next_year": 167.7553
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 4260.0,
-   "high": 6500.0,
-   "low": 2100.0
+   "mean": 5800.0,
+   "high": 8300.0,
+   "low": 3500.0
   },
   "ex_dividend_date": "2026-09-29",
   "ex_dividend_schedule": [
@@ -34,27 +34,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 1792.72,
-   "mid": 3693.0,
-   "high": 5835.29
+   "low": 2251.54,
+   "mid": 3737.56,
+   "high": 6090.42
   },
   "y1": {
-   "low": 2670.44,
-   "mid": 5501.1,
-   "high": 8692.27
+   "low": 3355.11,
+   "mid": 5569.48,
+   "high": 9075.56
   },
   "y5": {
-   "low": 6936.73,
-   "mid": 8285.54,
-   "high": 9634.34
+   "low": 8724.05,
+   "mid": 10420.39,
+   "high": 12116.73
   },
   "assumptions": {
-   "eps_cur": 89.636,
-   "eps_next": 133.522,
-   "eps_5y": 385.374,
-   "growth_used": 0.4896,
-   "per_median": 41.2,
-   "per_p90": 65.1,
+   "eps_cur": 112.577,
+   "eps_next": 167.755,
+   "eps_5y": 484.669,
+   "growth_used": 0.4901,
+   "per_median": 33.2,
+   "per_p90": 54.1,
    "per_terminal": "18-25"
   }
  }

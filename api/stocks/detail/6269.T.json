@@ -1,0 +1,36 @@
+{
+ "sector": "Energy",
+ "updated_at": "2026-09-06 23:36",
+ "valuation": {
+  "sector_per_median": null,
+  "sector_per_p90": null,
+  "sector_pbr_median": null,
+  "sector_pbr_p90": null
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 744199320000.0,
+   "next_year": 756470720000.0
+  },
+  "eps": {
+   "cur_year": 907.82336,
+   "next_year": 967.07715
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 13550.0,
+   "high": 17000.0,
+   "low": 11700.0
+  },
+  "ex_dividend_date": "2026-12-29",
+  "ex_dividend_schedule": [
+   "2026-12-29",
+   "2027-06-30"
+  ],
+  "dividend_frequency": "半期"
+ },
+ "theoretical_price": null
+}

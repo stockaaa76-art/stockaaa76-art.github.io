@@ -1,0 +1,55 @@
+{
+ "sector": "Consumer Cyclical",
+ "updated_at": "2026-09-06 23:36",
+ "valuation": {
+  "sector_per_median": 18.2,
+  "sector_per_p90": 39.5,
+  "sector_pbr_median": 2.39,
+  "sector_pbr_p90": 9.4
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 10519875930.0,
+   "next_year": 10524867480.0
+  },
+  "eps": {
+   "cur_year": 9.9227,
+   "next_year": 9.13121
+  },
+  "growth": {
+   "next_year": -0.0436,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 110.75385,
+   "high": 280.0,
+   "low": 44.0
+  }
+ },
+ "theoretical_price": {
+  "now": {
+   "low": 180.59,
+   "mid": 180.59,
+   "high": 391.95
+  },
+  "y1": {
+   "low": 166.19,
+   "mid": 166.19,
+   "high": 360.68
+  },
+  "y5": {
+   "low": 152.93,
+   "mid": 182.67,
+   "high": 212.41
+  },
+  "assumptions": {
+   "eps_cur": 9.923,
+   "eps_next": 9.131,
+   "eps_5y": 8.496,
+   "growth_used": -0.0436,
+   "per_median": 18.2,
+   "per_p90": 39.5,
+   "per_terminal": "18-25"
+  }
+ }
+}

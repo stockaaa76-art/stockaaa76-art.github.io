@@ -1,29 +1,29 @@
 {
  "sector": "日本-食品",
- "updated_at": "2026-06-30 21:27",
+ "updated_at": "2026-09-06 23:36",
  "valuation": {
-  "sector_per_median": 17.9,
-  "sector_per_p90": 42.4,
-  "sector_pbr_median": 1.9,
-  "sector_pbr_p90": 7.3
+  "sector_per_median": 19.1,
+  "sector_per_p90": 37.5,
+  "sector_pbr_median": 1.87,
+  "sector_pbr_p90": 6.38
  },
  "forecast": {
   "revenue": {
-   "cur_year": 3779982573000.0,
-   "next_year": 3982118214800.0
+   "cur_year": 3876570252920.0,
+   "next_year": 4041512470550.0
   },
   "eps": {
-   "cur_year": 346.18103,
-   "next_year": 386.28326
+   "cur_year": 364.48328,
+   "next_year": 406.11127
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 6638.1816,
-   "high": 7300.0,
-   "low": 5800.0
+   "mean": 7232.077,
+   "high": 8400.0,
+   "low": 6100.0
   },
   "ex_dividend_date": "2026-12-29",
   "ex_dividend_schedule": [
@@ -34,27 +34,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 6196.64,
-   "mid": 6196.64,
-   "high": 14678.08
+   "low": 6961.63,
+   "mid": 6961.63,
+   "high": 13668.12
   },
   "y1": {
-   "low": 6914.47,
-   "mid": 6914.47,
-   "high": 16378.41
+   "low": 7756.73,
+   "mid": 7756.73,
+   "high": 15229.17
   },
   "y5": {
-   "low": 9190.14,
-   "mid": 10977.12,
-   "high": 12764.09
+   "low": 9625.36,
+   "mid": 11496.96,
+   "high": 13368.56
   },
   "assumptions": {
-   "eps_cur": 346.181,
-   "eps_next": 386.283,
-   "eps_5y": 510.564,
-   "growth_used": 0.1158,
-   "per_median": 17.9,
-   "per_p90": 42.4,
+   "eps_cur": 364.483,
+   "eps_next": 406.111,
+   "eps_5y": 534.742,
+   "growth_used": 0.1142,
+   "per_median": 19.1,
+   "per_p90": 37.5,
    "per_terminal": "18-25"
   }
  }

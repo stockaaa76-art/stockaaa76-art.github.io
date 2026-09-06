@@ -1,29 +1,29 @@
 {
  "sector": "日本-不動産",
- "updated_at": "2026-06-30 21:27",
+ "updated_at": "2026-09-06 23:36",
  "valuation": {
-  "sector_per_median": 14.8,
+  "sector_per_median": 14.2,
   "sector_per_p90": 22.8,
-  "sector_pbr_median": 1.24,
-  "sector_pbr_p90": 1.86
+  "sector_pbr_median": 1.17,
+  "sector_pbr_p90": 1.63
  },
  "forecast": {
   "revenue": {
-   "cur_year": 1053161116560.0,
-   "next_year": 1077218629729.0
+   "cur_year": 1071728884189.0,
+   "next_year": 1087109618899.0
   },
   "eps": {
-   "cur_year": 103.40145,
-   "next_year": 109.71315
+   "cur_year": 101.74097,
+   "next_year": 107.90517
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 1135.8182,
-   "high": 1250.0,
-   "low": 960.0
+   "mean": 1085.091,
+   "high": 1230.0,
+   "low": 900.0
   },
   "ex_dividend_date": "2026-09-29",
   "ex_dividend_schedule": [
@@ -34,26 +34,26 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 1530.34,
-   "mid": 1530.34,
-   "high": 2357.55
+   "low": 1444.72,
+   "mid": 1444.72,
+   "high": 2319.69
   },
   "y1": {
-   "low": 1623.75,
-   "mid": 1623.75,
-   "high": 2501.46
+   "low": 1532.25,
+   "mid": 1532.25,
+   "high": 2460.24
   },
   "y5": {
-   "low": 2293.44,
-   "mid": 2739.39,
-   "high": 3185.34
+   "low": 2253.19,
+   "mid": 2691.31,
+   "high": 3129.43
   },
   "assumptions": {
-   "eps_cur": 103.401,
-   "eps_next": 109.713,
-   "eps_5y": 127.413,
-   "growth_used": 0.061,
-   "per_median": 14.8,
+   "eps_cur": 101.741,
+   "eps_next": 107.905,
+   "eps_5y": 125.177,
+   "growth_used": 0.0606,
+   "per_median": 14.2,
    "per_p90": 22.8,
    "per_terminal": "18-25"
   }

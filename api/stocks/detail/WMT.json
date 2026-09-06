@@ -1,62 +1,61 @@
 {
  "sector": "米-生活必需品",
- "updated_at": "2026-06-30 21:27",
+ "updated_at": "2026-09-06 23:36",
  "valuation": {
-  "sector_per_median": 26.0,
-  "sector_per_p90": 47.6,
-  "sector_pbr_median": 9.67,
-  "sector_pbr_p90": 25.4
+  "sector_per_median": 26.4,
+  "sector_per_p90": 46.1,
+  "sector_pbr_median": 9.04,
+  "sector_pbr_p90": 24.57
  },
  "forecast": {
   "revenue": {
-   "cur_year": 752239670910.0,
-   "next_year": 787027875310.0
+   "cur_year": 752964604200.0,
+   "next_year": 786125576710.0
   },
   "eps": {
-   "cur_year": 2.90381,
-   "next_year": 3.28577
+   "cur_year": 2.88648,
+   "next_year": 3.23097
   },
   "growth": {
-   "next_year": 0.13149999,
+   "next_year": 0.1193,
    "long_term": null
   },
   "price_target": {
-   "mean": 138.58537,
+   "mean": 127.725,
    "high": 155.0,
    "low": 81.0
   },
-  "ex_dividend_date": "2026-08-14",
+  "ex_dividend_date": "2026-12-04",
   "ex_dividend_schedule": [
-   "2026-08-14",
-   "2026-11-20",
-   "2027-02-26",
-   "2027-06-04"
+   "2026-12-04",
+   "2027-03-19",
+   "2027-07-02"
   ],
-  "dividend_frequency": "四半期"
+  "dividend_frequency": "年3回"
  },
  "theoretical_price": {
   "now": {
-   "low": 58.08,
-   "mid": 75.5,
-   "high": 138.22
+   "low": 57.73,
+   "mid": 76.2,
+   "high": 133.07
   },
   "y1": {
-   "low": 65.72,
-   "mid": 85.43,
-   "high": 156.4
+   "low": 64.62,
+   "mid": 85.3,
+   "high": 148.95
   },
   "y5": {
-   "low": 81.05,
-   "mid": 96.81,
-   "high": 112.57
+   "low": 77.48,
+   "mid": 92.55,
+   "high": 107.62
   },
   "assumptions": {
-   "eps_cur": 2.904,
-   "eps_next": 3.286,
-   "eps_5y": 4.503,
-   "growth_used": 0.1315,
-   "per_median": 26.0,
-   "per_p90": 47.6,
+   "eps_cur": 2.886,
+   "eps_next": 3.231,
+   "eps_5y": 4.305,
+   "growth_used": 0.1193,
+   "per_median": 26.4,
+   "per_p90": 46.1,
    "per_terminal": "18-25"
   }
  }

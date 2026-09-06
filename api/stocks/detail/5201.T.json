@@ -1,0 +1,61 @@
+{
+ "sector": "Industrials",
+ "updated_at": "2026-09-06 23:36",
+ "valuation": {
+  "sector_per_median": 25.4,
+  "sector_per_p90": 43.1,
+  "sector_pbr_median": 1.83,
+  "sector_pbr_p90": 6.19
+ },
+ "forecast": {
+  "revenue": {
+   "cur_year": 2255111000000.0,
+   "next_year": 2326680625000.0
+  },
+  "eps": {
+   "cur_year": 383.35095,
+   "next_year": 464.7936
+  },
+  "growth": {
+   "next_year": null,
+   "long_term": null
+  },
+  "price_target": {
+   "mean": 6653.75,
+   "high": 8030.0,
+   "low": 5600.0
+  },
+  "ex_dividend_date": "2026-12-29",
+  "ex_dividend_schedule": [
+   "2026-12-29",
+   "2027-06-30"
+  ],
+  "dividend_frequency": "半期"
+ },
+ "theoretical_price": {
+  "now": {
+   "low": 7667.02,
+   "mid": 9737.11,
+   "high": 16522.43
+  },
+  "y1": {
+   "low": 9295.87,
+   "mid": 11805.76,
+   "high": 20032.6
+  },
+  "y5": {
+   "low": 13748.53,
+   "mid": 16421.85,
+   "high": 19095.18
+  },
+  "assumptions": {
+   "eps_cur": 383.351,
+   "eps_next": 464.794,
+   "eps_5y": 763.807,
+   "growth_used": 0.2124,
+   "per_median": 25.4,
+   "per_p90": 43.1,
+   "per_terminal": "18-25"
+  }
+ }
+}

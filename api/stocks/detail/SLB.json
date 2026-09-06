@@ -1,62 +1,62 @@
 {
  "sector": "米-エネルギー",
- "updated_at": "2026-06-30 21:27",
+ "updated_at": "2026-09-06 23:36",
  "valuation": {
-  "sector_per_median": 19.5,
-  "sector_per_p90": 29.4,
-  "sector_pbr_median": 2.45,
-  "sector_pbr_p90": 4.53
+  "sector_per_median": 17.8,
+  "sector_per_p90": 28.1,
+  "sector_pbr_median": 3.23,
+  "sector_pbr_p90": 5.77
  },
  "forecast": {
   "revenue": {
-   "cur_year": 36552456910.0,
-   "next_year": 39377376190.0
+   "cur_year": 37022971490.0,
+   "next_year": 39838582540.0
   },
   "eps": {
-   "cur_year": 2.60366,
-   "next_year": 3.34626
+   "cur_year": 2.49839,
+   "next_year": 3.23187
   },
   "growth": {
-   "next_year": 0.2852,
+   "next_year": 0.2936,
    "long_term": null
   },
   "price_target": {
-   "mean": 62.35714,
+   "mean": 62.03448,
    "high": 71.0,
    "low": 43.0
   },
-  "ex_dividend_date": "2026-09-02",
+  "ex_dividend_date": "2026-12-02",
   "ex_dividend_schedule": [
-   "2026-09-02",
    "2026-12-02",
    "2027-03-03",
-   "2027-06-02"
+   "2027-06-02",
+   "2027-09-01"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 50.77,
-   "mid": 50.77,
-   "high": 76.55
+   "low": 44.47,
+   "mid": 44.47,
+   "high": 70.2
   },
   "y1": {
-   "low": 65.25,
-   "mid": 65.25,
-   "high": 98.38
+   "low": 57.53,
+   "mid": 57.53,
+   "high": 90.82
   },
   "y5": {
-   "low": 115.7,
-   "mid": 138.2,
-   "high": 160.7
+   "low": 113.74,
+   "mid": 135.85,
+   "high": 157.97
   },
   "assumptions": {
-   "eps_cur": 2.604,
-   "eps_next": 3.346,
-   "eps_5y": 6.428,
-   "growth_used": 0.2852,
-   "per_median": 19.5,
-   "per_p90": 29.4,
+   "eps_cur": 2.498,
+   "eps_next": 3.232,
+   "eps_5y": 6.319,
+   "growth_used": 0.2936,
+   "per_median": 17.8,
+   "per_p90": 28.1,
    "per_terminal": "18-25"
   }
  }
