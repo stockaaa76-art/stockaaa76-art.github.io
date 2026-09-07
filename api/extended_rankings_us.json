@@ -8171,7 +8171,7 @@
       "volume": 48925700,
       "market_cap": 1950244274176,
       "trading_value": 7238557165,
-      "forward_pe": 92.19,
+      "forward_pe": 97.49,
       "trailing_pe": 0
     },
     {
@@ -8209,7 +8209,7 @@
       "volume": 5636200,
       "market_cap": 271606906880,
       "trading_value": 1878320067,
-      "forward_pe": 68.09,
+      "forward_pe": 68.25,
       "trailing_pe": 284.84,
       "volume_ratio": 90.99
     },
@@ -8339,7 +8339,7 @@
       "volume": 20527200,
       "market_cap": 852628602880,
       "trading_value": 2199284195,
-      "forward_pe": 33.16,
+      "forward_pe": 33.17,
       "trailing_pe": 38.82,
       "volume_ratio": 75.96
     },
@@ -8378,7 +8378,7 @@
       "volume": 19651900,
       "market_cap": 779621105664,
       "trading_value": 9385158026,
-      "forward_pe": 30.91,
+      "forward_pe": 30.79,
       "trailing_pe": 121.83,
       "volume_ratio": 93.78
     },
@@ -8924,7 +8924,7 @@
       "volume": 2865600,
       "market_cap": 74704560128,
       "trading_value": 471219270,
-      "forward_pe": 17.26,
+      "forward_pe": 17.23,
       "trailing_pe": 17.06,
       "volume_ratio": 62.19
     },
@@ -9041,7 +9041,7 @@
       "volume": 2436100,
       "market_cap": 114707488768,
       "trading_value": 498060637,
-      "forward_pe": 15.65,
+      "forward_pe": 15.68,
       "trailing_pe": 17.27,
       "volume_ratio": 82.98
     },
@@ -9093,7 +9093,7 @@
       "volume": 134946800,
       "market_cap": 5562502742016,
       "trading_value": 31086344930,
-      "forward_pe": 14.9,
+      "forward_pe": 14.84,
       "trailing_pe": 29.16,
       "volume_ratio": 104.8
     },
@@ -9392,7 +9392,7 @@
       "volume": 37312300,
       "market_cap": 11138535424,
       "trading_value": 3753990525,
-      "forward_pe": 10.88,
+      "forward_pe": 10.87,
       "trailing_pe": 8.28,
       "volume_ratio": 706.81
     },
@@ -9563,7 +9563,7 @@
       "volume": 37312300,
       "market_cap": 11138535424,
       "trading_value": 3753990525,
-      "forward_pe": 10.88,
+      "forward_pe": 10.87,
       "trailing_pe": 8.28,
       "volume_ratio": 706.81
     },
@@ -9862,7 +9862,7 @@
       "volume": 134946800,
       "market_cap": 5562502742016,
       "trading_value": 31086344930,
-      "forward_pe": 14.9,
+      "forward_pe": 14.84,
       "trailing_pe": 29.16,
       "volume_ratio": 104.8
     },
@@ -9914,7 +9914,7 @@
       "volume": 2436100,
       "market_cap": 114707488768,
       "trading_value": 498060637,
-      "forward_pe": 15.65,
+      "forward_pe": 15.68,
       "trailing_pe": 17.27,
       "volume_ratio": 82.98
     },
@@ -10031,7 +10031,7 @@
       "volume": 2865600,
       "market_cap": 74704560128,
       "trading_value": 471219270,
-      "forward_pe": 17.26,
+      "forward_pe": 17.23,
       "trailing_pe": 17.06,
       "volume_ratio": 62.19
     },
@@ -10577,7 +10577,7 @@
       "volume": 19651900,
       "market_cap": 779621105664,
       "trading_value": 9385158026,
-      "forward_pe": 30.91,
+      "forward_pe": 30.79,
       "trailing_pe": 121.83,
       "volume_ratio": 93.78
     },
@@ -10616,7 +10616,7 @@
       "volume": 20527200,
       "market_cap": 852628602880,
       "trading_value": 2199284195,
-      "forward_pe": 33.16,
+      "forward_pe": 33.17,
       "trailing_pe": 38.82,
       "volume_ratio": 75.96
     },
@@ -10859,18 +10859,6 @@
       "volume_ratio": 79.45
     },
     {
-      "symbol": "NTAP",
-      "name": "NetApp",
-      "price": 185.59,
-      "change": 0.21,
-      "change_percent": 0.11,
-      "volume": 2247400,
-      "market_cap": 36453404672,
-      "trading_value": 417094957,
-      "price_to_book": 26.92,
-      "volume_ratio": 86.16
-    },
-    {
       "symbol": "COST",
       "name": "COST",
       "price": 915.74,
@@ -10881,6 +10869,18 @@
       "trading_value": 1901259367,
       "price_to_book": 24.57,
       "volume_ratio": 114.82
+    },
+    {
+      "symbol": "NTAP",
+      "name": "NetApp",
+      "price": 185.59,
+      "change": 0.21,
+      "change_percent": 0.11,
+      "volume": 2247400,
+      "market_cap": 36453404672,
+      "trading_value": 417094957,
+      "price_to_book": 24.33,
+      "volume_ratio": 86.16
     },
     {
       "symbol": "NVDA",
@@ -13055,6 +13055,18 @@
       "volume_ratio": 104.8
     },
     {
+      "symbol": "NTAP",
+      "name": "NetApp",
+      "price": 185.59,
+      "change": 0.21,
+      "change_percent": 0.11,
+      "volume": 2247400,
+      "market_cap": 36453404672,
+      "trading_value": 417094957,
+      "price_to_book": 24.33,
+      "volume_ratio": 86.16
+    },
+    {
       "symbol": "COST",
       "name": "COST",
       "price": 915.74,
@@ -13065,18 +13077,6 @@
       "trading_value": 1901259367,
       "price_to_book": 24.57,
       "volume_ratio": 114.82
-    },
-    {
-      "symbol": "NTAP",
-      "name": "NetApp",
-      "price": 185.59,
-      "change": 0.21,
-      "change_percent": 0.11,
-      "volume": 2247400,
-      "market_cap": 36453404672,
-      "trading_value": 417094957,
-      "price_to_book": 26.92,
-      "volume_ratio": 86.16
     },
     {
       "symbol": "LLY",
@@ -29095,6 +29095,6 @@
       "year_position": 88.41234010534237
     }
   ],
-  "timestamp": "2026-09-06 23:06:12",
+  "timestamp": "2026-09-07 23:47:56",
   "data_count": 2470
 }
