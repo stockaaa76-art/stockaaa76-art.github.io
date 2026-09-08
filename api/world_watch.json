@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T23:47:49.250968",
+  "updated_at": "2026-09-08T23:36:24.083194",
   "note": "手選びの世界主要銘柄（日米以外）。価格と騰落のみの情報表示で、予測・ランキング評価の対象外です。売買シグナルではありません。",
   "regions": [
     {
@@ -89,29 +89,29 @@
         {
           "ticker": "AZN.L",
           "name": "アストラゼネカ",
-          "price": 12006.0,
+          "price": 12042.0,
           "currency": "GBp",
-          "chg_1d": -1.15,
-          "chg_5d": -0.89,
-          "chg_1mo": -0.24
+          "chg_1d": 0.3,
+          "chg_5d": 0.6,
+          "chg_1mo": 1.62
         },
         {
           "ticker": "SHEL.L",
           "name": "シェル",
-          "price": 3437.0,
+          "price": 3482.5,
           "currency": "GBp",
-          "chg_1d": 0.16,
-          "chg_5d": 3.81,
-          "chg_1mo": 4.78
+          "chg_1d": 1.32,
+          "chg_5d": 4.13,
+          "chg_1mo": 5.06
         },
         {
           "ticker": "ULVR.L",
           "name": "ユニリーバ",
-          "price": 4763.0,
+          "price": 4693.5,
           "currency": "GBp",
-          "chg_1d": 0.63,
-          "chg_5d": 0.23,
-          "chg_1mo": -0.22
+          "chg_1d": -1.46,
+          "chg_5d": -1.73,
+          "chg_1mo": -0.33
         },
         {
           "ticker": "ALV.DE",
@@ -130,65 +130,65 @@
         {
           "ticker": "0700.HK",
           "name": "テンセント",
-          "price": 438.4,
+          "price": 435.4,
           "currency": "HKD",
-          "chg_1d": -0.99,
-          "chg_5d": -3.22,
-          "chg_1mo": -8.44
+          "chg_1d": -0.68,
+          "chg_5d": -1.36,
+          "chg_1mo": -9.56
         },
         {
           "ticker": "9988.HK",
           "name": "アリババ",
-          "price": 109.6,
+          "price": 109.5,
           "currency": "HKD",
-          "chg_1d": -0.45,
-          "chg_5d": -4.03,
-          "chg_1mo": -11.47
+          "chg_1d": -0.09,
+          "chg_5d": -0.82,
+          "chg_1mo": -13.58
         },
         {
           "ticker": "1299.HK",
           "name": "AIAグループ",
-          "price": 77.1,
+          "price": 76.9,
           "currency": "HKD",
-          "chg_1d": -0.52,
-          "chg_5d": 1.82,
-          "chg_1mo": 4.71
+          "chg_1d": -0.26,
+          "chg_5d": 1.96,
+          "chg_1mo": 3.95
         },
         {
           "ticker": "3690.HK",
           "name": "美団",
-          "price": 80.05,
+          "price": 80.6,
           "currency": "HKD",
-          "chg_1d": -2.08,
-          "chg_5d": 1.46,
-          "chg_1mo": -13.18
+          "chg_1d": 0.69,
+          "chg_5d": 5.15,
+          "chg_1mo": -14.16
         },
         {
           "ticker": "1211.HK",
           "name": "BYD",
-          "price": 84.5,
+          "price": 83.85,
           "currency": "HKD",
-          "chg_1d": -1.92,
-          "chg_5d": -3.1,
-          "chg_1mo": -6.27
+          "chg_1d": -0.77,
+          "chg_5d": -4.99,
+          "chg_1mo": -9.15
         },
         {
           "ticker": "1810.HK",
           "name": "シャオミ",
-          "price": 27.5,
+          "price": 26.92,
           "currency": "HKD",
-          "chg_1d": -3.31,
-          "chg_5d": -0.43,
-          "chg_1mo": 1.63
+          "chg_1d": -2.11,
+          "chg_5d": -2.32,
+          "chg_1mo": -2.53
         },
         {
           "ticker": "0005.HK",
           "name": "HSBC",
-          "price": 167.6,
+          "price": 164.9,
           "currency": "HKD",
-          "chg_1d": 0.54,
-          "chg_5d": 4.1,
-          "chg_1mo": 4.03
+          "chg_1d": -1.61,
+          "chg_5d": 2.68,
+          "chg_1mo": 1.54
         }
       ]
     },
@@ -198,38 +198,38 @@
         {
           "ticker": "005930.KS",
           "name": "サムスン電子",
-          "price": 270000.0,
+          "price": 269500.0,
           "currency": "KRW",
-          "chg_1d": 5.68,
-          "chg_5d": 3.85,
-          "chg_1mo": 17.14
+          "chg_1d": -0.19,
+          "chg_5d": 3.26,
+          "chg_1mo": 16.67
         },
         {
           "ticker": "000660.KS",
           "name": "SKハイニックス",
-          "price": 1783000.0,
+          "price": 1793000.0,
           "currency": "KRW",
-          "chg_1d": 8.26,
-          "chg_5d": 6.51,
-          "chg_1mo": 19.29
+          "chg_1d": 0.56,
+          "chg_5d": 5.91,
+          "chg_1mo": 26.12
         },
         {
           "ticker": "005380.KS",
           "name": "現代自動車",
-          "price": 393000.0,
+          "price": 385000.0,
           "currency": "KRW",
-          "chg_1d": 2.48,
-          "chg_5d": -2.6,
-          "chg_1mo": -1.13
+          "chg_1d": -2.04,
+          "chg_5d": -3.87,
+          "chg_1mo": -2.04
         },
         {
           "ticker": "373220.KS",
           "name": "LGエナジーソリューション",
-          "price": 362500.0,
+          "price": 348500.0,
           "currency": "KRW",
-          "chg_1d": 1.12,
-          "chg_5d": -4.1,
-          "chg_1mo": 5.07
+          "chg_1d": -3.86,
+          "chg_5d": -5.04,
+          "chg_1mo": -3.19
         }
       ]
     },
@@ -239,29 +239,29 @@
         {
           "ticker": "2330.TW",
           "name": "TSMC",
-          "price": 2460.0,
+          "price": 2470.0,
           "currency": "TWD",
-          "chg_1d": 2.07,
-          "chg_5d": 2.29,
-          "chg_1mo": 3.8
+          "chg_1d": 0.41,
+          "chg_5d": 1.23,
+          "chg_1mo": 3.78
         },
         {
           "ticker": "2317.TW",
           "name": "鴻海精密",
-          "price": 256.0,
+          "price": 251.5,
           "currency": "TWD",
-          "chg_1d": 0.0,
-          "chg_5d": 2.4,
-          "chg_1mo": -1.54
+          "chg_1d": -1.76,
+          "chg_5d": -1.76,
+          "chg_1mo": -4.91
         },
         {
           "ticker": "2454.TW",
           "name": "メディアテック",
-          "price": 4760.0,
+          "price": 4710.0,
           "currency": "TWD",
-          "chg_1d": 7.81,
-          "chg_5d": 21.27,
-          "chg_1mo": 22.05
+          "chg_1d": -1.05,
+          "chg_5d": 9.15,
+          "chg_1mo": 18.94
         }
       ]
     },
@@ -298,20 +298,20 @@
         {
           "ticker": "D05.SI",
           "name": "DBSグループ",
-          "price": 78.47,
+          "price": 78.1,
           "currency": "SGD",
-          "chg_1d": -0.23,
-          "chg_5d": 1.38,
-          "chg_1mo": 5.63
+          "chg_1d": -0.47,
+          "chg_5d": 1.55,
+          "chg_1mo": 3.41
         },
         {
           "ticker": "U11.SI",
           "name": "UOB銀行",
-          "price": 41.75,
+          "price": 41.6,
           "currency": "SGD",
-          "chg_1d": -0.62,
-          "chg_5d": 0.46,
-          "chg_1mo": -2.14
+          "chg_1d": -0.36,
+          "chg_5d": 0.43,
+          "chg_1mo": -1.86
         }
       ]
     }
