@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>株価アート - Stock Analysis Dashboard</title><link>https://stockaaa76-art.github.io/</link><description>Recent content on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Fri, 31 Jul 2026 15:00:00 +0900</lastBuildDate><atom:link href="https://stockaaa76-art.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>【完全保存版】2000年代投資史クロニクル：ITバブル崩壊からりそなショック・リーマンショックまで（日本・米国・世界＋実数値）</title><link>https://stockaaa76-art.github.io/post/investment-history-2000s/</link><pubDate>Fri, 31 Jul 2026 15:00:00 +0900</pubDate><guid>https://stockaaa76-art.github.io/post/investment-history-2000s/</guid><description>&lt;h2 id="序文2000年代は2つの危機に挟まれた10年"&gt;序文：2000年代は「2つの危機に挟まれた10年」&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>投資の定説をバックテストで検証するラボ on Turnip Lab</title><link>https://stockaaa76-art.github.io/</link><description>Recent content in 投資の定説をバックテストで検証するラボ on Turnip Lab</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 12 Sep 2026 14:00:00 +0900</lastBuildDate><atom:link href="https://stockaaa76-art.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>【お知らせ】サイトURLが変わりました（stock-kabu3.com → stockaaa76-art.github.io）</title><link>https://stockaaa76-art.github.io/post/domain-change-notice/</link><pubDate>Sat, 12 Sep 2026 14:00:00 +0900</pubDate><guid>https://stockaaa76-art.github.io/post/domain-change-notice/</guid><description>&lt;h2 id="サイトurlを変更しました"&gt;サイトURLを変更しました&lt;/h2&gt;
+&lt;p&gt;いつも Turnip Lab をご覧いただきありがとうございます。&lt;/p&gt;
+&lt;p&gt;2026年9月12日より、当サイトのURLを変更しました。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;URL&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;新しいURL&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;&lt;a href="https://stockaaa76-art.github.io/"&gt;https://stockaaa76-art.github.io/&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;旧URL&lt;/td&gt;
+ &lt;td&gt;&lt;del&gt;&lt;a href="https://stock-kabu3.com/"&gt;https://stock-kabu3.com/&lt;/a&gt;&lt;/del&gt;（アクセスできなくなります）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;ブックマークやRSSリーダーに旧URLを登録されている方は、お手数ですが新しいURLへの変更をお願いします。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>【完全保存版】2000年代投資史クロニクル：ITバブル崩壊からりそなショック・リーマンショックまで（日本・米国・世界＋実数値）</title><link>https://stockaaa76-art.github.io/post/investment-history-2000s/</link><pubDate>Fri, 31 Jul 2026 15:00:00 +0900</pubDate><guid>https://stockaaa76-art.github.io/post/investment-history-2000s/</guid><description>&lt;h2 id="序文2000年代は2つの危機に挟まれた10年"&gt;序文：2000年代は「2つの危機に挟まれた10年」&lt;/h2&gt;
 &lt;p&gt;2000年代は、10年の始まりと終わりが共に大きな株価急落で縁取られた10年だった。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;前半（2000-2004年）：ITバブル崩壊が3年連続の株安を招き、2003年春の「りそなショック」がバブル後最安値を形成。そこからイラク戦争後の回復相場が始まった&lt;/li&gt;
@@ -3051,11 +3072,9 @@
 &lt;h2 id="-利用可能なエンドポイント"&gt;📊 利用可能なエンドポイント&lt;/h2&gt;
 &lt;h3 id="1-株価一覧api"&gt;1. 株価一覧API&lt;/h3&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;GET https://stockaaa76-art.github.io/api/stocks/index.json
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;全銘柄の株価データ、テクニカル指標、AI分析結果を取得できます。&lt;/p&gt;</description></item><item><title>AI予測モデルについて</title><link>https://stockaaa76-art.github.io/about/</link><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/about/</guid><description>&lt;h2 id="予測モデル概要"&gt;予測モデル概要&lt;/h2&gt;
-&lt;p&gt;複数のテクニカル指標を組み合わせたシグナル多数決方式で、翌日の株価方向（上昇/下降）を予測しています。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;予測対象&lt;/strong&gt;: 145銘柄（日本株・米国株・ETF・指数）
-&lt;strong&gt;更新頻度&lt;/strong&gt;: 毎平日 16:00 JST に自動更新
-&lt;strong&gt;データソース&lt;/strong&gt;: Yahoo Finance API（yfinance）&lt;/p&gt;</description></item><item><title>📈 株価予測レポート - 2025-09-08</title><link>https://stockaaa76-art.github.io/post/stock-prediction-2025-09-08/</link><pubDate>Mon, 08 Sep 2025 01:02:00 +0900</pubDate><guid>https://stockaaa76-art.github.io/post/stock-prediction-2025-09-08/</guid><description>&lt;h2 id="-予測サマリー"&gt;📊 予測サマリー&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;全銘柄の株価データ、テクニカル指標、AI分析結果を取得できます。&lt;/p&gt;</description></item><item><title>Turnip Labについて</title><link>https://stockaaa76-art.github.io/about/</link><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/about/</guid><description>&lt;h2 id="turnip-labとは"&gt;Turnip Labとは&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;「効く」と言われている投資の定説を、実際に過去データで検証して、結果をそのまま公開する&lt;/strong&gt;個人運営のサイトです。&lt;/p&gt;
+&lt;p&gt;検証してみると、広く信じられている手法の多くは期待したほど機能しません。当ラボでは&lt;strong&gt;うまくいかなかった検証結果も隠さず記事にしています&lt;/strong&gt;。うまくいった話だけが流通しがちな投資の世界で、これが一番役に立つ情報だと考えているためです。&lt;/p&gt;</description></item><item><title>📈 株価予測レポート - 2025-09-08</title><link>https://stockaaa76-art.github.io/post/stock-prediction-2025-09-08/</link><pubDate>Mon, 08 Sep 2025 01:02:00 +0900</pubDate><guid>https://stockaaa76-art.github.io/post/stock-prediction-2025-09-08/</guid><description>&lt;h2 id="-予測サマリー"&gt;📊 予測サマリー&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;分析日時&lt;/strong&gt;: 2025-09-08T00:52:54&lt;br&gt;
 &lt;strong&gt;予測期間&lt;/strong&gt;: 5日間&lt;br&gt;
 &lt;strong&gt;分析銘柄&lt;/strong&gt;: 36銘柄&lt;/p&gt;
