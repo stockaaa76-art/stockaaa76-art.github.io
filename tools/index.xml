@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>投資計算ツール on 株価アート - Stock Analysis Dashboard</title><link>https://stock-kabu3.com/tools/</link><description>Recent content in 投資計算ツール on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><atom:link href="https://stock-kabu3.com/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>ローン返済シミュレーター</title><link>https://stock-kabu3.com/tools/loan-simulator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/loan-simulator/</guid><description>&lt;div class="tool-container"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>投資計算ツール on 株価アート - Stock Analysis Dashboard</title><link>https://stockaaa76-art.github.io/tools/</link><description>Recent content in 投資計算ツール on 株価アート - Stock Analysis Dashboard</description><generator>Hugo</generator><language>ja</language><atom:link href="https://stockaaa76-art.github.io/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>ローン返済シミュレーター</title><link>https://stockaaa76-art.github.io/tools/loan-simulator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/loan-simulator/</guid><description>&lt;div class="tool-container"&gt;
 &lt;div class="tool-box"&gt;
  &lt;div class="tool-row"&gt;
  &lt;label&gt;借入金額（円）&lt;/label&gt;
@@ -226,7 +226,7 @@ details summary::-webkit-details-marker { color: #3b82f6; }
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
-&lt;p&gt;試算値です。保証料・手数料・火災保険等は含まれません。実際のローンは金融機関の条件をご確認ください。&lt;/p&gt;</description></item><item><title>為替換算ツール</title><link>https://stock-kabu3.com/tools/fx-converter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/fx-converter/</guid><description>&lt;div class="tool-container"&gt;
+&lt;p&gt;試算値です。保証料・手数料・火災保険等は含まれません。実際のローンは金融機関の条件をご確認ください。&lt;/p&gt;</description></item><item><title>為替換算ツール</title><link>https://stockaaa76-art.github.io/tools/fx-converter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/fx-converter/</guid><description>&lt;div class="tool-container"&gt;
 &lt;div id="rate-status" class="rate-banner"&gt;
  &lt;span id="rate-msg"&gt;レートを取得中...&lt;/span&gt;
  &lt;button class="btn-refresh" onclick="fetchRates()"&gt;最新レートを取得&lt;/button&gt;
@@ -461,7 +461,7 @@ details summary::-webkit-details-marker { color: #6b7280; }
 &lt;li&gt;自動取得レートは &lt;a href="https://www.exchangerate-api.com/"&gt;ExchangeRate-API&lt;/a&gt; の公開エンドポイントを使用&lt;/li&gt;
 &lt;li&gt;インターバンクレートに近い参考値です。実際の両替・送金レートとは異なります&lt;/li&gt;
 &lt;li&gt;最新レートは各金融機関・取引所でご確認ください&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>損益分岐点計算機</title><link>https://stock-kabu3.com/tools/breakeven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/breakeven/</guid><description>&lt;div class="tool-container"&gt;
+&lt;/ul&gt;</description></item><item><title>損益分岐点計算機</title><link>https://stockaaa76-art.github.io/tools/breakeven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/breakeven/</guid><description>&lt;div class="tool-container"&gt;
 &lt;div class="tool-box"&gt;
  &lt;div class="tool-row"&gt;
  &lt;label&gt;買値（円）&lt;/label&gt;
@@ -574,7 +574,7 @@ function calculate() {
 &lt;li&gt;「計算する」をクリック&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="損益分岐点とは"&gt;損益分岐点とは&lt;/h2&gt;
-&lt;p&gt;手数料を含めた投資総コストを回収できる株価のことです。現在株価が損益分岐点を上回っていれば利益、下回っていれば損失となります。&lt;/p&gt;</description></item><item><title>投資利回り計算機</title><link>https://stock-kabu3.com/tools/yield-calculator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/yield-calculator/</guid><description>&lt;div class="tool-container"&gt;
+&lt;p&gt;手数料を含めた投資総コストを回収できる株価のことです。現在株価が損益分岐点を上回っていれば利益、下回っていれば損失となります。&lt;/p&gt;</description></item><item><title>投資利回り計算機</title><link>https://stockaaa76-art.github.io/tools/yield-calculator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/yield-calculator/</guid><description>&lt;div class="tool-container"&gt;
 &lt;div class="tool-box"&gt;
  &lt;div class="tool-row"&gt;
  &lt;label&gt;購入価格（円）&lt;/label&gt;
@@ -695,10 +695,10 @@ function calculate() {
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;年率利回り（CAGR）&lt;/strong&gt;: 複利換算の年間成長率。&lt;code&gt;(最終価値 / 元本)^(1/年数) − 1&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;単純利回り&lt;/strong&gt;: &lt;code&gt;(年間収入 + 年間キャピタルゲイン) / 購入価格&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;配当利回りのみを計算したい場合は「&lt;a href="https://stock-kabu3.com/tools/dividend-yield/"&gt;配当利回り計算機&lt;/a&gt;」を使用してください&lt;/li&gt;
+&lt;li&gt;配当利回りのみを計算したい場合は「&lt;a href="https://stockaaa76-art.github.io/tools/dividend-yield/"&gt;配当利回り計算機&lt;/a&gt;」を使用してください&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;試算値です。実際の運用では税金・手数料が変動します。投資は元本割れのリスクがあります。&lt;/p&gt;</description></item><item><title>配当利回り計算機</title><link>https://stock-kabu3.com/tools/dividend-yield/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/dividend-yield/</guid><description>&lt;div class="tool-container"&gt;
+&lt;p&gt;試算値です。実際の運用では税金・手数料が変動します。投資は元本割れのリスクがあります。&lt;/p&gt;</description></item><item><title>配当利回り計算機</title><link>https://stockaaa76-art.github.io/tools/dividend-yield/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/dividend-yield/</guid><description>&lt;div class="tool-container"&gt;
 &lt;div class="tool-box"&gt;
  &lt;div class="tool-row"&gt;
  &lt;label&gt;株価（円）&lt;/label&gt;
@@ -794,7 +794,7 @@ function calculate() {
 &lt;li&gt;「計算する」をクリック&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="税率について"&gt;税率について&lt;/h2&gt;
-&lt;p&gt;国内株の配当に対する税率は &lt;strong&gt;20.315%&lt;/strong&gt;（所得税15.315% + 住民税5%）を適用しています。NISA口座では非課税となります。&lt;/p&gt;</description></item><item><title>売上成長率・市場シェア分析</title><link>https://stock-kabu3.com/tools/revenue-growth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/revenue-growth/</guid><description>&lt;div class="rg-container"&gt;
+&lt;p&gt;国内株の配当に対する税率は &lt;strong&gt;20.315%&lt;/strong&gt;（所得税15.315% + 住民税5%）を適用しています。NISA口座では非課税となります。&lt;/p&gt;</description></item><item><title>売上成長率・市場シェア分析</title><link>https://stockaaa76-art.github.io/tools/revenue-growth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/revenue-growth/</guid><description>&lt;div class="rg-container"&gt;
 &lt;!-- タブナビゲーション --&gt;
 &lt;div class="rg-tabs"&gt;
  &lt;button class="rg-tab active" onclick="showTab('growth')"&gt;売上成長率ランキング&lt;/button&gt;
@@ -804,7 +804,7 @@ function calculate() {
 &lt;!-- タブ1: 売上成長率ランキング --&gt;
 &lt;div id="tab-growth" class="rg-tab-content active"&gt;
  &lt;div class="rg-description"&gt;
- &lt;p&gt;直近決算期のYoY（前年比）売上成長率ランキング。&lt;strong&gt;成長率が高い＝市場で選ばれている&lt;/strong&gt;証拠。&lt;/p&gt;</description></item><item><title>複利シミュレーター</title><link>https://stock-kabu3.com/tools/compound-interest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stock-kabu3.com/tools/compound-interest/</guid><description>&lt;div class="tool-container"&gt;
+ &lt;p&gt;直近決算期のYoY（前年比）売上成長率ランキング。&lt;strong&gt;成長率が高い＝市場で選ばれている&lt;/strong&gt;証拠。&lt;/p&gt;</description></item><item><title>複利シミュレーター</title><link>https://stockaaa76-art.github.io/tools/compound-interest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/compound-interest/</guid><description>&lt;div class="tool-container"&gt;
 &lt;div class="tool-box"&gt;
  &lt;div class="tool-row"&gt;
  &lt;label&gt;元本（円）&lt;/label&gt;
