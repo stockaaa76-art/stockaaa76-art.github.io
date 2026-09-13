@@ -1,12 +1,12 @@
 {
   "composite": {
-    "score": 51.3,
+    "score": 52.7,
     "label": "中立",
     "signal": "neutral"
   },
   "vix": {
-    "value": 17.84,
-    "change": 8.38,
+    "value": 15.84,
+    "change": -11.21,
     "score": 55,
     "label": "中立",
     "flow_level": "normal",
@@ -16,33 +16,32 @@
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 154.46,
-      "change": 0.58,
-      "score": 62.9
+      "value": 153.66,
+      "change": -0.53,
+      "score": 57.3
     },
     "gold": {
       "name": "金先物",
-      "value": 4357.1,
-      "change": -1.33,
-      "score": 54.0
+      "value": 4381.4,
+      "change": 0.35,
+      "score": 49.0
     },
     "oil": {
       "name": "原油WTI",
-      "value": 103.8,
-      "change": 8.07,
-      "score": 33.9
+      "value": 102.34,
+      "change": 2.29,
+      "score": 45.4
     },
     "us10y": {
       "name": "米10年債利回り",
-      "value": 4.94,
-      "change": 2.21,
-      "score": 32.3
+      "value": 4.97,
+      "change": 0.63,
+      "score": 45.0
     },
-    "avg_score": 45.8
+    "avg_score": 49.2
   },
   "market_volume": {
     "dates": [
-      "2026-06-17",
       "2026-06-18",
       "2026-06-19",
       "2026-06-22",
@@ -101,10 +100,10 @@
       "2026-09-07",
       "2026-09-08",
       "2026-09-09",
-      "2026-09-10"
+      "2026-09-10",
+      "2026-09-11"
     ],
     "volumes": [
-      1323560547,
       1447996996,
       1940027613,
       1328364379,
@@ -163,15 +162,16 @@
       1238701372,
       1251399171,
       1395653421,
-      933611151
+      1318305080,
+      945330202
     ],
-    "latest": 933611151,
-    "ma25": 1348882370,
-    "latest_vs_ma25_pct": 69.2,
+    "latest": 945330202,
+    "ma25": 1333960458,
+    "latest_vs_ma25_pct": 70.9,
     "ticker_count": 207,
     "note": "JP個別株(.T)の日次出来高合算。市場全体の活況度・出来高急増日は転換点になりやすい。"
   },
   "vix_flow_level": "normal",
   "vix_flow_label": null,
-  "generated_at": "2026-09-10 23:23:34"
+  "generated_at": "2026-09-13 23:24:32"
 }
