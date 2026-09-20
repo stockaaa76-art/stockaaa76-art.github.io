@@ -1,11 +1,11 @@
 {
  "sector": "日本-食品",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 19.1,
-  "sector_per_p90": 37.5,
-  "sector_pbr_median": 1.87,
-  "sector_pbr_p90": 6.38
+  "sector_per_median": 18.8,
+  "sector_per_p90": 35.5,
+  "sector_pbr_median": 1.76,
+  "sector_pbr_p90": 6.04
  },
  "forecast": {
   "revenue": {
@@ -34,14 +34,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 4122.79,
-   "mid": 4122.79,
-   "high": 8094.48
+   "low": 4058.03,
+   "mid": 4058.03,
+   "high": 7662.77
   },
   "y1": {
-   "low": 4312.52,
-   "mid": 4312.52,
-   "high": 8466.98
+   "low": 4244.78,
+   "mid": 4244.78,
+   "high": 8015.41
   },
   "y5": {
    "low": 4551.77,
@@ -53,9 +53,19 @@
    "eps_next": 225.786,
    "eps_5y": 252.876,
    "growth_used": 0.046,
-   "per_median": 19.1,
-   "per_p90": 37.5,
+   "per_median": 18.8,
+   "per_p90": 35.5,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.2,
+  "debt_to_equity": 50.2,
+  "current_ratio": 1.48,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄"
+  ],
+  "level": "watch"
  }
 }

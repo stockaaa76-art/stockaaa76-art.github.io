@@ -25,7 +25,7 @@ class Dashboard {
         console.log('Dashboard初期化開始');
         // #215 ランキング＝スクリーナー型ページ（1画面1ランキング）。専用DOMがあれば旧ダッシュボード初期化は行わない。
         if (document.getElementById('rk-screener')) {
-            try { await this.initScreener(); }
+            try { await rkLoadHealth(); await this.initScreener(); }
             catch (e) { console.error('スクリーナー初期化エラー:', e); }
             return;
         }
@@ -2531,8 +2531,34 @@ Dashboard.prototype.renderAiRanking = function(elementId, items, currency) {
 const RK_PAGE_SIZE = 50;
 
 // 列ごとのフォーマッタ（市場で通貨/単位を出し分け）
+// 財務健全性の集約（financial_health.json）。initScreener で1回だけ読み、以後は使い回す。
+let RK_HEALTH = null;
+async function rkLoadHealth() {
+    if (RK_HEALTH !== null) return RK_HEALTH;
+    try {
+        const res = await fetch('/api/financial_health.json', { cache: 'no-store' });
+        RK_HEALTH = res.ok ? ((await res.json()).stocks || {}) : {};
+    } catch (e) { RK_HEALTH = {}; }
+    return RK_HEALTH;
+}
+
 const RK_FMT = {
     esc: (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+    // 2026-09-20 新設。倒産確率の予測ではなく支払余力の目安（BT未検証）。
+    // ⚠️高配当還元型・設備産業は業態としてフラグが立つため、赤 = 危険 とは読ませない
+    health(n) {
+        const h = RK_HEALTH && RK_HEALTH[n.symbol];
+        if (!h || !h.level) return '<span style="color:#9ca3af;">—</span>';
+        const flags = (h.flags || []).join('・') || 'なし';
+        const m = {
+            ok:    ['✅', '#16a34a', '懸念なし'],
+            watch: ['⚠️', '#d97706', '要観察'],
+            alert: ['🔴', '#dc2626', '要注意'],
+        }[h.level];
+        if (!m) return '<span style="color:#9ca3af;">—</span>';
+        const tip = `${m[2]}／抵触: ${flags}（支払余力の目安・倒産予測ではありません）`;
+        return `<span style="color:${m[1]};" title="${RK_FMT.esc(tip)}">${m[0]}</span>`;
+    },
     price(n) {
         const v = n.price;
         if (v == null || isNaN(Number(v))) return '—';
@@ -2621,6 +2647,8 @@ const RK_COLS = {
     netincome:   { label: '純利益',    cls: 'rk-c-num', r: n => RK_FMT.finCap(n, n.net_income) },
     alphaval:    { label: 'α超過',     cls: 'rk-c-num', r: n => RK_FMT.signPct(n.alpha, 1) },
     score:       { label: 'AIスコア',  cls: 'rk-c-num', r: n => RK_FMT.num(n.score, 3) },
+    // 2026-09-20 新設: 財務健全性（支払余力の一次スクリーン・BT未検証）。財務データが無い銘柄は「—」
+    health:      { label: '財務', cls: 'rk-c-num', r: n => RK_FMT.health(n) },
     ret20:       { label: '20日騰落',  cls: 'rk-c-num', r: n => RK_FMT.signPct(n.ret20, 1) },
     ret120:      { label: '120日騰落', cls: 'rk-c-num', r: n => RK_FMT.signPct(n.ret120, 1) },
     rsi:         { label: 'RSI',       cls: 'rk-c-num', r: n => RK_FMT.num(n.rsi, 0) },
@@ -2633,13 +2661,13 @@ const RK_CS = {
     volume:  ['rank', 'name', 'volume', 'volratio', 'tradingvalue', 'price', 'change'],
     tval:    ['rank', 'name', 'tradingvalue', 'volume', 'price', 'change'],
     mktcap:  ['rank', 'name', 'mktcap', 'price', 'change', 'volume'],
-    per:     ['rank', 'name', 'per', 'price', 'change', 'mktcap'],
-    pbr:     ['rank', 'name', 'pbr', 'price', 'change', 'mktcap'],
+    per:     ['rank', 'name', 'per', 'health', 'price', 'change', 'mktcap'],
+    pbr:     ['rank', 'name', 'pbr', 'health', 'price', 'change', 'mktcap'],
     psr:     ['rank', 'name', 'psr', 'price', 'change', 'mktcap'],
-    div:     ['rank', 'name', 'divyield', 'price', 'change', 'mktcap'],
+    div:     ['rank', 'name', 'divyield', 'health', 'price', 'change', 'mktcap'],
     dev25:   ['rank', 'name', 'dev25', 'price', 'change', 'volume'],
     yearpos: ['rank', 'name', 'yearpos', 'price', 'change', 'volume'],
-    roe:     ['rank', 'name', 'roe', 'price', 'change', 'mktcap'],
+    roe:     ['rank', 'name', 'roe', 'health', 'price', 'change', 'mktcap'],
     roa:     ['rank', 'name', 'roa', 'price', 'change', 'mktcap'],
     netmargin:['rank', 'name', 'netmargin', 'price', 'change', 'mktcap'],
     revenue: ['rank', 'name', 'revenue', 'price', 'change', 'mktcap'],

@@ -1,27 +1,27 @@
 {
  "sector": "米-テクノロジー",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 27.9,
-  "sector_per_p90": 121.8,
-  "sector_pbr_median": 11.59,
-  "sector_pbr_p90": 42.85
+  "sector_per_median": 27.5,
+  "sector_per_p90": 142.8,
+  "sector_pbr_median": 8.36,
+  "sector_pbr_p90": 43.67
  },
  "forecast": {
   "revenue": {
-   "cur_year": 105965770270.0,
-   "next_year": 173430561910.0
+   "cur_year": 105963966570.0,
+   "next_year": 173450346160.0
   },
   "eps": {
-   "cur_year": 11.6382,
-   "next_year": 19.37208
+   "cur_year": 11.65766,
+   "next_year": 19.38391
   },
   "growth": {
-   "next_year": 0.6645,
+   "next_year": 0.6628,
    "long_term": null
   },
   "price_target": {
-   "mean": 533.4087,
+   "mean": 531.8468,
    "high": 715.0,
    "low": 215.88
   },
@@ -36,28 +36,36 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 232.76,
-   "mid": 324.71,
-   "high": 1417.53
+   "low": 233.15,
+   "mid": 320.59,
+   "high": 1664.71
   },
   "y1": {
-   "low": 387.44,
-   "mid": 540.48,
-   "high": 2359.52
+   "low": 387.68,
+   "mid": 533.06,
+   "high": 2768.02
   },
   "y5": {
-   "low": 924.89,
-   "mid": 1104.73,
-   "high": 1284.57
+   "low": 926.44,
+   "mid": 1106.58,
+   "high": 1286.72
   },
   "assumptions": {
-   "eps_cur": 11.638,
-   "eps_next": 19.372,
-   "eps_5y": 51.383,
+   "eps_cur": 11.658,
+   "eps_next": 19.384,
+   "eps_5y": 51.469,
    "growth_used": 0.5,
-   "per_median": 27.9,
-   "per_p90": 121.8,
+   "per_median": 27.5,
+   "per_p90": 142.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.4,
+  "debt_to_equity": 59.6,
+  "current_ratio": 2.5,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

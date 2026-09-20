@@ -1,63 +1,74 @@
 {
  "sector": "米-テクノロジー",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 27.9,
-  "sector_per_p90": 121.8,
-  "sector_pbr_median": 11.59,
-  "sector_pbr_p90": 42.85
+  "sector_per_median": 27.5,
+  "sector_per_p90": 142.8,
+  "sector_pbr_median": 8.36,
+  "sector_pbr_p90": 43.67
  },
  "forecast": {
   "revenue": {
-   "cur_year": 46265384030.0,
-   "next_year": 50813111040.0
+   "cur_year": 46295001760.0,
+   "next_year": 50784635920.0
   },
   "eps": {
-   "cur_year": 16.64892,
-   "next_year": 16.00824
+   "cur_year": 16.75623,
+   "next_year": 16.01146
   },
   "growth": {
-   "next_year": -0.0385,
+   "next_year": -0.0444,
    "long_term": null
   },
   "price_target": {
-   "mean": 272.13242,
+   "mean": 282.4934,
    "high": 475.0,
    "low": 160.0
   },
-  "ex_dividend_date": "2026-09-11",
+  "ex_dividend_date": "2026-12-24",
   "ex_dividend_schedule": [
-   "2026-09-11",
-   "2026-12-12",
-   "2027-03-14",
-   "2027-06-14"
+   "2026-12-24",
+   "2027-04-01",
+   "2027-07-08",
+   "2027-10-14"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 332.98,
-   "mid": 464.5,
-   "high": 2027.84
+   "low": 335.12,
+   "mid": 460.8,
+   "high": 2392.79
   },
   "y1": {
-   "low": 320.16,
-   "mid": 446.63,
-   "high": 1949.8
+   "low": 320.23,
+   "mid": 440.32,
+   "high": 2286.44
   },
   "y5": {
-   "low": 261.37,
-   "mid": 312.19,
-   "high": 363.02
+   "low": 257.51,
+   "mid": 307.58,
+   "high": 357.65
   },
   "assumptions": {
-   "eps_cur": 16.649,
-   "eps_next": 16.008,
-   "eps_5y": 14.521,
-   "growth_used": -0.0385,
-   "per_median": 27.9,
-   "per_p90": 121.8,
+   "eps_cur": 16.756,
+   "eps_next": 16.011,
+   "eps_5y": 14.306,
+   "growth_used": -0.0444,
+   "per_median": 27.5,
+   "per_p90": 142.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.27,
+  "debt_to_equity": 110.4,
+  "current_ratio": 0.84,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄",
+   "流動性難"
+  ],
+  "level": "alert"
  }
 }

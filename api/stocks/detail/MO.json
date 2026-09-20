@@ -1,11 +1,11 @@
 {
  "sector": "米-生活必需品",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 26.4,
-  "sector_per_p90": 46.1,
-  "sector_pbr_median": 9.04,
-  "sector_pbr_p90": 24.57
+  "sector_per_median": 26.5,
+  "sector_per_p90": 45.0,
+  "sector_pbr_median": 9.01,
+  "sector_pbr_p90": 11.85
  },
  "forecast": {
   "revenue": {
@@ -25,25 +25,25 @@
    "high": 82.0,
    "low": 58.0
   },
-  "ex_dividend_date": "2026-09-14",
+  "ex_dividend_date": "2026-12-16",
   "ex_dividend_schedule": [
-   "2026-09-14",
-   "2026-12-14",
-   "2027-03-15",
-   "2027-06-14"
+   "2026-12-16",
+   "2027-03-18",
+   "2027-06-18",
+   "2027-09-18"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
    "low": 113.54,
-   "mid": 149.88,
-   "high": 261.72
+   "mid": 150.44,
+   "high": 255.47
   },
   "y1": {
    "low": 117.28,
-   "mid": 154.81,
-   "high": 270.33
+   "mid": 155.4,
+   "high": 263.88
   },
   "y5": {
    "low": 114.5,
@@ -55,9 +55,20 @@
    "eps_next": 5.864,
    "eps_5y": 6.361,
    "growth_used": 0.0329,
-   "per_median": 26.4,
-   "per_p90": 46.1,
+   "per_median": 26.5,
+   "per_p90": 45.0,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.1,
+  "debt_to_equity": null,
+  "current_ratio": 0.52,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄",
+   "流動性難"
+  ],
+  "level": "alert"
  }
 }

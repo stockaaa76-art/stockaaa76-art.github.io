@@ -1,55 +1,63 @@
 {
  "sector": "米-通信・メディア",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 17.0,
-  "sector_per_p90": 24.6,
-  "sector_pbr_median": 6.02,
-  "sector_pbr_p90": 10.81
+  "sector_per_median": 17.5,
+  "sector_per_p90": 25.1,
+  "sector_pbr_median": 6.49,
+  "sector_pbr_p90": 9.91
  },
  "forecast": {
   "revenue": {
    "cur_year": 51220590210.0,
-   "next_year": 57005763400.0
+   "next_year": 57005496740.0
   },
   "eps": {
    "cur_year": 3.58437,
-   "next_year": 3.81626
+   "next_year": 3.81426
   },
   "growth": {
-   "next_year": 0.0643,
+   "next_year": 0.0637,
    "long_term": null
   },
   "price_target": {
-   "mean": 93.66,
+   "mean": 93.37111,
    "high": 135.0,
-   "low": 70.0
+   "low": 57.0
   }
  },
  "theoretical_price": {
   "now": {
-   "low": 60.93,
-   "mid": 60.93,
-   "high": 88.18
+   "low": 62.73,
+   "mid": 62.73,
+   "high": 89.97
   },
   "y1": {
-   "low": 64.88,
-   "mid": 64.88,
-   "high": 93.88
+   "low": 66.75,
+   "mid": 66.75,
+   "high": 95.74
   },
   "y5": {
-   "low": 80.37,
-   "mid": 96.0,
-   "high": 111.63
+   "low": 80.21,
+   "mid": 95.81,
+   "high": 111.4
   },
   "assumptions": {
    "eps_cur": 3.584,
-   "eps_next": 3.816,
-   "eps_5y": 4.465,
-   "growth_used": 0.0643,
-   "per_median": 17.0,
-   "per_p90": 24.6,
+   "eps_next": 3.814,
+   "eps_5y": 4.456,
+   "growth_used": 0.0637,
+   "per_median": 17.5,
+   "per_p90": 25.1,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.55,
+  "debt_to_equity": 55.2,
+  "current_ratio": 1.14,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

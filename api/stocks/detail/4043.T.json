@@ -1,11 +1,11 @@
 {
  "sector": "Basic Materials",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 20.5,
-  "sector_per_p90": 53.2,
-  "sector_pbr_median": 1.23,
-  "sector_pbr_p90": 3.74
+  "sector_per_median": 19.8,
+  "sector_per_p90": 47.6,
+  "sector_pbr_median": 1.34,
+  "sector_pbr_p90": 3.59
  },
  "forecast": {
   "revenue": {
@@ -34,14 +34,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 8214.0,
-   "mid": 8419.35,
-   "high": 21849.24
+   "low": 8131.86,
+   "mid": 8131.86,
+   "high": 19549.32
   },
   "y1": {
-   "low": 9905.87,
-   "mid": 10153.51,
-   "high": 26349.61
+   "low": 9806.81,
+   "mid": 9806.81,
+   "high": 23575.96
   },
   "y5": {
    "low": 14443.97,
@@ -53,9 +53,19 @@
    "eps_next": 495.293,
    "eps_5y": 802.443,
    "growth_used": 0.206,
-   "per_median": 20.5,
-   "per_p90": 53.2,
+   "per_median": 19.8,
+   "per_p90": 47.6,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.3,
+  "debt_to_equity": 54.5,
+  "current_ratio": 1.74,
+  "fcf_positive": null,
+  "flags": [
+   "現金薄"
+  ],
+  "level": "watch"
  }
 }

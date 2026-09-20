@@ -1,11 +1,11 @@
 {
  "sector": "Technology",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 35.3,
-  "sector_per_p90": 74.6,
-  "sector_pbr_median": 4.76,
-  "sector_pbr_p90": 17.78
+  "sector_per_median": 36.6,
+  "sector_per_p90": 76.8,
+  "sector_pbr_median": 5.12,
+  "sector_pbr_p90": 21.1
  },
  "forecast": {
   "revenue": {
@@ -13,11 +13,11 @@
    "next_year": 77798946250.0
   },
   "eps": {
-   "cur_year": 5.14455,
+   "cur_year": 5.14263,
    "next_year": 5.60226
   },
   "growth": {
-   "next_year": 0.088999994,
+   "next_year": 0.08939999,
    "long_term": null
   },
   "price_target": {
@@ -36,28 +36,38 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 102.89,
-   "mid": 181.6,
-   "high": 383.78
+   "low": 102.85,
+   "mid": 188.22,
+   "high": 394.95
   },
   "y1": {
    "low": 112.05,
-   "mid": 197.76,
-   "high": 417.93
+   "mid": 205.04,
+   "high": 430.25
   },
   "y5": {
-   "low": 125.17,
-   "mid": 149.51,
-   "high": 173.85
+   "low": 125.29,
+   "mid": 149.65,
+   "high": 174.02
   },
   "assumptions": {
-   "eps_cur": 5.145,
+   "eps_cur": 5.143,
    "eps_next": 5.602,
-   "eps_5y": 6.954,
-   "growth_used": 0.089,
-   "per_median": 35.3,
-   "per_p90": 74.6,
+   "eps_5y": 6.961,
+   "growth_used": 0.0894,
+   "per_median": 36.6,
+   "per_p90": 76.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.51,
+  "debt_to_equity": 62.0,
+  "current_ratio": 0.93,
+  "fcf_positive": true,
+  "flags": [
+   "流動性難"
+  ],
+  "level": "watch"
  }
 }

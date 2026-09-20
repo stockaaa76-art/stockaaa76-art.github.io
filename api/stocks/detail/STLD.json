@@ -1,27 +1,27 @@
 {
  "sector": "Basic Materials",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 20.5,
-  "sector_per_p90": 53.2,
-  "sector_pbr_median": 1.23,
-  "sector_pbr_p90": 3.74
+  "sector_per_median": 19.8,
+  "sector_per_p90": 47.6,
+  "sector_pbr_median": 1.34,
+  "sector_pbr_p90": 3.59
  },
  "forecast": {
   "revenue": {
-   "cur_year": 23633061590.0,
-   "next_year": 23541142310.0
+   "cur_year": 23854239330.0,
+   "next_year": 23918220070.0
   },
   "eps": {
-   "cur_year": 16.84739,
-   "next_year": 18.94531
+   "cur_year": 17.1154,
+   "next_year": 19.56578
   },
   "growth": {
-   "next_year": 0.1245,
+   "next_year": 0.1432,
    "long_term": null
   },
   "price_target": {
-   "mean": 271.2143,
+   "mean": 272.14285,
    "high": 310.0,
    "low": 221.0
   },
@@ -36,28 +36,38 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 336.95,
-   "mid": 345.37,
-   "high": 896.28
+   "low": 338.88,
+   "mid": 338.88,
+   "high": 814.69
   },
   "y1": {
-   "low": 378.91,
-   "mid": 388.38,
-   "high": 1007.89
+   "low": 387.4,
+   "mid": 387.4,
+   "high": 931.33
   },
   "y5": {
-   "low": 459.84,
-   "mid": 549.26,
-   "high": 638.67
+   "low": 495.76,
+   "mid": 592.15,
+   "high": 688.55
   },
   "assumptions": {
-   "eps_cur": 16.847,
-   "eps_next": 18.945,
-   "eps_5y": 25.547,
-   "growth_used": 0.1245,
-   "per_median": 20.5,
-   "per_p90": 53.2,
+   "eps_cur": 17.115,
+   "eps_next": 19.566,
+   "eps_5y": 27.542,
+   "growth_used": 0.1432,
+   "per_median": 19.8,
+   "per_p90": 47.6,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.13,
+  "debt_to_equity": 46.9,
+  "current_ratio": 3.18,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄"
+  ],
+  "level": "watch"
  }
 }

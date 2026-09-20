@@ -1,11 +1,11 @@
 {
  "sector": "日本-電力・ガス",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 8.6,
-  "sector_per_p90": 14.6,
-  "sector_pbr_median": 0.87,
-  "sector_pbr_p90": 1.19
+  "sector_per_median": 8.8,
+  "sector_per_p90": 15.5,
+  "sector_pbr_median": 0.91,
+  "sector_pbr_p90": 1.26
  },
  "forecast": {
   "revenue": {
@@ -34,14 +34,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 1148.39,
-   "mid": 1148.39,
-   "high": 1949.59
+   "low": 1175.09,
+   "mid": 1175.09,
+   "high": 2069.77
   },
   "y1": {
-   "low": 1455.12,
-   "mid": 1455.12,
-   "high": 2470.32
+   "low": 1488.96,
+   "mid": 1488.96,
+   "high": 2622.6
   },
   "y5": {
    "low": 5630.94,
@@ -53,9 +53,20 @@
    "eps_next": 169.2,
    "eps_5y": 312.83,
    "growth_used": 0.2671,
-   "per_median": 8.6,
-   "per_p90": 14.6,
+   "per_median": 8.8,
+   "per_p90": 15.5,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.09,
+  "debt_to_equity": 196.1,
+  "current_ratio": 0.46,
+  "fcf_positive": null,
+  "flags": [
+   "現金薄",
+   "流動性難"
+  ],
+  "level": "alert"
  }
 }

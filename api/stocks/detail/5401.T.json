@@ -1,27 +1,27 @@
 {
  "sector": "日本-鉄鋼・非鉄",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 18.0,
-  "sector_per_p90": 212.9,
-  "sector_pbr_median": 2.35,
-  "sector_pbr_p90": 13.75
+  "sector_per_median": 17.6,
+  "sector_per_p90": 212.5,
+  "sector_pbr_median": 2.29,
+  "sector_pbr_p90": 13.48
  },
  "forecast": {
   "revenue": {
-   "cur_year": 11631824626870.0,
-   "next_year": 12047265808950.0
+   "cur_year": 11581824626870.0,
+   "next_year": 12018821364510.0
   },
   "eps": {
-   "cur_year": 53.41358,
-   "next_year": 67.76758
+   "cur_year": 56.40188,
+   "next_year": 68.26758
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 710.0,
+   "mean": 712.2222,
    "high": 940.0,
    "low": 470.0
   },
@@ -34,28 +34,38 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 961.44,
-   "mid": 961.44,
-   "high": 11371.75
+   "low": 992.67,
+   "mid": 992.67,
+   "high": 11985.4
   },
   "y1": {
-   "low": 1219.82,
-   "mid": 1219.82,
-   "high": 14427.72
+   "low": 1201.51,
+   "mid": 1201.51,
+   "high": 14506.86
   },
   "y5": {
-   "low": 2263.13,
-   "mid": 2703.18,
-   "high": 3143.23
+   "low": 2010.2,
+   "mid": 2401.07,
+   "high": 2791.94
   },
   "assumptions": {
-   "eps_cur": 53.414,
-   "eps_next": 67.768,
-   "eps_5y": 125.729,
-   "growth_used": 0.2687,
-   "per_median": 18.0,
-   "per_p90": 212.9,
+   "eps_cur": 56.402,
+   "eps_next": 68.268,
+   "eps_5y": 111.678,
+   "growth_used": 0.2104,
+   "per_median": 17.6,
+   "per_p90": 212.5,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.09,
+  "debt_to_equity": 90.1,
+  "current_ratio": 1.71,
+  "fcf_positive": null,
+  "flags": [
+   "現金薄"
+  ],
+  "level": "watch"
  }
 }

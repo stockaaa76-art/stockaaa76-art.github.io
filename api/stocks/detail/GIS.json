@@ -1,27 +1,27 @@
 {
  "sector": "米-生活必需品",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 26.4,
-  "sector_per_p90": 46.1,
-  "sector_pbr_median": 9.04,
-  "sector_pbr_p90": 24.57
+  "sector_per_median": 26.5,
+  "sector_per_p90": 45.0,
+  "sector_pbr_median": 9.01,
+  "sector_pbr_p90": 11.85
  },
  "forecast": {
   "revenue": {
-   "cur_year": 17791820050.0,
-   "next_year": 17911040510.0
+   "cur_year": 17787481900.0,
+   "next_year": 17908411190.0
   },
   "eps": {
-   "cur_year": 3.07859,
-   "next_year": 3.20989
+   "cur_year": 3.07113,
+   "next_year": 3.18783
   },
   "growth": {
-   "next_year": 0.042600002,
+   "next_year": 0.038,
    "long_term": null
   },
   "price_target": {
-   "mean": 37.77778,
+   "mean": 37.66667,
    "high": 47.0,
    "low": 31.0
   },
@@ -36,28 +36,39 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 61.57,
-   "mid": 81.27,
-   "high": 141.92
+   "low": 61.42,
+   "mid": 81.38,
+   "high": 138.2
   },
   "y1": {
-   "low": 64.2,
-   "mid": 84.74,
-   "high": 147.98
+   "low": 63.76,
+   "mid": 84.48,
+   "high": 143.45
   },
   "y5": {
-   "low": 64.17,
-   "mid": 76.65,
-   "high": 89.13
+   "low": 63.02,
+   "mid": 75.28,
+   "high": 87.53
   },
   "assumptions": {
-   "eps_cur": 3.079,
-   "eps_next": 3.21,
-   "eps_5y": 3.565,
-   "growth_used": 0.0426,
-   "per_median": 26.4,
-   "per_p90": 46.1,
+   "eps_cur": 3.071,
+   "eps_next": 3.188,
+   "eps_5y": 3.501,
+   "growth_used": 0.038,
+   "per_median": 26.5,
+   "per_p90": 45.0,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.03,
+  "debt_to_equity": 188.9,
+  "current_ratio": 0.68,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄",
+   "流動性難"
+  ],
+  "level": "alert"
  }
 }

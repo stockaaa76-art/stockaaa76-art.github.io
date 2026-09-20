@@ -1,55 +1,63 @@
 {
  "sector": "米-一般消費財",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 20.8,
-  "sector_per_p90": 321.9,
-  "sector_pbr_median": 5.05,
-  "sector_pbr_p90": 19.28
+  "sector_per_median": 20.4,
+  "sector_per_p90": 334.2,
+  "sector_pbr_median": 4.96,
+  "sector_pbr_p90": 18.02
  },
  "forecast": {
   "revenue": {
-   "cur_year": 828276165220.0,
-   "next_year": 946672691990.0
+   "cur_year": 828224640950.0,
+   "next_year": 946790229140.0
   },
   "eps": {
-   "cur_year": 12.56855,
-   "next_year": 10.49168
+   "cur_year": 12.88185,
+   "next_year": 10.46864
   },
   "growth": {
-   "next_year": -0.1715,
+   "next_year": -0.19389999,
    "long_term": null
   },
   "price_target": {
-   "mean": 328.1707,
+   "mean": 328.2244,
    "high": 405.0,
    "low": 230.0
   }
  },
  "theoretical_price": {
   "now": {
-   "low": 251.37,
-   "mid": 261.43,
-   "high": 4045.82
+   "low": 257.64,
+   "mid": 262.79,
+   "high": 4305.11
   },
   "y1": {
-   "low": 209.83,
-   "mid": 218.23,
-   "high": 3377.27
+   "low": 209.37,
+   "mid": 213.56,
+   "high": 3498.62
   },
   "y5": {
-   "low": 118.85,
-   "mid": 141.96,
-   "high": 165.07
+   "low": 111.18,
+   "mid": 132.8,
+   "high": 154.42
   },
   "assumptions": {
-   "eps_cur": 12.569,
-   "eps_next": 10.492,
-   "eps_5y": 6.603,
-   "growth_used": -0.1715,
-   "per_median": 20.8,
-   "per_p90": 321.9,
+   "eps_cur": 12.882,
+   "eps_next": 10.469,
+   "eps_5y": 6.177,
+   "growth_used": -0.1939,
+   "per_median": 20.4,
+   "per_p90": 334.2,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.49,
+  "debt_to_equity": 45.6,
+  "current_ratio": 1.03,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

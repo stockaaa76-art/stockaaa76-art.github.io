@@ -1,11 +1,11 @@
 {
  "sector": "日本-ヘルスケア",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 33.7,
-  "sector_per_p90": 196.1,
-  "sector_pbr_median": 2.43,
-  "sector_pbr_p90": 7.86
+  "sector_per_median": 32.7,
+  "sector_per_p90": 192.3,
+  "sector_pbr_median": 2.32,
+  "sector_pbr_p90": 7.73
  },
  "forecast": {
   "revenue": {
@@ -35,13 +35,13 @@
  "theoretical_price": {
   "now": {
    "low": 5691.45,
-   "mid": 9590.09,
-   "high": 55804.62
+   "mid": 9305.51,
+   "high": 54723.25
   },
   "y1": {
    "low": 6113.64,
-   "mid": 10301.49,
-   "high": 59944.28
+   "mid": 9995.81,
+   "high": 58782.69
   },
   "y5": {
    "low": 6594.02,
@@ -53,9 +53,17 @@
    "eps_next": 305.682,
    "eps_5y": 366.334,
    "growth_used": 0.0742,
-   "per_median": 33.7,
-   "per_p90": 196.1,
+   "per_median": 32.7,
+   "per_p90": 192.3,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 1.28,
+  "debt_to_equity": 16.8,
+  "current_ratio": 1.83,
+  "fcf_positive": null,
+  "flags": [],
+  "level": "ok"
  }
 }

@@ -1,11 +1,11 @@
 {
  "sector": "Healthcare",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 27.6,
-  "sector_per_p90": 38.0,
-  "sector_pbr_median": 7.19,
-  "sector_pbr_p90": 8.59
+  "sector_per_median": 26.4,
+  "sector_per_p90": 36.5,
+  "sector_pbr_median": 6.86,
+  "sector_pbr_p90": 9.11
  },
  "forecast": {
   "revenue": {
@@ -13,43 +13,51 @@
    "next_year": 193508251010.0
   },
   "eps": {
-   "cur_year": 4.88635,
-   "next_year": 5.31252
+   "cur_year": 4.88462,
+   "next_year": 5.34776
   },
   "growth": {
-   "next_year": 0.0872,
+   "next_year": 0.094799995,
    "long_term": null
   },
   "price_target": {
-   "mean": 71.66667,
+   "mean": 71.77778,
    "high": 85.0,
    "low": 56.0
   }
  },
  "theoretical_price": {
   "now": {
-   "low": 97.73,
-   "mid": 134.86,
-   "high": 185.68
+   "low": 97.69,
+   "mid": 128.95,
+   "high": 178.29
   },
   "y1": {
-   "low": 106.25,
-   "mid": 146.63,
-   "high": 201.88
+   "low": 106.96,
+   "mid": 141.18,
+   "high": 195.19
   },
   "y5": {
-   "low": 118.19,
-   "mid": 141.17,
-   "high": 164.15
+   "low": 121.13,
+   "mid": 144.68,
+   "high": 168.23
   },
   "assumptions": {
-   "eps_cur": 4.886,
-   "eps_next": 5.313,
-   "eps_5y": 6.566,
-   "growth_used": 0.0872,
-   "per_median": 27.6,
-   "per_p90": 38.0,
+   "eps_cur": 4.885,
+   "eps_next": 5.348,
+   "eps_5y": 6.729,
+   "growth_used": 0.0948,
+   "per_median": 26.4,
+   "per_p90": 36.5,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 1.68,
+  "debt_to_equity": 71.1,
+  "current_ratio": 1.15,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

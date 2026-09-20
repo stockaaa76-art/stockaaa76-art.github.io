@@ -1,27 +1,27 @@
 {
  "sector": "Industrials",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 25.4,
-  "sector_per_p90": 43.1,
-  "sector_pbr_median": 1.83,
-  "sector_pbr_p90": 6.19
+  "sector_per_median": 25.1,
+  "sector_per_p90": 47.6,
+  "sector_pbr_median": 2.27,
+  "sector_pbr_p90": 6.28
  },
  "forecast": {
   "revenue": {
-   "cur_year": 213460000000.0,
-   "next_year": 226450000000.0
+   "cur_year": 215650000000.0,
+   "next_year": 228033333330.0
   },
   "eps": {
-   "cur_year": 138.67,
-   "next_year": 184.135
+   "cur_year": 144.775,
+   "next_year": 186.2
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 5075.0,
+   "mean": 5233.3335,
    "high": 5500.0,
    "low": 4900.0
   },
@@ -33,28 +33,36 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 2773.4,
-   "mid": 3522.22,
-   "high": 5976.68
+   "low": 2895.5,
+   "mid": 3633.85,
+   "high": 6891.29
   },
   "y1": {
-   "low": 3682.7,
-   "mid": 4677.03,
-   "high": 7936.22
+   "low": 3724.0,
+   "mid": 4673.62,
+   "high": 8863.12
   },
   "y5": {
-   "low": 6957.02,
-   "mid": 8309.77,
-   "high": 9662.53
+   "low": 6450.91,
+   "mid": 7705.25,
+   "high": 8959.6
   },
   "assumptions": {
-   "eps_cur": 138.67,
-   "eps_next": 184.135,
-   "eps_5y": 386.501,
-   "growth_used": 0.3279,
-   "per_median": 25.4,
-   "per_p90": 43.1,
+   "eps_cur": 144.775,
+   "eps_next": 186.2,
+   "eps_5y": 358.384,
+   "growth_used": 0.2861,
+   "per_median": 25.1,
+   "per_p90": 47.6,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 1.0,
+  "debt_to_equity": 33.4,
+  "current_ratio": 2.52,
+  "fcf_positive": null,
+  "flags": [],
+  "level": "ok"
  }
 }

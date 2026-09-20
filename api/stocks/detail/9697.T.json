@@ -1,27 +1,27 @@
 {
  "sector": "日本-エンタメ・ゲーム",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 25.6,
+  "sector_per_median": 25.7,
   "sector_per_p90": 55.9,
-  "sector_pbr_median": 2.94,
-  "sector_pbr_p90": 6.19
+  "sector_pbr_median": 3.05,
+  "sector_pbr_p90": 6.4
  },
  "forecast": {
   "revenue": {
-   "cur_year": 220806717650.0,
-   "next_year": 243750518010.0
+   "cur_year": 222042011770.0,
+   "next_year": 244568165060.0
   },
   "eps": {
-   "cur_year": 151.89507,
-   "next_year": 174.77245
+   "cur_year": 153.27562,
+   "next_year": 176.95186
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 4526.25,
+   "mean": 4608.125,
    "high": 5300.0,
    "low": 3660.0
   },
@@ -34,28 +34,36 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 3037.9,
-   "mid": 3888.51,
-   "high": 8490.93
+   "low": 3065.51,
+   "mid": 3939.18,
+   "high": 8568.11
   },
   "y1": {
-   "low": 3495.45,
-   "mid": 4474.17,
-   "high": 9769.78
+   "low": 3539.04,
+   "mid": 4547.66,
+   "high": 9891.61
   },
   "y5": {
-   "low": 4503.63,
-   "mid": 5379.34,
-   "high": 6255.05
+   "low": 4599.86,
+   "mid": 5494.28,
+   "high": 6388.7
   },
   "assumptions": {
-   "eps_cur": 151.895,
-   "eps_next": 174.772,
-   "eps_5y": 250.202,
-   "growth_used": 0.1506,
-   "per_median": 25.6,
+   "eps_cur": 153.276,
+   "eps_next": 176.952,
+   "eps_5y": 255.548,
+   "growth_used": 0.1545,
+   "per_median": 25.7,
    "per_p90": 55.9,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": null,
+  "debt_to_equity": null,
+  "current_ratio": 6.66,
+  "fcf_positive": null,
+  "flags": [],
+  "level": "ok"
  }
 }

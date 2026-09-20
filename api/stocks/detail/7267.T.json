@@ -1,27 +1,27 @@
 {
  "sector": "日本-自動車・輸送機",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 20.1,
-  "sector_per_p90": 21.1,
-  "sector_pbr_median": 0.98,
-  "sector_pbr_p90": 1.46
+  "sector_per_median": 18.9,
+  "sector_per_p90": 20.8,
+  "sector_pbr_median": 0.96,
+  "sector_pbr_p90": 1.41
  },
  "forecast": {
   "revenue": {
-   "cur_year": 23778293665580.0,
-   "next_year": 24187827015130.0
+   "cur_year": 23712278858380.0,
+   "next_year": 24225936527880.0
   },
   "eps": {
-   "cur_year": 144.57701,
-   "next_year": 206.8768
+   "cur_year": 153.88269,
+   "next_year": 213.17168
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 1718.75,
+   "mean": 1785.2941,
    "high": 2200.0,
    "low": 1400.0
   },
@@ -34,28 +34,36 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 2891.54,
-   "mid": 2906.0,
-   "high": 3050.57
+   "low": 2908.38,
+   "mid": 2908.38,
+   "high": 3200.76
   },
   "y1": {
-   "low": 4137.54,
-   "mid": 4158.22,
-   "high": 4365.1
+   "low": 4028.94,
+   "mid": 4028.94,
+   "high": 4433.97
   },
   "y5": {
-   "low": 9603.84,
-   "mid": 11471.25,
-   "high": 13338.66
+   "low": 9045.96,
+   "mid": 10804.89,
+   "high": 12563.83
   },
   "assumptions": {
-   "eps_cur": 144.577,
-   "eps_next": 206.877,
-   "eps_5y": 533.547,
-   "growth_used": 0.4309,
-   "per_median": 20.1,
-   "per_p90": 21.1,
+   "eps_cur": 153.883,
+   "eps_next": 213.172,
+   "eps_5y": 502.553,
+   "growth_used": 0.3853,
+   "per_median": 18.9,
+   "per_p90": 20.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.38,
+  "debt_to_equity": 113.8,
+  "current_ratio": 1.29,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

@@ -1,63 +1,73 @@
 {
  "sector": "米-ヘルスケア",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 33.0,
-  "sector_per_p90": 38.6,
-  "sector_pbr_median": 3.67,
-  "sector_pbr_p90": 30.24
+  "sector_per_median": 33.2,
+  "sector_per_p90": 38.8,
+  "sector_pbr_median": 3.47,
+  "sector_pbr_p90": 30.34
  },
  "forecast": {
   "revenue": {
-   "cur_year": 47873838450.0,
-   "next_year": 50331734860.0
+   "cur_year": 47873244210.0,
+   "next_year": 50325216260.0
   },
   "eps": {
-   "cur_year": 25.12669,
-   "next_year": 27.52812
+   "cur_year": 25.13141,
+   "next_year": 27.53117
   },
   "growth": {
-   "next_year": 0.0956,
+   "next_year": 0.0955,
    "long_term": null
   },
   "price_target": {
-   "mean": 638.1111,
+   "mean": 645.14813,
    "high": 750.0,
    "low": 520.0
   },
-  "ex_dividend_date": "2026-09-17",
+  "ex_dividend_date": "2026-12-16",
   "ex_dividend_schedule": [
-   "2026-09-17",
-   "2026-12-20",
-   "2027-03-24",
-   "2027-06-26"
+   "2026-12-16",
+   "2027-03-18",
+   "2027-06-18",
+   "2027-09-18"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 502.53,
-   "mid": 829.18,
-   "high": 969.89
+   "low": 502.63,
+   "mid": 834.36,
+   "high": 975.1
   },
   "y1": {
-   "low": 550.56,
-   "mid": 908.43,
-   "high": 1062.59
+   "low": 550.62,
+   "mid": 914.03,
+   "high": 1068.21
   },
   "y5": {
-   "low": 624.7,
-   "mid": 746.17,
-   "high": 867.65
+   "low": 624.62,
+   "mid": 746.07,
+   "high": 867.53
   },
   "assumptions": {
-   "eps_cur": 25.127,
-   "eps_next": 27.528,
-   "eps_5y": 34.706,
-   "growth_used": 0.0956,
-   "per_median": 33.0,
-   "per_p90": 38.6,
+   "eps_cur": 25.131,
+   "eps_next": 27.531,
+   "eps_5y": 34.701,
+   "growth_used": 0.0955,
+   "per_median": 33.2,
+   "per_p90": 38.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.1,
+  "debt_to_equity": 80.6,
+  "current_ratio": 1.55,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄"
+  ],
+  "level": "watch"
  }
 }

@@ -1,6 +1,6 @@
 {
  "sector": "Communication Services",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -9,22 +9,34 @@
  },
  "forecast": {
   "revenue": {
-   "cur_year": 54248918870.0,
-   "next_year": 53703877180.0
+   "cur_year": 59109001540.0,
+   "next_year": 65868721959.0
   },
   "eps": {
-   "cur_year": 41.91909,
-   "next_year": 45.26115
+   "cur_year": 40.8525,
+   "next_year": 42.0625
   },
   "growth": {
-   "next_year": 0.0627,
+   "next_year": 0.0689,
    "long_term": null
   },
   "price_target": {
-   "mean": 184.41176,
+   "mean": 179.10526,
    "high": 380.0,
    "low": 101.0
   }
  },
- "theoretical_price": null
+ "theoretical_price": null,
+ "financial_health": {
+  "cash_to_debt": 0.01,
+  "debt_to_equity": 441.6,
+  "current_ratio": 0.36,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄",
+   "高レバレッジ",
+   "流動性難"
+  ],
+  "level": "alert"
+ }
 }

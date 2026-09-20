@@ -1,11 +1,11 @@
 {
  "sector": "米-金融",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 16.0,
-  "sector_per_p90": 31.9,
-  "sector_pbr_median": 2.87,
-  "sector_pbr_p90": 19.88
+  "sector_per_median": 15.0,
+  "sector_per_p90": 31.3,
+  "sector_pbr_median": 2.63,
+  "sector_pbr_p90": 19.52
  },
  "forecast": {
   "revenue": {
@@ -13,15 +13,15 @@
    "next_year": 86501620030.0
   },
   "eps": {
-   "cur_year": 12.97822,
-   "next_year": 13.64926
+   "cur_year": 12.97779,
+   "next_year": 13.68021
   },
   "growth": {
    "next_year": 0.051999997,
    "long_term": null
   },
   "price_target": {
-   "mean": 236.61905,
+   "mean": 236.42857,
    "high": 262.0,
    "low": 184.0
   },
@@ -36,28 +36,38 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 207.65,
-   "mid": 207.65,
-   "high": 414.01
+   "low": 194.67,
+   "mid": 194.67,
+   "high": 406.2
   },
   "y1": {
-   "low": 218.39,
-   "mid": 218.39,
-   "high": 435.41
+   "low": 205.2,
+   "mid": 205.2,
+   "high": 428.19
   },
   "y5": {
-   "low": 279.26,
-   "mid": 333.56,
-   "high": 387.85
+   "low": 279.25,
+   "mid": 333.54,
+   "high": 387.84
   },
   "assumptions": {
    "eps_cur": 12.978,
-   "eps_next": 13.649,
+   "eps_next": 13.68,
    "eps_5y": 15.514,
    "growth_used": 0.052,
-   "per_median": 16.0,
-   "per_p90": 31.9,
+   "per_median": 15.0,
+   "per_p90": 31.3,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 1.22,
+  "debt_to_equity": 517.3,
+  "current_ratio": 2.0,
+  "fcf_positive": null,
+  "flags": [
+   "高レバレッジ"
+  ],
+  "level": "watch"
  }
 }

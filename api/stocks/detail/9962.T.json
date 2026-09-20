@@ -1,11 +1,11 @@
 {
  "sector": "Industrials",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 25.4,
-  "sector_per_p90": 43.1,
-  "sector_pbr_median": 1.83,
-  "sector_pbr_p90": 6.19
+  "sector_per_median": 25.1,
+  "sector_per_p90": 47.6,
+  "sector_pbr_median": 2.27,
+  "sector_pbr_p90": 6.28
  },
  "forecast": {
   "revenue": {
@@ -35,13 +35,13 @@
  "theoretical_price": {
   "now": {
    "low": 4032.5,
-   "mid": 5121.27,
-   "high": 8690.04
+   "mid": 5060.79,
+   "high": 9597.35
   },
   "y1": {
    "low": 4200.22,
-   "mid": 5334.28,
-   "high": 9051.48
+   "mid": 5271.28,
+   "high": 9996.53
   },
   "y5": {
    "low": 4188.48,
@@ -53,9 +53,17 @@
    "eps_next": 210.011,
    "eps_5y": 232.693,
    "growth_used": 0.0416,
-   "per_median": 25.4,
-   "per_p90": 43.1,
+   "per_median": 25.1,
+   "per_p90": 47.6,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": null,
+  "debt_to_equity": null,
+  "current_ratio": 4.41,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

@@ -1,6 +1,6 @@
 {
  "sector": "米-資本財・産業",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -9,15 +9,15 @@
  },
  "forecast": {
   "revenue": {
-   "cur_year": 14016353720.0,
-   "next_year": 18150280600.0
+   "cur_year": 14018651820.0,
+   "next_year": 18183901690.0
   },
   "eps": {
-   "cur_year": 6.70757,
-   "next_year": 9.09879
+   "cur_year": 6.73489,
+   "next_year": 9.12236
   },
   "growth": {
-   "next_year": 0.35650003,
+   "next_year": 0.3545,
    "long_term": null
   },
   "price_target": {
@@ -25,14 +25,22 @@
    "high": 427.0,
    "low": 236.0
   },
-  "ex_dividend_date": "2026-09-14",
+  "ex_dividend_date": "2026-12-14",
   "ex_dividend_schedule": [
-   "2026-09-14",
    "2026-12-14",
    "2027-03-15",
-   "2027-06-14"
+   "2027-06-14",
+   "2027-09-13"
   ],
   "dividend_frequency": "四半期"
  },
- "theoretical_price": null
+ "theoretical_price": null,
+ "financial_health": {
+  "cash_to_debt": 0.93,
+  "debt_to_equity": 70.2,
+  "current_ratio": 1.38,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
+ }
 }

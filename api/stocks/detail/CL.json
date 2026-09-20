@@ -1,16 +1,16 @@
 {
  "sector": "米-生活必需品",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 26.4,
-  "sector_per_p90": 46.1,
-  "sector_pbr_median": 9.04,
-  "sector_pbr_p90": 24.57
+  "sector_per_median": 26.5,
+  "sector_per_p90": 45.0,
+  "sector_pbr_median": 9.01,
+  "sector_pbr_p90": 11.85
  },
  "forecast": {
   "revenue": {
-   "cur_year": 21403528210.0,
-   "next_year": 22075207960.0
+   "cur_year": 21403516540.0,
+   "next_year": 22075234070.0
   },
   "eps": {
    "cur_year": 3.87527,
@@ -37,13 +37,13 @@
  "theoretical_price": {
   "now": {
    "low": 77.51,
-   "mid": 102.31,
-   "high": 178.65
+   "mid": 102.69,
+   "high": 174.39
   },
   "y1": {
    "low": 82.16,
-   "mid": 108.45,
-   "high": 189.38
+   "mid": 108.86,
+   "high": 184.86
   },
   "y5": {
    "low": 85.68,
@@ -55,9 +55,20 @@
    "eps_next": 4.108,
    "eps_5y": 4.76,
    "growth_used": 0.0601,
-   "per_median": 26.4,
-   "per_p90": 46.1,
+   "per_median": 26.5,
+   "per_p90": 45.0,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.18,
+  "debt_to_equity": 1388.2,
+  "current_ratio": 1.03,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄",
+   "高レバレッジ"
+  ],
+  "level": "alert"
  }
 }

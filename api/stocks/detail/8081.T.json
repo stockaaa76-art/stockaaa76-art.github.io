@@ -1,11 +1,11 @@
 {
  "sector": "Industrials",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 25.4,
-  "sector_per_p90": 43.1,
-  "sector_pbr_median": 1.83,
-  "sector_pbr_p90": 6.19
+  "sector_per_median": 25.1,
+  "sector_per_p90": 47.6,
+  "sector_pbr_median": 2.27,
+  "sector_pbr_p90": 6.28
  },
  "forecast": {
   "revenue": {
@@ -32,5 +32,13 @@
   ],
   "dividend_frequency": "半期"
  },
- "theoretical_price": null
+ "theoretical_price": null,
+ "financial_health": {
+  "cash_to_debt": null,
+  "debt_to_equity": null,
+  "current_ratio": 2.03,
+  "fcf_positive": null,
+  "flags": [],
+  "level": "ok"
+ }
 }

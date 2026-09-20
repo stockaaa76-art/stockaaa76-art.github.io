@@ -1,11 +1,11 @@
 {
  "sector": "Consumer Cyclical",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 18.2,
-  "sector_per_p90": 39.5,
-  "sector_pbr_median": 2.39,
-  "sector_pbr_p90": 9.4
+  "sector_per_median": 16.8,
+  "sector_per_p90": 28.8,
+  "sector_pbr_median": 2.29,
+  "sector_pbr_p90": 8.97
  },
  "forecast": {
   "revenue": {
@@ -34,14 +34,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 11359.8,
-   "mid": 11359.8,
-   "high": 24654.52
+   "low": 10485.97,
+   "mid": 10485.97,
+   "high": 17975.95
   },
   "y1": {
-   "low": 11945.32,
-   "mid": 11945.32,
-   "high": 25925.28
+   "low": 11026.45,
+   "mid": 11026.45,
+   "high": 18902.48
   },
   "y5": {
    "low": 13409.65,
@@ -53,9 +53,17 @@
    "eps_next": 656.336,
    "eps_5y": 744.98,
    "growth_used": 0.0515,
-   "per_median": 18.2,
-   "per_p90": 39.5,
+   "per_median": 16.8,
+   "per_p90": 28.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.87,
+  "debt_to_equity": 28.5,
+  "current_ratio": 2.94,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

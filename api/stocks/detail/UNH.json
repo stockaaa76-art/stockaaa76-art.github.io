@@ -1,63 +1,73 @@
 {
  "sector": "米-ヘルスケア",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 33.0,
-  "sector_per_p90": 38.6,
-  "sector_pbr_median": 3.67,
-  "sector_pbr_p90": 30.24
+  "sector_per_median": 33.2,
+  "sector_per_p90": 38.8,
+  "sector_pbr_median": 3.47,
+  "sector_pbr_p90": 30.34
  },
  "forecast": {
   "revenue": {
-   "cur_year": 446533495500.0,
-   "next_year": 459361693970.0
+   "cur_year": 447186452030.0,
+   "next_year": 459658947680.0
   },
   "eps": {
-   "cur_year": 19.81226,
-   "next_year": 22.43537
+   "cur_year": 19.86706,
+   "next_year": 22.61019
   },
   "growth": {
-   "next_year": 0.13239999,
+   "next_year": 0.1381,
    "long_term": null
   },
   "price_target": {
-   "mean": 475.23077,
+   "mean": 481.72,
    "high": 529.0,
-   "low": 313.0
+   "low": 380.0
   },
-  "ex_dividend_date": "2026-09-14",
+  "ex_dividend_date": "2026-12-14",
   "ex_dividend_schedule": [
-   "2026-09-14",
    "2026-12-14",
    "2027-03-15",
-   "2027-06-14"
+   "2027-06-14",
+   "2027-09-13"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 396.25,
-   "mid": 653.8,
-   "high": 764.75
+   "low": 397.34,
+   "mid": 659.59,
+   "high": 770.84
   },
   "y1": {
-   "low": 448.71,
-   "mid": 740.37,
-   "high": 866.01
+   "low": 452.2,
+   "mid": 750.66,
+   "high": 877.28
   },
   "y5": {
-   "low": 554.57,
-   "mid": 662.4,
-   "high": 770.23
+   "low": 566.25,
+   "mid": 676.36,
+   "high": 786.46
   },
   "assumptions": {
-   "eps_cur": 19.812,
-   "eps_next": 22.435,
-   "eps_5y": 30.809,
-   "growth_used": 0.1324,
-   "per_median": 33.0,
-   "per_p90": 38.6,
+   "eps_cur": 19.867,
+   "eps_next": 22.61,
+   "eps_5y": 31.459,
+   "growth_used": 0.1381,
+   "per_median": 33.2,
+   "per_p90": 38.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.43,
+  "debt_to_equity": 69.2,
+  "current_ratio": 0.78,
+  "fcf_positive": true,
+  "flags": [
+   "流動性難"
+  ],
+  "level": "watch"
  }
 }

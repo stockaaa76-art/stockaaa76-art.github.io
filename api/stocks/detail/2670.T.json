@@ -1,11 +1,11 @@
 {
  "sector": "日本-小売業",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 20.6,
-  "sector_per_p90": 52.4,
-  "sector_pbr_median": 1.82,
-  "sector_pbr_p90": 7.77
+  "sector_per_median": 19.2,
+  "sector_per_p90": 49.0,
+  "sector_pbr_median": 1.7,
+  "sector_pbr_p90": 7.61
  },
  "forecast": {
   "revenue": {
@@ -34,14 +34,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 3848.99,
-   "mid": 3964.46,
-   "high": 10084.35
+   "low": 3695.03,
+   "mid": 3695.03,
+   "high": 9430.03
   },
   "y1": {
-   "low": 4000.22,
-   "mid": 4120.23,
-   "high": 10480.58
+   "low": 3840.21,
+   "mid": 3840.21,
+   "high": 9800.54
   },
   "y5": {
    "low": 3966.75,
@@ -53,9 +53,17 @@
    "eps_next": 200.011,
    "eps_5y": 220.375,
    "growth_used": 0.0393,
-   "per_median": 20.6,
-   "per_p90": 52.4,
+   "per_median": 19.2,
+   "per_p90": 49.0,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 46.97,
+  "debt_to_equity": 1.1,
+  "current_ratio": 5.88,
+  "fcf_positive": null,
+  "flags": [],
+  "level": "ok"
  }
 }

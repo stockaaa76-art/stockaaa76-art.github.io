@@ -1,11 +1,11 @@
 {
  "sector": "Technology",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 35.3,
-  "sector_per_p90": 74.6,
-  "sector_pbr_median": 4.76,
-  "sector_pbr_p90": 17.78
+  "sector_per_median": 36.6,
+  "sector_per_p90": 76.8,
+  "sector_pbr_median": 5.12,
+  "sector_pbr_p90": 21.1
  },
  "forecast": {
   "revenue": {
@@ -21,21 +21,21 @@
    "long_term": null
   },
   "price_target": {
-   "mean": 24.522972,
-   "high": 32.159306,
-   "low": 17.355816
+   "mean": 24.356411,
+   "high": 32.002464,
+   "low": 17.27117
   }
  },
  "theoretical_price": {
   "now": {
    "low": 2456.62,
-   "mid": 4335.94,
-   "high": 9163.21
+   "mid": 4495.62,
+   "high": 9433.44
   },
   "y1": {
    "low": 3204.89,
-   "mid": 5656.62,
-   "high": 11954.22
+   "mid": 5864.94,
+   "high": 12306.76
   },
   "y5": {
    "low": 5770.04,
@@ -47,9 +47,20 @@
    "eps_next": 160.244,
    "eps_5y": 320.558,
    "growth_used": 0.3046,
-   "per_median": 35.3,
-   "per_p90": 74.6,
+   "per_median": 36.6,
+   "per_p90": 76.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.1,
+  "debt_to_equity": 170.3,
+  "current_ratio": 1.0,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄",
+   "流動性難"
+  ],
+  "level": "alert"
  }
 }

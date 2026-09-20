@@ -1,11 +1,11 @@
 {
  "sector": "日本-医薬品",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 19.9,
-  "sector_per_p90": 34.4,
-  "sector_pbr_median": 1.81,
-  "sector_pbr_p90": 5.51
+  "sector_per_median": 21.1,
+  "sector_per_p90": 36.1,
+  "sector_pbr_median": 1.77,
+  "sector_pbr_p90": 5.47
  },
  "forecast": {
   "revenue": {
@@ -34,14 +34,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 6121.87,
-   "mid": 6121.87,
-   "high": 10582.52
+   "low": 6152.63,
+   "mid": 6491.02,
+   "high": 11105.5
   },
   "y1": {
-   "low": 7053.91,
-   "mid": 7053.91,
-   "high": 12193.69
+   "low": 7089.35,
+   "mid": 7479.27,
+   "high": 12796.28
   },
   "y5": {
    "low": 9168.09,
@@ -53,9 +53,17 @@
    "eps_next": 354.468,
    "eps_5y": 509.338,
    "growth_used": 0.1522,
-   "per_median": 19.9,
-   "per_p90": 34.4,
+   "per_median": 21.1,
+   "per_p90": 36.1,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": null,
+  "debt_to_equity": null,
+  "current_ratio": 4.34,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

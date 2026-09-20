@@ -1,0 +1,1625 @@
+{
+ "generated_at": "2026-09-20 16:07",
+ "note": "支払余力の一次スクリーン（倒産確率の予測ではない・BT未検証）。判定=現金/総負債<0.30 / D/E>200% / 流動比率<1.0 / FCF赤字 の抵触数。2件以上=alert・1件=watch・0件=ok。⚠️高配当還元型や設備産業は業態としてフラグが立つため、それ自体は異常ではない。",
+ "stocks": {
+  "7203.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "6758.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9984.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難",
+    "FCF赤字"
+   ]
+  },
+  "6861.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8306.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4063.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8035.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7974.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6367.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9432.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "4519.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8058.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "4578.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7267.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4502.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "8316.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6954.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7182.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8001.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "5108.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6503.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4568.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "6752.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "9022.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "AAPL": {
+   "level": "ok",
+   "flags": []
+  },
+  "MSFT": {
+   "level": "ok",
+   "flags": []
+  },
+  "GOOGL": {
+   "level": "ok",
+   "flags": []
+  },
+  "GOOG": {
+   "level": "ok",
+   "flags": []
+  },
+  "AMZN": {
+   "level": "ok",
+   "flags": []
+  },
+  "TSLA": {
+   "level": "ok",
+   "flags": []
+  },
+  "META": {
+   "level": "ok",
+   "flags": []
+  },
+  "NVDA": {
+   "level": "ok",
+   "flags": []
+  },
+  "NFLX": {
+   "level": "ok",
+   "flags": []
+  },
+  "CRM": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "ORCL": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ",
+    "FCF赤字"
+   ]
+  },
+  "AMD": {
+   "level": "ok",
+   "flags": []
+  },
+  "INTC": {
+   "level": "ok",
+   "flags": []
+  },
+  "IBM": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "V": {
+   "level": "watch",
+   "flags": [
+    "流動性難"
+   ]
+  },
+  "MA": {
+   "level": "watch",
+   "flags": [
+    "高レバレッジ"
+   ]
+  },
+  "JPM": {
+   "level": "ok",
+   "flags": []
+  },
+  "JNJ": {
+   "level": "ok",
+   "flags": []
+  },
+  "PG": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "HD": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ"
+   ]
+  },
+  "UNH": {
+   "level": "watch",
+   "flags": [
+    "流動性難"
+   ]
+  },
+  "DIS": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "PFE": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "WMT": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "KO": {
+   "level": "ok",
+   "flags": []
+  },
+  "SPY": {
+   "level": "ok",
+   "flags": []
+  },
+  "QQQ": {
+   "level": "ok",
+   "flags": []
+  },
+  "VTI": {
+   "level": "ok",
+   "flags": []
+  },
+  "EWJ": {
+   "level": "ok",
+   "flags": []
+  },
+  "GLD": {
+   "level": "ok",
+   "flags": []
+  },
+  "SLV": {
+   "level": "ok",
+   "flags": []
+  },
+  "USO": {
+   "level": "ok",
+   "flags": []
+  },
+  "SCHD": {
+   "level": "ok",
+   "flags": []
+  },
+  "8802.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "8801.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "8804.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ",
+    "FCF赤字"
+   ]
+  },
+  "8411.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "2413.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4689.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "3659.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9020.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "9766.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6902.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1617.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1621.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1622.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1626.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7741.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6594.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9434.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "6098.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9983.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8766.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8031.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "FCF赤字"
+   ]
+  },
+  "4901.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "FCF赤字"
+   ]
+  },
+  "5401.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "9101.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "2914.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1618.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1619.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1620.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1623.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1624.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1625.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1627.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1628.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1629.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1630.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1631.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1632.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "1633.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "2802.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "2503.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "2502.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "9697.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7832.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8267.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "3088.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7733.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6869.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9503.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "9531.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "6326.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "FCF赤字"
+   ]
+  },
+  "6305.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "COP": {
+   "level": "ok",
+   "flags": []
+  },
+  "SLB": {
+   "level": "ok",
+   "flags": []
+  },
+  "5713.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "FCF赤字"
+   ]
+  },
+  "5406.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "5802.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5706.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "3436.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5631.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8750.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8725.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8630.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8604.T": {
+   "level": "watch",
+   "flags": [
+    "高レバレッジ"
+   ]
+  },
+  "8601.T": {
+   "level": "watch",
+   "flags": [
+    "高レバレッジ"
+   ]
+  },
+  "4452.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4005.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "3402.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "4021.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6988.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8830.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "3003.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ",
+    "FCF赤字"
+   ]
+  },
+  "3231.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ"
+   ]
+  },
+  "8952.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "9684.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6460.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "2432.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "3765.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9843.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "3086.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "2670.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8308.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8309.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8473.T": {
+   "level": "watch",
+   "flags": [
+    "高レバレッジ"
+   ]
+  },
+  "8354.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6645.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "9989.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4307.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9532.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "9506.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ"
+   ]
+  },
+  "9504.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ"
+   ]
+  },
+  "9507.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "7011.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6506.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6474.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "MCD": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "NKE": {
+   "level": "ok",
+   "flags": []
+  },
+  "SBUX": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "TGT": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "PM": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "CL": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ"
+   ]
+  },
+  "GIS": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "MO": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "BAC": {
+   "level": "ok",
+   "flags": []
+  },
+  "GS": {
+   "level": "watch",
+   "flags": [
+    "高レバレッジ"
+   ]
+  },
+  "MS": {
+   "level": "watch",
+   "flags": [
+    "高レバレッジ"
+   ]
+  },
+  "BRK-B": {
+   "level": "ok",
+   "flags": []
+  },
+  "EOG": {
+   "level": "ok",
+   "flags": []
+  },
+  "PSX": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "MPC": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "VLO": {
+   "level": "ok",
+   "flags": []
+  },
+  "8015.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "2768.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "FCF赤字"
+   ]
+  },
+  "9025.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4523.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "4507.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "4506.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9064.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9143.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "9104.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "2897.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "2801.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "2875.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7272.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7261.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4755.T": {
+   "level": "alert",
+   "flags": [
+    "高レバレッジ",
+    "FCF赤字"
+   ]
+  },
+  "5943.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "PLTR": {
+   "level": "ok",
+   "flags": []
+  },
+  "AVGO": {
+   "level": "ok",
+   "flags": []
+  },
+  "9501.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "4543.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6273.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6178.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "LLY": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "3382.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難",
+    "FCF赤字"
+   ]
+  },
+  "ADBE": {
+   "level": "watch",
+   "flags": [
+    "流動性難"
+   ]
+  },
+  "TXN": {
+   "level": "ok",
+   "flags": []
+  },
+  "IWM": {
+   "level": "ok",
+   "flags": []
+  },
+  "TMO": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "DHR": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "XOM": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "COST": {
+   "level": "ok",
+   "flags": []
+  },
+  "ACN": {
+   "level": "ok",
+   "flags": []
+  },
+  "LOW": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "QCOM": {
+   "level": "ok",
+   "flags": []
+  },
+  "CVX": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "PYPL": {
+   "level": "ok",
+   "flags": []
+  },
+  "MDT": {
+   "level": "ok",
+   "flags": []
+  },
+  "ABT": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "CMCSA": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "XLK": {
+   "level": "ok",
+   "flags": []
+  },
+  "VZ": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "BMY": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ"
+   ]
+  },
+  "XLF": {
+   "level": "ok",
+   "flags": []
+  },
+  "EFA": {
+   "level": "ok",
+   "flags": []
+  },
+  "XLE": {
+   "level": "ok",
+   "flags": []
+  },
+  "XLV": {
+   "level": "ok",
+   "flags": []
+  },
+  "EEM": {
+   "level": "ok",
+   "flags": []
+  },
+  "XLI": {
+   "level": "ok",
+   "flags": []
+  },
+  "TLT": {
+   "level": "ok",
+   "flags": []
+  },
+  "LQD": {
+   "level": "ok",
+   "flags": []
+  },
+  "HYG": {
+   "level": "ok",
+   "flags": []
+  },
+  "VRT": {
+   "level": "ok",
+   "flags": []
+  },
+  "2644.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "285A.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6857.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6146.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6920.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6723.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "7735.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5803.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6963.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7729.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "200A.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "SPCX": {
+   "level": "ok",
+   "flags": []
+  },
+  "CBRS": {
+   "level": "ok",
+   "flags": []
+  },
+  "PAYP": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "1326.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4973.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8081.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7537.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6525.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6323.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6925.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6976.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6971.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6479.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4203.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6728.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4062.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6981.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6526.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "6762.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "6965.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4980.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6754.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6481.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5991.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5344.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "3132.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "4043.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "4186.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4004.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5333.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6361.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "6113.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6806.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5332.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5232.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "5301.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6724.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6268.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6368.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6134.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5471.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5201.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "5016.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "4182.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5801.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "2531.T": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "6856.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "5334.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "3105.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6141.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難",
+    "FCF赤字"
+   ]
+  },
+  "6504.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "9962.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "6674.T": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "6269.T": {
+   "level": "watch",
+   "flags": [
+    "流動性難"
+   ]
+  },
+  "7911.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "8136.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "7012.T": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "FCF赤字"
+   ]
+  },
+  "5393.T": {
+   "level": "ok",
+   "flags": []
+  },
+  "KLAC": {
+   "level": "ok",
+   "flags": []
+  },
+  "AMAT": {
+   "level": "ok",
+   "flags": []
+  },
+  "WDC": {
+   "level": "ok",
+   "flags": []
+  },
+  "LRCX": {
+   "level": "ok",
+   "flags": []
+  },
+  "LITE": {
+   "level": "ok",
+   "flags": []
+  },
+  "STX": {
+   "level": "ok",
+   "flags": []
+  },
+  "DDOG": {
+   "level": "ok",
+   "flags": []
+  },
+  "CHTR": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ",
+    "流動性難"
+   ]
+  },
+  "HPE": {
+   "level": "ok",
+   "flags": []
+  },
+  "CIEN": {
+   "level": "ok",
+   "flags": []
+  },
+  "DELL": {
+   "level": "watch",
+   "flags": [
+    "流動性難"
+   ]
+  },
+  "HUM": {
+   "level": "ok",
+   "flags": []
+  },
+  "COHR": {
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
+  },
+  "NUE": {
+   "level": "ok",
+   "flags": []
+  },
+  "PANW": {
+   "level": "watch",
+   "flags": [
+    "流動性難"
+   ]
+  },
+  "TSCO": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ"
+   ]
+  },
+  "FTNT": {
+   "level": "ok",
+   "flags": []
+  },
+  "PWR": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "FIX": {
+   "level": "ok",
+   "flags": []
+  },
+  "STLD": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "MRNA": {
+   "level": "ok",
+   "flags": []
+  },
+  "ON": {
+   "level": "ok",
+   "flags": []
+  },
+  "GLW": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "IRM": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難",
+    "FCF赤字"
+   ]
+  },
+  "BR": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "ZTS": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "高レバレッジ"
+   ]
+  },
+  "KEYS": {
+   "level": "ok",
+   "flags": []
+  },
+  "CASY": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "NTAP": {
+   "level": "ok",
+   "flags": []
+  },
+  "GNRC": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "LDOS": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "COIN": {
+   "level": "ok",
+   "flags": []
+  },
+  "MPWR": {
+   "level": "ok",
+   "flags": []
+  },
+  "CRWD": {
+   "level": "ok",
+   "flags": []
+  },
+  "INTU": {
+   "level": "ok",
+   "flags": []
+  },
+  "CSCO": {
+   "level": "watch",
+   "flags": [
+    "流動性難"
+   ]
+  },
+  "ADI": {
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
+  },
+  "LULU": {
+   "level": "ok",
+   "flags": []
+  },
+  "CNC": {
+   "level": "ok",
+   "flags": []
+  },
+  "TER": {
+   "level": "ok",
+   "flags": []
+  },
+  "TRMB": {
+   "level": "alert",
+   "flags": [
+    "現金薄",
+    "流動性難"
+   ]
+  },
+  "PODD": {
+   "level": "ok",
+   "flags": []
+  },
+  "2564.T": {
+   "level": "ok",
+   "flags": []
+  }
+ }
+}

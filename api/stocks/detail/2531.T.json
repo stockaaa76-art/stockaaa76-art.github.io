@@ -1,6 +1,6 @@
 {
  "sector": "Consumer Defensive",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -31,5 +31,15 @@
   ],
   "dividend_frequency": "年次"
  },
- "theoretical_price": null
+ "theoretical_price": null,
+ "financial_health": {
+  "cash_to_debt": 1.03,
+  "debt_to_equity": 22.9,
+  "current_ratio": 3.04,
+  "fcf_positive": false,
+  "flags": [
+   "FCF赤字"
+  ],
+  "level": "watch"
+ }
 }

@@ -1,27 +1,27 @@
 {
  "sector": "日本-機械",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 25.4,
-  "sector_per_p90": 53.8,
-  "sector_pbr_median": 1.96,
-  "sector_pbr_p90": 3.98
+  "sector_per_median": 25.1,
+  "sector_per_p90": 55.6,
+  "sector_pbr_median": 1.94,
+  "sector_pbr_p90": 4.11
  },
  "forecast": {
   "revenue": {
-   "cur_year": 1474454185460.0,
-   "next_year": 1515254307950.0
+   "cur_year": 1463792609300.0,
+   "next_year": 1520309863510.0
   },
   "eps": {
-   "cur_year": 421.59158,
-   "next_year": 489.47784
+   "cur_year": 422.00363,
+   "next_year": 493.56674
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 6151.25,
+   "mean": 6201.25,
    "high": 9210.0,
    "low": 4300.0
   },
@@ -34,28 +34,38 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 8431.83,
-   "mid": 10708.43,
-   "high": 22681.63
+   "low": 8440.07,
+   "mid": 10592.29,
+   "high": 23463.4
   },
   "y1": {
-   "low": 9789.56,
-   "mid": 12432.74,
-   "high": 26333.91
+   "low": 9871.33,
+   "mid": 12388.53,
+   "high": 27442.31
   },
   "y5": {
-   "low": 12914.08,
-   "mid": 15425.15,
-   "high": 17936.22
+   "low": 13275.29,
+   "mid": 15856.6,
+   "high": 18437.9
   },
   "assumptions": {
-   "eps_cur": 421.592,
-   "eps_next": 489.478,
-   "eps_5y": 717.449,
-   "growth_used": 0.161,
-   "per_median": 25.4,
-   "per_p90": 53.8,
+   "eps_cur": 422.004,
+   "eps_next": 493.567,
+   "eps_5y": 737.516,
+   "growth_used": 0.1696,
+   "per_median": 25.1,
+   "per_p90": 55.6,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.29,
+  "debt_to_equity": 58.4,
+  "current_ratio": 1.71,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄"
+  ],
+  "level": "watch"
  }
 }

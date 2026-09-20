@@ -1,6 +1,6 @@
 {
  "sector": "Real Estate",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -25,14 +25,26 @@
    "high": 155.0,
    "low": 140.0
   },
-  "ex_dividend_date": "2026-09-14",
+  "ex_dividend_date": "2026-12-15",
   "ex_dividend_schedule": [
-   "2026-09-14",
-   "2026-12-14",
-   "2027-03-15",
-   "2027-06-14"
+   "2026-12-15",
+   "2027-03-16",
+   "2027-06-15",
+   "2027-09-14"
   ],
   "dividend_frequency": "四半期"
  },
- "theoretical_price": null
+ "theoretical_price": null,
+ "financial_health": {
+  "cash_to_debt": 0.01,
+  "debt_to_equity": null,
+  "current_ratio": 0.73,
+  "fcf_positive": false,
+  "flags": [
+   "現金薄",
+   "流動性難",
+   "FCF赤字"
+  ],
+  "level": "alert"
+ }
 }

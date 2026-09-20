@@ -442,7 +442,7 @@
    ]
   },
   "3382.T": {
-   "name": "3382.T",
+   "name": "セブン＆アイ・ホールディングス",
    "category": "active",
    "earn": [
     "01-09",
@@ -716,7 +716,7 @@
    ]
   },
   "4543.T": {
-   "name": "4543.T",
+   "name": "テルモ",
    "category": "active",
    "earn": [
     "02-13",
@@ -1133,7 +1133,7 @@
    ]
   },
   "6178.T": {
-   "name": "6178.T",
+   "name": "日本郵政",
    "category": "active",
    "earn": [
     "02-13",
@@ -1174,7 +1174,7 @@
    ]
   },
   "6273.T": {
-   "name": "6273.T",
+   "name": "SMC",
    "category": "active",
    "earn": [
     "02-14",
@@ -2353,7 +2353,7 @@
    ]
   },
   "9501.T": {
-   "name": "9501.T",
+   "name": "東京電力ホールディングス",
    "category": "active",
    "earn": [
     "07-30"
@@ -2567,7 +2567,7 @@
    ]
   },
   "ABT": {
-   "name": "ABT",
+   "name": "Abbott",
    "category": "active",
    "earn": [
     "01-22",
@@ -2583,7 +2583,7 @@
    ]
   },
   "ACN": {
-   "name": "ACN",
+   "name": "Accenture",
    "category": "active",
    "earn": [
     "03-20",
@@ -2598,7 +2598,7 @@
    ]
   },
   "ADBE": {
-   "name": "ADBE",
+   "name": "Adobe",
    "category": "active",
    "earn": [
     "03-12",
@@ -2663,7 +2663,7 @@
    "div": []
   },
   "AVGO": {
-   "name": "AVGO",
+   "name": "Broadcom",
    "category": "active",
    "earn": [
     "03-06",
@@ -2695,7 +2695,7 @@
    ]
   },
   "BMY": {
-   "name": "BMY",
+   "name": "Bristol-Myers",
    "category": "active",
    "earn": [
     "02-06",
@@ -2810,7 +2810,7 @@
    "div": []
   },
   "CMCSA": {
-   "name": "CMCSA",
+   "name": "Comcast",
    "category": "active",
    "earn": [],
    "div": [
@@ -2870,7 +2870,7 @@
    ]
   },
   "COST": {
-   "name": "COST",
+   "name": "Costco",
    "category": "active",
    "earn": [
     "03-06",
@@ -2929,7 +2929,7 @@
    ]
   },
   "CVX": {
-   "name": "CVX",
+   "name": "Chevron",
    "category": "active",
    "earn": [
     "01-31",
@@ -2972,7 +2972,7 @@
    ]
   },
   "DHR": {
-   "name": "DHR",
+   "name": "Danaher",
    "category": "active",
    "earn": [
     "01-29",
@@ -3422,7 +3422,7 @@
    "div": []
   },
   "LLY": {
-   "name": "LLY",
+   "name": "Eli Lilly",
    "category": "active",
    "earn": [
     "02-06",
@@ -3438,7 +3438,7 @@
    ]
   },
   "LOW": {
-   "name": "LOW",
+   "name": "Lowe's",
    "category": "active",
    "earn": [
     "02-26",
@@ -3532,7 +3532,7 @@
    ]
   },
   "MDT": {
-   "name": "MDT",
+   "name": "Medtronic",
    "category": "active",
    "earn": [
     "02-18",
@@ -3876,7 +3876,7 @@
    ]
   },
   "PYPL": {
-   "name": "PYPL",
+   "name": "PayPal",
    "category": "active",
    "earn": [
     "02-04",
@@ -3889,7 +3889,7 @@
    ]
   },
   "QCOM": {
-   "name": "QCOM",
+   "name": "Qualcomm",
    "category": "active",
    "earn": [
     "02-05",
@@ -4020,7 +4020,7 @@
    ]
   },
   "T": {
-   "name": "T",
+   "name": "AT&T",
    "category": "active",
    "earn": [
     "01-27",
@@ -4087,7 +4087,7 @@
    ]
   },
   "TMO": {
-   "name": "TMO",
+   "name": "Thermo Fisher",
    "category": "active",
    "earn": [
     "01-30",
@@ -4141,7 +4141,7 @@
    "div": []
   },
   "TXN": {
-   "name": "TXN",
+   "name": "Texas Instruments",
    "category": "active",
    "earn": [
     "01-23",
@@ -4244,7 +4244,7 @@
    ]
   },
   "VZ": {
-   "name": "VZ",
+   "name": "Verizon",
    "category": "active",
    "earn": [
     "01-24",
@@ -4346,7 +4346,7 @@
    ]
   },
   "XOM": {
-   "name": "XOM",
+   "name": "ExxonMobil",
    "category": "active",
    "earn": [
     "01-31",
@@ -4377,5 +4377,10 @@
     "10-31"
    ]
   }
+ },
+ "name_backfill": {
+  "date": "2026-09-20",
+  "note": "銘柄名がコードのままだった分を sector_master.json → universe.json の順で補完（推測は使わない）。米国ティッカーは名前=ティッカーでも読めるため対象外。",
+  "fixed": 40
  }
 }

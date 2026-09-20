@@ -1,28 +1,28 @@
 {
  "sector": "米-エネルギー",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 17.8,
-  "sector_per_p90": 28.1,
-  "sector_pbr_median": 3.23,
-  "sector_pbr_p90": 5.77
+  "sector_per_median": 17.5,
+  "sector_per_p90": 24.9,
+  "sector_pbr_median": 2.91,
+  "sector_pbr_p90": 6.3
  },
  "forecast": {
   "revenue": {
-   "cur_year": 228316160510.0,
-   "next_year": 212577419640.0
+   "cur_year": 229564866510.0,
+   "next_year": 213839884230.0
   },
   "eps": {
-   "cur_year": 16.03824,
-   "next_year": 13.43017
+   "cur_year": 16.20563,
+   "next_year": 13.56267
   },
   "growth": {
-   "next_year": -0.1626,
+   "next_year": -0.16309999,
    "long_term": null
   },
   "price_target": {
-   "mean": 221.20833,
-   "high": 243.0,
+   "mean": 222.66667,
+   "high": 245.0,
    "low": 175.0
   },
   "ex_dividend_date": "2026-11-18",
@@ -36,28 +36,38 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 285.48,
-   "mid": 285.48,
-   "high": 450.67
+   "low": 283.6,
+   "mid": 283.6,
+   "high": 403.52
   },
   "y1": {
-   "low": 239.06,
-   "mid": 239.06,
-   "high": 377.39
+   "low": 237.35,
+   "mid": 237.35,
+   "high": 337.71
   },
   "y5": {
-   "low": 157.18,
-   "mid": 187.74,
-   "high": 218.3
+   "low": 158.5,
+   "mid": 189.32,
+   "high": 220.14
   },
   "assumptions": {
-   "eps_cur": 16.038,
-   "eps_next": 13.43,
-   "eps_5y": 8.732,
-   "growth_used": -0.1626,
-   "per_median": 17.8,
-   "per_p90": 28.1,
+   "eps_cur": 16.206,
+   "eps_next": 13.563,
+   "eps_5y": 8.806,
+   "growth_used": -0.1631,
+   "per_median": 17.5,
+   "per_p90": 24.9,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 0.23,
+  "debt_to_equity": 19.0,
+  "current_ratio": 1.25,
+  "fcf_positive": true,
+  "flags": [
+   "現金薄"
+  ],
+  "level": "watch"
  }
 }

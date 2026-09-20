@@ -1,16 +1,16 @@
 {
  "sector": "米-金融",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 16.0,
-  "sector_per_p90": 31.9,
-  "sector_pbr_median": 2.87,
-  "sector_pbr_p90": 19.88
+  "sector_per_median": 15.0,
+  "sector_per_p90": 31.3,
+  "sector_pbr_median": 2.63,
+  "sector_pbr_p90": 19.52
  },
  "forecast": {
   "revenue": {
-   "cur_year": 403512500000.0,
-   "next_year": 409887700000.0
+   "cur_year": 418311000000.0,
+   "next_year": 423300000000.0
   },
   "eps": {
    "cur_year": 22.25303,
@@ -28,14 +28,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 356.05,
-   "mid": 356.05,
-   "high": 709.87
+   "low": 333.8,
+   "mid": 333.8,
+   "high": 696.52
   },
   "y1": {
-   "low": 355.08,
-   "mid": 355.08,
-   "high": 707.94
+   "low": 332.89,
+   "mid": 332.89,
+   "high": 694.63
   },
   "y5": {
    "low": 396.78,
@@ -47,9 +47,17 @@
    "eps_next": 22.193,
    "eps_5y": 22.044,
    "growth_used": -0.0027,
-   "per_median": 16.0,
-   "per_p90": 31.9,
+   "per_median": 15.0,
+   "per_p90": 31.3,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 2.84,
+  "debt_to_equity": 17.1,
+  "current_ratio": 2.89,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }

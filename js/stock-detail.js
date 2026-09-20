@@ -667,6 +667,21 @@ class StockDetail {
                 ['5年後（成長逓減5年複利）', bandText(tp.y5)],
             ] });
         }
+        const fh = d && d.financial_health;
+        if (fh && fh.level) {
+            // 2026-09-20 新設: 倒産・信用リスクの一次スクリーン（BT未検証）
+            const badge = { ok: '✅ 懸念なし', watch: '⚠️ 要観察', alert: '🔴 要注意' }[fh.level] || '—';
+            const flagTxt = (fh.flags && fh.flags.length) ? fh.flags.join('・') : 'なし';
+            const r = (v, suf) => (v == null) ? null : `${v}${suf || ''}`;
+            groups.push({ title: `🏦 財務健全性（支払余力の一次スクリーン・BT未検証）　${badge}`, rows: [
+                ['抵触した項目', flagTxt],
+                ['手元現金 ÷ 総負債', r(fh.cash_to_debt) + (fh.cash_to_debt != null && fh.cash_to_debt < 0.30 ? '（0.30未満＝現金薄）' : '')],
+                ['負債資本倍率 D/E', r(fh.debt_to_equity, '%') + (fh.debt_to_equity != null && fh.debt_to_equity > 200 ? '（200%超＝高レバレッジ）' : '')],
+                ['流動比率', r(fh.current_ratio) + (fh.current_ratio != null && fh.current_ratio < 1.0 ? '（1.0未満＝1年内の支払に短期資産が足りない）' : '')],
+                ['フリーキャッシュフロー', fh.fcf_positive == null ? null : (fh.fcf_positive ? '＋（黒字）' : '▲（赤字）')],
+                ['⚠️ 読み方', '高配当還元型（たばこ等）や設備産業（通信）は業態として現金が薄く負債が重く、フラグが立つこと自体は異常ではありません。倒産確率の予測ではなく支払余力の目安です。'],
+            ] });
+        }
         if (fc && fc.ex_dividend_date) {
             const sched = fc.ex_dividend_schedule || [fc.ex_dividend_date];
             const freq = fc.dividend_frequency ? `（${fc.dividend_frequency}）` : '';

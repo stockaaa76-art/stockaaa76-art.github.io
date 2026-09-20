@@ -1,16 +1,16 @@
 {
  "sector": "Technology",
- "updated_at": "2026-09-06 23:36",
+ "updated_at": "2026-09-20 16:07",
  "valuation": {
-  "sector_per_median": 35.3,
-  "sector_per_p90": 74.6,
-  "sector_pbr_median": 4.76,
-  "sector_pbr_p90": 17.78
+  "sector_per_median": 36.6,
+  "sector_per_p90": 76.8,
+  "sector_pbr_median": 5.12,
+  "sector_pbr_p90": 21.1
  },
  "forecast": {
   "revenue": {
-   "cur_year": 5142048290.0,
-   "next_year": 6264149790.0
+   "cur_year": 5142078290.0,
+   "next_year": 6264171550.0
   },
   "eps": {
    "cur_year": 9.09129,
@@ -37,13 +37,13 @@
  "theoretical_price": {
   "now": {
    "low": 181.83,
-   "mid": 320.92,
-   "high": 678.21
+   "mid": 332.74,
+   "high": 698.21
   },
   "y1": {
    "low": 233.05,
-   "mid": 411.33,
-   "high": 869.27
+   "mid": 426.48,
+   "high": 894.91
   },
   "y5": {
    "low": 399.95,
@@ -55,9 +55,17 @@
    "eps_next": 11.652,
    "eps_5y": 22.219,
    "growth_used": 0.2817,
-   "per_median": 35.3,
-   "per_p90": 74.6,
+   "per_median": 36.6,
+   "per_p90": 76.8,
    "per_terminal": "18-25"
   }
+ },
+ "financial_health": {
+  "cash_to_debt": 3.54,
+  "debt_to_equity": 2.9,
+  "current_ratio": 2.12,
+  "fcf_positive": true,
+  "flags": [],
+  "level": "ok"
  }
 }
