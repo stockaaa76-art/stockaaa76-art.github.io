@@ -298,6 +298,17 @@
       "volume_ratio": 99.41
     },
     {
+      "symbol": "^NDX",
+      "name": "NASDAQ 100",
+      "price": 30482.35,
+      "change": 838.18,
+      "change_percent": 2.83,
+      "volume": 1624755000,
+      "market_cap": 0,
+      "trading_value": 49526353112929,
+      "volume_ratio": 21.23
+    },
+    {
       "symbol": "6754.T",
       "name": "アンリツ",
       "price": 3213.0,
@@ -386,6 +397,17 @@
       "volume_ratio": 172.99
     },
     {
+      "symbol": "^IXIC",
+      "name": "NASDAQ",
+      "price": 27122.09,
+      "change": 599.55,
+      "change_percent": 2.26,
+      "volume": 7862256000,
+      "market_cap": 0,
+      "trading_value": 213240844318500,
+      "volume_ratio": 99.48
+    },
+    {
       "symbol": "6971.T",
       "name": "京セラ",
       "price": 3637.0,
@@ -428,6 +450,17 @@
       "market_cap": 1136809738240,
       "trading_value": 15437364300,
       "volume_ratio": 100.88
+    },
+    {
+      "symbol": "^TWII",
+      "name": "台湾加権",
+      "price": 47180.75,
+      "change": 892.75,
+      "change_percent": 1.93,
+      "volume": 5651200,
+      "market_cap": 0,
+      "trading_value": 266627854400,
+      "volume_ratio": 128.14
     },
     {
       "symbol": "9962.T",
@@ -494,6 +527,17 @@
       "market_cap": 1908834304000,
       "trading_value": 10680967500,
       "volume_ratio": 125.06
+    },
+    {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "price": 7764.7,
+      "change": 114.2,
+      "change_percent": 1.49,
+      "volume": 3278075000,
+      "market_cap": 0,
+      "trading_value": 25453269592749,
+      "volume_ratio": 67.82
     },
     {
       "symbol": "6925.T",
@@ -606,17 +650,6 @@
       "volume_ratio": 163.76
     },
     {
-      "symbol": "^TNX",
-      "name": "US 10-Year Treasury Yield",
-      "price": 5.0,
-      "change": 0.05,
-      "change_percent": 1.03,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0
-    },
-    {
       "symbol": "6806.T",
       "name": "ヒロセ電機",
       "price": 24495.0,
@@ -648,17 +681,6 @@
       "market_cap": 648647278592,
       "trading_value": 4050439500,
       "volume_ratio": 81.97
-    },
-    {
-      "symbol": "000001.SS",
-      "name": "上海総合",
-      "price": 3911.87,
-      "change": 36.27,
-      "change_percent": 0.94,
-      "volume": 485700,
-      "market_cap": 0,
-      "trading_value": 1899995790,
-      "volume_ratio": 96.51
     },
     {
       "symbol": "4519.T",
@@ -727,6 +749,17 @@
       "volume_ratio": 81.39
     },
     {
+      "symbol": "^DJI",
+      "name": "ダウ平均",
+      "price": 52048.83,
+      "change": 366.19,
+      "change_percent": 0.71,
+      "volume": 444358134,
+      "market_cap": 0,
+      "trading_value": 23128320142511,
+      "volume_ratio": 99.72
+    },
+    {
       "symbol": "4568.T",
       "name": "第一三共",
       "price": 2953.5,
@@ -736,17 +769,6 @@
       "market_cap": 5374345740288,
       "trading_value": 26485806600,
       "volume_ratio": 158.24
-    },
-    {
-      "symbol": "^NDX",
-      "name": "NASDAQ 100",
-      "price": 29644.17,
-      "change": 197.19,
-      "change_percent": 0.67,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 393880899985156,
-      "volume_ratio": 168.67
     },
     {
       "symbol": "4980.T",
@@ -815,15 +837,15 @@
       "volume_ratio": 125.17
     },
     {
-      "symbol": "USDJPY=X",
-      "name": "ドル/円",
-      "price": 156.94,
-      "change": 0.81,
+      "symbol": "^RUT",
+      "name": "ラッセル2000",
+      "price": 2875.36,
+      "change": 14.96,
       "change_percent": 0.52,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
-      "volume_ratio": 0
+      "volume_ratio": 0.0
     },
     {
       "symbol": "8473.T",
@@ -837,26 +859,15 @@
       "volume_ratio": 111.85
     },
     {
-      "symbol": "^TWII",
-      "name": "台湾加権",
-      "price": 47368.04,
-      "change": 187.29,
-      "change_percent": 0.4,
+      "symbol": "^VIX",
+      "name": "CBOE Volatility Index",
+      "price": 14.87,
+      "change": 0.06,
+      "change_percent": 0.41,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
-      "volume_ratio": 0.0
-    },
-    {
-      "symbol": "^IXIC",
-      "name": "NASDAQ",
-      "price": 26522.54,
-      "change": 104.24,
-      "change_percent": 0.39,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 352403915621875,
-      "volume_ratio": 168.67
+      "volume_ratio": 0
     },
     {
       "symbol": "4502.T",
@@ -881,17 +892,6 @@
       "volume_ratio": 115.21
     },
     {
-      "symbol": "GBPUSD=X",
-      "name": "GBPUSD=X",
-      "price": 1.34,
-      "change": 0.0,
-      "change_percent": 0.24,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0
-    },
-    {
       "symbol": "4973.T",
       "name": "日本高純度化学",
       "price": 4825.0,
@@ -903,6 +903,17 @@
       "volume_ratio": 62.46
     },
     {
+      "symbol": "USDJPY=X",
+      "name": "ドル/円",
+      "price": 157.36,
+      "change": 0.32,
+      "change_percent": 0.2,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "volume_ratio": 0
+    },
+    {
       "symbol": "6367.T",
       "name": "ダイキン工業",
       "price": 20740.0,
@@ -912,17 +923,6 @@
       "market_cap": 5772691374080,
       "trading_value": 44663590000,
       "volume_ratio": 207.75
-    },
-    {
-      "symbol": "^GSPC",
-      "name": "S&P 500",
-      "price": 7650.5,
-      "change": 12.74,
-      "change_percent": 0.17,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 67770806675000,
-      "volume_ratio": 181.95
     },
     {
       "symbol": "5471.T",
@@ -947,17 +947,6 @@
       "volume_ratio": 153.22
     },
     {
-      "symbol": "EURUSD=X",
-      "name": "EURUSD=X",
-      "price": 1.15,
-      "change": 0.0,
-      "change_percent": 0.07,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0
-    },
-    {
       "symbol": "4307.T",
       "name": "野村総合研究所",
       "price": 5156.0,
@@ -980,17 +969,6 @@
       "market_cap": 689595416576,
       "trading_value": 13145117400,
       "volume_ratio": 236.09
-    },
-    {
-      "symbol": "^VIX",
-      "name": "CBOE Volatility Index",
-      "price": 14.81,
-      "change": -0.63,
-      "change_percent": -4.08,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0
     },
     {
       "symbol": "9507.T",
@@ -1884,6 +1862,17 @@
       "volume_ratio": 147.86
     },
     {
+      "symbol": "^TNX",
+      "name": "US 10-Year Treasury Yield",
+      "price": 4.96,
+      "change": -0.03,
+      "change_percent": -0.7,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "volume_ratio": 0
+    },
+    {
       "symbol": "8316.T",
       "name": "三井住友フィナンシャルG",
       "price": 6830.0,
@@ -2038,17 +2027,6 @@
       "volume_ratio": 101.07
     },
     {
-      "symbol": "^RUT",
-      "name": "ラッセル2000",
-      "price": 2860.4,
-      "change": -14.23,
-      "change_percent": -0.5,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 25338423474926,
-      "volume_ratio": 181.95
-    },
-    {
       "symbol": "6178.T",
       "name": "6178.T",
       "price": 2527.5,
@@ -2069,22 +2047,22 @@
       "market_cap": 1391423520768,
       "trading_value": 10330815000,
       "volume_ratio": 182.65
+    },
+    {
+      "symbol": "2914.T",
+      "name": "日本たばこ産業",
+      "price": 6886.0,
+      "change": -30.0,
+      "change_percent": -0.43,
+      "volume": 4739800,
+      "market_cap": 12225112702976,
+      "trading_value": 32638262800,
+      "volume_ratio": 143.58
     }
   ],
   "stop_high": [],
   "stop_low": [],
   "year_high_update": [
-    {
-      "symbol": "^TWII",
-      "name": "台湾加権",
-      "price": 47368.04,
-      "change": 187.29,
-      "change_percent": 0.4,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0.0
-    },
     {
       "symbol": "9432.T",
       "name": "日本電信電話",
@@ -2144,48 +2122,15 @@
   "year_low_update": [],
   "volume_high": [
     {
-      "symbol": "^NDX",
-      "name": "NASDAQ 100",
-      "price": 29644.17,
-      "change": 197.19,
-      "change_percent": 0.67,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 393880899985156,
-      "volume_ratio": 168.67
-    },
-    {
       "symbol": "^IXIC",
       "name": "NASDAQ",
-      "price": 26522.54,
-      "change": 104.24,
-      "change_percent": 0.39,
-      "volume": 13286960000,
+      "price": 27122.09,
+      "change": 599.55,
+      "change_percent": 2.26,
+      "volume": 7862256000,
       "market_cap": 0,
-      "trading_value": 352403915621875,
-      "volume_ratio": 168.67
-    },
-    {
-      "symbol": "^GSPC",
-      "name": "S&P 500",
-      "price": 7650.5,
-      "change": 12.74,
-      "change_percent": 0.17,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 67770806675000,
-      "volume_ratio": 181.95
-    },
-    {
-      "symbol": "^RUT",
-      "name": "ラッセル2000",
-      "price": 2860.4,
-      "change": -14.23,
-      "change_percent": -0.5,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 25338423474926,
-      "volume_ratio": 181.95
+      "trading_value": 213240844318500,
+      "volume_ratio": 99.48
     },
     {
       "symbol": "^HSI",
@@ -2199,6 +2144,28 @@
       "volume_ratio": 115.15
     },
     {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "price": 7764.7,
+      "change": 114.2,
+      "change_percent": 1.49,
+      "volume": 3278075000,
+      "market_cap": 0,
+      "trading_value": 25453269592749,
+      "volume_ratio": 67.82
+    },
+    {
+      "symbol": "000001.SS",
+      "name": "上海総合",
+      "price": null,
+      "change": null,
+      "change_percent": null,
+      "volume": 2990847444,
+      "market_cap": 0,
+      "trading_value": 0,
+      "volume_ratio": 2489.93
+    },
+    {
       "symbol": "^FTSE",
       "name": "FTSE 100",
       "price": 10659.1,
@@ -2210,15 +2177,26 @@
       "volume_ratio": 239.21
     },
     {
+      "symbol": "^NDX",
+      "name": "NASDAQ 100",
+      "price": 30482.35,
+      "change": 838.18,
+      "change_percent": 2.83,
+      "volume": 1624755000,
+      "market_cap": 0,
+      "trading_value": 49526353112929,
+      "volume_ratio": 21.23
+    },
+    {
       "symbol": "^DJI",
       "name": "ダウ平均",
-      "price": 51682.64,
-      "change": -95.4,
-      "change_percent": -0.18,
-      "volume": 846980000,
+      "price": 52048.83,
+      "change": 366.19,
+      "change_percent": 0.71,
+      "volume": 444358134,
       "market_cap": 0,
-      "trading_value": 43774162956562,
-      "volume_ratio": 192.23
+      "trading_value": 23128320142511,
+      "volume_ratio": 99.72
     },
     {
       "symbol": "9432.T",
@@ -2991,6 +2969,17 @@
       "volume_ratio": 131.26
     },
     {
+      "symbol": "^TWII",
+      "name": "台湾加権",
+      "price": 47180.75,
+      "change": 892.75,
+      "change_percent": 1.93,
+      "volume": 5651200,
+      "market_cap": 0,
+      "trading_value": 266627854400,
+      "volume_ratio": 128.14
+    },
+    {
       "symbol": "2801.T",
       "name": "キッコーマン",
       "price": 1655.0,
@@ -3231,20 +3220,20 @@
       "market_cap": 2487809998848,
       "trading_value": 25235744000,
       "volume_ratio": 100.85
-    },
-    {
-      "symbol": "8015.T",
-      "name": "豊田通商",
-      "price": 7463.0,
-      "change": -72.0,
-      "change_percent": -0.96,
-      "volume": 3467900,
-      "market_cap": 6997909438464,
-      "trading_value": 25880937700,
-      "volume_ratio": 170.4
     }
   ],
   "volume_increase": [
+    {
+      "symbol": "000001.SS",
+      "name": "上海総合",
+      "price": null,
+      "change": null,
+      "change_percent": null,
+      "volume": 2990847444,
+      "market_cap": 0,
+      "trading_value": 0,
+      "volume_ratio": 2489.93
+    },
     {
       "symbol": "^FCHI",
       "name": "CAC40",
@@ -3488,17 +3477,6 @@
       "volume_ratio": 196.98
     },
     {
-      "symbol": "^DJI",
-      "name": "ダウ平均",
-      "price": 51682.64,
-      "change": -95.4,
-      "change_percent": -0.18,
-      "volume": 846980000,
-      "market_cap": 0,
-      "trading_value": 43774162956562,
-      "volume_ratio": 192.23
-    },
-    {
       "symbol": "6971.T",
       "name": "京セラ",
       "price": 3637.0,
@@ -3530,28 +3508,6 @@
       "market_cap": 1391423520768,
       "trading_value": 10330815000,
       "volume_ratio": 182.65
-    },
-    {
-      "symbol": "^GSPC",
-      "name": "S&P 500",
-      "price": 7650.5,
-      "change": 12.74,
-      "change_percent": 0.17,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 67770806675000,
-      "volume_ratio": 181.95
-    },
-    {
-      "symbol": "^RUT",
-      "name": "ラッセル2000",
-      "price": 2860.4,
-      "change": -14.23,
-      "change_percent": -0.5,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 25338423474926,
-      "volume_ratio": 181.95
     },
     {
       "symbol": "8802.T",
@@ -3673,28 +3629,6 @@
       "market_cap": 1304267587584,
       "trading_value": 60078502000,
       "volume_ratio": 169.08
-    },
-    {
-      "symbol": "^NDX",
-      "name": "NASDAQ 100",
-      "price": 29644.17,
-      "change": 197.19,
-      "change_percent": 0.67,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 393880899985156,
-      "volume_ratio": 168.67
-    },
-    {
-      "symbol": "^IXIC",
-      "name": "NASDAQ",
-      "price": 26522.54,
-      "change": 104.24,
-      "change_percent": 0.39,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 352403915621875,
-      "volume_ratio": 168.67
     },
     {
       "symbol": "8316.T",
@@ -3954,20 +3888,20 @@
     {
       "symbol": "USDJPY=X",
       "name": "ドル/円",
-      "price": 156.94,
-      "change": 0.81,
-      "change_percent": 0.52,
+      "price": 157.36,
+      "change": 0.32,
+      "change_percent": 0.2,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
       "volume_ratio": 0
     },
     {
-      "symbol": "^TWII",
-      "name": "台湾加権",
-      "price": 47368.04,
-      "change": 187.29,
-      "change_percent": 0.4,
+      "symbol": "^RUT",
+      "name": "ラッセル2000",
+      "price": 2875.36,
+      "change": 14.96,
+      "change_percent": 0.52,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -3976,9 +3910,9 @@
     {
       "symbol": "^VIX",
       "name": "CBOE Volatility Index",
-      "price": 14.81,
-      "change": -0.63,
-      "change_percent": -4.08,
+      "price": 14.87,
+      "change": 0.06,
+      "change_percent": 0.41,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -3987,9 +3921,9 @@
     {
       "symbol": "^TNX",
       "name": "US 10-Year Treasury Yield",
-      "price": 5.0,
-      "change": 0.05,
-      "change_percent": 1.03,
+      "price": 4.96,
+      "change": -0.03,
+      "change_percent": -0.7,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -3999,8 +3933,8 @@
       "symbol": "GBPUSD=X",
       "name": "GBPUSD=X",
       "price": 1.34,
-      "change": 0.0,
-      "change_percent": 0.24,
+      "change": -0.0,
+      "change_percent": -0.11,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -4010,12 +3944,23 @@
       "symbol": "EURUSD=X",
       "name": "EURUSD=X",
       "price": 1.15,
-      "change": 0.0,
-      "change_percent": 0.07,
+      "change": -0.0,
+      "change_percent": -0.07,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
       "volume_ratio": 0
+    },
+    {
+      "symbol": "^NDX",
+      "name": "NASDAQ 100",
+      "price": 30482.35,
+      "change": 838.18,
+      "change_percent": 2.83,
+      "volume": 1624755000,
+      "market_cap": 0,
+      "trading_value": 49526353112929,
+      "volume_ratio": 21.23
     },
     {
       "symbol": "2564.T",
@@ -4031,26 +3976,15 @@
   ],
   "trading_value_high": [
     {
-      "symbol": "^NDX",
-      "name": "NASDAQ 100",
-      "price": 29644.17,
-      "change": 197.19,
-      "change_percent": 0.67,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 393880899985156,
-      "volume_ratio": 168.67
-    },
-    {
       "symbol": "^IXIC",
       "name": "NASDAQ",
-      "price": 26522.54,
-      "change": 104.24,
-      "change_percent": 0.39,
-      "volume": 13286960000,
+      "price": 27122.09,
+      "change": 599.55,
+      "change_percent": 2.26,
+      "volume": 7862256000,
       "market_cap": 0,
-      "trading_value": 352403915621875,
-      "volume_ratio": 168.67
+      "trading_value": 213240844318500,
+      "volume_ratio": 99.48
     },
     {
       "symbol": "^HSI",
@@ -4064,37 +3998,37 @@
       "volume_ratio": 115.15
     },
     {
+      "symbol": "^NDX",
+      "name": "NASDAQ 100",
+      "price": 30482.35,
+      "change": 838.18,
+      "change_percent": 2.83,
+      "volume": 1624755000,
+      "market_cap": 0,
+      "trading_value": 49526353112929,
+      "volume_ratio": 21.23
+    },
+    {
       "symbol": "^GSPC",
       "name": "S&P 500",
-      "price": 7650.5,
-      "change": 12.74,
-      "change_percent": 0.17,
-      "volume": 8858350000,
+      "price": 7764.7,
+      "change": 114.2,
+      "change_percent": 1.49,
+      "volume": 3278075000,
       "market_cap": 0,
-      "trading_value": 67770806675000,
-      "volume_ratio": 181.95
+      "trading_value": 25453269592749,
+      "volume_ratio": 67.82
     },
     {
       "symbol": "^DJI",
       "name": "ダウ平均",
-      "price": 51682.64,
-      "change": -95.4,
-      "change_percent": -0.18,
-      "volume": 846980000,
+      "price": 52048.83,
+      "change": 366.19,
+      "change_percent": 0.71,
+      "volume": 444358134,
       "market_cap": 0,
-      "trading_value": 43774162956562,
-      "volume_ratio": 192.23
-    },
-    {
-      "symbol": "^RUT",
-      "name": "ラッセル2000",
-      "price": 2860.4,
-      "change": -14.23,
-      "change_percent": -0.5,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 25338423474926,
-      "volume_ratio": 181.95
+      "trading_value": 23128320142511,
+      "volume_ratio": 99.72
     },
     {
       "symbol": "^FTSE",
@@ -4183,6 +4117,17 @@
       "market_cap": 23138593144832,
       "trading_value": 346707285000,
       "volume_ratio": 126.99
+    },
+    {
+      "symbol": "^TWII",
+      "name": "台湾加権",
+      "price": 47180.75,
+      "change": 892.75,
+      "change_percent": 1.93,
+      "volume": 5651200,
+      "market_cap": 0,
+      "trading_value": 266627854400,
+      "volume_ratio": 128.14
     },
     {
       "symbol": "6976.T",
@@ -5265,17 +5210,6 @@
       "volume_ratio": 103.28
     },
     {
-      "symbol": "000001.SS",
-      "name": "上海総合",
-      "price": 3911.87,
-      "change": 36.27,
-      "change_percent": 0.94,
-      "volume": 485700,
-      "market_cap": 0,
-      "trading_value": 1899995790,
-      "volume_ratio": 96.51
-    },
-    {
       "symbol": "6925.T",
       "name": "ウシオ電機",
       "price": 3670.0,
@@ -6231,6 +6165,17 @@
       "market_cap": 3975461994496,
       "trading_value": 14324113200,
       "volume_ratio": 101.07
+    },
+    {
+      "symbol": "6988.T",
+      "name": "日東電工",
+      "price": 3382.0,
+      "change": -23.0,
+      "change_percent": -0.68,
+      "volume": 4263000,
+      "market_cap": 2237273735168,
+      "trading_value": 14417466000,
+      "volume_ratio": 163.36
     }
   ],
   "market_cap_high": [
@@ -21760,17 +21705,17 @@
       "volume_ratio": 98.55
     },
     {
-      "symbol": "^TNX",
-      "name": "US 10-Year Treasury Yield",
-      "price": 5.0,
-      "change": 0.05,
-      "change_percent": 1.03,
-      "volume": 0,
+      "symbol": "^NDX",
+      "name": "NASDAQ 100",
+      "price": 30482.35,
+      "change": 838.18,
+      "change_percent": 2.83,
+      "volume": 1624755000,
       "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": 4.14,
-      "deviation_75": 7.77,
-      "volume_ratio": 0
+      "trading_value": 49526353112929,
+      "deviation_25": 3.73,
+      "deviation_75": 3.92,
+      "volume_ratio": 21.23
     },
     {
       "symbol": "9432.T",
@@ -21838,6 +21783,19 @@
       "volume_ratio": 161.67
     },
     {
+      "symbol": "^TNX",
+      "name": "US 10-Year Treasury Yield",
+      "price": 4.96,
+      "change": -0.03,
+      "change_percent": -0.7,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": 3.19,
+      "deviation_75": 6.87,
+      "volume_ratio": 0
+    },
+    {
       "symbol": "9434.T",
       "name": "ソフトバンク",
       "price": 248.1,
@@ -21875,6 +21833,19 @@
       "deviation_25": 3.11,
       "deviation_75": 10.52,
       "volume_ratio": 182.65
+    },
+    {
+      "symbol": "^IXIC",
+      "name": "NASDAQ",
+      "price": 27122.09,
+      "change": 599.55,
+      "change_percent": 2.26,
+      "volume": 7862256000,
+      "market_cap": 0,
+      "trading_value": 213240844318500,
+      "deviation_25": 3.08,
+      "deviation_75": 4.15,
+      "volume_ratio": 99.48
     },
     {
       "symbol": "9697.T",
@@ -21942,19 +21913,6 @@
       "volume_ratio": 266.87
     },
     {
-      "symbol": "^TWII",
-      "name": "台湾加権",
-      "price": 47368.04,
-      "change": 187.29,
-      "change_percent": 0.4,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": 2.73,
-      "deviation_75": 4.73,
-      "volume_ratio": 0.0
-    },
-    {
       "symbol": "8031.T",
       "name": "三井物産",
       "price": 5161.0,
@@ -21992,6 +21950,19 @@
       "deviation_25": 2.53,
       "deviation_75": -16.3,
       "volume_ratio": 103.02
+    },
+    {
+      "symbol": "^TWII",
+      "name": "台湾加権",
+      "price": 47180.75,
+      "change": 892.75,
+      "change_percent": 1.93,
+      "volume": 5651200,
+      "market_cap": 0,
+      "trading_value": 266627854400,
+      "deviation_25": 2.46,
+      "deviation_75": 4.37,
+      "volume_ratio": 128.14
     },
     {
       "symbol": "5232.T",
@@ -22319,6 +22290,19 @@
       "volume_ratio": 216.32
     },
     {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "price": 7764.7,
+      "change": 114.2,
+      "change_percent": 1.49,
+      "volume": 3278075000,
+      "market_cap": 0,
+      "trading_value": 25453269592749,
+      "deviation_25": 1.25,
+      "deviation_75": 2.64,
+      "volume_ratio": 67.82
+    },
+    {
       "symbol": "9501.T",
       "name": "9501.T",
       "price": 549.7,
@@ -22356,32 +22340,6 @@
       "deviation_25": 1.19,
       "deviation_75": 6.52,
       "volume_ratio": 83.1
-    },
-    {
-      "symbol": "^NDX",
-      "name": "NASDAQ 100",
-      "price": 29644.17,
-      "change": 197.19,
-      "change_percent": 0.67,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 393880899985156,
-      "deviation_25": 0.94,
-      "deviation_75": 1.06,
-      "volume_ratio": 168.67
-    },
-    {
-      "symbol": "^IXIC",
-      "name": "NASDAQ",
-      "price": 26522.54,
-      "change": 104.24,
-      "change_percent": 0.39,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 352403915621875,
-      "deviation_25": 0.86,
-      "deviation_75": 1.86,
-      "volume_ratio": 168.67
     },
     {
       "symbol": "6134.T",
@@ -22538,6 +22496,19 @@
       "deviation_25": 0.17,
       "deviation_75": 2.67,
       "volume_ratio": 163.36
+    },
+    {
+      "symbol": "USDJPY=X",
+      "name": "ドル/円",
+      "price": 157.36,
+      "change": 0.32,
+      "change_percent": 0.2,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": 0.14,
+      "deviation_75": -1.52,
+      "volume_ratio": 0
     },
     {
       "symbol": "5801.T",
@@ -22854,19 +22825,6 @@
       "volume_ratio": 126.32
     },
     {
-      "symbol": "^VIX",
-      "name": "CBOE Volatility Index",
-      "price": 14.81,
-      "change": -0.63,
-      "change_percent": -4.08,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": -5.36,
-      "deviation_75": -11.15,
-      "volume_ratio": 0
-    },
-    {
       "symbol": "3086.T",
       "name": "J.フロントリテイリング",
       "price": 2667.0,
@@ -22891,6 +22849,19 @@
       "deviation_25": -5.15,
       "deviation_75": -2.29,
       "volume_ratio": 80.96
+    },
+    {
+      "symbol": "^VIX",
+      "name": "CBOE Volatility Index",
+      "price": 14.87,
+      "change": 0.06,
+      "change_percent": 0.41,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": -4.9,
+      "deviation_75": -10.76,
+      "volume_ratio": 0
     },
     {
       "symbol": "5943.T",
@@ -23114,19 +23085,6 @@
       "volume_ratio": 77.13
     },
     {
-      "symbol": "^RUT",
-      "name": "ラッセル2000",
-      "price": 2860.4,
-      "change": -14.23,
-      "change_percent": -0.5,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 25338423474926,
-      "deviation_25": -3.35,
-      "deviation_75": -3.5,
-      "volume_ratio": 181.95
-    },
-    {
       "symbol": "8830.T",
       "name": "住友不動産",
       "price": 3186.0,
@@ -23270,6 +23228,19 @@
       "volume_ratio": 125.06
     },
     {
+      "symbol": "^RUT",
+      "name": "ラッセル2000",
+      "price": 2875.36,
+      "change": 14.96,
+      "change_percent": 0.52,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": -2.59,
+      "deviation_75": -2.99,
+      "volume_ratio": 0.0
+    },
+    {
       "symbol": "6758.T",
       "name": "ソニーグループ",
       "price": 3697.0,
@@ -23333,19 +23304,6 @@
       "deviation_25": -2.35,
       "deviation_75": 2.84,
       "volume_ratio": 128.07
-    },
-    {
-      "symbol": "^DJI",
-      "name": "ダウ平均",
-      "price": 51682.64,
-      "change": -95.4,
-      "change_percent": -0.18,
-      "volume": 846980000,
-      "market_cap": 0,
-      "trading_value": 43774162956562,
-      "deviation_25": -2.34,
-      "deviation_75": -1.55,
-      "volume_ratio": 192.23
     },
     {
       "symbol": "7735.T",
@@ -23634,6 +23592,19 @@
       "volume_ratio": 122.9
     },
     {
+      "symbol": "^DJI",
+      "name": "ダウ平均",
+      "price": 52048.83,
+      "change": 366.19,
+      "change_percent": 0.71,
+      "volume": 444358134,
+      "market_cap": 0,
+      "trading_value": 23128320142511,
+      "deviation_25": -1.52,
+      "deviation_75": -0.88,
+      "volume_ratio": 99.72
+    },
+    {
       "symbol": "6305.T",
       "name": "日立建機",
       "price": 5663.0,
@@ -23738,6 +23709,19 @@
       "volume_ratio": 100.91
     },
     {
+      "symbol": "GBPUSD=X",
+      "name": "GBPUSD=X",
+      "price": 1.34,
+      "change": -0.0,
+      "change_percent": -0.11,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": -1.14,
+      "deviation_75": -0.4,
+      "volume_ratio": 0
+    },
+    {
       "symbol": "4452.T",
       "name": "花王",
       "price": 3478.0,
@@ -23751,16 +23735,16 @@
       "volume_ratio": 119.64
     },
     {
-      "symbol": "GBPUSD=X",
-      "name": "GBPUSD=X",
-      "price": 1.34,
-      "change": 0.0,
-      "change_percent": 0.24,
+      "symbol": "EURUSD=X",
+      "name": "EURUSD=X",
+      "price": 1.15,
+      "change": -0.0,
+      "change_percent": -0.07,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
-      "deviation_25": -1.08,
-      "deviation_75": -0.28,
+      "deviation_25": -1.1,
+      "deviation_75": -0.35,
       "volume_ratio": 0
     },
     {
@@ -23775,19 +23759,6 @@
       "deviation_25": -1.06,
       "deviation_75": 2.17,
       "volume_ratio": 132.29
-    },
-    {
-      "symbol": "EURUSD=X",
-      "name": "EURUSD=X",
-      "price": 1.15,
-      "change": 0.0,
-      "change_percent": 0.07,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": -1.04,
-      "deviation_75": -0.25,
-      "volume_ratio": 0
     },
     {
       "symbol": "2670.T",
@@ -24338,19 +24309,6 @@
       "volume_ratio": 123.88
     },
     {
-      "symbol": "^TNX",
-      "name": "US 10-Year Treasury Yield",
-      "price": 5.0,
-      "change": 0.05,
-      "change_percent": 1.03,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": 4.14,
-      "deviation_75": 7.77,
-      "volume_ratio": 0
-    },
-    {
       "symbol": "4203.T",
       "name": "住友ベークライト",
       "price": 7786.0,
@@ -24453,6 +24411,19 @@
       "deviation_25": -2.97,
       "deviation_75": 6.93,
       "volume_ratio": 131.26
+    },
+    {
+      "symbol": "^TNX",
+      "name": "US 10-Year Treasury Yield",
+      "price": 4.96,
+      "change": -0.03,
+      "change_percent": -0.7,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": 3.19,
+      "deviation_75": 6.87,
+      "volume_ratio": 0
     },
     {
       "symbol": "7267.T",
@@ -24663,19 +24634,6 @@
       "volume_ratio": 147.26
     },
     {
-      "symbol": "^TWII",
-      "name": "台湾加権",
-      "price": 47368.04,
-      "change": 187.29,
-      "change_percent": 0.4,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": 2.73,
-      "deviation_75": 4.73,
-      "volume_ratio": 0.0
-    },
-    {
       "symbol": "8354.T",
       "name": "福岡フィナンシャルグループ",
       "price": 7746.0,
@@ -24715,6 +24673,19 @@
       "volume_ratio": 124.11
     },
     {
+      "symbol": "^TWII",
+      "name": "台湾加権",
+      "price": 47180.75,
+      "change": 892.75,
+      "change_percent": 1.93,
+      "volume": 5651200,
+      "market_cap": 0,
+      "trading_value": 266627854400,
+      "deviation_25": 2.46,
+      "deviation_75": 4.37,
+      "volume_ratio": 128.14
+    },
+    {
       "symbol": "8750.T",
       "name": "第一生命保険",
       "price": 1913.5,
@@ -24728,6 +24699,19 @@
       "volume_ratio": 137.36
     },
     {
+      "symbol": "^IXIC",
+      "name": "NASDAQ",
+      "price": 27122.09,
+      "change": 599.55,
+      "change_percent": 2.26,
+      "volume": 7862256000,
+      "market_cap": 0,
+      "trading_value": 213240844318500,
+      "deviation_25": 3.08,
+      "deviation_75": 4.15,
+      "volume_ratio": 99.48
+    },
+    {
       "symbol": "4021.T",
       "name": "日産化学",
       "price": 8257.0,
@@ -24739,6 +24723,19 @@
       "deviation_25": 2.63,
       "deviation_75": 4.06,
       "volume_ratio": 141.22
+    },
+    {
+      "symbol": "^NDX",
+      "name": "NASDAQ 100",
+      "price": 30482.35,
+      "change": 838.18,
+      "change_percent": 2.83,
+      "volume": 1624755000,
+      "market_cap": 0,
+      "trading_value": 49526353112929,
+      "deviation_25": 3.73,
+      "deviation_75": 3.92,
+      "volume_ratio": 21.23
     },
     {
       "symbol": "8081.T",
@@ -24923,6 +24920,19 @@
       "volume_ratio": 163.36
     },
     {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "price": 7764.7,
+      "change": 114.2,
+      "change_percent": 1.49,
+      "volume": 3278075000,
+      "market_cap": 0,
+      "trading_value": 25453269592749,
+      "deviation_25": 1.25,
+      "deviation_75": 2.64,
+      "volume_ratio": 67.82
+    },
+    {
       "symbol": "9531.T",
       "name": "東京ガス",
       "price": 6309.0,
@@ -24975,19 +24985,6 @@
       "volume_ratio": 132.29
     },
     {
-      "symbol": "^IXIC",
-      "name": "NASDAQ",
-      "price": 26522.54,
-      "change": 104.24,
-      "change_percent": 0.39,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 352403915621875,
-      "deviation_25": 0.86,
-      "deviation_75": 1.86,
-      "volume_ratio": 168.67
-    },
-    {
       "symbol": "8316.T",
       "name": "三井住友フィナンシャルG",
       "price": 6830.0,
@@ -25025,32 +25022,6 @@
       "deviation_25": -0.15,
       "deviation_75": 1.29,
       "volume_ratio": 120.19
-    },
-    {
-      "symbol": "^GSPC",
-      "name": "S&P 500",
-      "price": 7650.5,
-      "change": 12.74,
-      "change_percent": 0.17,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 67770806675000,
-      "deviation_25": -0.25,
-      "deviation_75": 1.17,
-      "volume_ratio": 181.95
-    },
-    {
-      "symbol": "^NDX",
-      "name": "NASDAQ 100",
-      "price": 29644.17,
-      "change": 197.19,
-      "change_percent": 0.67,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 393880899985156,
-      "deviation_25": 0.94,
-      "deviation_75": 1.06,
-      "volume_ratio": 168.67
     },
     {
       "symbol": "7182.T",
@@ -25575,19 +25546,6 @@
       "volume_ratio": 138.12
     },
     {
-      "symbol": "^VIX",
-      "name": "CBOE Volatility Index",
-      "price": 14.81,
-      "change": -0.63,
-      "change_percent": -4.08,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": -5.36,
-      "deviation_75": -11.15,
-      "volume_ratio": 0
-    },
-    {
       "symbol": "4063.T",
       "name": "信越化学工業",
       "price": 5844.0,
@@ -25599,6 +25557,19 @@
       "deviation_25": -1.32,
       "deviation_75": -10.82,
       "volume_ratio": 151.01
+    },
+    {
+      "symbol": "^VIX",
+      "name": "CBOE Volatility Index",
+      "price": 14.87,
+      "change": 0.06,
+      "change_percent": 0.41,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": -4.9,
+      "deviation_75": -10.76,
+      "volume_ratio": 0
     },
     {
       "symbol": "5201.T",
@@ -26121,19 +26092,6 @@
       "volume_ratio": 310.39
     },
     {
-      "symbol": "^RUT",
-      "name": "ラッセル2000",
-      "price": 2860.4,
-      "change": -14.23,
-      "change_percent": -0.5,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 25338423474926,
-      "deviation_25": -3.35,
-      "deviation_75": -3.5,
-      "volume_ratio": 181.95
-    },
-    {
       "symbol": "8952.T",
       "name": "ジャパンリアルエステイト",
       "price": 113500.0,
@@ -26210,6 +26168,19 @@
       "deviation_25": -3.79,
       "deviation_75": -3.17,
       "volume_ratio": 326.97
+    },
+    {
+      "symbol": "^RUT",
+      "name": "ラッセル2000",
+      "price": 2875.36,
+      "change": 14.96,
+      "change_percent": 0.52,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": -2.59,
+      "deviation_75": -2.99,
+      "volume_ratio": 0.0
     },
     {
       "symbol": "9143.T",
@@ -26329,32 +26300,6 @@
       "volume_ratio": 148.37
     },
     {
-      "symbol": "USDJPY=X",
-      "name": "ドル/円",
-      "price": 156.94,
-      "change": 0.81,
-      "change_percent": 0.52,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "deviation_25": -0.17,
-      "deviation_75": -1.81,
-      "volume_ratio": 0
-    },
-    {
-      "symbol": "^DJI",
-      "name": "ダウ平均",
-      "price": 51682.64,
-      "change": -95.4,
-      "change_percent": -0.18,
-      "volume": 846980000,
-      "market_cap": 0,
-      "trading_value": 43774162956562,
-      "deviation_25": -2.34,
-      "deviation_75": -1.55,
-      "volume_ratio": 192.23
-    },
-    {
       "symbol": "^STOXX50E",
       "name": "EURO STOXX50",
       "price": 6236.2,
@@ -26366,6 +26311,19 @@
       "deviation_25": -2.31,
       "deviation_75": -1.53,
       "volume_ratio": 317.98
+    },
+    {
+      "symbol": "USDJPY=X",
+      "name": "ドル/円",
+      "price": 157.36,
+      "change": 0.32,
+      "change_percent": 0.2,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "deviation_25": 0.14,
+      "deviation_75": -1.52,
+      "volume_ratio": 0
     },
     {
       "symbol": "9020.T",
@@ -26392,19 +26350,6 @@
       "deviation_25": -6.21,
       "deviation_75": -1.19,
       "volume_ratio": 158.57
-    },
-    {
-      "symbol": "000001.SS",
-      "name": "上海総合",
-      "price": 3911.87,
-      "change": 36.27,
-      "change_percent": 0.94,
-      "volume": 485700,
-      "market_cap": 0,
-      "trading_value": 1899995790,
-      "deviation_25": -0.33,
-      "deviation_75": -0.99,
-      "volume_ratio": 96.51
     },
     {
       "symbol": "6902.T",
@@ -26446,6 +26391,19 @@
       "volume_ratio": 131.82
     },
     {
+      "symbol": "^DJI",
+      "name": "ダウ平均",
+      "price": 52048.83,
+      "change": 366.19,
+      "change_percent": 0.71,
+      "volume": 444358134,
+      "market_cap": 0,
+      "trading_value": 23128320142511,
+      "deviation_25": -1.52,
+      "deviation_75": -0.88,
+      "volume_ratio": 99.72
+    },
+    {
       "symbol": "2670.T",
       "name": "エービーシー・マート",
       "price": 2684.0,
@@ -26470,9 +26428,55 @@
       "deviation_25": -2.42,
       "deviation_75": -0.74,
       "volume_ratio": 316.89
+    },
+    {
+      "symbol": "5108.T",
+      "name": "ブリヂストン",
+      "price": 3730.0,
+      "change": -59.0,
+      "change_percent": -1.56,
+      "volume": 7038000,
+      "market_cap": 4604563030016,
+      "trading_value": 26251740000,
+      "deviation_25": -6.01,
+      "deviation_75": -0.69,
+      "volume_ratio": 207.48
     }
   ],
   "golden_cross": [
+    {
+      "symbol": "^NDX",
+      "name": "NASDAQ 100",
+      "price": 30482.35,
+      "change": 838.18,
+      "change_percent": 2.83,
+      "volume": 1624755000,
+      "market_cap": 0,
+      "trading_value": 49526353112929,
+      "volume_ratio": 21.23
+    },
+    {
+      "symbol": "^IXIC",
+      "name": "NASDAQ",
+      "price": 27122.09,
+      "change": 599.55,
+      "change_percent": 2.26,
+      "volume": 7862256000,
+      "market_cap": 0,
+      "trading_value": 213240844318500,
+      "volume_ratio": 99.48
+    },
+    {
+      "symbol": "^TWII",
+      "name": "台湾加権",
+      "price": 47180.75,
+      "change": 892.75,
+      "change_percent": 1.93,
+      "volume": 5651200,
+      "market_cap": 0,
+      "trading_value": 266627854400,
+      "volume_ratio": 128.14
+    },
     {
       "symbol": "2413.T",
       "name": "エムスリー",
@@ -30194,6 +30198,18 @@
   ],
   "year_position_high": [
     {
+      "symbol": "^IXIC",
+      "name": "NASDAQ",
+      "price": 27122.09,
+      "change": 599.55,
+      "change_percent": 2.26,
+      "volume": 7862256000,
+      "market_cap": 0,
+      "trading_value": 213240844318500,
+      "volume_ratio": 99.48,
+      "year_position": 98.95199355072955
+    },
+    {
       "symbol": "3132.T",
       "name": "マクニカホールディングス",
       "price": 4088.0,
@@ -30230,6 +30246,30 @@
       "year_position": 96.63386846193683
     },
     {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "price": 7764.7,
+      "change": 114.2,
+      "change_percent": 1.49,
+      "volume": 3278075000,
+      "market_cap": 0,
+      "trading_value": 25453269592749,
+      "volume_ratio": 67.82,
+      "year_position": 96.53284793204382
+    },
+    {
+      "symbol": "^NDX",
+      "name": "NASDAQ 100",
+      "price": 30482.35,
+      "change": 838.18,
+      "change_percent": 2.83,
+      "volume": 1624755000,
+      "market_cap": 0,
+      "trading_value": 49526353112929,
+      "volume_ratio": 21.23,
+      "year_position": 96.46688836200472
+    },
+    {
       "symbol": "9101.T",
       "name": "日本郵船",
       "price": 7490.0,
@@ -30240,6 +30280,18 @@
       "trading_value": 26468911000,
       "volume_ratio": 107.07,
       "year_position": 96.11546685673557
+    },
+    {
+      "symbol": "^TWII",
+      "name": "台湾加権",
+      "price": 47180.75,
+      "change": 892.75,
+      "change_percent": 1.93,
+      "volume": 5651200,
+      "market_cap": 0,
+      "trading_value": 266627854400,
+      "volume_ratio": 128.14,
+      "year_position": 95.43680106620576
     },
     {
       "symbol": "8725.T",
@@ -30276,6 +30328,18 @@
       "trading_value": 123000000,
       "volume_ratio": 75.44,
       "year_position": 94.54949944382648
+    },
+    {
+      "symbol": "^TNX",
+      "name": "US 10-Year Treasury Yield",
+      "price": 4.96,
+      "change": -0.03,
+      "change_percent": -0.7,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "volume_ratio": 0,
+      "year_position": 94.39252336448601
     },
     {
       "symbol": "6594.T",
@@ -30386,18 +30450,6 @@
       "year_position": 91.71717171717172
     },
     {
-      "symbol": "^TWII",
-      "name": "台湾加権",
-      "price": 47368.04,
-      "change": 187.29,
-      "change_percent": 0.4,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0.0,
-      "year_position": 91.63651032234091
-    },
-    {
       "symbol": "9104.T",
       "name": "商船三井",
       "price": 7240.0,
@@ -30468,30 +30520,6 @@
       "trading_value": 24372600299,
       "volume_ratio": 136.48,
       "year_position": 90.45725646123259
-    },
-    {
-      "symbol": "^IXIC",
-      "name": "NASDAQ",
-      "price": 26522.54,
-      "change": 104.24,
-      "change_percent": 0.39,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 352403915621875,
-      "volume_ratio": 168.67,
-      "year_position": 89.72809063440394
-    },
-    {
-      "symbol": "^GSPC",
-      "name": "S&P 500",
-      "price": 7650.5,
-      "change": 12.74,
-      "change_percent": 0.17,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 67770806675000,
-      "volume_ratio": 181.95,
-      "year_position": 88.9184485828016
     },
     {
       "symbol": "7182.T",
@@ -30660,18 +30688,6 @@
       "trading_value": 29205005700,
       "volume_ratio": 115.5,
       "year_position": 85.98665395614871
-    },
-    {
-      "symbol": "^NDX",
-      "name": "NASDAQ 100",
-      "price": 29644.17,
-      "change": 197.19,
-      "change_percent": 0.67,
-      "volume": 13286960000,
-      "market_cap": 0,
-      "trading_value": 393880899985156,
-      "volume_ratio": 168.67,
-      "year_position": 85.8848497243958
     },
     {
       "symbol": "9503.T",
@@ -30854,6 +30870,18 @@
       "year_position": 75.90497737556561
     },
     {
+      "symbol": "^RUT",
+      "name": "ラッセル2000",
+      "price": 2875.36,
+      "change": 14.96,
+      "change_percent": 0.52,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "volume_ratio": 0.0,
+      "year_position": 74.6362153344209
+    },
+    {
       "symbol": "5232.T",
       "name": "住友大阪セメント",
       "price": 5763.0,
@@ -30876,18 +30904,6 @@
       "trading_value": 8844917106,
       "volume_ratio": 120.47,
       "year_position": 73.33939945404917
-    },
-    {
-      "symbol": "^RUT",
-      "name": "ラッセル2000",
-      "price": 2860.4,
-      "change": -14.23,
-      "change_percent": -0.5,
-      "volume": 8858350000,
-      "market_cap": 0,
-      "trading_value": 25338423474926,
-      "volume_ratio": 181.95,
-      "year_position": 72.68384991843394
     },
     {
       "symbol": "9532.T",
@@ -30950,6 +30966,18 @@
       "year_position": 72.35122283608801
     },
     {
+      "symbol": "^DJI",
+      "name": "ダウ平均",
+      "price": 52048.83,
+      "change": 366.19,
+      "change_percent": 0.71,
+      "volume": 444358134,
+      "market_cap": 0,
+      "trading_value": 23128320142511,
+      "volume_ratio": 99.72,
+      "year_position": 72.17419131727411
+    },
+    {
       "symbol": "6134.T",
       "name": "ＦＵＪＩ",
       "price": 7179.0,
@@ -31008,18 +31036,6 @@
       "trading_value": 48046292000,
       "volume_ratio": 122.48,
       "year_position": 68.85471024443834
-    },
-    {
-      "symbol": "^DJI",
-      "name": "ダウ平均",
-      "price": 51682.64,
-      "change": -95.4,
-      "change_percent": -0.18,
-      "volume": 846980000,
-      "market_cap": 0,
-      "trading_value": 43774162956562,
-      "volume_ratio": 192.23,
-      "year_position": 68.3939899143702
     },
     {
       "symbol": "2801.T",
@@ -31154,6 +31170,18 @@
       "year_position": 63.728946337641986
     },
     {
+      "symbol": "USDJPY=X",
+      "name": "ドル/円",
+      "price": 157.36,
+      "change": 0.32,
+      "change_percent": 0.2,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "volume_ratio": 0,
+      "year_position": 61.888313183650055
+    },
+    {
       "symbol": "6525.T",
       "name": "KOKUSAI ELECTRIC",
       "price": 8884.0,
@@ -31188,18 +31216,6 @@
       "trading_value": 28993370000,
       "volume_ratio": 99.41,
       "year_position": 59.490613678779226
-    },
-    {
-      "symbol": "USDJPY=X",
-      "name": "ドル/円",
-      "price": 156.94,
-      "change": 0.81,
-      "change_percent": 0.52,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0,
-      "year_position": 59.470351180195735
     },
     {
       "symbol": "6856.T",
@@ -31380,18 +31396,6 @@
       "trading_value": 86298768000,
       "volume_ratio": 130.16,
       "year_position": 52.58406680207628
-    },
-    {
-      "symbol": "8473.T",
-      "name": "SBIホールディングス",
-      "price": 3272.0,
-      "change": 16.0,
-      "change_percent": 0.49,
-      "volume": 4476700,
-      "market_cap": 2114993520640,
-      "trading_value": 14647762400,
-      "volume_ratio": 111.85,
-      "year_position": 51.902834008097166
     }
   ],
   "year_position_low": [
@@ -31432,18 +31436,6 @@
       "year_position": 5.805439330543916
     },
     {
-      "symbol": "^VIX",
-      "name": "CBOE Volatility Index",
-      "price": 14.81,
-      "change": -0.63,
-      "change_percent": -4.08,
-      "volume": 0,
-      "market_cap": 0,
-      "trading_value": 0,
-      "volume_ratio": 0,
-      "year_position": 6.523722627737226
-    },
-    {
       "symbol": "2875.T",
       "name": "東洋水産",
       "price": 9737.0,
@@ -31454,6 +31446,18 @@
       "trading_value": 7681519300,
       "volume_ratio": 210.33,
       "year_position": 6.549912434325744
+    },
+    {
+      "symbol": "^VIX",
+      "name": "CBOE Volatility Index",
+      "price": 14.87,
+      "change": 0.06,
+      "change_percent": 0.41,
+      "volume": 0,
+      "market_cap": 0,
+      "trading_value": 0,
+      "volume_ratio": 0,
+      "year_position": 6.797445255474448
     },
     {
       "symbol": "8801.T",
@@ -31747,8 +31751,8 @@
       "symbol": "EURUSD=X",
       "name": "EURUSD=X",
       "price": 1.15,
-      "change": 0.0,
-      "change_percent": 0.07,
+      "change": -0.0,
+      "change_percent": -0.07,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -31862,18 +31866,6 @@
       "trading_value": 5913841500,
       "volume_ratio": 83.82,
       "year_position": 32.850241545893724
-    },
-    {
-      "symbol": "000001.SS",
-      "name": "上海総合",
-      "price": 3911.87,
-      "change": 36.27,
-      "change_percent": 0.94,
-      "volume": 485700,
-      "market_cap": 0,
-      "trading_value": 1899995790,
-      "volume_ratio": 96.51,
-      "year_position": 32.98116851762432
     },
     {
       "symbol": "6479.T",
@@ -32260,18 +32252,6 @@
       "year_position": 44.53941120607787
     },
     {
-      "symbol": "^FCHI",
-      "name": "CAC40",
-      "price": 8065.02,
-      "change": -121.91,
-      "change_percent": -1.49,
-      "volume": 193685300,
-      "market_cap": 0,
-      "trading_value": 1562075821988,
-      "volume_ratio": 333.31,
-      "year_position": 44.78859941108692
-    },
-    {
       "symbol": "6723.T",
       "name": "ルネサスエレクトロニクス",
       "price": 3309.0,
@@ -32503,8 +32483,8 @@
       "symbol": "GBPUSD=X",
       "name": "GBPUSD=X",
       "price": 1.34,
-      "change": 0.0,
-      "change_percent": 0.24,
+      "change": -0.0,
+      "change_percent": -0.11,
       "volume": 0,
       "market_cap": 0,
       "trading_value": 0,
@@ -32594,8 +32574,32 @@
       "trading_value": 4876954500,
       "volume_ratio": 119.02,
       "year_position": 51.56936597614564
+    },
+    {
+      "symbol": "9984.T",
+      "name": "ソフトバンクグループ",
+      "price": 6315.0,
+      "change": 68.0,
+      "change_percent": 1.09,
+      "volume": 90291700,
+      "market_cap": 35988701184000,
+      "trading_value": 570192085500,
+      "volume_ratio": 163.76,
+      "year_position": 51.672797337537226
+    },
+    {
+      "symbol": "5333.T",
+      "name": "ＮＧＫ",
+      "price": 5251.0,
+      "change": 75.0,
+      "change_percent": 1.45,
+      "volume": 2091900,
+      "market_cap": 1478068666368,
+      "trading_value": 10984566900,
+      "volume_ratio": 147.1,
+      "year_position": 51.673066374108615
     }
   ],
-  "timestamp": "2026-09-20 23:28:12",
+  "timestamp": "2026-09-22 00:21:36",
   "data_count": 2760
 }
