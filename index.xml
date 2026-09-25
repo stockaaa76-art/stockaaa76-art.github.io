@@ -3080,7 +3080,209 @@
 ⚠️&lt;strong&gt;この予測機能は2026年7月に終了しました。&lt;/strong&gt; 累計10,446件で方向一致率は**51.9%&lt;strong&gt;にとどまり、何も考えず「毎日上がる」と答えた場合の&lt;/strong&gt;52.88%**にも届かなかったためです。&lt;strong&gt;当時の記録として残していますが、内容を投資判断に使わないでください。&lt;/strong&gt; 経緯は &lt;a href="https://stockaaa76-art.github.io/about/"&gt;Turnip Labについて&lt;/a&gt; に記載しています。&lt;/p&gt;</description></item><item><title>株価アートサイト開設のお知らせ</title><link>https://stockaaa76-art.github.io/post/welcome/</link><pubDate>Sun, 07 Sep 2025 22:10:00 +0900</pubDate><guid>https://stockaaa76-art.github.io/post/welcome/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;📌 この記事は2025年9月の開設時の告知です&lt;/strong&gt;
 当サイトは当初「&lt;strong&gt;株価アート&lt;/strong&gt;」という名前で開設しました。現在は「&lt;strong&gt;Turnip Lab&lt;/strong&gt;」に改称し、投資の定説をバックテストで検証して公開するサイトになっています。現在の方針は &lt;a href="https://stockaaa76-art.github.io/about/"&gt;Turnip Labについて&lt;/a&gt; をご覧ください。
-なお本文で挙げている株価予測の機能は、&lt;strong&gt;ねらった精度が出なかったため2026年7月に終了しました&lt;/strong&gt;（経緯も上記ページに記載しています）。&lt;/p&gt;</description></item><item><title>ローン返済シミュレーター</title><link>https://stockaaa76-art.github.io/tools/loan-simulator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/loan-simulator/</guid><description>&lt;div class="tool-container"&gt;
+なお本文で挙げている株価予測の機能は、&lt;strong&gt;ねらった精度が出なかったため2026年7月に終了しました&lt;/strong&gt;（経緯も上記ページに記載しています）。&lt;/p&gt;</description></item><item><title>PER・PBR 計算機（業種中央値との比較つき）</title><link>https://stockaaa76-art.github.io/tools/per-pbr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/per-pbr/</guid><description>&lt;div class="tool-container"&gt;
+&lt;div class="tool-box"&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;株価&lt;/label&gt;
+ &lt;input type="number" id="price" value="2000" min="0" step="any"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;1株あたり利益（EPS）&lt;/label&gt;
+ &lt;input type="number" id="eps" value="100" step="any"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;1株あたり純資産（BPS）&lt;span class="opt"&gt;任意&lt;/span&gt;&lt;/label&gt;
+ &lt;input type="number" id="bps" value="1200" step="any"&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;label&gt;比べる業種&lt;/label&gt;
+ &lt;select id="sector"&gt;&lt;option value=""&gt;読み込み中…&lt;/option&gt;&lt;/select&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-row"&gt;
+ &lt;button class="btn-primary" onclick="calculate()"&gt;計算する&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="tool-note"&gt;株価・EPS・BPS は同じ通貨で入力してください（円でもドルでも、揃っていれば結果は同じです）。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="result" class="result-box" style="display:none;"&gt;
+ &lt;div class="result-grid"&gt;
+ &lt;div class="result-card highlight"&gt;
+ &lt;div class="result-label"&gt;PER（株価収益率）&lt;/div&gt;
+ &lt;div class="result-value" id="per"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card highlight"&gt;
+ &lt;div class="result-label"&gt;PBR（株価純資産倍率）&lt;/div&gt;
+ &lt;div class="result-value" id="pbr"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;ROE（EPS ÷ BPS）&lt;/div&gt;
+ &lt;div class="result-value" id="roe"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;益回り（1 ÷ PER）&lt;/div&gt;
+ &lt;div class="result-value" id="ey"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;投資回収年数（PER と同値）&lt;/div&gt;
+ &lt;div class="result-value" id="payback"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="result-card"&gt;
+ &lt;div class="result-label"&gt;PER × PBR&lt;/div&gt;
+ &lt;div class="result-value" id="mix"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div id="cmp-wrap" style="display:none;"&gt;
+ &lt;h3 class="cmp-title"&gt;業種中央値との比較 — &lt;span id="cmp-sector"&gt;&lt;/span&gt;&lt;/h3&gt;
+ &lt;table class="cmp-table"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;&lt;th&gt;指標&lt;/th&gt;&lt;th&gt;この銘柄&lt;/th&gt;&lt;th&gt;業種中央値&lt;/th&gt;&lt;th&gt;業種 P90&lt;/th&gt;&lt;th&gt;判定&lt;/th&gt;&lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;&lt;td&gt;PER&lt;/td&gt;&lt;td id="c-per"&gt;&lt;/td&gt;&lt;td id="c-per-med"&gt;&lt;/td&gt;&lt;td id="c-per-p90"&gt;&lt;/td&gt;&lt;td id="c-per-judge"&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;PBR&lt;/td&gt;&lt;td id="c-pbr"&gt;&lt;/td&gt;&lt;td id="c-pbr-med"&gt;&lt;/td&gt;&lt;td id="c-pbr-p90"&gt;&lt;/td&gt;&lt;td id="c-pbr-judge"&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;/tbody&gt;
+ &lt;/table&gt;
+ &lt;div class="cmp-note" id="cmp-fair"&gt;&lt;/div&gt;
+ &lt;div class="cmp-meta" id="cmp-meta"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let SECTORS = {};
+
+async function loadSectors() {
+ const sel = document.getElementById('sector');
+ try {
+ const res = await fetch('/api/industry_pe.json');
+ const data = await res.json();
+ SECTORS = data.sectors || {};
+ const names = Object.keys(SECTORS).sort((a, b) =&gt; SECTORS[b].n - SECTORS[a].n);
+ sel.innerHTML = '&lt;option value=""&gt;比較しない&lt;/option&gt;' +
+ names.map(n =&gt; '&lt;option value="' + esc(n) + '"&gt;' + esc(n) + '（' + SECTORS[n].n + '銘柄）&lt;/option&gt;').join('');
+ document.getElementById('cmp-meta').textContent =
+ '業種中央値の集計: ' + (data.month || '') + '時点・' + (data.n_tickers || 0) + '銘柄（月次更新）';
+ } catch (e) {
+ sel.innerHTML = '&lt;option value=""&gt;業種データを取得できませんでした&lt;/option&gt;';
+ }
+}
+
+function esc(s) {
+ return String(s).replace(/[&amp;&lt;&gt;"']/g, c =&gt; ({ '&amp;': '&amp;amp;', '&lt;': '&amp;lt;', '&gt;': '&amp;gt;', '"': '&amp;quot;', "'": '&amp;#39;' }[c]));
+}
+function fmtX(n) { return n.toFixed(1) + '倍'; }
+function fmtPct(n) { return n.toFixed(2) + '%'; }
+
+function judge(v, med, p90) {
+ if (!med) return ['—', ''];
+ if (v &gt; p90) return ['🔴 業種の上限超え', 'j-high'];
+ if (v &gt; med * 1.2) return ['🟠 やや割高', 'j-mid'];
+ if (v &lt; med * 0.8) return ['🟢 やや割安', 'j-low'];
+ return ['⚪ 中央値並み', 'j-flat'];
+}
+
+function calculate() {
+ const price = parseFloat(document.getElementById('price').value) || 0;
+ const eps = parseFloat(document.getElementById('eps').value);
+ const bps = parseFloat(document.getElementById('bps').value);
+ const secName = document.getElementById('sector').value;
+
+ const per = (eps &amp;&amp; eps &gt; 0) ? price / eps : null;
+ const pbr = (bps &amp;&amp; bps &gt; 0) ? price / bps : null;
+ const roe = (eps &amp;&amp; bps &amp;&amp; bps &gt; 0) ? (eps / bps) * 100 : null;
+
+ document.getElementById('per').textContent = per ? fmtX(per) : '赤字・算出不可';
+ document.getElementById('pbr').textContent = pbr ? fmtX(pbr) : '—';
+ document.getElementById('roe').textContent = roe !== null ? fmtPct(roe) : '—';
+ document.getElementById('ey').textContent = per ? fmtPct(100 / per) : '—';
+ document.getElementById('payback').textContent = per ? per.toFixed(1) + '年' : '—';
+ document.getElementById('mix').textContent = (per &amp;&amp; pbr) ? (per * pbr).toFixed(1) : '—';
+
+ const wrap = document.getElementById('cmp-wrap');
+ const s = SECTORS[secName];
+ if (s) {
+ document.getElementById('cmp-sector').textContent = secName + '（' + s.n + '銘柄）';
+ const [pj, pc] = per ? judge(per, s.per_median, s.per_p90) : ['—', ''];
+ const [bj, bc] = pbr ? judge(pbr, s.pbr_median, s.pbr_p90) : ['—', ''];
+ document.getElementById('c-per').textContent = per ? fmtX(per) : '—';
+ document.getElementById('c-per-med').textContent = s.per_median ? fmtX(s.per_median) : '—';
+ document.getElementById('c-per-p90').textContent = s.per_p90 ? fmtX(s.per_p90) : '—';
+ document.getElementById('c-per-judge').innerHTML = '&lt;span class="' + pc + '"&gt;' + pj + '&lt;/span&gt;';
+ document.getElementById('c-pbr').textContent = pbr ? fmtX(pbr) : '—';
+ document.getElementById('c-pbr-med').textContent = s.pbr_median ? fmtX(s.pbr_median) : '—';
+ document.getElementById('c-pbr-p90').textContent = s.pbr_p90 ? fmtX(s.pbr_p90) : '—';
+ document.getElementById('c-pbr-judge').innerHTML = '&lt;span class="' + bc + '"&gt;' + bj + '&lt;/span&gt;';
+
+ const lines = [];
+ if (eps &amp;&amp; eps &gt; 0 &amp;&amp; s.per_median) {
+ const fair = s.per_median * eps;
+ const gap = ((fair / price) - 1) * 100;
+ lines.push('業種中央 PER で評価すると &lt;b&gt;' + Math.round(fair).toLocaleString('ja-JP') +
+ '&lt;/b&gt;（現在値との差 &lt;b&gt;' + (gap &gt;= 0 ? '+' : '') + gap.toFixed(1) + '%&lt;/b&gt;）');
+ }
+ if (bps &amp;&amp; bps &gt; 0 &amp;&amp; s.pbr_median) {
+ const fairB = s.pbr_median * bps;
+ const gapB = ((fairB / price) - 1) * 100;
+ lines.push('業種中央 PBR で評価すると &lt;b&gt;' + Math.round(fairB).toLocaleString('ja-JP') +
+ '&lt;/b&gt;（現在値との差 &lt;b&gt;' + (gapB &gt;= 0 ? '+' : '') + gapB.toFixed(1) + '%&lt;/b&gt;）');
+ }
+ document.getElementById('cmp-fair').innerHTML = lines.join('&lt;br&gt;');
+ wrap.style.display = 'block';
+ } else {
+ wrap.style.display = 'none';
+ }
+ document.getElementById('result').style.display = 'block';
+}
+
+loadSectors();
+&lt;/script&gt;
+&lt;style&gt;
+.tool-container { max-width: 640px; margin: 0 auto; }
+.tool-box { background: #f9fafb; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 1px solid #e5e7eb; }
+.tool-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.tool-row label { width: 220px; font-size: 14px; color: #374151; font-weight: 500; flex-shrink: 0; }
+.tool-row label .opt { font-size: 11px; color: #9ca3af; font-weight: 400; margin-left: 6px; }
+.tool-row input[type=number], .tool-row select { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d1d5db; border-radius: 6px; min-width: 120px; background: #fff; }
+.tool-note { font-size: 12px; color: #6b7280; line-height: 1.6; }
+.btn-primary { background: #3b82f6; color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; width: 100%; }
+.btn-primary:hover { background: #2563eb; }
+.result-box { margin-top: 20px; }
+.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.result-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; }
+.result-card.highlight { background: #eff6ff; border-color: #3b82f6; }
+.result-label { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.result-value { font-size: 18px; font-weight: 700; color: #1f2937; }
+.result-card.highlight .result-value { color: #3b82f6; }
+.cmp-title { font-size: 15px; margin: 24px 0 10px; color: #374151; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.cmp-table th, .cmp-table td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: right; }
+.cmp-table th { background: #f3f4f6; color: #374151; font-size: 12px; text-align: center; }
+.cmp-table td:first-child, .cmp-table td:last-child { text-align: center; }
+.j-high { color: #dc2626; font-weight: 700; }
+.j-mid { color: #ea580c; font-weight: 600; }
+.j-low { color: #16a34a; font-weight: 700; }
+.j-flat { color: #6b7280; }
+.cmp-note { margin-top: 10px; font-size: 14px; color: #374151; line-height: 1.8; }
+.cmp-meta { margin-top: 8px; font-size: 12px; color: #9ca3af; }
+@media (max-width: 480px) {
+ .result-grid { grid-template-columns: repeat(2, 1fr); }
+ .tool-row label { width: 100%; }
+ .cmp-table { font-size: 12px; }
+}
+@media (prefers-color-scheme: dark) {
+ .tool-box, .result-card { background: #1f2937; border-color: #374151; }
+ .result-value { color: #f3f4f6; }
+ .tool-row label, .cmp-note { color: #d1d5db; }
+ .tool-row input[type=number], .tool-row select { background: #111827; border-color: #374151; color: #f3f4f6; }
+ .cmp-table th { background: #374151; color: #f3f4f6; }
+ .cmp-table th, .cmp-table td { border-color: #374151; }
+}
+&lt;/style&gt;
+&lt;h2 id="使い方"&gt;使い方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;株価・EPS（1株あたり利益）を入力します。BPS（1株あたり純資産）も入れると PBR と ROE が出ます&lt;/li&gt;
+&lt;li&gt;「比べる業種」を選ぶと、業種の中央値・P90（上位10%の水準）と並べて判定します&lt;/li&gt;
+&lt;li&gt;「計算する」をクリック&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;EPS・BPS は決算短信や証券会社の銘柄ページに載っています。EPS は「予想」を使うと将来の利益に対する評価、「実績」を使うと直近の利益に対する評価になります。&lt;/p&gt;</description></item><item><title>ローン返済シミュレーター</title><link>https://stockaaa76-art.github.io/tools/loan-simulator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://stockaaa76-art.github.io/tools/loan-simulator/</guid><description>&lt;div class="tool-container"&gt;
 &lt;div class="tool-box"&gt;
  &lt;div class="tool-row"&gt;
  &lt;label&gt;借入金額（円）&lt;/label&gt;
