@@ -1,117 +1,21 @@
 {
-  "generated_at": "2026-09-29T10:27:36.307929+09:00",
-  "count": 7,
+  "generated_at": "2026-10-01T09:48:01.227454+09:00",
+  "count": 1,
   "candidates": [
     {
-      "ticker": "7867.T",
-      "name": "タカラトミー",
-      "sector17": "情報通信・サービスその他",
-      "current": 4098.0,
-      "change_1d": 0.8366141732283561,
-      "change_5d": 2.486806174776146,
-      "change_20d": 12.77742925983456,
-      "deviation_25": 9.368020750200024,
-      "volume_ratio": 0.25088823786074926,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "9404.T",
-      "name": "日本テレビホールディングス",
-      "sector17": "情報通信・サービスその他",
-      "current": 2813.5,
-      "change_1d": -3.1497418244406217,
-      "change_5d": -7.618292932705972,
-      "change_20d": -6.2687573775934595,
-      "deviation_25": -5.598903679821721,
-      "volume_ratio": 1.7856701726382198,
+      "ticker": "4967.T",
+      "name": "小林製薬",
+      "sector17": "素材・化学",
+      "current": 6926.0,
+      "change_1d": -0.27357811375090524,
+      "change_5d": 17.689039932030592,
+      "change_20d": 21.72231985940245,
+      "deviation_25": 15.752811091947105,
+      "volume_ratio": 0.16661936324022905,
       "year_high": false,
       "in_prediction_universe": false,
       "detected_reasons": [
-        "出来高1.8倍"
-      ]
-    },
-    {
-      "ticker": "7616.T",
-      "name": "コロワイド",
-      "sector17": "小売",
-      "current": 1982.0,
-      "change_1d": -4.135429262394197,
-      "change_5d": -1.3930348258706426,
-      "change_20d": -5.663969538315083,
-      "deviation_25": -4.015651938089615,
-      "volume_ratio": 2.0000170141813203,
-      "year_high": false,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "出来高2.0倍"
-      ]
-    },
-    {
-      "ticker": "8410.T",
-      "name": "セブン銀行",
-      "sector17": "銀行",
-      "current": 343.3999938964844,
-      "change_1d": 0.49750706137614564,
-      "change_5d": 1.1090561386663422,
-      "change_20d": 3.8474245817366803,
-      "deviation_25": 2.6120830724563504,
-      "volume_ratio": 0.1646761568617236,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "9048.T",
-      "name": "名古屋鉄道",
-      "sector17": "運輸・物流",
-      "current": 1852.0,
-      "change_1d": -0.6171183257311474,
-      "change_5d": -3.616965912047876,
-      "change_20d": -2.165874273639723,
-      "deviation_25": -1.756917331522656,
-      "volume_ratio": 1.8776454459772085,
-      "year_high": false,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "出来高1.9倍"
-      ]
-    },
-    {
-      "ticker": "9759.T",
-      "name": "ＮＳＤ",
-      "sector17": "情報通信・サービスその他",
-      "current": 2993.5,
-      "change_1d": 2.3418803418803424,
-      "change_5d": 2.7282086479066603,
-      "change_20d": 3.5992386225990547,
-      "deviation_25": 3.6580720672054756,
-      "volume_ratio": 0.6517673165319385,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "9044.T",
-      "name": "ＮＡＮＫＡＩ",
-      "sector17": "運輸・物流",
-      "current": 3113.0,
-      "change_1d": -1.5029267520961898,
-      "change_5d": -2.783693388419417,
-      "change_20d": 2.7179207086501345,
-      "deviation_25": 0.21328999838223783,
-      "volume_ratio": 1.614564267759963,
-      "year_high": false,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "出来高1.6倍"
+        "5日+17.7%"
       ]
     }
   ]
