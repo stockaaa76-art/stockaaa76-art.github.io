@@ -1,21 +1,86 @@
 {
-  "generated_at": "2026-10-01T09:48:01.227454+09:00",
-  "count": 1,
+  "generated_at": "2026-10-02T10:08:10.322748+09:00",
+  "count": 5,
   "candidates": [
     {
-      "ticker": "4967.T",
-      "name": "小林製薬",
-      "sector17": "素材・化学",
-      "current": 6926.0,
-      "change_1d": -0.27357811375090524,
-      "change_5d": 17.689039932030592,
-      "change_20d": 21.72231985940245,
-      "deviation_25": 15.752811091947105,
-      "volume_ratio": 0.16661936324022905,
-      "year_high": false,
+      "ticker": "3549.T",
+      "name": "クスリのアオキホールディングス",
+      "sector17": "小売",
+      "current": 4266.0,
+      "change_1d": 14.955537590945834,
+      "change_5d": 8.054711246200608,
+      "change_20d": 4.789977892409736,
+      "deviation_25": 5.902329553353325,
+      "volume_ratio": 1.3295703982439637,
+      "year_high": true,
       "in_prediction_universe": false,
       "detected_reasons": [
-        "5日+17.7%"
+        "前日比+15.0%",
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6302.T",
+      "name": "住友重機械工業",
+      "sector17": "機械",
+      "current": 6258.0,
+      "change_1d": 2.4893547330494536,
+      "change_5d": 5.052878965922436,
+      "change_20d": 8.288631251081501,
+      "deviation_25": 7.7598082433326,
+      "volume_ratio": 0.2313427468654856,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "6702.T",
+      "name": "富士通",
+      "sector17": "電機・精密",
+      "current": 4039.0,
+      "change_1d": 0.9245377311344338,
+      "change_5d": 0.907252211039955,
+      "change_20d": 2.978056445845123,
+      "deviation_25": 4.210709979001126,
+      "volume_ratio": 0.23453432001074598,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "3626.T",
+      "name": "ＴＩＳＩ",
+      "sector17": "情報通信・サービスその他",
+      "current": 4042.0,
+      "change_1d": 2.3809523809523725,
+      "change_5d": 1.8331907162951078,
+      "change_20d": 1.3535596022486551,
+      "deviation_25": 3.07885843923823,
+      "volume_ratio": 0.2716727553931895,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "4768.T",
+      "name": "大塚商会",
+      "sector17": "情報通信・サービスその他",
+      "current": 3678.0,
+      "change_1d": 0.10887316276537717,
+      "change_5d": 0.43691971600219315,
+      "change_20d": 0.08163265306122547,
+      "deviation_25": 2.022701299277685,
+      "volume_ratio": 0.15125494194887207,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
       ]
     }
   ]
