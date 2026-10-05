@@ -1,11 +1,11 @@
 {
  "sector": "日本-銀行・金融",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
   "sector_per_median": 15.3,
-  "sector_per_p90": 22.2,
-  "sector_pbr_median": 1.61,
-  "sector_pbr_p90": 1.83
+  "sector_per_p90": 23.0,
+  "sector_pbr_median": 1.32,
+  "sector_pbr_p90": 1.85
  },
  "forecast": {
   "revenue": {
@@ -25,10 +25,10 @@
    "high": 4510.0,
    "low": 3300.0
   },
-  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_date": "2027-03-31",
   "ex_dividend_schedule": [
-   "2026-09-29",
-   "2027-03-31"
+   "2027-03-31",
+   "2027-09-30"
   ],
   "dividend_frequency": "半期"
  },
@@ -36,12 +36,12 @@
   "now": {
    "low": 6238.99,
    "mid": 6238.99,
-   "high": 9052.64
+   "high": 9378.87
   },
   "y1": {
    "low": 5038.71,
    "mid": 5038.71,
-   "high": 7311.07
+   "high": 7574.53
   },
   "y5": {
    "low": 3541.52,
@@ -54,18 +54,19 @@
    "eps_5y": 196.751,
    "growth_used": -0.1924,
    "per_median": 15.3,
-   "per_p90": 22.2,
+   "per_p90": 23.0,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 1.41,
+  "cash_to_debt": 0.97,
   "debt_to_equity": 302.9,
-  "current_ratio": 17.73,
-  "fcf_positive": true,
+  "current_ratio": 16.64,
+  "fcf_positive": false,
   "flags": [
-   "高レバレッジ"
+   "高レバレッジ",
+   "FCF赤字"
   ],
-  "level": "watch"
+  "level": "alert"
  }
 }

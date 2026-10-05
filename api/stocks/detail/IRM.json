@@ -1,6 +1,6 @@
 {
  "sector": "Real Estate",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -9,21 +9,21 @@
  },
  "forecast": {
   "revenue": {
-   "cur_year": 8014164770.0,
-   "next_year": 8711015960.0
+   "cur_year": 8030721240.0,
+   "next_year": 8738371610.0
   },
   "eps": {
-   "cur_year": 2.48114,
-   "next_year": 2.72817
+   "cur_year": 2.47532,
+   "next_year": 2.7297
   },
   "growth": {
-   "next_year": 0.0996,
+   "next_year": 0.1028,
    "long_term": null
   },
   "price_target": {
-   "mean": 146.2,
+   "mean": 144.90909,
    "high": 155.0,
-   "low": 140.0
+   "low": 132.0
   },
   "ex_dividend_date": "2026-12-15",
   "ex_dividend_schedule": [

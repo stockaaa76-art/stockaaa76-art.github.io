@@ -1,60 +1,60 @@
 {
  "sector": "日本-ヘルスケア",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 32.7,
-  "sector_per_p90": 192.3,
-  "sector_pbr_median": 2.32,
-  "sector_pbr_p90": 7.73
+  "sector_per_median": 32.1,
+  "sector_per_p90": 189.0,
+  "sector_pbr_median": 2.29,
+  "sector_pbr_p90": 7.54
  },
  "forecast": {
   "revenue": {
-   "cur_year": 867868346670.0,
-   "next_year": 917517967600.0
+   "cur_year": 869707413330.0,
+   "next_year": 919327434270.0
   },
   "eps": {
-   "cur_year": 220.04597,
-   "next_year": 246.09001
+   "cur_year": 219.82098,
+   "next_year": 246.1543
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 5977.857,
+   "mean": 5974.2856,
    "high": 6700.0,
    "low": 5190.0
   },
-  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_date": "2027-03-31",
   "ex_dividend_schedule": [
-   "2026-09-29",
-   "2027-03-31"
+   "2027-03-31",
+   "2027-09-30"
   ],
   "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 4400.92,
-   "mid": 7195.5,
-   "high": 42314.84
+   "low": 4396.42,
+   "mid": 7056.25,
+   "high": 41546.17
   },
   "y1": {
-   "low": 4921.8,
-   "mid": 8047.14,
-   "high": 47323.11
+   "low": 4923.09,
+   "mid": 7901.55,
+   "high": 46523.16
   },
   "y5": {
-   "low": 5889.03,
-   "mid": 7034.12,
-   "high": 8179.21
+   "low": 5910.21,
+   "mid": 7059.41,
+   "high": 8208.62
   },
   "assumptions": {
-   "eps_cur": 220.046,
-   "eps_next": 246.09,
-   "eps_5y": 327.168,
-   "growth_used": 0.1184,
-   "per_median": 32.7,
-   "per_p90": 192.3,
+   "eps_cur": 219.821,
+   "eps_next": 246.154,
+   "eps_5y": 328.345,
+   "growth_used": 0.1198,
+   "per_median": 32.1,
+   "per_p90": 189.0,
    "per_terminal": "18-25"
   }
  },

@@ -1,28 +1,28 @@
 {
  "sector": "米-ヘルスケア",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 33.2,
-  "sector_per_p90": 38.8,
-  "sector_pbr_median": 3.47,
-  "sector_pbr_p90": 30.34
+  "sector_per_median": 31.5,
+  "sector_per_p90": 38.4,
+  "sector_pbr_median": 3.42,
+  "sector_pbr_p90": 30.07
  },
  "forecast": {
   "revenue": {
-   "cur_year": 47873244210.0,
-   "next_year": 50325216260.0
+   "cur_year": 47872133980.0,
+   "next_year": 50322187430.0
   },
   "eps": {
-   "cur_year": 25.13141,
-   "next_year": 27.53117
+   "cur_year": 25.12647,
+   "next_year": 27.54825
   },
   "growth": {
-   "next_year": 0.0955,
+   "next_year": 0.0964,
    "long_term": null
   },
   "price_target": {
-   "mean": 645.14813,
-   "high": 750.0,
+   "mean": 652.8461,
+   "high": 780.0,
    "low": 520.0
   },
   "ex_dividend_date": "2026-12-16",
@@ -36,27 +36,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 502.63,
-   "mid": 834.36,
-   "high": 975.1
+   "low": 502.53,
+   "mid": 791.48,
+   "high": 964.86
   },
   "y1": {
-   "low": 550.62,
-   "mid": 914.03,
-   "high": 1068.21
+   "low": 550.97,
+   "mid": 867.77,
+   "high": 1057.85
   },
   "y5": {
-   "low": 624.62,
-   "mid": 746.07,
-   "high": 867.53
+   "low": 626.33,
+   "mid": 748.12,
+   "high": 869.9
   },
   "assumptions": {
-   "eps_cur": 25.131,
-   "eps_next": 27.531,
-   "eps_5y": 34.701,
-   "growth_used": 0.0955,
-   "per_median": 33.2,
-   "per_p90": 38.8,
+   "eps_cur": 25.126,
+   "eps_next": 27.548,
+   "eps_5y": 34.796,
+   "growth_used": 0.0964,
+   "per_median": 31.5,
+   "per_p90": 38.4,
    "per_terminal": "18-25"
   }
  },

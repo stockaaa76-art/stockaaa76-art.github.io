@@ -1,11 +1,11 @@
 {
  "sector": "日本-情報通信・サービス",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 22.0,
-  "sector_per_p90": 50.0,
-  "sector_pbr_median": 1.97,
-  "sector_pbr_p90": 13.61
+  "sector_per_median": 21.1,
+  "sector_per_p90": 47.7,
+  "sector_pbr_median": 2.02,
+  "sector_pbr_p90": 13.01
  },
  "forecast": {
   "revenue": {
@@ -25,23 +25,23 @@
    "high": 21500.0,
    "low": 12000.0
   },
-  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_date": "2027-03-31",
   "ex_dividend_schedule": [
-   "2026-09-29",
-   "2027-03-31"
+   "2027-03-31",
+   "2027-09-30"
   ],
   "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
    "low": 11023.22,
-   "mid": 12125.54,
-   "high": 27558.04
+   "mid": 11629.49,
+   "high": 26290.37
   },
   "y1": {
    "low": 13860.89,
-   "mid": 15246.98,
-   "high": 34652.22
+   "mid": 14623.24,
+   "high": 33058.22
   },
   "y5": {
    "low": 22594.25,
@@ -53,8 +53,8 @@
    "eps_next": 693.044,
    "eps_5y": 1255.236,
    "growth_used": 0.2574,
-   "per_median": 22.0,
-   "per_p90": 50.0,
+   "per_median": 21.1,
+   "per_p90": 47.7,
    "per_terminal": "18-25"
   }
  },

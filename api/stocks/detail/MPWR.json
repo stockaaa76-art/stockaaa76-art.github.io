@@ -1,11 +1,11 @@
 {
  "sector": "Technology",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 36.6,
-  "sector_per_p90": 76.8,
-  "sector_pbr_median": 5.12,
-  "sector_pbr_p90": 21.1
+  "sector_per_median": 39.5,
+  "sector_per_p90": 81.8,
+  "sector_pbr_median": 5.29,
+  "sector_pbr_p90": 20.71
  },
  "forecast": {
   "revenue": {
@@ -25,25 +25,25 @@
    "high": 2100.0,
    "low": 1575.0
   },
-  "ex_dividend_date": "2026-09-30",
+  "ex_dividend_date": "2026-12-31",
   "ex_dividend_schedule": [
-   "2026-09-30",
    "2026-12-31",
    "2027-04-02",
-   "2027-07-03"
+   "2027-07-03",
+   "2027-10-03"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
    "low": 548.62,
-   "mid": 1003.97,
-   "high": 2106.69
+   "mid": 1083.52,
+   "high": 2243.85
   },
   "y1": {
    "low": 697.41,
-   "mid": 1276.27,
-   "high": 2678.07
+   "mid": 1377.39,
+   "high": 2852.42
   },
   "y5": {
    "low": 1170.61,
@@ -55,8 +55,8 @@
    "eps_next": 34.871,
    "eps_5y": 65.034,
    "growth_used": 0.2712,
-   "per_median": 36.6,
-   "per_p90": 76.8,
+   "per_median": 39.5,
+   "per_p90": 81.8,
    "per_terminal": "18-25"
   }
  },

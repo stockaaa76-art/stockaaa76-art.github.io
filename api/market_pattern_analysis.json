@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28 00:11:22",
+  "generated_at": "2026-10-05 00:43:04",
   "patterns": [
     {
       "id": "ai_boom",
@@ -67,8 +67,8 @@
   "stock_analysis": [
     {
       "ticker": "7974.T",
-      "name": "7974.T",
-      "sector": "Unknown",
+      "name": "Nintendo Co., Ltd.",
+      "sector": "Communication Services",
       "latest_growth_pct": 98.56,
       "avg_growth_pct": 24.21,
       "pattern_matches": [
@@ -100,8 +100,8 @@
     },
     {
       "ticker": "META",
-      "name": "META",
-      "sector": "Unknown",
+      "name": "Meta Platforms, Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 22.13,
       "avg_growth_pct": 19.92,
       "pattern_matches": [
@@ -265,8 +265,8 @@
     },
     {
       "ticker": "MSFT",
-      "name": "MSFT",
-      "sector": "Unknown",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 17.78,
       "avg_growth_pct": 16.13,
       "pattern_matches": [
@@ -298,8 +298,8 @@
     },
     {
       "ticker": "9766.T",
-      "name": "9766.T",
-      "sector": "Unknown",
+      "name": "Konami Group Corporation",
+      "sector": "Communication Services",
       "latest_growth_pct": 17.08,
       "avg_growth_pct": 16.24,
       "pattern_matches": [
@@ -331,8 +331,8 @@
     },
     {
       "ticker": "2413.T",
-      "name": "2413.T",
-      "sector": "Unknown",
+      "name": "M3, Inc.",
+      "sector": "Healthcare",
       "latest_growth_pct": 23.31,
       "avg_growth_pct": 15.36,
       "pattern_matches": [
@@ -364,8 +364,8 @@
     },
     {
       "ticker": "AMD",
-      "name": "AMD",
-      "sector": "Unknown",
+      "name": "Advanced Micro Devices, Inc.",
+      "sector": "Technology",
       "latest_growth_pct": 34.63,
       "avg_growth_pct": 14.7,
       "pattern_matches": [
@@ -397,8 +397,8 @@
     },
     {
       "ticker": "NVDA",
-      "name": "NVDA",
-      "sector": "Unknown",
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 65.57,
       "avg_growth_pct": 102.03,
       "pattern_matches": [
@@ -529,8 +529,8 @@
     },
     {
       "ticker": "MA",
-      "name": "MA",
-      "sector": "Unknown",
+      "name": "Mastercard Incorporated",
+      "sector": "Financial Services",
       "latest_growth_pct": 16.37,
       "avg_growth_pct": 13.79,
       "pattern_matches": [
@@ -562,8 +562,8 @@
     },
     {
       "ticker": "8411.T",
-      "name": "8411.T",
-      "sector": "Unknown",
+      "name": "Mizuho Financial Group, Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 15.82,
       "avg_growth_pct": 16.59,
       "pattern_matches": [
@@ -595,8 +595,8 @@
     },
     {
       "ticker": "ORCL",
-      "name": "ORCL",
-      "sector": "Unknown",
+      "name": "Oracle Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 17.45,
       "avg_growth_pct": 10.59,
       "pattern_matches": [
@@ -661,8 +661,8 @@
     },
     {
       "ticker": "NFLX",
-      "name": "NFLX",
-      "sector": "Unknown",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 15.64,
       "avg_growth_pct": 12.67,
       "pattern_matches": [
@@ -760,8 +760,8 @@
     },
     {
       "ticker": "GOOGL",
-      "name": "GOOGL",
-      "sector": "Unknown",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 15.09,
       "avg_growth_pct": 12.55,
       "pattern_matches": [
@@ -793,8 +793,8 @@
     },
     {
       "ticker": "GOOG",
-      "name": "GOOG",
-      "sector": "Unknown",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 15.09,
       "avg_growth_pct": 12.55,
       "pattern_matches": [
@@ -826,8 +826,8 @@
     },
     {
       "ticker": "8316.T",
-      "name": "8316.T",
-      "sector": "Unknown",
+      "name": "Sumitomo Mitsui Financial Group, Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 14.32,
       "avg_growth_pct": 15.93,
       "pattern_matches": [
@@ -859,8 +859,8 @@
     },
     {
       "ticker": "4568.T",
-      "name": "4568.T",
-      "sector": "Unknown",
+      "name": "Daiichi Sankyo Company, Limited",
+      "sector": "Healthcare",
       "latest_growth_pct": 12.55,
       "avg_growth_pct": 18.53,
       "pattern_matches": [
@@ -925,8 +925,8 @@
     },
     {
       "ticker": "5401.T",
-      "name": "5401.T",
-      "sector": "Unknown",
+      "name": "Nippon Steel Corporation",
+      "sector": "Basic Materials",
       "latest_growth_pct": 15.73,
       "avg_growth_pct": 8.32,
       "pattern_matches": [
@@ -1024,8 +1024,8 @@
     },
     {
       "ticker": "AMZN",
-      "name": "AMZN",
-      "sector": "Unknown",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 12.38,
       "avg_growth_pct": 11.74,
       "pattern_matches": [
@@ -1090,8 +1090,8 @@
     },
     {
       "ticker": "2914.T",
-      "name": "2914.T",
-      "sector": "Unknown",
+      "name": "Japan Tobacco Inc.",
+      "sector": "Consumer Defensive",
       "latest_growth_pct": 13.44,
       "avg_growth_pct": 9.31,
       "pattern_matches": [
@@ -1123,8 +1123,8 @@
     },
     {
       "ticker": "7741.T",
-      "name": "7741.T",
-      "sector": "Unknown",
+      "name": "HOYA Corporation",
+      "sector": "Healthcare",
       "latest_growth_pct": 12.42,
       "avg_growth_pct": 10.72,
       "pattern_matches": [
@@ -1189,8 +1189,8 @@
     },
     {
       "ticker": "UNH",
-      "name": "UNH",
-      "sector": "Unknown",
+      "name": "UnitedHealth Group Incorporated",
+      "sector": "Healthcare",
       "latest_growth_pct": 11.82,
       "avg_growth_pct": 11.39,
       "pattern_matches": [
@@ -1222,8 +1222,8 @@
     },
     {
       "ticker": "V",
-      "name": "V",
-      "sector": "Unknown",
+      "name": "Visa Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 11.42,
       "avg_growth_pct": 10.93,
       "pattern_matches": [
@@ -1255,8 +1255,8 @@
     },
     {
       "ticker": "6594.T",
-      "name": "6594.T",
-      "sector": "Unknown",
+      "name": "Nidec Corporation",
+      "sector": "Industrials",
       "latest_growth_pct": 11.11,
       "avg_growth_pct": 10.9,
       "pattern_matches": [
@@ -1321,8 +1321,8 @@
     },
     {
       "ticker": "9983.T",
-      "name": "9983.T",
-      "sector": "Unknown",
+      "name": "Fast Retailing Co., Ltd.",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 9.56,
       "avg_growth_pct": 13.99,
       "pattern_matches": [
@@ -1354,8 +1354,8 @@
     },
     {
       "ticker": "9022.T",
-      "name": "9022.T",
-      "sector": "Unknown",
+      "name": "Central Japan Railway Company",
+      "sector": "Industrials",
       "latest_growth_pct": 9.52,
       "avg_growth_pct": 12.92,
       "pattern_matches": [
@@ -1453,8 +1453,8 @@
     },
     {
       "ticker": "8802.T",
-      "name": "8802.T",
-      "sector": "Unknown",
+      "name": "Mitsubishi Estate Co., Ltd.",
+      "sector": "Real Estate",
       "latest_growth_pct": 10.53,
       "avg_growth_pct": 8.24,
       "pattern_matches": [
@@ -1486,8 +1486,8 @@
     },
     {
       "ticker": "6861.T",
-      "name": "6861.T",
-      "sector": "Unknown",
+      "name": "Keyence Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 10.4,
       "avg_growth_pct": 8.25,
       "pattern_matches": [
@@ -1585,8 +1585,8 @@
     },
     {
       "ticker": "8306.T",
-      "name": "8306.T",
-      "sector": "Unknown",
+      "name": "Mitsubishi UFJ Financial Group, Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 9.98,
       "avg_growth_pct": 7.79,
       "pattern_matches": [
@@ -1750,8 +1750,8 @@
     },
     {
       "ticker": "CRM",
-      "name": "CRM",
-      "sector": "Unknown",
+      "name": "Salesforce, Inc.",
+      "sector": "Technology",
       "latest_growth_pct": 9.79,
       "avg_growth_pct": 9.86,
       "pattern_matches": [
@@ -1915,8 +1915,8 @@
     },
     {
       "ticker": "JPM",
-      "name": "JPM",
-      "sector": "Unknown",
+      "name": "JPMorgan Chase & Co.",
+      "sector": "Financial Services",
       "latest_growth_pct": 7.32,
       "avg_growth_pct": 12.66,
       "pattern_matches": [
@@ -1981,8 +1981,8 @@
     },
     {
       "ticker": "7182.T",
-      "name": "7182.T",
-      "sector": "Unknown",
+      "name": "JAPAN POST BANK Co., Ltd.",
+      "sector": "Financial Services",
       "latest_growth_pct": 9.18,
       "avg_growth_pct": 6.14,
       "pattern_matches": [
@@ -2080,8 +2080,8 @@
     },
     {
       "ticker": "4578.T",
-      "name": "4578.T",
-      "sector": "Unknown",
+      "name": "Otsuka Holdings Co., Ltd.",
+      "sector": "Healthcare",
       "latest_growth_pct": 5.97,
       "avg_growth_pct": 12.51,
       "pattern_matches": [
@@ -2146,8 +2146,8 @@
     },
     {
       "ticker": "9984.T",
-      "name": "9984.T",
-      "sector": "Unknown",
+      "name": "SoftBank Group Corp.",
+      "sector": "Communication Services",
       "latest_growth_pct": 7.66,
       "avg_growth_pct": 5.9,
       "pattern_matches": [
@@ -2179,8 +2179,8 @@
     },
     {
       "ticker": "9434.T",
-      "name": "9434.T",
-      "sector": "Unknown",
+      "name": "SoftBank Corp.",
+      "sector": "Communication Services",
       "latest_growth_pct": 7.55,
       "avg_growth_pct": 6.01,
       "pattern_matches": [
@@ -2212,8 +2212,8 @@
     },
     {
       "ticker": "3659.T",
-      "name": "3659.T",
-      "sector": "Unknown",
+      "name": "NEXON Co., Ltd.",
+      "sector": "Communication Services",
       "latest_growth_pct": 6.48,
       "avg_growth_pct": 10.52,
       "pattern_matches": [
@@ -2311,8 +2311,8 @@
     },
     {
       "ticker": "8766.T",
-      "name": "8766.T",
-      "sector": "Unknown",
+      "name": "Tokio Marine Holdings, Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 6.51,
       "avg_growth_pct": 9.61,
       "pattern_matches": [
@@ -2344,8 +2344,8 @@
     },
     {
       "ticker": "7203.T",
-      "name": "7203.T",
-      "sector": "Unknown",
+      "name": "Toyota Motor Corporation",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 5.51,
       "avg_growth_pct": 11.13,
       "pattern_matches": [
@@ -2410,8 +2410,8 @@
     },
     {
       "ticker": "9020.T",
-      "name": "9020.T",
-      "sector": "Unknown",
+      "name": "East Japan Railway Company",
+      "sector": "Industrials",
       "latest_growth_pct": 6.83,
       "avg_growth_pct": 8.7,
       "pattern_matches": [
@@ -2443,8 +2443,8 @@
     },
     {
       "ticker": "6503.T",
-      "name": "6503.T",
-      "sector": "Unknown",
+      "name": "Mitsubishi Electric Corporation",
+      "sector": "Industrials",
       "latest_growth_pct": 6.76,
       "avg_growth_pct": 5.62,
       "pattern_matches": [
@@ -2509,8 +2509,8 @@
     },
     {
       "ticker": "IBM",
-      "name": "IBM",
-      "sector": "Unknown",
+      "name": "International Business Machines Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 7.66,
       "avg_growth_pct": 3.76,
       "pattern_matches": [
@@ -2608,8 +2608,8 @@
     },
     {
       "ticker": "JNJ",
-      "name": "JNJ",
-      "sector": "Unknown",
+      "name": "Johnson & Johnson",
+      "sector": "Healthcare",
       "latest_growth_pct": 5.97,
       "avg_growth_pct": 5.61,
       "pattern_matches": [
@@ -2674,8 +2674,8 @@
     },
     {
       "ticker": "6367.T",
-      "name": "6367.T",
-      "sector": "Unknown",
+      "name": "Daikin Industries,Ltd.",
+      "sector": "Industrials",
       "latest_growth_pct": 5.53,
       "avg_growth_pct": 8.01,
       "pattern_matches": [
@@ -2707,8 +2707,8 @@
     },
     {
       "ticker": "4689.T",
-      "name": "4689.T",
-      "sector": "Unknown",
+      "name": "LY Corporation",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 6.2,
       "avg_growth_pct": 6.79,
       "pattern_matches": [
@@ -2740,8 +2740,8 @@
     },
     {
       "ticker": "6954.T",
-      "name": "6954.T",
-      "sector": "Unknown",
+      "name": "Fanuc Corporation",
+      "sector": "Industrials",
       "latest_growth_pct": 7.62,
       "avg_growth_pct": 0.4,
       "pattern_matches": [
@@ -2773,8 +2773,8 @@
     },
     {
       "ticker": "4519.T",
-      "name": "4519.T",
-      "sector": "Unknown",
+      "name": "Chugai Pharmaceutical Co., Ltd.",
+      "sector": "Healthcare",
       "latest_growth_pct": 7.46,
       "avg_growth_pct": 0.34,
       "pattern_matches": [
@@ -2806,8 +2806,8 @@
     },
     {
       "ticker": "AAPL",
-      "name": "AAPL",
-      "sector": "Unknown",
+      "name": "Apple Inc.",
+      "sector": "Technology",
       "latest_growth_pct": 6.42,
       "avg_growth_pct": 1.88,
       "pattern_matches": [
@@ -2971,8 +2971,8 @@
     },
     {
       "ticker": "8804.T",
-      "name": "8804.T",
-      "sector": "Unknown",
+      "name": "Tokyo Tatemono Co., Ltd.",
+      "sector": "Real Estate",
       "latest_growth_pct": 2.33,
       "avg_growth_pct": 11.04,
       "pattern_matches": [
@@ -3004,8 +3004,8 @@
     },
     {
       "ticker": "9432.T",
-      "name": "9432.T",
-      "sector": "Unknown",
+      "name": "NTT, Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 5.14,
       "avg_growth_pct": 3.14,
       "pattern_matches": [
@@ -3037,8 +3037,8 @@
     },
     {
       "ticker": "6902.T",
-      "name": "6902.T",
-      "sector": "Unknown",
+      "name": "DENSO Corporation",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 5.28,
       "avg_growth_pct": 5.71,
       "pattern_matches": [
@@ -3202,8 +3202,8 @@
     },
     {
       "ticker": "4901.T",
-      "name": "4901.T",
-      "sector": "Unknown",
+      "name": "FUJIFILM Holdings Corporation",
+      "sector": "Industrials",
       "latest_growth_pct": 5.04,
       "avg_growth_pct": 5.51,
       "pattern_matches": [
@@ -3367,8 +3367,8 @@
     },
     {
       "ticker": "WMT",
-      "name": "WMT",
-      "sector": "Unknown",
+      "name": "Walmart Inc.",
+      "sector": "Consumer Defensive",
       "latest_growth_pct": 4.73,
       "avg_growth_pct": 5.28,
       "pattern_matches": [
@@ -3454,8 +3454,8 @@
     },
     {
       "ticker": "6098.T",
-      "name": "6098.T",
-      "sector": "Unknown",
+      "name": "Recruit Holdings Co., Ltd.",
+      "sector": "Communication Services",
       "latest_growth_pct": 3.93,
       "avg_growth_pct": 2.56,
       "pattern_matches": [
@@ -3520,8 +3520,8 @@
     },
     {
       "ticker": "8801.T",
-      "name": "8801.T",
-      "sector": "Unknown",
+      "name": "Mitsui Fudosan Co., Ltd.",
+      "sector": "Real Estate",
       "latest_growth_pct": 3.21,
       "avg_growth_pct": 6.13,
       "pattern_matches": [
@@ -3569,7 +3569,7 @@
     {
       "ticker": "2802.T",
       "name": "Ajinomoto Co., Inc.",
-      "sector": "Unknown",
+      "sector": "Consumer Defensive",
       "latest_growth_pct": 3.48,
       "avg_growth_pct": 5.24,
       "pattern_matches": [
@@ -3631,8 +3631,8 @@
     },
     {
       "ticker": "6758.T",
-      "name": "6758.T",
-      "sector": "Unknown",
+      "name": "Sony Group Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 3.7,
       "avg_growth_pct": 4.39,
       "pattern_matches": [
@@ -3652,8 +3652,8 @@
     },
     {
       "ticker": "PG",
-      "name": "PG",
-      "sector": "Unknown",
+      "name": "The Procter & Gamble Company",
+      "sector": "Consumer Defensive",
       "latest_growth_pct": 3.33,
       "avg_growth_pct": 2.0,
       "pattern_matches": [
@@ -3673,8 +3673,8 @@
     },
     {
       "ticker": "DIS",
-      "name": "DIS",
-      "sector": "Unknown",
+      "name": "The Walt Disney Company",
+      "sector": "Communication Services",
       "latest_growth_pct": 3.4,
       "avg_growth_pct": 4.53,
       "pattern_matches": [
@@ -3694,8 +3694,8 @@
     },
     {
       "ticker": "7267.T",
-      "name": "7267.T",
-      "sector": "Unknown",
+      "name": "Honda Motor Co., Ltd.",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 0.5,
       "avg_growth_pct": 9.17,
       "pattern_matches": [
@@ -3715,8 +3715,8 @@
     },
     {
       "ticker": "HD",
-      "name": "HD",
-      "sector": "Unknown",
+      "name": "The Home Depot, Inc.",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 3.2,
       "avg_growth_pct": 1.56,
       "pattern_matches": [
@@ -3862,8 +3862,8 @@
     },
     {
       "ticker": "4063.T",
-      "name": "4063.T",
-      "sector": "Unknown",
+      "name": "Shin-Etsu Chemical Co., Ltd.",
+      "sector": "Basic Materials",
       "latest_growth_pct": 0.5,
       "avg_growth_pct": -2.49,
       "pattern_matches": [],
@@ -3871,8 +3871,8 @@
     },
     {
       "ticker": "8035.T",
-      "name": "8035.T",
-      "sector": "Unknown",
+      "name": "Tokyo Electron Limited",
+      "sector": "Technology",
       "latest_growth_pct": 0.49,
       "avg_growth_pct": 5.4,
       "pattern_matches": [],
@@ -3880,8 +3880,8 @@
     },
     {
       "ticker": "8058.T",
-      "name": "8058.T",
-      "sector": "Unknown",
+      "name": "Mitsubishi Corporation",
+      "sector": "Industrials",
       "latest_growth_pct": 1.6,
       "avg_growth_pct": -4.18,
       "pattern_matches": [],
@@ -3889,8 +3889,8 @@
     },
     {
       "ticker": "4502.T",
-      "name": "4502.T",
-      "sector": "Unknown",
+      "name": "Takeda Pharmaceutical Company Limited",
+      "sector": "Healthcare",
       "latest_growth_pct": -1.65,
       "avg_growth_pct": 3.89,
       "pattern_matches": [],
@@ -3898,8 +3898,8 @@
     },
     {
       "ticker": "8001.T",
-      "name": "8001.T",
-      "sector": "Unknown",
+      "name": "ITOCHU Corporation",
+      "sector": "Industrials",
       "latest_growth_pct": 0.67,
       "avg_growth_pct": 2.07,
       "pattern_matches": [],
@@ -3907,8 +3907,8 @@
     },
     {
       "ticker": "5108.T",
-      "name": "5108.T",
-      "sector": "Unknown",
+      "name": "Bridgestone Corporation",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": -0.01,
       "avg_growth_pct": 2.55,
       "pattern_matches": [],
@@ -3916,8 +3916,8 @@
     },
     {
       "ticker": "6752.T",
-      "name": "6752.T",
-      "sector": "Unknown",
+      "name": "Panasonic Holdings Corporation",
+      "sector": "Technology",
       "latest_growth_pct": -4.84,
       "avg_growth_pct": -1.3,
       "pattern_matches": [],
@@ -3925,8 +3925,8 @@
     },
     {
       "ticker": "TSLA",
-      "name": "TSLA",
-      "sector": "Unknown",
+      "name": "Tesla, Inc.",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": -2.87,
       "avg_growth_pct": 5.62,
       "pattern_matches": [],
@@ -3934,8 +3934,8 @@
     },
     {
       "ticker": "INTC",
-      "name": "INTC",
-      "sector": "Unknown",
+      "name": "Intel Corporation",
+      "sector": "Technology",
       "latest_growth_pct": -0.56,
       "avg_growth_pct": -5.52,
       "pattern_matches": [],
@@ -3943,8 +3943,8 @@
     },
     {
       "ticker": "PFE",
-      "name": "PFE",
-      "sector": "Unknown",
+      "name": "Pfizer Inc.",
+      "sector": "Healthcare",
       "latest_growth_pct": -1.73,
       "avg_growth_pct": -12.0,
       "pattern_matches": [],
@@ -3952,8 +3952,8 @@
     },
     {
       "ticker": "KO",
-      "name": "KO",
-      "sector": "Unknown",
+      "name": "The Coca-Cola Company",
+      "sector": "Consumer Defensive",
       "latest_growth_pct": 1.91,
       "avg_growth_pct": 3.68,
       "pattern_matches": [],
@@ -3961,8 +3961,8 @@
     },
     {
       "ticker": "8031.T",
-      "name": "8031.T",
-      "sector": "Unknown",
+      "name": "Mitsui & Co., Ltd.",
+      "sector": "Industrials",
       "latest_growth_pct": -4.55,
       "avg_growth_pct": -0.46,
       "pattern_matches": [],
@@ -3970,8 +3970,8 @@
     },
     {
       "ticker": "9101.T",
-      "name": "9101.T",
-      "sector": "Unknown",
+      "name": "Nippon Yusen Kabushiki Kaisha",
+      "sector": "Industrials",
       "latest_growth_pct": -6.38,
       "avg_growth_pct": -2.23,
       "pattern_matches": [],
@@ -4422,8 +4422,8 @@
   "top_growth_stocks": [
     {
       "ticker": "7974.T",
-      "name": "7974.T",
-      "sector": "Unknown",
+      "name": "Nintendo Co., Ltd.",
+      "sector": "Communication Services",
       "latest_growth_pct": 98.56,
       "avg_growth_pct": 24.21,
       "pattern_matches": [
@@ -4455,8 +4455,8 @@
     },
     {
       "ticker": "META",
-      "name": "META",
-      "sector": "Unknown",
+      "name": "Meta Platforms, Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 22.13,
       "avg_growth_pct": 19.92,
       "pattern_matches": [
@@ -4620,8 +4620,8 @@
     },
     {
       "ticker": "MSFT",
-      "name": "MSFT",
-      "sector": "Unknown",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 17.78,
       "avg_growth_pct": 16.13,
       "pattern_matches": [
@@ -4653,8 +4653,8 @@
     },
     {
       "ticker": "9766.T",
-      "name": "9766.T",
-      "sector": "Unknown",
+      "name": "Konami Group Corporation",
+      "sector": "Communication Services",
       "latest_growth_pct": 17.08,
       "avg_growth_pct": 16.24,
       "pattern_matches": [
@@ -4686,8 +4686,8 @@
     },
     {
       "ticker": "2413.T",
-      "name": "2413.T",
-      "sector": "Unknown",
+      "name": "M3, Inc.",
+      "sector": "Healthcare",
       "latest_growth_pct": 23.31,
       "avg_growth_pct": 15.36,
       "pattern_matches": [
@@ -4719,8 +4719,8 @@
     },
     {
       "ticker": "AMD",
-      "name": "AMD",
-      "sector": "Unknown",
+      "name": "Advanced Micro Devices, Inc.",
+      "sector": "Technology",
       "latest_growth_pct": 34.63,
       "avg_growth_pct": 14.7,
       "pattern_matches": [
@@ -4752,8 +4752,8 @@
     },
     {
       "ticker": "NVDA",
-      "name": "NVDA",
-      "sector": "Unknown",
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 65.57,
       "avg_growth_pct": 102.03,
       "pattern_matches": [
@@ -4884,8 +4884,8 @@
     },
     {
       "ticker": "MA",
-      "name": "MA",
-      "sector": "Unknown",
+      "name": "Mastercard Incorporated",
+      "sector": "Financial Services",
       "latest_growth_pct": 16.37,
       "avg_growth_pct": 13.79,
       "pattern_matches": [
@@ -4917,8 +4917,8 @@
     },
     {
       "ticker": "8411.T",
-      "name": "8411.T",
-      "sector": "Unknown",
+      "name": "Mizuho Financial Group, Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 15.82,
       "avg_growth_pct": 16.59,
       "pattern_matches": [
@@ -4950,8 +4950,8 @@
     },
     {
       "ticker": "ORCL",
-      "name": "ORCL",
-      "sector": "Unknown",
+      "name": "Oracle Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 17.45,
       "avg_growth_pct": 10.59,
       "pattern_matches": [
@@ -5016,8 +5016,8 @@
     },
     {
       "ticker": "NFLX",
-      "name": "NFLX",
-      "sector": "Unknown",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 15.64,
       "avg_growth_pct": 12.67,
       "pattern_matches": [
@@ -5115,8 +5115,8 @@
     },
     {
       "ticker": "GOOGL",
-      "name": "GOOGL",
-      "sector": "Unknown",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 15.09,
       "avg_growth_pct": 12.55,
       "pattern_matches": [
@@ -5148,8 +5148,8 @@
     },
     {
       "ticker": "GOOG",
-      "name": "GOOG",
-      "sector": "Unknown",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
       "latest_growth_pct": 15.09,
       "avg_growth_pct": 12.55,
       "pattern_matches": [
@@ -5181,8 +5181,8 @@
     },
     {
       "ticker": "8316.T",
-      "name": "8316.T",
-      "sector": "Unknown",
+      "name": "Sumitomo Mitsui Financial Group, Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 14.32,
       "avg_growth_pct": 15.93,
       "pattern_matches": [
@@ -5214,8 +5214,8 @@
     },
     {
       "ticker": "4568.T",
-      "name": "4568.T",
-      "sector": "Unknown",
+      "name": "Daiichi Sankyo Company, Limited",
+      "sector": "Healthcare",
       "latest_growth_pct": 12.55,
       "avg_growth_pct": 18.53,
       "pattern_matches": [
@@ -5280,8 +5280,8 @@
     },
     {
       "ticker": "5401.T",
-      "name": "5401.T",
-      "sector": "Unknown",
+      "name": "Nippon Steel Corporation",
+      "sector": "Basic Materials",
       "latest_growth_pct": 15.73,
       "avg_growth_pct": 8.32,
       "pattern_matches": [
@@ -5379,8 +5379,8 @@
     },
     {
       "ticker": "AMZN",
-      "name": "AMZN",
-      "sector": "Unknown",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 12.38,
       "avg_growth_pct": 11.74,
       "pattern_matches": [
@@ -5445,8 +5445,8 @@
     },
     {
       "ticker": "2914.T",
-      "name": "2914.T",
-      "sector": "Unknown",
+      "name": "Japan Tobacco Inc.",
+      "sector": "Consumer Defensive",
       "latest_growth_pct": 13.44,
       "avg_growth_pct": 9.31,
       "pattern_matches": [
@@ -5478,8 +5478,8 @@
     },
     {
       "ticker": "7741.T",
-      "name": "7741.T",
-      "sector": "Unknown",
+      "name": "HOYA Corporation",
+      "sector": "Healthcare",
       "latest_growth_pct": 12.42,
       "avg_growth_pct": 10.72,
       "pattern_matches": [
@@ -5544,8 +5544,8 @@
     },
     {
       "ticker": "UNH",
-      "name": "UNH",
-      "sector": "Unknown",
+      "name": "UnitedHealth Group Incorporated",
+      "sector": "Healthcare",
       "latest_growth_pct": 11.82,
       "avg_growth_pct": 11.39,
       "pattern_matches": [
@@ -5577,8 +5577,8 @@
     },
     {
       "ticker": "V",
-      "name": "V",
-      "sector": "Unknown",
+      "name": "Visa Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 11.42,
       "avg_growth_pct": 10.93,
       "pattern_matches": [
@@ -5610,8 +5610,8 @@
     },
     {
       "ticker": "6594.T",
-      "name": "6594.T",
-      "sector": "Unknown",
+      "name": "Nidec Corporation",
+      "sector": "Industrials",
       "latest_growth_pct": 11.11,
       "avg_growth_pct": 10.9,
       "pattern_matches": [
@@ -5676,8 +5676,8 @@
     },
     {
       "ticker": "9983.T",
-      "name": "9983.T",
-      "sector": "Unknown",
+      "name": "Fast Retailing Co., Ltd.",
+      "sector": "Consumer Cyclical",
       "latest_growth_pct": 9.56,
       "avg_growth_pct": 13.99,
       "pattern_matches": [
@@ -5709,8 +5709,8 @@
     },
     {
       "ticker": "9022.T",
-      "name": "9022.T",
-      "sector": "Unknown",
+      "name": "Central Japan Railway Company",
+      "sector": "Industrials",
       "latest_growth_pct": 9.52,
       "avg_growth_pct": 12.92,
       "pattern_matches": [
@@ -5808,8 +5808,8 @@
     },
     {
       "ticker": "8802.T",
-      "name": "8802.T",
-      "sector": "Unknown",
+      "name": "Mitsubishi Estate Co., Ltd.",
+      "sector": "Real Estate",
       "latest_growth_pct": 10.53,
       "avg_growth_pct": 8.24,
       "pattern_matches": [
@@ -5841,8 +5841,8 @@
     },
     {
       "ticker": "6861.T",
-      "name": "6861.T",
-      "sector": "Unknown",
+      "name": "Keyence Corporation",
+      "sector": "Technology",
       "latest_growth_pct": 10.4,
       "avg_growth_pct": 8.25,
       "pattern_matches": [
@@ -5940,8 +5940,8 @@
     },
     {
       "ticker": "8306.T",
-      "name": "8306.T",
-      "sector": "Unknown",
+      "name": "Mitsubishi UFJ Financial Group, Inc.",
+      "sector": "Financial Services",
       "latest_growth_pct": 9.98,
       "avg_growth_pct": 7.79,
       "pattern_matches": [
@@ -6105,8 +6105,8 @@
     },
     {
       "ticker": "CRM",
-      "name": "CRM",
-      "sector": "Unknown",
+      "name": "Salesforce, Inc.",
+      "sector": "Technology",
       "latest_growth_pct": 9.79,
       "avg_growth_pct": 9.86,
       "pattern_matches": [

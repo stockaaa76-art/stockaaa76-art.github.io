@@ -1,60 +1,60 @@
 {
  "sector": "Basic Materials",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 19.8,
-  "sector_per_p90": 47.6,
-  "sector_pbr_median": 1.34,
-  "sector_pbr_p90": 3.59
+  "sector_per_median": 19.2,
+  "sector_per_p90": 59.1,
+  "sector_pbr_median": 1.46,
+  "sector_pbr_p90": 4.15
  },
  "forecast": {
   "revenue": {
-   "cur_year": 236666666670.0,
-   "next_year": 255283333330.0
+   "cur_year": 236357142860.0,
+   "next_year": 254885714290.0
   },
   "eps": {
-   "cur_year": 344.9138,
-   "next_year": 536.4721
+   "cur_year": 114.80111,
+   "next_year": 174.23721
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 6401.6665,
-   "high": 6810.0,
-   "low": 6000.0
+   "mean": 2129.0952,
+   "high": 2270.0,
+   "low": 2000.0
   },
-  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_date": "2027-03-31",
   "ex_dividend_schedule": [
-   "2026-09-29",
-   "2027-03-31"
+   "2027-03-31",
+   "2027-09-30"
   ],
   "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 6829.29,
-   "mid": 6829.29,
-   "high": 16417.9
+   "low": 2204.18,
+   "mid": 2204.18,
+   "high": 6784.75
   },
   "y1": {
-   "low": 10622.15,
-   "mid": 10622.15,
-   "high": 25536.07
+   "low": 3345.35,
+   "mid": 3345.35,
+   "high": 10297.42
   },
   "y5": {
-   "low": 27410.34,
-   "mid": 32740.13,
-   "high": 38069.91
+   "low": 9123.26,
+   "mid": 10897.22,
+   "high": 12671.19
   },
   "assumptions": {
-   "eps_cur": 344.914,
-   "eps_next": 536.472,
-   "eps_5y": 1522.797,
+   "eps_cur": 114.801,
+   "eps_next": 174.237,
+   "eps_5y": 506.848,
    "growth_used": 0.5,
-   "per_median": 19.8,
-   "per_p90": 47.6,
+   "per_median": 19.2,
+   "per_p90": 59.1,
    "per_terminal": "18-25"
   }
  },

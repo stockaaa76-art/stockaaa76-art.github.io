@@ -1,11 +1,11 @@
 {
  "sector": "Technology",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 36.6,
-  "sector_per_p90": 76.8,
-  "sector_pbr_median": 5.12,
-  "sector_pbr_p90": 21.1
+  "sector_per_median": 39.5,
+  "sector_per_p90": 81.8,
+  "sector_pbr_median": 5.29,
+  "sector_pbr_p90": 20.71
  },
  "forecast": {
   "revenue": {
@@ -29,13 +29,13 @@
  "theoretical_price": {
   "now": {
    "low": 229.48,
-   "mid": 419.95,
-   "high": 881.2
+   "mid": 453.22,
+   "high": 938.57
   },
   "y1": {
    "low": 277.43,
-   "mid": 507.7,
-   "high": 1065.34
+   "mid": 547.93,
+   "high": 1134.69
   },
   "y5": {
    "low": 407.24,
@@ -47,8 +47,8 @@
    "eps_next": 13.872,
    "eps_5y": 22.625,
    "growth_used": 0.209,
-   "per_median": 36.6,
-   "per_p90": 76.8,
+   "per_median": 39.5,
+   "per_p90": 81.8,
    "per_terminal": "18-25"
   }
  },

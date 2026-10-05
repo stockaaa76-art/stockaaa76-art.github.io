@@ -1,60 +1,60 @@
 {
  "sector": "Consumer Cyclical",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 16.8,
-  "sector_per_p90": 28.8,
-  "sector_pbr_median": 2.29,
-  "sector_pbr_p90": 8.97
+  "sector_per_median": 16.2,
+  "sector_per_p90": 29.8,
+  "sector_pbr_median": 2.2,
+  "sector_pbr_p90": 8.89
  },
  "forecast": {
   "revenue": {
-   "cur_year": 232014372230.0,
-   "next_year": 261338234690.0
+   "cur_year": 232389039330.0,
+   "next_year": 261550752750.0
   },
   "eps": {
-   "cur_year": 52.94594,
-   "next_year": 60.29475
+   "cur_year": 52.91102,
+   "next_year": 60.16358
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 1554.15,
-   "high": 1860.0,
+   "mean": 1530.623,
+   "high": 1850.0,
    "low": 1260.0
   },
-  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_date": "2027-03-31",
   "ex_dividend_schedule": [
-   "2026-09-29",
-   "2027-03-31"
+   "2027-03-31",
+   "2027-09-30"
   ],
   "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 889.49,
-   "mid": 889.49,
-   "high": 1524.84
+   "low": 857.16,
+   "mid": 857.16,
+   "high": 1576.75
   },
   "y1": {
-   "low": 1012.95,
-   "mid": 1012.95,
-   "high": 1736.49
+   "low": 974.65,
+   "mid": 974.65,
+   "high": 1792.87
   },
   "y5": {
-   "low": 1512.41,
-   "mid": 1806.49,
-   "high": 2100.57
+   "low": 1503.17,
+   "mid": 1795.45,
+   "high": 2087.73
   },
   "assumptions": {
-   "eps_cur": 52.946,
-   "eps_next": 60.295,
-   "eps_5y": 84.023,
-   "growth_used": 0.1388,
-   "per_median": 16.8,
-   "per_p90": 28.8,
+   "eps_cur": 52.911,
+   "eps_next": 60.164,
+   "eps_5y": 83.509,
+   "growth_used": 0.1371,
+   "per_median": 16.2,
+   "per_p90": 29.8,
    "per_terminal": "18-25"
   }
  },

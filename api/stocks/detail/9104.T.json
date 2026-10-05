@@ -1,60 +1,60 @@
 {
  "sector": "日本-運輸・物流",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 15.2,
-  "sector_per_p90": 47.9,
-  "sector_pbr_median": 1.12,
-  "sector_pbr_p90": 1.64
+  "sector_per_median": 14.4,
+  "sector_per_p90": 47.4,
+  "sector_pbr_median": 1.1,
+  "sector_pbr_p90": 1.54
  },
  "forecast": {
   "revenue": {
-   "cur_year": 2144344062080.0,
-   "next_year": 2191952380080.0
+   "cur_year": 2195354062080.0,
+   "next_year": 2237375104080.0
   },
   "eps": {
-   "cur_year": 791.78485,
-   "next_year": 653.9087
+   "cur_year": 810.37177,
+   "next_year": 650.43335
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 7495.4546,
+   "mean": 7710.909,
    "high": 10000.0,
-   "low": 3850.0
+   "low": 4120.0
   },
-  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_date": "2027-03-31",
   "ex_dividend_schedule": [
-   "2026-09-29",
-   "2027-03-31"
+   "2027-03-31",
+   "2027-09-30"
   ],
   "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 12035.13,
-   "mid": 12035.13,
-   "high": 37926.49
+   "low": 11669.35,
+   "mid": 11669.35,
+   "high": 38411.62
   },
   "y1": {
-   "low": 9939.41,
-   "mid": 9939.41,
-   "high": 31322.23
+   "low": 9366.24,
+   "mid": 9366.24,
+   "high": 30830.54
   },
   "y5": {
-   "low": 7407.84,
-   "mid": 8848.26,
-   "high": 10288.67
+   "low": 6895.02,
+   "mid": 8235.71,
+   "high": 9576.41
   },
   "assumptions": {
-   "eps_cur": 791.785,
-   "eps_next": 653.909,
-   "eps_5y": 411.547,
-   "growth_used": -0.1741,
-   "per_median": 15.2,
-   "per_p90": 47.9,
+   "eps_cur": 810.372,
+   "eps_next": 650.433,
+   "eps_5y": 383.056,
+   "growth_used": -0.1974,
+   "per_median": 14.4,
+   "per_p90": 47.4,
    "per_terminal": "18-25"
   }
  },

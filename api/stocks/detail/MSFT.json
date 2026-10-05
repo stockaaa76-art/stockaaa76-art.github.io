@@ -1,29 +1,29 @@
 {
  "sector": "米-テクノロジー",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 27.5,
-  "sector_per_p90": 142.8,
-  "sector_pbr_median": 8.36,
-  "sector_pbr_p90": 43.67
+  "sector_per_median": 28.8,
+  "sector_per_p90": 161.3,
+  "sector_pbr_median": 10.91,
+  "sector_pbr_p90": 45.34
  },
  "forecast": {
   "revenue": {
-   "cur_year": 391038856450.0,
-   "next_year": 467439083340.0
+   "cur_year": 391043352680.0,
+   "next_year": 467314353500.0
   },
   "eps": {
-   "cur_year": 19.75972,
-   "next_year": 23.59268
+   "cur_year": 19.74838,
+   "next_year": 23.64732
   },
   "growth": {
-   "next_year": 0.19399999,
+   "next_year": 0.1974,
    "long_term": null
   },
   "price_target": {
-   "mean": 572.91516,
+   "mean": 578.82245,
    "high": 870.0,
-   "low": 400.0
+   "low": 440.0
   },
   "ex_dividend_date": "2026-11-19",
   "ex_dividend_schedule": [
@@ -36,27 +36,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 395.19,
-   "mid": 543.39,
-   "high": 2821.69
+   "low": 394.97,
+   "mid": 568.75,
+   "high": 3185.41
   },
   "y1": {
-   "low": 471.85,
-   "mid": 648.8,
-   "high": 3369.03
+   "low": 472.95,
+   "mid": 681.04,
+   "high": 3814.31
   },
   "y5": {
-   "low": 670.09,
-   "mid": 800.39,
-   "high": 930.69
+   "low": 676.69,
+   "mid": 808.26,
+   "high": 939.84
   },
   "assumptions": {
-   "eps_cur": 19.76,
-   "eps_next": 23.593,
-   "eps_5y": 37.227,
-   "growth_used": 0.194,
-   "per_median": 27.5,
-   "per_p90": 142.8,
+   "eps_cur": 19.748,
+   "eps_next": 23.647,
+   "eps_5y": 37.594,
+   "growth_used": 0.1974,
+   "per_median": 28.8,
+   "per_p90": 161.3,
    "per_terminal": "18-25"
   }
  },

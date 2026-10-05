@@ -1,6 +1,6 @@
 {
  "sector": "Financial Services",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -9,19 +9,19 @@
  },
  "forecast": {
   "revenue": {
-   "cur_year": 5319922940.0,
-   "next_year": 6805181060.0
+   "cur_year": 5333019340.0,
+   "next_year": 6894196670.0
   },
   "eps": {
-   "cur_year": -2.00735,
-   "next_year": 2.83252
+   "cur_year": -1.95156,
+   "next_year": 2.8302
   },
   "growth": {
-   "next_year": 2.4111,
+   "next_year": 2.4502,
    "long_term": null
   },
   "price_target": {
-   "mean": 202.00345,
+   "mean": 207.12424,
    "high": 330.0,
    "low": 95.0
   }

@@ -1,11 +1,11 @@
 {
  "sector": "日本-不動産",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 13.9,
-  "sector_per_p90": 22.2,
-  "sector_pbr_median": 1.23,
-  "sector_pbr_p90": 1.6
+  "sector_per_median": 13.5,
+  "sector_per_p90": 20.8,
+  "sector_pbr_median": 1.19,
+  "sector_pbr_p90": 1.55
  },
  "forecast": {
   "revenue": {
@@ -34,14 +34,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 2267.97,
-   "mid": 2267.97,
-   "high": 3622.23
+   "low": 2202.71,
+   "mid": 2202.71,
+   "high": 3393.8
   },
   "y1": {
-   "low": 2408.24,
-   "mid": 2408.24,
-   "high": 3846.26
+   "low": 2338.94,
+   "mid": 2338.94,
+   "high": 3603.7
   },
   "y5": {
    "low": 3628.75,
@@ -53,8 +53,8 @@
    "eps_next": 173.255,
    "eps_5y": 201.597,
    "growth_used": 0.0618,
-   "per_median": 13.9,
-   "per_p90": 22.2,
+   "per_median": 13.5,
+   "per_p90": 20.8,
    "per_terminal": "18-25"
   }
  },

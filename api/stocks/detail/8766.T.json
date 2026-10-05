@@ -1,60 +1,60 @@
 {
  "sector": "日本-金融（保険・証券）",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
-  "sector_per_median": 15.8,
-  "sector_per_p90": 29.4,
-  "sector_pbr_median": 1.21,
-  "sector_pbr_p90": 1.9
+  "sector_per_median": 14.2,
+  "sector_per_p90": 26.1,
+  "sector_pbr_median": 1.16,
+  "sector_pbr_p90": 1.77
  },
  "forecast": {
   "revenue": {
-   "cur_year": 8879156666670.0,
-   "next_year": 9177696666670.0
+   "cur_year": 8930235000000.0,
+   "next_year": 9288045000000.0
   },
   "eps": {
-   "cur_year": 496.07654,
-   "next_year": 576.916
+   "cur_year": 32.80801,
+   "next_year": 37.02028
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 8652.667,
-   "high": 10500.0,
-   "low": 5842.0
+   "mean": 581.65,
+   "high": 700.0,
+   "low": 389.46667
   },
-  "ex_dividend_date": "2026-09-29",
+  "ex_dividend_date": "2027-03-31",
   "ex_dividend_schedule": [
-   "2026-09-29",
-   "2027-03-31"
+   "2027-03-31",
+   "2027-09-30"
   ],
   "dividend_frequency": "半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 7838.01,
-   "mid": 7838.01,
-   "high": 14584.65
+   "low": 465.87,
+   "mid": 465.87,
+   "high": 856.29
   },
   "y1": {
-   "low": 9115.27,
-   "mid": 9115.27,
-   "high": 16961.33
+   "low": 525.69,
+   "mid": 525.69,
+   "high": 966.23
   },
   "y5": {
-   "low": 15287.56,
-   "mid": 18260.14,
-   "high": 21232.72
+   "low": 906.68,
+   "mid": 1082.98,
+   "high": 1259.28
   },
   "assumptions": {
-   "eps_cur": 496.077,
-   "eps_next": 576.916,
-   "eps_5y": 849.309,
-   "growth_used": 0.163,
-   "per_median": 15.8,
-   "per_p90": 29.4,
+   "eps_cur": 32.808,
+   "eps_next": 37.02,
+   "eps_5y": 50.371,
+   "growth_used": 0.1284,
+   "per_median": 14.2,
+   "per_p90": 26.1,
    "per_terminal": "18-25"
   }
  },

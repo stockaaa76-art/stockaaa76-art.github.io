@@ -1,6 +1,6 @@
 {
  "sector": "Communication Services",
- "updated_at": "2026-09-20 16:07",
+ "updated_at": "2026-10-05 00:48",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -9,21 +9,21 @@
  },
  "forecast": {
   "revenue": {
-   "cur_year": 59109001540.0,
-   "next_year": 65868721959.0
+   "cur_year": 59038296540.0,
+   "next_year": 65967521590.0
   },
   "eps": {
-   "cur_year": 40.8525,
-   "next_year": 42.0625
+   "cur_year": 39.5798,
+   "next_year": 43.488
   },
   "growth": {
-   "next_year": 0.0689,
+   "next_year": 0.2031,
    "long_term": null
   },
   "price_target": {
-   "mean": 179.10526,
+   "mean": 175.10526,
    "high": 380.0,
-   "low": 101.0
+   "low": 68.0
   }
  },
  "theoretical_price": null,
