@@ -2731,7 +2731,7 @@ const RK_CATALOG = [
     { id: 'gc',       g: 'テクニカル/AI', label: 'ゴールデンクロス', source: 'extended', key: 'golden_cross', cs: 'cross', sortKey: 'change', dir: 'desc', markets: ['jp', 'us'] },
     { id: 'dc',       g: 'テクニカル/AI', label: 'デッドクロス',     source: 'extended', key: 'dead_cross',   cs: 'cross', sortKey: 'change', dir: 'asc',  markets: ['jp', 'us'] },
     { id: 'ml',       g: 'テクニカル/AI', label: 'AI月次ランキング', source: 'ml',       key: null,           cs: 'ml',    sortKey: 'score',  dir: 'desc', markets: ['jp', 'us'],
-      note: 'クロスセクショナルML(LambdaRank)で今月相対的に強いと予測される順。BT: ベンチ超過 +3.7%/年(2018-2025)。⚠️相対強弱の参考であり買いシグナル・保証ではありません。' },
+      note: 'クロスセクショナルML(LambdaRank)で今月相対的に強いと予測される順。⚠️相対強弱の参考であり買いシグナル・保証ではありません。' },
     { id: 'alpha',    g: 'テクニカル/AI', label: 'α（指数超過）',    source: 'period',   key: 'alpha_high',   cs: 'alpha', sortKey: 'alpha', dir: 'desc', markets: ['jp', 'us'],
       note: '期間騰落率から指数騰落率を引いた超過リターン。市場全体より強い銘柄の特定用。' },
 ];

@@ -1236,7 +1236,7 @@ class StockDetail {
                     <span>RSI: <strong>${entry.rsi}</strong></span>
                   </div>
                   <p style="font-size:11px;color:#9ca3af;margin-top:8px;">
-                    月次クロスセクション相対強弱 ML(LambdaRank)。上位ほど翌月相対的に強い傾向。BT実証済み(+3.7%/yr)。買いシグナルではありません。更新: ${data.as_of_date}
+                    月次クロスセクション相対強弱 ML(LambdaRank)。上位ほど翌月相対的に強い傾向。買いシグナルではありません。更新: ${data.as_of_date}
                   </p>`;
             }
             el.style.display = 'block';
