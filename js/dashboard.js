@@ -2022,10 +2022,12 @@ Dashboard.prototype.updateIndexDivergence = function(period) {
 // 🏭 業種内ドリルダウン（#194）: 業種を選ぶ→その業種の銘柄を強い順に表示する2段階ビュー。
 // period_rankings の sector_drilldown 由来（業種ごとに平均・銘柄数・上位10銘柄）。
 // セレクトの選択保持はしない（期間切替で先頭＝最強業種に戻す）。
-Dashboard.prototype.updateSectorDrilldown = function(period) {
-    const sel = document.getElementById('sector-drilldown-select');
-    const listEl = document.getElementById('sector-drilldown-list');
-    const sumEl = document.getElementById('sector-drilldown-summary');
+// idPrefix: 'us-' を渡すと米国株用の DOM（us-sector-drilldown-*）を更新する（既定は日本株）。
+Dashboard.prototype.updateSectorDrilldown = function(period, idPrefix) {
+    idPrefix = idPrefix || '';
+    const sel = document.getElementById(idPrefix + 'sector-drilldown-select');
+    const listEl = document.getElementById(idPrefix + 'sector-drilldown-list');
+    const sumEl = document.getElementById(idPrefix + 'sector-drilldown-summary');
     if (!sel || !listEl) return;
     const pd = this.periodRankingsData && this.periodRankingsData[period];
     const groups = (pd && pd.rankings && pd.rankings.sector_drilldown) || [];
@@ -2806,6 +2808,7 @@ Dashboard.prototype._rkRenderOverview = function () {
     // ⑦指数逆行スクリーン（#195）／⑧業種内ドリルダウン（#194）＝いずれも日本株 日次・データ無は関数内で graceful
     try { this.updateIndexDivergence('daily'); } catch (e) { /* graceful */ }
     try { this.updateSectorDrilldown('daily'); } catch (e) { /* graceful */ }
+    try { this.updateSectorDrilldown('us_daily', 'us-'); } catch (e) { /* graceful */ }
     // ⑤継続上昇＆業種集中度（当日急騰×5日継続・period 非依存の単発描画。データ無は関数内で「該当なし」）
     try {
         this.updateMomentumHighlight('jp', 'jp-continuation-ranking', 'jp-concentration');
