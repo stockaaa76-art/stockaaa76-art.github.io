@@ -1,14 +1,20 @@
 {
-  "generated_at": "2026-10-08 05:29:50",
+  "generated_at": "2026-10-15 04:06:56",
   "source": "Yahoo Finance JP (Playwright)",
   "note": "週次取得。信用倍率=買残/売残。JPX発表は毎週第2営業日翌日。",
   "data": {
     "1330.T": {
-      "margin_ratio": 0.74,
-      "long_balance": 7983,
-      "short_balance": 10721,
-      "date": "2026/10/2",
+      "margin_ratio": 1.25,
+      "long_balance": 8041,
+      "short_balance": 6444,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.25,
+          "long_balance": 8041,
+          "short_balance": 6444
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 0.74,
@@ -122,22 +128,22 @@
           "margin_ratio": 0.44,
           "long_balance": 5108,
           "short_balance": 11631
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.64,
-          "long_balance": 8770,
-          "short_balance": 13709
         }
       ],
       "error": null
     },
     "1306.T": {
-      "margin_ratio": 4.09,
-      "long_balance": 10715310,
-      "short_balance": 2618290,
-      "date": "2026/10/2",
+      "margin_ratio": 4.27,
+      "long_balance": 11574990,
+      "short_balance": 2713370,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.27,
+          "long_balance": 11574990,
+          "short_balance": 2713370
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 4.09,
@@ -251,22 +257,22 @@
           "margin_ratio": 5.18,
           "long_balance": 9427310,
           "short_balance": 1820510
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.25,
-          "long_balance": 9072890,
-          "short_balance": 2136730
         }
       ],
       "error": null
     },
     "1308.T": {
-      "margin_ratio": 1.33,
-      "long_balance": 64279,
-      "short_balance": 48314,
-      "date": "2026/10/2",
+      "margin_ratio": 3.06,
+      "long_balance": 136854,
+      "short_balance": 44787,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.06,
+          "long_balance": 136854,
+          "short_balance": 44787
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.33,
@@ -380,22 +386,22 @@
           "margin_ratio": 1.46,
           "long_balance": 73300,
           "short_balance": 50237
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.44,
-          "long_balance": 68530,
-          "short_balance": 47715
         }
       ],
       "error": null
     },
     "7203.T": {
-      "margin_ratio": 12.07,
-      "long_balance": 19916700,
-      "short_balance": 1650000,
-      "date": "2026/10/2",
+      "margin_ratio": 11.12,
+      "long_balance": 18343600,
+      "short_balance": 1649200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.12,
+          "long_balance": 18343600,
+          "short_balance": 1649200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 12.07,
@@ -509,22 +515,22 @@
           "margin_ratio": 5.58,
           "long_balance": 16714900,
           "short_balance": 2996600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.19,
-          "long_balance": 18334700,
-          "short_balance": 2960400
         }
       ],
       "error": null
     },
     "6758.T": {
-      "margin_ratio": 22.31,
-      "long_balance": 6065200,
-      "short_balance": 271800,
-      "date": "2026/10/2",
+      "margin_ratio": 17.16,
+      "long_balance": 5707200,
+      "short_balance": 332500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 17.16,
+          "long_balance": 5707200,
+          "short_balance": 332500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 22.31,
@@ -638,22 +644,22 @@
           "margin_ratio": 40.9,
           "long_balance": 11968500,
           "short_balance": 292600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 40.19,
-          "long_balance": 12594800,
-          "short_balance": 313400
         }
       ],
       "error": null
     },
     "9984.T": {
-      "margin_ratio": 7.15,
-      "long_balance": 31735100,
-      "short_balance": 4440900,
-      "date": "2026/10/2",
+      "margin_ratio": 8.89,
+      "long_balance": 35932600,
+      "short_balance": 4043300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.89,
+          "long_balance": 35932600,
+          "short_balance": 4043300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.15,
@@ -767,22 +773,22 @@
           "margin_ratio": 5.77,
           "long_balance": 26718500,
           "short_balance": 4629500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.39,
-          "long_balance": 24229200,
-          "short_balance": 5518100
         }
       ],
       "error": null
     },
     "6861.T": {
-      "margin_ratio": 2.54,
-      "long_balance": 137300,
-      "short_balance": 54100,
-      "date": "2026/10/2",
+      "margin_ratio": 2.65,
+      "long_balance": 136500,
+      "short_balance": 51500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.65,
+          "long_balance": 136500,
+          "short_balance": 51500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.54,
@@ -896,22 +902,22 @@
           "margin_ratio": 1.02,
           "long_balance": 132100,
           "short_balance": 130000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.99,
-          "long_balance": 132900,
-          "short_balance": 133700
         }
       ],
       "error": null
     },
     "8306.T": {
-      "margin_ratio": 29.7,
-      "long_balance": 40443100,
-      "short_balance": 1361900,
-      "date": "2026/10/2",
+      "margin_ratio": 25.77,
+      "long_balance": 42213900,
+      "short_balance": 1637900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 25.77,
+          "long_balance": 42213900,
+          "short_balance": 1637900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 29.7,
@@ -1025,22 +1031,22 @@
           "margin_ratio": 14.78,
           "long_balance": 32463000,
           "short_balance": 2196100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 11.43,
-          "long_balance": 29397300,
-          "short_balance": 2572900
         }
       ],
       "error": null
     },
     "4063.T": {
-      "margin_ratio": 19.33,
-      "long_balance": 3763700,
-      "short_balance": 194700,
-      "date": "2026/10/2",
+      "margin_ratio": 17.86,
+      "long_balance": 3481100,
+      "short_balance": 194900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 17.86,
+          "long_balance": 3481100,
+          "short_balance": 194900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 19.33,
@@ -1154,22 +1160,22 @@
           "margin_ratio": 4.22,
           "long_balance": 2064000,
           "short_balance": 488800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.64,
-          "long_balance": 2224600,
-          "short_balance": 394600
         }
       ],
       "error": null
     },
     "8035.T": {
-      "margin_ratio": 15.51,
-      "long_balance": 10842800,
-      "short_balance": 699000,
-      "date": "2026/10/2",
+      "margin_ratio": 15.32,
+      "long_balance": 10905600,
+      "short_balance": 711800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 15.32,
+          "long_balance": 10905600,
+          "short_balance": 711800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 15.51,
@@ -1283,22 +1289,22 @@
           "margin_ratio": 2.89,
           "long_balance": 736100,
           "short_balance": 254900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.85,
-          "long_balance": 915400,
-          "short_balance": 238000
         }
       ],
       "error": null
     },
     "7974.T": {
-      "margin_ratio": 13.44,
-      "long_balance": 9324600,
-      "short_balance": 693900,
-      "date": "2026/10/2",
+      "margin_ratio": 11.63,
+      "long_balance": 8828500,
+      "short_balance": 759300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.63,
+          "long_balance": 8828500,
+          "short_balance": 759300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 13.44,
@@ -1412,22 +1418,22 @@
           "margin_ratio": 19.73,
           "long_balance": 15244600,
           "short_balance": 772600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 18.8,
-          "long_balance": 15301100,
-          "short_balance": 814000
         }
       ],
       "error": null
     },
     "6367.T": {
-      "margin_ratio": 39.54,
-      "long_balance": 585200,
-      "short_balance": 14800,
-      "date": "2026/10/2",
+      "margin_ratio": 20.85,
+      "long_balance": 542200,
+      "short_balance": 26000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 20.85,
+          "long_balance": 542200,
+          "short_balance": 26000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 39.54,
@@ -1541,22 +1547,22 @@
           "margin_ratio": 4.96,
           "long_balance": 321000,
           "short_balance": 64700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.39,
-          "long_balance": 288100,
-          "short_balance": 85100
         }
       ],
       "error": null
     },
     "9432.T": {
-      "margin_ratio": 5.79,
-      "long_balance": 91499700,
-      "short_balance": 15799300,
-      "date": "2026/10/2",
+      "margin_ratio": 5.55,
+      "long_balance": 87560600,
+      "short_balance": 15774300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.55,
+          "long_balance": 87560600,
+          "short_balance": 15774300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.79,
@@ -1670,22 +1676,22 @@
           "margin_ratio": 26.35,
           "long_balance": 175723200,
           "short_balance": 6668200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 36.42,
-          "long_balance": 131190200,
-          "short_balance": 3602300
         }
       ],
       "error": null
     },
     "4519.T": {
-      "margin_ratio": 53.92,
-      "long_balance": 2253800,
-      "short_balance": 41800,
-      "date": "2026/10/2",
+      "margin_ratio": 55.2,
+      "long_balance": 2141700,
+      "short_balance": 38800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 55.2,
+          "long_balance": 2141700,
+          "short_balance": 38800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 53.92,
@@ -1799,22 +1805,22 @@
           "margin_ratio": 32.99,
           "long_balance": 1075600,
           "short_balance": 32600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 27.08,
-          "long_balance": 1031700,
-          "short_balance": 38100
         }
       ],
       "error": null
     },
     "8058.T": {
-      "margin_ratio": 8.07,
-      "long_balance": 6569500,
-      "short_balance": 813600,
-      "date": "2026/10/2",
+      "margin_ratio": 8.61,
+      "long_balance": 7112800,
+      "short_balance": 826200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.61,
+          "long_balance": 7112800,
+          "short_balance": 826200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 8.07,
@@ -1928,22 +1934,22 @@
           "margin_ratio": 4.97,
           "long_balance": 5089500,
           "short_balance": 1023300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.83,
-          "long_balance": 4181100,
-          "short_balance": 1092800
         }
       ],
       "error": null
     },
     "4578.T": {
-      "margin_ratio": 10.36,
-      "long_balance": 100500,
-      "short_balance": 9700,
-      "date": "2026/10/2",
+      "margin_ratio": 6.18,
+      "long_balance": 100800,
+      "short_balance": 16300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 6.18,
+          "long_balance": 100800,
+          "short_balance": 16300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 10.36,
@@ -2057,22 +2063,22 @@
           "margin_ratio": 0.92,
           "long_balance": 35600,
           "short_balance": 38700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.04,
-          "long_balance": 41700,
-          "short_balance": 40100
         }
       ],
       "error": null
     },
     "7267.T": {
-      "margin_ratio": 2.29,
-      "long_balance": 3795500,
-      "short_balance": 1660700,
-      "date": "2026/10/2",
+      "margin_ratio": 2.05,
+      "long_balance": 3444700,
+      "short_balance": 1676300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.05,
+          "long_balance": 3444700,
+          "short_balance": 1676300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.29,
@@ -2186,22 +2192,22 @@
           "margin_ratio": 8.18,
           "long_balance": 9448100,
           "short_balance": 1155100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 9.1,
-          "long_balance": 10287900,
-          "short_balance": 1130400
         }
       ],
       "error": null
     },
     "4502.T": {
-      "margin_ratio": 1.17,
-      "long_balance": 671100,
-      "short_balance": 572100,
-      "date": "2026/10/2",
+      "margin_ratio": 0.96,
+      "long_balance": 558400,
+      "short_balance": 578800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 0.96,
+          "long_balance": 558400,
+          "short_balance": 578800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.17,
@@ -2315,22 +2321,22 @@
           "margin_ratio": 1.68,
           "long_balance": 1033500,
           "short_balance": 614100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.62,
-          "long_balance": 1025700,
-          "short_balance": 634100
         }
       ],
       "error": null
     },
     "8316.T": {
-      "margin_ratio": 33.06,
-      "long_balance": 27824400,
-      "short_balance": 841600,
-      "date": "2026/10/2",
+      "margin_ratio": 25.33,
+      "long_balance": 27639300,
+      "short_balance": 1091000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 25.33,
+          "long_balance": 27639300,
+          "short_balance": 1091000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 33.06,
@@ -2444,22 +2450,22 @@
           "margin_ratio": 18.67,
           "long_balance": 12383700,
           "short_balance": 663300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 19.95,
-          "long_balance": 12345200,
-          "short_balance": 618900
         }
       ],
       "error": null
     },
     "6954.T": {
-      "margin_ratio": 21.37,
-      "long_balance": 5078600,
-      "short_balance": 237700,
-      "date": "2026/10/2",
+      "margin_ratio": 23.39,
+      "long_balance": 5094600,
+      "short_balance": 217800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 23.39,
+          "long_balance": 5094600,
+          "short_balance": 217800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 21.37,
@@ -2573,22 +2579,22 @@
           "margin_ratio": 9.98,
           "long_balance": 3229200,
           "short_balance": 323500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 9.19,
-          "long_balance": 3240300,
-          "short_balance": 352700
         }
       ],
       "error": null
     },
     "7182.T": {
-      "margin_ratio": 6.03,
-      "long_balance": 1131300,
-      "short_balance": 187500,
-      "date": "2026/10/2",
+      "margin_ratio": 11.94,
+      "long_balance": 1682700,
+      "short_balance": 140900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.94,
+          "long_balance": 1682700,
+          "short_balance": 140900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.03,
@@ -2702,22 +2708,22 @@
           "margin_ratio": 3.32,
           "long_balance": 1550700,
           "short_balance": 467700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.08,
-          "long_balance": 1329000,
-          "short_balance": 431200
         }
       ],
       "error": null
     },
     "8001.T": {
-      "margin_ratio": 10.13,
-      "long_balance": 13266000,
-      "short_balance": 1310200,
-      "date": "2026/10/2",
+      "margin_ratio": 14.98,
+      "long_balance": 13024900,
+      "short_balance": 869200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.98,
+          "long_balance": 13024900,
+          "short_balance": 869200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 10.13,
@@ -2831,22 +2837,22 @@
           "margin_ratio": 10.71,
           "long_balance": 7326800,
           "short_balance": 684000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 11.63,
-          "long_balance": 7308800,
-          "short_balance": 628400
         }
       ],
       "error": null
     },
     "5108.T": {
-      "margin_ratio": 1.33,
-      "long_balance": 660600,
-      "short_balance": 497900,
-      "date": "2026/10/2",
+      "margin_ratio": 1.31,
+      "long_balance": 651700,
+      "short_balance": 498200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.31,
+          "long_balance": 651700,
+          "short_balance": 498200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.33,
@@ -2960,22 +2966,22 @@
           "margin_ratio": 2.34,
           "long_balance": 1105500,
           "short_balance": 472000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.86,
-          "long_balance": 1258800,
-          "short_balance": 439900
         }
       ],
       "error": null
     },
     "6503.T": {
-      "margin_ratio": 36.92,
-      "long_balance": 3492900,
-      "short_balance": 94600,
-      "date": "2026/10/2",
+      "margin_ratio": 42.78,
+      "long_balance": 3781800,
+      "short_balance": 88400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 42.78,
+          "long_balance": 3781800,
+          "short_balance": 88400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 36.92,
@@ -3089,22 +3095,22 @@
           "margin_ratio": 7.74,
           "long_balance": 2470700,
           "short_balance": 319100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.86,
-          "long_balance": 2584600,
-          "short_balance": 376600
         }
       ],
       "error": null
     },
     "4568.T": {
-      "margin_ratio": 47.69,
-      "long_balance": 4501500,
-      "short_balance": 94400,
-      "date": "2026/10/2",
+      "margin_ratio": 65.68,
+      "long_balance": 5142400,
+      "short_balance": 78300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 65.68,
+          "long_balance": 5142400,
+          "short_balance": 78300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 47.69,
@@ -3218,22 +3224,22 @@
           "margin_ratio": 38.95,
           "long_balance": 7135200,
           "short_balance": 183200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 39.19,
-          "long_balance": 7418700,
-          "short_balance": 189300
         }
       ],
       "error": null
     },
     "6752.T": {
-      "margin_ratio": 4.44,
-      "long_balance": 1810400,
-      "short_balance": 407300,
-      "date": "2026/10/2",
+      "margin_ratio": 5.56,
+      "long_balance": 2009000,
+      "short_balance": 361500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.56,
+          "long_balance": 2009000,
+          "short_balance": 361500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 4.44,
@@ -3347,22 +3353,22 @@
           "margin_ratio": 1.24,
           "long_balance": 1601400,
           "short_balance": 1289100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.13,
-          "long_balance": 1443400,
-          "short_balance": 1274600
         }
       ],
       "error": null
     },
     "9022.T": {
-      "margin_ratio": 2.11,
-      "long_balance": 774200,
-      "short_balance": 367500,
-      "date": "2026/10/2",
+      "margin_ratio": 2.1,
+      "long_balance": 753200,
+      "short_balance": 358800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.1,
+          "long_balance": 753200,
+          "short_balance": 358800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.11,
@@ -3476,22 +3482,22 @@
           "margin_ratio": 3.09,
           "long_balance": 1071500,
           "short_balance": 346500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.0,
-          "long_balance": 959200,
-          "short_balance": 319900
         }
       ],
       "error": null
     },
     "8802.T": {
-      "margin_ratio": 2.25,
-      "long_balance": 1024700,
-      "short_balance": 454700,
-      "date": "2026/10/2",
+      "margin_ratio": 2.4,
+      "long_balance": 1082300,
+      "short_balance": 450800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.4,
+          "long_balance": 1082300,
+          "short_balance": 450800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.25,
@@ -3605,22 +3611,22 @@
           "margin_ratio": 3.87,
           "long_balance": 829600,
           "short_balance": 214600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.87,
-          "long_balance": 867300,
-          "short_balance": 224300
         }
       ],
       "error": null
     },
     "8801.T": {
-      "margin_ratio": 2.83,
-      "long_balance": 3432800,
-      "short_balance": 1212400,
-      "date": "2026/10/2",
+      "margin_ratio": 2.73,
+      "long_balance": 3397100,
+      "short_balance": 1244800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.73,
+          "long_balance": 3397100,
+          "short_balance": 1244800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.83,
@@ -3734,22 +3740,22 @@
           "margin_ratio": 14.78,
           "long_balance": 2813900,
           "short_balance": 190400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.22,
-          "long_balance": 3046800,
-          "short_balance": 946100
         }
       ],
       "error": null
     },
     "8804.T": {
-      "margin_ratio": 1.86,
-      "long_balance": 146700,
-      "short_balance": 78700,
-      "date": "2026/10/2",
+      "margin_ratio": 2.29,
+      "long_balance": 149600,
+      "short_balance": 65200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.29,
+          "long_balance": 149600,
+          "short_balance": 65200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.86,
@@ -3863,22 +3869,22 @@
           "margin_ratio": 3.72,
           "long_balance": 214100,
           "short_balance": 57600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.57,
-          "long_balance": 223300,
-          "short_balance": 62600
         }
       ],
       "error": null
     },
     "8411.T": {
-      "margin_ratio": 11.53,
-      "long_balance": 7502300,
-      "short_balance": 650700,
-      "date": "2026/10/2",
+      "margin_ratio": 12.59,
+      "long_balance": 8576900,
+      "short_balance": 681500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 12.59,
+          "long_balance": 8576900,
+          "short_balance": 681500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 11.53,
@@ -3992,22 +3998,22 @@
           "margin_ratio": 17.91,
           "long_balance": 8395600,
           "short_balance": 468700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.33,
-          "long_balance": 8030100,
-          "short_balance": 651400
         }
       ],
       "error": null
     },
     "2413.T": {
-      "margin_ratio": 3.48,
-      "long_balance": 2939300,
-      "short_balance": 845500,
-      "date": "2026/10/2",
+      "margin_ratio": 2.76,
+      "long_balance": 2758600,
+      "short_balance": 998000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.76,
+          "long_balance": 2758600,
+          "short_balance": 998000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.48,
@@ -4121,22 +4127,22 @@
           "margin_ratio": 24.64,
           "long_balance": 5509900,
           "short_balance": 223600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 28.47,
-          "long_balance": 5772800,
-          "short_balance": 202800
         }
       ],
       "error": null
     },
     "4689.T": {
-      "margin_ratio": 8.47,
-      "long_balance": 6460300,
-      "short_balance": 762800,
-      "date": "2026/10/2",
+      "margin_ratio": 8.98,
+      "long_balance": 6225100,
+      "short_balance": 693400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.98,
+          "long_balance": 6225100,
+          "short_balance": 693400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 8.47,
@@ -4250,22 +4256,22 @@
           "margin_ratio": 28.16,
           "long_balance": 14705400,
           "short_balance": 522200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 31.95,
-          "long_balance": 15244400,
-          "short_balance": 477100
         }
       ],
       "error": null
     },
     "3659.T": {
-      "margin_ratio": 16.79,
-      "long_balance": 594300,
-      "short_balance": 35400,
-      "date": "2026/10/2",
+      "margin_ratio": 17.65,
+      "long_balance": 563100,
+      "short_balance": 31900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 17.65,
+          "long_balance": 563100,
+          "short_balance": 31900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 16.79,
@@ -4379,22 +4385,22 @@
           "margin_ratio": 22.19,
           "long_balance": 208600,
           "short_balance": 9400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 14.81,
-          "long_balance": 214800,
-          "short_balance": 14500
         }
       ],
       "error": null
     },
     "9020.T": {
-      "margin_ratio": 18.33,
-      "long_balance": 1078000,
-      "short_balance": 58800,
-      "date": "2026/10/2",
+      "margin_ratio": 18.16,
+      "long_balance": 1047700,
+      "short_balance": 57700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 18.16,
+          "long_balance": 1047700,
+          "short_balance": 57700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 18.33,
@@ -4508,22 +4514,22 @@
           "margin_ratio": 9.82,
           "long_balance": 1032000,
           "short_balance": 105100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 8.28,
-          "long_balance": 919500,
-          "short_balance": 111000
         }
       ],
       "error": null
     },
     "9766.T": {
-      "margin_ratio": 0.45,
-      "long_balance": 46700,
-      "short_balance": 104100,
-      "date": "2026/10/2",
+      "margin_ratio": 0.39,
+      "long_balance": 42900,
+      "short_balance": 110500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 0.39,
+          "long_balance": 42900,
+          "short_balance": 110500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 0.45,
@@ -4637,22 +4643,22 @@
           "margin_ratio": 1.67,
           "long_balance": 125200,
           "short_balance": 75000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.12,
-          "long_balance": 89100,
-          "short_balance": 79700
         }
       ],
       "error": null
     },
     "6902.T": {
-      "margin_ratio": 25.84,
-      "long_balance": 4515100,
-      "short_balance": 174700,
-      "date": "2026/10/2",
+      "margin_ratio": 18.48,
+      "long_balance": 3830100,
+      "short_balance": 207300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 18.48,
+          "long_balance": 3830100,
+          "short_balance": 207300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 25.84,
@@ -4766,22 +4772,22 @@
           "margin_ratio": 12.37,
           "long_balance": 4003900,
           "short_balance": 323700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 17.32,
-          "long_balance": 3366800,
-          "short_balance": 194400
         }
       ],
       "error": null
     },
     "1617.T": {
-      "margin_ratio": 26.81,
-      "long_balance": 724,
-      "short_balance": 27,
-      "date": "2026/10/2",
+      "margin_ratio": 28.89,
+      "long_balance": 549,
+      "short_balance": 19,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 28.89,
+          "long_balance": 549,
+          "short_balance": 19
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 26.81,
@@ -4895,22 +4901,22 @@
           "margin_ratio": 26.24,
           "long_balance": 446,
           "short_balance": 17
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 18.04,
-          "long_balance": 469,
-          "short_balance": 26
         }
       ],
       "error": null
     },
     "1621.T": {
-      "margin_ratio": 187.65,
-      "long_balance": 4316,
-      "short_balance": 23,
-      "date": "2026/10/2",
+      "margin_ratio": 48.75,
+      "long_balance": 975,
+      "short_balance": 20,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 48.75,
+          "long_balance": 975,
+          "short_balance": 20
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 187.65,
@@ -5024,22 +5030,22 @@
           "margin_ratio": 9.27,
           "long_balance": 408,
           "short_balance": 44
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 9.86,
-          "long_balance": 365,
-          "short_balance": 37
         }
       ],
       "error": null
     },
     "1622.T": {
-      "margin_ratio": 34.74,
-      "long_balance": 1737,
-      "short_balance": 50,
-      "date": "2026/10/2",
+      "margin_ratio": 49.85,
+      "long_balance": 1695,
+      "short_balance": 34,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 49.85,
+          "long_balance": 1695,
+          "short_balance": 34
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 34.74,
@@ -5153,22 +5159,22 @@
           "margin_ratio": 5.93,
           "long_balance": 1684,
           "short_balance": 284
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.27,
-          "long_balance": 1560,
-          "short_balance": 296
         }
       ],
       "error": null
     },
     "1626.T": {
-      "margin_ratio": 17.4,
-      "long_balance": 609,
-      "short_balance": 35,
-      "date": "2026/10/2",
+      "margin_ratio": 27.47,
+      "long_balance": 412,
+      "short_balance": 15,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 27.47,
+          "long_balance": 412,
+          "short_balance": 15
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 17.4,
@@ -5282,22 +5288,22 @@
           "margin_ratio": 135.6,
           "long_balance": 678,
           "short_balance": 5
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 66.29,
-          "long_balance": 464,
-          "short_balance": 7
         }
       ],
       "error": null
     },
     "7741.T": {
-      "margin_ratio": 12.1,
-      "long_balance": 234800,
-      "short_balance": 19400,
-      "date": "2026/10/2",
+      "margin_ratio": 11.58,
+      "long_balance": 201500,
+      "short_balance": 17400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.58,
+          "long_balance": 201500,
+          "short_balance": 17400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 12.1,
@@ -5411,22 +5417,22 @@
           "margin_ratio": 6.04,
           "long_balance": 151100,
           "short_balance": 25000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 11.66,
-          "long_balance": 169100,
-          "short_balance": 14500
         }
       ],
       "error": null
     },
     "6594.T": {
-      "margin_ratio": 9.14,
-      "long_balance": 6473500,
-      "short_balance": 708200,
-      "date": "2026/10/2",
+      "margin_ratio": 14.05,
+      "long_balance": 7233000,
+      "short_balance": 514800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.05,
+          "long_balance": 7233000,
+          "short_balance": 514800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 9.14,
@@ -5540,22 +5546,22 @@
           "margin_ratio": 11.11,
           "long_balance": 4934200,
           "short_balance": 444200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 9.55,
-          "long_balance": 4995400,
-          "short_balance": 523200
         }
       ],
       "error": null
     },
     "9434.T": {
-      "margin_ratio": 7.32,
-      "long_balance": 24571300,
-      "short_balance": 3356200,
-      "date": "2026/10/2",
+      "margin_ratio": 6.92,
+      "long_balance": 23174100,
+      "short_balance": 3351000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 6.92,
+          "long_balance": 23174100,
+          "short_balance": 3351000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.32,
@@ -5669,22 +5675,22 @@
           "margin_ratio": 11.77,
           "long_balance": 33296700,
           "short_balance": 2828600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 7.68,
-          "long_balance": 28072900,
-          "short_balance": 3656500
         }
       ],
       "error": null
     },
     "6098.T": {
-      "margin_ratio": 1.37,
-      "long_balance": 508700,
-      "short_balance": 370600,
-      "date": "2026/10/2",
+      "margin_ratio": 1.24,
+      "long_balance": 477600,
+      "short_balance": 385100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.24,
+          "long_balance": 477600,
+          "short_balance": 385100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.37,
@@ -5798,22 +5804,22 @@
           "margin_ratio": 1.24,
           "long_balance": 813500,
           "short_balance": 658300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.21,
-          "long_balance": 986200,
-          "short_balance": 447200
         }
       ],
       "error": null
     },
     "9983.T": {
-      "margin_ratio": 2.74,
-      "long_balance": 444700,
-      "short_balance": 162200,
-      "date": "2026/10/2",
+      "margin_ratio": 2.87,
+      "long_balance": 463500,
+      "short_balance": 161400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.87,
+          "long_balance": 463500,
+          "short_balance": 161400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.74,
@@ -5927,22 +5933,22 @@
           "margin_ratio": 0.19,
           "long_balance": 80700,
           "short_balance": 422000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.3,
-          "long_balance": 102700,
-          "short_balance": 346700
         }
       ],
       "error": null
     },
     "8766.T": {
-      "margin_ratio": 30.17,
-      "long_balance": 49746400,
-      "short_balance": 1649000,
-      "date": "2026/10/2",
+      "margin_ratio": 21.95,
+      "long_balance": 43938400,
+      "short_balance": 2002100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 21.95,
+          "long_balance": 43938400,
+          "short_balance": 2002100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 30.17,
@@ -6056,22 +6062,22 @@
           "margin_ratio": 20.63,
           "long_balance": 2721300,
           "short_balance": 131900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 16.78,
-          "long_balance": 2566200,
-          "short_balance": 152900
         }
       ],
       "error": null
     },
     "8031.T": {
-      "margin_ratio": 47.78,
-      "long_balance": 5079400,
-      "short_balance": 106300,
-      "date": "2026/10/2",
+      "margin_ratio": 46.45,
+      "long_balance": 5207600,
+      "short_balance": 112100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 46.45,
+          "long_balance": 5207600,
+          "short_balance": 112100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 47.78,
@@ -6185,22 +6191,22 @@
           "margin_ratio": 17.76,
           "long_balance": 3567600,
           "short_balance": 200900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 14.74,
-          "long_balance": 2827000,
-          "short_balance": 191800
         }
       ],
       "error": null
     },
     "4901.T": {
-      "margin_ratio": 75.19,
-      "long_balance": 2293300,
-      "short_balance": 30500,
-      "date": "2026/10/2",
+      "margin_ratio": 74.05,
+      "long_balance": 2110500,
+      "short_balance": 28500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 74.05,
+          "long_balance": 2110500,
+          "short_balance": 28500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 75.19,
@@ -6314,22 +6320,22 @@
           "margin_ratio": 29.2,
           "long_balance": 2341800,
           "short_balance": 80200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 59.93,
-          "long_balance": 2565200,
-          "short_balance": 42800
         }
       ],
       "error": null
     },
     "5401.T": {
-      "margin_ratio": 22.4,
-      "long_balance": 40043800,
-      "short_balance": 1787700,
-      "date": "2026/10/2",
+      "margin_ratio": 25.34,
+      "long_balance": 41568000,
+      "short_balance": 1640400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 25.34,
+          "long_balance": 41568000,
+          "short_balance": 1640400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 22.4,
@@ -6443,22 +6449,22 @@
           "margin_ratio": 18.53,
           "long_balance": 41698700,
           "short_balance": 2250500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 17.88,
-          "long_balance": 42450400,
-          "short_balance": 2374500
         }
       ],
       "error": null
     },
     "9101.T": {
-      "margin_ratio": 1.99,
-      "long_balance": 1232300,
-      "short_balance": 617900,
-      "date": "2026/10/2",
+      "margin_ratio": 1.89,
+      "long_balance": 1098900,
+      "short_balance": 581400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.89,
+          "long_balance": 1098900,
+          "short_balance": 581400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.99,
@@ -6572,22 +6578,22 @@
           "margin_ratio": 7.15,
           "long_balance": 1857900,
           "short_balance": 259900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.21,
-          "long_balance": 1840300,
-          "short_balance": 353300
         }
       ],
       "error": null
     },
     "2914.T": {
-      "margin_ratio": 12.7,
-      "long_balance": 2352400,
-      "short_balance": 185300,
-      "date": "2026/10/2",
+      "margin_ratio": 4.25,
+      "long_balance": 1677700,
+      "short_balance": 394500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.25,
+          "long_balance": 1677700,
+          "short_balance": 394500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 12.7,
@@ -6701,22 +6707,22 @@
           "margin_ratio": 11.3,
           "long_balance": 2146300,
           "short_balance": 189900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 8.2,
-          "long_balance": 2047100,
-          "short_balance": 249500
         }
       ],
       "error": null
     },
     "1618.T": {
-      "margin_ratio": 398.5,
-      "long_balance": 1594,
-      "short_balance": 4,
-      "date": "2026/10/2",
+      "margin_ratio": 247.29,
+      "long_balance": 1731,
+      "short_balance": 7,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 247.29,
+          "long_balance": 1731,
+          "short_balance": 7
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 398.5,
@@ -6830,22 +6836,22 @@
           "margin_ratio": 76.69,
           "long_balance": 2454,
           "short_balance": 32
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 122.0,
-          "long_balance": 2684,
-          "short_balance": 22
         }
       ],
       "error": null
     },
     "1619.T": {
-      "margin_ratio": 16.25,
-      "long_balance": 894,
-      "short_balance": 55,
-      "date": "2026/10/2",
+      "margin_ratio": 23.3,
+      "long_balance": 1095,
+      "short_balance": 47,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 23.3,
+          "long_balance": 1095,
+          "short_balance": 47
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 16.25,
@@ -6959,22 +6965,22 @@
           "margin_ratio": 1.9,
           "long_balance": 636,
           "short_balance": 334
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.48,
-          "long_balance": 759,
-          "short_balance": 512
         }
       ],
       "error": null
     },
     "1620.T": {
-      "margin_ratio": 5.02,
-      "long_balance": 472,
-      "short_balance": 94,
-      "date": "2026/10/2",
+      "margin_ratio": 6.66,
+      "long_balance": 493,
+      "short_balance": 74,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 6.66,
+          "long_balance": 493,
+          "short_balance": 74
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.02,
@@ -7088,22 +7094,22 @@
           "margin_ratio": 7.49,
           "long_balance": 502,
           "short_balance": 67
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.64,
-          "long_balance": 333,
-          "short_balance": 59
         }
       ],
       "error": null
     },
     "1623.T": {
-      "margin_ratio": 223.56,
-      "long_balance": 8719,
-      "short_balance": 39,
-      "date": "2026/10/2",
+      "margin_ratio": 233.5,
+      "long_balance": 8873,
+      "short_balance": 38,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 233.5,
+          "long_balance": 8873,
+          "short_balance": 38
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 223.56,
@@ -7217,22 +7223,22 @@
           "margin_ratio": 209.94,
           "long_balance": 7348,
           "short_balance": 35
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 196.55,
-          "long_balance": 7862,
-          "short_balance": 40
         }
       ],
       "error": null
     },
     "1624.T": {
-      "margin_ratio": 58.0,
-      "long_balance": 290,
-      "short_balance": 5,
-      "date": "2026/10/2",
+      "margin_ratio": 5.63,
+      "long_balance": 349,
+      "short_balance": 62,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.63,
+          "long_balance": 349,
+          "short_balance": 62
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 58.0,
@@ -7346,22 +7352,22 @@
           "margin_ratio": 86.0,
           "long_balance": 258,
           "short_balance": 3
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 57.17,
-          "long_balance": 343,
-          "short_balance": 6
         }
       ],
       "error": null
     },
     "1625.T": {
-      "margin_ratio": 6.83,
-      "long_balance": 943,
-      "short_balance": 138,
-      "date": "2026/10/2",
+      "margin_ratio": 12.88,
+      "long_balance": 992,
+      "short_balance": 77,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 12.88,
+          "long_balance": 992,
+          "short_balance": 77
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.83,
@@ -7475,22 +7481,22 @@
           "margin_ratio": 5.59,
           "long_balance": 1481,
           "short_balance": 265
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.16,
-          "long_balance": 599,
-          "short_balance": 116
         }
       ],
       "error": null
     },
     "1627.T": {
-      "margin_ratio": 67.46,
-      "long_balance": 3778,
-      "short_balance": 56,
-      "date": "2026/10/2",
+      "margin_ratio": 306.15,
+      "long_balance": 3980,
+      "short_balance": 13,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 306.15,
+          "long_balance": 3980,
+          "short_balance": 13
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 67.46,
@@ -7604,22 +7610,22 @@
           "margin_ratio": 24.93,
           "long_balance": 3141,
           "short_balance": 126
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 27.91,
-          "long_balance": 3126,
-          "short_balance": 112
         }
       ],
       "error": null
     },
     "1628.T": {
-      "margin_ratio": 12.81,
-      "long_balance": 346,
+      "margin_ratio": 12.59,
+      "long_balance": 340,
       "short_balance": 27,
-      "date": "2026/10/2",
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 12.59,
+          "long_balance": 340,
+          "short_balance": 27
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 12.81,
@@ -7733,22 +7739,22 @@
           "margin_ratio": 2.43,
           "long_balance": 241,
           "short_balance": 99
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.51,
-          "long_balance": 238,
-          "short_balance": 95
         }
       ],
       "error": null
     },
     "1629.T": {
-      "margin_ratio": 261.75,
-      "long_balance": 939670,
-      "short_balance": 3590,
-      "date": "2026/10/2",
+      "margin_ratio": 209.43,
+      "long_balance": 1003180,
+      "short_balance": 4790,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 209.43,
+          "long_balance": 1003180,
+          "short_balance": 4790
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 261.75,
@@ -7862,22 +7868,22 @@
           "margin_ratio": 98.78,
           "long_balance": 942370,
           "short_balance": 9540
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 83.74,
-          "long_balance": 849100,
-          "short_balance": 10140
         }
       ],
       "error": null
     },
     "1630.T": {
-      "margin_ratio": 214.71,
-      "long_balance": 1503,
+      "margin_ratio": 212.43,
+      "long_balance": 1487,
       "short_balance": 7,
-      "date": "2026/10/2",
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 212.43,
+          "long_balance": 1487,
+          "short_balance": 7
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 214.71,
@@ -7991,22 +7997,22 @@
           "margin_ratio": 3.07,
           "long_balance": 255,
           "short_balance": 83
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.12,
-          "long_balance": 199,
-          "short_balance": 94
         }
       ],
       "error": null
     },
     "1631.T": {
-      "margin_ratio": 35.38,
-      "long_balance": 7217,
-      "short_balance": 204,
-      "date": "2026/10/2",
+      "margin_ratio": 38.24,
+      "long_balance": 8758,
+      "short_balance": 229,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 38.24,
+          "long_balance": 8758,
+          "short_balance": 229
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 35.38,
@@ -8120,22 +8126,22 @@
           "margin_ratio": 29.89,
           "long_balance": 4155,
           "short_balance": 139
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 23.53,
-          "long_balance": 3765,
-          "short_balance": 160
         }
       ],
       "error": null
     },
     "1632.T": {
-      "margin_ratio": 68.74,
-      "long_balance": 5637,
-      "short_balance": 82,
-      "date": "2026/10/2",
+      "margin_ratio": 36.96,
+      "long_balance": 2476,
+      "short_balance": 67,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 36.96,
+          "long_balance": 2476,
+          "short_balance": 67
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 68.74,
@@ -8249,22 +8255,22 @@
           "margin_ratio": 4.97,
           "long_balance": 1083,
           "short_balance": 218
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.93,
-          "long_balance": 1158,
-          "short_balance": 235
         }
       ],
       "error": null
     },
     "1633.T": {
-      "margin_ratio": 1.95,
-      "long_balance": 466,
-      "short_balance": 239,
-      "date": "2026/10/2",
+      "margin_ratio": 1.6,
+      "long_balance": 457,
+      "short_balance": 286,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.6,
+          "long_balance": 457,
+          "short_balance": 286
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.95,
@@ -8378,22 +8384,22 @@
           "margin_ratio": 7.04,
           "long_balance": 535,
           "short_balance": 76
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 8.47,
-          "long_balance": 449,
-          "short_balance": 53
         }
       ],
       "error": null
     },
     "2802.T": {
-      "margin_ratio": 17.16,
-      "long_balance": 1259200,
-      "short_balance": 73400,
-      "date": "2026/10/2",
+      "margin_ratio": 12.93,
+      "long_balance": 1149800,
+      "short_balance": 88900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 12.93,
+          "long_balance": 1149800,
+          "short_balance": 88900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 17.16,
@@ -8507,22 +8513,22 @@
           "margin_ratio": 9.29,
           "long_balance": 1052100,
           "short_balance": 113300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 7.32,
-          "long_balance": 1003900,
-          "short_balance": 137200
         }
       ],
       "error": null
     },
     "2503.T": {
-      "margin_ratio": 6.6,
-      "long_balance": 488100,
-      "short_balance": 73900,
-      "date": "2026/10/2",
+      "margin_ratio": 3.64,
+      "long_balance": 479700,
+      "short_balance": 131800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.64,
+          "long_balance": 479700,
+          "short_balance": 131800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.6,
@@ -8636,22 +8642,22 @@
           "margin_ratio": 1.59,
           "long_balance": 239000,
           "short_balance": 150700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.81,
-          "long_balance": 254000,
-          "short_balance": 140100
         }
       ],
       "error": null
     },
     "2502.T": {
-      "margin_ratio": 49.65,
-      "long_balance": 3510200,
-      "short_balance": 70700,
-      "date": "2026/10/2",
+      "margin_ratio": 21.72,
+      "long_balance": 3553500,
+      "short_balance": 163600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 21.72,
+          "long_balance": 3553500,
+          "short_balance": 163600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 49.65,
@@ -8765,22 +8771,22 @@
           "margin_ratio": 93.47,
           "long_balance": 3832200,
           "short_balance": 41000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 61.92,
-          "long_balance": 3504900,
-          "short_balance": 56600
         }
       ],
       "error": null
     },
     "9697.T": {
-      "margin_ratio": 2.13,
-      "long_balance": 529100,
-      "short_balance": 248500,
-      "date": "2026/10/2",
+      "margin_ratio": 1.18,
+      "long_balance": 531200,
+      "short_balance": 448300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.18,
+          "long_balance": 531200,
+          "short_balance": 448300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.13,
@@ -8894,22 +8900,22 @@
           "margin_ratio": 15.13,
           "long_balance": 1278600,
           "short_balance": 84500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.54,
-          "long_balance": 1143900,
-          "short_balance": 91200
         }
       ],
       "error": null
     },
     "7832.T": {
-      "margin_ratio": 3.73,
-      "long_balance": 295900,
-      "short_balance": 79400,
-      "date": "2026/10/2",
+      "margin_ratio": 2.92,
+      "long_balance": 274000,
+      "short_balance": 93800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.92,
+          "long_balance": 274000,
+          "short_balance": 93800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.73,
@@ -9023,22 +9029,22 @@
           "margin_ratio": 16.05,
           "long_balance": 576100,
           "short_balance": 35900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 11.55,
-          "long_balance": 579700,
-          "short_balance": 50200
         }
       ],
       "error": null
     },
     "8267.T": {
-      "margin_ratio": 7.42,
-      "long_balance": 10293500,
-      "short_balance": 1386900,
-      "date": "2026/10/2",
+      "margin_ratio": 7.38,
+      "long_balance": 10158200,
+      "short_balance": 1377200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 7.38,
+          "long_balance": 10158200,
+          "short_balance": 1377200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.42,
@@ -9152,22 +9158,22 @@
           "margin_ratio": 2.53,
           "long_balance": 6202600,
           "short_balance": 2451900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.13,
-          "long_balance": 5733600,
-          "short_balance": 2687500
         }
       ],
       "error": null
     },
     "3088.T": {
-      "margin_ratio": 5.27,
-      "long_balance": 190200,
-      "short_balance": 36100,
-      "date": "2026/10/2",
+      "margin_ratio": 6.36,
+      "long_balance": 184400,
+      "short_balance": 29000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 6.36,
+          "long_balance": 184400,
+          "short_balance": 29000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.27,
@@ -9281,22 +9287,22 @@
           "margin_ratio": 5.15,
           "long_balance": 300300,
           "short_balance": 58300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.68,
-          "long_balance": 315700,
-          "short_balance": 55600
         }
       ],
       "error": null
     },
     "7733.T": {
-      "margin_ratio": 3.44,
-      "long_balance": 593200,
-      "short_balance": 172600,
-      "date": "2026/10/2",
+      "margin_ratio": 3.3,
+      "long_balance": 576100,
+      "short_balance": 174400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.3,
+          "long_balance": 576100,
+          "short_balance": 174400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.44,
@@ -9410,22 +9416,22 @@
           "margin_ratio": 5.98,
           "long_balance": 897900,
           "short_balance": 150100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.92,
-          "long_balance": 893300,
-          "short_balance": 228100
         }
       ],
       "error": null
     },
     "6869.T": {
-      "margin_ratio": 5.44,
-      "long_balance": 883700,
-      "short_balance": 162400,
-      "date": "2026/10/2",
+      "margin_ratio": 5.47,
+      "long_balance": 835300,
+      "short_balance": 152700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.47,
+          "long_balance": 835300,
+          "short_balance": 152700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.44,
@@ -9539,22 +9545,22 @@
           "margin_ratio": 9.96,
           "long_balance": 2180400,
           "short_balance": 218900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 11.73,
-          "long_balance": 2316600,
-          "short_balance": 197500
         }
       ],
       "error": null
     },
     "9503.T": {
-      "margin_ratio": 6.04,
-      "long_balance": 1054400,
-      "short_balance": 174500,
-      "date": "2026/10/2",
+      "margin_ratio": 6.93,
+      "long_balance": 1231100,
+      "short_balance": 177700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 6.93,
+          "long_balance": 1231100,
+          "short_balance": 177700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.04,
@@ -9668,22 +9674,22 @@
           "margin_ratio": 13.26,
           "long_balance": 1524600,
           "short_balance": 115000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.73,
-          "long_balance": 1648800,
-          "short_balance": 129500
         }
       ],
       "error": null
     },
     "9531.T": {
-      "margin_ratio": 6.82,
-      "long_balance": 126200,
-      "short_balance": 18500,
-      "date": "2026/10/2",
+      "margin_ratio": 5.97,
+      "long_balance": 172600,
+      "short_balance": 28900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.97,
+          "long_balance": 172600,
+          "short_balance": 28900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.82,
@@ -9797,22 +9803,22 @@
           "margin_ratio": 5.57,
           "long_balance": 134200,
           "short_balance": 24100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.77,
-          "long_balance": 132600,
-          "short_balance": 23000
         }
       ],
       "error": null
     },
     "6326.T": {
-      "margin_ratio": 3.42,
-      "long_balance": 740200,
-      "short_balance": 216600,
-      "date": "2026/10/2",
+      "margin_ratio": 3.85,
+      "long_balance": 919900,
+      "short_balance": 239100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.85,
+          "long_balance": 919900,
+          "short_balance": 239100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.42,
@@ -9926,22 +9932,22 @@
           "margin_ratio": 4.83,
           "long_balance": 946900,
           "short_balance": 196200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.51,
-          "long_balance": 973400,
-          "short_balance": 176700
         }
       ],
       "error": null
     },
     "6305.T": {
-      "margin_ratio": 34.44,
-      "long_balance": 440800,
-      "short_balance": 12800,
-      "date": "2026/10/2",
+      "margin_ratio": 46.28,
+      "long_balance": 448900,
+      "short_balance": 9700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 46.28,
+          "long_balance": 448900,
+          "short_balance": 9700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 34.44,
@@ -10055,22 +10061,22 @@
           "margin_ratio": 25.12,
           "long_balance": 419500,
           "short_balance": 16700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 11.52,
-          "long_balance": 442400,
-          "short_balance": 38400
         }
       ],
       "error": null
     },
     "5713.T": {
-      "margin_ratio": 11.14,
-      "long_balance": 1648800,
-      "short_balance": 148000,
-      "date": "2026/10/2",
+      "margin_ratio": 16.81,
+      "long_balance": 1852100,
+      "short_balance": 110200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 16.81,
+          "long_balance": 1852100,
+          "short_balance": 110200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 11.14,
@@ -10184,22 +10190,22 @@
           "margin_ratio": 17.64,
           "long_balance": 2330800,
           "short_balance": 132100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 15.47,
-          "long_balance": 2245400,
-          "short_balance": 145100
         }
       ],
       "error": null
     },
     "5406.T": {
-      "margin_ratio": 6.99,
-      "long_balance": 1706700,
-      "short_balance": 244200,
-      "date": "2026/10/2",
+      "margin_ratio": 7.33,
+      "long_balance": 1650000,
+      "short_balance": 225200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 7.33,
+          "long_balance": 1650000,
+          "short_balance": 225200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.99,
@@ -10313,22 +10319,22 @@
           "margin_ratio": 7.64,
           "long_balance": 1600600,
           "short_balance": 209500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 8.2,
-          "long_balance": 1685700,
-          "short_balance": 205600
         }
       ],
       "error": null
     },
     "5802.T": {
-      "margin_ratio": 28.87,
-      "long_balance": 10394400,
-      "short_balance": 360000,
-      "date": "2026/10/2",
+      "margin_ratio": 36.66,
+      "long_balance": 10085200,
+      "short_balance": 275100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 36.66,
+          "long_balance": 10085200,
+          "short_balance": 275100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 28.87,
@@ -10442,22 +10448,22 @@
           "margin_ratio": 12.36,
           "long_balance": 1720300,
           "short_balance": 139200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 15.45,
-          "long_balance": 2153800,
-          "short_balance": 139400
         }
       ],
       "error": null
     },
     "5706.T": {
-      "margin_ratio": 9.97,
-      "long_balance": 11805300,
-      "short_balance": 1183600,
-      "date": "2026/10/2",
+      "margin_ratio": 14.94,
+      "long_balance": 16304100,
+      "short_balance": 1091500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.94,
+          "long_balance": 16304100,
+          "short_balance": 1091500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 9.97,
@@ -10571,22 +10577,22 @@
           "margin_ratio": 1.37,
           "long_balance": 531000,
           "short_balance": 387900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.32,
-          "long_balance": 522900,
-          "short_balance": 397500
         }
       ],
       "error": null
     },
     "3436.T": {
-      "margin_ratio": 3.23,
-      "long_balance": 3193100,
-      "short_balance": 989400,
-      "date": "2026/10/2",
+      "margin_ratio": 4.49,
+      "long_balance": 3298000,
+      "short_balance": 734300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.49,
+          "long_balance": 3298000,
+          "short_balance": 734300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.23,
@@ -10700,22 +10706,22 @@
           "margin_ratio": 2.17,
           "long_balance": 2323500,
           "short_balance": 1070700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.72,
-          "long_balance": 2091900,
-          "short_balance": 770300
         }
       ],
       "error": null
     },
     "5631.T": {
-      "margin_ratio": 22.94,
-      "long_balance": 1064300,
-      "short_balance": 46400,
-      "date": "2026/10/2",
+      "margin_ratio": 35.26,
+      "long_balance": 1248300,
+      "short_balance": 35400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 35.26,
+          "long_balance": 1248300,
+          "short_balance": 35400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 22.94,
@@ -10829,22 +10835,22 @@
           "margin_ratio": 16.66,
           "long_balance": 1390700,
           "short_balance": 83500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 15.34,
-          "long_balance": 1393100,
-          "short_balance": 90800
         }
       ],
       "error": null
     },
     "8750.T": {
-      "margin_ratio": 13.39,
-      "long_balance": 2688100,
-      "short_balance": 200800,
-      "date": "2026/10/2",
+      "margin_ratio": 14.43,
+      "long_balance": 2490300,
+      "short_balance": 172600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.43,
+          "long_balance": 2490300,
+          "short_balance": 172600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 13.39,
@@ -10958,22 +10964,22 @@
           "margin_ratio": 7.23,
           "long_balance": 4703000,
           "short_balance": 650700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.21,
-          "long_balance": 3557100,
-          "short_balance": 682500
         }
       ],
       "error": null
     },
     "8725.T": {
-      "margin_ratio": 30.13,
-      "long_balance": 1955200,
-      "short_balance": 64900,
-      "date": "2026/10/2",
+      "margin_ratio": 24.24,
+      "long_balance": 1696700,
+      "short_balance": 70000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 24.24,
+          "long_balance": 1696700,
+          "short_balance": 70000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 30.13,
@@ -11087,22 +11093,22 @@
           "margin_ratio": 11.84,
           "long_balance": 1515700,
           "short_balance": 128000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 13.91,
-          "long_balance": 1621900,
-          "short_balance": 116600
         }
       ],
       "error": null
     },
     "8630.T": {
-      "margin_ratio": 19.0,
-      "long_balance": 570000,
-      "short_balance": 30000,
-      "date": "2026/10/2",
+      "margin_ratio": 16.52,
+      "long_balance": 556800,
+      "short_balance": 33700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 16.52,
+          "long_balance": 556800,
+          "short_balance": 33700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 19.0,
@@ -11216,22 +11222,22 @@
           "margin_ratio": 19.0,
           "long_balance": 621300,
           "short_balance": 32700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 29.62,
-          "long_balance": 989200,
-          "short_balance": 33400
         }
       ],
       "error": null
     },
     "8604.T": {
-      "margin_ratio": 22.24,
-      "long_balance": 10575100,
-      "short_balance": 475400,
-      "date": "2026/10/2",
+      "margin_ratio": 27.18,
+      "long_balance": 11115500,
+      "short_balance": 409000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 27.18,
+          "long_balance": 11115500,
+          "short_balance": 409000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 22.24,
@@ -11345,22 +11351,22 @@
           "margin_ratio": 46.58,
           "long_balance": 15237100,
           "short_balance": 327100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 51.65,
-          "long_balance": 15537200,
-          "short_balance": 300800
         }
       ],
       "error": null
     },
     "8601.T": {
-      "margin_ratio": 25.78,
-      "long_balance": 2789400,
-      "short_balance": 108200,
-      "date": "2026/10/2",
+      "margin_ratio": 25.64,
+      "long_balance": 2804700,
+      "short_balance": 109400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 25.64,
+          "long_balance": 2804700,
+          "short_balance": 109400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 25.78,
@@ -11474,22 +11480,22 @@
           "margin_ratio": 10.05,
           "long_balance": 2649600,
           "short_balance": 263700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 23.39,
-          "long_balance": 2703400,
-          "short_balance": 115600
         }
       ],
       "error": null
     },
     "4452.T": {
-      "margin_ratio": 2.26,
-      "long_balance": 321900,
-      "short_balance": 142300,
-      "date": "2026/10/2",
+      "margin_ratio": 2.33,
+      "long_balance": 343100,
+      "short_balance": 147100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.33,
+          "long_balance": 343100,
+          "short_balance": 147100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.26,
@@ -11603,22 +11609,22 @@
           "margin_ratio": 4.22,
           "long_balance": 416800,
           "short_balance": 98700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.44,
-          "long_balance": 489500,
-          "short_balance": 89900
         }
       ],
       "error": null
     },
     "4005.T": {
-      "margin_ratio": 32.61,
-      "long_balance": 10618800,
-      "short_balance": 325600,
-      "date": "2026/10/2",
+      "margin_ratio": 31.25,
+      "long_balance": 10483400,
+      "short_balance": 335500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 31.25,
+          "long_balance": 10483400,
+          "short_balance": 335500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 32.61,
@@ -11732,22 +11738,22 @@
           "margin_ratio": 8.62,
           "long_balance": 6922400,
           "short_balance": 802600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 10.4,
-          "long_balance": 7936000,
-          "short_balance": 762900
         }
       ],
       "error": null
     },
     "3402.T": {
       "margin_ratio": 3.78,
-      "long_balance": 1653000,
-      "short_balance": 437100,
-      "date": "2026/10/2",
+      "long_balance": 1611000,
+      "short_balance": 425800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.78,
+          "long_balance": 1611000,
+          "short_balance": 425800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.78,
@@ -11861,22 +11867,22 @@
           "margin_ratio": 8.01,
           "long_balance": 1846300,
           "short_balance": 230500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 9.74,
-          "long_balance": 1782100,
-          "short_balance": 183000
         }
       ],
       "error": null
     },
     "4021.T": {
-      "margin_ratio": 1.39,
-      "long_balance": 52900,
-      "short_balance": 38100,
-      "date": "2026/10/2",
+      "margin_ratio": 1.51,
+      "long_balance": 68600,
+      "short_balance": 45300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.51,
+          "long_balance": 68600,
+          "short_balance": 45300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.39,
@@ -11990,22 +11996,22 @@
           "margin_ratio": 2.42,
           "long_balance": 75600,
           "short_balance": 31200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.09,
-          "long_balance": 76100,
-          "short_balance": 12500
         }
       ],
       "error": null
     },
     "6988.T": {
-      "margin_ratio": 4.45,
-      "long_balance": 333800,
-      "short_balance": 75000,
-      "date": "2026/10/2",
+      "margin_ratio": 4.1,
+      "long_balance": 324800,
+      "short_balance": 79300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.1,
+          "long_balance": 324800,
+          "short_balance": 79300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 4.45,
@@ -12119,22 +12125,22 @@
           "margin_ratio": 5.18,
           "long_balance": 942500,
           "short_balance": 182000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.52,
-          "long_balance": 867000,
-          "short_balance": 133000
         }
       ],
       "error": null
     },
     "8830.T": {
-      "margin_ratio": 4.28,
-      "long_balance": 1568200,
-      "short_balance": 366000,
-      "date": "2026/10/2",
+      "margin_ratio": 4.36,
+      "long_balance": 1603100,
+      "short_balance": 368100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.36,
+          "long_balance": 1603100,
+          "short_balance": 368100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 4.28,
@@ -12248,22 +12254,22 @@
           "margin_ratio": 15.49,
           "long_balance": 1247000,
           "short_balance": 80500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 11.77,
-          "long_balance": 1191000,
-          "short_balance": 101200
         }
       ],
       "error": null
     },
     "3003.T": {
-      "margin_ratio": 7.46,
-      "long_balance": 980800,
-      "short_balance": 131500,
-      "date": "2026/10/2",
+      "margin_ratio": 10.21,
+      "long_balance": 1115600,
+      "short_balance": 109300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 10.21,
+          "long_balance": 1115600,
+          "short_balance": 109300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.46,
@@ -12377,22 +12383,22 @@
           "margin_ratio": 10.15,
           "long_balance": 1322600,
           "short_balance": 130300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.87,
-          "long_balance": 1399500,
-          "short_balance": 488300
         }
       ],
       "error": null
     },
     "3231.T": {
-      "margin_ratio": 60.69,
-      "long_balance": 5450100,
-      "short_balance": 89800,
-      "date": "2026/10/2",
+      "margin_ratio": 75.96,
+      "long_balance": 5978400,
+      "short_balance": 78700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 75.96,
+          "long_balance": 5978400,
+          "short_balance": 78700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 60.69,
@@ -12506,22 +12512,22 @@
           "margin_ratio": 8.01,
           "long_balance": 1540900,
           "short_balance": 192400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.52,
-          "long_balance": 1367500,
-          "short_balance": 209800
         }
       ],
       "error": null
     },
     "8952.T": {
-      "margin_ratio": 16.67,
-      "long_balance": 4818,
-      "short_balance": 289,
-      "date": "2026/10/2",
+      "margin_ratio": 11.3,
+      "long_balance": 5038,
+      "short_balance": 446,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.3,
+          "long_balance": 5038,
+          "short_balance": 446
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 16.67,
@@ -12635,22 +12641,22 @@
           "margin_ratio": 5.27,
           "long_balance": 4153,
           "short_balance": 788
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.87,
-          "long_balance": 4065,
-          "short_balance": 834
         }
       ],
       "error": null
     },
     "9684.T": {
-      "margin_ratio": 1.94,
-      "long_balance": 279400,
-      "short_balance": 144200,
-      "date": "2026/10/2",
+      "margin_ratio": 2.12,
+      "long_balance": 307700,
+      "short_balance": 145300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.12,
+          "long_balance": 307700,
+          "short_balance": 145300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.94,
@@ -12764,22 +12770,22 @@
           "margin_ratio": 3.33,
           "long_balance": 477000,
           "short_balance": 143400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.61,
-          "long_balance": 378600,
-          "short_balance": 145000
         }
       ],
       "error": null
     },
     "6460.T": {
-      "margin_ratio": 1.52,
-      "long_balance": 148300,
-      "short_balance": 97600,
-      "date": "2026/10/2",
+      "margin_ratio": 1.31,
+      "long_balance": 128900,
+      "short_balance": 98100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.31,
+          "long_balance": 128900,
+          "short_balance": 98100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.52,
@@ -12893,22 +12899,22 @@
           "margin_ratio": 4.47,
           "long_balance": 273300,
           "short_balance": 61100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.65,
-          "long_balance": 281000,
-          "short_balance": 60400
         }
       ],
       "error": null
     },
     "2432.T": {
-      "margin_ratio": 51.48,
-      "long_balance": 1745200,
-      "short_balance": 33900,
-      "date": "2026/10/2",
+      "margin_ratio": 30.09,
+      "long_balance": 1760200,
+      "short_balance": 58500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 30.09,
+          "long_balance": 1760200,
+          "short_balance": 58500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 51.48,
@@ -13022,22 +13028,22 @@
           "margin_ratio": 35.62,
           "long_balance": 2878100,
           "short_balance": 80800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 26.73,
-          "long_balance": 2841300,
-          "short_balance": 106300
         }
       ],
       "error": null
     },
     "3765.T": {
-      "margin_ratio": 15.71,
-      "long_balance": 238800,
-      "short_balance": 15200,
-      "date": "2026/10/2",
+      "margin_ratio": 24.9,
+      "long_balance": 338600,
+      "short_balance": 13600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 24.9,
+          "long_balance": 338600,
+          "short_balance": 13600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 15.71,
@@ -13151,22 +13157,22 @@
           "margin_ratio": 1.61,
           "long_balance": 263000,
           "short_balance": 163300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.14,
-          "long_balance": 224900,
-          "short_balance": 197800
         }
       ],
       "error": null
     },
     "9843.T": {
-      "margin_ratio": 2.9,
-      "long_balance": 1049600,
-      "short_balance": 362200,
-      "date": "2026/10/2",
+      "margin_ratio": 2.69,
+      "long_balance": 964700,
+      "short_balance": 359200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.69,
+          "long_balance": 964700,
+          "short_balance": 359200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.9,
@@ -13280,22 +13286,22 @@
           "margin_ratio": 3.36,
           "long_balance": 1938900,
           "short_balance": 576700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.13,
-          "long_balance": 2273000,
-          "short_balance": 550900
         }
       ],
       "error": null
     },
     "3086.T": {
-      "margin_ratio": 1.4,
-      "long_balance": 224800,
-      "short_balance": 160300,
-      "date": "2026/10/2",
+      "margin_ratio": 1.19,
+      "long_balance": 194400,
+      "short_balance": 162800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.19,
+          "long_balance": 194400,
+          "short_balance": 162800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.4,
@@ -13409,22 +13415,22 @@
           "margin_ratio": 1.9,
           "long_balance": 153300,
           "short_balance": 80600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.25,
-          "long_balance": 113700,
-          "short_balance": 91200
         }
       ],
       "error": null
     },
     "2670.T": {
-      "margin_ratio": 7.52,
-      "long_balance": 79700,
-      "short_balance": 10600,
-      "date": "2026/10/2",
+      "margin_ratio": 2.64,
+      "long_balance": 55800,
+      "short_balance": 21100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.64,
+          "long_balance": 55800,
+          "short_balance": 21100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.52,
@@ -13538,22 +13544,22 @@
           "margin_ratio": 1.71,
           "long_balance": 60100,
           "short_balance": 35100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.96,
-          "long_balance": 64200,
-          "short_balance": 32800
         }
       ],
       "error": null
     },
     "8308.T": {
-      "margin_ratio": 6.92,
-      "long_balance": 2935800,
-      "short_balance": 424100,
-      "date": "2026/10/2",
+      "margin_ratio": 5.31,
+      "long_balance": 5312900,
+      "short_balance": 1000600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.31,
+          "long_balance": 5312900,
+          "short_balance": 1000600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.92,
@@ -13667,22 +13673,22 @@
           "margin_ratio": 6.24,
           "long_balance": 3030500,
           "short_balance": 485900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.28,
-          "long_balance": 2570400,
-          "short_balance": 601000
         }
       ],
       "error": null
     },
     "8309.T": {
-      "margin_ratio": 48.5,
-      "long_balance": 5504200,
-      "short_balance": 113500,
-      "date": "2026/10/2",
+      "margin_ratio": 57.13,
+      "long_balance": 5609900,
+      "short_balance": 98200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 57.13,
+          "long_balance": 5609900,
+          "short_balance": 98200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 48.5,
@@ -13796,22 +13802,22 @@
           "margin_ratio": 17.12,
           "long_balance": 883200,
           "short_balance": 51600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 17.02,
-          "long_balance": 866100,
-          "short_balance": 50900
         }
       ],
       "error": null
     },
     "8473.T": {
-      "margin_ratio": 100.53,
-      "long_balance": 6373900,
-      "short_balance": 63400,
-      "date": "2026/10/2",
+      "margin_ratio": 83.59,
+      "long_balance": 6311300,
+      "short_balance": 75500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 83.59,
+          "long_balance": 6311300,
+          "short_balance": 75500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 100.53,
@@ -13925,22 +13931,22 @@
           "margin_ratio": 92.79,
           "long_balance": 8054600,
           "short_balance": 86800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 121.9,
-          "long_balance": 7228600,
-          "short_balance": 59300
         }
       ],
       "error": null
     },
     "8354.T": {
-      "margin_ratio": 9.84,
-      "long_balance": 406300,
-      "short_balance": 41300,
-      "date": "2026/10/2",
+      "margin_ratio": 14.12,
+      "long_balance": 567600,
+      "short_balance": 40200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.12,
+          "long_balance": 567600,
+          "short_balance": 40200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 9.84,
@@ -14054,22 +14060,22 @@
           "margin_ratio": 73.44,
           "long_balance": 661000,
           "short_balance": 9000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 47.91,
-          "long_balance": 656400,
-          "short_balance": 13700
         }
       ],
       "error": null
     },
     "6645.T": {
-      "margin_ratio": 17.58,
-      "long_balance": 492200,
-      "short_balance": 28000,
-      "date": "2026/10/2",
+      "margin_ratio": 16.88,
+      "long_balance": 433900,
+      "short_balance": 25700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 16.88,
+          "long_balance": 433900,
+          "short_balance": 25700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 17.58,
@@ -14183,22 +14189,22 @@
           "margin_ratio": 4.46,
           "long_balance": 284900,
           "short_balance": 63900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.11,
-          "long_balance": 277500,
-          "short_balance": 45400
         }
       ],
       "error": null
     },
     "9989.T": {
-      "margin_ratio": 65.8,
-      "long_balance": 230300,
-      "short_balance": 3500,
-      "date": "2026/10/2",
+      "margin_ratio": 16.09,
+      "long_balance": 263800,
+      "short_balance": 16400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 16.09,
+          "long_balance": 263800,
+          "short_balance": 16400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 65.8,
@@ -14312,22 +14318,22 @@
           "margin_ratio": 9.54,
           "long_balance": 117300,
           "short_balance": 12300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 10.87,
-          "long_balance": 106500,
-          "short_balance": 9800
         }
       ],
       "error": null
     },
     "4307.T": {
-      "margin_ratio": 20.06,
-      "long_balance": 683900,
-      "short_balance": 34100,
-      "date": "2026/10/2",
+      "margin_ratio": 5.64,
+      "long_balance": 436400,
+      "short_balance": 77400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.64,
+          "long_balance": 436400,
+          "short_balance": 77400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 20.06,
@@ -14441,22 +14447,22 @@
           "margin_ratio": 12.3,
           "long_balance": 1137600,
           "short_balance": 92500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 17.58,
-          "long_balance": 1457100,
-          "short_balance": 82900
         }
       ],
       "error": null
     },
     "9532.T": {
-      "margin_ratio": 3.93,
-      "long_balance": 208100,
-      "short_balance": 52900,
-      "date": "2026/10/2",
+      "margin_ratio": 4.13,
+      "long_balance": 216600,
+      "short_balance": 52500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.13,
+          "long_balance": 216600,
+          "short_balance": 52500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.93,
@@ -14570,22 +14576,22 @@
           "margin_ratio": 6.5,
           "long_balance": 357500,
           "short_balance": 55000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.54,
-          "long_balance": 326500,
-          "short_balance": 49900
         }
       ],
       "error": null
     },
     "9506.T": {
-      "margin_ratio": 49.53,
-      "long_balance": 4299200,
-      "short_balance": 86800,
-      "date": "2026/10/2",
+      "margin_ratio": 50.61,
+      "long_balance": 4271800,
+      "short_balance": 84400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 50.61,
+          "long_balance": 4271800,
+          "short_balance": 84400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 49.53,
@@ -14699,22 +14705,22 @@
           "margin_ratio": 30.04,
           "long_balance": 3943800,
           "short_balance": 131300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 31.36,
-          "long_balance": 4030200,
-          "short_balance": 128500
         }
       ],
       "error": null
     },
     "9504.T": {
-      "margin_ratio": 20.59,
-      "long_balance": 2308300,
-      "short_balance": 112100,
-      "date": "2026/10/2",
+      "margin_ratio": 20.88,
+      "long_balance": 2458100,
+      "short_balance": 117700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 20.88,
+          "long_balance": 2458100,
+          "short_balance": 117700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 20.59,
@@ -14828,22 +14834,22 @@
           "margin_ratio": 76.37,
           "long_balance": 2268200,
           "short_balance": 29700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 44.09,
-          "long_balance": 2292600,
-          "short_balance": 52000
         }
       ],
       "error": null
     },
     "9507.T": {
-      "margin_ratio": 2.65,
-      "long_balance": 264100,
-      "short_balance": 99800,
-      "date": "2026/10/2",
+      "margin_ratio": 1.88,
+      "long_balance": 209200,
+      "short_balance": 111500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.88,
+          "long_balance": 209200,
+          "short_balance": 111500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.65,
@@ -14957,22 +14963,22 @@
           "margin_ratio": 5.63,
           "long_balance": 234900,
           "short_balance": 41700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.83,
-          "long_balance": 239600,
-          "short_balance": 49600
         }
       ],
       "error": null
     },
     "7011.T": {
-      "margin_ratio": 20.25,
-      "long_balance": 20223400,
-      "short_balance": 998900,
-      "date": "2026/10/2",
+      "margin_ratio": 29.85,
+      "long_balance": 22341900,
+      "short_balance": 748400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 29.85,
+          "long_balance": 22341900,
+          "short_balance": 748400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 20.25,
@@ -15086,22 +15092,22 @@
           "margin_ratio": 33.99,
           "long_balance": 26965800,
           "short_balance": 793400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 28.7,
-          "long_balance": 24690100,
-          "short_balance": 860300
         }
       ],
       "error": null
     },
     "6506.T": {
-      "margin_ratio": 26.79,
-      "long_balance": 6096500,
-      "short_balance": 227600,
-      "date": "2026/10/2",
+      "margin_ratio": 15.86,
+      "long_balance": 6351600,
+      "short_balance": 400500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 15.86,
+          "long_balance": 6351600,
+          "short_balance": 400500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 26.79,
@@ -15215,22 +15221,22 @@
           "margin_ratio": 5.96,
           "long_balance": 2133700,
           "short_balance": 358100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.06,
-          "long_balance": 1991500,
-          "short_balance": 393300
         }
       ],
       "error": null
     },
     "6474.T": {
-      "margin_ratio": 17.0,
-      "long_balance": 249900,
-      "short_balance": 14700,
-      "date": "2026/10/2",
+      "margin_ratio": 15.78,
+      "long_balance": 325100,
+      "short_balance": 20600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 15.78,
+          "long_balance": 325100,
+          "short_balance": 20600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 17.0,
@@ -15344,22 +15350,22 @@
           "margin_ratio": 9.78,
           "long_balance": 324600,
           "short_balance": 33200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 8.55,
-          "long_balance": 323300,
-          "short_balance": 37800
         }
       ],
       "error": null
     },
     "8015.T": {
-      "margin_ratio": 12.38,
-      "long_balance": 550700,
-      "short_balance": 44500,
-      "date": "2026/10/2",
+      "margin_ratio": 13.03,
+      "long_balance": 577300,
+      "short_balance": 44300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 13.03,
+          "long_balance": 577300,
+          "short_balance": 44300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 12.38,
@@ -15473,22 +15479,22 @@
           "margin_ratio": 11.44,
           "long_balance": 518200,
           "short_balance": 45300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.74,
-          "long_balance": 516000,
-          "short_balance": 40500
         }
       ],
       "error": null
     },
     "2768.T": {
-      "margin_ratio": 70.2,
-      "long_balance": 2730600,
-      "short_balance": 38900,
-      "date": "2026/10/2",
+      "margin_ratio": 82.41,
+      "long_balance": 2884400,
+      "short_balance": 35000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 82.41,
+          "long_balance": 2884400,
+          "short_balance": 35000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 70.2,
@@ -15602,22 +15608,22 @@
           "margin_ratio": 47.19,
           "long_balance": 3133700,
           "short_balance": 66400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 39.38,
-          "long_balance": 2874700,
-          "short_balance": 73000
         }
       ],
       "error": null
     },
     "9025.T": {
-      "margin_ratio": 130.0,
-      "long_balance": 26000,
-      "short_balance": 200,
-      "date": "2026/10/2",
+      "margin_ratio": 25.1,
+      "long_balance": 25100,
+      "short_balance": 1000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 25.1,
+          "long_balance": 25100,
+          "short_balance": 1000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 130.0,
@@ -15731,22 +15737,22 @@
           "margin_ratio": 29.21,
           "long_balance": 40900,
           "short_balance": 1400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 86.2,
-          "long_balance": 43100,
-          "short_balance": 500
         }
       ],
       "error": null
     },
     "4523.T": {
-      "margin_ratio": 11.77,
-      "long_balance": 939600,
-      "short_balance": 79800,
-      "date": "2026/10/2",
+      "margin_ratio": 14.84,
+      "long_balance": 952600,
+      "short_balance": 64200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.84,
+          "long_balance": 952600,
+          "short_balance": 64200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 11.77,
@@ -15860,22 +15866,22 @@
           "margin_ratio": 39.73,
           "long_balance": 1827800,
           "short_balance": 46000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 52.44,
-          "long_balance": 1358200,
-          "short_balance": 25900
         }
       ],
       "error": null
     },
     "4507.T": {
-      "margin_ratio": 9.72,
-      "long_balance": 703600,
-      "short_balance": 72400,
-      "date": "2026/10/2",
+      "margin_ratio": 14.45,
+      "long_balance": 787400,
+      "short_balance": 54500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.45,
+          "long_balance": 787400,
+          "short_balance": 54500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 9.72,
@@ -15989,22 +15995,22 @@
           "margin_ratio": 5.63,
           "long_balance": 534300,
           "short_balance": 94900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.06,
-          "long_balance": 571800,
-          "short_balance": 94300
         }
       ],
       "error": null
     },
     "4506.T": {
-      "margin_ratio": 22.4,
-      "long_balance": 5639800,
-      "short_balance": 251800,
-      "date": "2026/10/2",
+      "margin_ratio": 23.89,
+      "long_balance": 5409700,
+      "short_balance": 226400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 23.89,
+          "long_balance": 5409700,
+          "short_balance": 226400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 22.4,
@@ -16118,22 +16124,22 @@
           "margin_ratio": 21.51,
           "long_balance": 9651900,
           "short_balance": 448800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 25.88,
-          "long_balance": 10438700,
-          "short_balance": 403300
         }
       ],
       "error": null
     },
     "9064.T": {
-      "margin_ratio": 3.2,
-      "long_balance": 178000,
-      "short_balance": 55700,
-      "date": "2026/10/2",
+      "margin_ratio": 2.18,
+      "long_balance": 166300,
+      "short_balance": 76300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.18,
+          "long_balance": 166300,
+          "short_balance": 76300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.2,
@@ -16247,22 +16253,22 @@
           "margin_ratio": 4.09,
           "long_balance": 490300,
           "short_balance": 120000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.78,
-          "long_balance": 538100,
-          "short_balance": 193500
         }
       ],
       "error": null
     },
     "9143.T": {
-      "margin_ratio": 6.81,
-      "long_balance": 798700,
-      "short_balance": 117300,
-      "date": "2026/10/2",
+      "margin_ratio": 5.97,
+      "long_balance": 619300,
+      "short_balance": 103700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.97,
+          "long_balance": 619300,
+          "short_balance": 103700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.81,
@@ -16376,22 +16382,22 @@
           "margin_ratio": 2.18,
           "long_balance": 352700,
           "short_balance": 162000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.31,
-          "long_balance": 339400,
-          "short_balance": 147100
         }
       ],
       "error": null
     },
     "9104.T": {
-      "margin_ratio": 3.26,
-      "long_balance": 1161100,
-      "short_balance": 355800,
-      "date": "2026/10/2",
+      "margin_ratio": 2.74,
+      "long_balance": 1068300,
+      "short_balance": 389800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.74,
+          "long_balance": 1068300,
+          "short_balance": 389800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.26,
@@ -16505,22 +16511,22 @@
           "margin_ratio": 10.31,
           "long_balance": 2405100,
           "short_balance": 233200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 10.03,
-          "long_balance": 2399000,
-          "short_balance": 239200
         }
       ],
       "error": null
     },
     "2897.T": {
-      "margin_ratio": 1.87,
-      "long_balance": 414200,
-      "short_balance": 221100,
-      "date": "2026/10/2",
+      "margin_ratio": 1.69,
+      "long_balance": 375600,
+      "short_balance": 222600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.69,
+          "long_balance": 375600,
+          "short_balance": 222600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.87,
@@ -16634,22 +16640,22 @@
           "margin_ratio": 2.57,
           "long_balance": 659000,
           "short_balance": 256000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.16,
-          "long_balance": 672100,
-          "short_balance": 212400
         }
       ],
       "error": null
     },
     "2801.T": {
-      "margin_ratio": 7.61,
-      "long_balance": 746000,
-      "short_balance": 98000,
-      "date": "2026/10/2",
+      "margin_ratio": 5.77,
+      "long_balance": 653700,
+      "short_balance": 113300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.77,
+          "long_balance": 653700,
+          "short_balance": 113300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.61,
@@ -16763,22 +16769,22 @@
           "margin_ratio": 11.86,
           "long_balance": 587300,
           "short_balance": 49500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.23,
-          "long_balance": 588600,
-          "short_balance": 139100
         }
       ],
       "error": null
     },
     "2875.T": {
-      "margin_ratio": 4.25,
-      "long_balance": 71800,
-      "short_balance": 16900,
-      "date": "2026/10/2",
+      "margin_ratio": 2.1,
+      "long_balance": 40400,
+      "short_balance": 19200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.1,
+          "long_balance": 40400,
+          "short_balance": 19200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 4.25,
@@ -16892,22 +16898,22 @@
           "margin_ratio": 2.32,
           "long_balance": 22700,
           "short_balance": 9800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.52,
-          "long_balance": 26000,
-          "short_balance": 17100
         }
       ],
       "error": null
     },
     "7272.T": {
-      "margin_ratio": 3.42,
-      "long_balance": 1265800,
-      "short_balance": 370500,
-      "date": "2026/10/2",
+      "margin_ratio": 3.33,
+      "long_balance": 1117100,
+      "short_balance": 335000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.33,
+          "long_balance": 1117100,
+          "short_balance": 335000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.42,
@@ -17021,22 +17027,22 @@
           "margin_ratio": 8.76,
           "long_balance": 2137600,
           "short_balance": 244000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.46,
-          "long_balance": 2227100,
-          "short_balance": 178800
         }
       ],
       "error": null
     },
     "7261.T": {
-      "margin_ratio": 12.41,
-      "long_balance": 6102800,
-      "short_balance": 491800,
-      "date": "2026/10/2",
+      "margin_ratio": 10.96,
+      "long_balance": 5711900,
+      "short_balance": 521100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 10.96,
+          "long_balance": 5711900,
+          "short_balance": 521100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 12.41,
@@ -17150,22 +17156,22 @@
           "margin_ratio": 5.76,
           "long_balance": 3871500,
           "short_balance": 671600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 7.38,
-          "long_balance": 4090500,
-          "short_balance": 554100
         }
       ],
       "error": null
     },
     "4755.T": {
-      "margin_ratio": 27.39,
-      "long_balance": 39422200,
-      "short_balance": 1439500,
-      "date": "2026/10/2",
+      "margin_ratio": 23.06,
+      "long_balance": 40075100,
+      "short_balance": 1738200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 23.06,
+          "long_balance": 40075100,
+          "short_balance": 1738200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 27.39,
@@ -17279,22 +17285,22 @@
           "margin_ratio": 41.26,
           "long_balance": 25776300,
           "short_balance": 624700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 28.94,
-          "long_balance": 23278700,
-          "short_balance": 804500
         }
       ],
       "error": null
     },
     "5943.T": {
-      "margin_ratio": 1.19,
-      "long_balance": 54200,
-      "short_balance": 45700,
-      "date": "2026/10/2",
+      "margin_ratio": 0.98,
+      "long_balance": 56800,
+      "short_balance": 57800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 0.98,
+          "long_balance": 56800,
+          "short_balance": 57800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.19,
@@ -17408,22 +17414,22 @@
           "margin_ratio": 0.27,
           "long_balance": 54100,
           "short_balance": 201300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.23,
-          "long_balance": 48600,
-          "short_balance": 209300
         }
       ],
       "error": null
     },
     "9501.T": {
-      "margin_ratio": 56.96,
-      "long_balance": 80221500,
-      "short_balance": 1408400,
-      "date": "2026/10/2",
+      "margin_ratio": 50.17,
+      "long_balance": 79110500,
+      "short_balance": 1576900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 50.17,
+          "long_balance": 79110500,
+          "short_balance": 1576900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 56.96,
@@ -17537,22 +17543,22 @@
           "margin_ratio": 66.65,
           "long_balance": 93620600,
           "short_balance": 1404700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 85.05,
-          "long_balance": 96355700,
-          "short_balance": 1132900
         }
       ],
       "error": null
     },
     "4543.T": {
-      "margin_ratio": 6.96,
-      "long_balance": 815700,
-      "short_balance": 117200,
-      "date": "2026/10/2",
+      "margin_ratio": 5.18,
+      "long_balance": 663400,
+      "short_balance": 128100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.18,
+          "long_balance": 663400,
+          "short_balance": 128100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.96,
@@ -17666,22 +17672,22 @@
           "margin_ratio": 2.42,
           "long_balance": 693300,
           "short_balance": 286300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.02,
-          "long_balance": 795500,
-          "short_balance": 263100
         }
       ],
       "error": null
     },
     "6273.T": {
-      "margin_ratio": 7.59,
-      "long_balance": 53900,
+      "margin_ratio": 7.52,
+      "long_balance": 53400,
       "short_balance": 7100,
-      "date": "2026/10/2",
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 7.52,
+          "long_balance": 53400,
+          "short_balance": 7100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.59,
@@ -17795,22 +17801,22 @@
           "margin_ratio": 8.44,
           "long_balance": 101300,
           "short_balance": 12000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.03,
-          "long_balance": 115500,
-          "short_balance": 9600
         }
       ],
       "error": null
     },
     "6178.T": {
-      "margin_ratio": 4.2,
-      "long_balance": 513000,
-      "short_balance": 122200,
-      "date": "2026/10/2",
+      "margin_ratio": 5.24,
+      "long_balance": 599400,
+      "short_balance": 114300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.24,
+          "long_balance": 599400,
+          "short_balance": 114300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 4.2,
@@ -17924,22 +17930,22 @@
           "margin_ratio": 4.94,
           "long_balance": 855500,
           "short_balance": 173200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.21,
-          "long_balance": 1369000,
-          "short_balance": 220300
         }
       ],
       "error": null
     },
     "3382.T": {
-      "margin_ratio": 5.76,
-      "long_balance": 4405200,
-      "short_balance": 764400,
-      "date": "2026/10/2",
+      "margin_ratio": 6.38,
+      "long_balance": 5054500,
+      "short_balance": 791900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 6.38,
+          "long_balance": 5054500,
+          "short_balance": 791900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.76,
@@ -18053,22 +18059,22 @@
           "margin_ratio": 4.56,
           "long_balance": 4591500,
           "short_balance": 1007100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.15,
-          "long_balance": 5277400,
-          "short_balance": 1024400
         }
       ],
       "error": null
     },
     "2644.T": {
-      "margin_ratio": 14.53,
-      "long_balance": 885348,
-      "short_balance": 60922,
-      "date": "2026/10/2",
+      "margin_ratio": 19.4,
+      "long_balance": 1071899,
+      "short_balance": 55265,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 19.4,
+          "long_balance": 1071899,
+          "short_balance": 55265
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 14.53,
@@ -18182,22 +18188,22 @@
           "margin_ratio": 10.27,
           "long_balance": 524238,
           "short_balance": 51024
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 14.17,
-          "long_balance": 690388,
-          "short_balance": 48734
         }
       ],
       "error": null
     },
     "285A.T": {
-      "margin_ratio": 16.1,
-      "long_balance": 41467700,
-      "short_balance": 2575900,
-      "date": "2026/10/2",
+      "margin_ratio": 29.8,
+      "long_balance": 44798300,
+      "short_balance": 1503400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 29.8,
+          "long_balance": 44798300,
+          "short_balance": 1503400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 16.1,
@@ -18311,22 +18317,22 @@
           "margin_ratio": 17.59,
           "long_balance": 12632600,
           "short_balance": 718300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 14.83,
-          "long_balance": 11471100,
-          "short_balance": 773300
         }
       ],
       "error": null
     },
     "6857.T": {
       "margin_ratio": 0.91,
-      "long_balance": 1785700,
-      "short_balance": 1967100,
-      "date": "2026/10/2",
+      "long_balance": 2009500,
+      "short_balance": 2214500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 0.91,
+          "long_balance": 2009500,
+          "short_balance": 2214500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 0.91,
@@ -18440,22 +18446,22 @@
           "margin_ratio": 6.13,
           "long_balance": 5926000,
           "short_balance": 967200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.82,
-          "long_balance": 5707500,
-          "short_balance": 836500
         }
       ],
       "error": null
     },
     "6146.T": {
-      "margin_ratio": 6.38,
-      "long_balance": 803500,
-      "short_balance": 126000,
-      "date": "2026/10/2",
+      "margin_ratio": 7.81,
+      "long_balance": 979800,
+      "short_balance": 125500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 7.81,
+          "long_balance": 979800,
+          "short_balance": 125500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 6.38,
@@ -18569,22 +18575,22 @@
           "margin_ratio": 4.75,
           "long_balance": 903100,
           "short_balance": 190000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.47,
-          "long_balance": 945600,
-          "short_balance": 211700
         }
       ],
       "error": null
     },
     "6920.T": {
-      "margin_ratio": 1.73,
-      "long_balance": 1175100,
-      "short_balance": 680800,
-      "date": "2026/10/2",
+      "margin_ratio": 1.24,
+      "long_balance": 1013200,
+      "short_balance": 813900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.24,
+          "long_balance": 1013200,
+          "short_balance": 813900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.73,
@@ -18698,22 +18704,22 @@
           "margin_ratio": 4.98,
           "long_balance": 1479500,
           "short_balance": 296800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.85,
-          "long_balance": 1737500,
-          "short_balance": 297200
         }
       ],
       "error": null
     },
     "6723.T": {
-      "margin_ratio": 4.63,
-      "long_balance": 2882700,
-      "short_balance": 622900,
-      "date": "2026/10/2",
+      "margin_ratio": 5.42,
+      "long_balance": 3259200,
+      "short_balance": 601800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.42,
+          "long_balance": 3259200,
+          "short_balance": 601800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 4.63,
@@ -18827,22 +18833,22 @@
           "margin_ratio": 3.31,
           "long_balance": 2111300,
           "short_balance": 638500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.04,
-          "long_balance": 1709400,
-          "short_balance": 837500
         }
       ],
       "error": null
     },
     "7735.T": {
-      "margin_ratio": 5.18,
-      "long_balance": 880600,
-      "short_balance": 169900,
-      "date": "2026/10/2",
+      "margin_ratio": 4.96,
+      "long_balance": 1076300,
+      "short_balance": 217100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.96,
+          "long_balance": 1076300,
+          "short_balance": 217100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.18,
@@ -18956,22 +18962,22 @@
           "margin_ratio": 7.18,
           "long_balance": 1069100,
           "short_balance": 148900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 7.47,
-          "long_balance": 1118000,
-          "short_balance": 149700
         }
       ],
       "error": null
     },
     "5803.T": {
-      "margin_ratio": 9.64,
-      "long_balance": 19554400,
-      "short_balance": 2028600,
-      "date": "2026/10/2",
+      "margin_ratio": 11.82,
+      "long_balance": 20280400,
+      "short_balance": 1716000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.82,
+          "long_balance": 20280400,
+          "short_balance": 1716000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 9.64,
@@ -19085,22 +19091,22 @@
           "margin_ratio": 18.03,
           "long_balance": 30481000,
           "short_balance": 1690700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 13.93,
-          "long_balance": 26669500,
-          "short_balance": 1914900
         }
       ],
       "error": null
     },
     "6963.T": {
-      "margin_ratio": 5.3,
-      "long_balance": 839700,
-      "short_balance": 158300,
-      "date": "2026/10/2",
+      "margin_ratio": 7.11,
+      "long_balance": 908100,
+      "short_balance": 127700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 7.11,
+          "long_balance": 908100,
+          "short_balance": 127700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.3,
@@ -19214,22 +19220,22 @@
           "margin_ratio": 2.54,
           "long_balance": 933900,
           "short_balance": 367400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.51,
-          "long_balance": 832500,
-          "short_balance": 332200
         }
       ],
       "error": null
     },
     "7729.T": {
-      "margin_ratio": 3.4,
-      "long_balance": 88000,
-      "short_balance": 25900,
-      "date": "2026/10/2",
+      "margin_ratio": 2.65,
+      "long_balance": 82800,
+      "short_balance": 31200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.65,
+          "long_balance": 82800,
+          "short_balance": 31200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.4,
@@ -19343,22 +19349,22 @@
           "margin_ratio": 5.07,
           "long_balance": 116500,
           "short_balance": 23000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.18,
-          "long_balance": 124900,
-          "short_balance": 24100
         }
       ],
       "error": null
     },
     "200A.T": {
-      "margin_ratio": 24.4,
-      "long_balance": 2444965,
-      "short_balance": 100200,
-      "date": "2026/10/2",
+      "margin_ratio": 24.28,
+      "long_balance": 2356500,
+      "short_balance": 97064,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 24.28,
+          "long_balance": 2356500,
+          "short_balance": 97064
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 24.4,
@@ -19472,22 +19478,22 @@
           "margin_ratio": 16.84,
           "long_balance": 1151334,
           "short_balance": 68385
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 19.67,
-          "long_balance": 1010667,
-          "short_balance": 51374
         }
       ],
       "error": null
     },
     "1326.T": {
-      "margin_ratio": 103.68,
-      "long_balance": 7050,
+      "margin_ratio": 106.49,
+      "long_balance": 7241,
       "short_balance": 68,
-      "date": "2026/10/2",
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 106.49,
+          "long_balance": 7241,
+          "short_balance": 68
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 103.68,
@@ -19601,22 +19607,22 @@
           "margin_ratio": 41.81,
           "long_balance": 11164,
           "short_balance": 267
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 140.94,
-          "long_balance": 11275,
-          "short_balance": 80
         }
       ],
       "error": null
     },
     "4973.T": {
       "margin_ratio": null,
-      "long_balance": 161600,
+      "long_balance": 165700,
       "short_balance": 0,
-      "date": "2026/10/2",
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": null,
+          "long_balance": 165700,
+          "short_balance": 0
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": null,
@@ -19730,22 +19736,22 @@
           "margin_ratio": 87.43,
           "long_balance": 61200,
           "short_balance": 700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 55.86,
-          "long_balance": 39100,
-          "short_balance": 700
         }
       ],
       "error": null
     },
     "8081.T": {
-      "margin_ratio": 21.1,
-      "long_balance": 21100,
-      "short_balance": 1000,
-      "date": "2026/10/2",
+      "margin_ratio": 31.0,
+      "long_balance": 21700,
+      "short_balance": 700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 31.0,
+          "long_balance": 21700,
+          "short_balance": 700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 21.1,
@@ -19859,22 +19865,22 @@
           "margin_ratio": 73.6,
           "long_balance": 36800,
           "short_balance": 500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 85.5,
-          "long_balance": 34200,
-          "short_balance": 400
         }
       ],
       "error": null
     },
     "7537.T": {
-      "margin_ratio": 2.33,
-      "long_balance": 87300,
-      "short_balance": 37400,
-      "date": "2026/10/2",
+      "margin_ratio": 1.84,
+      "long_balance": 94700,
+      "short_balance": 51600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.84,
+          "long_balance": 94700,
+          "short_balance": 51600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.33,
@@ -19988,22 +19994,22 @@
           "margin_ratio": 5.64,
           "long_balance": 204000,
           "short_balance": 36200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.04,
-          "long_balance": 202300,
-          "short_balance": 40100
         }
       ],
       "error": null
     },
     "6525.T": {
-      "margin_ratio": 3.12,
-      "long_balance": 1811200,
-      "short_balance": 580100,
-      "date": "2026/10/2",
+      "margin_ratio": 3.87,
+      "long_balance": 1947300,
+      "short_balance": 503500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.87,
+          "long_balance": 1947300,
+          "short_balance": 503500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.12,
@@ -20117,22 +20123,22 @@
           "margin_ratio": 2.16,
           "long_balance": 1115500,
           "short_balance": 517400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.9,
-          "long_balance": 1442400,
-          "short_balance": 496800
         }
       ],
       "error": null
     },
     "6323.T": {
-      "margin_ratio": 30.32,
-      "long_balance": 3417100,
-      "short_balance": 112700,
-      "date": "2026/10/2",
+      "margin_ratio": 11.13,
+      "long_balance": 4200000,
+      "short_balance": 377300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.13,
+          "long_balance": 4200000,
+          "short_balance": 377300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 30.32,
@@ -20246,22 +20252,22 @@
           "margin_ratio": 32.14,
           "long_balance": 3262500,
           "short_balance": 101500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 31.46,
-          "long_balance": 3256400,
-          "short_balance": 103500
         }
       ],
       "error": null
     },
     "6925.T": {
-      "margin_ratio": 5.13,
-      "long_balance": 81600,
-      "short_balance": 15900,
-      "date": "2026/10/2",
+      "margin_ratio": 5.49,
+      "long_balance": 93800,
+      "short_balance": 17100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.49,
+          "long_balance": 93800,
+          "short_balance": 17100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.13,
@@ -20375,22 +20381,22 @@
           "margin_ratio": 1.11,
           "long_balance": 71900,
           "short_balance": 65000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.43,
-          "long_balance": 56200,
-          "short_balance": 130600
         }
       ],
       "error": null
     },
     "6976.T": {
-      "margin_ratio": 3.9,
-      "long_balance": 4079600,
-      "short_balance": 1045700,
-      "date": "2026/10/2",
+      "margin_ratio": 3.51,
+      "long_balance": 3820200,
+      "short_balance": 1089300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.51,
+          "long_balance": 3820200,
+          "short_balance": 1089300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 3.9,
@@ -20504,22 +20510,22 @@
           "margin_ratio": 2.05,
           "long_balance": 2003500,
           "short_balance": 979100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.49,
-          "long_balance": 1090800,
-          "short_balance": 734500
         }
       ],
       "error": null
     },
     "6971.T": {
-      "margin_ratio": 5.04,
-      "long_balance": 517000,
-      "short_balance": 102600,
-      "date": "2026/10/2",
+      "margin_ratio": 4.44,
+      "long_balance": 493700,
+      "short_balance": 111100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.44,
+          "long_balance": 493700,
+          "short_balance": 111100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.04,
@@ -20633,22 +20639,22 @@
           "margin_ratio": 3.35,
           "long_balance": 857500,
           "short_balance": 256300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.07,
-          "long_balance": 453600,
-          "short_balance": 219000
         }
       ],
       "error": null
     },
     "6479.T": {
-      "margin_ratio": 67.41,
-      "long_balance": 2736800,
-      "short_balance": 40600,
-      "date": "2026/10/2",
+      "margin_ratio": 61.75,
+      "long_balance": 2593500,
+      "short_balance": 42000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 61.75,
+          "long_balance": 2593500,
+          "short_balance": 42000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 67.41,
@@ -20762,22 +20768,22 @@
           "margin_ratio": 13.33,
           "long_balance": 2320400,
           "short_balance": 174100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 13.86,
-          "long_balance": 2261000,
-          "short_balance": 163100
         }
       ],
       "error": null
     },
     "4203.T": {
-      "margin_ratio": 8.75,
-      "long_balance": 285100,
-      "short_balance": 32600,
-      "date": "2026/10/2",
+      "margin_ratio": 4.88,
+      "long_balance": 307800,
+      "short_balance": 63100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.88,
+          "long_balance": 307800,
+          "short_balance": 63100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 8.75,
@@ -20891,22 +20897,22 @@
           "margin_ratio": 5.89,
           "long_balance": 134300,
           "short_balance": 22800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.94,
-          "long_balance": 133900,
-          "short_balance": 27100
         }
       ],
       "error": null
     },
     "6728.T": {
-      "margin_ratio": 4.52,
-      "long_balance": 222800,
-      "short_balance": 49300,
-      "date": "2026/10/2",
+      "margin_ratio": 4.42,
+      "long_balance": 177600,
+      "short_balance": 40200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 4.42,
+          "long_balance": 177600,
+          "short_balance": 40200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 4.52,
@@ -21020,22 +21026,22 @@
           "margin_ratio": 6.6,
           "long_balance": 137200,
           "short_balance": 20800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 6.71,
-          "long_balance": 136800,
-          "short_balance": 20400
         }
       ],
       "error": null
     },
     "4062.T": {
-      "margin_ratio": 2.24,
-      "long_balance": 3222100,
-      "short_balance": 1437000,
-      "date": "2026/10/2",
+      "margin_ratio": 3.06,
+      "long_balance": 3510400,
+      "short_balance": 1148100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 3.06,
+          "long_balance": 3510400,
+          "short_balance": 1148100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.24,
@@ -21149,22 +21155,22 @@
           "margin_ratio": 1.74,
           "long_balance": 1432100,
           "short_balance": 821500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.87,
-          "long_balance": 1414500,
-          "short_balance": 758100
         }
       ],
       "error": null
     },
     "6981.T": {
-      "margin_ratio": 5.97,
-      "long_balance": 6239100,
-      "short_balance": 1044900,
-      "date": "2026/10/2",
+      "margin_ratio": 9.5,
+      "long_balance": 7602100,
+      "short_balance": 800000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 9.5,
+          "long_balance": 7602100,
+          "short_balance": 800000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.97,
@@ -21278,22 +21284,22 @@
           "margin_ratio": 3.03,
           "long_balance": 4535500,
           "short_balance": 1499300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.33,
-          "long_balance": 2641900,
-          "short_balance": 609700
         }
       ],
       "error": null
     },
     "6526.T": {
-      "margin_ratio": 5.14,
-      "long_balance": 5526200,
-      "short_balance": 1076100,
-      "date": "2026/10/2",
+      "margin_ratio": 5.77,
+      "long_balance": 5464800,
+      "short_balance": 947700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.77,
+          "long_balance": 5464800,
+          "short_balance": 947700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.14,
@@ -21407,22 +21413,22 @@
           "margin_ratio": 5.14,
           "long_balance": 6636700,
           "short_balance": 1290000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.75,
-          "long_balance": 6170600,
-          "short_balance": 1645300
         }
       ],
       "error": null
     },
     "6762.T": {
-      "margin_ratio": 10.82,
-      "long_balance": 4919200,
-      "short_balance": 454600,
-      "date": "2026/10/2",
+      "margin_ratio": 9.8,
+      "long_balance": 5090100,
+      "short_balance": 519300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 9.8,
+          "long_balance": 5090100,
+          "short_balance": 519300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 10.82,
@@ -21536,22 +21542,22 @@
           "margin_ratio": 6.55,
           "long_balance": 3999000,
           "short_balance": 610600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.06,
-          "long_balance": 2686000,
-          "short_balance": 662300
         }
       ],
       "error": null
     },
     "6965.T": {
-      "margin_ratio": 29.58,
-      "long_balance": 2824600,
-      "short_balance": 95500,
-      "date": "2026/10/2",
+      "margin_ratio": 39.13,
+      "long_balance": 2848600,
+      "short_balance": 72800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 39.13,
+          "long_balance": 2848600,
+          "short_balance": 72800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 29.58,
@@ -21665,22 +21671,22 @@
           "margin_ratio": 16.91,
           "long_balance": 4109800,
           "short_balance": 243100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.11,
-          "long_balance": 3944400,
-          "short_balance": 325800
         }
       ],
       "error": null
     },
     "4980.T": {
-      "margin_ratio": 23.45,
-      "long_balance": 1803200,
-      "short_balance": 76900,
-      "date": "2026/10/2",
+      "margin_ratio": 31.19,
+      "long_balance": 1740600,
+      "short_balance": 55800,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 31.19,
+          "long_balance": 1740600,
+          "short_balance": 55800
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 23.45,
@@ -21794,22 +21800,22 @@
           "margin_ratio": 13.42,
           "long_balance": 1745200,
           "short_balance": 130000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.37,
-          "long_balance": 1947400,
-          "short_balance": 157400
         }
       ],
       "error": null
     },
     "6754.T": {
-      "margin_ratio": 7.52,
-      "long_balance": 777100,
-      "short_balance": 103300,
-      "date": "2026/10/2",
+      "margin_ratio": 8.8,
+      "long_balance": 775700,
+      "short_balance": 88100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.8,
+          "long_balance": 775700,
+          "short_balance": 88100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.52,
@@ -21923,22 +21929,22 @@
           "margin_ratio": 20.43,
           "long_balance": 1440200,
           "short_balance": 70500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.58,
-          "long_balance": 1385800,
-          "short_balance": 110200
         }
       ],
       "error": null
     },
     "6481.T": {
-      "margin_ratio": 8.39,
-      "long_balance": 533300,
-      "short_balance": 63600,
-      "date": "2026/10/2",
+      "margin_ratio": 8.72,
+      "long_balance": 536200,
+      "short_balance": 61500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.72,
+          "long_balance": 536200,
+          "short_balance": 61500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 8.39,
@@ -22052,22 +22058,22 @@
           "margin_ratio": 4.01,
           "long_balance": 330500,
           "short_balance": 82400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.47,
-          "long_balance": 291100,
-          "short_balance": 83900
         }
       ],
       "error": null
     },
     "5991.T": {
-      "margin_ratio": 237.49,
-      "long_balance": 1709900,
-      "short_balance": 7200,
-      "date": "2026/10/2",
+      "margin_ratio": 120.54,
+      "long_balance": 1567000,
+      "short_balance": 13000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 120.54,
+          "long_balance": 1567000,
+          "short_balance": 13000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 237.49,
@@ -22181,22 +22187,22 @@
           "margin_ratio": 24.75,
           "long_balance": 920800,
           "short_balance": 37200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 17.65,
-          "long_balance": 910900,
-          "short_balance": 51600
         }
       ],
       "error": null
     },
     "5344.T": {
-      "margin_ratio": 10.2,
-      "long_balance": 57100,
-      "short_balance": 5600,
-      "date": "2026/10/2",
+      "margin_ratio": 11.92,
+      "long_balance": 59600,
+      "short_balance": 5000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.92,
+          "long_balance": 59600,
+          "short_balance": 5000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 10.2,
@@ -22310,22 +22316,22 @@
           "margin_ratio": 0.83,
           "long_balance": 28500,
           "short_balance": 34200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.57,
-          "long_balance": 23100,
-          "short_balance": 40300
         }
       ],
       "error": null
     },
     "3132.T": {
-      "margin_ratio": 7.44,
-      "long_balance": 326600,
-      "short_balance": 43900,
-      "date": "2026/10/2",
+      "margin_ratio": 6.53,
+      "long_balance": 440000,
+      "short_balance": 67400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 6.53,
+          "long_balance": 440000,
+          "short_balance": 67400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.44,
@@ -22439,22 +22445,22 @@
           "margin_ratio": 5.27,
           "long_balance": 268700,
           "short_balance": 51000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 4.42,
-          "long_balance": 267700,
-          "short_balance": 60600
         }
       ],
       "error": null
     },
     "4043.T": {
-      "margin_ratio": 82.69,
-      "long_balance": 1447000,
-      "short_balance": 17500,
-      "date": "2026/10/2",
+      "margin_ratio": 80.51,
+      "long_balance": 1416900,
+      "short_balance": 17600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 80.51,
+          "long_balance": 1416900,
+          "short_balance": 17600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 82.69,
@@ -22568,22 +22574,22 @@
           "margin_ratio": 28.93,
           "long_balance": 1168900,
           "short_balance": 40400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 42.78,
-          "long_balance": 1048200,
-          "short_balance": 24500
         }
       ],
       "error": null
     },
     "4186.T": {
-      "margin_ratio": 14.18,
-      "long_balance": 536000,
-      "short_balance": 37800,
-      "date": "2026/10/2",
+      "margin_ratio": 15.09,
+      "long_balance": 549400,
+      "short_balance": 36400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 15.09,
+          "long_balance": 549400,
+          "short_balance": 36400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 14.18,
@@ -22697,22 +22703,22 @@
           "margin_ratio": 9.27,
           "long_balance": 561600,
           "short_balance": 60600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 10.17,
-          "long_balance": 581700,
-          "short_balance": 57200
         }
       ],
       "error": null
     },
     "4004.T": {
-      "margin_ratio": 7.05,
-      "long_balance": 759500,
-      "short_balance": 107800,
-      "date": "2026/10/2",
+      "margin_ratio": 5.74,
+      "long_balance": 788700,
+      "short_balance": 137400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.74,
+          "long_balance": 788700,
+          "short_balance": 137400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.05,
@@ -22826,22 +22832,22 @@
           "margin_ratio": 6.4,
           "long_balance": 1531200,
           "short_balance": 239100
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 5.96,
-          "long_balance": 1552500,
-          "short_balance": 260700
         }
       ],
       "error": null
     },
     "5333.T": {
-      "margin_ratio": 14.8,
-      "long_balance": 416000,
-      "short_balance": 28100,
-      "date": "2026/10/2",
+      "margin_ratio": 14.34,
+      "long_balance": 424400,
+      "short_balance": 29600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.34,
+          "long_balance": 424400,
+          "short_balance": 29600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 14.8,
@@ -22955,22 +22961,22 @@
           "margin_ratio": 12.13,
           "long_balance": 529900,
           "short_balance": 43700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.22,
-          "long_balance": 454700,
-          "short_balance": 37200
         }
       ],
       "error": null
     },
     "6361.T": {
-      "margin_ratio": 25.33,
-      "long_balance": 1504500,
-      "short_balance": 59400,
-      "date": "2026/10/2",
+      "margin_ratio": 21.46,
+      "long_balance": 1407700,
+      "short_balance": 65600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 21.46,
+          "long_balance": 1407700,
+          "short_balance": 65600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 25.33,
@@ -23084,22 +23090,22 @@
           "margin_ratio": 16.91,
           "long_balance": 671500,
           "short_balance": 39700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 14.14,
-          "long_balance": 747900,
-          "short_balance": 52900
         }
       ],
       "error": null
     },
     "6113.T": {
-      "margin_ratio": 8.0,
-      "long_balance": 214500,
-      "short_balance": 26800,
-      "date": "2026/10/2",
+      "margin_ratio": 7.53,
+      "long_balance": 203400,
+      "short_balance": 27000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 7.53,
+          "long_balance": 203400,
+          "short_balance": 27000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 8.0,
@@ -23213,22 +23219,22 @@
           "margin_ratio": 2.55,
           "long_balance": 136500,
           "short_balance": 53500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.56,
-          "long_balance": 122400,
-          "short_balance": 47900
         }
       ],
       "error": null
     },
     "6806.T": {
-      "margin_ratio": 5.21,
-      "long_balance": 17200,
-      "short_balance": 3300,
-      "date": "2026/10/2",
+      "margin_ratio": 6.6,
+      "long_balance": 19800,
+      "short_balance": 3000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 6.6,
+          "long_balance": 19800,
+          "short_balance": 3000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 5.21,
@@ -23342,22 +23348,22 @@
           "margin_ratio": 1.28,
           "long_balance": 25600,
           "short_balance": 20000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.02,
-          "long_balance": 13800,
-          "short_balance": 13500
         }
       ],
       "error": null
     },
     "5332.T": {
-      "margin_ratio": 12.01,
-      "long_balance": 737300,
-      "short_balance": 61400,
-      "date": "2026/10/2",
+      "margin_ratio": 11.33,
+      "long_balance": 727200,
+      "short_balance": 64200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.33,
+          "long_balance": 727200,
+          "short_balance": 64200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 12.01,
@@ -23471,22 +23477,22 @@
           "margin_ratio": 3.84,
           "long_balance": 440800,
           "short_balance": 114900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.81,
-          "long_balance": 283700,
-          "short_balance": 101000
         }
       ],
       "error": null
     },
     "5232.T": {
-      "margin_ratio": 7.3,
-      "long_balance": 521600,
-      "short_balance": 71500,
-      "date": "2026/10/2",
+      "margin_ratio": 8.8,
+      "long_balance": 547600,
+      "short_balance": 62200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.8,
+          "long_balance": 547600,
+          "short_balance": 62200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.3,
@@ -23600,22 +23606,22 @@
           "margin_ratio": 2.63,
           "long_balance": 91900,
           "short_balance": 35000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.38,
-          "long_balance": 68200,
-          "short_balance": 28700
         }
       ],
       "error": null
     },
     "5301.T": {
-      "margin_ratio": 2.04,
-      "long_balance": 550600,
-      "short_balance": 270500,
-      "date": "2026/10/2",
+      "margin_ratio": 2.34,
+      "long_balance": 582900,
+      "short_balance": 249500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.34,
+          "long_balance": 582900,
+          "short_balance": 249500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.04,
@@ -23729,22 +23735,22 @@
           "margin_ratio": 1.66,
           "long_balance": 404900,
           "short_balance": 243400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.65,
-          "long_balance": 393100,
-          "short_balance": 238500
         }
       ],
       "error": null
     },
     "6724.T": {
-      "margin_ratio": 0.63,
-      "long_balance": 86500,
-      "short_balance": 137500,
-      "date": "2026/10/2",
+      "margin_ratio": 0.41,
+      "long_balance": 99200,
+      "short_balance": 243300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 0.41,
+          "long_balance": 99200,
+          "short_balance": 243300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 0.63,
@@ -23858,22 +23864,22 @@
           "margin_ratio": 0.74,
           "long_balance": 204800,
           "short_balance": 275800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.49,
-          "long_balance": 118100,
-          "short_balance": 240400
         }
       ],
       "error": null
     },
     "6268.T": {
-      "margin_ratio": 35.86,
-      "long_balance": 939500,
-      "short_balance": 26200,
-      "date": "2026/10/2",
+      "margin_ratio": 38.98,
+      "long_balance": 892600,
+      "short_balance": 22900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 38.98,
+          "long_balance": 892600,
+          "short_balance": 22900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 35.86,
@@ -23987,22 +23993,22 @@
           "margin_ratio": 54.73,
           "long_balance": 1494200,
           "short_balance": 27300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 47.7,
-          "long_balance": 1507400,
-          "short_balance": 31600
         }
       ],
       "error": null
     },
     "6368.T": {
-      "margin_ratio": 7.97,
-      "long_balance": 1164600,
-      "short_balance": 146100,
-      "date": "2026/10/2",
+      "margin_ratio": 8.72,
+      "long_balance": 1213300,
+      "short_balance": 139100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.72,
+          "long_balance": 1213300,
+          "short_balance": 139100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.97,
@@ -24116,22 +24122,22 @@
           "margin_ratio": 11.14,
           "long_balance": 196000,
           "short_balance": 17600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 13.53,
-          "long_balance": 182600,
-          "short_balance": 13500
         }
       ],
       "error": null
     },
     "6134.T": {
-      "margin_ratio": 70.17,
-      "long_balance": 589400,
-      "short_balance": 8400,
-      "date": "2026/10/2",
+      "margin_ratio": 47.74,
+      "long_balance": 701800,
+      "short_balance": 14700,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 47.74,
+          "long_balance": 701800,
+          "short_balance": 14700
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 70.17,
@@ -24245,22 +24251,22 @@
           "margin_ratio": 113.78,
           "long_balance": 898900,
           "short_balance": 7900
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 55.79,
-          "long_balance": 887100,
-          "short_balance": 15900
         }
       ],
       "error": null
     },
     "5471.T": {
-      "margin_ratio": 10.79,
-      "long_balance": 512500,
-      "short_balance": 47500,
-      "date": "2026/10/2",
+      "margin_ratio": 11.33,
+      "long_balance": 637900,
+      "short_balance": 56300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 11.33,
+          "long_balance": 637900,
+          "short_balance": 56300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 10.79,
@@ -24374,22 +24380,22 @@
           "margin_ratio": 11.71,
           "long_balance": 793700,
           "short_balance": 67800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 22.79,
-          "long_balance": 884400,
-          "short_balance": 38800
         }
       ],
       "error": null
     },
     "5201.T": {
-      "margin_ratio": 58.57,
-      "long_balance": 937100,
-      "short_balance": 16000,
-      "date": "2026/10/2",
+      "margin_ratio": 68.11,
+      "long_balance": 953500,
+      "short_balance": 14000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 68.11,
+          "long_balance": 953500,
+          "short_balance": 14000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 58.57,
@@ -24503,22 +24509,22 @@
           "margin_ratio": 15.34,
           "long_balance": 567500,
           "short_balance": 37000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 13.12,
-          "long_balance": 630900,
-          "short_balance": 48100
         }
       ],
       "error": null
     },
     "5016.T": {
-      "margin_ratio": 34.59,
-      "long_balance": 23314400,
-      "short_balance": 674000,
-      "date": "2026/10/2",
+      "margin_ratio": 37.27,
+      "long_balance": 23440700,
+      "short_balance": 628900,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 37.27,
+          "long_balance": 23440700,
+          "short_balance": 628900
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 34.59,
@@ -24632,22 +24638,22 @@
           "margin_ratio": 12.85,
           "long_balance": 22344200,
           "short_balance": 1738500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 12.66,
-          "long_balance": 21257400,
-          "short_balance": 1678700
         }
       ],
       "error": null
     },
     "4182.T": {
-      "margin_ratio": 191.76,
-      "long_balance": 709500,
-      "short_balance": 3700,
-      "date": "2026/10/2",
+      "margin_ratio": 116.44,
+      "long_balance": 605500,
+      "short_balance": 5200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 116.44,
+          "long_balance": 605500,
+          "short_balance": 5200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 191.76,
@@ -24761,22 +24767,22 @@
           "margin_ratio": 4.51,
           "long_balance": 218800,
           "short_balance": 48500
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.8,
-          "long_balance": 237400,
-          "short_balance": 62500
         }
       ],
       "error": null
     },
     "5801.T": {
-      "margin_ratio": 8.09,
-      "long_balance": 15463000,
-      "short_balance": 1911400,
-      "date": "2026/10/2",
+      "margin_ratio": 18.61,
+      "long_balance": 16973000,
+      "short_balance": 912200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 18.61,
+          "long_balance": 16973000,
+          "short_balance": 912200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 8.09,
@@ -24890,22 +24896,22 @@
           "margin_ratio": 6.28,
           "long_balance": 2008400,
           "short_balance": 319600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.79,
-          "long_balance": 1520900,
-          "short_balance": 401100
         }
       ],
       "error": null
     },
     "2531.T": {
-      "margin_ratio": 0.17,
-      "long_balance": 48800,
-      "short_balance": 286500,
-      "date": "2026/10/2",
+      "margin_ratio": 0.19,
+      "long_balance": 52700,
+      "short_balance": 271600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 0.19,
+          "long_balance": 52700,
+          "short_balance": 271600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 0.17,
@@ -25019,22 +25025,22 @@
           "margin_ratio": 0.26,
           "long_balance": 104000,
           "short_balance": 401600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.18,
-          "long_balance": 88300,
-          "short_balance": 499900
         }
       ],
       "error": null
     },
     "6856.T": {
-      "margin_ratio": 7.05,
-      "long_balance": 54300,
-      "short_balance": 7700,
-      "date": "2026/10/2",
+      "margin_ratio": 5.56,
+      "long_balance": 45000,
+      "short_balance": 8100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 5.56,
+          "long_balance": 45000,
+          "short_balance": 8100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 7.05,
@@ -25148,22 +25154,22 @@
           "margin_ratio": 2.2,
           "long_balance": 34300,
           "short_balance": 15600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 1.9,
-          "long_balance": 34700,
-          "short_balance": 18300
         }
       ],
       "error": null
     },
     "5334.T": {
-      "margin_ratio": 9.21,
-      "long_balance": 1296200,
-      "short_balance": 140800,
-      "date": "2026/10/2",
+      "margin_ratio": 14.23,
+      "long_balance": 1238000,
+      "short_balance": 87000,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 14.23,
+          "long_balance": 1238000,
+          "short_balance": 87000
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 9.21,
@@ -25277,22 +25283,22 @@
           "margin_ratio": 2.84,
           "long_balance": 243000,
           "short_balance": 85600
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 2.83,
-          "long_balance": 233700,
-          "short_balance": 82600
         }
       ],
       "error": null
     },
     "3105.T": {
-      "margin_ratio": 2.21,
-      "long_balance": 266600,
-      "short_balance": 120600,
-      "date": "2026/10/2",
+      "margin_ratio": 2.39,
+      "long_balance": 288900,
+      "short_balance": 121100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.39,
+          "long_balance": 288900,
+          "short_balance": 121100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.21,
@@ -25406,22 +25412,22 @@
           "margin_ratio": 6.74,
           "long_balance": 476500,
           "short_balance": 70700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 3.13,
-          "long_balance": 498000,
-          "short_balance": 159100
         }
       ],
       "error": null
     },
     "6141.T": {
-      "margin_ratio": 70.62,
-      "long_balance": 2076100,
-      "short_balance": 29400,
-      "date": "2026/10/2",
+      "margin_ratio": 76.48,
+      "long_balance": 2164300,
+      "short_balance": 28300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 76.48,
+          "long_balance": 2164300,
+          "short_balance": 28300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 70.62,
@@ -25535,22 +25541,22 @@
           "margin_ratio": 10.35,
           "long_balance": 669900,
           "short_balance": 64700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 8.82,
-          "long_balance": 656900,
-          "short_balance": 74500
         }
       ],
       "error": null
     },
     "6504.T": {
-      "margin_ratio": 25.71,
-      "long_balance": 419000,
-      "short_balance": 16300,
-      "date": "2026/10/2",
+      "margin_ratio": 16.0,
+      "long_balance": 404700,
+      "short_balance": 25300,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 16.0,
+          "long_balance": 404700,
+          "short_balance": 25300
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 25.71,
@@ -25664,22 +25670,22 @@
           "margin_ratio": 13.45,
           "long_balance": 567700,
           "short_balance": 42200
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 7.26,
-          "long_balance": 332500,
-          "short_balance": 45800
         }
       ],
       "error": null
     },
     "9962.T": {
-      "margin_ratio": 2.06,
-      "long_balance": 51900,
-      "short_balance": 25200,
-      "date": "2026/10/2",
+      "margin_ratio": 1.68,
+      "long_balance": 49200,
+      "short_balance": 29200,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 1.68,
+          "long_balance": 49200,
+          "short_balance": 29200
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 2.06,
@@ -25793,22 +25799,22 @@
           "margin_ratio": 1.19,
           "long_balance": 52500,
           "short_balance": 44000
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 0.81,
-          "long_balance": 60800,
-          "short_balance": 74800
         }
       ],
       "error": null
     },
     "6674.T": {
-      "margin_ratio": 43.95,
-      "long_balance": 641700,
-      "short_balance": 14600,
-      "date": "2026/10/2",
+      "margin_ratio": 40.68,
+      "long_balance": 626400,
+      "short_balance": 15400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 40.68,
+          "long_balance": 626400,
+          "short_balance": 15400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 43.95,
@@ -25922,22 +25928,22 @@
           "margin_ratio": 14.16,
           "long_balance": 444700,
           "short_balance": 31400
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 15.26,
-          "long_balance": 463800,
-          "short_balance": 30400
         }
       ],
       "error": null
     },
     "6269.T": {
-      "margin_ratio": 31.1,
-      "long_balance": 1610800,
-      "short_balance": 51800,
-      "date": "2026/10/2",
+      "margin_ratio": 46.65,
+      "long_balance": 1590900,
+      "short_balance": 34100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 46.65,
+          "long_balance": 1590900,
+          "short_balance": 34100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 31.1,
@@ -26051,22 +26057,22 @@
           "margin_ratio": 30.72,
           "long_balance": 1683700,
           "short_balance": 54800
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 32.16,
-          "long_balance": 1717200,
-          "short_balance": 53400
         }
       ],
       "error": null
     },
     "7911.T": {
-      "margin_ratio": 8.36,
-      "long_balance": 820200,
-      "short_balance": 98100,
-      "date": "2026/10/2",
+      "margin_ratio": 8.9,
+      "long_balance": 695100,
+      "short_balance": 78100,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.9,
+          "long_balance": 695100,
+          "short_balance": 78100
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 8.36,
@@ -26180,22 +26186,22 @@
           "margin_ratio": 23.73,
           "long_balance": 301400,
           "short_balance": 12700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 29.96,
-          "long_balance": 341600,
-          "short_balance": 11400
         }
       ],
       "error": null
     },
     "8136.T": {
-      "margin_ratio": 13.63,
-      "long_balance": 18504600,
-      "short_balance": 1357400,
-      "date": "2026/10/2",
+      "margin_ratio": 9.52,
+      "long_balance": 16005800,
+      "short_balance": 1680400,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 9.52,
+          "long_balance": 16005800,
+          "short_balance": 1680400
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 13.63,
@@ -26309,22 +26315,22 @@
           "margin_ratio": 31.05,
           "long_balance": 44532800,
           "short_balance": 1434300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 27.91,
-          "long_balance": 43864000,
-          "short_balance": 1571600
         }
       ],
       "error": null
     },
     "7012.T": {
-      "margin_ratio": 28.47,
-      "long_balance": 19432000,
-      "short_balance": 682500,
-      "date": "2026/10/2",
+      "margin_ratio": 32.52,
+      "long_balance": 21386100,
+      "short_balance": 657600,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 32.52,
+          "long_balance": 21386100,
+          "short_balance": 657600
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 28.47,
@@ -26438,22 +26444,22 @@
           "margin_ratio": 13.48,
           "long_balance": 15729100,
           "short_balance": 1166700
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 14.4,
-          "long_balance": 17138000,
-          "short_balance": 1190300
         }
       ],
       "error": null
     },
     "5393.T": {
-      "margin_ratio": 10.1,
-      "long_balance": 120200,
-      "short_balance": 11900,
-      "date": "2026/10/2",
+      "margin_ratio": 8.97,
+      "long_balance": 112100,
+      "short_balance": 12500,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 8.97,
+          "long_balance": 112100,
+          "short_balance": 12500
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 10.1,
@@ -26567,22 +26573,22 @@
           "margin_ratio": 10.33,
           "long_balance": 106400,
           "short_balance": 10300
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 7.84,
-          "long_balance": 109800,
-          "short_balance": 14000
         }
       ],
       "error": null
     },
     "2564.T": {
-      "margin_ratio": 1.87,
-      "long_balance": 6773,
-      "short_balance": 3627,
-      "date": "2026/10/2",
+      "margin_ratio": 2.28,
+      "long_balance": 9170,
+      "short_balance": 4029,
+      "date": "2026/10/9",
       "rows": [
+        {
+          "date": "2026/10/9",
+          "margin_ratio": 2.28,
+          "long_balance": 9170,
+          "short_balance": 4029
+        },
         {
           "date": "2026/10/2",
           "margin_ratio": 1.87,
@@ -26696,12 +26702,6 @@
           "margin_ratio": 4.1,
           "long_balance": 13442,
           "short_balance": 3277
-        },
-        {
-          "date": "2026/5/22",
-          "margin_ratio": 531.26,
-          "long_balance": 14344,
-          "short_balance": 27
         }
       ],
       "error": null
