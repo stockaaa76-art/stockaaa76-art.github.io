@@ -1,12 +1,12 @@
 {
   "composite": {
-    "score": 54.3,
+    "score": 56.8,
     "label": "中立",
     "signal": "neutral"
   },
   "vix": {
-    "value": 16.68,
-    "change": -3.64,
+    "value": 19.03,
+    "change": 14.09,
     "score": 55,
     "label": "中立",
     "flow_level": "normal",
@@ -16,29 +16,29 @@
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 158.19,
-      "change": -0.05,
-      "score": 59.7
+      "value": 156.25,
+      "change": -1.19,
+      "score": 54.0
     },
     "gold": {
       "name": "金先物",
-      "value": 4142.7,
-      "change": 0.0,
-      "score": 50.0
+      "value": 4037.8,
+      "change": -2.7,
+      "score": 58.1
     },
     "oil": {
       "name": "原油WTI",
-      "value": 97.98,
-      "change": -3.74,
-      "score": 57.5
+      "value": 99.29,
+      "change": 2.2,
+      "score": 45.6
     },
     "us10y": {
       "name": "米10年債利回り",
-      "value": 5.15,
-      "change": 0.57,
-      "score": 45.5
+      "value": 4.95,
+      "change": -3.75,
+      "score": 80.0
     },
-    "avg_score": 53.2
+    "avg_score": 59.4
   },
   "market_volume": {
     "dates": [
@@ -163,15 +163,15 @@
       1264149675,
       1302935446,
       1315343822,
-      14786051
+      1330456160
     ],
-    "latest": 14786051,
-    "ma25": 1405389078,
-    "latest_vs_ma25_pct": 1.1,
+    "latest": 1330456160,
+    "ma25": 1458015882,
+    "latest_vs_ma25_pct": 91.3,
     "ticker_count": 207,
     "note": "JP個別株(.T)の日次出来高合算。市場全体の活況度・出来高急増日は転換点になりやすい。"
   },
   "vix_flow_level": "normal",
   "vix_flow_label": null,
-  "generated_at": "2026-10-22 00:08:10"
+  "generated_at": "2026-10-23 00:07:36"
 }
