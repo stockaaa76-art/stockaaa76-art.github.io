@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18 23:56:00",
+  "generated_at": "2026-10-25 23:55:18",
   "patterns": [
     {
       "id": "ai_boom",
@@ -1254,39 +1254,6 @@
       }
     },
     {
-      "ticker": "6594.T",
-      "name": "Nidec Corporation",
-      "sector": "Industrials",
-      "latest_growth_pct": 11.11,
-      "avg_growth_pct": 10.9,
-      "pattern_matches": [
-        {
-          "pattern_id": "streaming_wars",
-          "pattern_name": "ストリーミング戦争（2019-2022）",
-          "market_theme": "コンテンツ・エンタメ",
-          "similarity_score": 61.1
-        },
-        {
-          "pattern_id": "fintech_growth",
-          "pattern_name": "フィンテック拡大期（2019-2023）",
-          "market_theme": "フィンテック・決済",
-          "similarity_score": 45.6
-        },
-        {
-          "pattern_id": "cloud_adoption",
-          "pattern_name": "クラウド普及期（2018-2022）",
-          "market_theme": "クラウド・SaaS",
-          "similarity_score": 45.1
-        }
-      ],
-      "best_pattern": {
-        "pattern_id": "streaming_wars",
-        "pattern_name": "ストリーミング戦争（2019-2022）",
-        "market_theme": "コンテンツ・エンタメ",
-        "similarity_score": 61.1
-      }
-    },
-    {
       "ticker": "4507.T",
       "name": "Shionogi & Co., Ltd.",
       "sector": "Healthcare",
@@ -1548,6 +1515,39 @@
         "pattern_name": "ストリーミング戦争（2019-2022）",
         "market_theme": "コンテンツ・エンタメ",
         "similarity_score": 53.5
+      }
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco Wholesale Corporation",
+      "sector": "Consumer Defensive",
+      "latest_growth_pct": 10.14,
+      "avg_growth_pct": 7.79,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 52.9
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 39.9
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 39.5
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 52.9
       }
     },
     {
@@ -2013,39 +2013,6 @@
       }
     },
     {
-      "ticker": "COST",
-      "name": "Costco Wholesale Corporation",
-      "sector": "Consumer Defensive",
-      "latest_growth_pct": 8.18,
-      "avg_growth_pct": 6.65,
-      "pattern_matches": [
-        {
-          "pattern_id": "streaming_wars",
-          "pattern_name": "ストリーミング戦争（2019-2022）",
-          "market_theme": "コンテンツ・エンタメ",
-          "similarity_score": 45.3
-        },
-        {
-          "pattern_id": "fintech_growth",
-          "pattern_name": "フィンテック拡大期（2019-2023）",
-          "market_theme": "フィンテック・決済",
-          "similarity_score": 34.6
-        },
-        {
-          "pattern_id": "cloud_adoption",
-          "pattern_name": "クラウド普及期（2018-2022）",
-          "market_theme": "クラウド・SaaS",
-          "similarity_score": 34.2
-        }
-      ],
-      "best_pattern": {
-        "pattern_id": "streaming_wars",
-        "pattern_name": "ストリーミング戦争（2019-2022）",
-        "market_theme": "コンテンツ・エンタメ",
-        "similarity_score": 45.3
-      }
-    },
-    {
       "ticker": "2768.T",
       "name": "Sojitz Corporation",
       "sector": "Industrials",
@@ -2310,39 +2277,6 @@
       }
     },
     {
-      "ticker": "8766.T",
-      "name": "Tokio Marine Holdings, Inc.",
-      "sector": "Financial Services",
-      "latest_growth_pct": 6.51,
-      "avg_growth_pct": 9.61,
-      "pattern_matches": [
-        {
-          "pattern_id": "streaming_wars",
-          "pattern_name": "ストリーミング戦争（2019-2022）",
-          "market_theme": "コンテンツ・エンタメ",
-          "similarity_score": 40.6
-        },
-        {
-          "pattern_id": "fintech_growth",
-          "pattern_name": "フィンテック拡大期（2019-2023）",
-          "market_theme": "フィンテック・決済",
-          "similarity_score": 29.8
-        },
-        {
-          "pattern_id": "cloud_adoption",
-          "pattern_name": "クラウド普及期（2018-2022）",
-          "market_theme": "クラウド・SaaS",
-          "similarity_score": 29.4
-        }
-      ],
-      "best_pattern": {
-        "pattern_id": "streaming_wars",
-        "pattern_name": "ストリーミング戦争（2019-2022）",
-        "market_theme": "コンテンツ・エンタメ",
-        "similarity_score": 40.6
-      }
-    },
-    {
       "ticker": "7203.T",
       "name": "Toyota Motor Corporation",
       "sector": "Consumer Cyclical",
@@ -2475,39 +2409,6 @@
       }
     },
     {
-      "ticker": "ACN",
-      "name": "Accenture plc",
-      "sector": "Technology",
-      "latest_growth_pct": 7.41,
-      "avg_growth_pct": 4.24,
-      "pattern_matches": [
-        {
-          "pattern_id": "streaming_wars",
-          "pattern_name": "ストリーミング戦争（2019-2022）",
-          "market_theme": "コンテンツ・エンタメ",
-          "similarity_score": 38.8
-        },
-        {
-          "pattern_id": "fintech_growth",
-          "pattern_name": "フィンテック拡大期（2019-2023）",
-          "market_theme": "フィンテック・決済",
-          "similarity_score": 30.1
-        },
-        {
-          "pattern_id": "cloud_adoption",
-          "pattern_name": "クラウド普及期（2018-2022）",
-          "market_theme": "クラウド・SaaS",
-          "similarity_score": 29.8
-        }
-      ],
-      "best_pattern": {
-        "pattern_id": "streaming_wars",
-        "pattern_name": "ストリーミング戦争（2019-2022）",
-        "market_theme": "コンテンツ・エンタメ",
-        "similarity_score": 38.8
-      }
-    },
-    {
       "ticker": "IBM",
       "name": "International Business Machines Corporation",
       "sector": "Technology",
@@ -2604,6 +2505,39 @@
         "pattern_name": "ストリーミング戦争（2019-2022）",
         "market_theme": "コンテンツ・エンタメ",
         "similarity_score": 38.0
+      }
+    },
+    {
+      "ticker": "ACN",
+      "name": "Accenture plc",
+      "sector": "Technology",
+      "latest_growth_pct": 6.47,
+      "avg_growth_pct": 4.99,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 37.4
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 29.1
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 28.8
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 37.4
       }
     },
     {
@@ -2835,6 +2769,39 @@
         "pattern_name": "ストリーミング戦争（2019-2022）",
         "market_theme": "コンテンツ・エンタメ",
         "similarity_score": 31.9
+      }
+    },
+    {
+      "ticker": "8766.T",
+      "name": "Tokio Marine Holdings, Inc.",
+      "sector": "Financial Services",
+      "latest_growth_pct": 4.46,
+      "avg_growth_pct": 7.96,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 31.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 23.7
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 23.4
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 31.8
       }
     },
     {
@@ -3396,6 +3363,39 @@
         "pattern_name": "ストリーミング戦争（2019-2022）",
         "market_theme": "コンテンツ・エンタメ",
         "similarity_score": 27.9
+      }
+    },
+    {
+      "ticker": "6594.T",
+      "name": "Nidec Corporation",
+      "sector": "Industrials",
+      "latest_growth_pct": 3.93,
+      "avg_growth_pct": 6.54,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 27.8
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 20.9
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 20.6
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 27.8
       }
     },
     {
@@ -5576,39 +5576,6 @@
       }
     },
     {
-      "ticker": "6594.T",
-      "name": "Nidec Corporation",
-      "sector": "Industrials",
-      "latest_growth_pct": 11.11,
-      "avg_growth_pct": 10.9,
-      "pattern_matches": [
-        {
-          "pattern_id": "streaming_wars",
-          "pattern_name": "ストリーミング戦争（2019-2022）",
-          "market_theme": "コンテンツ・エンタメ",
-          "similarity_score": 61.1
-        },
-        {
-          "pattern_id": "fintech_growth",
-          "pattern_name": "フィンテック拡大期（2019-2023）",
-          "market_theme": "フィンテック・決済",
-          "similarity_score": 45.6
-        },
-        {
-          "pattern_id": "cloud_adoption",
-          "pattern_name": "クラウド普及期（2018-2022）",
-          "market_theme": "クラウド・SaaS",
-          "similarity_score": 45.1
-        }
-      ],
-      "best_pattern": {
-        "pattern_id": "streaming_wars",
-        "pattern_name": "ストリーミング戦争（2019-2022）",
-        "market_theme": "コンテンツ・エンタメ",
-        "similarity_score": 61.1
-      }
-    },
-    {
       "ticker": "4507.T",
       "name": "Shionogi & Co., Ltd.",
       "sector": "Healthcare",
@@ -5870,6 +5837,39 @@
         "pattern_name": "ストリーミング戦争（2019-2022）",
         "market_theme": "コンテンツ・エンタメ",
         "similarity_score": 53.5
+      }
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco Wholesale Corporation",
+      "sector": "Consumer Defensive",
+      "latest_growth_pct": 10.14,
+      "avg_growth_pct": 7.79,
+      "pattern_matches": [
+        {
+          "pattern_id": "streaming_wars",
+          "pattern_name": "ストリーミング戦争（2019-2022）",
+          "market_theme": "コンテンツ・エンタメ",
+          "similarity_score": 52.9
+        },
+        {
+          "pattern_id": "fintech_growth",
+          "pattern_name": "フィンテック拡大期（2019-2023）",
+          "market_theme": "フィンテック・決済",
+          "similarity_score": 39.9
+        },
+        {
+          "pattern_id": "cloud_adoption",
+          "pattern_name": "クラウド普及期（2018-2022）",
+          "market_theme": "クラウド・SaaS",
+          "similarity_score": 39.5
+        }
+      ],
+      "best_pattern": {
+        "pattern_id": "streaming_wars",
+        "pattern_name": "ストリーミング戦争（2019-2022）",
+        "market_theme": "コンテンツ・エンタメ",
+        "similarity_score": 52.9
       }
     },
     {

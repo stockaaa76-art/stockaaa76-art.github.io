@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18 23:55:54",
+  "generated_at": "2026-10-25 23:55:13",
   "total_count": 182,
   "stocks": [
     {
@@ -1958,10 +1958,6 @@
       "revenue_unit": "億円",
       "revenues": [
         {
-          "date": "2022-03-31",
-          "revenue_jpy": 19181
-        },
-        {
           "date": "2023-03-31",
           "revenue_jpy": 22428
         },
@@ -1971,16 +1967,20 @@
         },
         {
           "date": "2025-03-31",
-          "revenue_jpy": 26078
+          "revenue_jpy": 26063
+        },
+        {
+          "date": "2026-03-31",
+          "revenue_jpy": 27087
         }
       ],
       "growth_rates": [
-        16.93,
         4.65,
-        11.11
+        11.04,
+        3.93
       ],
-      "latest_growth_pct": 11.11,
-      "avg_growth_pct": 10.9
+      "latest_growth_pct": 3.93,
+      "avg_growth_pct": 6.54
     },
     {
       "ticker": "9434.T",
@@ -2095,24 +2095,24 @@
         },
         {
           "date": "2024-03-31",
-          "revenue_jpy": 70803
+          "revenue_jpy": 71532
         },
         {
           "date": "2025-03-31",
-          "revenue_jpy": 78025
+          "revenue_jpy": 75918
         },
         {
           "date": "2026-03-31",
-          "revenue_jpy": 83101
+          "revenue_jpy": 79306
         }
       ],
       "growth_rates": [
-        12.13,
-        10.2,
-        6.51
+        13.29,
+        6.13,
+        4.46
       ],
-      "latest_growth_pct": 6.51,
-      "avg_growth_pct": 9.61
+      "latest_growth_pct": 4.46,
+      "avg_growth_pct": 7.96
     },
     {
       "ticker": "8031.T",
@@ -5621,10 +5621,6 @@
       "revenue_unit": "億USD",
       "revenues": [
         {
-          "date": "2022-08-31",
-          "revenue_native": 2269
-        },
-        {
           "date": "2023-08-31",
           "revenue_native": 2422
         },
@@ -5635,15 +5631,19 @@
         {
           "date": "2025-08-31",
           "revenue_native": 2752
+        },
+        {
+          "date": "2026-08-31",
+          "revenue_native": 3031
         }
       ],
       "growth_rates": [
-        6.74,
         5.04,
-        8.18
+        8.18,
+        10.14
       ],
-      "latest_growth_pct": 8.18,
-      "avg_growth_pct": 6.65
+      "latest_growth_pct": 10.14,
+      "avg_growth_pct": 7.79
     },
     {
       "ticker": "ACN",
@@ -5653,10 +5653,6 @@
       "currency": "USD",
       "revenue_unit": "億USD",
       "revenues": [
-        {
-          "date": "2022-08-31",
-          "revenue_native": 615
-        },
         {
           "date": "2023-08-31",
           "revenue_native": 641
@@ -5668,15 +5664,19 @@
         {
           "date": "2025-08-31",
           "revenue_native": 696
+        },
+        {
+          "date": "2026-08-31",
+          "revenue_native": 741
         }
       ],
       "growth_rates": [
-        4.23,
         1.09,
-        7.41
+        7.41,
+        6.47
       ],
-      "latest_growth_pct": 7.41,
-      "avg_growth_pct": 4.24
+      "latest_growth_pct": 6.47,
+      "avg_growth_pct": 4.99
     },
     {
       "ticker": "LOW",
