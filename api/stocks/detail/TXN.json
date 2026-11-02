@@ -1,69 +1,69 @@
 {
  "sector": "米-テクノロジー",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 28.8,
-  "sector_per_p90": 161.3,
-  "sector_pbr_median": 10.91,
-  "sector_pbr_p90": 45.34
+  "sector_per_median": 25.9,
+  "sector_per_p90": 128.8,
+  "sector_pbr_median": 8.32,
+  "sector_pbr_p90": 45.26
  },
  "forecast": {
   "revenue": {
-   "cur_year": 21913188360.0,
-   "next_year": 24927579060.0
+   "cur_year": 22399337230.0,
+   "next_year": 26242547790.0
   },
   "eps": {
-   "cur_year": 8.5058,
-   "next_year": 10.1005
+   "cur_year": 9.06021,
+   "next_year": 11.55494
   },
   "growth": {
-   "next_year": 0.2544,
+   "next_year": 0.2662,
    "long_term": null
   },
   "price_target": {
-   "mean": 324.7097,
+   "mean": 336.86206,
    "high": 400.0,
-   "low": 225.0
+   "low": 250.0
   },
-  "ex_dividend_date": "2026-10-31",
+  "ex_dividend_date": "2027-01-29",
   "ex_dividend_schedule": [
-   "2026-10-31",
-   "2027-01-31",
-   "2027-05-03",
-   "2027-08-03"
+   "2027-01-29",
+   "2027-04-30",
+   "2027-07-30",
+   "2027-10-29"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 170.12,
-   "mid": 244.97,
-   "high": 1371.99
+   "low": 181.2,
+   "mid": 234.66,
+   "high": 1166.96
   },
   "y1": {
-   "low": 202.01,
-   "mid": 290.89,
-   "high": 1629.21
+   "low": 231.1,
+   "mid": 299.27,
+   "high": 1488.28
   },
   "y5": {
-   "low": 345.6,
-   "mid": 412.81,
-   "high": 480.01
+   "low": 381.06,
+   "mid": 455.15,
+   "high": 529.25
   },
   "assumptions": {
-   "eps_cur": 8.506,
-   "eps_next": 10.101,
-   "eps_5y": 19.2,
-   "growth_used": 0.2544,
-   "per_median": 28.8,
-   "per_p90": 161.3,
+   "eps_cur": 9.06,
+   "eps_next": 11.555,
+   "eps_5y": 21.17,
+   "growth_used": 0.2662,
+   "per_median": 25.9,
+   "per_p90": 128.8,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 0.5,
-  "debt_to_equity": 78.0,
-  "current_ratio": 4.86,
+  "cash_to_debt": 0.6,
+  "debt_to_equity": 70.7,
+  "current_ratio": 5.59,
   "fcf_positive": true,
   "flags": [],
   "level": "ok"

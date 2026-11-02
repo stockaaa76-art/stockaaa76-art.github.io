@@ -1,11 +1,11 @@
 {
  "sector": "Basic Materials",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 19.2,
-  "sector_per_p90": 59.1,
-  "sector_pbr_median": 1.46,
-  "sector_pbr_p90": 4.15
+  "sector_per_median": 17.4,
+  "sector_per_p90": 45.0,
+  "sector_pbr_median": 1.2,
+  "sector_pbr_p90": 3.63
  },
  "forecast": {
   "revenue": {
@@ -36,7 +36,7 @@
  "financial_health": {
   "cash_to_debt": null,
   "debt_to_equity": null,
-  "current_ratio": 26.33,
+  "current_ratio": 19.09,
   "fcf_positive": null,
   "flags": [],
   "level": "ok"

@@ -1,62 +1,62 @@
 {
  "sector": "Healthcare",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 24.7,
-  "sector_per_p90": 36.7,
-  "sector_pbr_median": 6.42,
-  "sector_pbr_p90": 11.21
+  "sector_per_median": 28.0,
+  "sector_per_p90": 39.2,
+  "sector_pbr_median": 7.3,
+  "sector_pbr_p90": 13.08
  },
  "forecast": {
   "revenue": {
-   "cur_year": 162732668290.0,
-   "next_year": 168393417440.0
+   "cur_year": 162804062960.0,
+   "next_year": 168688674590.0
   },
   "eps": {
-   "cur_year": 9.15484,
-   "next_year": 16.59234
+   "cur_year": 9.15913,
+   "next_year": 17.08832
   },
   "growth": {
-   "next_year": 0.8124,
+   "next_year": 0.8657,
    "long_term": null
   },
   "price_target": {
-   "mean": 423.73914,
-   "high": 515.0,
+   "mean": 465.125,
+   "high": 596.0,
    "low": 280.0
   },
-  "ex_dividend_date": "2026-12-25",
+  "ex_dividend_date": "2027-01-29",
   "ex_dividend_schedule": [
-   "2026-12-25",
-   "2027-03-26",
-   "2027-06-25",
-   "2027-09-24"
+   "2027-01-29",
+   "2027-04-30",
+   "2027-07-30",
+   "2027-10-29"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 183.1,
-   "mid": 226.12,
-   "high": 335.98
+   "low": 183.18,
+   "mid": 256.46,
+   "high": 359.04
   },
   "y1": {
-   "low": 331.85,
-   "mid": 409.83,
-   "high": 608.94
+   "low": 341.77,
+   "mid": 478.47,
+   "high": 669.86
   },
   "y5": {
-   "low": 727.54,
-   "mid": 869.0,
-   "high": 1010.47
+   "low": 727.88,
+   "mid": 869.41,
+   "high": 1010.94
   },
   "assumptions": {
-   "eps_cur": 9.155,
-   "eps_next": 16.592,
-   "eps_5y": 40.419,
+   "eps_cur": 9.159,
+   "eps_next": 17.088,
+   "eps_5y": 40.438,
    "growth_used": 0.5,
-   "per_median": 24.7,
-   "per_p90": 36.7,
+   "per_median": 28.0,
+   "per_p90": 39.2,
    "per_terminal": "18-25"
   }
  },

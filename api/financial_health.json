@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05 00:48",
+ "generated_at": "2026-11-02 01:35",
  "note": "支払余力の一次スクリーン（倒産確率の予測ではない・BT未検証）。判定=現金/総負債<0.30 / D/E>200% / 流動比率<1.0 / FCF赤字 の抵触数。2件以上=alert・1件=watch・0件=ok。⚠️高配当還元型や設備産業は業態としてフラグが立つため、それ自体は異常ではない。",
  "stocks": {
   "7203.T": {
@@ -108,10 +108,8 @@
    ]
   },
   "6752.T": {
-   "level": "watch",
-   "flags": [
-    "FCF赤字"
-   ]
+   "level": "ok",
+   "flags": []
   },
   "9022.T": {
    "level": "watch",
@@ -128,16 +126,23 @@
    "flags": []
   },
   "GOOGL": {
-   "level": "ok",
-   "flags": []
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
   },
   "GOOG": {
-   "level": "ok",
-   "flags": []
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
   },
   "AMZN": {
-   "level": "ok",
-   "flags": []
+   "level": "alert",
+   "flags": [
+    "流動性難",
+    "FCF赤字"
+   ]
   },
   "TSLA": {
    "level": "ok",
@@ -206,9 +211,8 @@
    "flags": []
   },
   "PG": {
-   "level": "alert",
+   "level": "watch",
    "flags": [
-    "現金薄",
     "流動性難"
    ]
   },
@@ -321,7 +325,8 @@
    "level": "alert",
    "flags": [
     "現金薄",
-    "流動性難"
+    "流動性難",
+    "FCF赤字"
    ]
   },
   "9766.T": {
@@ -353,10 +358,8 @@
    "flags": []
   },
   "6594.T": {
-   "level": "watch",
-   "flags": [
-    "FCF赤字"
-   ]
+   "level": "ok",
+   "flags": []
   },
   "9434.T": {
    "level": "alert",
@@ -485,8 +488,10 @@
    "flags": []
   },
   "8267.T": {
-   "level": "ok",
-   "flags": []
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
   },
   "3088.T": {
    "level": "ok",
@@ -501,9 +506,10 @@
    "flags": []
   },
   "9503.T": {
-   "level": "watch",
+   "level": "alert",
    "flags": [
-    "現金薄"
+    "現金薄",
+    "流動性難"
    ]
   },
   "9531.T": {
@@ -530,8 +536,10 @@
    "flags": []
   },
   "SLB": {
-   "level": "ok",
-   "flags": []
+   "level": "watch",
+   "flags": [
+    "現金薄"
+   ]
   },
   "5713.T": {
    "level": "alert",
@@ -620,15 +628,15 @@
    "level": "alert",
    "flags": [
     "現金薄",
-    "高レバレッジ",
-    "FCF赤字"
+    "高レバレッジ"
    ]
   },
   "3231.T": {
    "level": "alert",
    "flags": [
     "現金薄",
-    "高レバレッジ"
+    "高レバレッジ",
+    "FCF赤字"
    ]
   },
   "8952.T": {
@@ -734,14 +742,14 @@
    "flags": []
   },
   "6506.T": {
-   "level": "ok",
-   "flags": []
-  },
-  "6474.T": {
    "level": "watch",
    "flags": [
     "FCF赤字"
    ]
+  },
+  "6474.T": {
+   "level": "ok",
+   "flags": []
   },
   "MCD": {
    "level": "watch",
@@ -768,10 +776,9 @@
    ]
   },
   "PM": {
-   "level": "alert",
+   "level": "watch",
    "flags": [
-    "現金薄",
-    "流動性難"
+    "現金薄"
    ]
   },
   "CL": {
@@ -820,10 +827,8 @@
    "flags": []
   },
   "PSX": {
-   "level": "watch",
-   "flags": [
-    "現金薄"
-   ]
+   "level": "ok",
+   "flags": []
   },
   "MPC": {
    "level": "watch",
@@ -857,10 +862,8 @@
    ]
   },
   "4507.T": {
-   "level": "watch",
-   "flags": [
-    "FCF赤字"
-   ]
+   "level": "ok",
+   "flags": []
   },
   "4506.T": {
    "level": "ok",
@@ -930,7 +933,8 @@
    "level": "alert",
    "flags": [
     "現金薄",
-    "流動性難"
+    "流動性難",
+    "FCF赤字"
    ]
   },
   "4543.T": {
@@ -955,8 +959,7 @@
    "level": "alert",
    "flags": [
     "現金薄",
-    "流動性難",
-    "FCF赤字"
+    "流動性難"
    ]
   },
   "ADBE": {
@@ -986,10 +989,8 @@
    ]
   },
   "XOM": {
-   "level": "watch",
-   "flags": [
-    "現金薄"
-   ]
+   "level": "ok",
+   "flags": []
   },
   "COST": {
    "level": "ok",
@@ -1055,10 +1056,9 @@
    ]
   },
   "BMY": {
-   "level": "alert",
+   "level": "watch",
    "flags": [
-    "現金薄",
-    "高レバレッジ"
+    "現金薄"
    ]
   },
   "XLF": {
@@ -1122,10 +1122,8 @@
    "flags": []
   },
   "6723.T": {
-   "level": "watch",
-   "flags": [
-    "FCF赤字"
-   ]
+   "level": "ok",
+   "flags": []
   },
   "7735.T": {
    "level": "ok",
@@ -1251,8 +1249,10 @@
    "flags": []
   },
   "5344.T": {
-   "level": "ok",
-   "flags": []
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
   },
   "3132.T": {
    "level": "watch",
@@ -1323,8 +1323,10 @@
    "flags": []
   },
   "5471.T": {
-   "level": "ok",
-   "flags": []
+   "level": "watch",
+   "flags": [
+    "FCF赤字"
+   ]
   },
   "5201.T": {
    "level": "watch",
@@ -1347,10 +1349,8 @@
    ]
   },
   "2531.T": {
-   "level": "watch",
-   "flags": [
-    "FCF赤字"
-   ]
+   "level": "ok",
+   "flags": []
   },
   "6856.T": {
    "level": "ok",
@@ -1365,11 +1365,9 @@
    "flags": []
   },
   "6141.T": {
-   "level": "alert",
+   "level": "watch",
    "flags": [
-    "現金薄",
-    "流動性難",
-    "FCF赤字"
+    "流動性難"
    ]
   },
   "6504.T": {
@@ -1493,10 +1491,8 @@
    "flags": []
   },
   "PWR": {
-   "level": "watch",
-   "flags": [
-    "現金薄"
-   ]
+   "level": "ok",
+   "flags": []
   },
   "FIX": {
    "level": "ok",

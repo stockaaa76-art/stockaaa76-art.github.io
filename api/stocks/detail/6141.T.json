@@ -1,11 +1,11 @@
 {
  "sector": "Industrials",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 28.1,
-  "sector_per_p90": 49.8,
-  "sector_pbr_median": 2.73,
-  "sector_pbr_p90": 10.55
+  "sector_per_median": 22.0,
+  "sector_per_p90": 39.3,
+  "sector_pbr_median": 2.17,
+  "sector_pbr_p90": 8.87
  },
  "forecast": {
   "revenue": {
@@ -13,16 +13,16 @@
    "next_year": 615740000000.0
   },
   "eps": {
-   "cur_year": 109.1063,
-   "next_year": 180.18364
+   "cur_year": 103.52294,
+   "next_year": 175.6321
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 3348.0,
-   "high": 4500.0,
+   "mean": 3188.0,
+   "high": 3700.0,
    "low": 2300.0
   },
   "ex_dividend_date": "2026-12-29",
@@ -34,40 +34,38 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 2182.13,
-   "mid": 3065.89,
-   "high": 5433.49
+   "low": 2070.46,
+   "mid": 2277.5,
+   "high": 4068.45
   },
   "y1": {
-   "low": 3603.67,
-   "mid": 5063.16,
-   "high": 8973.15
+   "low": 3512.64,
+   "mid": 3863.91,
+   "high": 6902.34
   },
   "y5": {
-   "low": 8670.69,
-   "mid": 10356.66,
-   "high": 12042.62
+   "low": 8226.98,
+   "mid": 9826.67,
+   "high": 11426.36
   },
   "assumptions": {
-   "eps_cur": 109.106,
-   "eps_next": 180.184,
-   "eps_5y": 481.705,
+   "eps_cur": 103.523,
+   "eps_next": 175.632,
+   "eps_5y": 457.054,
    "growth_used": 0.5,
-   "per_median": 28.1,
-   "per_p90": 49.8,
+   "per_median": 22.0,
+   "per_p90": 39.3,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 0.27,
-  "debt_to_equity": 34.8,
-  "current_ratio": 0.93,
-  "fcf_positive": false,
+  "cash_to_debt": 0.37,
+  "debt_to_equity": 27.5,
+  "current_ratio": 0.96,
+  "fcf_positive": true,
   "flags": [
-   "現金薄",
-   "流動性難",
-   "FCF赤字"
+   "流動性難"
   ],
-  "level": "alert"
+  "level": "watch"
  }
 }

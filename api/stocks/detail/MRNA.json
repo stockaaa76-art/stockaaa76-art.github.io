@@ -1,28 +1,28 @@
 {
  "sector": "Healthcare",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 24.7,
-  "sector_per_p90": 36.7,
-  "sector_pbr_median": 6.42,
-  "sector_pbr_p90": 11.21
+  "sector_per_median": 28.0,
+  "sector_per_p90": 39.2,
+  "sector_pbr_median": 7.3,
+  "sector_pbr_p90": 13.08
  },
  "forecast": {
   "revenue": {
-   "cur_year": 2101158050.0,
-   "next_year": 2433926800.0
+   "cur_year": 2101977460.0,
+   "next_year": 2443741010.0
   },
   "eps": {
-   "cur_year": -8.38721,
-   "next_year": -4.79116
+   "cur_year": -8.4936,
+   "next_year": -4.89741
   },
   "growth": {
-   "next_year": 0.47,
+   "next_year": 0.4627,
    "long_term": null
   },
   "price_target": {
-   "mean": 120.66667,
-   "high": 170.0,
+   "mean": 138.36842,
+   "high": 251.0,
    "low": 45.0
   }
  },

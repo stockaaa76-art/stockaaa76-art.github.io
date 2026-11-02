@@ -1,15 +1,15 @@
 {
  "sector": "日本-鉄鋼・非鉄",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 20.6,
-  "sector_per_p90": 197.1,
-  "sector_pbr_median": 2.5,
-  "sector_pbr_p90": 15.08
+  "sector_per_median": 12.4,
+  "sector_per_p90": 41.3,
+  "sector_pbr_median": 1.84,
+  "sector_pbr_p90": 10.67
  },
  "forecast": {
   "revenue": {
-   "cur_year": 447596008330.0,
+   "cur_year": 447308757810.0,
    "next_year": 483972592190.0
   },
   "eps": {
@@ -35,9 +35,9 @@
  "theoretical_price": {
   "now": null,
   "y1": {
-   "low": 1686.31,
-   "mid": 1736.9,
-   "high": 16618.59
+   "low": 1045.51,
+   "mid": 1045.51,
+   "high": 3482.23
   },
   "y5": null,
   "assumptions": {
@@ -45,8 +45,8 @@
    "eps_next": 84.316,
    "eps_5y": null,
    "growth_used": null,
-   "per_median": 20.6,
-   "per_p90": 197.1,
+   "per_median": 12.4,
+   "per_p90": 41.3,
    "per_terminal": "18-25"
   }
  },

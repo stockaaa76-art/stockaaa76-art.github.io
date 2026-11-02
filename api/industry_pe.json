@@ -1,211 +1,211 @@
 {
- "generated_at": "2026-10-05 00:48",
- "month": "2026-10",
+ "generated_at": "2026-11-02 01:35",
+ "month": "2026-11",
  "n_tickers": 332,
  "note": "予測ユニバースの業種別 PER/PBR 分布（月次）。外れ値は除外（PER>500・PBR>50・マイナスを除く）。⚠️中央値との比較は割安/割高の目安であって、将来リターンの予測ではない（BT未検証）。",
  "sectors": {
   "Technology": {
-   "n": 41,
-   "per_median": 39.5,
-   "per_p90": 81.8,
-   "pbr_median": 5.29,
-   "pbr_p90": 20.71
+   "n": 42,
+   "per_median": 31.4,
+   "per_p90": 59.4,
+   "pbr_median": 4.3,
+   "pbr_p90": 19.34
   },
   "Industrials": {
    "n": 25,
-   "per_median": 28.1,
-   "per_p90": 49.8,
-   "pbr_median": 2.73,
-   "pbr_p90": 10.55
+   "per_median": 22.0,
+   "per_p90": 39.3,
+   "pbr_median": 2.17,
+   "pbr_p90": 8.87
   },
   "日本-電機・精密・半導体": {
    "n": 15,
-   "per_median": 32.7,
-   "per_p90": 58.1,
-   "pbr_median": 3.03,
-   "pbr_p90": 16.64
+   "per_median": 26.8,
+   "per_p90": 51.3,
+   "pbr_median": 2.8,
+   "pbr_p90": 14.8
   },
   "米-テクノロジー": {
    "n": 13,
-   "per_median": 28.8,
-   "per_p90": 161.3,
-   "pbr_median": 10.91,
-   "pbr_p90": 45.34
+   "per_median": 25.9,
+   "per_p90": 128.8,
+   "pbr_median": 8.32,
+   "pbr_p90": 45.26
   },
   "米-ヘルスケア": {
    "n": 9,
-   "per_median": 31.5,
-   "per_p90": 38.4,
-   "pbr_median": 3.42,
-   "pbr_p90": 30.07
+   "per_median": 38.4,
+   "per_p90": 46.0,
+   "pbr_median": 3.6,
+   "pbr_p90": 31.37
   },
   "Basic Materials": {
    "n": 9,
-   "per_median": 19.2,
-   "per_p90": 59.1,
-   "pbr_median": 1.46,
-   "pbr_p90": 4.15
+   "per_median": 17.4,
+   "per_p90": 45.0,
+   "pbr_median": 1.2,
+   "pbr_p90": 3.63
   },
   "日本-銀行・金融": {
    "n": 8,
-   "per_median": 15.3,
-   "per_p90": 23.0,
-   "pbr_median": 1.32,
-   "pbr_p90": 1.85
+   "per_median": 14.2,
+   "per_p90": 19.6,
+   "pbr_median": 1.5,
+   "pbr_p90": 1.69
   },
   "米-通信・メディア": {
    "n": 8,
-   "per_median": 17.2,
-   "per_p90": 27.4,
-   "pbr_median": 6.69,
-   "pbr_p90": 9.26
+   "per_median": 14.6,
+   "per_p90": 22.9,
+   "pbr_median": 5.19,
+   "pbr_p90": 8.7
   },
   "米-一般消費財": {
    "n": 8,
-   "per_median": 19.8,
-   "per_p90": 343.1,
-   "pbr_median": 4.92,
-   "pbr_p90": 16.99
+   "per_median": 21.0,
+   "per_p90": 439.4,
+   "pbr_median": 4.23,
+   "pbr_p90": 19.77
   },
   "米-金融": {
    "n": 8,
-   "per_median": 14.2,
-   "per_p90": 30.7,
-   "pbr_median": 2.5,
-   "pbr_p90": 19.11
+   "per_median": 14.1,
+   "per_p90": 33.6,
+   "pbr_median": 2.55,
+   "pbr_p90": 21.23
   },
   "米-エネルギー": {
    "n": 8,
-   "per_median": 16.9,
-   "per_p90": 23.5,
-   "pbr_median": 2.77,
-   "pbr_p90": 6.27
+   "per_median": 17.3,
+   "per_p90": 26.1,
+   "pbr_median": 3.04,
+   "pbr_p90": 6.6
   },
   "日本-素材・化学": {
    "n": 7,
-   "per_median": 23.4,
-   "per_p90": 25.0,
-   "pbr_median": 1.04,
-   "pbr_p90": 4.58
+   "per_median": 18.8,
+   "per_p90": 33.5,
+   "pbr_median": 1.07,
+   "pbr_p90": 4.17
   },
   "日本-エンタメ・ゲーム": {
    "n": 7,
-   "per_median": 26.6,
-   "per_p90": 52.8,
-   "pbr_median": 2.93,
-   "pbr_p90": 6.58
+   "per_median": 23.5,
+   "per_p90": 51.7,
+   "pbr_median": 3.06,
+   "pbr_p90": 5.51
+  },
+  "日本-医薬品": {
+   "n": 7,
+   "per_median": 21.3,
+   "per_p90": 299.8,
+   "pbr_median": 1.95,
+   "pbr_p90": 5.41
   },
   "日本-機械": {
    "n": 7,
-   "per_median": 27.0,
-   "per_p90": 56.2,
-   "pbr_median": 2.17,
-   "pbr_p90": 4.17
+   "per_median": 24.0,
+   "per_p90": 39.0,
+   "pbr_median": 1.84,
+   "pbr_p90": 3.62
   },
   "米-生活必需品": {
    "n": 7,
-   "per_median": 26.9,
-   "per_p90": 44.3,
-   "pbr_median": 8.43,
-   "pbr_p90": 11.4
+   "per_median": 30.5,
+   "per_p90": 48.8,
+   "pbr_median": 9.99,
+   "pbr_p90": 12.53
   },
   "日本-不動産": {
    "n": 7,
-   "per_median": 13.5,
-   "per_p90": 20.8,
-   "pbr_median": 1.19,
-   "pbr_p90": 1.55
+   "per_median": 14.3,
+   "per_p90": 21.1,
+   "pbr_median": 1.32,
+   "pbr_p90": 1.69
   },
   "日本-ヘルスケア": {
    "n": 7,
-   "per_median": 32.1,
-   "per_p90": 189.0,
-   "pbr_median": 2.29,
-   "pbr_p90": 7.54
+   "per_median": 26.4,
+   "per_p90": 155.3,
+   "pbr_median": 2.4,
+   "pbr_p90": 8.93
   },
   "日本-小売業": {
    "n": 7,
-   "per_median": 19.7,
-   "per_p90": 47.2,
-   "pbr_median": 1.74,
-   "pbr_p90": 8.27
+   "per_median": 21.7,
+   "per_p90": 42.6,
+   "pbr_median": 1.91,
+   "pbr_p90": 8.1
   },
   "日本-金融（保険・証券）": {
    "n": 7,
-   "per_median": 14.2,
-   "per_p90": 26.1,
-   "pbr_median": 1.16,
-   "pbr_p90": 1.77
+   "per_median": 11.8,
+   "per_p90": 50.1,
+   "pbr_median": 1.19,
+   "pbr_p90": 2.02
   },
   "日本-鉄鋼・非鉄": {
    "n": 7,
-   "per_median": 20.6,
-   "per_p90": 197.1,
-   "pbr_median": 2.5,
-   "pbr_p90": 15.08
+   "per_median": 12.4,
+   "per_p90": 41.3,
+   "pbr_median": 1.84,
+   "pbr_p90": 10.67
   },
   "日本-食品": {
    "n": 7,
-   "per_median": 18.0,
-   "per_p90": 38.4,
-   "pbr_median": 1.76,
-   "pbr_p90": 6.54
+   "per_median": 18.6,
+   "per_p90": 35.4,
+   "pbr_median": 2.04,
+   "pbr_p90": 6.28
   },
   "Consumer Cyclical": {
    "n": 7,
-   "per_median": 16.2,
-   "per_p90": 29.8,
-   "pbr_median": 2.2,
-   "pbr_p90": 8.89
+   "per_median": 17.1,
+   "per_p90": 32.8,
+   "pbr_median": 2.5,
+   "pbr_p90": 9.13
   },
   "日本-情報通信・サービス": {
    "n": 6,
-   "per_median": 21.1,
-   "per_p90": 47.7,
-   "pbr_median": 2.02,
-   "pbr_p90": 13.01
-  },
-  "日本-医薬品": {
-   "n": 6,
-   "per_median": 19.3,
-   "per_p90": 34.5,
-   "pbr_median": 1.78,
-   "pbr_p90": 4.92
+   "per_median": 19.9,
+   "per_p90": 45.9,
+   "pbr_median": 1.44,
+   "pbr_p90": 14.74
   },
   "日本-商社・卸売": {
    "n": 6,
-   "per_median": 17.2,
-   "per_p90": 22.5,
-   "pbr_median": 1.79,
-   "pbr_p90": 2.68
+   "per_median": 15.1,
+   "per_p90": 20.0,
+   "pbr_median": 1.82,
+   "pbr_p90": 2.35
   },
   "日本-運輸・物流": {
    "n": 6,
-   "per_median": 14.4,
-   "per_p90": 47.4,
-   "pbr_median": 1.1,
-   "pbr_p90": 1.54
+   "per_median": 14.5,
+   "per_p90": 47.8,
+   "pbr_median": 1.11,
+   "pbr_p90": 1.6
   },
   "日本-電力・ガス": {
    "n": 6,
-   "per_median": 8.5,
-   "per_p90": 14.7,
+   "per_median": 11.6,
+   "per_p90": 24.0,
    "pbr_median": 0.82,
-   "pbr_p90": 1.19
+   "pbr_p90": 1.23
   },
   "日本-自動車・輸送機": {
    "n": 4,
-   "per_median": 19.3,
-   "per_p90": 19.4,
-   "pbr_median": 0.92,
-   "pbr_p90": 1.39
+   "per_median": 19.4,
+   "per_p90": 20.3,
+   "pbr_median": 0.97,
+   "pbr_p90": 1.34
   },
   "Healthcare": {
-   "n": 3,
-   "per_median": 24.7,
-   "per_p90": 36.7,
-   "pbr_median": 6.42,
-   "pbr_p90": 11.21
+   "n": 4,
+   "per_median": 28.0,
+   "per_p90": 39.2,
+   "pbr_median": 7.3,
+   "pbr_p90": 13.08
   }
  }
 }

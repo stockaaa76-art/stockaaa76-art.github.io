@@ -1,11 +1,11 @@
 {
  "sector": "Basic Materials",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 19.2,
-  "sector_per_p90": 59.1,
-  "sector_pbr_median": 1.46,
-  "sector_pbr_p90": 4.15
+  "sector_per_median": 17.4,
+  "sector_per_p90": 45.0,
+  "sector_pbr_median": 1.2,
+  "sector_pbr_p90": 3.63
  },
  "forecast": {
   "revenue": {
@@ -34,14 +34,14 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 2216.98,
-   "mid": 2216.98,
-   "high": 6824.13
+   "low": 2009.13,
+   "mid": 2009.13,
+   "high": 5196.04
   },
   "y1": {
-   "low": 2769.17,
-   "mid": 2769.17,
-   "high": 8523.85
+   "low": 2509.56,
+   "mid": 2509.56,
+   "high": 6490.24
   },
   "y5": {
    "low": 4618.73,
@@ -53,8 +53,8 @@
    "eps_next": 144.227,
    "eps_5y": 256.596,
    "growth_used": 0.2491,
-   "per_median": 19.2,
-   "per_p90": 59.1,
+   "per_median": 17.4,
+   "per_p90": 45.0,
    "per_terminal": "18-25"
   }
  },

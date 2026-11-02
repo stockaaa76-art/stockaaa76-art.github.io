@@ -1,28 +1,28 @@
 {
  "sector": "Consumer Cyclical",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 16.2,
-  "sector_per_p90": 29.8,
-  "sector_pbr_median": 2.2,
-  "sector_pbr_p90": 8.89
+  "sector_per_median": 17.1,
+  "sector_per_p90": 32.8,
+  "sector_pbr_median": 2.5,
+  "sector_pbr_p90": 9.13
  },
  "forecast": {
   "revenue": {
-   "cur_year": 794500876580.0,
-   "next_year": 830895871790.0
+   "cur_year": 789285442570.0,
+   "next_year": 830006913280.0
   },
   "eps": {
-   "cur_year": 313.13403,
-   "next_year": 330.69815
+   "cur_year": 333.75455,
+   "next_year": 334.55228
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 4969.25,
-   "high": 6650.0,
+   "mean": 4669.25,
+   "high": 6500.0,
    "low": 2212.5
   },
   "ex_dividend_date": "2027-03-31",
@@ -34,34 +34,34 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 5072.77,
-   "mid": 5072.77,
-   "high": 9331.39
+   "low": 5707.2,
+   "mid": 5707.2,
+   "high": 10947.15
   },
   "y1": {
-   "low": 5357.31,
-   "mid": 5357.31,
-   "high": 9854.8
+   "low": 5720.84,
+   "mid": 5720.84,
+   "high": 10973.31
   },
   "y5": {
-   "low": 6831.09,
-   "mid": 8159.35,
-   "high": 9487.62
+   "low": 6058.0,
+   "mid": 7235.95,
+   "high": 8413.89
   },
   "assumptions": {
-   "eps_cur": 313.134,
-   "eps_next": 330.698,
-   "eps_5y": 379.505,
-   "growth_used": 0.0561,
-   "per_median": 16.2,
-   "per_p90": 29.8,
+   "eps_cur": 333.755,
+   "eps_next": 334.552,
+   "eps_5y": 336.556,
+   "growth_used": 0.0024,
+   "per_median": 17.1,
+   "per_p90": 32.8,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 0.87,
-  "debt_to_equity": 28.5,
-  "current_ratio": 2.94,
+  "cash_to_debt": 0.99,
+  "debt_to_equity": 28.6,
+  "current_ratio": 3.07,
   "fcf_positive": true,
   "flags": [],
   "level": "ok"

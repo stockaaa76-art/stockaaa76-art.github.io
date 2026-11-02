@@ -1,29 +1,29 @@
 {
  "sector": "Consumer Cyclical",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 16.2,
-  "sector_per_p90": 29.8,
-  "sector_pbr_median": 2.2,
-  "sector_pbr_p90": 8.89
+  "sector_per_median": 17.1,
+  "sector_per_p90": 32.8,
+  "sector_pbr_median": 2.5,
+  "sector_pbr_p90": 9.13
  },
  "forecast": {
   "revenue": {
-   "cur_year": 15952965310.0,
-   "next_year": 16611292770.0
+   "cur_year": 16063973450.0,
+   "next_year": 16687222800.0
   },
   "eps": {
-   "cur_year": 1.8725,
-   "next_year": 2.04286
+   "cur_year": 1.89615,
+   "next_year": 2.054
   },
   "growth": {
-   "next_year": 0.06,
+   "next_year": 0.059499998,
    "long_term": null
   },
   "price_target": {
-   "mean": 35.48148,
-   "high": 42.0,
-   "low": 28.0
+   "mean": 37.40741,
+   "high": 43.0,
+   "low": 31.0
   },
   "ex_dividend_date": "2026-11-23",
   "ex_dividend_schedule": [
@@ -36,34 +36,34 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 30.33,
-   "mid": 30.33,
-   "high": 55.8
+   "low": 32.42,
+   "mid": 32.42,
+   "high": 62.19
   },
   "y1": {
-   "low": 33.09,
-   "mid": 33.09,
-   "high": 60.88
+   "low": 35.12,
+   "mid": 35.12,
+   "high": 67.37
   },
   "y5": {
-   "low": 41.39,
-   "mid": 49.44,
-   "high": 57.48
+   "low": 41.84,
+   "mid": 49.98,
+   "high": 58.11
   },
   "assumptions": {
-   "eps_cur": 1.873,
-   "eps_next": 2.043,
-   "eps_5y": 2.299,
-   "growth_used": 0.06,
-   "per_median": 16.2,
-   "per_p90": 29.8,
+   "eps_cur": 1.896,
+   "eps_next": 2.054,
+   "eps_5y": 2.324,
+   "growth_used": 0.0595,
+   "per_median": 17.1,
+   "per_p90": 32.8,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 0.04,
-  "debt_to_equity": 248.7,
-  "current_ratio": 1.33,
+  "cash_to_debt": 0.03,
+  "debt_to_equity": 252.6,
+  "current_ratio": 1.38,
   "fcf_positive": true,
   "flags": [
    "現金薄",

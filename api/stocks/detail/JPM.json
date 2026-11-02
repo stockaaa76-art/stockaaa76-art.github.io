@@ -1,67 +1,67 @@
 {
  "sector": "米-金融",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 14.2,
-  "sector_per_p90": 30.7,
-  "sector_pbr_median": 2.5,
-  "sector_pbr_p90": 19.11
+  "sector_per_median": 14.1,
+  "sector_per_p90": 33.6,
+  "sector_pbr_median": 2.55,
+  "sector_pbr_p90": 21.23
  },
  "forecast": {
   "revenue": {
-   "cur_year": 208456375960.0,
-   "next_year": 214026100470.0
+   "cur_year": 208099424110.0,
+   "next_year": 217006106090.0
   },
   "eps": {
-   "cur_year": 24.04652,
-   "next_year": 25.02953
+   "cur_year": 24.02101,
+   "next_year": 25.53124
   },
   "growth": {
-   "next_year": 0.040900003,
+   "next_year": 0.0629,
    "long_term": null
   },
   "price_target": {
-   "mean": 375.8095,
-   "high": 436.0,
-   "low": 305.0
+   "mean": 373.26086,
+   "high": 425.0,
+   "low": 312.0
   },
-  "ex_dividend_date": "2026-10-06",
+  "ex_dividend_date": "2027-01-06",
   "ex_dividend_schedule": [
-   "2026-10-06",
    "2027-01-06",
    "2027-04-08",
-   "2027-07-09"
+   "2027-07-09",
+   "2027-10-09"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 341.46,
-   "mid": 341.46,
-   "high": 738.23
+   "low": 338.7,
+   "mid": 338.7,
+   "high": 807.11
   },
   "y1": {
-   "low": 355.42,
-   "mid": 355.42,
-   "high": 768.41
+   "low": 359.99,
+   "mid": 359.99,
+   "high": 857.85
   },
   "y5": {
-   "low": 498.36,
-   "mid": 595.26,
-   "high": 692.17
+   "low": 536.11,
+   "mid": 640.35,
+   "high": 744.59
   },
   "assumptions": {
-   "eps_cur": 24.047,
-   "eps_next": 25.03,
-   "eps_5y": 27.687,
-   "growth_used": 0.0409,
-   "per_median": 14.2,
-   "per_p90": 30.7,
+   "eps_cur": 24.021,
+   "eps_next": 25.531,
+   "eps_5y": 29.784,
+   "growth_used": 0.0629,
+   "per_median": 14.1,
+   "per_p90": 33.6,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 1.14,
+  "cash_to_debt": 1.42,
   "debt_to_equity": null,
   "current_ratio": null,
   "fcf_positive": null,

@@ -1,11 +1,11 @@
 {
  "sector": "unknown",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 18.1,
-  "sector_per_p90": 35.4,
-  "sector_pbr_median": 1.46,
-  "sector_pbr_p90": 2.56
+  "sector_per_median": 17.5,
+  "sector_per_p90": 29.4,
+  "sector_pbr_median": 1.45,
+  "sector_pbr_p90": 2.44
  },
  "forecast": {
   "revenue": {
@@ -22,12 +22,12 @@
    "high": null,
    "low": null
   },
-  "ex_dividend_date": "2026-10-24",
+  "ex_dividend_date": "2027-01-24",
   "ex_dividend_schedule": [
-   "2026-10-24",
    "2027-01-24",
    "2027-04-26",
-   "2027-07-27"
+   "2027-07-27",
+   "2027-10-27"
   ],
   "dividend_frequency": "四半期"
  },

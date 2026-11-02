@@ -1,29 +1,29 @@
 {
  "sector": "日本-情報通信・サービス",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 21.1,
-  "sector_per_p90": 47.7,
-  "sector_pbr_median": 2.02,
-  "sector_pbr_p90": 13.01
+  "sector_per_median": 19.9,
+  "sector_per_p90": 45.9,
+  "sector_pbr_median": 1.44,
+  "sector_pbr_p90": 14.74
  },
  "forecast": {
   "revenue": {
-   "cur_year": 2765561195200.0,
-   "next_year": 2968508572130.0
+   "cur_year": 2765361195200.0,
+   "next_year": 2968652322130.0
   },
   "eps": {
-   "cur_year": -11.32369,
-   "next_year": 21.9733
+   "cur_year": -12.534,
+   "next_year": 22.2733
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 900.06665,
+   "mean": 890.4,
    "high": 1400.0,
-   "low": 575.0
+   "low": 500.0
   },
   "ex_dividend_date": "2027-01-01",
   "ex_dividend_schedule": [
@@ -34,18 +34,18 @@
  "theoretical_price": {
   "now": null,
   "y1": {
-   "low": 439.47,
-   "mid": 463.64,
-   "high": 1048.13
+   "low": 443.24,
+   "mid": 443.24,
+   "high": 1022.34
   },
   "y5": null,
   "assumptions": {
    "eps_cur": null,
-   "eps_next": 21.973,
+   "eps_next": 22.273,
    "eps_5y": null,
    "growth_used": null,
-   "per_median": 21.1,
-   "per_p90": 47.7,
+   "per_median": 19.9,
+   "per_p90": 45.9,
    "per_terminal": "18-25"
   }
  },

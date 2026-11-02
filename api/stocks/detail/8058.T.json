@@ -1,27 +1,27 @@
 {
  "sector": "日本-商社・卸売",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 17.2,
-  "sector_per_p90": 22.5,
-  "sector_pbr_median": 1.79,
-  "sector_pbr_p90": 2.68
+  "sector_per_median": 15.1,
+  "sector_per_p90": 20.0,
+  "sector_pbr_median": 1.82,
+  "sector_pbr_p90": 2.35
  },
  "forecast": {
   "revenue": {
-   "cur_year": 22507115181520.0,
-   "next_year": 21824396479960.0
+   "cur_year": 22856023281520.0,
+   "next_year": 21976653229960.0
   },
   "eps": {
-   "cur_year": 327.9032,
-   "next_year": 317.41476
+   "cur_year": 336.5082,
+   "next_year": 325.51974
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 5310.826,
+   "mean": 5281.595,
    "high": 7000.0,
    "low": 3280.74
   },
@@ -34,27 +34,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 5639.94,
-   "mid": 5639.94,
-   "high": 7377.82
+   "low": 5081.27,
+   "mid": 5081.27,
+   "high": 6730.16
   },
   "y1": {
-   "low": 5459.53,
-   "mid": 5459.53,
-   "high": 7141.83
+   "low": 4915.35,
+   "mid": 4915.35,
+   "high": 6510.39
   },
   "y5": {
-   "low": 5269.79,
-   "mid": 6294.47,
-   "high": 7319.15
+   "low": 5395.13,
+   "mid": 6444.18,
+   "high": 7493.24
   },
   "assumptions": {
-   "eps_cur": 327.903,
-   "eps_next": 317.415,
-   "eps_5y": 292.766,
-   "growth_used": -0.032,
-   "per_median": 17.2,
-   "per_p90": 22.5,
+   "eps_cur": 336.508,
+   "eps_next": 325.52,
+   "eps_5y": 299.729,
+   "growth_used": -0.0327,
+   "per_median": 15.1,
+   "per_p90": 20.0,
    "per_terminal": "18-25"
   }
  },

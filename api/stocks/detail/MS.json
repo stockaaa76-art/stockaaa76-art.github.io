@@ -1,69 +1,69 @@
 {
  "sector": "米-金融",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 14.2,
-  "sector_per_p90": 30.7,
-  "sector_pbr_median": 2.5,
-  "sector_pbr_p90": 19.11
+  "sector_per_median": 14.1,
+  "sector_per_p90": 33.6,
+  "sector_pbr_median": 2.55,
+  "sector_pbr_p90": 21.23
  },
  "forecast": {
   "revenue": {
-   "cur_year": 82270173600.0,
-   "next_year": 86384844320.0
+   "cur_year": 82422447260.0,
+   "next_year": 86664537680.0
   },
   "eps": {
-   "cur_year": 12.84948,
-   "next_year": 13.63838
+   "cur_year": 12.91046,
+   "next_year": 13.68067
   },
   "growth": {
-   "next_year": 0.06,
+   "next_year": 0.0592,
    "long_term": null
   },
   "price_target": {
-   "mean": 232.66667,
+   "mean": 211.31818,
    "high": 262.0,
-   "low": 184.0
+   "low": 185.0
   },
-  "ex_dividend_date": "2026-10-31",
+  "ex_dividend_date": "2027-01-29",
   "ex_dividend_schedule": [
-   "2026-10-31",
-   "2027-01-31",
-   "2027-05-03",
-   "2027-08-03"
+   "2027-01-29",
+   "2027-04-30",
+   "2027-07-30",
+   "2027-10-29"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 182.46,
-   "mid": 182.46,
-   "high": 394.48
+   "low": 182.04,
+   "mid": 182.04,
+   "high": 433.79
   },
   "y1": {
-   "low": 193.66,
-   "mid": 193.66,
-   "high": 418.7
+   "low": 192.9,
+   "mid": 192.9,
+   "high": 459.67
   },
   "y5": {
-   "low": 284.01,
-   "mid": 339.23,
-   "high": 394.46
+   "low": 284.6,
+   "mid": 339.93,
+   "high": 395.27
   },
   "assumptions": {
-   "eps_cur": 12.849,
-   "eps_next": 13.638,
-   "eps_5y": 15.778,
-   "growth_used": 0.06,
-   "per_median": 14.2,
-   "per_p90": 30.7,
+   "eps_cur": 12.91,
+   "eps_next": 13.681,
+   "eps_5y": 15.811,
+   "growth_used": 0.0592,
+   "per_median": 14.1,
+   "per_p90": 33.6,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
   "cash_to_debt": 1.22,
   "debt_to_equity": 517.3,
-  "current_ratio": 2.0,
+  "current_ratio": null,
   "fcf_positive": null,
   "flags": [
    "高レバレッジ"

@@ -1,29 +1,29 @@
 {
  "sector": "Technology",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 39.5,
-  "sector_per_p90": 81.8,
-  "sector_pbr_median": 5.29,
-  "sector_pbr_p90": 20.71
+  "sector_per_median": 31.4,
+  "sector_per_p90": 59.4,
+  "sector_pbr_median": 4.3,
+  "sector_pbr_p90": 19.34
  },
  "forecast": {
   "revenue": {
-   "cur_year": 4124687530.0,
-   "next_year": 5285620650.0
+   "cur_year": 4335745070.0,
+   "next_year": 6425606140.0
   },
   "eps": {
-   "cur_year": 27.43092,
-   "next_year": 34.8707
+   "cur_year": 29.24781,
+   "next_year": 44.18892
   },
   "growth": {
-   "next_year": 0.2712,
+   "next_year": 0.5108,
    "long_term": null
   },
   "price_target": {
-   "mean": 1839.8,
+   "mean": 1822.6,
    "high": 2100.0,
-   "low": 1575.0
+   "low": 1500.0
   },
   "ex_dividend_date": "2026-12-31",
   "ex_dividend_schedule": [
@@ -36,35 +36,35 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 548.62,
-   "mid": 1083.52,
-   "high": 2243.85
+   "low": 584.96,
+   "mid": 918.38,
+   "high": 1737.32
   },
   "y1": {
-   "low": 697.41,
-   "mid": 1377.39,
-   "high": 2852.42
+   "low": 883.78,
+   "mid": 1387.53,
+   "high": 2624.82
   },
   "y5": {
-   "low": 1170.61,
-   "mid": 1398.23,
-   "high": 1625.85
+   "low": 2324.33,
+   "mid": 2776.28,
+   "high": 3228.23
   },
   "assumptions": {
-   "eps_cur": 27.431,
-   "eps_next": 34.871,
-   "eps_5y": 65.034,
-   "growth_used": 0.2712,
-   "per_median": 39.5,
-   "per_p90": 81.8,
+   "eps_cur": 29.248,
+   "eps_next": 44.189,
+   "eps_5y": 129.129,
+   "growth_used": 0.5,
+   "per_median": 31.4,
+   "per_p90": 59.4,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 74.67,
-  "debt_to_equity": 0.5,
-  "current_ratio": 4.97,
-  "fcf_positive": true,
+  "cash_to_debt": null,
+  "debt_to_equity": null,
+  "current_ratio": 3.7,
+  "fcf_positive": null,
   "flags": [],
   "level": "ok"
  }

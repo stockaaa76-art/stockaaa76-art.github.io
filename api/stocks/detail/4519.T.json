@@ -1,28 +1,28 @@
 {
  "sector": "日本-医薬品",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 19.3,
-  "sector_per_p90": 34.5,
-  "sector_pbr_median": 1.78,
-  "sector_pbr_p90": 4.92
+  "sector_per_median": 21.3,
+  "sector_per_p90": 299.8,
+  "sector_pbr_median": 1.95,
+  "sector_pbr_p90": 5.41
  },
  "forecast": {
   "revenue": {
-   "cur_year": 1382564053150.0,
-   "next_year": 1525608867840.0
+   "cur_year": 1392745042720.0,
+   "next_year": 1521949972480.0
   },
   "eps": {
-   "cur_year": 306.49084,
-   "next_year": 352.9405
+   "cur_year": 309.6342,
+   "next_year": 350.54636
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 8870.0,
-   "high": 13300.0,
+   "mean": 8446.667,
+   "high": 11000.0,
    "low": 6100.0
   },
   "ex_dividend_date": "2026-12-29",
@@ -34,34 +34,34 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 5915.27,
-   "mid": 5915.27,
-   "high": 10573.93
+   "low": 6192.68,
+   "mid": 6595.21,
+   "high": 92828.33
   },
   "y1": {
-   "low": 6811.75,
-   "mid": 6811.75,
-   "high": 12176.45
+   "low": 7010.93,
+   "mid": 7466.64,
+   "high": 105093.8
   },
   "y5": {
-   "low": 9114.21,
-   "mid": 10886.42,
-   "high": 12658.62
+   "low": 8659.57,
+   "mid": 10343.38,
+   "high": 12027.19
   },
   "assumptions": {
-   "eps_cur": 306.491,
-   "eps_next": 352.94,
-   "eps_5y": 506.345,
-   "growth_used": 0.1516,
-   "per_median": 19.3,
-   "per_p90": 34.5,
+   "eps_cur": 309.634,
+   "eps_next": 350.546,
+   "eps_5y": 481.087,
+   "growth_used": 0.1321,
+   "per_median": 21.3,
+   "per_p90": 299.8,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
   "cash_to_debt": null,
   "debt_to_equity": null,
-  "current_ratio": 4.34,
+  "current_ratio": 6.39,
   "fcf_positive": true,
   "flags": [],
   "level": "ok"

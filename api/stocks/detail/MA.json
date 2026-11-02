@@ -1,69 +1,69 @@
 {
  "sector": "米-金融",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 14.2,
-  "sector_per_p90": 30.7,
-  "sector_pbr_median": 2.5,
-  "sector_pbr_p90": 19.11
+  "sector_per_median": 14.1,
+  "sector_per_p90": 33.6,
+  "sector_pbr_median": 2.55,
+  "sector_pbr_p90": 21.23
  },
  "forecast": {
   "revenue": {
-   "cur_year": 37259372760.0,
-   "next_year": 41958742130.0
+   "cur_year": 37348490710.0,
+   "next_year": 42060505990.0
   },
   "eps": {
-   "cur_year": 19.93029,
-   "next_year": 23.02481
+   "cur_year": 20.03601,
+   "next_year": 23.13653
   },
   "growth": {
-   "next_year": 0.15529999,
+   "next_year": 0.1547,
    "long_term": null
   },
   "price_target": {
-   "mean": 666.7138,
-   "high": 740.0,
+   "mean": 697.2814,
+   "high": 775.0,
    "low": 550.0
   },
-  "ex_dividend_date": "2026-10-09",
+  "ex_dividend_date": "2027-01-09",
   "ex_dividend_schedule": [
-   "2026-10-09",
    "2027-01-09",
    "2027-04-11",
-   "2027-07-12"
+   "2027-07-12",
+   "2027-10-12"
   ],
   "dividend_frequency": "四半期"
  },
  "theoretical_price": {
   "now": {
-   "low": 283.01,
-   "mid": 283.01,
-   "high": 611.86
+   "low": 282.51,
+   "mid": 282.51,
+   "high": 673.21
   },
   "y1": {
-   "low": 326.95,
-   "mid": 326.95,
-   "high": 706.86
+   "low": 326.23,
+   "mid": 326.23,
+   "high": 777.39
   },
   "y5": {
-   "low": 599.68,
-   "mid": 716.28,
-   "high": 832.88
+   "low": 601.73,
+   "mid": 718.73,
+   "high": 835.73
   },
   "assumptions": {
-   "eps_cur": 19.93,
-   "eps_next": 23.025,
-   "eps_5y": 33.315,
-   "growth_used": 0.1553,
-   "per_median": 14.2,
-   "per_p90": 30.7,
+   "eps_cur": 20.036,
+   "eps_next": 23.137,
+   "eps_5y": 33.429,
+   "growth_used": 0.1547,
+   "per_median": 14.1,
+   "per_p90": 33.6,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 0.47,
-  "debt_to_equity": 439.6,
-  "current_ratio": 1.06,
+  "cash_to_debt": 0.44,
+  "debt_to_equity": 355.2,
+  "current_ratio": 1.01,
   "fcf_positive": true,
   "flags": [
    "高レバレッジ"

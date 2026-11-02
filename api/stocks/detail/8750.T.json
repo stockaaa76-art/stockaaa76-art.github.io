@@ -1,11 +1,11 @@
 {
  "sector": "日本-金融（保険・証券）",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 14.2,
-  "sector_per_p90": 26.1,
-  "sector_pbr_median": 1.16,
-  "sector_pbr_p90": 1.77
+  "sector_per_median": 11.8,
+  "sector_per_p90": 50.1,
+  "sector_pbr_median": 1.19,
+  "sector_pbr_p90": 2.02
  },
  "forecast": {
   "revenue": {
@@ -13,7 +13,7 @@
    "next_year": 11415283547730.0
   },
   "eps": {
-   "cur_year": 147.94147,
+   "cur_year": 148.93532,
    "next_year": 157.81612
   },
   "growth": {
@@ -34,27 +34,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 2100.77,
-   "mid": 2100.77,
-   "high": 3861.27
+   "low": 1757.44,
+   "mid": 1757.44,
+   "high": 7461.66
   },
   "y1": {
-   "low": 2240.99,
-   "mid": 2240.99,
-   "high": 4119.0
+   "low": 1862.23,
+   "mid": 1862.23,
+   "high": 7906.59
   },
   "y5": {
-   "low": 3344.43,
-   "mid": 3994.74,
-   "high": 4645.04
+   "low": 3287.81,
+   "mid": 3927.11,
+   "high": 4566.4
   },
   "assumptions": {
-   "eps_cur": 147.941,
+   "eps_cur": 148.935,
    "eps_next": 157.816,
-   "eps_5y": 185.802,
-   "growth_used": 0.0667,
-   "per_median": 14.2,
-   "per_p90": 26.1,
+   "eps_5y": 182.656,
+   "growth_used": 0.0596,
+   "per_median": 11.8,
+   "per_p90": 50.1,
    "per_terminal": "18-25"
   }
  },

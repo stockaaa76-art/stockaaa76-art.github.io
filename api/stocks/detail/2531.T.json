@@ -1,6 +1,6 @@
 {
  "sector": "Consumer Defensive",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
   "sector_per_median": null,
   "sector_per_p90": null,
@@ -33,13 +33,11 @@
  },
  "theoretical_price": null,
  "financial_health": {
-  "cash_to_debt": 1.03,
-  "debt_to_equity": 22.9,
-  "current_ratio": 3.04,
-  "fcf_positive": false,
-  "flags": [
-   "FCF赤字"
-  ],
-  "level": "watch"
+  "cash_to_debt": 0.71,
+  "debt_to_equity": 44.9,
+  "current_ratio": 1.62,
+  "fcf_positive": null,
+  "flags": [],
+  "level": "ok"
  }
 }

@@ -1,20 +1,20 @@
 {
  "sector": "日本-運輸・物流",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 14.4,
-  "sector_per_p90": 47.4,
-  "sector_pbr_median": 1.1,
-  "sector_pbr_p90": 1.54
+  "sector_per_median": 14.5,
+  "sector_per_p90": 47.8,
+  "sector_pbr_median": 1.11,
+  "sector_pbr_p90": 1.6
  },
  "forecast": {
   "revenue": {
-   "cur_year": 1759474928550.0,
-   "next_year": 1824618857780.0
+   "cur_year": 1765551834700.0,
+   "next_year": 1830706054900.0
   },
   "eps": {
-   "cur_year": 104.43126,
-   "next_year": 115.20158
+   "cur_year": 104.42846,
+   "next_year": 115.40034
   },
   "growth": {
    "next_year": null,
@@ -34,27 +34,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 1503.81,
-   "mid": 1503.81,
-   "high": 4950.04
+   "low": 1514.21,
+   "mid": 1514.21,
+   "high": 4991.68
   },
   "y1": {
-   "low": 1658.9,
-   "mid": 1658.9,
-   "high": 5460.55
+   "low": 1673.3,
+   "mid": 1673.3,
+   "high": 5516.14
   },
   "y5": {
-   "low": 2660.82,
-   "mid": 3178.21,
-   "high": 3695.59
+   "low": 2677.48,
+   "mid": 3198.11,
+   "high": 3718.73
   },
   "assumptions": {
-   "eps_cur": 104.431,
-   "eps_next": 115.202,
-   "eps_5y": 147.824,
-   "growth_used": 0.1031,
-   "per_median": 14.4,
-   "per_p90": 47.4,
+   "eps_cur": 104.428,
+   "eps_next": 115.4,
+   "eps_5y": 148.749,
+   "growth_used": 0.1051,
+   "per_median": 14.5,
+   "per_p90": 47.8,
    "per_terminal": "18-25"
   }
  },

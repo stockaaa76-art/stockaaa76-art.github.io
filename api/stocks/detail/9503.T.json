@@ -1,27 +1,27 @@
 {
  "sector": "日本-電力・ガス",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 8.5,
-  "sector_per_p90": 14.7,
+  "sector_per_median": 11.6,
+  "sector_per_p90": 24.0,
   "sector_pbr_median": 0.82,
-  "sector_pbr_p90": 1.19
+  "sector_pbr_p90": 1.23
  },
  "forecast": {
   "revenue": {
-   "cur_year": 4412866666670.0,
-   "next_year": 4481000000000.0
+   "cur_year": 4445866666670.0,
+   "next_year": 4546166666670.0
   },
   "eps": {
-   "cur_year": 307.525,
-   "next_year": 285.79333
+   "cur_year": 309.775,
+   "next_year": 308.09332
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 2892.0,
+   "mean": 2958.0,
    "high": 3350.0,
    "low": 2220.0
   },
@@ -34,38 +34,39 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 2613.96,
-   "mid": 2613.96,
-   "high": 4520.62
+   "low": 3593.39,
+   "mid": 3593.39,
+   "high": 7434.6
   },
   "y1": {
-   "low": 2429.24,
-   "mid": 2429.24,
-   "high": 4201.16
+   "low": 3573.88,
+   "mid": 3573.88,
+   "high": 7394.24
   },
   "y5": {
-   "low": 4292.6,
-   "mid": 5127.27,
-   "high": 5961.94
+   "low": 5470.79,
+   "mid": 6534.55,
+   "high": 7598.32
   },
   "assumptions": {
-   "eps_cur": 307.525,
-   "eps_next": 285.793,
-   "eps_5y": 238.478,
-   "growth_used": -0.0707,
-   "per_median": 8.5,
-   "per_p90": 14.7,
+   "eps_cur": 309.775,
+   "eps_next": 308.093,
+   "eps_5y": 303.933,
+   "growth_used": -0.0054,
+   "per_median": 11.6,
+   "per_p90": 24.0,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 0.12,
-  "debt_to_equity": 121.1,
-  "current_ratio": 1.02,
+  "cash_to_debt": 0.11,
+  "debt_to_equity": 119.0,
+  "current_ratio": 0.97,
   "fcf_positive": null,
   "flags": [
-   "現金薄"
+   "現金薄",
+   "流動性難"
   ],
-  "level": "watch"
+  "level": "alert"
  }
 }

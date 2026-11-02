@@ -1,27 +1,27 @@
 {
  "sector": "日本-素材・化学",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 23.4,
-  "sector_per_p90": 25.0,
-  "sector_pbr_median": 1.04,
-  "sector_pbr_p90": 4.58
+  "sector_per_median": 18.8,
+  "sector_per_p90": 33.5,
+  "sector_pbr_median": 1.07,
+  "sector_pbr_p90": 4.17
  },
  "forecast": {
   "revenue": {
-   "cur_year": 303733304770.0,
-   "next_year": 319922235250.0
+   "cur_year": 304833304770.0,
+   "next_year": 321288901920.0
   },
   "eps": {
-   "cur_year": 421.45084,
-   "next_year": 455.35013
+   "cur_year": 424.77307,
+   "next_year": 459.35013
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 9133.333,
+   "mean": 9244.444,
    "high": 11000.0,
    "low": 8000.0
   },
@@ -34,27 +34,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 8429.02,
-   "mid": 9861.95,
-   "high": 10536.27
+   "low": 7985.73,
+   "mid": 7985.73,
+   "high": 14229.9
   },
   "y1": {
-   "low": 9107.0,
-   "mid": 10655.19,
-   "high": 11383.75
+   "low": 8635.78,
+   "mid": 8635.78,
+   "high": 15388.23
   },
   "y5": {
-   "low": 9969.68,
-   "mid": 11908.23,
-   "high": 13846.78
+   "low": 10080.34,
+   "mid": 12040.41,
+   "high": 14000.48
   },
   "assumptions": {
-   "eps_cur": 421.451,
-   "eps_next": 455.35,
-   "eps_5y": 553.871,
-   "growth_used": 0.0804,
-   "per_median": 23.4,
-   "per_p90": 25.0,
+   "eps_cur": 424.773,
+   "eps_next": 459.35,
+   "eps_5y": 560.019,
+   "growth_used": 0.0814,
+   "per_median": 18.8,
+   "per_p90": 33.5,
    "per_terminal": "18-25"
   }
  },

@@ -1,27 +1,27 @@
 {
  "sector": "日本-銀行・金融",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 15.3,
-  "sector_per_p90": 23.0,
-  "sector_pbr_median": 1.32,
-  "sector_pbr_p90": 1.85
+  "sector_per_median": 14.2,
+  "sector_per_p90": 19.6,
+  "sector_pbr_median": 1.5,
+  "sector_pbr_p90": 1.69
  },
  "forecast": {
   "revenue": {
-   "cur_year": 6885447960180.0,
-   "next_year": 7700737893400.0
+   "cur_year": 6906809950230.0,
+   "next_year": 7728422366750.0
   },
   "eps": {
-   "cur_year": 254.3341,
-   "next_year": 281.1357
+   "cur_year": 254.2631,
+   "next_year": 280.70972
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 3785.4546,
+   "mean": 3804.0,
    "high": 4800.0,
    "low": 2270.0
   },
@@ -34,27 +34,27 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 3891.31,
-   "mid": 3891.31,
-   "high": 5849.68
+   "low": 3610.54,
+   "mid": 3610.54,
+   "high": 4983.56
   },
   "y1": {
-   "low": 4301.38,
-   "mid": 4301.38,
-   "high": 6466.12
+   "low": 3986.08,
+   "mid": 3986.08,
+   "high": 5501.91
   },
   "y5": {
-   "low": 6527.61,
-   "mid": 7796.86,
-   "high": 9066.12
+   "low": 6496.93,
+   "mid": 7760.23,
+   "high": 9023.52
   },
   "assumptions": {
-   "eps_cur": 254.334,
-   "eps_next": 281.136,
-   "eps_5y": 362.645,
-   "growth_used": 0.1054,
-   "per_median": 15.3,
-   "per_p90": 23.0,
+   "eps_cur": 254.263,
+   "eps_next": 280.71,
+   "eps_5y": 360.941,
+   "growth_used": 0.104,
+   "per_median": 14.2,
+   "per_p90": 19.6,
    "per_terminal": "18-25"
   }
  },

@@ -1,29 +1,29 @@
 {
  "sector": "日本-小売業",
- "updated_at": "2026-10-05 00:48",
+ "updated_at": "2026-11-02 01:35",
  "valuation": {
-  "sector_per_median": 19.7,
-  "sector_per_p90": 47.2,
-  "sector_pbr_median": 1.74,
-  "sector_pbr_p90": 8.27
+  "sector_per_median": 21.7,
+  "sector_per_p90": 42.6,
+  "sector_pbr_median": 1.91,
+  "sector_pbr_p90": 8.1
  },
  "forecast": {
   "revenue": {
-   "cur_year": 10469009157400.0,
-   "next_year": 10395726897340.0
+   "cur_year": 10604570072120.0,
+   "next_year": 10352887158370.0
   },
   "eps": {
-   "cur_year": 122.33504,
-   "next_year": 122.01867
+   "cur_year": 125.52697,
+   "next_year": 121.6642
   },
   "growth": {
    "next_year": null,
    "long_term": null
   },
   "price_target": {
-   "mean": 2276.0,
-   "high": 3000.0,
-   "low": 1880.0
+   "mean": 2265.0,
+   "high": 2850.0,
+   "low": 1920.0
   },
   "ex_dividend_date": "2027-02-26",
   "ex_dividend_schedule": [
@@ -34,39 +34,38 @@
  },
  "theoretical_price": {
   "now": {
-   "low": 2410.0,
-   "mid": 2410.0,
-   "high": 5774.21
+   "low": 2510.54,
+   "mid": 2723.94,
+   "high": 5347.45
   },
   "y1": {
-   "low": 2403.77,
-   "mid": 2403.77,
-   "high": 5759.28
+   "low": 2433.28,
+   "mid": 2640.11,
+   "high": 5182.89
   },
   "y5": {
-   "low": 2182.17,
-   "mid": 2606.48,
-   "high": 3030.79
+   "low": 2026.17,
+   "mid": 2420.14,
+   "high": 2814.12
   },
   "assumptions": {
-   "eps_cur": 122.335,
-   "eps_next": 122.019,
-   "eps_5y": 121.232,
-   "growth_used": -0.0026,
-   "per_median": 19.7,
-   "per_p90": 47.2,
+   "eps_cur": 125.527,
+   "eps_next": 121.664,
+   "eps_5y": 112.565,
+   "growth_used": -0.0308,
+   "per_median": 21.7,
+   "per_p90": 42.6,
    "per_terminal": "18-25"
   }
  },
  "financial_health": {
-  "cash_to_debt": 0.17,
-  "debt_to_equity": 104.4,
-  "current_ratio": 0.94,
-  "fcf_positive": false,
+  "cash_to_debt": 0.11,
+  "debt_to_equity": 104.8,
+  "current_ratio": 0.87,
+  "fcf_positive": true,
   "flags": [
    "現金薄",
-   "流動性難",
-   "FCF赤字"
+   "流動性難"
   ],
   "level": "alert"
  }
