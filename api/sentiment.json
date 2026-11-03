@@ -1,44 +1,44 @@
 {
   "composite": {
-    "score": 55.2,
+    "score": 46.6,
     "label": "中立",
     "signal": "neutral"
   },
   "vix": {
-    "value": 19.42,
-    "change": 12.91,
-    "score": 55,
+    "value": 21.15,
+    "change": 8.91,
+    "score": 40,
     "label": "中立",
-    "flow_level": "normal",
-    "flow_label": null
+    "flow_level": "caution",
+    "flow_label": "⚠️ VIX 21 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。"
   },
   "jniv": {},
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 157.78,
-      "change": -0.01,
-      "score": 59.9
+      "value": 157.91,
+      "change": 0.15,
+      "score": 60.7
     },
     "gold": {
       "name": "金先物",
-      "value": 3911.2,
-      "change": 0.32,
-      "score": 49.1
+      "value": 3959.1,
+      "change": 1.54,
+      "score": 45.4
     },
     "oil": {
       "name": "原油WTI",
-      "value": 102.28,
-      "change": -1.77,
-      "score": 53.5
+      "value": 96.63,
+      "change": -7.19,
+      "score": 64.4
     },
     "us10y": {
       "name": "米10年債利回り",
-      "value": 4.93,
-      "change": -1.2,
-      "score": 59.6
+      "value": 4.89,
+      "change": -0.71,
+      "score": 55.7
     },
-    "avg_score": 55.5
+    "avg_score": 56.5
   },
   "market_volume": {
     "dates": [
@@ -163,15 +163,15 @@
       1449418737,
       2338698906,
       1515721097,
-      422148545
+      1092229719
     ],
-    "latest": 422148545,
-    "ma25": 1451427310,
-    "latest_vs_ma25_pct": 29.1,
+    "latest": 1092229719,
+    "ma25": 1478230557,
+    "latest_vs_ma25_pct": 73.9,
     "ticker_count": 207,
     "note": "JP個別株(.T)の日次出来高合算。市場全体の活況度・出来高急増日は転換点になりやすい。"
   },
-  "vix_flow_level": "normal",
-  "vix_flow_label": null,
-  "generated_at": "2026-11-02 01:00:04"
+  "vix_flow_level": "caution",
+  "vix_flow_label": "⚠️ VIX 21 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。",
+  "generated_at": "2026-11-03 03:03:29"
 }
