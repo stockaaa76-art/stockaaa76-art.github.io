@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-02 01:28:37",
-  "total_count": 183,
+  "generated_at": "2026-11-09 01:33:11",
+  "total_count": 182,
   "stocks": [
     {
       "ticker": "7203.T",
@@ -803,10 +803,6 @@
       "revenue_unit": "億USD",
       "revenues": [
         {
-          "date": "2022-09-30",
-          "revenue_native": 3943
-        },
-        {
           "date": "2023-09-30",
           "revenue_native": 3832
         },
@@ -817,15 +813,19 @@
         {
           "date": "2025-09-30",
           "revenue_native": 4161
+        },
+        {
+          "date": "2026-09-30",
+          "revenue_native": 4788
         }
       ],
       "growth_rates": [
-        -2.82,
         2.04,
-        6.42
+        6.42,
+        15.07
       ],
-      "latest_growth_pct": 6.42,
-      "avg_growth_pct": 1.88
+      "latest_growth_pct": 15.07,
+      "avg_growth_pct": 7.84
     },
     {
       "ticker": "MSFT",
@@ -1783,39 +1783,6 @@
       ],
       "latest_growth_pct": 23.31,
       "avg_growth_pct": 15.36
-    },
-    {
-      "ticker": "4689.T",
-      "name": "LY Corporation",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
-      "currency": "JPY",
-      "revenue_unit": "億円",
-      "revenues": [
-        {
-          "date": "2023-03-31",
-          "revenue_jpy": 16723
-        },
-        {
-          "date": "2024-03-31",
-          "revenue_jpy": 18146
-        },
-        {
-          "date": "2025-03-31",
-          "revenue_jpy": 19174
-        },
-        {
-          "date": "2026-03-31",
-          "revenue_jpy": 20363
-        }
-      ],
-      "growth_rates": [
-        8.51,
-        5.67,
-        6.2
-      ],
-      "latest_growth_pct": 6.2,
-      "avg_growth_pct": 6.79
     },
     {
       "ticker": "3659.T",
@@ -5753,10 +5720,6 @@
       "revenue_unit": "億USD",
       "revenues": [
         {
-          "date": "2022-09-30",
-          "revenue_native": 442
-        },
-        {
           "date": "2023-09-30",
           "revenue_native": 358
         },
@@ -5767,15 +5730,19 @@
         {
           "date": "2025-09-30",
           "revenue_native": 442
+        },
+        {
+          "date": "2026-09-30",
+          "revenue_native": 431
         }
       ],
       "growth_rates": [
-        -19.0,
         8.66,
-        13.62
+        13.62,
+        -2.49
       ],
-      "latest_growth_pct": 13.62,
-      "avg_growth_pct": 1.09
+      "latest_growth_pct": -2.49,
+      "avg_growth_pct": 6.6
     },
     {
       "ticker": "CVX",
