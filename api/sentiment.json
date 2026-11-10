@@ -1,44 +1,44 @@
 {
   "composite": {
-    "score": 35.7,
-    "label": "恐怖（買い場候補）",
-    "signal": "fear"
+    "score": 54.6,
+    "label": "中立",
+    "signal": "neutral"
   },
   "vix": {
-    "value": 25.64,
-    "change": -9.01,
-    "score": 25,
-    "label": "恐怖",
-    "flow_level": "warning",
-    "flow_label": "⚠️ VIX 26 - フロー相場の可能性があります。テクニカル指標の精度が低下しています。"
+    "value": 19.92,
+    "change": -22.31,
+    "score": 55,
+    "label": "中立",
+    "flow_level": "normal",
+    "flow_label": null
   },
   "jniv": {},
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 158.36,
-      "change": 0.55,
-      "score": 62.7
+      "value": 157.93,
+      "change": -0.23,
+      "score": 58.9
     },
     "gold": {
       "name": "金先物",
-      "value": 4106.2,
-      "change": 0.77,
-      "score": 47.7
+      "value": 4122.0,
+      "change": 1.16,
+      "score": 46.5
     },
     "oil": {
       "name": "原油WTI",
-      "value": 90.77,
-      "change": -0.07,
-      "score": 50.1
+      "value": 85.83,
+      "change": -5.5,
+      "score": 61.0
     },
     "us10y": {
       "name": "米10年債利回り",
       "value": 4.86,
-      "change": 0.45,
-      "score": 46.4
+      "change": 0.1,
+      "score": 49.2
     },
-    "avg_score": 51.7
+    "avg_score": 53.9
   },
   "market_volume": {
     "dates": [
@@ -171,7 +171,7 @@
     "ticker_count": 207,
     "note": "JP個別株(.T)の日次出来高合算。市場全体の活況度・出来高急増日は転換点になりやすい。"
   },
-  "vix_flow_level": "warning",
-  "vix_flow_label": "⚠️ VIX 26 - フロー相場の可能性があります。テクニカル指標の精度が低下しています。",
-  "generated_at": "2026-11-09 01:07:32"
+  "vix_flow_level": "normal",
+  "vix_flow_label": null,
+  "generated_at": "2026-11-10 03:44:50"
 }
