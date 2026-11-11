@@ -1,311 +1,33 @@
 {
-  "generated_at": "2026-11-09T10:19:39.008712+09:00",
-  "count": 21,
+  "generated_at": "2026-11-11T10:36:37.854159+09:00",
+  "count": 17,
   "candidates": [
     {
       "ticker": "6532.T",
       "name": "ベイカレント",
       "sector17": "情報通信・サービスその他",
-      "current": 12445.0,
-      "change_1d": 6.050276949296984,
-      "change_5d": 5.243128964059207,
-      "change_20d": 49.11334771147855,
-      "deviation_25": 20.16491898885735,
-      "volume_ratio": 0.2945191454508225,
-      "year_high": true,
+      "current": 12005.0,
+      "change_1d": -3.302456705598067,
+      "change_5d": 3.446790176647996,
+      "change_20d": 39.82063824831121,
+      "deviation_25": 12.177390719318248,
+      "volume_ratio": 0.3345003452578531,
+      "year_high": false,
       "in_prediction_universe": false,
       "detected_reasons": [
-        "月次+49.1%",
-        "25日乖離+20.2%",
-        "52週高値更新"
+        "月次+39.8%"
       ]
     },
     {
-      "ticker": "2579.T",
-      "name": "コカ・コーラ　ボトラーズジャパンホールディングス",
-      "sector17": "食品",
-      "current": 4697.0,
-      "change_1d": 5.290293656130918,
-      "change_5d": 21.36950904392765,
-      "change_20d": 25.119872136387844,
-      "deviation_25": 17.787786382056737,
-      "volume_ratio": 0.16924679545189458,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "5日+21.4%",
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "3994.T",
-      "name": "マネーフォワード",
+      "ticker": "7867.T",
+      "name": "タカラトミー",
       "sector17": "情報通信・サービスその他",
-      "current": 7698.0,
-      "change_1d": 7.589098532494765,
-      "change_5d": 12.297592997811812,
-      "change_20d": 22.05485967972094,
-      "deviation_25": 15.471847549560792,
-      "volume_ratio": 0.32134314212212844,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "前日比+7.6%",
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "3549.T",
-      "name": "クスリのアオキホールディングス",
-      "sector17": "小売",
-      "current": 5020.0,
-      "change_1d": 5.6842105263157805,
-      "change_5d": 14.795335010290422,
-      "change_20d": 21.96307094266279,
-      "deviation_25": 14.919373300246331,
-      "volume_ratio": 0.20139333760409994,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "4912.T",
-      "name": "ライオン",
-      "sector17": "素材・化学",
-      "current": 2102.5,
-      "change_1d": 13.556575749392374,
-      "change_5d": 14.922109866083622,
-      "change_20d": 20.245925078638827,
-      "deviation_25": 14.928391822455445,
-      "volume_ratio": 1.4151297410737864,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "前日比+13.6%",
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "7616.T",
-      "name": "コロワイド",
-      "sector17": "小売",
-      "current": 2403.5,
-      "change_1d": 7.060133630289522,
-      "change_5d": 7.5872873769024185,
-      "change_20d": 19.606867379945257,
-      "deviation_25": 11.6484108624358,
-      "volume_ratio": 0.6600121756509953,
-      "year_high": false,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "前日比+7.1%"
-      ]
-    },
-    {
-      "ticker": "4536.T",
-      "name": "参天製薬",
-      "sector17": "医薬品",
-      "current": 2015.0,
-      "change_1d": 6.388595564941912,
-      "change_5d": 12.601285275216533,
-      "change_20d": 19.584569732937695,
-      "deviation_25": 15.310221693200422,
-      "volume_ratio": 0.4201869857573093,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "2222.T",
-      "name": "寿スピリッツ",
-      "sector17": "食品",
-      "current": 2966.0,
-      "change_1d": 4.308071039212247,
-      "change_5d": 18.42683170293471,
-      "change_20d": 19.11646586345381,
-      "deviation_25": 14.07078080411055,
-      "volume_ratio": 0.18863794149471802,
-      "year_high": false,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "5日+18.4%"
-      ]
-    },
-    {
-      "ticker": "8303.T",
-      "name": "ＳＢＩ新生銀行",
-      "sector17": "銀行",
-      "current": 1712.5,
-      "change_1d": 4.676039119804409,
-      "change_5d": 9.916559691912719,
-      "change_20d": 18.266574585635365,
-      "deviation_25": 11.875457301139324,
-      "volume_ratio": 0.4213414820344937,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "7003.T",
-      "name": "三井Ｅ＆Ｓ",
-      "sector17": "機械",
-      "current": 3345.0,
-      "change_1d": 8.18240620957309,
-      "change_5d": -3.211805555555558,
-      "change_20d": -14.798777381558835,
-      "deviation_25": -9.60534422933489,
-      "volume_ratio": 0.49016563327599383,
-      "year_high": false,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "前日比+8.2%"
-      ]
-    },
-    {
-      "ticker": "9706.T",
-      "name": "日本空港ビルデング",
-      "sector17": "不動産",
-      "current": 6253.0,
-      "change_1d": 6.815852408609491,
-      "change_5d": 8.464874241110154,
-      "change_20d": 13.96026972844906,
-      "deviation_25": 10.804354914163405,
-      "volume_ratio": 0.8688179984660398,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "7269.T",
-      "name": "スズキ",
-      "sector17": "自動車・輸送機",
-      "current": 2293.5,
-      "change_1d": 4.416116549055316,
-      "change_5d": 9.474940334128878,
-      "change_20d": 11.905342766528415,
-      "deviation_25": 10.27396601628987,
-      "volume_ratio": 0.3145828874716432,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "4202.T",
-      "name": "ダイセル",
-      "sector17": "素材・化学",
-      "current": 1591.0,
-      "change_1d": 3.885079986940898,
-      "change_5d": 9.459924320605428,
-      "change_20d": 10.486111111111107,
-      "deviation_25": 8.777399461240787,
-      "volume_ratio": 0.36694562239651746,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "3563.T",
-      "name": "ＦＯＯＤ　＆　ＬＩＦＥ　ＣＯＭＰＡＮＩＥＳ",
-      "sector17": "小売",
-      "current": 5623.0,
-      "change_1d": 10.428122545168893,
-      "change_5d": -3.3018056749785085,
-      "change_20d": 4.322820037105757,
-      "deviation_25": 0.32400568080444003,
-      "volume_ratio": 0.9121163564649328,
-      "year_high": false,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "前日比+10.4%"
-      ]
-    },
-    {
-      "ticker": "7956.T",
-      "name": "ピジョン",
-      "sector17": "情報通信・サービスその他",
-      "current": 2271.5,
-      "change_1d": 3.7451472939027175,
-      "change_5d": 8.089459909588381,
-      "change_20d": 9.866989117291425,
-      "deviation_25": 7.785823423902216,
-      "volume_ratio": 0.2964262714316381,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "8359.T",
-      "name": "八十二長野銀行",
-      "sector17": "銀行",
-      "current": 2432.0,
-      "change_1d": 8.088888888888878,
-      "change_5d": -0.5520343488039203,
-      "change_20d": -9.135064449841213,
-      "deviation_25": -3.0820853292100714,
-      "volume_ratio": 0.3213122264074112,
-      "year_high": false,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "前日比+8.1%"
-      ]
-    },
-    {
-      "ticker": "7701.T",
-      "name": "島津製作所",
-      "sector17": "電機・精密",
-      "current": 4505.0,
-      "change_1d": 8.033573141486805,
-      "change_5d": 0.6478999106344974,
-      "change_20d": 6.677717262609528,
-      "deviation_25": 4.4942986240617655,
-      "volume_ratio": 0.6562359162934277,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "前日比+8.0%",
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "9024.T",
-      "name": "西武ホールディングス",
-      "sector17": "運輸・物流",
-      "current": 3875.0,
-      "change_1d": 3.5542490646713,
-      "change_5d": 6.077196824527786,
-      "change_20d": 7.8485944892847215,
-      "deviation_25": 6.894192679885691,
-      "volume_ratio": 0.19030192131747484,
-      "year_high": true,
-      "in_prediction_universe": false,
-      "detected_reasons": [
-        "52週高値更新"
-      ]
-    },
-    {
-      "ticker": "7164.T",
-      "name": "全国保証",
-      "sector17": "金融（除く銀行）",
-      "current": 3267.0,
-      "change_1d": 2.381698527107501,
-      "change_5d": 5.79663212435233,
-      "change_20d": 7.573263088574245,
-      "deviation_25": 5.962713579574208,
-      "volume_ratio": 0.5350336521431102,
+      "current": 5425.0,
+      "change_1d": 5.319355464958253,
+      "change_5d": 13.115095913261055,
+      "change_20d": 25.25975525282844,
+      "deviation_25": 17.077571174530814,
+      "volume_ratio": 0.6814341173783969,
       "year_high": true,
       "in_prediction_universe": false,
       "detected_reasons": [
@@ -316,12 +38,45 @@
       "ticker": "3774.T",
       "name": "インターネットイニシアティブ",
       "sector17": "情報通信・サービスその他",
-      "current": 3777.0,
-      "change_1d": 4.713057942888832,
-      "change_5d": 6.574492099322793,
-      "change_20d": 5.38504464285714,
-      "deviation_25": 6.762471168196815,
-      "volume_ratio": 0.4747949220087372,
+      "current": 4102.0,
+      "change_1d": 2.3964053919121264,
+      "change_5d": 19.66161026837807,
+      "change_20d": 15.192361696152767,
+      "deviation_25": 14.345925694661243,
+      "volume_ratio": 0.6406331665795565,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "5日+19.7%",
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "4912.T",
+      "name": "ライオン",
+      "sector17": "素材・化学",
+      "current": 2129.5,
+      "change_1d": -0.09383063570255201,
+      "change_5d": 15.077006214536603,
+      "change_20d": 18.734318371898517,
+      "deviation_25": 14.346621418445803,
+      "volume_ratio": 0.27761156486178495,
+      "year_high": false,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "5日+15.1%"
+      ]
+    },
+    {
+      "ticker": "2264.T",
+      "name": "森永乳業",
+      "sector17": "食品",
+      "current": 1241.5,
+      "change_1d": 2.815734989648022,
+      "change_5d": 14.371257485029943,
+      "change_20d": 18.294425917103375,
+      "deviation_25": 15.009078445177316,
+      "volume_ratio": 0.6578201892596772,
       "year_high": true,
       "in_prediction_universe": false,
       "detected_reasons": [
@@ -329,15 +84,193 @@
       ]
     },
     {
-      "ticker": "8410.T",
-      "name": "セブン銀行",
-      "sector17": "銀行",
-      "current": 350.29998779296875,
-      "change_1d": 3.6390496428901686,
-      "change_5d": 2.9991124688038218,
-      "change_20d": 2.9385837081145505,
-      "deviation_25": 3.4236357787201355,
-      "volume_ratio": 0.5953336095308348,
+      "ticker": "4202.T",
+      "name": "ダイセル",
+      "sector17": "素材・化学",
+      "current": 1635.0,
+      "change_1d": 0.6773399014778247,
+      "change_5d": 15.71125265392781,
+      "change_20d": 12.52580867171369,
+      "deviation_25": 10.498357730830055,
+      "volume_ratio": 0.19465661155693062,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "5日+15.7%",
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "7956.T",
+      "name": "ピジョン",
+      "sector17": "情報通信・サービスその他",
+      "current": 2308.5,
+      "change_1d": 0.13012361743656164,
+      "change_5d": 12.308440768669415,
+      "change_20d": 8.763250883392226,
+      "deviation_25": 8.35891514349283,
+      "volume_ratio": 0.2344489912617716,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "8113.T",
+      "name": "ユニ・チャーム",
+      "sector17": "素材・化学",
+      "current": 1100.5,
+      "change_1d": 0.9633027522935711,
+      "change_5d": 7.628361858190713,
+      "change_20d": 12.10145526288482,
+      "deviation_25": 8.578543629746527,
+      "volume_ratio": 0.2676756814434313,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "8020.T",
+      "name": "兼松",
+      "sector17": "商社・卸売",
+      "current": 2410.0,
+      "change_1d": 1.7951425554382228,
+      "change_5d": 10.146252285191949,
+      "change_20d": 4.193687851275407,
+      "deviation_25": 4.322681742232071,
+      "volume_ratio": 0.26030429154080653,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "8002.T",
+      "name": "丸紅",
+      "sector17": "商社・卸売",
+      "current": 5213.0,
+      "change_1d": 2.4366280212222424,
+      "change_5d": 9.655027345393364,
+      "change_20d": 7.506702412868638,
+      "deviation_25": 6.061345898744275,
+      "volume_ratio": 0.28541940994341436,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "1802.T",
+      "name": "大林組",
+      "sector17": "建設・資材",
+      "current": 3154.0,
+      "change_1d": 1.3496143958869,
+      "change_5d": 4.923486360612106,
+      "change_20d": 9.609035621198947,
+      "deviation_25": 6.742295534692921,
+      "volume_ratio": 0.19098448399981618,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "2331.T",
+      "name": "ＡＬＳＯＫ",
+      "sector17": "情報通信・サービスその他",
+      "current": 1289.0,
+      "change_1d": 1.6561514195583493,
+      "change_5d": 7.685881370091896,
+      "change_20d": 9.006342494714591,
+      "deviation_25": 7.202262142381888,
+      "volume_ratio": 1.2174351549854816,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "2871.T",
+      "name": "ニチレイ",
+      "sector17": "食品",
+      "current": 2299.5,
+      "change_1d": 8.160865475070555,
+      "change_5d": 6.903765690376562,
+      "change_20d": 8.774834437086088,
+      "deviation_25": 7.30785384292314,
+      "volume_ratio": 1.0737446370861896,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "前日比+8.2%",
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "7701.T",
+      "name": "島津製作所",
+      "sector17": "電機・精密",
+      "current": 4642.0,
+      "change_1d": 0.3675675675675727,
+      "change_5d": 6.590126291618836,
+      "change_20d": 7.803065490013927,
+      "deviation_25": 6.3459335624284074,
+      "volume_ratio": 0.19451853391373292,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "3064.T",
+      "name": "ＭｏｎｏｔａＲＯ",
+      "sector17": "小売",
+      "current": 2415.0,
+      "change_1d": 1.6414141414141437,
+      "change_5d": 7.692307692307687,
+      "change_20d": 7.285650821856948,
+      "deviation_25": 6.268756545539356,
+      "volume_ratio": 0.19695453635817856,
+      "year_high": true,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "52週高値更新"
+      ]
+    },
+    {
+      "ticker": "2607.T",
+      "name": "不二製油",
+      "sector17": "食品",
+      "current": 4349.0,
+      "change_1d": -6.392595781317267,
+      "change_5d": -5.743389683571742,
+      "change_20d": -4.835886214442009,
+      "deviation_25": -3.818934555298037,
+      "volume_ratio": 1.7465959150981178,
+      "year_high": false,
+      "in_prediction_universe": false,
+      "detected_reasons": [
+        "出来高1.7倍"
+      ]
+    },
+    {
+      "ticker": "4118.T",
+      "name": "カネカ",
+      "sector17": "素材・化学",
+      "current": 6265.0,
+      "change_1d": 1.3426075703655727,
+      "change_5d": 0.7234726688102988,
+      "change_20d": 3.365781224220421,
+      "deviation_25": 2.3485437591076463,
+      "volume_ratio": 0.14590822584055826,
       "year_high": true,
       "in_prediction_universe": false,
       "detected_reasons": [
