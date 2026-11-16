@@ -1,139 +1,7 @@
 {
-  "generated_at": "2026-11-09 01:33:11",
-  "total_count": 182,
+  "generated_at": "2026-11-16 01:38:01",
+  "total_count": 178,
   "stocks": [
-    {
-      "ticker": "7203.T",
-      "name": "Toyota Motor Corporation",
-      "sector": "Consumer Cyclical",
-      "industry": "Auto Manufacturers",
-      "currency": "JPY",
-      "revenue_unit": "億円",
-      "revenues": [
-        {
-          "date": "2023-03-31",
-          "revenue_jpy": 371542
-        },
-        {
-          "date": "2024-03-31",
-          "revenue_jpy": 450953
-        },
-        {
-          "date": "2025-03-31",
-          "revenue_jpy": 480367
-        },
-        {
-          "date": "2026-03-31",
-          "revenue_jpy": 506849
-        }
-      ],
-      "growth_rates": [
-        21.37,
-        6.52,
-        5.51
-      ],
-      "latest_growth_pct": 5.51,
-      "avg_growth_pct": 11.13
-    },
-    {
-      "ticker": "6758.T",
-      "name": "Sony Group Corporation",
-      "sector": "Technology",
-      "industry": "Consumer Electronics",
-      "currency": "JPY",
-      "revenue_unit": "億円",
-      "revenues": [
-        {
-          "date": "2023-03-31",
-          "revenue_jpy": 109743
-        },
-        {
-          "date": "2024-03-31",
-          "revenue_jpy": 112600
-        },
-        {
-          "date": "2025-03-31",
-          "revenue_jpy": 120349
-        },
-        {
-          "date": "2026-03-31",
-          "revenue_jpy": 124796
-        }
-      ],
-      "growth_rates": [
-        2.6,
-        6.88,
-        3.7
-      ],
-      "latest_growth_pct": 3.7,
-      "avg_growth_pct": 4.39
-    },
-    {
-      "ticker": "9984.T",
-      "name": "SoftBank Group Corp.",
-      "sector": "Communication Services",
-      "industry": "Telecom Services",
-      "currency": "JPY",
-      "revenue_unit": "億円",
-      "revenues": [
-        {
-          "date": "2023-03-31",
-          "revenue_jpy": 65704
-        },
-        {
-          "date": "2024-03-31",
-          "revenue_jpy": 67565
-        },
-        {
-          "date": "2025-03-31",
-          "revenue_jpy": 72437
-        },
-        {
-          "date": "2026-03-31",
-          "revenue_jpy": 77986
-        }
-      ],
-      "growth_rates": [
-        2.83,
-        7.21,
-        7.66
-      ],
-      "latest_growth_pct": 7.66,
-      "avg_growth_pct": 5.9
-    },
-    {
-      "ticker": "6861.T",
-      "name": "Keyence Corporation",
-      "sector": "Technology",
-      "industry": "Scientific & Technical Instruments",
-      "currency": "JPY",
-      "revenue_unit": "億円",
-      "revenues": [
-        {
-          "date": "2023-03-31",
-          "revenue_jpy": 9224
-        },
-        {
-          "date": "2024-03-31",
-          "revenue_jpy": 9672
-        },
-        {
-          "date": "2025-03-31",
-          "revenue_jpy": 10591
-        },
-        {
-          "date": "2026-03-31",
-          "revenue_jpy": 11692
-        }
-      ],
-      "growth_rates": [
-        4.86,
-        9.5,
-        10.4
-      ],
-      "latest_growth_pct": 10.4,
-      "avg_growth_pct": 8.25
-    },
     {
       "ticker": "8306.T",
       "name": "Mitsubishi UFJ Financial Group, Inc.",
@@ -1265,10 +1133,6 @@
       "revenue_unit": "億USD",
       "revenues": [
         {
-          "date": "2022-09-30",
-          "revenue_native": 293
-        },
-        {
           "date": "2023-09-30",
           "revenue_native": 326
         },
@@ -1279,15 +1143,19 @@
         {
           "date": "2025-09-30",
           "revenue_native": 400
+        },
+        {
+          "date": "2026-09-30",
+          "revenue_native": 459
         }
       ],
       "growth_rates": [
-        11.26,
         10.12,
-        11.42
+        11.42,
+        14.75
       ],
-      "latest_growth_pct": 11.42,
-      "avg_growth_pct": 10.93
+      "latest_growth_pct": 14.75,
+      "avg_growth_pct": 12.1
     },
     {
       "ticker": "MA",
@@ -4202,10 +4070,6 @@
       "revenue_unit": "億USD",
       "revenues": [
         {
-          "date": "2022-09-30",
-          "revenue_native": 322
-        },
-        {
           "date": "2023-09-30",
           "revenue_native": 359
         },
@@ -4216,15 +4080,19 @@
         {
           "date": "2025-09-30",
           "revenue_native": 371
+        },
+        {
+          "date": "2026-09-30",
+          "revenue_native": 379
         }
       ],
       "growth_rates": [
-        11.49,
         0.56,
-        2.77
+        2.77,
+        2.16
       ],
-      "latest_growth_pct": 2.77,
-      "avg_growth_pct": 4.94
+      "latest_growth_pct": 2.16,
+      "avg_growth_pct": 1.83
     },
     {
       "ticker": "TGT",
