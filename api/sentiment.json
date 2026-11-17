@@ -1,48 +1,47 @@
 {
   "composite": {
-    "score": 53.2,
+    "score": 46.2,
     "label": "中立",
     "signal": "neutral"
   },
   "vix": {
-    "value": 19.3,
-    "change": 3.21,
-    "score": 55,
+    "value": 22.91,
+    "change": 18.7,
+    "score": 40,
     "label": "中立",
-    "flow_level": "normal",
-    "flow_label": null
+    "flow_level": "caution",
+    "flow_label": "⚠️ VIX 23 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。"
   },
   "jniv": {},
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 159.77,
-      "change": -0.07,
-      "score": 59.7
+      "value": 159.27,
+      "change": -0.32,
+      "score": 58.4
     },
     "gold": {
       "name": "金先物",
-      "value": 3883.3,
-      "change": -0.08,
-      "score": 50.2
+      "value": 3874.0,
+      "change": -0.32,
+      "score": 50.9
     },
     "oil": {
       "name": "原油WTI",
-      "value": 88.32,
-      "change": -0.27,
-      "score": 50.5
+      "value": 85.0,
+      "change": -4.02,
+      "score": 58.0
     },
     "us10y": {
       "name": "米10年債利回り",
-      "value": 5.15,
-      "change": 1.0,
-      "score": 42.0
+      "value": 5.12,
+      "change": -0.64,
+      "score": 55.1
     },
-    "avg_score": 50.6
+    "avg_score": 55.6
   },
   "market_volume": {
     "dates": [
-      "2026-08-18",
       "2026-08-19",
       "2026-08-20",
       "2026-08-21",
@@ -101,10 +100,10 @@
       "2026-11-11",
       "2026-11-12",
       "2026-11-13",
-      "2026-11-16"
+      "2026-11-16",
+      "2026-11-17"
     ],
     "volumes": [
-      1562307921,
       1740576979,
       1527352859,
       1568913335,
@@ -163,15 +162,16 @@
       1672851529,
       1635753178,
       1527728939,
-      414033555
+      1542979296,
+      1021064569
     ],
-    "latest": 414033555,
-    "ma25": 1617291375,
-    "latest_vs_ma25_pct": 25.6,
+    "latest": 1021064569,
+    "ma25": 1647649243,
+    "latest_vs_ma25_pct": 62.0,
     "ticker_count": 207,
     "note": "JP個別株(.T)の日次出来高合算。市場全体の活況度・出来高急増日は転換点になりやすい。"
   },
-  "vix_flow_level": "normal",
-  "vix_flow_label": null,
-  "generated_at": "2026-11-16 01:17:57"
+  "vix_flow_level": "caution",
+  "vix_flow_label": "⚠️ VIX 23 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。",
+  "generated_at": "2026-11-17 04:07:04"
 }
