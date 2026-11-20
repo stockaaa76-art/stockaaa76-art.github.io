@@ -1,48 +1,47 @@
 {
   "composite": {
-    "score": 47.4,
-    "label": "中立",
-    "signal": "neutral"
+    "score": 37.9,
+    "label": "恐怖（買い場候補）",
+    "signal": "fear"
   },
   "vix": {
-    "value": 24.56,
-    "change": -3.53,
-    "score": 40,
-    "label": "中立",
-    "flow_level": "caution",
-    "flow_label": "⚠️ VIX 25 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。"
+    "value": 28.44,
+    "change": 15.8,
+    "score": 25,
+    "label": "恐怖",
+    "flow_level": "warning",
+    "flow_label": "⚠️ VIX 28 - フロー相場の可能性があります。テクニカル指標の精度が低下しています。"
   },
   "jniv": {},
   "macro": {
     "usdjpy": {
       "name": "ドル円",
-      "value": 159.41,
-      "change": -0.06,
-      "score": 59.7
+      "value": 159.25,
+      "change": -0.08,
+      "score": 59.6
     },
     "gold": {
       "name": "金先物",
-      "value": 3742.4,
-      "change": -3.15,
-      "score": 59.5
+      "value": 3537.0,
+      "change": -5.48,
+      "score": 66.4
     },
     "oil": {
       "name": "原油WTI",
-      "value": 82.37,
-      "change": -4.23,
-      "score": 58.5
+      "value": 82.78,
+      "change": -0.58,
+      "score": 51.2
     },
     "us10y": {
       "name": "米10年債利回り",
-      "value": 5.07,
-      "change": -0.73,
-      "score": 55.8
+      "value": 5.05,
+      "change": -0.28,
+      "score": 52.2
     },
-    "avg_score": 58.4
+    "avg_score": 57.3
   },
   "market_volume": {
     "dates": [
-      "2026-08-21",
       "2026-08-24",
       "2026-08-25",
       "2026-08-26",
@@ -101,10 +100,10 @@
       "2026-11-16",
       "2026-11-17",
       "2026-11-18",
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-20"
     ],
     "volumes": [
-      1568913335,
       1265909460,
       1290997161,
       1310514483,
@@ -163,15 +162,16 @@
       1542979296,
       1568875840,
       1583945557,
-      596014067
+      1535003807,
+      826050900
     ],
-    "latest": 596014067,
-    "ma25": 1645202721,
-    "latest_vs_ma25_pct": 36.2,
+    "latest": 826050900,
+    "ma25": 1641404769,
+    "latest_vs_ma25_pct": 50.3,
     "ticker_count": 207,
     "note": "JP個別株(.T)の日次出来高合算。市場全体の活況度・出来高急増日は転換点になりやすい。"
   },
-  "vix_flow_level": "caution",
-  "vix_flow_label": "⚠️ VIX 25 - 市場が不安定になっています。シグナルの信頼度がやや低下しています。",
-  "generated_at": "2026-11-19 02:45:15"
+  "vix_flow_level": "warning",
+  "vix_flow_label": "⚠️ VIX 28 - フロー相場の可能性があります。テクニカル指標の精度が低下しています。",
+  "generated_at": "2026-11-20 02:32:38"
 }
