@@ -131,7 +131,8 @@ class Dashboard {
                 '^DJI': 'dow', '^IXIC': 'nasdaq', '^GSPC': 'sp500', '^RUT': 'russell',
                 '^GDAXI': 'dax', '^FTSE': 'ftse', '^FCHI': 'cac', '^STOXX50E': 'stoxx',
                 '000001.SS': 'shanghai', '^HSI': 'hangseng', '^KS11': 'kospi', '^TWII': 'taiwan',
-                'CL=F': 'oil', 'GC=F': 'gold', 'SI=F': 'silver', 'BTC-USD': 'bitcoin'
+                'CL=F': 'oil', 'GC=F': 'gold', 'SI=F': 'silver', 'BTC-USD': 'bitcoin',
+                '^VIX': 'vix', '^TNX': 'tnx'
             };
             const currencies = {
                 '^DJI':'$','^IXIC':'$','^GSPC':'$','^RUT':'$',
@@ -139,15 +140,20 @@ class Dashboard {
                 '^HSI':'HK$','^KS11':'₩','^TWII':'NT$',
                 'CL=F':'$','GC=F':'$','SI=F':'$','BTC-USD':'$',
             };
+            // VIX は無次元の指数値・米10年国債利回りは%表記（通貨記号を付けない）
+            const noCurrencySuffix = { '^VIX': '', '^TNX': '%' };
 
             for (const [symbol, elId] of Object.entries(intlMap)) {
                 const d = toPrice(symbol);
                 if (!d) continue;
                 const cur = currencies[symbol] || '¥';
+                const priceFormatted = symbol in noCurrencySuffix
+                    ? d.current_price.toFixed(2) + noCurrencySuffix[symbol]
+                    : cur + d.current_price.toLocaleString('en', {maximumFractionDigits:2});
                 this.updateInternationalIndex(elId, {
                     price: d.current_price, change: d.change, change_percent: d.change_percent,
                     trend: d.trend, currency: cur,
-                    price_formatted: cur + d.current_price.toLocaleString('en', {maximumFractionDigits:2}),
+                    price_formatted: priceFormatted,
                     change_formatted: (d.change >= 0 ? '+' : '') + d.change.toFixed(2),
                 });
                 if (symbol === '^DJI') {
